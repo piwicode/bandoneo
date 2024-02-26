@@ -194,7 +194,7 @@
 
   (footprint "Library:MCP3008T-I_SL" (layer "F.Cu")
     (tstamp 02fb00a6-276c-48eb-ad1a-c51aa7d311c0)
-    (at 346.911154 227.265251 -78)
+    (at 356.911154 227.265251 -78)
     (descr "SOIC, 16 Pin (JEDEC MS-012AC, https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/soic_narrow-r/r_16.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOIC SO")
     (property "Sheetfile" "grape.kicad_sch")
@@ -677,7 +677,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp 11e45771-8d5d-4c28-a841-4dc93a224032)
-    (at 444.245725 156.553705 57)
+    (at 454.245725 156.553705 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -1209,7 +1209,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp 27c6f6c4-3ac9-4e42-96e3-b47e8976d0e8)
-    (at 417.357549 171.119983 57)
+    (at 427.357549 171.119983 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -1475,7 +1475,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp 2ebd4ed9-f140-409d-a4e4-59d403fcddb4)
-    (at 433.158542 145.323452 57)
+    (at 443.158542 145.323452 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -1608,7 +1608,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp 2fc60f32-e3ee-455f-9e69-ca6c810fb4e3)
-    (at 347.733259 154.709474 57)
+    (at 357.733259 154.709474 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -1741,7 +1741,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp 30800723-5289-4873-ae31-a57454b111a9)
-    (at 408.581852 147.395428 57)
+    (at 418.581852 147.395428 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -2413,7 +2413,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp 3ed836bb-20b4-4c6b-9128-a6a62ef709e7)
-    (at 337.672414 184.236477 57)
+    (at 347.672414 184.236477 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -2812,7 +2812,7 @@
 
   (footprint "Library:Adafruit (512) Analog 2-axis Thumb Joystick with Select Button" (layer "F.Cu")
     (tstamp 48b6a9d7-0219-465f-a542-b8a377dbf5c9)
-    (at 331.58287 246.006575 180)
+    (at 335.265 241.725 180)
     (property "Sheetfile" "bandoneon.kicad_sch")
     (property "Sheetname" "")
     (path "/cda66f69-78f7-4164-8570-a271a2e5ec9a")
@@ -2914,7 +2914,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp 49678ec7-3539-4c98-9ee4-af7af3a16e11)
-    (at 368.998589 195.988457 57)
+    (at 378.998589 195.988457 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -3047,7 +3047,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp 4ce0fb53-4e25-4cce-b132-aa6429292777)
-    (at 357.752002 173.228053 57)
+    (at 367.752002 173.228053 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -3313,7 +3313,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp 5425cb22-55f6-4960-830a-c6db5b8a2429)
-    (at 386.147033 152.574394 57)
+    (at 396.147033 152.574394 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -3446,7 +3446,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp 573b8f7b-4e62-45cd-9033-41dc1aee206e)
-    (at 353.374538 188.464208 57)
+    (at 363.374538 188.464208 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -3712,7 +3712,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp 5d319a2e-9e77-49d8-b033-4e607a1941fd)
-    (at 421.533619 155.806404 57)
+    (at 431.533619 155.806404 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -3845,7 +3845,7 @@
 
   (footprint "MountingHole:MountingHole_2.1mm" (layer "F.Cu")
     (tstamp 5e7b7a7c-cb11-4875-8c0b-65b3bfff0a86)
-    (at 371.83 261.79)
+    (at 381.83 261.79)
     (descr "Mounting Hole 2.1mm, no annular")
     (tags "mounting hole 2.1mm no annular")
     (attr exclude_from_pos_files exclude_from_bom)
@@ -3870,7 +3870,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp 5eecdc12-249d-49f8-844e-9c2e45e23ce2)
-    (at 363.485555 158.790484 57)
+    (at 373.485555 158.790484 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -4003,7 +4003,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp 64c63651-a766-48e7-b24f-c0e330b5b327)
-    (at 438.617691 170.967054 57)
+    (at 448.617691 170.967054 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -4490,7 +4490,7 @@
 
   (footprint "Library:MCP3008T-I_SL" (layer "F.Cu")
     (tstamp 6e10ab57-df7b-44ed-ab4d-21d003987923)
-    (at 378.196259 214.430236 -78)
+    (at 388.196259 214.430236 -78)
     (descr "SOIC, 16 Pin (JEDEC MS-012AC, https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/soic_narrow-r/r_16.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOIC SO")
     (property "Sheetfile" "grape.kicad_sch")
@@ -5464,7 +5464,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp 8421851c-0717-429f-959b-e3b7219dc941)
-    (at 371.909585 146.195123 57)
+    (at 381.909585 146.195123 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -5597,7 +5597,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp 88e5ff5a-18ff-4dcc-bdfa-8720bb9611c0)
-    (at 454.982134 145.508362 57)
+    (at 464.982134 145.508362 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -5863,7 +5863,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp 9403ec10-183e-4907-9cb7-7ca1e04fc7cc)
-    (at 377.772252 165.600255 57)
+    (at 387.772252 165.600255 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -5996,7 +5996,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp 9836a5df-38aa-49a6-8e28-3f9e911be55d)
-    (at 328.305323 214.284294 57)
+    (at 338.305323 214.284294 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -6528,7 +6528,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp 9f9a5961-9973-4b33-83ef-e9679bbc2b19)
-    (at 420.249003 136.903928 57)
+    (at 430.249003 136.903928 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -6661,7 +6661,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp a15fc31d-0c6b-411b-bb48-905069525ea9)
-    (at 474.256765 186.438873 57)
+    (at 484.256765 186.438873 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -6794,7 +6794,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp a19cc339-ceaf-4d70-8b56-06da85e386f1)
-    (at 461.701012 170.865544 57)
+    (at 471.701012 170.865544 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -7193,7 +7193,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp a999c472-b5d9-4e2e-851d-e1e3f942dbfb)
-    (at 373.326118 180.755844 57)
+    (at 383.326118 180.755844 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -7459,7 +7459,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp b0a54ecd-2fb2-411b-a20d-eeb949fd0971)
-    (at 332.040223 198.630263 57)
+    (at 342.040223 198.630263 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -7694,7 +7694,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp b4ee07f5-1f43-45ca-a760-a3b708d91a7e)
-    (at 411.841677 185.657288 57)
+    (at 421.841677 185.657288 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -7827,7 +7827,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp b9bb8e21-5a74-4dc3-818d-af0555a69d42)
-    (at 394.261116 174.484845 57)
+    (at 404.261116 174.484845 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -8093,7 +8093,7 @@
 
   (footprint "Library:MCP3008T-I_SL" (layer "F.Cu")
     (tstamp c312f15e-516b-4deb-ac68-c4e4b6d63cef)
-    (at 448.028413 206.283285 -78)
+    (at 458.028413 206.283285 -78)
     (descr "SOIC, 16 Pin (JEDEC MS-012AC, https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/soic_narrow-r/r_16.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOIC SO")
     (property "Sheetfile" "grape.kicad_sch")
@@ -8314,7 +8314,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp c45130e5-c374-49cd-bebc-deabad4c8a8d)
-    (at 433.200014 185.48947 57)
+    (at 443.200014 185.48947 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -8447,7 +8447,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp c66c3953-f584-478f-8494-4d9b5297029d)
-    (at 400.080792 160.230798 57)
+    (at 410.080792 160.230798 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -8713,7 +8713,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp cf5c7e9f-d7c1-4cfb-a7a9-2ff405ce9f07)
-    (at 348.45367 203.504652 57)
+    (at 358.45367 203.504652 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -8846,7 +8846,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp d2533eca-23b8-4d95-bad7-b97591545563)
-    (at 321.016478 181.516438 57)
+    (at 331.016478 181.516438 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -9067,7 +9067,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp e4a4c8e0-35dd-404a-86b2-3e7354d42533)
-    (at 341.762733 168.85825 57)
+    (at 351.762733 168.85825 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -9466,7 +9466,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp e8e6e473-d4f9-4e26-86ac-594dd7878d70)
-    (at 325.25616 166.232787 -33)
+    (at 335.25616 166.232787 -33)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape_alt.kicad_sch")
@@ -9953,7 +9953,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp f0ee5104-17d6-4c86-a965-eac804dcbebf)
-    (at 456.384455 185.47049 57)
+    (at 466.384455 185.47049 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -10352,7 +10352,7 @@
 
   (footprint "Library:MCP3008T-I_SL" (layer "F.Cu")
     (tstamp f58f1432-8885-413d-b6fb-c4075c29fc65)
-    (at 416.911341 206.201091 -78)
+    (at 426.911341 206.201091 -78)
     (descr "SOIC, 16 Pin (JEDEC MS-012AC, https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/soic_narrow-r/r_16.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOIC SO")
     (property "Sheetfile" "grape.kicad_sch")
@@ -10661,7 +10661,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp fb7dc549-bbdb-4ed3-9a32-b4e1567df222)
-    (at 389.895614 189.728546 57)
+    (at 399.895614 189.728546 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -10794,7 +10794,7 @@
 
   (footprint "Library:SS39ET" (layer "F.Cu")
     (tstamp fc724add-9aa0-4296-901c-41dbb290793b)
-    (at 394.744375 140.11463 57)
+    (at 404.744375 140.11463 57)
     (descr "SOT, 3 Pin (https://www.jedec.org/sites/default/files/docs/Mo-178D.PDF inferred 3-pin variant), generated with kicad-footprint-generator ipc_gullwing_generator.py")
     (tags "SOT TO_SOT_SMD")
     (property "Sheetfile" "grape.kicad_sch")
@@ -10936,37 +10936,37 @@
     (stroke (width 0.15) (type default)) (fill none) (layer "B.Mask") (tstamp 7dd71f87-f6e5-435e-808c-c6a30f3580b5))
   (gr_poly
     (pts
-      (xy 268.426674 145.767163)
-      (xy 497.000206 97.182359)
-      (xy 525.253326 230.102837)
-      (xy 296.679794 278.687641)
+      (xy 278.426674 145.767163)
+      (xy 507.000206 97.182359)
+      (xy 535.253326 230.102837)
+      (xy 306.679794 278.687641)
     )
 
     (stroke (width 0.15) (type default)) (fill none) (layer "B.Mask") (tstamp b5667313-d52b-43cc-8ec0-034e99acf173))
-  (gr_line (start 485 160) (end 485 235)
+  (gr_line (start 495 160) (end 495 235)
     (stroke (width 0.1) (type default)) (layer "Edge.Cuts") (tstamp 0b17ed87-012a-48e1-b78d-57c5a617c9cb))
   (gr_line (start 115 230) (end 240 265)
     (stroke (width 0.1) (type default)) (layer "Edge.Cuts") (tstamp 2383a53a-3b01-41fe-89c1-87615165cbfd))
   (gr_line (start 310 124) (end 310 124)
     (stroke (width 0.1) (type default)) (layer "Edge.Cuts") (tstamp 3768b041-9a7b-47af-9fa4-aca4a69a2883))
-  (gr_line (start 440 115) (end 485 160)
+  (gr_line (start 450 115) (end 495 160)
     (stroke (width 0.1) (type default)) (layer "Edge.Cuts") (tstamp 6840c4ee-2e70-4d1a-939f-3850e5f7bd5c))
-  (gr_line (start 365 265) (end 240 265)
+  (gr_line (start 375 265) (end 240 265)
     (stroke (width 0.1) (type default)) (layer "Edge.Cuts") (tstamp 907dee82-628d-4279-9eb5-9706d41e20c5))
   (gr_line (start 115 160) (end 160 115)
     (stroke (width 0.1) (type default)) (layer "Edge.Cuts") (tstamp a0c8662c-ff98-464f-b0af-f6860559e710))
   (gr_line (start 115 230) (end 115 160)
     (stroke (width 0.1) (type default)) (layer "Edge.Cuts") (tstamp c3e06a05-f79a-4c6a-8780-29b260972532))
-  (gr_line (start 440 115) (end 160 115)
+  (gr_line (start 450 115) (end 160 115)
     (stroke (width 0.15) (type default)) (layer "Edge.Cuts") (tstamp e4022da3-63e5-4d5d-9a08-ceb0c3ddfa5f))
-  (gr_line (start 485 235) (end 365 265)
+  (gr_line (start 495 235) (end 375 265)
     (stroke (width 0.1) (type default)) (layer "Edge.Cuts") (tstamp ed6aff18-6777-46dd-b79a-91e8c9bc9298))
   (gr_poly
     (pts
-      (xy 243.475 220.569999)
-      (xy 319.675 220.569999)
-      (xy 319.675001 282.8)
-      (xy 243.475 282.8)
+      (xy 244.649999 225.219999)
+      (xy 320.849999 225.219999)
+      (xy 320.85 287.45)
+      (xy 244.649999 287.45)
     )
 
     (stroke (width 0.15) (type default)) (fill none) (layer "User.9") (tstamp 20408460-80fc-4300-9e69-3ec15a5e282c))
@@ -10981,10 +10981,10 @@
     (stroke (width 0.15) (type default)) (fill none) (layer "User.9") (tstamp 719947df-e511-4faf-a86b-278ecec484bb))
   (gr_poly
     (pts
-      (xy 366.824317 238.342128)
-      (xy 490.559988 212.041299)
-      (xy 495.549869 235.516842)
-      (xy 371.814197 261.817671)
+      (xy 376.824317 238.342128)
+      (xy 500.559988 212.041299)
+      (xy 505.549869 235.516842)
+      (xy 381.814197 261.817671)
     )
 
     (stroke (width 0.15) (type default)) (fill none) (layer "User.9") (tstamp e9d70244-f4fb-4ba9-b156-bd85629b14f0))
@@ -145604,7 +145604,7 @@
       rkJggg==
     )
   )
-  (gr_text "Double check thickness\n" (at 382.420294 246.784018 12) (layer "User.9") (tstamp f8c132f8-34b5-4337-aa8e-3d7c441906a6)
+  (gr_text "Double check thickness\n" (at 392.420294 246.784018 12) (layer "User.9") (tstamp f8c132f8-34b5-4337-aa8e-3d7c441906a6)
     (effects (font (size 5 5) (thickness 0.15)) (justify left bottom))
   )
 

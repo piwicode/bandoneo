@@ -6,7 +6,7 @@
     "hidden_netclasses": [],
     "hidden_nets": [],
     "high_contrast_mode": 0,
-    "net_color_mode": 2,
+    "net_color_mode": 1,
     "opacity": {
       "images": 0.6,
       "pads": 1.0,
@@ -19,7 +19,7 @@
       "footprints": true,
       "graphics": true,
       "keepouts": true,
-      "lockedItems": true,
+      "lockedItems": false,
       "otherItems": true,
       "pads": true,
       "text": true,
@@ -64,11 +64,11 @@
       39,
       40
     ],
-    "visible_layers": "9fdffff_ffffffff",
+    "visible_layers": "9ffffff_ffffffff",
     "zone_display_mode": 0
   },
   "meta": {
-    "filename": "bandoneon.kicad_prl",
+    "filename": "bandoneon_manual.kicad_prl",
     "version": 3
   },
   "project": {

@@ -152075,6 +152075,12 @@
       rkJggg==
     )
   )
+  (gr_text "sus" (at 338.7598 146.9898) (layer "F.Cu") (tstamp be5a1a40-e879-4b6c-8e51-c7a58f8e1f8c)
+    (effects (font (size 1.5 1.5) (thickness 0.3) bold) (justify left bottom))
+  )
+  (gr_text "expr" (at 362.839 147.1168) (layer "F.Cu") (tstamp e2250413-f117-450c-be5a-524263d52b5e)
+    (effects (font (size 1.5 1.5) (thickness 0.3) bold) (justify left bottom))
+  )
   (gr_text "https://github.com/piwicode/bandoneon" (at 394.716 251.968 12) (layer "F.SilkS") (tstamp 0ad5f831-06c1-49a0-86dc-fc9b0718e560)
     (effects (font (size 2 2) (thickness 0.15)) (justify left bottom))
   )

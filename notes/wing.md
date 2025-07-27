@@ -8,7 +8,7 @@ There are two candidates:
 | Decision | **Pick for smallest** |   |   | **Pick for cheaper and more SPI and touch sensing** |
 | Price | .83 € | .90 € | 10.89 € stock: 10 | 9.59 € stock:46 |
 | Clock ext | 48 MHz | 72 MHz | 64 MHz | 64 MHz |
-| Clock Int | 8 MHz | 8 MHz |   | 16 MHz ? HSI16 |
+| Clock Int | 8 MHz | 8 MHz |   | 16 MHz |
 | Consumption | 4.4 mA |   | 91 μA/MHz | 107  μA/MHz ~ 3mA |
 | Memory | SRAM 8Kb | SRAM 20 Kb | SRAM 48Kb | SRAM 256Kb |
 | Power supply | 2.4-3.6V | **2.0**\-3.6V | 1.71-3.6V | 1.8-3.6V |
@@ -83,4 +83,32 @@ JST XG2.54
 
 JLCPCB Connectors:  \[[wire to board](https://jlcpcb.com/parts/2nd/Connectors/Housings_(Wire_To_Board__Wire_To_Wire_)_2131)\]
 
-## Switch
+## Switches
+
+Hall effect switch
+
+<table><tbody><tr><td>&nbsp;</td><td><a href="https://www.gateron.com/products/gateron-full-pom-low-profile-magnetic-jade-pro-switch-set">Gateron Low Profile Magnetic Jade Pro</a></td><td><a href="https://www.gateron.com/products/gateron-low-profile-magnetic-jade-switch?VariantsId=10872">Gateron Magnetic Jade&nbsp;</a></td><td>&nbsp;</td></tr><tr><td>Price</td><td>$56.00 / 70 = .8</td><td>$56.00 / 70 = .8</td><td>&nbsp;</td></tr><tr><td>&nbsp;</td><td>$72.00 / 90 = .8</td><td>$72.00 / 90 = .8</td><td>&nbsp;</td></tr><tr><td>Total travel</td><td>3.5±0.2mm</td><td>3.5±0.2mm</td><td>&nbsp;</td></tr><tr><td>Initial force</td><td>40±10gf</td><td>30±10gf</td><td>&nbsp;</td></tr></tbody></table>
+
+## Leds
+
+OPSCO has a wide variety of leds format, but they are designed to work at 5V, which would require a logic shifter.
+
+[Components lists](https://jlcpcb.com/parts/2nd/Optoelectronics/RGB_LEDs(Built-in_IC)_2115)
+
+## Reverse voltage protection
+
+## Power on / off
+
+Sensitive touch power on and off
+
+Turn on when plugged in USB
+
+Auto turn off after 10 minutes unused
+
+## Bluetooth pairing
+
+Sensitife touch
+
+## Battery
+
+<table><tbody><tr><td>&nbsp;</td><td><a href="https://fr.rs-online.com/web/p/piles-rechargeables-taille-speciale/1449405?gb=s">RS PRO 304-24-384</a></td><td><a href="https://fr.rs-online.com/web/p/piles-rechargeables-taille-speciale/1251266?gb=s">RS PRO 304-24-383</a></td></tr><tr><td>Price TTC</td><td>17,58&nbsp;€</td><td>28,46&nbsp;€</td></tr><tr><td>Volt</td><td>3.7V</td><td>3.7V</td></tr><tr><td>Capacity</td><td>1.8Ah</td><td>2.0Ah</td></tr></tbody></table>

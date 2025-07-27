@@ -99,7 +99,7 @@ OPSCO has a wide variety of leds format, but they are designed to work at 5V, wh
 
 ## Power on / off
 
-Sensitive touch power on and off
+Capacitive sensing touch power on and off maybe TTP223
 
 Turn on when plugged in USB
 
@@ -112,3 +112,7 @@ Sensitife touch
 ## Battery
 
 <table><tbody><tr><td>&nbsp;</td><td><a href="https://fr.rs-online.com/web/p/piles-rechargeables-taille-speciale/1449405?gb=s">RS PRO 304-24-384</a></td><td><a href="https://fr.rs-online.com/web/p/piles-rechargeables-taille-speciale/1251266?gb=s">RS PRO 304-24-383</a></td></tr><tr><td>Price TTC</td><td>17,58&nbsp;€</td><td>28,46&nbsp;€</td></tr><tr><td>Volt</td><td>3.7V</td><td>3.7V</td></tr><tr><td>Capacity</td><td>1.8Ah</td><td>2.0Ah</td></tr></tbody></table>
+
+## License
+
+BandoNéo © 2025 by Pierre Labatut is licensed under CC BY-NC-SA 4.0

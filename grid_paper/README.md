@@ -1,7 +1,7 @@
 This files prints 5mm spaced grid paper.
 
-https://www.eamoncaddigan.net/posts/postscript-graph-paper/
+Usage:
 
-Print with:
-
+```
 lpr -o raw -P <<your printer>> grid_paper/grid.ps 
+```

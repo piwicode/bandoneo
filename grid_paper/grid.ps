@@ -1,14 +1,16 @@
 %!PS
 % Adjust these to suit your needs, units specified in "points" (1/72 inch)
+% 1 inch is 25.4 millimeter.
 /w 595 def /h 842 def      % A4 paper
 /sp 5 72 mul 25.4 div def  % Grid spacing (5 mm here)
-/st 1 72 mul 300 div def   % Stroke width (1 'dots' in a 300 dpi resolution)
+/st 0 72 mul 300 div def   % Stroke width (1 'dots' in a 300 dpi resolution)
 /co 0 def                  % Gray-level of the line (0 = black, 1 = white)
 
-% Remainder function (`mod` doesn't take floating point values)
-/r {dup 3 1 roll div dup floor sub mul} def
-% Return the starting offset that centers the grid
-/o {r 2 div} def
+currentpagedevice /HWResolution get  % Push the resolution array onto the stack
+aload pop                            % Unload the array to get xres and yres
+/xres exch def                       % Define xres in dpi
+/yres exch def                       % Define yres in dpi
+
 
 % Page and line setup
 << /PageSize [w h] >> setpagedevice
@@ -16,18 +18,18 @@ co setgray
 st setlinewidth
 
 % Create vertical lines
-w sp o
-sp w
+0 sp w
 {
+  xres mul 72 div round 72 mul xres div
   dup 
   0 moveto
   h lineto
 } for
 
 % Create horizontal lines
-h sp o
-sp h
+0 sp h
 {
+  yres mul 72 div round 72 mul yres div
   dup
   0 exch moveto
   w exch lineto

@@ -5,12 +5,14 @@
 /sp 5 72 mul 25.4 div def  % Grid spacing (5 mm here)
 /st 0 72 mul 300 div def   % Stroke width (1 'dots' in a 300 dpi resolution)
 /co 0 def                  % Gray-level of the line (0 = black, 1 = white)
+/wscale 1 def              % Printer width scale factor.
+/hscale 15.6 15 div def    % Printer height scale factor.
 
+% Define xres and yres in dpi
 currentpagedevice /HWResolution get  % Push the resolution array onto the stack
-aload pop                            % Unload the array to get xres and yres
-/xres exch def                       % Define xres in dpi
-/yres exch def                       % Define yres in dpi
-
+aload pop                            % Get xres and yres and drop the array.
+/xres exch def
+/yres exch def
 
 % Page and line setup
 << /PageSize [w h] >> setpagedevice
@@ -18,8 +20,9 @@ co setgray
 st setlinewidth
 
 % Create vertical lines
-0 sp w
+0 sp wscale mul w
 {
+  % Align the line on the dot matrix precisely, to improve thickness consistency.
   xres mul 72 div round 72 mul xres div
   dup 
   0 moveto
@@ -27,7 +30,7 @@ st setlinewidth
 } for
 
 % Create horizontal lines
-0 sp h
+0 sp hscale mul h
 {
   yres mul 72 div round 72 mul yres div
   dup
@@ -37,5 +40,6 @@ st setlinewidth
 
 % Draw
 stroke
+
 % Process and eject the page
 showpage

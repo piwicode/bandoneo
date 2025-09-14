@@ -7,10 +7,10 @@
 % 1 inch is 25.4 millimeter.
 /w 595 def /h 842 def      % A4 paper
 /sp 5 72 mul 25.4 div def  % Grid spacing (5 mm here)
-/st 0 72 mul 300 div def   % Stroke width (1 'dots' in a 300 dpi resolution)
+/st 2 72 mul 300 div def   % Stroke width (1 'dots' in a 300 dpi resolution)
 /co 0 def                  % Gray-level of the line (0 = black, 1 = white)
-/wscale 1 def              % Printer width scale factor.
-/hscale 15.6 15 div def    % Printer height scale factor.
+/wscale 15 14.45 div def              % Printer width scale factor.
+/hscale 15 15.55 div def    % Printer height scale factor.
 
 % Define xres and yres in dpi
 currentpagedevice /HWResolution get  % Push the resolution array onto the stack

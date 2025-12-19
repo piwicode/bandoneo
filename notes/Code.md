@@ -50,12 +50,17 @@ minicom -b 115200 -D /dev/ttyACM0
 
 ## Write to SWO:
 
-As seen above the nucleo board has SWO support, but STLink clone dongle don't.
-This can be improved.
+As seen above the nucleo board STLink has SWO support, but STLink clone dongle don't.
+This can be improved with a soldering iron:
 
 https://www.eevblog.com/forum/microcontrollers/quick-hack-to-get-swo-on-st-link-clones/
 
-Configured in STM32CubeIDE the following:
+Configured in STM32CubeIDE in: `System Core` > `Sys` > `Trace Asynchronous SW`.
+
+This assign 3 pins:
+* `SYS_JTMS_SWDIO` - required for debugging. Data input and output.
+* `SYS_JTCK_SWCLK` - required for debugging. Clock.
+* `SYS_JTDO_SWO` - optional for debugging. Provides sampling, real time watch and traces
 
 * System Core / SYS:
   * Debug: Trace Asynchronous Sw
@@ -70,7 +75,7 @@ falls short.
 * Enable ITM Stimulus Port 0 in the parameter of this view, and finally press
   the red button.
 
-Reference: 
+Reference:
 - https://www.youtube.com/watch?v=j-GaEZKrkbQ
 
 ## Blink leds
@@ -84,19 +89,91 @@ HAL_GPIO_WritePin(LedRed_GPIO_Port, LedRed_Pin, GPIO_PIN_SET);
 
 ## Read from ADC:
 
-There are several way to wait from completion. I will try first to get an interupt.
+There are several way to wait for convertion: polling, interrupt and DMA.
+
+### Polling
+* Start conversion with `HAL_ADC_Start`
+* Wait for completion with `HAL_ADC_PollForConversion`
+* Fetch results with `HAL_ADC_GetValue`
+
+### Interupt
 
 * Configure the pin for analog input in "Analog" > ADC1.
-* Pay attention to enable "ADC1 global interrupt" in VNIC Settings otherwise
-  `ADC1_IRQHandler` is not generated in `stm32wbxx_it.cc`.
-* Then a symbol `void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)` must be
-  defined to override the weak symbol used by the drivers.
+* Enable "ADC1 global interrupt" in VNIC Settings otherwise `ADC1_IRQHandler` is
+  not generated in `stm32wbxx_it.cc`.
+* Define a symbol `void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)` to
+  override the weak symbol used by the drivers.
+* Trigger conversion with `HAL_ADC_Start_IT`, get the result in the interrupt function with `HAL_ADC_GetValue`
 
-Sticking to ADC_SingleConversion_TriggerSW_IT is usefull.
+## USB
 
+USB is a serial device limited to .5A, 5V, and 5 meters.
+* STM32 MCU implement USB 2.0.
+* USB uses a tiered star topology
+  * Each device has a 7 bit address, including the hub.
+  * Adress 0 is reserved to device enumeration, leaving 127 device addresses available.
+* The signal goes on a differential pair, self synchronized which requires a precise clock (builtin STM32WB55).
+* Communication starts with Low Speed (LS) or Fast Speed (FS) depending on
+  devices hardwared pullups setup, and can attempt to switch to High Speed (HS)
+  on device's demand. (STM32WB55 only support FS)
+* Datagrams are sent to an address and to an endpoints with the following types:
+  * setup - configuration usb 1, publish de capability of device.
+  * bulk - typical for mas storage. No time constraint, integrity constraint. Typical for mass storage.
+  * interrupt - typically a mouse. Tiny requests from the host. Poll interval is 1ms.
+  * isochonous - typically for the audio, time constrained, but no integrity. It is high priority.
+* There are keepalive signals named start-of-frame packet. 3 missed mean suspend.
+* `Token` packets are signaling the destination, it is followed by a data packet, and there is an `acknowledge` packet to close the transaction.
+* All workding "out" and "in" are host centric. All exchanges are initiated by host.
+* A device publishes a set of configurstions  only one can be active at a time. The configuration has a set of interfaces.
+
+* USB standard classes corresponds to features implemented by OS drivers.
+  * CDC virtual com port
+
+
+One can request a vendor id on www.usb.org required for have the USB logo on a product; STM32 can provide a PID.
+
+* The code sample can be found in `Projects/P-NUCLEO-WB55.Nucleo/Applications/USB_Device/HID_Standalone`
+* HID stands for Human Interface Device.
+* USB supports multiple transfer types, we are interested in isochronous trnsfer or interrupt transfer fro minimal latency.
+
+Reference:
+* Documenation https://wiki.st.com/stm32mcu/wiki/Introduction_to_USB_with_STM32
+* Video series https://www.youtube.com/playlist?list=PLnMKNibPkDnFFRBVD206EfnnHhQZI4Hxa
+
+
+## USB Hardware
+
+* The USB D+ and D- is a differential pair. It should have a single ended impedence of 45 Ohms and 90 Ohms differential impedence. STM32 USB pins embedd resistors in line with USB specification.
+* It is possible to detect connection with a voltage divider and a GPIO PIN.
+  * TODO: Add a connection GPIO PIN
+* Some MCU require a 1.5 Kohm pullup on D+ controled by a GPIO.
+* Electro Static Discharge (ESD) protection is required using USBLC6-2SC6 or USBLC6-4SC6 (ref AN4879) or ESDA6V1BC6 (ref training videos); plus ESDA7P60-1U1M  on the VBUS
+  * Switch the design to USBLC6 which is an STMicroelectronics part given that most of the cose will be du to extended part assembly cost.
+  * Also self powered devices should not connect pin 5, VBUS should be connected to a regular pin such as pin 6, becaue of the D+ pullup. (To be further investigated from the video)
+
+* AN4879 tells that STM32WB55
+  * has an embedded pullup resistor
+  * has Batery Charging Detection which allow to detect and draw more current from USB.
+
+* When VBat is 0V and VDDUSB is 5V, because GPIO pin only allow VDD+4.0V (Table 13 of usb Voltage Characteristics), this should be prevented. PA9 requires 200 uA.
+  * TODO Verify if I need USB BUS sensing: YES and differentialte suspend and disconnection events.
+  * TODO: How is it done in the board?
+* When a device is suspended (no activity on dataline), the amout of current that can be drawn is limited to a couple of mA.
+* TODO: Should I wire the ID pin of my USB connector to a 100kOhm pulldown.
+
+## STM32CubeIDE
+
+* Activate NOE activates a USB_NOE output bit that can be used to show
+  transmission acivity on a led.
+
+
+* Transmission line documentation: https://www.youtube.com/watch?v=**u5Cgycpvq6Y**
+* JCLPcb blog post https://jlcpcb.com/blog/selecting-the-right-impedance-for-usb-ethernet-hdmi-and-sd-card-interfaces
+*
 ## Open points
 
-* [ ] How does capacitive sensing work?
+* [ ] Should I add a 100KOhm to boot0 from stlink like in the devboard?
+* [ ] How does capacitive sensing work?****
 * [ ] Do I need hardware CRC ?
 * [ ] Does bluetooth pairing requires a batterie ?
 * [ ] How does the watchdog work (WWDG) ?
@@ -104,6 +181,11 @@ Sticking to ADC_SingleConversion_TriggerSW_IT is usefull.
 * [ ] How does USB MIDI work ?
 * [ ] How does BT MIDI works ?
 * [ ] How does BT AUDIO works ? Do we need WBA55 ?
+
+## STM32CubeIde
+
+* Issue: `"Java" is not responding` error showing up on the splash screen.
+* Fix: remove ./.metadata/.plugin/org.eclipse.e4.workbench org.eclipse.e4.workbench
 
 ## Further reading:
 

@@ -8,7 +8,7 @@ There are two candidates:
 | Price (Stock) |   |   | 17.43$ (0) | 15.18$ (35) |   |   |
 | Package |   | LQFP-48\_7x7 |   |   |   |   |
 | Decision | **Pick for smallest** | **Pick for 2 ADC, low power** |   |   |   |   |
-| Price | .83 € stock: 72032 | ✅ .90 € stock: 159851 | ⚠️ 10.89 € stock: 10 | ⚠️ 9.59 € stock:46 |   |   |
+| Price | .83 € stock: 72032 | ✅ .90 € stock: 159851 | ⚠️ 12.74 € stock: 10 | ⚠️ 9.59 € stock:46 |  15.21 € stock: 15 |   |
 | Clock ext | 48 MHz | 72 MHz | 64 MHz | 64 MHz | 100 MHz | 240 MHz |
 | Clock Int | 8 MHz | 8 MHz |   | 16 MHz |   |   |
 | Consumption | 4.4 mA |   | 91 μA/MHz | 107  μA/MHz ~ 3mA |   |   |
@@ -26,12 +26,24 @@ There are two candidates:
 |   |   |   | [Dev board](https://www.mouser.fr/ProductDetail/STMicroelectronics/NUCLEO-F030R8?qs=fK8dlpkaUMvL9GSuoYnNYw%3D%3D&mgh=1&vip=1&utm_id=18189432403&utm_source=google&utm_medium=cpc&utm_marketing_tactic=emeacorp&gad_source=1&gad_campaignid=18194208143&gclid=Cj0KCQjwj8jDBhD1ARIsACRV2TuMFzR2xPGz4mOad_9n7fF12duHYsjhRrJ_6VzR5CbDneVjlzRqI1IaAkFQEALw_wcB) | [datasheet](https://jlcpcb.com/api/file/downloadByFileSystemAccessId/8589834993578250240) |   | [datasheet](https://documentation.espressif.com/esp32-wrover-e_esp32-wrover-ie_datasheet_en.pdf) |
 | Audio |   |   |   | 1 SAI | [audio](https://wiki.st.com/stm32mcu/wiki/Connectivity:Bluetooth_LE_Audio_-_STM32WBA_Architecture_and_Integration) |   |
 
+
+It appears that STM32WBA Serie is the new, more capable, bluetooth MCU serie.
+The only module available (2025q4) is STM32WBA5M, and it does not have USB support.
+
+USB support is only available on STM32WBA6 serie, and the module STM32WBA6M are planned to be released 2026q1.
+
+* STM32WBA62CIU6 https://jlcpcb.com/partdetail/STMicroelectronics-STM32WBA62CIU6/C44847723
+  * 20 parts x 6.36 EUR
+  * USB high-speed
+  * https://www.st.com/en/evaluation-tools/nucleo-wba65ri.html
+  * https://www.st.com/resource/en/flyer/flstm32wba.pdf Mention WBA6
+
 ### Bootloader
 
-At startup, boot pins are used to select one of three boot options:  
-\- Boot from user Flash  
-\- Boot from System memory  
-\- Boot from embedded SRAM  
+At startup, boot pins are used to select one of three boot options:
+\- Boot from user Flash
+\- Boot from System memory
+\- Boot from embedded SRAM
 The boot loader is located in System memory.
 
 It only supports USART (V2.2) protocol on USART1 ( on PA8-12), hence it is unlikely that I will support update via the main board.

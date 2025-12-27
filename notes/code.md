@@ -161,6 +161,13 @@ Reference:
 * When a device is suspended (no activity on dataline), the amout of current that can be drawn is limited to a couple of mA.
 * TODO: Should I wire the ID pin of my USB connector to a 100kOhm pulldown.
 
+
+Discussion: https://community.st.com/t5/stm32-mcus-boards-and-hardware/nucleo-wb55rg-user-usb-connection-sensing/m-p/866010#M29057
+
+## USB Midi
+
+https://github.com/Hypnotriod/midi-box-stm32/tree/master
+
 ## STM32CubeIDE
 
 * Activate NOE activates a USB_NOE output bit that can be used to show

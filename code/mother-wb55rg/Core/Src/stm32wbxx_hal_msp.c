@@ -67,11 +67,94 @@ void HAL_MspInit(void)
 
   /* USER CODE END MspInit 0 */
 
+  HAL_PWREx_EnableVddUSB();
+
   /* System interrupt init*/
 
   /* USER CODE BEGIN MspInit 1 */
 
   /* USER CODE END MspInit 1 */
+}
+
+/**
+  * @brief PCD MSP Initialization
+  * This function configures the hardware resources used in this example
+  * @param hpcd: PCD handle pointer
+  * @retval None
+  */
+void HAL_PCD_MspInit(PCD_HandleTypeDef* hpcd)
+{
+  GPIO_InitTypeDef GPIO_InitStruct = {0};
+  RCC_PeriphCLKInitTypeDef PeriphClkInitStruct = {0};
+  if(hpcd->Instance==USB)
+  {
+    /* USER CODE BEGIN USB_MspInit 0 */
+
+    /* USER CODE END USB_MspInit 0 */
+
+  /** Initializes the peripherals clock
+  */
+    PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_USB;
+    PeriphClkInitStruct.PLLSAI1.PLLN = 24;
+    PeriphClkInitStruct.PLLSAI1.PLLP = RCC_PLLP_DIV2;
+    PeriphClkInitStruct.PLLSAI1.PLLQ = RCC_PLLQ_DIV2;
+    PeriphClkInitStruct.PLLSAI1.PLLR = RCC_PLLR_DIV2;
+    PeriphClkInitStruct.PLLSAI1.PLLSAI1ClockOut = RCC_PLLSAI1_USBCLK;
+    PeriphClkInitStruct.UsbClockSelection = RCC_USBCLKSOURCE_PLLSAI1;
+    if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct) != HAL_OK)
+    {
+      Error_Handler();
+    }
+
+    __HAL_RCC_GPIOA_CLK_ENABLE();
+    /**USB GPIO Configuration
+    PA11     ------> USB_DM
+    PA12     ------> USB_DP
+    */
+    GPIO_InitStruct.Pin = USB_DM_Pin|USB_DP_Pin;
+    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+    GPIO_InitStruct.Alternate = GPIO_AF10_USB;
+    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+    /* Peripheral clock enable */
+    __HAL_RCC_USB_CLK_ENABLE();
+    /* USER CODE BEGIN USB_MspInit 1 */
+
+    /* USER CODE END USB_MspInit 1 */
+
+  }
+
+}
+
+/**
+  * @brief PCD MSP De-Initialization
+  * This function freeze the hardware resources used in this example
+  * @param hpcd: PCD handle pointer
+  * @retval None
+  */
+void HAL_PCD_MspDeInit(PCD_HandleTypeDef* hpcd)
+{
+  if(hpcd->Instance==USB)
+  {
+    /* USER CODE BEGIN USB_MspDeInit 0 */
+
+    /* USER CODE END USB_MspDeInit 0 */
+    /* Peripheral clock disable */
+    __HAL_RCC_USB_CLK_DISABLE();
+
+    /**USB GPIO Configuration
+    PA11     ------> USB_DM
+    PA12     ------> USB_DP
+    */
+    HAL_GPIO_DeInit(GPIOA, USB_DM_Pin|USB_DP_Pin);
+
+    /* USER CODE BEGIN USB_MspDeInit 1 */
+
+    /* USER CODE END USB_MspDeInit 1 */
+  }
+
 }
 
 /* USER CODE BEGIN 1 */

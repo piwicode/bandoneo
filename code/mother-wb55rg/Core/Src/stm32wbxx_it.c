@@ -200,4 +200,20 @@ void SysTick_Handler(void)
 
 /* USER CODE BEGIN 1 */
 
+/**
+  * @brief This function handles USB high priority interrupt.
+  */
+  void USB_HP_IRQHandler(void)
+  {
+    dcd_int_handler(0);
+  }
+
+  /**
+    * @brief This function handles USB low priority interrupt.
+    */
+  void USB_LP_IRQHandler(void)
+  {
+    dcd_int_handler(0);
+  }
+
 /* USER CODE END 1 */

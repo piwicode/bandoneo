@@ -1,6 +1,13 @@
-The entrypoint fo STM32 developmenet kit is the source checkout:
+# Programming STM32WB55 and STM32WB65RI
 
+They come with nucleao-wb55 and nucleo-wb65ri development board.
+
+The entrypoint for STM32 developmenet kit is the source checkout:
+
+```
 git clone --recursive https://github.com/STMicroelectronics/STM32CubeWB.git
+git clone --recursive https://github.com/STMicroelectronics/STM32CubeWBA.git
+```
 
 ## Simple text output to COM port:
 
@@ -48,14 +55,16 @@ Install minicom `sudo apt instal minicom` then run:
 minicom -b 115200 -D /dev/ttyACM0
 ```
 
-## Write to SWO:
+## Log debug messages with SWO:
 
 As seen above the nucleo board STLink has SWO support, but STLink clone dongle don't.
 This can be improved with a soldering iron:
 
 https://www.eevblog.com/forum/microcontrollers/quick-hack-to-get-swo-on-st-link-clones/
 
-Configured in STM32CubeIDE in: `System Core` > `Sys` > `Trace Asynchronous SW`.
+Configured in STM32CubeIDE in:
+* For `stm32wg55` :  `System Core` > `Sys` > `Trace Asynchronous SW`.
+* For `stm32wg65` :  `Trace and Debug` > `DEBUG` > `Debug` = `Trace Asynchronous SW`
 
 This assign 3 pins:
 * `SYS_JTMS_SWDIO` - required for debugging. Data input and output.
@@ -161,8 +170,45 @@ Reference:
 * When a device is suspended (no activity on dataline), the amout of current that can be drawn is limited to a couple of mA.
 * TODO: Should I wire the ID pin of my USB connector to a 100kOhm pulldown.
 
+### Enable USB in STM21CUBEIDE
+
+For STM32WBA65, open the `.ioc` file and then:
+1. Go to `System Core` > `GPIO` (also known as `General Input Output`), select
+   tab `RCC` (`Reset and Clock Control`)
+2. Bind pin `OSC_IN` to signal `RCC_OSC_IN` and `OSC_OUT` to `RCC_OSC_OUT`.
+3. Go to `Connectivity` > `USB_OTG_HS` (OTG means Over The Go which indicates
+   the processor can either be a device or a host, and HS means Hish Speed which
+   indicates the fastest communication speed capability). If OSC pins are
+   correctly binded it should no longer be greyed out (disabled).
+4. Set `Internal HS Phy` to `Device_Only` and in the `Parameter Settings` > `OTG
+   PHY reference clock selection` set `32 MHz` for the nucleo board.
+5. Ensure `PLL1 Source Mux` and `OTG_S PHY Clock Mux` use `HSE`, otherwise you
+   might block forever in `USB_CoreReset()`.
+
+In the code add an interrupt handler to `stm32wbaxx_it.cc`:
+
+```
+void USB_OTG_HS_IRQHandler(void)
+{
+  // Call TinyUSB's DCD interrupt handler
+  // rhport 0 = USB_OTG_HS (first/only controller when only HS is defined)
+  dcd_int_handler(0);
+}
+```
+
+
+* [ ] TODO: Investigate hardware requirements on the final mdoule. Are external oscilators required?
 
 Discussion: https://community.st.com/t5/stm32-mcus-boards-and-hardware/nucleo-wb55rg-user-usb-connection-sensing/m-p/866010#M29057
+
+### Debugging Default_Handler
+
+When the code halts in teh default handler infinite loop, it is likely that an
+interrupe without handler was triggered. In Gdb:
+
+`print ($xpsr & 0x1f)`
+
+Then go to `g_pfnVectors` to find the matching handlin in the list (0 based).
 
 ## USB Midi
 

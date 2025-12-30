@@ -22,6 +22,10 @@
 #include "stm32wbaxx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <stdio.h>
+// Forward declaration of TinyUSB DCD interrupt handler
+// This function is defined in tinyusb/src/portable/synopsys/dwc2/dcd_dwc2.c
+extern void dcd_int_handler(uint8_t rhport);
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -55,7 +59,6 @@
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
-
 /* USER CODE BEGIN EV */
 
 /* USER CODE END EV */
@@ -242,4 +245,13 @@ void EXTI13_IRQHandler(void)
 
 /* USER CODE BEGIN 1 */
 
+/**
+  * @brief This function handles USB OTG HS global interrupt.
+  */
+void USB_OTG_HS_IRQHandler(void)
+{
+  // Call TinyUSB's DCD interrupt handler
+  // rhport 0 = USB_OTG_HS (first/only controller when only HS is defined)
+  dcd_int_handler(0);
+}
 /* USER CODE END 1 */

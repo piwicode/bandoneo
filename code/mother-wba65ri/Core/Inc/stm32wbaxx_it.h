@@ -60,6 +60,8 @@ void EXTI5_IRQHandler(void);
 void EXTI13_IRQHandler(void);
 /* USER CODE BEGIN EFP */
 
+void USB_OTG_HS_IRQHandler(void);
+
 /* USER CODE END EFP */
 
 #ifdef __cplusplus

@@ -1,6 +1,7 @@
 #ifndef _TUSB_CONFIG_H_
 #define _TUSB_CONFIG_H_
 
+#define CFG_TUSB_DEBUG    2
 #define CFG_TUSB_MCU                OPT_MCU_STM32WBA  // Use OPT_MCU_STM32WBA for WBA
 #define CFG_TUD_ENABLED             1
 #define CFG_TUD_MIDI                1    // <--- This enables Native MIDI!

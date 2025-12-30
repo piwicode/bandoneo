@@ -21,7 +21,7 @@
 // Overrides the "weak" symbol providing default implementation for "puts" `putchar` and `printf`
 // defined in Core/Src/syscalls.c
 
-int _write(int file, char *ptr, int len) {
+int _write(int file, const char *ptr, int len) {
 	// Skip logging when not debugger is attached to consume the buffer.
 //	if ((CoreDebug->DHCSR & CoreDebug_DHCSR_C_DEBUGEN_Msk)
 //			&& (ITM->TCR & ITM_TCR_ITMENA_Msk) && (ITM->TER & (1UL << 0))) {
@@ -31,4 +31,10 @@ int _write(int file, char *ptr, int len) {
 //	}
 
 	return len;
+}
+
+// TinyUSB calls this internally when CFG_TUSB_DEBUG > 0
+int board_uart_write(void const *buf, int len)
+{
+  return _write(0, (const char *)buf, len);
 }

@@ -23,6 +23,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
+#include "tusb.h"
 // Forward declaration of TinyUSB DCD interrupt handler
 // This function is defined in tinyusb/src/portable/synopsys/dwc2/dcd_dwc2.c
 extern void dcd_int_handler(uint8_t rhport);
@@ -252,6 +253,7 @@ void USB_OTG_HS_IRQHandler(void)
 {
   // Call TinyUSB's DCD interrupt handler
   // rhport 0 = USB_OTG_HS (first/only controller when only HS is defined)
-  dcd_int_handler(0);
+//  dcd_int_handler(0);
+  tusb_int_handler(0, true);
 }
 /* USER CODE END 1 */

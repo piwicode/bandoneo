@@ -59,7 +59,19 @@ static void MX_USB_OTG_HS_PCD_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+#include "class/cdc/cdc_device.h"
 
+void send_midi_note_on(uint8_t note, uint8_t velocity) {
+  uint8_t const channel   = 0; // MIDI Channel 1
+  // Note On message: 0x90 | channel
+  uint8_t packet[4] = { 0x09, 0x90 | channel, note, velocity };
+  
+  uint32_t const written = tud_midi_packet_write(packet);
+  if (written != 1) {
+    printf("Failed to write MIDI packet: %ld\n", written);
+    // TODO: Deal with notes lying in the buffer.
+  }
+}
 /* USER CODE END 0 */
 
 /**
@@ -119,12 +131,19 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	// Mounted means the USB cable is plugged in and the PC has recognized the device.
+	// It does not mean a specific application is actually reading the MIDI data.
 
-	  printf("Hello world!\n");
-	  for(int i = 0 ; i < 50 ; i++) {
-		  HAL_Delay(10);
-		  tud_task();
-	  }
+    printf("Hello world: mounted: %d\n", tud_midi_mounted());
+	if ( tud_midi_mounted() ) { // Ensure USB is connected and configured
+
+		  send_midi_note_on(60, 127); // Send Middle C
+
+	}
+	for(int i = 0 ; i < 50 ; i++) {
+	  HAL_Delay(10);
+	  tud_task();
+	}
   }
   /* USER CODE END 3 */
 }

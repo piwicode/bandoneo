@@ -199,7 +199,8 @@ void USB_OTG_HS_IRQHandler(void)
 
 * [ ] TODO: Investigate hardware requirements on the final mdoule. Are external oscilators required?
 
-Discussion: https://community.st.com/t5/stm32-mcus-boards-and-hardware/nucleo-wb55rg-user-usb-connection-sensing/m-p/866010#M29057
+* TinyUSB Documentation: tusb_init
+* Discussion: https://community.st.com/t5/stm32-mcus-boards-and-hardware/nucleo-wb55rg-user-usb-connection-sensing/m-p/866010#M29057
 
 ### Debugging Default_Handler
 
@@ -211,7 +212,16 @@ interrupe without handler was triggered. In Gdb:
 Then go to `g_pfnVectors` to find the matching handlin in the list (0 based).
 
 ## USB Midi
+There are two protocols: USB midi 2 and USB midi 1. TinyUsb has a driver for
+midi 2 https://github.com/midi2-dev/tusb_ump
 
+We should dealcare fully with clogged buffers https://github.com/hathach/tinyusb/discussions/3443
+
+Get details with `lsusb` and then `lsusb -v -d cafe:0001`
+
+`cat /proc/asound/cards` will show a `USB-Audio - STM32 Audio Class`
+
+List midi devices with `aseqdump -l` and dump event with `aseqdump -p 20:0`
 https://github.com/Hypnotriod/midi-box-stm32/tree/master
 
 ## STM32CubeIDE

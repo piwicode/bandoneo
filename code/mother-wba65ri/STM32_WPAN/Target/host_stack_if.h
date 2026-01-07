@@ -1,8 +1,9 @@
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
-  * @file    stm32wbaxx_it.h
-  * @brief   This file contains the headers of the interrupt handlers.
+  * @file    host_stack_if.h
+  * @author  MCD Application Team
+  * @brief : This file contains the interface for the stack tasks
   ******************************************************************************
   * @attention
   *
@@ -17,15 +18,19 @@
   */
 /* USER CODE END Header */
 
-/* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __STM32WBAxx_IT_H
-#define __STM32WBAxx_IT_H
+#ifndef HOST_STACK_IF_H
+#define HOST_STACK_IF_H
+
+/* Private user code ---------------------------------------------------------*/
+/* USER CODE BEGIN 0 */
+
+/* USER CODE END 0 */
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-/* Private includes ----------------------------------------------------------*/
+/* Includes ------------------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
@@ -41,36 +46,36 @@ extern "C" {
 /* USER CODE END EC */
 
 /* Exported macro ------------------------------------------------------------*/
+/* Halt if any aci/hci functions call is made under ISR context, for debug purpose. */
+#define BLE_WRAP_PREPROC() do{ \
+                             if( __get_IPSR() != 0 )while(1); \
+                           }while(0)
+
+/* Trigger BLE Host stack process after calling any aci/hci functions */
+#define BLE_WRAP_POSTPROC() BleStackCB_Process()
+
 /* USER CODE BEGIN EM */
 
 /* USER CODE END EM */
 
 /* Exported functions prototypes ---------------------------------------------*/
-void NMI_Handler(void);
-void HardFault_Handler(void);
-void MemManage_Handler(void);
-void BusFault_Handler(void);
-void UsageFault_Handler(void);
-void SVC_Handler(void);
-void DebugMon_Handler(void);
-void PendSV_Handler(void);
-void SysTick_Handler(void);
-void RTC_IRQHandler(void);
-void RCC_IRQHandler(void);
-void GPDMA1_Channel0_IRQHandler(void);
-void GPDMA1_Channel1_IRQHandler(void);
-void USART1_IRQHandler(void);
-void TIM16_IRQHandler(void);
-void RADIO_IRQHandler(void);
-void HASH_IRQHandler(void);
+void BleStackCB_Process(void);
 /* USER CODE BEGIN EFP */
 
-void USB_OTG_HS_IRQHandler(void);
-
 /* USER CODE END EFP */
+
+/* Private user code ---------------------------------------------------------*/
+/* USER CODE BEGIN 1 */
+
+/* USER CODE END 1 */
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* __STM32WBAxx_IT_H */
+/* Private user code ---------------------------------------------------------*/
+/* USER CODE BEGIN 2 */
+
+/* USER CODE END 2 */
+
+#endif /* HOST_STACK_IF_H */

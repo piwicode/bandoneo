@@ -30,6 +30,23 @@ extern "C" {
 #include "stm32wbaxx_hal.h"
 
 #include "stm32wbaxx_nucleo.h"
+#include "app_conf.h"
+#include "app_entry.h"
+#include "app_common.h"
+#include "app_debug.h"
+
+#include "stm32wbaxx_ll_icache.h"
+#include "stm32wbaxx_ll_tim.h"
+#include "stm32wbaxx_ll_bus.h"
+#include "stm32wbaxx_ll_cortex.h"
+#include "stm32wbaxx_ll_rcc.h"
+#include "stm32wbaxx_ll_system.h"
+#include "stm32wbaxx_ll_utils.h"
+#include "stm32wbaxx_ll_pwr.h"
+#include "stm32wbaxx_ll_gpio.h"
+#include "stm32wbaxx_ll_dma.h"
+
+#include "stm32wbaxx_ll_exti.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -53,16 +70,18 @@ extern "C" {
 
 /* Exported functions prototypes ---------------------------------------------*/
 void Error_Handler(void);
+void MX_ADC4_Init(void);
+void MX_CRC_Init(void);
+void MX_RAMCFG_Init(void);
+void MX_RNG_Init(void);
+void MX_RTC_Init(void);
+void MX_ICACHE_Init(void);
 
 /* USER CODE BEGIN EFP */
 
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define VCP1_TX_Pin GPIO_PIN_12
-#define VCP1_TX_GPIO_Port GPIOB
-#define VCP1_RX_Pin GPIO_PIN_8
-#define VCP1_RX_GPIO_Port GPIOA
 #define USB_FS_N_Pin GPIO_PIN_7
 #define USB_FS_N_GPIO_Port GPIOD
 #define USB_FS_P_Pin GPIO_PIN_6

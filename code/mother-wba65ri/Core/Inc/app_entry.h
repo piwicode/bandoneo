@@ -1,8 +1,9 @@
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
-  * @file    stm32wbaxx_it.h
-  * @brief   This file contains the headers of the interrupt handlers.
+  * @file    app_entry.h
+  * @author  MCD Application Team
+  * @brief   Interface to the application
   ******************************************************************************
   * @attention
   *
@@ -18,14 +19,17 @@
 /* USER CODE END Header */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __STM32WBAxx_IT_H
-#define __STM32WBAxx_IT_H
+#ifndef APP_ENTRY_H
+#define APP_ENTRY_H
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
+/* Includes ------------------------------------------------------------------*/
+
 /* Private includes ----------------------------------------------------------*/
+#include "app_common.h"
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
@@ -36,41 +40,33 @@ extern "C" {
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
+#define WPAN_SUCCESS 0u
+
 /* USER CODE BEGIN EC */
 
 /* USER CODE END EC */
 
-/* Exported macro ------------------------------------------------------------*/
+/* Exported variables --------------------------------------------------------*/
+/* USER CODE BEGIN EV */
+
+/* USER CODE END EV */
+
+/* Exported macros ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
 
 /* USER CODE END EM */
 
 /* Exported functions prototypes ---------------------------------------------*/
-void NMI_Handler(void);
-void HardFault_Handler(void);
-void MemManage_Handler(void);
-void BusFault_Handler(void);
-void UsageFault_Handler(void);
-void SVC_Handler(void);
-void DebugMon_Handler(void);
-void PendSV_Handler(void);
-void SysTick_Handler(void);
-void RTC_IRQHandler(void);
-void RCC_IRQHandler(void);
-void GPDMA1_Channel0_IRQHandler(void);
-void GPDMA1_Channel1_IRQHandler(void);
-void USART1_IRQHandler(void);
-void TIM16_IRQHandler(void);
-void RADIO_IRQHandler(void);
-void HASH_IRQHandler(void);
-/* USER CODE BEGIN EFP */
+void MX_APPE_Config(void);
+uint32_t MX_APPE_Init(void *p_param);
+void MX_APPE_Process(void);
 
-void USB_OTG_HS_IRQHandler(void);
+/* USER CODE BEGIN EFP */
 
 /* USER CODE END EFP */
 
 #ifdef __cplusplus
-}
+} /* extern "C" */
 #endif
 
-#endif /* __STM32WBAxx_IT_H */
+#endif /*APP_ENTRY_H */

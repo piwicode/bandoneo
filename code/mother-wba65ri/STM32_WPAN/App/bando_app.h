@@ -1,12 +1,13 @@
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
-  * @file    stm32wbaxx_it.h
-  * @brief   This file contains the headers of the interrupt handlers.
+  * @file    Bando_app.h
+  * @author  MCD Application Team
+  * @brief   Header for Bando_app.c
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2025 STMicroelectronics.
+  * Copyright (c) 2026 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -18,19 +19,42 @@
 /* USER CODE END Header */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __STM32WBAxx_IT_H
-#define __STM32WBAxx_IT_H
+#ifndef BANDO_APP_H
+#define BANDO_APP_H
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-/* Private includes ----------------------------------------------------------*/
+/* Includes ------------------------------------------------------------------*/
+#include "ble_types.h"
+#include "ble_core.h"
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
+typedef enum
+{
+  BANDO_CONN_HANDLE_EVT,
+  BANDO_DISCON_HANDLE_EVT,
+
+  /* USER CODE BEGIN Service1_OpcodeNotificationEvt_t */
+
+  /* USER CODE END Service1_OpcodeNotificationEvt_t */
+
+  BANDO_LAST_EVT,
+} BANDO_APP_OpcodeNotificationEvt_t;
+
+typedef struct
+{
+  BANDO_APP_OpcodeNotificationEvt_t          EvtOpcode;
+  uint16_t                                 ConnectionHandle;
+
+  /* USER CODE BEGIN BANDO_APP_ConnHandleNotEvt_t */
+
+  /* USER CODE END BANDO_APP_ConnHandleNotEvt_t */
+} BANDO_APP_ConnHandleNotEvt_t;
 /* USER CODE BEGIN ET */
 
 /* USER CODE END ET */
@@ -40,32 +64,20 @@ extern "C" {
 
 /* USER CODE END EC */
 
-/* Exported macro ------------------------------------------------------------*/
+/* External variables --------------------------------------------------------*/
+/* USER CODE BEGIN EV */
+
+/* USER CODE END EV */
+
+/* Exported macros -----------------------------------------------------------*/
 /* USER CODE BEGIN EM */
 
 /* USER CODE END EM */
 
 /* Exported functions prototypes ---------------------------------------------*/
-void NMI_Handler(void);
-void HardFault_Handler(void);
-void MemManage_Handler(void);
-void BusFault_Handler(void);
-void UsageFault_Handler(void);
-void SVC_Handler(void);
-void DebugMon_Handler(void);
-void PendSV_Handler(void);
-void SysTick_Handler(void);
-void RTC_IRQHandler(void);
-void RCC_IRQHandler(void);
-void GPDMA1_Channel0_IRQHandler(void);
-void GPDMA1_Channel1_IRQHandler(void);
-void USART1_IRQHandler(void);
-void TIM16_IRQHandler(void);
-void RADIO_IRQHandler(void);
-void HASH_IRQHandler(void);
+void BANDO_APP_Init(void);
+void BANDO_APP_EvtRx(BANDO_APP_ConnHandleNotEvt_t *p_Notification);
 /* USER CODE BEGIN EFP */
-
-void USB_OTG_HS_IRQHandler(void);
 
 /* USER CODE END EFP */
 
@@ -73,4 +85,4 @@ void USB_OTG_HS_IRQHandler(void);
 }
 #endif
 
-#endif /* __STM32WBAxx_IT_H */
+#endif /*BANDO_APP_H */

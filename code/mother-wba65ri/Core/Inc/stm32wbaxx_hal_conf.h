@@ -34,22 +34,22 @@ extern "C" {
   * @brief This is the list of modules to be used in the HAL driver
   */
 #define HAL_MODULE_ENABLED
-/*#define HAL_ADC_MODULE_ENABLED   */
+#define HAL_ADC_MODULE_ENABLED
 /*#define HAL_COMP_MODULE_ENABLED   */
-/*#define HAL_CRC_MODULE_ENABLED   */
+#define HAL_CRC_MODULE_ENABLED
 /*#define HAL_CRYP_MODULE_ENABLED   */
 /*#define HAL_GTZC_MODULE_ENABLED   */
 /*#define HAL_HASH_MODULE_ENABLED   */
 /*#define HAL_HSEM_MODULE_ENABLED   */
 /*#define HAL_I2C_MODULE_ENABLED   */
-#define HAL_ICACHE_MODULE_ENABLED
+/*#define HAL_ICACHE_MODULE_ENABLED   */
 /*#define HAL_IRDA_MODULE_ENABLED   */
 /*#define HAL_IWDG_MODULE_ENABLED   */
 /*#define HAL_LPTIM_MODULE_ENABLED   */
 /*#define HAL_PKA_MODULE_ENABLED   */
-/*#define HAL_RAMCFG_MODULE_ENABLED   */
-/*#define HAL_RNG_MODULE_ENABLED   */
-/*#define HAL_RTC_MODULE_ENABLED   */
+#define HAL_RAMCFG_MODULE_ENABLED
+#define HAL_RNG_MODULE_ENABLED
+#define HAL_RTC_MODULE_ENABLED
 /*#define HAL_SAI_MODULE_ENABLED   */
 /*#define HAL_SMBUS_MODULE_ENABLED   */
 /*#define HAL_SMARTCARD_MODULE_ENABLED   */
@@ -178,8 +178,8 @@ extern "C" {
 #define  USE_HAL_SPI_REGISTER_CALLBACKS        0U /* SPI register callback disabled       */
 #define  USE_HAL_TIM_REGISTER_CALLBACKS        0U /* TIM register callback disabled       */
 #define  USE_HAL_TSC_REGISTER_CALLBACKS        0U /* TSC register callback disabled       */
-#define  USE_HAL_UART_REGISTER_CALLBACKS       0U /* UART register callback disabled      */
-#define  USE_HAL_USART_REGISTER_CALLBACKS      0U /* USART register callback disabled     */
+#define  USE_HAL_UART_REGISTER_CALLBACKS       1U /* UART register callback enabled      */
+#define  USE_HAL_USART_REGISTER_CALLBACKS      1U /* USART register callback enabled     */
 #define  USE_HAL_WWDG_REGISTER_CALLBACKS       0U /* WWDG register callback disabled      */
 
 /* ################## SPI peripheral configuration ########################## */

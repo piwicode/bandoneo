@@ -1,8 +1,9 @@
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************
-  * @file    stm32wbaxx_it.h
-  * @brief   This file contains the headers of the interrupt handlers.
+  * @file    stm32_rtos.h
+  * @author  MCD Application Team
+  * @brief   Include file for all RTOS/Sequencer can be used on WBA
   ******************************************************************************
   * @attention
   *
@@ -18,14 +19,15 @@
 /* USER CODE END Header */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __STM32WBAxx_IT_H
-#define __STM32WBAxx_IT_H
+#ifndef STM32_RTOS_H
+#define STM32_RTOS_H
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-/* Private includes ----------------------------------------------------------*/
+/* Includes ------------------------------------------------------------------*/
+#include "stm32_seq.h"
 /* USER CODE BEGIN Includes */
 
 /* USER CODE END Includes */
@@ -36,41 +38,35 @@ extern "C" {
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
+/* Sequencer priorities by default  */
+#define TASK_PRIO_RNG                           CFG_SEQ_PRIO_0
+#define TASK_PRIO_LINK_LAYER                    CFG_SEQ_PRIO_0
+
+/* USER CODE BEGIN TASK_Priority_Define */
+
+/* USER CODE END TASK_Priority_Define */
+
 /* USER CODE BEGIN EC */
 
 /* USER CODE END EC */
 
-/* Exported macro ------------------------------------------------------------*/
+/* Exported macros -----------------------------------------------------------*/
 /* USER CODE BEGIN EM */
 
 /* USER CODE END EM */
 
-/* Exported functions prototypes ---------------------------------------------*/
-void NMI_Handler(void);
-void HardFault_Handler(void);
-void MemManage_Handler(void);
-void BusFault_Handler(void);
-void UsageFault_Handler(void);
-void SVC_Handler(void);
-void DebugMon_Handler(void);
-void PendSV_Handler(void);
-void SysTick_Handler(void);
-void RTC_IRQHandler(void);
-void RCC_IRQHandler(void);
-void GPDMA1_Channel0_IRQHandler(void);
-void GPDMA1_Channel1_IRQHandler(void);
-void USART1_IRQHandler(void);
-void TIM16_IRQHandler(void);
-void RADIO_IRQHandler(void);
-void HASH_IRQHandler(void);
-/* USER CODE BEGIN EFP */
+/* Exported variables --------------------------------------------------------*/
+/* USER CODE BEGIN EV */
 
-void USB_OTG_HS_IRQHandler(void);
+/* USER CODE END EV */
+
+/* Exported functions prototypes ---------------------------------------------*/
+/* USER CODE BEGIN EFP */
 
 /* USER CODE END EFP */
 
 #ifdef __cplusplus
-}
+} /* extern "C" */
 #endif
 
-#endif /* __STM32WBAxx_IT_H */
+#endif // STM32_RTOS_H

@@ -212,6 +212,7 @@ interrupe without handler was triggered. In Gdb:
 Then go to `g_pfnVectors` to find the matching handlin in the list (0 based).
 
 ## USB Midi
+
 There are two protocols: USB midi 2 and USB midi 1. TinyUsb has a driver for
 midi 2 https://github.com/midi2-dev/tusb_ump
 
@@ -232,7 +233,19 @@ https://github.com/Hypnotriod/midi-box-stm32/tree/master
 
 * Transmission line documentation: https://www.youtube.com/watch?v=**u5Cgycpvq6Y**
 * JCLPcb blog post https://jlcpcb.com/blog/selecting-the-right-impedance-for-usb-ethernet-hdmi-and-sd-card-interfaces
-*
+
+# Bluetooth
+
+Documentation at https://wiki.st.com/stm32mcu/wiki/Connectivity:STM32WBA_BLE_Stack_Integration
+
+Isochornous audio requires FULL Host Stack + LE Controller (stm32wba_ble_stack_full)
+
+Documentation at https://wiki.st.com/stm32mcu/wiki/Connectivity:STM32WBA_BLE_STM32CubeMX
+
+THere is a list of mandatory devices to be enabled.
+
+
+We need to be both a host for audio devices and a midi device
 ## Open points
 
 * [ ] Should I add a 100KOhm to boot0 from stlink like in the devboard?
@@ -250,6 +263,11 @@ https://github.com/Hypnotriod/midi-box-stm32/tree/master
 * Issue: `"Java" is not responding` error showing up on the splash screen.
 * Fix: remove ./.metadata/.plugin/org.eclipse.e4.workbench org.eclipse.e4.workbench
 
+# nRF5340
+
+```
+
+```
 ## Further reading:
 
 * https://github.com/STMicroelectronics/STM32CubeWB

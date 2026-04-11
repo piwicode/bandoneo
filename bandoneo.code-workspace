@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"name": "bandoneo",
+			"path": "."
+		},
+		{
+			"name": "datasheets",
+			"path": "../datasheets"
+		},
+		{
+			"name": "STM32CubeWB",
+			"path": "../STM32CubeWB"
+		},
+		{
+			"name": "STM32CubeWBA",
+			"path": "../STM32CubeWBA"
+		},
+		{
+			"name": "STM32CubeL4",
+			"path": "../STM32CubeL4"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"algorithm": "c"
+		}
+	}
+}

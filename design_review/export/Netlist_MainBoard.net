@@ -4122,16 +4122,12 @@ DESCRIPTION
 Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
 Component Kind
 Standard
-LCSC Part Name
-100nF ±10% 50V
 Supplier Part
 C14663
 Manufacturer
 YAGEO(国巨)
 Manufacturer Part
 CC0603KRX7R9BB104
-Supplier Footprint
-0603
 JLCPCB Part Class
 Basic Part
 Datasheet
@@ -4144,14 +4140,18 @@ Convert to PCB
 yes
 3D Model Title
 C0603_L1.6-W0.8-H0.8
-Value
-100nF
 Tolerance
 ±10%
 Voltage Rated
 
 Temperature Coefficient
 
+LCSC Part Name
+100nF ±10% 50V
+Supplier Footprint
+0603
+Value
+100nF
 Description
 Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
 Symbol
@@ -6197,6 +6197,272 @@ gge252
 
 *
 ]
+[
+DESIGNATOR
+C37
+FOOTPRINT
+C0805
+PARTTYPE
+GRM21BR61H106KE43L
+DESCRIPTION
+Capacitance:10uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X5R
+Component Kind
+Standard
+LCSC Part Name
+10uF ±10% 50V
+Supplier Part
+C440198
+Manufacturer
+muRata(村田)
+Manufacturer Part
+GRM21BR61H106KE43L
+Supplier Footprint
+0805
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/GRM21BR61H106KE43L/439567.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0805_L2.0-W1.3-H1.3
+Value
+10uF
+Tolerance
+±10%
+Voltage Rating
+50V
+Temperature Coefficient
+X5R
+Description
+Capacitance:10uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X5R
+Symbol
+GRM21BR61H106KE43L
+Designator
+C37
+Name
+10uF
+Device
+GRM21BR61H106KE43L
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge242_1
+
+*
+]
+[
+DESIGNATOR
+R33
+FOOTPRINT
+R0603
+PARTTYPE
+0603WAF4701T5E
+DESCRIPTION
+Type:Thick Film Resistor Resistance:4.7kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Component Kind
+Standard
+LCSC Part Name
+4.7kΩ ±1% 100mW 厚膜电阻
+Supplier Part
+C23162
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0603WAF4701T5E
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/0603WAF4701T5E/23889.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0603
+Type
+Thick Film Resistor
+Value
+4.7kΩ
+Tolerance
+±1%
+Power(Watts)
+100mW
+Voltage-Supply(Max)
+75V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+Type:Thick Film Resistor Resistance:4.7kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Symbol
+0603WAF4701T5E
+Designator
+R33
+Name
+4.7kΩ
+Device
+0603WAF4701T5E
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge254
+
+*
+]
+[
+DESIGNATOR
+R32
+FOOTPRINT
+R0603
+PARTTYPE
+0603WAF4701T5E
+DESCRIPTION
+Type:Thick Film Resistor Resistance:4.7kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Component Kind
+Standard
+LCSC Part Name
+4.7kΩ ±1% 100mW 厚膜电阻
+Supplier Part
+C23162
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0603WAF4701T5E
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/0603WAF4701T5E/23889.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0603
+Type
+Thick Film Resistor
+Value
+4.7kΩ
+Tolerance
+±1%
+Power(Watts)
+100mW
+Voltage-Supply(Max)
+75V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+Type:Thick Film Resistor Resistance:4.7kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Symbol
+0603WAF4701T5E
+Designator
+R32
+Name
+4.7kΩ
+Device
+0603WAF4701T5E
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge255
+
+*
+]
+[
+DESIGNATOR
+R34
+FOOTPRINT
+R0603
+PARTTYPE
+0603WAF1002T5E
+DESCRIPTION
+Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Component Kind
+Standard
+LCSC Part Name
+厚膜电阻 10kΩ ±1% 100mW
+Supplier Part
+C25804
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0603WAF1002T5E
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/0603WAF1002T5E/26547.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+0603WAF1002T5E
+3D Model Title
+R0603
+Type
+Thick Film Resistor
+Value
+10kΩ
+Tolerance
+±1%
+Power(Watts)
+100mW
+Voltage-Supply(Max)
+75V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Designator
+R34
+Name
+10kΩ
+Device
+0603WAF1002T5E
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge234_1
+
+*
+]
 (
 $1N34230 
 SW-2 TS-1088-AR02016-2 Passive 
@@ -6255,7 +6521,6 @@ R14-1 0603WAF1000T5E-1 Input
 C18-2 GRM21BR61H106KE43L-2 Passive 
 C19-2 GRM21BR61H106KE43L-2 Passive 
 U47-8 BQ25895RTWR-OTG Input   
-U47-9 BQ25895RTWR-CE Input   
 U47-17 BQ25895RTWR-PGND Input   
 U47-18 BQ25895RTWR-PGND Input   
 C16-1 GRM21BR61H106KE43L-1 Passive 
@@ -6267,6 +6532,7 @@ C21-1 CL31B105KBHNNNE-1 Passive
 C22-1 CL31B105KBHNNNE-1 Passive 
 C23-1 1206B475K500NT-1 Input   
 C24-1 1206B475K500NT-1 Input   
+C37-1 GRM21BR61H106KE43L-1 Passive 
 )
 (
 PGM_RESET 
@@ -6297,7 +6563,7 @@ SW_BT_VOL+
 SW2-2 TS-1088-AR02016-2 Passive 
 C35-1 CC0603KRX7R9BB104-1 Passive 
 D5-2 H5VND5BA-2 Passive 
-U1-74 STM32WB5MMGH6TR-PD9 Passive 
+U1-83 STM32WB5MMGH6TR-PC8 Passive 
 )
 (
 SW_BT_VOL- 
@@ -6320,12 +6586,10 @@ LEFT_WING_PORT-6 B8B-PH-SM4-TBT(LF)(SN)-6 Passive
 TV4-1 SRV05-4-P-T7_C85364-1 Input   
 )
 (
-LD_CELL+ 
-U1-7 STM32WB5MMGH6TR-PC3 Passive 
-)
-(
-LD_CELL- 
-U1-8 STM32WB5MMGH6TR-PC2 Passive 
+L_READY 
+U1-3 STM32WB5MMGH6TR-PA0 Passive 
+LEFT_WING_PORT-8 B8B-PH-SM4-TBT(LF)(SN)-8 Passive 
+TV5-4 SRV05-4-P-T7_C85364-4 Input   
 )
 (
 EXP_PEDAL 
@@ -6338,10 +6602,10 @@ RESET
 U1-10 STM32WB5MMGH6TR-NRST Passive 
 )
 (
-R_SPI_NSS 
+POW_SDA 
 U1-11 STM32WB5MMGH6TR-PB9 Passive 
-RIGHT_WING_PORT-7 B8B-PH-SM4-TBT(LF)(SN)-7 Passive 
-TV2-3 SRV05-4-P-T7_C85364-3 Input   
+U47-6 BQ25895RTWR-SDA Input   
+R32-2 0603WAF4701T5E-2 Input   
 )
 (
 SUS_PEDAL 
@@ -6353,10 +6617,7 @@ TV14-1 SRV05-4-P-T7_C85364-1 Input
 POW_SCL 
 U1-14 STM32WB5MMGH6TR-PB8 Passive 
 U47-5 BQ25895RTWR-SCL Input   
-)
-(
-USART_RX 
-U1-18 STM32WB5MMGH6TR-PB7 Passive 
+R33-2 0603WAF4701T5E-2 Input   
 )
 (
 L_SPI_MOSI 
@@ -6393,9 +6654,10 @@ LEFT_WING_PORT-7 B8B-PH-SM4-TBT(LF)(SN)-7 Passive
 TV4-3 SRV05-4-P-T7_C85364-3 Input   
 )
 (
-POW_SDA 
+PGM_USART_RX 
 U1-28 STM32WB5MMGH6TR-PA10 Passive 
-U47-6 BQ25895RTWR-SDA Input   
+PROGRAM_PORT-8 B8B-PH-SM4-TBT(LF)(SN)-8 Passive 
+TV7-4 SRV05-4-P-T7_C85364-4 Input   
 )
 (
 USB_D+ 
@@ -6410,35 +6672,16 @@ USB1-2 HC-TYPE-B-2.0-VS15-1.5A-15-D- Passive
 TV1-1 SRV05-4-P-T7_C85364-1 Input   
 )
 (
+R_SPI_NSS 
+U1-33 STM32WB5MMGH6TR-PD0 Passive 
+RIGHT_WING_PORT-7 B8B-PH-SM4-TBT(LF)(SN)-7 Passive 
+TV2-3 SRV05-4-P-T7_C85364-3 Input   
+)
+(
 R_SPI_SCK 
 U1-34 STM32WB5MMGH6TR-PD1 Passive 
 RIGHT_WING_PORT-6 B8B-PH-SM4-TBT(LF)(SN)-6 Passive 
 TV2-1 SRV05-4-P-T7_C85364-1 Input   
-)
-(
-R_READY 
-U1-35 STM32WB5MMGH6TR-PB13 Passive 
-RIGHT_WING_PORT-8 B8B-PH-SM4-TBT(LF)(SN)-8 Passive 
-TV3-4 SRV05-4-P-T7_C85364-4 Input   
-)
-(
-R_NRST 
-U1-36 STM32WB5MMGH6TR-PC6 Passive 
-RIGHT_WING_PORT-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
-U54-1 BAT54C_C22466350-A Passive 
-TV3-6 SRV05-4-P-T7_C85364-6 Input   
-)
-(
-R_SPI_MOSI 
-U1-37 STM32WB5MMGH6TR-PB14 Passive 
-RIGHT_WING_PORT-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive 
-TV2-4 SRV05-4-P-T7_C85364-4 Input   
-)
-(
-R_SPI_MISO 
-U1-38 STM32WB5MMGH6TR-PB15 Passive 
-RIGHT_WING_PORT-5 B8B-PH-SM4-TBT(LF)(SN)-5 Passive 
-TV2-6 SRV05-4-P-T7_C85364-6 Input   
 )
 (
 PGM_USART_TX 
@@ -6447,38 +6690,39 @@ PROGRAM_PORT-7 B8B-PH-SM4-TBT(LF)(SN)-7 Passive
 TV11-6 SRV05-4-P-T7_C85364-6 Input   
 )
 (
-LED_CH4 
-U1-46 STM32WB5MMGH6TR-PB11 Passive 
-R25-1 0603WAF3300T5E-1 Input   
-)
-(
 LED_CH3 
-U1-47 STM32WB5MMGH6TR-PB10 Passive 
+U1-43 STM32WB5MMGH6TR-PB0 Passive 
 R20-1 0603WAF3300T5E-1 Input   
 )
 (
+LED_CH4 
+U1-44 STM32WB5MMGH6TR-PB1 Passive 
+R25-1 0603WAF3300T5E-1 Input   
+)
+(
 LED_CH2 
-U1-48 STM32WB5MMGH6TR-PB2 Passive 
+U1-45 STM32WB5MMGH6TR-PC5 Passive 
 R22-1 0603WAF3300T5E-1 Input   
+)
+(
+LED_CH0 
+U1-48 STM32WB5MMGH6TR-PB2 Passive 
+R19-1 0603WAF3300T5E-1 Input   
 )
 (
 LED_CH1 
 U1-49 STM32WB5MMGH6TR-PC4 Passive 
+U1-74 STM32WB5MMGH6TR-PD9 Passive 
 R27-1 0603WAF3300T5E-1 Input   
 )
 (
-LED_CH0 
-U1-50 STM32WB5MMGH6TR-PA8 Passive 
-R19-1 0603WAF3300T5E-1 Input   
-)
-(
 LED_POWER 
-U1-51 STM32WB5MMGH6TR-PA9 Passive 
+U1-50 STM32WB5MMGH6TR-PA8 Passive 
 R28-1 0603WAF3300T5E-1 Input   
 )
 (
 SW_POWER 
-U1-52 STM32WB5MMGH6TR-PA7 Passive 
+U1-51 STM32WB5MMGH6TR-PA9 Passive 
 U56-1 BAT54C_C22466350-A Passive 
 )
 (
@@ -6493,13 +6737,51 @@ R21-1 0603WAF3300T5E-1 Input
 )
 (
 POW_INT 
-U1-68 STM32WB5MMGH6TR-PD2 Passive 
+U1-62 STM32WB5MMGH6TR-PH1 Passive 
 R7-2 0603WAF1002T5E-2 Input   
 U47-7 BQ25895RTWR-INT Input   
 )
 (
+SUS_PEDAL_INT 
+U1-63 STM32WB5MMGH6TR-PD14 Passive 
+SUS_PEDAL-3 PJ-603A-3 Input   
+C32-2 CC0603KRX7R9BB104-2 Passive 
+TV14-6 SRV05-4-P-T7_C85364-6 Input   
+)
+(
 USB_SENSE 
 U1-69 STM32WB5MMGH6TR-PC9 Passive 
+)
+(
+R_SPI_MISO 
+U1-70 STM32WB5MMGH6TR-PD3 Passive 
+RIGHT_WING_PORT-5 B8B-PH-SM4-TBT(LF)(SN)-5 Passive 
+TV2-6 SRV05-4-P-T7_C85364-6 Input   
+)
+(
+R_READY 
+U1-71 STM32WB5MMGH6TR-PC7 Passive 
+RIGHT_WING_PORT-8 B8B-PH-SM4-TBT(LF)(SN)-8 Passive 
+TV3-4 SRV05-4-P-T7_C85364-4 Input   
+)
+(
+R_NRST 
+U1-72 STM32WB5MMGH6TR-PE3 Passive 
+RIGHT_WING_PORT-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
+U54-1 BAT54C_C22466350-A Passive 
+TV3-6 SRV05-4-P-T7_C85364-6 Input   
+)
+(
+R_SPI_MOSI 
+U1-73 STM32WB5MMGH6TR-PD4 Passive 
+RIGHT_WING_PORT-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive 
+TV2-4 SRV05-4-P-T7_C85364-4 Input   
+)
+(
+POW_NCE 
+U1-76 STM32WB5MMGH6TR-PD15 Passive 
+U47-9 BQ25895RTWR-CE Input   
+R34-1 0603WAF1002T5E-1 Input   
 )
 (
 VBUS 
@@ -6529,21 +6811,14 @@ TV14-5 SRV05-4-P-T7_C85364-5 Input
 U55-5 TLV75533PDBVR-OUT Passive 
 C22-2 CL31B105KBHNNNE-2 Passive 
 C23-2 1206B475K500NT-2 Input   
-)
-(
-L_READY 
-LEFT_WING_PORT-8 B8B-PH-SM4-TBT(LF)(SN)-8 Passive 
-TV5-4 SRV05-4-P-T7_C85364-4 Input   
+R33-1 0603WAF4701T5E-1 Input   
+R32-1 0603WAF4701T5E-1 Input   
+R34-2 0603WAF1002T5E-2 Input   
 )
 (
 PGM_SWO 
 PROGRAM_PORT-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
 TV7-6 SRV05-4-P-T7_C85364-6 Input   
-)
-(
-PGM_USART_RX 
-PROGRAM_PORT-8 B8B-PH-SM4-TBT(LF)(SN)-8 Passive 
-TV7-4 SRV05-4-P-T7_C85364-4 Input   
 )
 (
 M_NRST 
@@ -6590,7 +6865,7 @@ LED_POW-1 KT-0805G-A Passive
 R28-2 0603WAF3300T5E-2 Input   
 )
 (
-EXP_PEDAL_SENSE 
+EXP_PEDAL_INT 
 EXPR_PEDAL-3 PJ-603A-3 Input   
 C31-2 CC0603KRX7R9BB104-2 Input   
 TV14-4 SRV05-4-P-T7_C85364-4 Input   
@@ -6599,12 +6874,6 @@ TV14-4 SRV05-4-P-T7_C85364-4 Input
 $1N20389 
 EXPR_PEDAL-5 PJ-603A-5 Input   
 R31-1 0603WAF3901T5E-1 Input   
-)
-(
-SUS_PEDAL_SENSE 
-SUS_PEDAL-3 PJ-603A-3 Input   
-C32-2 CC0603KRX7R9BB104-2 Passive 
-TV14-6 SRV05-4-P-T7_C85364-6 Input   
 )
 (
 $1N20350 
@@ -6660,6 +6929,8 @@ C13-2 CL31A106KBHNNNE-2 Input
 (
 POW_REGN 
 R11-2 0603WAF5101T5E-2 Input   
+U47-22 BQ25895RTWR-REGN Input   
+C24-2 1206B475K500NT-2 Input   
 )
 (
 $2N333 
@@ -6699,6 +6970,7 @@ C15-2 GRM21BR61H106KE43L-2 Passive
 U55-1 TLV75533PDBVR-IN Passive 
 C21-2 CL31B105KBHNNNE-2 Passive 
 R18-1 0603WAF1002T5E-1 Input   
+C37-2 GRM21BR61H106KE43L-2 Passive 
 )
 (
 $2N1138 
@@ -6727,11 +6999,6 @@ U47-23 BQ25895RTWR-PMID Input
 $2N1127 
 U47-10 BQ25895RTWR-ILIM Input   
 R10-2 0603WAF1500T5E-2 Input   
-)
-(
-$2N1135 
-U47-22 BQ25895RTWR-REGN Input   
-C24-2 1206B475K500NT-2 Input   
 )
 (
 $2N1147 

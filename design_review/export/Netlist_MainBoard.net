@@ -4675,6 +4675,280 @@ gge222_2
 ]
 [
 DESIGNATOR
+C38
+FOOTPRINT
+C1206
+PARTTYPE
+1206B475K500NT
+DESCRIPTION
+Capacitance:4.7uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Component Kind
+Standard
+LCSC Part Name
+4.7uF ±10% 50V
+Supplier Part
+C29823
+Manufacturer
+FH(风华)
+Manufacturer Part
+1206B475K500NT
+Supplier Footprint
+1206
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/1206B475K500NT/30577.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C1206_L3.2-W1.6-H1.3
+Value
+4.7uF
+Tolerance
+±10%
+Voltage Rating
+50V
+Temperature Coefficient
+X7R
+Description
+Capacitance:4.7uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Symbol
+1206B475K500NT
+Designator
+C38
+Name
+4.7uF
+Device
+1206B475K500NT
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge252
+
+*
+]
+[
+DESIGNATOR
+R37
+FOOTPRINT
+R0603
+PARTTYPE
+0603WAF1002T5E
+DESCRIPTION
+Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Component Kind
+Standard
+LCSC Part Name
+厚膜电阻 10kΩ ±1% 100mW
+Supplier Part
+C25804
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0603WAF1002T5E
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/0603WAF1002T5E/26547.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+0603WAF1002T5E
+3D Model Title
+R0603
+Type
+Thick Film Resistor
+Value
+10kΩ
+Tolerance
+±1%
+Power(Watts)
+100mW
+Voltage-Supply(Max)
+75V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Designator
+R37
+Name
+10kΩ
+Device
+0603WAF1002T5E
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge251_1
+
+*
+]
+[
+DESIGNATOR
+C39
+FOOTPRINT
+C0603
+PARTTYPE
+CC0603KRX7R9BB104
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Component Kind
+Standard
+Symbol
+CC0603KRX7R9BB104
+LCSC Part Name
+100nF ±10% 50V
+Supplier Part
+C14663
+Manufacturer
+YAGEO(国巨)
+Manufacturer Part
+CC0603KRX7R9BB104
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20170116/1484561234239.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0603_L1.6-W0.8-H0.8
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Designator
+C39
+Value
+100nF
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Device
+CC0603KRX7R9BB104
+Unique ID
+gge226_1
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+BOOT0
+FOOTPRINT
+SW-SMD_L3.9-W3.0-P4.45
+PARTTYPE
+TS-1088-AR02016
+DESCRIPTION
+Circuit:SPST Actuator Style:Round Button Operating Force:160gf Mounting Style:Brick nogging Switch Length:4mm Switch Width:3mm Switch Height:2mm Strike Gundam:不带 Contact Current:50mA Voltage Rating (DC):12V Insulation Resistance:100MΩ Actuator/Cap Color:B
+Component Kind
+Standard
+LCSC Part Name
+4*3*2mm 立贴 轻触开关
+Supplier Part
+C720477
+Manufacturer
+XUNPU(讯普)
+Manufacturer Part
+TS-1088-AR02016
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20200810/C720475_60D09DD6C54279ADDB2DC25100F1CC11.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SW-SMD_L3.9-W2.9-H2.0-LS4.8
+Circuit
+SPST
+Actuator Style
+Round Button
+Operating Force
+160gf
+Mounting Style
+Brick nogging
+Switch Length
+4mm
+Switch Width
+3mm
+Switch Height
+2mm
+Strike Gundam
+不带
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Actuator/Cap Color
+Black
+Pin Style
+SMDSplicing
+Mechanical Life
+10万次
+Operating Temperature
+-30℃~+80℃
+Description
+Circuit:SPST Actuator Style:Round Button Operating Force:160gf Mounting Style:Brick nogging Switch Length:4mm Switch Width:3mm Switch Height:2mm Strike Gundam:不带 Contact Current:50mA Voltage Rating (DC):12V Insulation Resistance:100MΩ Actuator/Cap Color:B
+Symbol
+TS-1088-AR02016
+Designator
+BOOT0
+Name
+TS-1088-AR02016
+Device
+TS-1088-AR02016
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge47_4
+
+*
+]
+[
+DESIGNATOR
 CN1
 FOOTPRINT
 CONN-TH_S3B-XH-SM4-TB-LF-SN
@@ -6493,7 +6767,7 @@ Group ID
 Channel ID
 
 Unique ID
-gge252
+gge256
 
 *
 ]
@@ -6790,6 +7064,15 @@ D5-1 H5VND5BA-1 Passive
 SW3-1 TS-1088-AR02016-1 Passive 
 C36-2 CC0603KRX7R9BB104-2 Passive 
 D6-1 H5VND5BA-1 Passive 
+U1-5 STM32WB5MMGH6TR-VSS Passive 
+U1-16 STM32WB5MMGH6TR-VSS Passive 
+U1-31 STM32WB5MMGH6TR-VSS Passive 
+U1-57 STM32WB5MMGH6TR-VSS Passive 
+U1-58 STM32WB5MMGH6TR-ANT_IN Passive 
+U1-59 STM32WB5MMGH6TR-RF_OUT Passive 
+U1-60 STM32WB5MMGH6TR-VSS Passive 
+U1-84 STM32WB5MMGH6TR-VSS Passive 
+U1-86 STM32WB5MMGH6TR-VSS Passive 
 USB1-4 HC-TYPE-B-2.0-VS15-1.5A-15-GND Passive 
 USB1-5 HC-TYPE-B-2.0-VS15-1.5A-15-GND Passive 
 USB1-6 HC-TYPE-B-2.0-VS15-1.5A-15-GND Passive 
@@ -6818,6 +7101,9 @@ TV14-2 SRV05-4-P-T7_C85364-2 Input
 D7-1 SMBJ13A_C10209-A Input   
 LED_FN2-1 NCD0805R1_C84256-- Passive 
 LED_FN3-1 NCD0805R1_C84256-- Passive 
+C38-2 1206B475K500NT-2 Input   
+R37-2 0603WAF1002T5E-2 Input   
+C39-2 CC0603KRX7R9BB104-2 Input   
 CN1-3 S3B-XH-SM4-TB(LF)(SN)_C5306495-3 Passive 
 R14-1 0603WAF1000T5E-1 Input   
 C18-2 GRM21BR61H106KE43L-2 Passive 
@@ -6837,14 +7123,12 @@ C24-1 1206B475K500NT-1 Input
 C37-1 GRM21BR61H106KE43L-1 Passive 
 )
 (
-PGM_RESET 
+$1N16140 
 SW_POWER2-2 TS-1088-AR02016-2 Passive 
 C33-1 CC0603KRX7R9BB104-1 Passive 
 D3-2 H5VND5BA-2 Passive 
-PROGRAM_PORT-6 B8B-PH-SM4-TBT(LF)(SN)-6 Passive 
 U54-3 BAT54C_C22466350-K Passive 
 U53-3 BAT54C_C22466350-K Passive 
-TV11-4 SRV05-4-P-T7_C85364-4 Input   
 )
 (
 SW_BT_MIDI 
@@ -6858,6 +7142,7 @@ SW_FN1
 SW4-2 TS-1088-AR02016-2 Passive 
 C1-1 CC0603KRX7R9BB104-1 Passive 
 D2-2 H5VND5BA-2 Passive 
+U1-54 STM32WB5MMGH6TR-PA5 Passive 
 )
 (
 SW_FN2 
@@ -6893,14 +7178,50 @@ LEFT_WING_PORT-8 B8B-PH-SM4-TBT(LF)(SN)-8 Passive
 TV5-4 SRV05-4-P-T7_C85364-4 Input   
 )
 (
+VCC 
+U1-4 STM32WB5MMGH6TR-VREF+ Passive 
+U1-6 STM32WB5MMGH6TR-VDDA Passive 
+U1-15 STM32WB5MMGH6TR-VBAT Passive 
+U1-17 STM32WB5MMGH6TR-VDDA Passive 
+U1-32 STM32WB5MMGH6TR-VDDUSB Passive 
+LEFT_WING_PORT-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
+RIGHT_WING_PORT-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
+PROGRAM_PORT-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
+TV2-5 SRV05-4-P-T7_C85364-5 Input   
+TV3-5 SRV05-4-P-T7_C85364-5 Input   
+TV4-5 SRV05-4-P-T7_C85364-5 Input   
+TV5-5 SRV05-4-P-T7_C85364-5 Input   
+TV11-5 SRV05-4-P-T7_C85364-5 Input   
+TV7-5 SRV05-4-P-T7_C85364-5 Input   
+EXPR_PEDAL-4 PJ-603A-4 Input   
+SUS_PEDAL-4 PJ-603A-4 Input   
+U58-7 CS1237-SOP8-VDD Passive 
+C31-1 CC0603KRX7R9BB104-1 Input   
+C32-1 CC0603KRX7R9BB104-1 Passive 
+TV12-5 SRV05-4-P-T7_C85364-5 Input   
+TV14-5 SRV05-4-P-T7_C85364-5 Input   
+C38-1 1206B475K500NT-1 Input   
+BOOT0-1 TS-1088-AR02016-1 Passive 
+U55-5 TLV75533PDBVR-OUT Passive 
+C22-2 CL31B105KBHNNNE-2 Passive 
+C23-2 1206B475K500NT-2 Input   
+R33-1 0603WAF4701T5E-1 Input   
+R32-1 0603WAF4701T5E-1 Input   
+R34-2 0603WAF1002T5E-2 Input   
+)
+(
 EXP_PEDAL 
 U1-9 STM32WB5MMGH6TR-PC1 Passive 
 R31-2 0603WAF3901T5E-2 Input   
 TV14-3 SRV05-4-P-T7_C85364-3 Input   
 )
 (
-RESET 
+M_NRST 
 U1-10 STM32WB5MMGH6TR-NRST Passive 
+PROGRAM_PORT-6 B8B-PH-SM4-TBT(LF)(SN)-6 Passive 
+U53-1 BAT54C_C22466350-A Passive 
+TV11-4 SRV05-4-P-T7_C85364-4 Input   
+C39-1 CC0603KRX7R9BB104-1 Input   
 )
 (
 POW_SDA 
@@ -6913,6 +7234,12 @@ SUS_PEDAL
 U1-12 STM32WB5MMGH6TR-PC0 Passive 
 R30-2 0603WAF3901T5E-2 Input   
 TV14-1 SRV05-4-P-T7_C85364-1 Input   
+)
+(
+$1N39321 
+U1-13 STM32WB5MMGH6TR-PH3-BOOT0 Passive 
+R37-1 0603WAF1002T5E-1 Input   
+BOOT0-2 TS-1088-AR02016-2 Passive 
 )
 (
 POW_SCL 
@@ -6935,6 +7262,16 @@ TV4-6 SRV05-4-P-T7_C85364-6 Input
 (
 POW_SWO 
 U1-21 STM32WB5MMGH6TR-PB3 Passive 
+)
+(
+LC_DATA 
+U1-22 STM32WB5MMGH6TR-PC10 Passive 
+U58-6 CS1237-SOP8-DRDY#/DOUT Passive 
+)
+(
+LC_CLK 
+U1-23 STM32WB5MMGH6TR-PC11 Passive 
+U58-5 CS1237-SOP8-SCLK Passive 
 )
 (
 PGM_SWDIO 
@@ -6985,46 +7322,40 @@ RIGHT_WING_PORT-6 B8B-PH-SM4-TBT(LF)(SN)-6 Passive
 TV2-1 SRV05-4-P-T7_C85364-1 Input   
 )
 (
+LED_FN3 
+U1-36 STM32WB5MMGH6TR-PC6 Passive 
+R36-1 0603WAF3300T5E-1 Input   
+)
+(
 PGM_USART_TX 
 U1-39 STM32WB5MMGH6TR-PB6 Passive 
 PROGRAM_PORT-7 B8B-PH-SM4-TBT(LF)(SN)-7 Passive 
 TV11-6 SRV05-4-P-T7_C85364-6 Input   
 )
 (
-LED_FN3 
-U1-40 STM32WB5MMGH6TR-PC13 Passive 
-R36-1 0603WAF3300T5E-1 Input   
-)
-(
 LED_FN2 
-U1-42 STM32WB5MMGH6TR-PE4 Passive 
+U1-40 STM32WB5MMGH6TR-PC13 Passive 
 R35-1 0603WAF3300T5E-1 Input   
 )
 (
-LED_CH3 
-U1-43 STM32WB5MMGH6TR-PB0 Passive 
-R20-1 0603WAF3300T5E-1 Input   
-)
-(
 LED_CH4 
-U1-44 STM32WB5MMGH6TR-PB1 Passive 
+U1-42 STM32WB5MMGH6TR-PE4 Passive 
 R25-1 0603WAF3300T5E-1 Input   
 )
 (
 LED_CH2 
-U1-45 STM32WB5MMGH6TR-PC5 Passive 
+U1-43 STM32WB5MMGH6TR-PB0 Passive 
 R22-1 0603WAF3300T5E-1 Input   
+)
+(
+LED_CH3 
+U1-44 STM32WB5MMGH6TR-PB1 Passive 
+R20-1 0603WAF3300T5E-1 Input   
 )
 (
 LED_CH0 
 U1-48 STM32WB5MMGH6TR-PB2 Passive 
 R19-1 0603WAF3300T5E-1 Input   
-)
-(
-LED_CH1 
-U1-49 STM32WB5MMGH6TR-PC4 Passive 
-U1-74 STM32WB5MMGH6TR-PD9 Passive 
-R27-1 0603WAF3300T5E-1 Input   
 )
 (
 LED_POWER 
@@ -7037,12 +7368,9 @@ U1-51 STM32WB5MMGH6TR-PA9 Passive
 U56-1 BAT54C_C22466350-A Passive 
 )
 (
-LED_BT_FN1 
+LED_FN1 
 U1-53 STM32WB5MMGH6TR-PA6 Passive 
-)
-(
-SW_BT_FN1 
-U1-54 STM32WB5MMGH6TR-PA5 Passive 
+R29-1 0603WAF3300T5E-1 Input   
 )
 (
 LED_BT_MIDI 
@@ -7095,6 +7423,11 @@ RIGHT_WING_PORT-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive
 TV2-4 SRV05-4-P-T7_C85364-4 Input   
 )
 (
+LED_CH1 
+U1-74 STM32WB5MMGH6TR-PD9 Passive 
+R27-1 0603WAF3300T5E-1 Input   
+)
+(
 POW_NCE 
 U1-76 STM32WB5MMGH6TR-PD15 Passive 
 U47-9 BQ25895RTWR-CE Input   
@@ -7108,38 +7441,9 @@ U47-1 BQ25895RTWR-VBUS Input
 C14-1 CL31B105KBHNNNE-1 Passive 
 )
 (
-VCC 
-LEFT_WING_PORT-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
-RIGHT_WING_PORT-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
-PROGRAM_PORT-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
-TV2-5 SRV05-4-P-T7_C85364-5 Input   
-TV3-5 SRV05-4-P-T7_C85364-5 Input   
-TV4-5 SRV05-4-P-T7_C85364-5 Input   
-TV5-5 SRV05-4-P-T7_C85364-5 Input   
-TV11-5 SRV05-4-P-T7_C85364-5 Input   
-TV7-5 SRV05-4-P-T7_C85364-5 Input   
-EXPR_PEDAL-4 PJ-603A-4 Input   
-SUS_PEDAL-4 PJ-603A-4 Input   
-U58-7 CS1237-SOP8-VDD Passive 
-C31-1 CC0603KRX7R9BB104-1 Input   
-C32-1 CC0603KRX7R9BB104-1 Passive 
-TV12-5 SRV05-4-P-T7_C85364-5 Input   
-TV14-5 SRV05-4-P-T7_C85364-5 Input   
-U55-5 TLV75533PDBVR-OUT Passive 
-C22-2 CL31B105KBHNNNE-2 Passive 
-C23-2 1206B475K500NT-2 Input   
-R33-1 0603WAF4701T5E-1 Input   
-R32-1 0603WAF4701T5E-1 Input   
-R34-2 0603WAF1002T5E-2 Input   
-)
-(
 PGM_SWO 
 PROGRAM_PORT-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
 TV7-6 SRV05-4-P-T7_C85364-6 Input   
-)
-(
-M_NRST 
-U53-1 BAT54C_C22466350-A Passive 
 )
 (
 POW_QON 
@@ -7197,10 +7501,6 @@ LED_FN1-2 NCD0805R1_C84256-+ Passive
 R29-2 0603WAF3300T5E-2 Input   
 )
 (
-LED_FN1 
-R29-1 0603WAF3300T5E-1 Input   
-)
-(
 LC_E+_R 
 U58-1 CS1237-SOP8-REFIN Passive 
 U58-8 CS1237-SOP8-REFOUT Passive 
@@ -7218,14 +7518,6 @@ LC_A-_W
 U58-4 CS1237-SOP8-AINP Passive 
 LOAD_CELL_PORT-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
 TV12-4 SRV05-4-P-T7_C85364-4 Input   
-)
-(
-LC_CLK 
-U58-5 CS1237-SOP8-SCLK Passive 
-)
-(
-LC_DATA 
-U58-6 CS1237-SOP8-DRDY#/DOUT Passive 
 )
 (
 $1N39058 

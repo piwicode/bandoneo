@@ -55,6 +55,10 @@ rails gated off this drops to ~15 mA (charge-indicator LED + charger
 Iq + MCU idle). Worth gating the wing VCC from the motherboard in this
 state.
 
+## Main MCU
+
+The main board module includes filtering capacitors.
+
 ## Expression pedal: 
 
 M-Audio EX-P and Roland EV-5 have wiper on the TRS tip.

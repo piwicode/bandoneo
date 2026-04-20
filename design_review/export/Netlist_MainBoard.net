@@ -154,10 +154,6 @@ DESCRIPTION
 Polarity:Bidirectional Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:15V Peak Pulse Current (Ipp):8A@8/20us Peak Pulse Power Dissipation (Ppp):120W@8/20us Voltage - Breakdown:8V Reverse Leakage Current (Ir):200nA Number of Channels:1 Operating Temp
 Component Kind
 Standard
-Symbol
-H5VND5BA
-Designator
-D
 LCSC Part Name
 双向ESD 5V截止 峰值浪涌电流：8A@8/20us
 Supplier Part
@@ -204,10 +200,14 @@ Type
 ESD
 Junction Capacitance
 20pF
-Name
-H5VND5BA
 Description
 Polarity:Bidirectional Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:15V Peak Pulse Current (Ipp):8A@8/20us Peak Pulse Power Dissipation (Ppp):120W@8/20us Voltage - Breakdown:8V Reverse Leakage Current (Ir):200nA Number of Channels:1 Operating Temp
+Symbol
+H5VND5BA
+Designator
+D
+Name
+H5VND5BA
 Device
 H5VND5BA
 Reuse Block
@@ -376,10 +376,6 @@ DESCRIPTION
 Polarity:Bidirectional Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:15V Peak Pulse Current (Ipp):8A@8/20us Peak Pulse Power Dissipation (Ppp):120W@8/20us Voltage - Breakdown:8V Reverse Leakage Current (Ir):200nA Number of Channels:1 Operating Temp
 Component Kind
 Standard
-Symbol
-H5VND5BA
-Designator
-D3
 LCSC Part Name
 双向ESD 5V截止 峰值浪涌电流：8A@8/20us
 Supplier Part
@@ -426,10 +422,14 @@ Type
 ESD
 Junction Capacitance
 20pF
-Name
-H5VND5BA
 Description
 Polarity:Bidirectional Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:15V Peak Pulse Current (Ipp):8A@8/20us Peak Pulse Power Dissipation (Ppp):120W@8/20us Voltage - Breakdown:8V Reverse Leakage Current (Ir):200nA Number of Channels:1 Operating Temp
+Symbol
+H5VND5BA
+Designator
+D3
+Name
+H5VND5BA
 Device
 H5VND5BA
 Reuse Block
@@ -598,10 +598,6 @@ DESCRIPTION
 Polarity:Bidirectional Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:15V Peak Pulse Current (Ipp):8A@8/20us Peak Pulse Power Dissipation (Ppp):120W@8/20us Voltage - Breakdown:8V Reverse Leakage Current (Ir):200nA Number of Channels:1 Operating Temp
 Component Kind
 Standard
-Symbol
-H5VND5BA
-Designator
-D4
 LCSC Part Name
 双向ESD 5V截止 峰值浪涌电流：8A@8/20us
 Supplier Part
@@ -648,10 +644,14 @@ Type
 ESD
 Junction Capacitance
 20pF
-Name
-H5VND5BA
 Description
 Polarity:Bidirectional Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:15V Peak Pulse Current (Ipp):8A@8/20us Peak Pulse Power Dissipation (Ppp):120W@8/20us Voltage - Breakdown:8V Reverse Leakage Current (Ir):200nA Number of Channels:1 Operating Temp
+Symbol
+H5VND5BA
+Designator
+D4
+Name
+H5VND5BA
 Device
 H5VND5BA
 Reuse Block
@@ -820,10 +820,6 @@ DESCRIPTION
 Polarity:Bidirectional Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:15V Peak Pulse Current (Ipp):8A@8/20us Peak Pulse Power Dissipation (Ppp):120W@8/20us Voltage - Breakdown:8V Reverse Leakage Current (Ir):200nA Number of Channels:1 Operating Temp
 Component Kind
 Standard
-Symbol
-H5VND5BA
-Designator
-D2
 LCSC Part Name
 双向ESD 5V截止 峰值浪涌电流：8A@8/20us
 Supplier Part
@@ -870,10 +866,14 @@ Type
 ESD
 Junction Capacitance
 20pF
-Name
-H5VND5BA
 Description
 Polarity:Bidirectional Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:15V Peak Pulse Current (Ipp):8A@8/20us Peak Pulse Power Dissipation (Ppp):120W@8/20us Voltage - Breakdown:8V Reverse Leakage Current (Ir):200nA Number of Channels:1 Operating Temp
+Symbol
+H5VND5BA
+Designator
+D2
+Name
+H5VND5BA
 Device
 H5VND5BA
 Reuse Block
@@ -1042,10 +1042,6 @@ DESCRIPTION
 Polarity:Bidirectional Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:15V Peak Pulse Current (Ipp):8A@8/20us Peak Pulse Power Dissipation (Ppp):120W@8/20us Voltage - Breakdown:8V Reverse Leakage Current (Ir):200nA Number of Channels:1 Operating Temp
 Component Kind
 Standard
-Symbol
-H5VND5BA
-Designator
-D5
 LCSC Part Name
 双向ESD 5V截止 峰值浪涌电流：8A@8/20us
 Supplier Part
@@ -1092,10 +1088,14 @@ Type
 ESD
 Junction Capacitance
 20pF
-Name
-H5VND5BA
 Description
 Polarity:Bidirectional Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:15V Peak Pulse Current (Ipp):8A@8/20us Peak Pulse Power Dissipation (Ppp):120W@8/20us Voltage - Breakdown:8V Reverse Leakage Current (Ir):200nA Number of Channels:1 Operating Temp
+Symbol
+H5VND5BA
+Designator
+D5
+Name
+H5VND5BA
 Device
 H5VND5BA
 Reuse Block
@@ -1264,10 +1264,6 @@ DESCRIPTION
 Polarity:Bidirectional Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:15V Peak Pulse Current (Ipp):8A@8/20us Peak Pulse Power Dissipation (Ppp):120W@8/20us Voltage - Breakdown:8V Reverse Leakage Current (Ir):200nA Number of Channels:1 Operating Temp
 Component Kind
 Standard
-Symbol
-H5VND5BA
-Designator
-D6
 LCSC Part Name
 双向ESD 5V截止 峰值浪涌电流：8A@8/20us
 Supplier Part
@@ -1314,10 +1310,14 @@ Type
 ESD
 Junction Capacitance
 20pF
-Name
-H5VND5BA
 Description
 Polarity:Bidirectional Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:15V Peak Pulse Current (Ipp):8A@8/20us Peak Pulse Power Dissipation (Ppp):120W@8/20us Voltage - Breakdown:8V Reverse Leakage Current (Ir):200nA Number of Channels:1 Operating Temp
+Symbol
+H5VND5BA
+Designator
+D6
+Name
+H5VND5BA
 Device
 H5VND5BA
 Reuse Block
@@ -4301,41 +4301,37 @@ gge170_3
 ]
 [
 DESIGNATOR
-U59
+D7
 FOOTPRINT
-SMA_L4.2-W2.6-LS5.1-RD
+SMB_L4.6-W3.6-LS5.3-RD
 PARTTYPE
-SMAJ13A_C19077533
+SMBJ13A_C10209
 DESCRIPTION
-Polarity:Unidirectional Reverse Stand-Off Voltage (Vrwm):13V Clamping Voltage:21.5V Peak Pulse Current (Ipp):18.6A Peak Pulse Power Dissipation (Ppp):400W@10/1000us Voltage - Breakdown:15.9V Reverse Leakage Current (Ir):1uA Operating Temperature:-55℃~+150
+Polarity:Unidirectional Reverse Stand-Off Voltage (Vrwm):13V Clamping Voltage:21.5V Peak Pulse Current (Ipp):27.9A@10/1000us Peak Pulse Power Dissipation (Ppp):600W@10/1000us Voltage - Breakdown:16.5V Reverse Leakage Current (Ir):1uA Operating Temperature
 Component Kind
 Standard
-Symbol
-SMAJ13A_C19077533
-Designator
-U59
-LCSC Part Name
-单向TVS 13V截止 峰值浪涌电流：18.6A
-Supplier Part
-C19077533
-Manufacturer
-R+O(宏嘉诚)
-Manufacturer Part
-SMAJ13A
-Supplier Footprint
-DO-214AC(SMA)
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://item.szlcsc.com/datasheet/SMAJ13A/20275618.html
 Supplier
 LCSC
+Manufacturer Part
+SMBJ13A
+Manufacturer
+RUILON(瑞隆源)
+Supplier Part
+C10209
+JLCPCB Part Class
+Extended Part
+LCSC Part Name
+单向TVS 13V截止 峰值浪涌电流：27.9A@10/1000us
+Supplier Footprint
+DO-214AA(SMB)
+Datasheet
+https://item.szlcsc.com/datasheet/SMBJ13A/10749.html
 Add into BOM
 yes
 Convert to PCB
 yes
 3D Model Title
-SMA_L4.2-W2.6-LS5.1-RD
+SMB_L4.6-W3.6-LS5.3-RD
 Polarity
 Unidirectional
 Reverse Stand-Off Voltage (Vrwm)
@@ -4343,25 +4339,29 @@ Reverse Stand-Off Voltage (Vrwm)
 Clamping Voltage
 21.5V
 Peak Pulse Current (Ipp)
-18.6A
+27.9A@10/1000us
 Peak Pulse Power Dissipation (Ppp)
-400W@10/1000us
+600W@10/1000us
 Voltage - Breakdown
-15.9V
+16.5V
 Reverse Leakage Current (Ir)
 1uA
 Operating Temperature
 -55℃~+150℃
 level of protection
-IEC 61000-4-2
+IEC 61000-4-4；IEC 61000-4-2
 Type
 TVS
-Name
-SMAJ13A
 Description
-Polarity:Unidirectional Reverse Stand-Off Voltage (Vrwm):13V Clamping Voltage:21.5V Peak Pulse Current (Ipp):18.6A Peak Pulse Power Dissipation (Ppp):400W@10/1000us Voltage - Breakdown:15.9V Reverse Leakage Current (Ir):1uA Operating Temperature:-55℃~+150
+Polarity:Unidirectional Reverse Stand-Off Voltage (Vrwm):13V Clamping Voltage:21.5V Peak Pulse Current (Ipp):27.9A@10/1000us Peak Pulse Power Dissipation (Ppp):600W@10/1000us Voltage - Breakdown:16.5V Reverse Leakage Current (Ir):1uA Operating Temperature
+Symbol
+SMBJ13A
+Designator
+D7
+Name
+SMBJ13A
 Device
-SMAJ13A_C19077533
+SMBJ13A_C10209
 Reuse Block
 
 Group ID
@@ -6249,7 +6249,7 @@ U58-2 CS1237-SOP8-GND Passive
 LOAD_CELL_PORT-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive 
 TV12-2 SRV05-4-P-T7_C85364-2 Input   
 TV14-2 SRV05-4-P-T7_C85364-2 Input   
-U59-2 SMAJ13A_C19077533-A Passive 
+D7-1 SMBJ13A_C10209-A Input   
 CN1-3 S3B-XH-SM4-TB(LF)(SN)_C5306495-3 Passive 
 R14-1 0603WAF1000T5E-1 Input   
 C18-2 GRM21BR61H106KE43L-2 Passive 
@@ -6504,7 +6504,7 @@ U1-69 STM32WB5MMGH6TR-PC9 Passive
 (
 VBUS 
 USB1-1 HC-TYPE-B-2.0-VS15-1.5A-15-VCC Passive 
-U59-1 SMAJ13A_C19077533-C Passive 
+D7-2 SMBJ13A_C10209-K Input   
 U47-1 BQ25895RTWR-VBUS Input   
 C14-1 CL31B105KBHNNNE-1 Passive 
 )

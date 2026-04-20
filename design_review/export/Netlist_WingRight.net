@@ -71,25 +71,25 @@ U10
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -97,39 +97,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U10
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge120
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e10936
 Channel ID
 $1e1456
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -145,25 +145,25 @@ U12
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -171,39 +171,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U12
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge121
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e10936
 Channel ID
 $1e1939
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -219,25 +219,25 @@ U15
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -245,39 +245,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U15
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge122
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e10936
 Channel ID
 $1e2003
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -293,25 +293,25 @@ U17
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -319,39 +319,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U17
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge123
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e10936
 Channel ID
 $1e2069
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -367,25 +367,25 @@ U11
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -393,39 +393,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U11
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge124
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e10936
 Channel ID
 $1e2133
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -441,25 +441,25 @@ U14
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -467,39 +467,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U14
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge125
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e10936
 Channel ID
 $1e2197
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -515,25 +515,25 @@ U16
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -541,39 +541,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U16
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge126
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e10936
 Channel ID
 $1e2261
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -589,25 +589,25 @@ U18
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -615,39 +615,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U18
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge127
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e10936
 Channel ID
 $1e2325
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -729,25 +729,25 @@ U1
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -755,39 +755,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U1
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge129
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e10958
 Channel ID
 $1e1456
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -803,25 +803,25 @@ U3
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -829,39 +829,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U3
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge130
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e10958
 Channel ID
 $1e1939
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -877,25 +877,25 @@ U6
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -903,39 +903,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U6
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge131
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e10958
 Channel ID
 $1e2003
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -951,25 +951,25 @@ U8
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -977,39 +977,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U8
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge132
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e10958
 Channel ID
 $1e2069
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -1025,25 +1025,25 @@ U2
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -1051,39 +1051,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U2
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge133
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e10958
 Channel ID
 $1e2133
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -1099,25 +1099,25 @@ U5
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -1125,39 +1125,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U5
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge134
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e10958
 Channel ID
 $1e2197
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -1173,25 +1173,25 @@ U7
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -1199,39 +1199,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U7
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge135
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e10958
 Channel ID
 $1e2261
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -1247,25 +1247,25 @@ U9
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -1273,39 +1273,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U9
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge136
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e10958
 Channel ID
 $1e2325
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -1387,25 +1387,25 @@ U19
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -1413,39 +1413,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U19
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge138
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e10980
 Channel ID
 $1e1456
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -1461,25 +1461,25 @@ U21
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -1487,39 +1487,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U21
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge139
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e10980
 Channel ID
 $1e1939
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -1535,25 +1535,25 @@ U24
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -1561,39 +1561,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U24
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge140
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e10980
 Channel ID
 $1e2003
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -1609,25 +1609,25 @@ U26
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -1635,39 +1635,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U26
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge141
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e10980
 Channel ID
 $1e2069
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -1683,25 +1683,25 @@ U20
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -1709,39 +1709,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U20
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge142
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e10980
 Channel ID
 $1e2133
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -1757,25 +1757,25 @@ U23
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -1783,39 +1783,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U23
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge143
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e10980
 Channel ID
 $1e2197
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -1831,25 +1831,25 @@ U25
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -1857,39 +1857,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U25
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge144
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e10980
 Channel ID
 $1e2261
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -1905,25 +1905,25 @@ U27
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -1931,39 +1931,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U27
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge145
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e10980
 Channel ID
 $1e2325
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -2045,25 +2045,25 @@ U28
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -2071,39 +2071,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U28
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge147
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e11002
 Channel ID
 $1e1456
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -2119,25 +2119,25 @@ U30
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -2145,39 +2145,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U30
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge148
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e11002
 Channel ID
 $1e1939
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -2193,25 +2193,25 @@ U33
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -2219,39 +2219,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U33
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge149
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e11002
 Channel ID
 $1e2003
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -2267,25 +2267,25 @@ U35
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -2293,39 +2293,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U35
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge150
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e11002
 Channel ID
 $1e2069
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -2341,25 +2341,25 @@ U29
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -2367,39 +2367,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U29
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge151
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e11002
 Channel ID
 $1e2133
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -2415,25 +2415,25 @@ U32
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -2441,39 +2441,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U32
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge152
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e11002
 Channel ID
 $1e2197
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -2489,25 +2489,25 @@ U34
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -2515,39 +2515,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U34
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge153
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e11002
 Channel ID
 $1e2261
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -2563,25 +2563,25 @@ U36
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -2589,39 +2589,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U36
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge154
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 KeySet8
 Group ID
 $1e11002
 Channel ID
 $1e2325
-Sensitivity Temperature Bleaching
--
-Linearity
--
 Type
 -
 FootprintName
@@ -2703,25 +2703,25 @@ U37
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -2729,45 +2729,45 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U37
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge180
 Sensitivity Temperature Bleaching
 -
 Linearity
 -
+Reuse Block
+KeySet6
+Group ID
+$1e18136
+Channel ID
+$1e1456
 Type
 -
 FootprintName
 SOT-23-Switch
 DeviceName
 HAL403SO
-Group ID
-$1e18136
-Channel ID
-$1e1456
-Reuse Block
-KeySet6
 
 *
 ]
@@ -2777,25 +2777,25 @@ U39
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -2803,45 +2803,45 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U39
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge181
 Sensitivity Temperature Bleaching
 -
 Linearity
 -
+Reuse Block
+KeySet6
+Group ID
+$1e18136
+Channel ID
+$1e1939
 Type
 -
 FootprintName
 SOT-23-Switch
 DeviceName
 HAL403SO
-Group ID
-$1e18136
-Channel ID
-$1e1939
-Reuse Block
-KeySet6
 
 *
 ]
@@ -2851,25 +2851,25 @@ U43
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -2877,45 +2877,45 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U43
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge183
 Sensitivity Temperature Bleaching
 -
 Linearity
 -
+Reuse Block
+KeySet6
+Group ID
+$1e18136
+Channel ID
+$1e2069
 Type
 -
 FootprintName
 SOT-23-Switch
 DeviceName
 HAL403SO
-Group ID
-$1e18136
-Channel ID
-$1e2069
-Reuse Block
-KeySet6
 
 *
 ]
@@ -2925,25 +2925,25 @@ U38
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -2951,45 +2951,45 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U38
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge184
 Sensitivity Temperature Bleaching
 -
 Linearity
 -
+Reuse Block
+KeySet6
+Group ID
+$1e18136
+Channel ID
+$1e2133
 Type
 -
 FootprintName
 SOT-23-Switch
 DeviceName
 HAL403SO
-Group ID
-$1e18136
-Channel ID
-$1e2133
-Reuse Block
-KeySet6
 
 *
 ]
@@ -2999,25 +2999,25 @@ U41
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -3025,45 +3025,45 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U41
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge185
 Sensitivity Temperature Bleaching
 -
 Linearity
 -
+Reuse Block
+KeySet6
+Group ID
+$1e18136
+Channel ID
+$1e2197
 Type
 -
 FootprintName
 SOT-23-Switch
 DeviceName
 HAL403SO
-Group ID
-$1e18136
-Channel ID
-$1e2197
-Reuse Block
-KeySet6
 
 *
 ]
@@ -3073,25 +3073,25 @@ U42
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4011SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+低成本线性霍尔效应传感器IC
 Supplier Part
-C42387470
+C18198955
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4011SO-N-TR
 Supplier Footprint
 SOT-23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
 Supplier
 LCSC
 Add into BOM
@@ -3099,45 +3099,45 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-3.9mV/Gs
+2.9mV/Gs
 Voltage - Supply
--
+3.3V；5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
 Symbol
 HAL403SO
 Designator
 U42
 Name
-HAL403SO
+SC4011SO-N-TR
 Device
-HAL403SO
+SC4011SO-N-TR
 Unique ID
 gge186
 Sensitivity Temperature Bleaching
 -
 Linearity
 -
+Reuse Block
+KeySet6
+Group ID
+$1e18136
+Channel ID
+$1e2261
 Type
 -
 FootprintName
 SOT-23-Switch
 DeviceName
 HAL403SO
-Group ID
-$1e18136
-Channel ID
-$1e2261
-Reuse Block
-KeySet6
 
 *
 ]
@@ -3205,7 +3205,7 @@ Group ID
 Channel ID
 
 Unique ID
-gge164
+gge194
 
 *
 ]
@@ -3273,7 +3273,7 @@ Group ID
 Channel ID
 
 Unique ID
-gge189
+gge195
 
 *
 ]
@@ -3341,7 +3341,7 @@ Group ID
 Channel ID
 
 Unique ID
-gge190
+gge196
 
 *
 ]
@@ -3409,7 +3409,7 @@ Group ID
 Channel ID
 
 Unique ID
-gge191
+gge197
 
 *
 ]
@@ -3477,7 +3477,229 @@ Group ID
 Channel ID
 
 Unique ID
-gge192
+gge198
+
+*
+]
+[
+DESIGNATOR
+SW3
+FOOTPRINT
+SW-SMD_L3.9-W3.0-P4.45
+PARTTYPE
+TS-1088-AR02016
+DESCRIPTION
+Circuit:SPST Actuator Style:Round Button Operating Force:160gf Mounting Style:Brick nogging Switch Length:4mm Switch Width:3mm Switch Height:2mm Strike Gundam:不带 Contact Current:50mA Voltage Rating (DC):12V Insulation Resistance:100MΩ Actuator/Cap Color:B
+Component Kind
+Standard
+LCSC Part Name
+4*3*2mm 立贴 轻触开关
+Supplier Part
+C720477
+Manufacturer
+XUNPU(讯普)
+Manufacturer Part
+TS-1088-AR02016
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20200810/C720475_60D09DD6C54279ADDB2DC25100F1CC11.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SW-SMD_L3.9-W2.9-H2.0-LS4.8
+Circuit
+SPST
+Actuator Style
+Round Button
+Operating Force
+160gf
+Mounting Style
+Brick nogging
+Switch Length
+4mm
+Switch Width
+3mm
+Switch Height
+2mm
+Strike Gundam
+不带
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Actuator/Cap Color
+Black
+Pin Style
+SMDSplicing
+Mechanical Life
+10万次
+Operating Temperature
+-30℃~+80℃
+Description
+Circuit:SPST Actuator Style:Round Button Operating Force:160gf Mounting Style:Brick nogging Switch Length:4mm Switch Width:3mm Switch Height:2mm Strike Gundam:不带 Contact Current:50mA Voltage Rating (DC):12V Insulation Resistance:100MΩ Actuator/Cap Color:B
+Symbol
+TS-1088-AR02016
+Designator
+SW3
+Name
+TS-1088-AR02016
+Device
+TS-1088-AR02016
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge47_3
+
+*
+]
+[
+DESIGNATOR
+C36
+FOOTPRINT
+C0603
+PARTTYPE
+CC0603KRX7R9BB104
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Component Kind
+Standard
+LCSC Part Name
+100nF ±10% 50V
+Supplier Part
+C14663
+Manufacturer
+YAGEO(国巨)
+Manufacturer Part
+CC0603KRX7R9BB104
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20170116/1484561234239.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0603_L1.6-W0.8-H0.8
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Value
+100nF
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Symbol
+CL05B104KO5NNNC
+Designator
+C36
+Device
+CC0603KRX7R9BB104
+Unique ID
+gge195_3
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+D6
+FOOTPRINT
+SOD-523_L1.2-W0.8-LS1.6-BI
+PARTTYPE
+H5VND5BA
+DESCRIPTION
+Polarity:Bidirectional Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:15V Peak Pulse Current (Ipp):8A@8/20us Peak Pulse Power Dissipation (Ppp):120W@8/20us Voltage - Breakdown:8V Reverse Leakage Current (Ir):200nA Number of Channels:1 Operating Temp
+Component Kind
+Standard
+LCSC Part Name
+双向ESD 5V截止 峰值浪涌电流：8A@8/20us
+Supplier Part
+C42413899
+Manufacturer
+R+O(宏嘉诚)
+Manufacturer Part
+H5VND5BA
+Supplier Footprint
+SOD-523
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/H5VND5BA/44403780.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOD-523_L1.2-W0.8-LS1.6-BI
+Polarity
+Bidirectional
+Reverse Stand-Off Voltage (Vrwm)
+5V
+Clamping Voltage
+15V
+Peak Pulse Current (Ipp)
+8A@8/20us
+Peak Pulse Power Dissipation (Ppp)
+120W@8/20us
+Voltage - Breakdown
+8V
+Reverse Leakage Current (Ir)
+200nA
+Number of Channels
+1
+Operating Temperature
+-55℃~+125℃
+level of protection
+IEC 61000-4-2；IEC 61000-4-5
+Type
+ESD
+Junction Capacitance
+20pF
+Description
+Polarity:Bidirectional Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:15V Peak Pulse Current (Ipp):8A@8/20us Peak Pulse Power Dissipation (Ppp):120W@8/20us Voltage - Breakdown:8V Reverse Leakage Current (Ir):200nA Number of Channels:1 Operating Temp
+Symbol
+H5VND5BA
+Designator
+D6
+Name
+H5VND5BA
+Device
+H5VND5BA
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge193
 
 *
 ]
@@ -5102,12 +5324,12 @@ gge169_1
 (
 $1I10936\$1N697 
 U13-1 74HC4052PW,118-2Y0 Passive 
-U10-3 HAL403SO-OUT Passive 
+U10-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10936\$1N698 
 U13-2 74HC4052PW,118-2Y2 Passive 
-U12-3 HAL403SO-OUT Passive 
+U12-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1N11049 
@@ -5117,74 +5339,77 @@ U46-13 STM32F103C8T6-PA3 Passive
 (
 $1I10936\$1N699 
 U13-4 74HC4052PW,118-2Y3 Passive 
-U15-3 HAL403SO-OUT Passive 
+U15-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10936\$1N703 
 U13-5 74HC4052PW,118-2Y1 Passive 
-U17-3 HAL403SO-OUT Passive 
+U17-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 GND 
 U13-6 74HC4052PW,118-E# Passive 
 U13-7 74HC4052PW,118-VEE Passive 
 U13-8 74HC4052PW,118-GND Passive 
-U10-2 HAL403SO-GND Passive 
-U12-2 HAL403SO-GND Passive 
-U15-2 HAL403SO-GND Passive 
-U17-2 HAL403SO-GND Passive 
-U11-2 HAL403SO-GND Passive 
-U14-2 HAL403SO-GND Passive 
-U16-2 HAL403SO-GND Passive 
-U18-2 HAL403SO-GND Passive 
+U10-2 SC4011SO-N-TR-GND Passive 
+U12-2 SC4011SO-N-TR-GND Passive 
+U15-2 SC4011SO-N-TR-GND Passive 
+U17-2 SC4011SO-N-TR-GND Passive 
+U11-2 SC4011SO-N-TR-GND Passive 
+U14-2 SC4011SO-N-TR-GND Passive 
+U16-2 SC4011SO-N-TR-GND Passive 
+U18-2 SC4011SO-N-TR-GND Passive 
 U4-6 74HC4052PW,118-E# Passive 
 U4-7 74HC4052PW,118-VEE Passive 
 U4-8 74HC4052PW,118-GND Passive 
-U1-2 HAL403SO-GND Passive 
-U3-2 HAL403SO-GND Passive 
-U6-2 HAL403SO-GND Passive 
-U8-2 HAL403SO-GND Passive 
-U2-2 HAL403SO-GND Passive 
-U5-2 HAL403SO-GND Passive 
-U7-2 HAL403SO-GND Passive 
-U9-2 HAL403SO-GND Passive 
+U1-2 SC4011SO-N-TR-GND Passive 
+U3-2 SC4011SO-N-TR-GND Passive 
+U6-2 SC4011SO-N-TR-GND Passive 
+U8-2 SC4011SO-N-TR-GND Passive 
+U2-2 SC4011SO-N-TR-GND Passive 
+U5-2 SC4011SO-N-TR-GND Passive 
+U7-2 SC4011SO-N-TR-GND Passive 
+U9-2 SC4011SO-N-TR-GND Passive 
 U22-6 74HC4052PW,118-E# Passive 
 U22-7 74HC4052PW,118-VEE Passive 
 U22-8 74HC4052PW,118-GND Passive 
-U19-2 HAL403SO-GND Passive 
-U21-2 HAL403SO-GND Passive 
-U24-2 HAL403SO-GND Passive 
-U26-2 HAL403SO-GND Passive 
-U20-2 HAL403SO-GND Passive 
-U23-2 HAL403SO-GND Passive 
-U25-2 HAL403SO-GND Passive 
-U27-2 HAL403SO-GND Passive 
+U19-2 SC4011SO-N-TR-GND Passive 
+U21-2 SC4011SO-N-TR-GND Passive 
+U24-2 SC4011SO-N-TR-GND Passive 
+U26-2 SC4011SO-N-TR-GND Passive 
+U20-2 SC4011SO-N-TR-GND Passive 
+U23-2 SC4011SO-N-TR-GND Passive 
+U25-2 SC4011SO-N-TR-GND Passive 
+U27-2 SC4011SO-N-TR-GND Passive 
 U31-6 74HC4052PW,118-E# Passive 
 U31-7 74HC4052PW,118-VEE Passive 
 U31-8 74HC4052PW,118-GND Passive 
-U28-2 HAL403SO-GND Passive 
-U30-2 HAL403SO-GND Passive 
-U33-2 HAL403SO-GND Passive 
-U35-2 HAL403SO-GND Passive 
-U29-2 HAL403SO-GND Passive 
-U32-2 HAL403SO-GND Passive 
-U34-2 HAL403SO-GND Passive 
-U36-2 HAL403SO-GND Passive 
+U28-2 SC4011SO-N-TR-GND Passive 
+U30-2 SC4011SO-N-TR-GND Passive 
+U33-2 SC4011SO-N-TR-GND Passive 
+U35-2 SC4011SO-N-TR-GND Passive 
+U29-2 SC4011SO-N-TR-GND Passive 
+U32-2 SC4011SO-N-TR-GND Passive 
+U34-2 SC4011SO-N-TR-GND Passive 
+U36-2 SC4011SO-N-TR-GND Passive 
 U40-4 74HC4052PW,118-2Y3 Passive 
 U40-6 74HC4052PW,118-E# Passive 
 U40-7 74HC4052PW,118-VEE Passive 
 U40-8 74HC4052PW,118-GND Passive 
 U40-11 74HC4052PW,118-1Y3 Passive 
-U37-2 HAL403SO-GND Passive 
-U39-2 HAL403SO-GND Passive 
-U43-2 HAL403SO-GND Passive 
-U38-2 HAL403SO-GND Passive 
-U41-2 HAL403SO-GND Passive 
-U42-2 HAL403SO-GND Passive 
+U37-2 SC4011SO-N-TR-GND Passive 
+U39-2 SC4011SO-N-TR-GND Passive 
+U43-2 SC4011SO-N-TR-GND Passive 
+U38-2 SC4011SO-N-TR-GND Passive 
+U41-2 SC4011SO-N-TR-GND Passive 
+U42-2 SC4011SO-N-TR-GND Passive 
 R1-1 0402WGF1002TCE-1 Input   
 R2-1 0402WGF1002TCE-1 Input   
 R3-1 0402WGF1002TCE-1 Input   
 R4-1 0402WGF1002TCE-1 Input   
+SW3-1 TS-1088-AR02016-1 Passive 
+C36-2 CC0603KRX7R9BB104-2 Passive 
+D6-1 H5VND5BA-1 Passive 
 C3-2 CL05B104KO5NNNC-2 Passive 
 C2-2 CL05B104KO5NNNC-2 Passive 
 C4-2 CL05B104KO5NNNC-2 Passive 
@@ -5227,12 +5452,12 @@ U46-21 STM32F103C8T6-PB10 Passive
 (
 $1I10936\$1N711 
 U13-11 74HC4052PW,118-1Y3 Passive 
-U18-3 HAL403SO-OUT Passive 
+U18-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10936\$1N710 
 U13-12 74HC4052PW,118-1Y0 Passive 
-U16-3 HAL403SO-OUT Passive 
+U16-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1N11048 
@@ -5242,58 +5467,58 @@ U46-12 STM32F103C8T6-PA2 Passive
 (
 $1I10936\$1N708 
 U13-14 74HC4052PW,118-1Y1 Passive 
-U14-3 HAL403SO-OUT Passive 
+U14-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10936\$1N707 
 U13-15 74HC4052PW,118-1Y2 Passive 
-U11-3 HAL403SO-OUT Passive 
+U11-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 VCC 
 U13-16 74HC4052PW,118-VCC Passive 
-U10-1 HAL403SO-VCC Passive 
-U12-1 HAL403SO-VCC Passive 
-U15-1 HAL403SO-VCC Passive 
-U17-1 HAL403SO-VCC Passive 
-U11-1 HAL403SO-VCC Passive 
-U14-1 HAL403SO-VCC Passive 
-U16-1 HAL403SO-VCC Passive 
-U18-1 HAL403SO-VCC Passive 
+U10-1 SC4011SO-N-TR-VCC Passive 
+U12-1 SC4011SO-N-TR-VCC Passive 
+U15-1 SC4011SO-N-TR-VCC Passive 
+U17-1 SC4011SO-N-TR-VCC Passive 
+U11-1 SC4011SO-N-TR-VCC Passive 
+U14-1 SC4011SO-N-TR-VCC Passive 
+U16-1 SC4011SO-N-TR-VCC Passive 
+U18-1 SC4011SO-N-TR-VCC Passive 
 U4-16 74HC4052PW,118-VCC Passive 
-U1-1 HAL403SO-VCC Passive 
-U3-1 HAL403SO-VCC Passive 
-U6-1 HAL403SO-VCC Passive 
-U8-1 HAL403SO-VCC Passive 
-U2-1 HAL403SO-VCC Passive 
-U5-1 HAL403SO-VCC Passive 
-U7-1 HAL403SO-VCC Passive 
-U9-1 HAL403SO-VCC Passive 
+U1-1 SC4011SO-N-TR-VCC Passive 
+U3-1 SC4011SO-N-TR-VCC Passive 
+U6-1 SC4011SO-N-TR-VCC Passive 
+U8-1 SC4011SO-N-TR-VCC Passive 
+U2-1 SC4011SO-N-TR-VCC Passive 
+U5-1 SC4011SO-N-TR-VCC Passive 
+U7-1 SC4011SO-N-TR-VCC Passive 
+U9-1 SC4011SO-N-TR-VCC Passive 
 U22-16 74HC4052PW,118-VCC Passive 
-U19-1 HAL403SO-VCC Passive 
-U21-1 HAL403SO-VCC Passive 
-U24-1 HAL403SO-VCC Passive 
-U26-1 HAL403SO-VCC Passive 
-U20-1 HAL403SO-VCC Passive 
-U23-1 HAL403SO-VCC Passive 
-U25-1 HAL403SO-VCC Passive 
-U27-1 HAL403SO-VCC Passive 
+U19-1 SC4011SO-N-TR-VCC Passive 
+U21-1 SC4011SO-N-TR-VCC Passive 
+U24-1 SC4011SO-N-TR-VCC Passive 
+U26-1 SC4011SO-N-TR-VCC Passive 
+U20-1 SC4011SO-N-TR-VCC Passive 
+U23-1 SC4011SO-N-TR-VCC Passive 
+U25-1 SC4011SO-N-TR-VCC Passive 
+U27-1 SC4011SO-N-TR-VCC Passive 
 U31-16 74HC4052PW,118-VCC Passive 
-U28-1 HAL403SO-VCC Passive 
-U30-1 HAL403SO-VCC Passive 
-U33-1 HAL403SO-VCC Passive 
-U35-1 HAL403SO-VCC Passive 
-U29-1 HAL403SO-VCC Passive 
-U32-1 HAL403SO-VCC Passive 
-U34-1 HAL403SO-VCC Passive 
-U36-1 HAL403SO-VCC Passive 
+U28-1 SC4011SO-N-TR-VCC Passive 
+U30-1 SC4011SO-N-TR-VCC Passive 
+U33-1 SC4011SO-N-TR-VCC Passive 
+U35-1 SC4011SO-N-TR-VCC Passive 
+U29-1 SC4011SO-N-TR-VCC Passive 
+U32-1 SC4011SO-N-TR-VCC Passive 
+U34-1 SC4011SO-N-TR-VCC Passive 
+U36-1 SC4011SO-N-TR-VCC Passive 
 U40-16 74HC4052PW,118-VCC Passive 
-U37-1 HAL403SO-VCC Passive 
-U39-1 HAL403SO-VCC Passive 
-U43-1 HAL403SO-VCC Passive 
-U38-1 HAL403SO-VCC Passive 
-U41-1 HAL403SO-VCC Passive 
-U42-1 HAL403SO-VCC Passive 
+U37-1 SC4011SO-N-TR-VCC Passive 
+U39-1 SC4011SO-N-TR-VCC Passive 
+U43-1 SC4011SO-N-TR-VCC Passive 
+U38-1 SC4011SO-N-TR-VCC Passive 
+U41-1 SC4011SO-N-TR-VCC Passive 
+U42-1 SC4011SO-N-TR-VCC Passive 
 R5-1 0402WGF1002TCE-1 Input   
 C3-1 CL05B104KO5NNNC-1 Passive 
 C2-1 CL05B104KO5NNNC-1 Passive 
@@ -5319,12 +5544,12 @@ TV5-5 SRV05-4-P-T7_C85364-5 Input
 (
 $1I10958\$1N697 
 U4-1 74HC4052PW,118-2Y0 Passive 
-U1-3 HAL403SO-OUT Passive 
+U1-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10958\$1N698 
 U4-2 74HC4052PW,118-2Y2 Passive 
-U3-3 HAL403SO-OUT Passive 
+U3-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1N11047 
@@ -5334,22 +5559,22 @@ U46-11 STM32F103C8T6-PA1 Passive
 (
 $1I10958\$1N699 
 U4-4 74HC4052PW,118-2Y3 Passive 
-U6-3 HAL403SO-OUT Passive 
+U6-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10958\$1N703 
 U4-5 74HC4052PW,118-2Y1 Passive 
-U8-3 HAL403SO-OUT Passive 
+U8-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10958\$1N711 
 U4-11 74HC4052PW,118-1Y3 Passive 
-U9-3 HAL403SO-OUT Passive 
+U9-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10958\$1N710 
 U4-12 74HC4052PW,118-1Y0 Passive 
-U7-3 HAL403SO-OUT Passive 
+U7-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1N11046 
@@ -5359,22 +5584,22 @@ U46-10 STM32F103C8T6-PA0-WKUP Passive
 (
 $1I10958\$1N708 
 U4-14 74HC4052PW,118-1Y1 Passive 
-U5-3 HAL403SO-OUT Passive 
+U5-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10958\$1N707 
 U4-15 74HC4052PW,118-1Y2 Passive 
-U2-3 HAL403SO-OUT Passive 
+U2-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10980\$1N697 
 U22-1 74HC4052PW,118-2Y0 Passive 
-U19-3 HAL403SO-OUT Passive 
+U19-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10980\$1N698 
 U22-2 74HC4052PW,118-2Y2 Passive 
-U21-3 HAL403SO-OUT Passive 
+U21-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1N11051 
@@ -5384,22 +5609,22 @@ U46-15 STM32F103C8T6-PA5 Passive
 (
 $1I10980\$1N699 
 U22-4 74HC4052PW,118-2Y3 Passive 
-U24-3 HAL403SO-OUT Passive 
+U24-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10980\$1N703 
 U22-5 74HC4052PW,118-2Y1 Passive 
-U26-3 HAL403SO-OUT Passive 
+U26-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10980\$1N711 
 U22-11 74HC4052PW,118-1Y3 Passive 
-U27-3 HAL403SO-OUT Passive 
+U27-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10980\$1N710 
 U22-12 74HC4052PW,118-1Y0 Passive 
-U25-3 HAL403SO-OUT Passive 
+U25-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1N11050 
@@ -5409,22 +5634,22 @@ U46-14 STM32F103C8T6-PA4 Passive
 (
 $1I10980\$1N708 
 U22-14 74HC4052PW,118-1Y1 Passive 
-U23-3 HAL403SO-OUT Passive 
+U23-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10980\$1N707 
 U22-15 74HC4052PW,118-1Y2 Passive 
-U20-3 HAL403SO-OUT Passive 
+U20-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I11002\$1N697 
 U31-1 74HC4052PW,118-2Y0 Passive 
-U28-3 HAL403SO-OUT Passive 
+U28-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I11002\$1N698 
 U31-2 74HC4052PW,118-2Y2 Passive 
-U30-3 HAL403SO-OUT Passive 
+U30-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1N11053 
@@ -5434,22 +5659,22 @@ U46-17 STM32F103C8T6-PA7 Passive
 (
 $1I11002\$1N699 
 U31-4 74HC4052PW,118-2Y3 Passive 
-U33-3 HAL403SO-OUT Passive 
+U33-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I11002\$1N703 
 U31-5 74HC4052PW,118-2Y1 Passive 
-U35-3 HAL403SO-OUT Passive 
+U35-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I11002\$1N711 
 U31-11 74HC4052PW,118-1Y3 Passive 
-U36-3 HAL403SO-OUT Passive 
+U36-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I11002\$1N710 
 U31-12 74HC4052PW,118-1Y0 Passive 
-U34-3 HAL403SO-OUT Passive 
+U34-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1N11052 
@@ -5459,22 +5684,22 @@ U46-16 STM32F103C8T6-PA6 Passive
 (
 $1I11002\$1N708 
 U31-14 74HC4052PW,118-1Y1 Passive 
-U32-3 HAL403SO-OUT Passive 
+U32-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I11002\$1N707 
 U31-15 74HC4052PW,118-1Y2 Passive 
-U29-3 HAL403SO-OUT Passive 
+U29-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I18136\$1N697 
 U40-1 74HC4052PW,118-2Y0 Passive 
-U37-3 HAL403SO-OUT Passive 
+U37-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I18136\$1N698 
 U40-2 74HC4052PW,118-2Y2 Passive 
-U39-3 HAL403SO-OUT Passive 
+U39-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1N11074 
@@ -5484,12 +5709,12 @@ U46-19 STM32F103C8T6-PB1 Passive
 (
 $1I18136\$1N703 
 U40-5 74HC4052PW,118-2Y1 Passive 
-U43-3 HAL403SO-OUT Passive 
+U43-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I18136\$1N710 
 U40-12 74HC4052PW,118-1Y0 Passive 
-U42-3 HAL403SO-OUT Passive 
+U42-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1N11070 
@@ -5499,12 +5724,12 @@ U46-18 STM32F103C8T6-PB0 Passive
 (
 $1I18136\$1N708 
 U40-14 74HC4052PW,118-1Y1 Passive 
-U41-3 HAL403SO-OUT Passive 
+U41-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I18136\$1N707 
 U40-15 74HC4052PW,118-1Y2 Passive 
-U38-3 HAL403SO-OUT Passive 
+U38-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1N22577 
@@ -5533,6 +5758,9 @@ U46-41 STM32F103C8T6-PB5 Passive
 )
 (
 RESET 
+SW3-2 TS-1088-AR02016-2 Passive 
+C36-1 CC0603KRX7R9BB104-1 Passive 
+D6-2 H5VND5BA-2 Passive 
 U46-7 STM32F103C8T6-NRST Passive 
 RIGHT_PORT-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
 TV2-4 SRV05-4-P-T7_C85364-4 Input   

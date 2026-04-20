@@ -18,6 +18,43 @@ The board supports 2200 mAh batteries charging at 1C with internal thermistor pr
 Fast charging negociation is done by the MCU and the information is passed to powerline via I2C. The charge D+ and D- are left floating
 to avoid interferences with the MCU.
 
+## Power Consumption
+
+Estimated from the BOMs in [export/](export/) at the 3.3 V rail, with
+typical datasheet values at room temperature. Hall sensor count: 32
+(left wing) + 38 (right wing) = 70.
+
+| Block | Part | Qty | I typ (mA) | Subtotal (mA) |
+|---|---|---:|---:|---:|
+| Main MCU, BLE active | STM32WB5MMG | 1 | 10 | 10 |
+| Wing MCU @ 72 MHz | STM32F103C8T6 | 2 | 25 | 50 |
+| Key position Hall switch | SC4011 | 70 | 2 | 140 |
+| Linear Hall (wing L) | HAL403 | 1 | 6 | 6 |
+| Analog mux (static) | 74HC4052 | 9 | <0.01 | ~0 |
+| Load-cell ADC | CS1237 | 1 | 1.5 | 1.5 |
+| LEDs (POW + BT + ~2 status) | — | ~4 | 3 | ~10 |
+| LDO Iq + leakage | TLV75533 + misc | — | — | ~1 |
+| **Total (playing, BLE streaming)** | | | | **~220** |
+
+At ~220 mA × 3.3 V ≈ **0.73 W** steady-state. Hall sensors dominate
+(~64 %); cutting their average draw (duty-cycled power via a
+side-channel FET or lower-Iq replacement) is the largest lever.
+
+Peak transient: BLE TX burst (+10 mA on U1) plus all 8 channel LEDs lit
+(+25 mA) bumps the rail to ~255 mA briefly. TLV75533 is rated 500 mA,
+comfortable margin.
+
+**Battery runtime.** 2200 mAh Li-ion at 3.7 V nominal, LDO efficiency
+≈ 3.3 / 3.7 = 89 %: battery draw ≈ 220 mA, runtime ≈ **10 h**, well
+above the 2 h requirement. Headroom covers aging and cold-temperature
+capacity loss.
+
+**Charge mode** (USB in, MCU idle, wings powered but not sampling):
+wing MCUs in STOP + Hall sensors still powered ≈ 150 mA; with wing
+rails gated off this drops to ~15 mA (charge-indicator LED + charger
+Iq + MCU idle). Worth gating the wing VCC from the motherboard in this
+state.
+
 ## Expression pedal: 
 
 M-Audio EX-P and Roland EV-5 have wiper on the TRS tip.

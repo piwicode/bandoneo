@@ -3581,7 +3581,7 @@ gge220
 ]
 [
 DESIGNATOR
-LED_BT_AUDIO
+LED_FN1
 FOOTPRINT
 LED0805-RD
 PARTTYPE
@@ -3645,7 +3645,7 @@ Lamp Holder Type:- Illumination Color:Red Voltage - Forward(Vf):1.6V~2.6V Voltag
 Symbol
 FC-2012HRK-620D
 Designator
-LED_BT_AUDIO
+LED_FN1
 Name
 NCD0805R1
 Device
@@ -4370,6 +4370,306 @@ Channel ID
 
 Unique ID
 gge253
+
+*
+]
+[
+DESIGNATOR
+LED_FN2
+FOOTPRINT
+LED0805-RD
+PARTTYPE
+NCD0805R1_C84256
+DESCRIPTION
+Lamp Holder Type:- Illumination Color:Red Voltage - Forward(Vf):1.6V~2.6V Voltage - Forward(Vf):1.6V~2.6V Power(Watts):65mW Forward Current:25mA Wavelength - Dominant:615nm~630nm Wavelength - Dominant:615nm~630nm Peak Wavelength:630nm Diode Configuration:
+Component Kind
+Standard
+LCSC Part Name
+片式发光二极管
+Supplier Part
+C84256
+Manufacturer
+国星光电
+Manufacturer Part
+NCD0805R1
+Supplier Footprint
+0805
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/NCD0805R1/85425.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+LED0805-RD
+Lamp Holder Type
+-
+Illumination Color
+Red
+Voltage - Forward(Vf)
+1.6V~2.6V
+Power(Watts)
+65mW
+Forward Current
+25mA
+Wavelength - Dominant
+615nm~630nm
+Peak Wavelength
+630nm
+Diode Configuration
+Discrete Diode
+Lens Color
+-
+Color Temperature
+-
+Luminous Intensity
+195mcd
+Viewing Angle
+130°
+Mounting Style
+-
+Operating Temperature
+-30℃~+85℃
+Description
+Lamp Holder Type:- Illumination Color:Red Voltage - Forward(Vf):1.6V~2.6V Voltage - Forward(Vf):1.6V~2.6V Power(Watts):65mW Forward Current:25mA Wavelength - Dominant:615nm~630nm Wavelength - Dominant:615nm~630nm Peak Wavelength:630nm Diode Configuration:
+Symbol
+FC-2012HRK-620D
+Designator
+LED_FN2
+Name
+NCD0805R1
+Device
+NCD0805R1_C84256
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge221_1
+
+*
+]
+[
+DESIGNATOR
+R35
+FOOTPRINT
+R0603
+PARTTYPE
+0603WAF3300T5E
+DESCRIPTION
+Type:Thick Film Resistors Resistance: Tolerance:±1% Tolerance:±1% Power(Watts): Overload Voltage (Max): Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature Range:-55℃~+155℃ Operating Temperature Range:-55℃~+155℃
+Component Kind
+Standard
+LCSC Part Name
+330Ω ±1% 100mW 厚膜电阻
+Supplier Part
+C23138
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0603WAF3300T5E
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20200306/C422600_1E6D84923E4A46A82E41ADD87F860B5C.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0603
+Type
+Thick Film Resistors
+Value
+330Ω
+Tolerance
+±1%
+Power(Watts)
+
+Overload Voltage (Max)
+
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature Range
+-55℃~+155℃
+Description
+Type:Thick Film Resistors Resistance: Tolerance:±1% Tolerance:±1% Power(Watts): Overload Voltage (Max): Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature Range:-55℃~+155℃ Operating Temperature Range:-55℃~+155℃
+Symbol
+0603WAF3300T5E
+Designator
+R35
+Name
+330Ω
+Device
+0603WAF3300T5E
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge222_1
+
+*
+]
+[
+DESIGNATOR
+LED_FN3
+FOOTPRINT
+LED0805-RD
+PARTTYPE
+NCD0805R1_C84256
+DESCRIPTION
+Lamp Holder Type:- Illumination Color:Red Voltage - Forward(Vf):1.6V~2.6V Voltage - Forward(Vf):1.6V~2.6V Power(Watts):65mW Forward Current:25mA Wavelength - Dominant:615nm~630nm Wavelength - Dominant:615nm~630nm Peak Wavelength:630nm Diode Configuration:
+Component Kind
+Standard
+LCSC Part Name
+片式发光二极管
+Supplier Part
+C84256
+Manufacturer
+国星光电
+Manufacturer Part
+NCD0805R1
+Supplier Footprint
+0805
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/NCD0805R1/85425.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+LED0805-RD
+Lamp Holder Type
+-
+Illumination Color
+Red
+Voltage - Forward(Vf)
+1.6V~2.6V
+Power(Watts)
+65mW
+Forward Current
+25mA
+Wavelength - Dominant
+615nm~630nm
+Peak Wavelength
+630nm
+Diode Configuration
+Discrete Diode
+Lens Color
+-
+Color Temperature
+-
+Luminous Intensity
+195mcd
+Viewing Angle
+130°
+Mounting Style
+-
+Operating Temperature
+-30℃~+85℃
+Description
+Lamp Holder Type:- Illumination Color:Red Voltage - Forward(Vf):1.6V~2.6V Voltage - Forward(Vf):1.6V~2.6V Power(Watts):65mW Forward Current:25mA Wavelength - Dominant:615nm~630nm Wavelength - Dominant:615nm~630nm Peak Wavelength:630nm Diode Configuration:
+Symbol
+FC-2012HRK-620D
+Designator
+LED_FN3
+Name
+NCD0805R1
+Device
+NCD0805R1_C84256
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge221_2
+
+*
+]
+[
+DESIGNATOR
+R36
+FOOTPRINT
+R0603
+PARTTYPE
+0603WAF3300T5E
+DESCRIPTION
+Type:Thick Film Resistors Resistance: Tolerance:±1% Tolerance:±1% Power(Watts): Overload Voltage (Max): Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature Range:-55℃~+155℃ Operating Temperature Range:-55℃~+155℃
+Component Kind
+Standard
+LCSC Part Name
+330Ω ±1% 100mW 厚膜电阻
+Supplier Part
+C23138
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0603WAF3300T5E
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20200306/C422600_1E6D84923E4A46A82E41ADD87F860B5C.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0603
+Type
+Thick Film Resistors
+Value
+330Ω
+Tolerance
+±1%
+Power(Watts)
+
+Overload Voltage (Max)
+
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature Range
+-55℃~+155℃
+Description
+Type:Thick Film Resistors Resistance: Tolerance:±1% Tolerance:±1% Power(Watts): Overload Voltage (Max): Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature Range:-55℃~+155℃ Operating Temperature Range:-55℃~+155℃
+Symbol
+0603WAF3300T5E
+Designator
+R36
+Name
+330Ω
+Device
+0603WAF3300T5E
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge222_2
 
 *
 ]
@@ -6510,12 +6810,14 @@ LED_CH3-2 KT-0805Y-- Passive
 LED_CH4-2 KT-0805Y-- Passive 
 LED_BT_MIDI-1 NCD0805R1_C84256-- Passive 
 LED_POW-2 KT-0805G-K Passive 
-LED_BT_AUDIO-1 NCD0805R1_C84256-- Passive 
+LED_FN1-1 NCD0805R1_C84256-- Passive 
 U58-2 CS1237-SOP8-GND Passive 
 LOAD_CELL_PORT-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive 
 TV12-2 SRV05-4-P-T7_C85364-2 Input   
 TV14-2 SRV05-4-P-T7_C85364-2 Input   
 D7-1 SMBJ13A_C10209-A Input   
+LED_FN2-1 NCD0805R1_C84256-- Passive 
+LED_FN3-1 NCD0805R1_C84256-- Passive 
 CN1-3 S3B-XH-SM4-TB(LF)(SN)_C5306495-3 Passive 
 R14-1 0603WAF1000T5E-1 Input   
 C18-2 GRM21BR61H106KE43L-2 Passive 
@@ -6552,21 +6854,20 @@ D4-2 H5VND5BA-2 Passive
 U1-56 STM32WB5MMGH6TR-PA3 Passive 
 )
 (
-SW_BT_AUDIO 
+SW_FN1 
 SW4-2 TS-1088-AR02016-2 Passive 
 C1-1 CC0603KRX7R9BB104-1 Passive 
 D2-2 H5VND5BA-2 Passive 
-U1-54 STM32WB5MMGH6TR-PA5 Passive 
 )
 (
-SW_BT_VOL+ 
+SW_FN2 
 SW2-2 TS-1088-AR02016-2 Passive 
 C35-1 CC0603KRX7R9BB104-1 Passive 
 D5-2 H5VND5BA-2 Passive 
 U1-83 STM32WB5MMGH6TR-PC8 Passive 
 )
 (
-SW_BT_VOL- 
+SW_FN3 
 SW3-2 TS-1088-AR02016-2 Passive 
 C36-1 CC0603KRX7R9BB104-1 Passive 
 D6-2 H5VND5BA-2 Passive 
@@ -6690,6 +6991,16 @@ PROGRAM_PORT-7 B8B-PH-SM4-TBT(LF)(SN)-7 Passive
 TV11-6 SRV05-4-P-T7_C85364-6 Input   
 )
 (
+LED_FN3 
+U1-40 STM32WB5MMGH6TR-PC13 Passive 
+R36-1 0603WAF3300T5E-1 Input   
+)
+(
+LED_FN2 
+U1-42 STM32WB5MMGH6TR-PE4 Passive 
+R35-1 0603WAF3300T5E-1 Input   
+)
+(
 LED_CH3 
 U1-43 STM32WB5MMGH6TR-PB0 Passive 
 R20-1 0603WAF3300T5E-1 Input   
@@ -6726,9 +7037,12 @@ U1-51 STM32WB5MMGH6TR-PA9 Passive
 U56-1 BAT54C_C22466350-A Passive 
 )
 (
-LED_BT_AUDIO 
+LED_BT_FN1 
 U1-53 STM32WB5MMGH6TR-PA6 Passive 
-R29-1 0603WAF3300T5E-1 Input   
+)
+(
+SW_BT_FN1 
+U1-54 STM32WB5MMGH6TR-PA5 Passive 
 )
 (
 LED_BT_MIDI 
@@ -6736,21 +7050,24 @@ U1-55 STM32WB5MMGH6TR-PA4 Passive
 R21-1 0603WAF3300T5E-1 Input   
 )
 (
-POW_INT 
-U1-62 STM32WB5MMGH6TR-PH1 Passive 
-R7-2 0603WAF1002T5E-2 Input   
-U47-7 BQ25895RTWR-INT Input   
+EXP_PEDAL_INT 
+U1-61 STM32WB5MMGH6TR-PH0 Passive 
+EXPR_PEDAL-3 PJ-603A-3 Input   
+C31-2 CC0603KRX7R9BB104-2 Input   
+TV14-4 SRV05-4-P-T7_C85364-4 Input   
 )
 (
 SUS_PEDAL_INT 
-U1-63 STM32WB5MMGH6TR-PD14 Passive 
+U1-62 STM32WB5MMGH6TR-PH1 Passive 
 SUS_PEDAL-3 PJ-603A-3 Input   
 C32-2 CC0603KRX7R9BB104-2 Passive 
 TV14-6 SRV05-4-P-T7_C85364-6 Input   
 )
 (
-USB_SENSE 
-U1-69 STM32WB5MMGH6TR-PC9 Passive 
+POW_INT 
+U1-63 STM32WB5MMGH6TR-PD14 Passive 
+R7-2 0603WAF1002T5E-2 Input   
+U47-7 BQ25895RTWR-INT Input   
 )
 (
 R_SPI_MISO 
@@ -6865,12 +7182,6 @@ LED_POW-1 KT-0805G-A Passive
 R28-2 0603WAF3300T5E-2 Input   
 )
 (
-EXP_PEDAL_INT 
-EXPR_PEDAL-3 PJ-603A-3 Input   
-C31-2 CC0603KRX7R9BB104-2 Input   
-TV14-4 SRV05-4-P-T7_C85364-4 Input   
-)
-(
 $1N20389 
 EXPR_PEDAL-5 PJ-603A-5 Input   
 R31-1 0603WAF3901T5E-1 Input   
@@ -6882,8 +7193,12 @@ R30-1 0603WAF3901T5E-1 Input
 )
 (
 $1N20116 
-LED_BT_AUDIO-2 NCD0805R1_C84256-+ Passive 
+LED_FN1-2 NCD0805R1_C84256-+ Passive 
 R29-2 0603WAF3300T5E-2 Input   
+)
+(
+LED_FN1 
+R29-1 0603WAF3300T5E-1 Input   
 )
 (
 LC_E+_R 
@@ -6911,6 +7226,16 @@ U58-5 CS1237-SOP8-SCLK Passive
 (
 LC_DATA 
 U58-6 CS1237-SOP8-DRDY#/DOUT Passive 
+)
+(
+$1N39058 
+LED_FN2-2 NCD0805R1_C84256-+ Passive 
+R35-2 0603WAF3300T5E-2 Input   
+)
+(
+$1N39144 
+LED_FN3-2 NCD0805R1_C84256-+ Passive 
+R36-2 0603WAF3300T5E-2 Input   
 )
 (
 POW_TS 

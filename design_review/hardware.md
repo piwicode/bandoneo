@@ -1,5 +1,22 @@
 
+## ESD Protection
 
+High speed charging can use 12V on VBUS, and BQ25895 VBUS max is 22V.
+SMAJ13A diode protects VBUS clamping at 21.5V < BQ25895 VBUS max of 22V
+and with Reverse standoff voltage 13V >  12V max charging voltage
+
+
+D+ and D- are protected with a regular SRV05 with pin 5 floating.
+Connecting pin 5 to VCC could make current flow to the voltage regulator
+and the MCU which is detrimental. Floating pin 5 forces the current to
+flow to GND. This does not prevent the component to protect D+ and D- from high voltage.
+
+## Charging
+
+The board supports 2200 mAh batteries charging at 1C with internal thermistor protection.
+
+Fast charging negociation is done by the MCU and the information is passed to powerline via I2C. The charge D+ and D- are left floating
+to avoid interferences with the MCU.
 
 ## Expression pedal: 
 

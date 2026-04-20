@@ -1,0 +1,5338 @@
+PROTEL NETLIST 2.0
+[
+DESIGNATOR
+U1
+FOOTPRINT
+TSSOP-16_L5.0-W4.4-P0.65-LS6.4-BL
+PARTTYPE
+74HC4052PW,118
+DESCRIPTION
+Switch Circuit:Single Pole Four Throw (SP4T) Number of Channels:2 Supply Voltage:2V~10V Supply Voltage:2V~10V Turn-on time:58ns On-State Resistance (Max):150Ω Turn-off time:48ns
+Component Kind
+Standard
+LCSC Part Name
+双4通道模拟多路复用器/解复用器
+Supplier Part
+C5646
+Manufacturer
+Nexperia(安世)
+Manufacturer Part
+74HC4052PW,118
+Supplier Footprint
+TSSOP-16
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20240724/4C5FEE3CF984089BDDF29F9B8CF19B75.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+TSSOP-16_L5.0-W4.4-H1.0-LS6.4-P0.65
+Switch Circuit
+Single Pole Four Throw (SP4T)
+Number of Channels
+2
+Supply Voltage
+2V~10V
+Turn-on time
+58ns
+On-State Resistance (Max)
+150Ω
+Turn-off time
+48ns
+Description
+Switch Circuit:Single Pole Four Throw (SP4T) Number of Channels:2 Supply Voltage:2V~10V Supply Voltage:2V~10V Turn-on time:58ns On-State Resistance (Max):150Ω Turn-off time:48ns
+Symbol
+74HC4052PW,118
+Designator
+U1
+Name
+74HC4052PW,118
+Device
+74HC4052PW,118
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge1
+
+*
+]
+[
+DESIGNATOR
+U2
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U2
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge58
+Reuse Block
+KeySet8
+Group ID
+$1e10936
+Channel ID
+$1e1456
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U3
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U3
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge59
+Reuse Block
+KeySet8
+Group ID
+$1e10936
+Channel ID
+$1e1939
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U4
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U4
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge60
+Reuse Block
+KeySet8
+Group ID
+$1e10936
+Channel ID
+$1e2003
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U5
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U5
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge61
+Reuse Block
+KeySet8
+Group ID
+$1e10936
+Channel ID
+$1e2069
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U6
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U6
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge62
+Reuse Block
+KeySet8
+Group ID
+$1e10936
+Channel ID
+$1e2133
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U7
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U7
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge63
+Reuse Block
+KeySet8
+Group ID
+$1e10936
+Channel ID
+$1e2197
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U8
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U8
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge64
+Reuse Block
+KeySet8
+Group ID
+$1e10936
+Channel ID
+$1e2261
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U9
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U9
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge65
+Reuse Block
+KeySet8
+Group ID
+$1e10936
+Channel ID
+$1e2325
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U10
+FOOTPRINT
+TSSOP-16_L5.0-W4.4-P0.65-LS6.4-BL
+PARTTYPE
+74HC4052PW,118
+DESCRIPTION
+Switch Circuit:Single Pole Four Throw (SP4T) Number of Channels:2 Supply Voltage:2V~10V Supply Voltage:2V~10V Turn-on time:58ns On-State Resistance (Max):150Ω Turn-off time:48ns
+Component Kind
+Standard
+LCSC Part Name
+双4通道模拟多路复用器/解复用器
+Supplier Part
+C5646
+Manufacturer
+Nexperia(安世)
+Manufacturer Part
+74HC4052PW,118
+Supplier Footprint
+TSSOP-16
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20240724/4C5FEE3CF984089BDDF29F9B8CF19B75.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+TSSOP-16_L5.0-W4.4-H1.0-LS6.4-P0.65
+Switch Circuit
+Single Pole Four Throw (SP4T)
+Number of Channels
+2
+Supply Voltage
+2V~10V
+Turn-on time
+58ns
+On-State Resistance (Max)
+150Ω
+Turn-off time
+48ns
+Description
+Switch Circuit:Single Pole Four Throw (SP4T) Number of Channels:2 Supply Voltage:2V~10V Supply Voltage:2V~10V Turn-on time:58ns On-State Resistance (Max):150Ω Turn-off time:48ns
+Symbol
+74HC4052PW,118
+Designator
+U10
+Name
+74HC4052PW,118
+Device
+74HC4052PW,118
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge10
+
+*
+]
+[
+DESIGNATOR
+U11
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U11
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge66
+Reuse Block
+KeySet8
+Group ID
+$1e10958
+Channel ID
+$1e1456
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U12
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U12
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge67
+Reuse Block
+KeySet8
+Group ID
+$1e10958
+Channel ID
+$1e1939
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U13
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U13
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge68
+Reuse Block
+KeySet8
+Group ID
+$1e10958
+Channel ID
+$1e2003
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U14
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U14
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge69
+Reuse Block
+KeySet8
+Group ID
+$1e10958
+Channel ID
+$1e2069
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U15
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U15
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge70
+Reuse Block
+KeySet8
+Group ID
+$1e10958
+Channel ID
+$1e2133
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U16
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U16
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge71
+Reuse Block
+KeySet8
+Group ID
+$1e10958
+Channel ID
+$1e2197
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U17
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U17
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge72
+Reuse Block
+KeySet8
+Group ID
+$1e10958
+Channel ID
+$1e2261
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U18
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U18
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge73
+Reuse Block
+KeySet8
+Group ID
+$1e10958
+Channel ID
+$1e2325
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U19
+FOOTPRINT
+TSSOP-16_L5.0-W4.4-P0.65-LS6.4-BL
+PARTTYPE
+74HC4052PW,118
+DESCRIPTION
+Switch Circuit:Single Pole Four Throw (SP4T) Number of Channels:2 Supply Voltage:2V~10V Supply Voltage:2V~10V Turn-on time:58ns On-State Resistance (Max):150Ω Turn-off time:48ns
+Component Kind
+Standard
+LCSC Part Name
+双4通道模拟多路复用器/解复用器
+Supplier Part
+C5646
+Manufacturer
+Nexperia(安世)
+Manufacturer Part
+74HC4052PW,118
+Supplier Footprint
+TSSOP-16
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20240724/4C5FEE3CF984089BDDF29F9B8CF19B75.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+TSSOP-16_L5.0-W4.4-H1.0-LS6.4-P0.65
+Switch Circuit
+Single Pole Four Throw (SP4T)
+Number of Channels
+2
+Supply Voltage
+2V~10V
+Turn-on time
+58ns
+On-State Resistance (Max)
+150Ω
+Turn-off time
+48ns
+Description
+Switch Circuit:Single Pole Four Throw (SP4T) Number of Channels:2 Supply Voltage:2V~10V Supply Voltage:2V~10V Turn-on time:58ns On-State Resistance (Max):150Ω Turn-off time:48ns
+Symbol
+74HC4052PW,118
+Designator
+U19
+Name
+74HC4052PW,118
+Device
+74HC4052PW,118
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge19
+
+*
+]
+[
+DESIGNATOR
+U20
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U20
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge74
+Reuse Block
+KeySet8
+Group ID
+$1e10980
+Channel ID
+$1e1456
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U21
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U21
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge75
+Reuse Block
+KeySet8
+Group ID
+$1e10980
+Channel ID
+$1e1939
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U22
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U22
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge76
+Reuse Block
+KeySet8
+Group ID
+$1e10980
+Channel ID
+$1e2003
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U23
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U23
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge77
+Reuse Block
+KeySet8
+Group ID
+$1e10980
+Channel ID
+$1e2069
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U24
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U24
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge78
+Reuse Block
+KeySet8
+Group ID
+$1e10980
+Channel ID
+$1e2133
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U25
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U25
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge79
+Reuse Block
+KeySet8
+Group ID
+$1e10980
+Channel ID
+$1e2197
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U26
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U26
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge80
+Reuse Block
+KeySet8
+Group ID
+$1e10980
+Channel ID
+$1e2261
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U27
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U27
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge81
+Reuse Block
+KeySet8
+Group ID
+$1e10980
+Channel ID
+$1e2325
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U28
+FOOTPRINT
+TSSOP-16_L5.0-W4.4-P0.65-LS6.4-BL
+PARTTYPE
+74HC4052PW,118
+DESCRIPTION
+Switch Circuit:Single Pole Four Throw (SP4T) Number of Channels:2 Supply Voltage:2V~10V Supply Voltage:2V~10V Turn-on time:58ns On-State Resistance (Max):150Ω Turn-off time:48ns
+Component Kind
+Standard
+LCSC Part Name
+双4通道模拟多路复用器/解复用器
+Supplier Part
+C5646
+Manufacturer
+Nexperia(安世)
+Manufacturer Part
+74HC4052PW,118
+Supplier Footprint
+TSSOP-16
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20240724/4C5FEE3CF984089BDDF29F9B8CF19B75.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+TSSOP-16_L5.0-W4.4-H1.0-LS6.4-P0.65
+Switch Circuit
+Single Pole Four Throw (SP4T)
+Number of Channels
+2
+Supply Voltage
+2V~10V
+Turn-on time
+58ns
+On-State Resistance (Max)
+150Ω
+Turn-off time
+48ns
+Description
+Switch Circuit:Single Pole Four Throw (SP4T) Number of Channels:2 Supply Voltage:2V~10V Supply Voltage:2V~10V Turn-on time:58ns On-State Resistance (Max):150Ω Turn-off time:48ns
+Symbol
+74HC4052PW,118
+Designator
+U28
+Name
+74HC4052PW,118
+Device
+74HC4052PW,118
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge28
+
+*
+]
+[
+DESIGNATOR
+U29
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U29
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge82
+Reuse Block
+KeySet8
+Group ID
+$1e11002
+Channel ID
+$1e1456
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U30
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U30
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge83
+Reuse Block
+KeySet8
+Group ID
+$1e11002
+Channel ID
+$1e1939
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U31
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U31
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge84
+Reuse Block
+KeySet8
+Group ID
+$1e11002
+Channel ID
+$1e2003
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U32
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U32
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge85
+Reuse Block
+KeySet8
+Group ID
+$1e11002
+Channel ID
+$1e2069
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U33
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U33
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge86
+Reuse Block
+KeySet8
+Group ID
+$1e11002
+Channel ID
+$1e2133
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U34
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U34
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge87
+Reuse Block
+KeySet8
+Group ID
+$1e11002
+Channel ID
+$1e2197
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U35
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U35
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge88
+Reuse Block
+KeySet8
+Group ID
+$1e11002
+Channel ID
+$1e2261
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+U36
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+-
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U36
+Name
+HAL403SO
+Device
+HAL403SO
+Unique ID
+gge89
+Reuse Block
+KeySet8
+Group ID
+$1e11002
+Channel ID
+$1e2325
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
+Type
+-
+FootprintName
+SOT-23-Switch
+DeviceName
+HAL403SO
+
+*
+]
+[
+DESIGNATOR
+R8
+FOOTPRINT
+R0402
+PARTTYPE
+0402WGF1002TCE
+DESCRIPTION
+Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Component Kind
+Standard
+LCSC Part Name
+10kΩ ±1% 62.5mW 厚膜电阻
+Supplier Part
+C25744
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0402WGF1002TCE
+Supplier Footprint
+0402
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/0402WGF1002TCE/26487.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0402_L1.0-W0.5-H0.4
+Type
+Thick Film Resistor
+Value
+10kΩ
+Tolerance
+±1%
+Power(Watts)
+62.5mW
+Voltage-Supply(Max)
+50V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Symbol
+0402WGF1002TCE
+Designator
+R8
+Name
+10kΩ
+Device
+0402WGF1002TCE
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge191
+
+*
+]
+[
+DESIGNATOR
+R7
+FOOTPRINT
+R0402
+PARTTYPE
+0402WGF1002TCE
+DESCRIPTION
+Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Component Kind
+Standard
+LCSC Part Name
+10kΩ ±1% 62.5mW 厚膜电阻
+Supplier Part
+C25744
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0402WGF1002TCE
+Supplier Footprint
+0402
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/0402WGF1002TCE/26487.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0402_L1.0-W0.5-H0.4
+Type
+Thick Film Resistor
+Value
+10kΩ
+Tolerance
+±1%
+Power(Watts)
+62.5mW
+Voltage-Supply(Max)
+50V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Symbol
+0402WGF1002TCE
+Designator
+R7
+Name
+10kΩ
+Device
+0402WGF1002TCE
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge190
+
+*
+]
+[
+DESIGNATOR
+R2
+FOOTPRINT
+R0402
+PARTTYPE
+0402WGF1002TCE
+DESCRIPTION
+Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Component Kind
+Standard
+LCSC Part Name
+10kΩ ±1% 62.5mW 厚膜电阻
+Supplier Part
+C25744
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0402WGF1002TCE
+Supplier Footprint
+0402
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/0402WGF1002TCE/26487.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0402_L1.0-W0.5-H0.4
+Type
+Thick Film Resistor
+Value
+10kΩ
+Tolerance
+±1%
+Power(Watts)
+62.5mW
+Voltage-Supply(Max)
+50V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Symbol
+0402WGF1002TCE
+Designator
+R2
+Name
+10kΩ
+Device
+0402WGF1002TCE
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge164
+
+*
+]
+[
+DESIGNATOR
+R3
+FOOTPRINT
+R0402
+PARTTYPE
+0402WGF1002TCE
+DESCRIPTION
+Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Component Kind
+Standard
+LCSC Part Name
+10kΩ ±1% 62.5mW 厚膜电阻
+Supplier Part
+C25744
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0402WGF1002TCE
+Supplier Footprint
+0402
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/0402WGF1002TCE/26487.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0402_L1.0-W0.5-H0.4
+Type
+Thick Film Resistor
+Value
+10kΩ
+Tolerance
+±1%
+Power(Watts)
+62.5mW
+Voltage-Supply(Max)
+50V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Symbol
+0402WGF1002TCE
+Designator
+R3
+Name
+10kΩ
+Device
+0402WGF1002TCE
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge189
+
+*
+]
+[
+DESIGNATOR
+R9
+FOOTPRINT
+R0402
+PARTTYPE
+0402WGF1002TCE
+DESCRIPTION
+Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Component Kind
+Standard
+LCSC Part Name
+10kΩ ±1% 62.5mW 厚膜电阻
+Supplier Part
+C25744
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0402WGF1002TCE
+Supplier Footprint
+0402
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/0402WGF1002TCE/26487.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0402_L1.0-W0.5-H0.4
+Type
+Thick Film Resistor
+Value
+10kΩ
+Tolerance
+±1%
+Power(Watts)
+62.5mW
+Voltage-Supply(Max)
+50V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Symbol
+0402WGF1002TCE
+Designator
+R9
+Name
+10kΩ
+Device
+0402WGF1002TCE
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge192
+
+*
+]
+[
+DESIGNATOR
+SW3
+FOOTPRINT
+SW-SMD_L3.9-W3.0-P4.45
+PARTTYPE
+TS-1088-AR02016
+DESCRIPTION
+Circuit:SPST Actuator Style:Round Button Operating Force:160gf Mounting Style:Brick nogging Switch Length:4mm Switch Width:3mm Switch Height:2mm Strike Gundam:不带 Contact Current:50mA Voltage Rating (DC):12V Insulation Resistance:100MΩ Actuator/Cap Color:B
+Component Kind
+Standard
+LCSC Part Name
+4*3*2mm 立贴 轻触开关
+Supplier Part
+C720477
+Manufacturer
+XUNPU(讯普)
+Manufacturer Part
+TS-1088-AR02016
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20200810/C720475_60D09DD6C54279ADDB2DC25100F1CC11.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SW-SMD_L3.9-W2.9-H2.0-LS4.8
+Circuit
+SPST
+Actuator Style
+Round Button
+Operating Force
+160gf
+Mounting Style
+Brick nogging
+Switch Length
+4mm
+Switch Width
+3mm
+Switch Height
+2mm
+Strike Gundam
+不带
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Actuator/Cap Color
+Black
+Pin Style
+SMDSplicing
+Mechanical Life
+10万次
+Operating Temperature
+-30℃~+80℃
+Description
+Circuit:SPST Actuator Style:Round Button Operating Force:160gf Mounting Style:Brick nogging Switch Length:4mm Switch Width:3mm Switch Height:2mm Strike Gundam:不带 Contact Current:50mA Voltage Rating (DC):12V Insulation Resistance:100MΩ Actuator/Cap Color:B
+Symbol
+TS-1088-AR02016
+Designator
+SW3
+Name
+TS-1088-AR02016
+Device
+TS-1088-AR02016
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge47_3
+
+*
+]
+[
+DESIGNATOR
+C36
+FOOTPRINT
+C0603
+PARTTYPE
+CC0603KRX7R9BB104
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Component Kind
+Standard
+LCSC Part Name
+100nF ±10% 50V
+Supplier Part
+C14663
+Manufacturer
+YAGEO(国巨)
+Manufacturer Part
+CC0603KRX7R9BB104
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20170116/1484561234239.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0603_L1.6-W0.8-H0.8
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Value
+100nF
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Symbol
+CL05B104KO5NNNC
+Designator
+C36
+Device
+CC0603KRX7R9BB104
+Unique ID
+gge195_3
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+D6
+FOOTPRINT
+SOD-523_L1.2-W0.8-LS1.6-BI
+PARTTYPE
+H5VND5BA
+DESCRIPTION
+Polarity:Bidirectional Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:15V Peak Pulse Current (Ipp):8A@8/20us Peak Pulse Power Dissipation (Ppp):120W@8/20us Voltage - Breakdown:8V Reverse Leakage Current (Ir):200nA Number of Channels:1 Operating Temp
+Component Kind
+Standard
+Symbol
+H5VND5BA
+Designator
+D6
+LCSC Part Name
+双向ESD 5V截止 峰值浪涌电流：8A@8/20us
+Supplier Part
+C42413899
+Manufacturer
+R+O(宏嘉诚)
+Manufacturer Part
+H5VND5BA
+Supplier Footprint
+SOD-523
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/H5VND5BA/44403780.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOD-523_L1.2-W0.8-LS1.6-BI
+Polarity
+Bidirectional
+Reverse Stand-Off Voltage (Vrwm)
+5V
+Clamping Voltage
+15V
+Peak Pulse Current (Ipp)
+8A@8/20us
+Peak Pulse Power Dissipation (Ppp)
+120W@8/20us
+Voltage - Breakdown
+8V
+Reverse Leakage Current (Ir)
+200nA
+Number of Channels
+1
+Operating Temperature
+-55℃~+125℃
+level of protection
+IEC 61000-4-2；IEC 61000-4-5
+Type
+ESD
+Junction Capacitance
+20pF
+Name
+H5VND5BA
+Description
+Polarity:Bidirectional Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:15V Peak Pulse Current (Ipp):8A@8/20us Peak Pulse Power Dissipation (Ppp):120W@8/20us Voltage - Breakdown:8V Reverse Leakage Current (Ir):200nA Number of Channels:1 Operating Temp
+Device
+H5VND5BA
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge193
+
+*
+]
+[
+DESIGNATOR
+U37
+FOOTPRINT
+LQFP-48_L7.0-W7.0-P0.50-LS9.0-BL
+PARTTYPE
+STM32F103C8T6
+DESCRIPTION
+CPU Core:ARM-M3 CPU Maximum Speed:72MHz Program Storage Size:64KB Program Memory Type:FLASH Number of I/O:37 ADC (Bit):12bit Voltage - Supply:2V~3.6V Voltage - Supply:2V~3.6V Applications:-
+Component Kind
+Standard
+LCSC Part Name
+主流增强型ARM Cortex-M3 MCU，具有64 KB Flash、72 MHz CPU、电机控制、USB和CAN
+Supplier Part
+C8734
+Manufacturer
+ST(意法半导体)
+Manufacturer Part
+STM32F103C8T6
+Supplier Footprint
+LQFP-48(7x7)
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20220812/8363ACEC51AD55ECEB84799464F7CB85.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+LQFP-48_L7.0-W7.0-H1.4-LS9.0-P0.50
+CPU Core
+ARM-M3
+CPU Maximum Speed
+72MHz
+Program Storage Size
+64KB
+Program Memory Type
+FLASH
+Number of I/O
+37
+ADC (Bit)
+12bit
+Voltage - Supply
+2V~3.6V
+Applications
+-
+Description
+CPU Core:ARM-M3 CPU Maximum Speed:72MHz Program Storage Size:64KB Program Memory Type:FLASH Number of I/O:37 ADC (Bit):12bit Voltage - Supply:2V~3.6V Voltage - Supply:2V~3.6V Applications:-
+Symbol
+STM32F103C8T6
+Designator
+U37
+Name
+STM32F103C8T6
+Device
+STM32F103C8T6
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge99
+
+*
+]
+[
+DESIGNATOR
+H1
+FOOTPRINT
+HOLE_M3_H12
+PARTTYPE
+HOLE_M3_H12
+DESCRIPTION
+Hole for fine adjustment.
+Component Kind
+Standard
+Symbol
+HOLE_M3_H12
+Add into BOM
+no
+Convert to PCB
+yes
+3D Model Title
+
+Description
+Hole for fine adjustment.
+Name
+Hole
+Designator
+H1
+Device
+HOLE_M3_H12
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge171
+
+*
+]
+[
+DESIGNATOR
+H2
+FOOTPRINT
+HOLE_M3_H12
+PARTTYPE
+HOLE_M3_H12
+DESCRIPTION
+Hole for fine adjustment.
+Component Kind
+Standard
+Symbol
+HOLE_M3_H12
+Add into BOM
+no
+Convert to PCB
+yes
+3D Model Title
+
+Description
+Hole for fine adjustment.
+Name
+Hole
+Designator
+H2
+Device
+HOLE_M3_H12
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge172
+
+*
+]
+[
+DESIGNATOR
+H3
+FOOTPRINT
+HOLE_M3_H12
+PARTTYPE
+HOLE_M3_H12
+DESCRIPTION
+Hole for fine adjustment.
+Component Kind
+Standard
+Symbol
+HOLE_M3_H12
+Add into BOM
+no
+Convert to PCB
+yes
+3D Model Title
+
+Description
+Hole for fine adjustment.
+Name
+Hole
+Designator
+H3
+Device
+HOLE_M3_H12
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge173
+
+*
+]
+[
+DESIGNATOR
+H4
+FOOTPRINT
+HOLE_M3_H12
+PARTTYPE
+HOLE_M3_H12
+DESCRIPTION
+Hole for fine adjustment.
+Component Kind
+Standard
+Symbol
+HOLE_M3_H12
+Add into BOM
+no
+Convert to PCB
+yes
+3D Model Title
+
+Description
+Hole for fine adjustment.
+Name
+Hole
+Designator
+H4
+Device
+HOLE_M3_H12
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge174
+
+*
+]
+[
+DESIGNATOR
+H5
+FOOTPRINT
+HOLE_M3_H12
+PARTTYPE
+HOLE_M3_H12
+DESCRIPTION
+Hole for fine adjustment.
+Component Kind
+Standard
+Symbol
+HOLE_M3_H12
+Add into BOM
+no
+Convert to PCB
+yes
+3D Model Title
+
+Description
+Hole for fine adjustment.
+Name
+Hole
+Designator
+H5
+Device
+HOLE_M3_H12
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge175
+
+*
+]
+[
+DESIGNATOR
+H6
+FOOTPRINT
+HOLE_M3_H12
+PARTTYPE
+HOLE_M3_H12
+DESCRIPTION
+Hole for fine adjustment.
+Component Kind
+Standard
+Symbol
+HOLE_M3_H12
+Add into BOM
+no
+Convert to PCB
+yes
+3D Model Title
+
+Description
+Hole for fine adjustment.
+Name
+Hole
+Designator
+H6
+Device
+HOLE_M3_H12
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge176
+
+*
+]
+[
+DESIGNATOR
+H7
+FOOTPRINT
+HOLE_M3_H12
+PARTTYPE
+HOLE_M3_H12
+DESCRIPTION
+Hole for fine adjustment.
+Component Kind
+Standard
+Symbol
+HOLE_M3_H12
+Add into BOM
+no
+Convert to PCB
+yes
+3D Model Title
+
+Description
+Hole for fine adjustment.
+Name
+Hole
+Designator
+H7
+Device
+HOLE_M3_H12
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge177
+
+*
+]
+[
+DESIGNATOR
+H8
+FOOTPRINT
+HOLE_M3_H12
+PARTTYPE
+HOLE_M3_H12
+DESCRIPTION
+Hole for fine adjustment.
+Component Kind
+Standard
+Symbol
+HOLE_M3_H12
+Add into BOM
+no
+Convert to PCB
+yes
+3D Model Title
+
+Description
+Hole for fine adjustment.
+Name
+Hole
+Designator
+H8
+Device
+HOLE_M3_H12
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge178
+
+*
+]
+[
+DESIGNATOR
+U38
+FOOTPRINT
+SOT-23-Switch
+PARTTYPE
+HAL403SO
+DESCRIPTION
+Type:- Voltage - Supply:- Voltage - Supply:-
+Component Kind
+Standard
+LCSC Part Name
+HAL403SO
+Supplier Part
+C42387470
+Manufacturer
+Hallwee(霍尔微电子)
+Manufacturer Part
+HAL403SO
+Supplier Footprint
+SOT-23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
+Type
+-
+Voltage - Supply
+-
+Description
+Type:- Voltage - Supply:- Voltage - Supply:-
+Symbol
+HAL403SO
+Designator
+U38
+Name
+HAL403SO
+Device
+HAL403SO
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge179
+
+*
+]
+[
+DESIGNATOR
+C1
+FOOTPRINT
+C0402
+PARTTYPE
+CL05B104KO5NNNC
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Component Kind
+Standard
+LCSC Part Name
+100nF ±10% 16V
+Supplier Part
+C1525
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL05B104KO5NNNC
+Supplier Footprint
+0402
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0402_L1.0-W0.5-H0.5
+Value
+100nF
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Symbol
+CL05B104KO5NNNC
+Designator
+C1
+Name
+100nF
+Device
+CL05B104KO5NNNC
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge48
+
+*
+]
+[
+DESIGNATOR
+C2
+FOOTPRINT
+C0402
+PARTTYPE
+CL05B104KO5NNNC
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Component Kind
+Standard
+LCSC Part Name
+100nF ±10% 16V
+Supplier Part
+C1525
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL05B104KO5NNNC
+Supplier Footprint
+0402
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0402_L1.0-W0.5-H0.5
+Value
+100nF
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Symbol
+CL05B104KO5NNNC
+Designator
+C2
+Name
+100nF
+Device
+CL05B104KO5NNNC
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge49
+
+*
+]
+[
+DESIGNATOR
+C4
+FOOTPRINT
+C0402
+PARTTYPE
+CL05B104KO5NNNC
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Component Kind
+Standard
+LCSC Part Name
+100nF ±10% 16V
+Supplier Part
+C1525
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL05B104KO5NNNC
+Supplier Footprint
+0402
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0402_L1.0-W0.5-H0.5
+Value
+100nF
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Symbol
+CL05B104KO5NNNC
+Designator
+C4
+Name
+100nF
+Device
+CL05B104KO5NNNC
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge55
+
+*
+]
+[
+DESIGNATOR
+C8
+FOOTPRINT
+C0402
+PARTTYPE
+CL05B103KB5NNNC
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Component Kind
+Standard
+LCSC Part Name
+10nF ±10% 50V
+Supplier Part
+C15195
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL05B103KB5NNNC
+Supplier Footprint
+0402
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0402_L1.0-W0.5-H0.5
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Value
+10nF
+Symbol
+CL05B103KB5NNNC
+Designator
+C8
+Name
+10nF
+Device
+CL05B103KB5NNNC
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge52
+
+*
+]
+[
+DESIGNATOR
+C7
+FOOTPRINT
+C0402
+PARTTYPE
+CL05A105KA5NQNC
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Component Kind
+Standard
+LCSC Part Name
+1uF ±10% 25V
+Supplier Part
+C52923
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL05A105KA5NQNC
+Supplier Footprint
+0402
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0402_L1.0-W0.5-H0.5
+Value
+1uF
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Symbol
+CL05A105KA5NQNC
+Designator
+C7
+Name
+1uF
+Device
+CL05A105KA5NQNC
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge53
+
+*
+]
+[
+DESIGNATOR
+C5
+FOOTPRINT
+C0402
+PARTTYPE
+CL05B104KO5NNNC
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Component Kind
+Standard
+LCSC Part Name
+100nF ±10% 16V
+Supplier Part
+C1525
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL05B104KO5NNNC
+Supplier Footprint
+0402
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0402_L1.0-W0.5-H0.5
+Value
+100nF
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Symbol
+CL05B104KO5NNNC
+Designator
+C5
+Name
+100nF
+Device
+CL05B104KO5NNNC
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge55_1
+
+*
+]
+[
+DESIGNATOR
+C10
+FOOTPRINT
+C0402
+PARTTYPE
+CL05A106MQ5NUNC
+DESCRIPTION
+Capacitance:10uF Tolerance:±20% Tolerance:±20% Voltage Rating:6.3V Temperature Coefficient:X5R
+Component Kind
+Standard
+LCSC Part Name
+10uF ±20% 6.3V
+Supplier Part
+C15525
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL05A106MQ5NUNC
+Supplier Footprint
+0402
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/CL05A106MQ5NUNC/16204.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0402_L1.0-W0.5-H0.5
+Value
+10uF
+Tolerance
+±20%
+Voltage Rating
+6.3V
+Temperature Coefficient
+X5R
+Description
+Capacitance:10uF Tolerance:±20% Tolerance:±20% Voltage Rating:6.3V Temperature Coefficient:X5R
+Symbol
+CL05A106MQ5NUNC
+Designator
+C10
+Name
+10uF
+Device
+CL05A106MQ5NUNC
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge188
+
+*
+]
+[
+DESIGNATOR
+U45
+FOOTPRINT
+CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
+PARTTYPE
+B8B-PH-SM4-TBT(LF)(SN)
+DESCRIPTION
+Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
+Component Kind
+Standard
+LCSC Part Name
+1x8P 间距:2mm 立贴 系列:PH
+Supplier Part
+C265441
+Manufacturer
+JST
+Manufacturer Part
+B8B-PH-SM4-TBT(LF)(SN)
+Supplier Footprint
+SMD,P=2mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/B8B-PH-SM4-TBT(LF)(SN)/255723.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
+Pins Structure
+1x8P
+Pitch
+2mm
+Mounting Type
+Surface Mount,Vertical
+Reference Series
+PH
+Number of Pins
+8P
+Number of Rows
+1
+Number of PINs Per Row
+8
+Row Spacing
+-
+Current Rating
+2A
+Contact Material
+Copper Alloy
+Contact Plating
+Tin
+Operating Temperature
+-25℃~+85℃
+Voltage Rating
+100V
+Plastic Material
+PA
+Flame Retardant Rating
+UL94V-0
+Supplementary Features
+Auxiliary Solder Pin
+Color
+Beige
+Z-Height of the Board
+6.6mm
+X-Length of Bottom Edge on Board (Spacing Line)
+19.95mm
+Y-Width of Bottom Edge on Board
+7mm
+Description
+Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
+Symbol
+B8B-PH-SM4-TBT(LF)(SN)
+Designator
+U45
+Name
+B8B-PH-SM4-TBT(LF)(SN)
+Device
+B8B-PH-SM4-TBT(LF)(SN)
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge165
+
+*
+]
+[
+DESIGNATOR
+TV1
+FOOTPRINT
+SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
+PARTTYPE
+SRV05-4-P-T7_C85364
+DESCRIPTION
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Component Kind
+Standard
+LCSC Part Name
+SRV05-4-P-T7
+Supplier Part
+C85364
+Manufacturer
+PROTEK
+Manufacturer Part
+SRV05-4-P-T7
+Supplier Footprint
+SOT-23-6
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
+Reverse Stand-Off Voltage (Vrwm)
+5V
+Clamping Voltage
+12V
+Peak Pulse Current (Ipp)
+1A@8/20us
+Voltage - Breakdown
+6V
+Type
+TVS
+Description
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Symbol
+SRV05-4-P-T7
+Designator
+TV1
+Name
+SRV05-4-P-T7
+Device
+SRV05-4-P-T7_C85364
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge169
+
+*
+]
+[
+DESIGNATOR
+TV2
+FOOTPRINT
+SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
+PARTTYPE
+SRV05-4-P-T7_C85364
+DESCRIPTION
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Component Kind
+Standard
+LCSC Part Name
+SRV05-4-P-T7
+Supplier Part
+C85364
+Manufacturer
+PROTEK
+Manufacturer Part
+SRV05-4-P-T7
+Supplier Footprint
+SOT-23-6
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
+Reverse Stand-Off Voltage (Vrwm)
+5V
+Clamping Voltage
+12V
+Peak Pulse Current (Ipp)
+1A@8/20us
+Voltage - Breakdown
+6V
+Type
+TVS
+Description
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Symbol
+SRV05-4-P-T7
+Designator
+TV2
+Name
+SRV05-4-P-T7
+Device
+SRV05-4-P-T7_C85364
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge170
+
+*
+]
+[
+DESIGNATOR
+LED_CPU
+FOOTPRINT
+LED0805-R-RD
+PARTTYPE
+KT-0805G
+DESCRIPTION
+Lamp Holder Type:- Illumination Color:Emerald Green Voltage - Forward(Vf):2.6V~3.1V Voltage - Forward(Vf):2.6V~3.1V Power(Watts):100mW Forward Current:5mA Wavelength - Dominant:513nm~528nm Wavelength - Dominant:513nm~528nm Peak Wavelength:525nm Diode Conf
+Component Kind
+Standard
+LCSC Part Name
+0805 翠绿 高亮
+Supplier Part
+C2297
+Manufacturer
+KENTO
+Manufacturer Part
+KT-0805G
+Supplier Footprint
+0805
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/KT-0805G/2670.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+LED0805-RD
+Lamp Holder Type
+-
+Illumination Color
+Emerald Green
+Voltage - Forward(Vf)
+2.6V~3.1V
+Power(Watts)
+100mW
+Forward Current
+5mA
+Wavelength - Dominant
+513nm~528nm
+Peak Wavelength
+525nm
+Diode Configuration
+-
+Lens Color
+-
+Color Temperature
+-
+Luminous Intensity
+430mcd
+Viewing Angle
+120°
+Mounting Style
+-
+Operating Temperature
+-40℃~+85℃
+Description
+Lamp Holder Type:- Illumination Color:Emerald Green Voltage - Forward(Vf):2.6V~3.1V Voltage - Forward(Vf):2.6V~3.1V Power(Watts):100mW Forward Current:5mA Wavelength - Dominant:513nm~528nm Wavelength - Dominant:513nm~528nm Peak Wavelength:525nm Diode Conf
+Symbol
+0805G (Green)
+Designator
+LED_CPU
+Name
+KT-0805G
+Device
+KT-0805G
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge168
+
+*
+]
+[
+DESIGNATOR
+LED_POW
+FOOTPRINT
+LED0805-R-RD
+PARTTYPE
+KT-0805Y
+DESCRIPTION
+Illumination Color:Yellow Voltage - Forward(Vf):1.8V~2.4V Voltage - Forward(Vf):1.8V~2.4V Power(Watts):40mW Forward Current:- Wavelength - Dominant:584nm~594nm Wavelength - Dominant:584nm~594nm Peak Wavelength:596nm Diode Configuration:- Lens Color:Water
+Component Kind
+Standard
+LCSC Part Name
+0805 黄灯 高亮
+Supplier Part
+C2296
+Manufacturer
+KENTO
+Manufacturer Part
+KT-0805Y
+Supplier Footprint
+0805
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/KT-0805Y/2669.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+LED0805-RD
+Illumination Color
+Yellow
+Voltage - Forward(Vf)
+1.8V~2.4V
+Power(Watts)
+40mW
+Forward Current
+-
+Wavelength - Dominant
+584nm~594nm
+Peak Wavelength
+596nm
+Diode Configuration
+-
+Lens Color
+Water Clear
+Color Temperature
+-
+Luminous Intensity
+175mcd
+Viewing Angle
+120°
+Mounting Style
+-
+Operating Temperature
+-40℃~+85℃
+Description
+Illumination Color:Yellow Voltage - Forward(Vf):1.8V~2.4V Voltage - Forward(Vf):1.8V~2.4V Power(Watts):40mW Forward Current:- Wavelength - Dominant:584nm~594nm Wavelength - Dominant:584nm~594nm Peak Wavelength:596nm Diode Configuration:- Lens Color:Water
+Symbol
+17-21SUYC/TR8
+Designator
+LED_POW
+Name
+KT-0805Y
+Device
+KT-0805Y
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge187
+
+*
+]
+[
+DESIGNATOR
+R19
+FOOTPRINT
+R0402
+PARTTYPE
+0402WGF1002TCE
+DESCRIPTION
+Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
+Component Kind
+Standard
+Supplier
+LCSC
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0402WGF1002TCE
+Supplier Part
+C25744
+Value
+10kΩ
+JLCPCB Part Class
+Basic Part
+LCSC Part Name
+10kΩ ±1% 62.5mW 厚膜电阻
+Supplier Footprint
+0402
+Datasheet
+https://item.szlcsc.com/datasheet/0402WGF1002TCE/26487.html
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0402_L1.0-W0.5-H0.4
+Type
+Thick Film Resistor
+Tolerance
+±1%
+Power(Watts)
+62.5mW
+Voltage-Supply(Max)
+50V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
+Symbol
+0402WGF2201TCE
+Designator
+R19
+Name
+10kΩ
+Device
+0402WGF1002TCE
+Unique ID
+gge167
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R5
+FOOTPRINT
+R0402
+PARTTYPE
+0402WGF1002TCE
+DESCRIPTION
+Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
+Component Kind
+Standard
+Supplier
+LCSC
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0402WGF1002TCE
+Supplier Part
+C25744
+Value
+10kΩ
+JLCPCB Part Class
+Basic Part
+LCSC Part Name
+10kΩ ±1% 62.5mW 厚膜电阻
+Supplier Footprint
+0402
+Datasheet
+https://item.szlcsc.com/datasheet/0402WGF1002TCE/26487.html
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0402_L1.0-W0.5-H0.4
+Type
+Thick Film Resistor
+Tolerance
+±1%
+Power(Watts)
+62.5mW
+Voltage-Supply(Max)
+50V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
+Symbol
+0402WGF2201TCE
+Designator
+R5
+Name
+10kΩ
+Device
+0402WGF1002TCE
+Unique ID
+gge167_1
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U46
+FOOTPRINT
+CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
+PARTTYPE
+B8B-PH-SM4-TBT(LF)(SN)
+DESCRIPTION
+Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
+Component Kind
+Standard
+LCSC Part Name
+1x8P 间距:2mm 立贴 系列:PH
+Supplier Part
+C265441
+Manufacturer
+JST
+Manufacturer Part
+B8B-PH-SM4-TBT(LF)(SN)
+Supplier Footprint
+SMD,P=2mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/B8B-PH-SM4-TBT(LF)(SN)/255723.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
+Pins Structure
+1x8P
+Pitch
+2mm
+Mounting Type
+Surface Mount,Vertical
+Reference Series
+PH
+Number of Pins
+8P
+Number of Rows
+1
+Number of PINs Per Row
+8
+Row Spacing
+-
+Current Rating
+2A
+Contact Material
+Copper Alloy
+Contact Plating
+Tin
+Operating Temperature
+-25℃~+85℃
+Voltage Rating
+100V
+Plastic Material
+PA
+Flame Retardant Rating
+UL94V-0
+Supplementary Features
+Auxiliary Solder Pin
+Color
+Beige
+Z-Height of the Board
+6.6mm
+X-Length of Bottom Edge on Board (Spacing Line)
+19.95mm
+Y-Width of Bottom Edge on Board
+7mm
+Description
+Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
+Symbol
+B8B-PH-SM4-TBT(LF)(SN)
+Designator
+U46
+Name
+B8B-PH-SM4-TBT(LF)(SN)
+Device
+B8B-PH-SM4-TBT(LF)(SN)
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge165_1
+
+*
+]
+[
+DESIGNATOR
+R1
+FOOTPRINT
+R0402
+PARTTYPE
+0402WGF1002TCE
+DESCRIPTION
+Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Component Kind
+Standard
+LCSC Part Name
+10kΩ ±1% 62.5mW 厚膜电阻
+Supplier Part
+C25744
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0402WGF1002TCE
+Supplier Footprint
+0402
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/0402WGF1002TCE/26487.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0402_L1.0-W0.5-H0.4
+Type
+Thick Film Resistor
+Value
+10kΩ
+Tolerance
+±1%
+Power(Watts)
+62.5mW
+Voltage-Supply(Max)
+50V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Symbol
+0402WGF1002TCE
+Designator
+R1
+Name
+10kΩ
+Device
+0402WGF1002TCE
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge166
+
+*
+]
+[
+DESIGNATOR
+TV5
+FOOTPRINT
+SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
+PARTTYPE
+SRV05-4-P-T7_C85364
+DESCRIPTION
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Component Kind
+Standard
+LCSC Part Name
+SRV05-4-P-T7
+Supplier Part
+C85364
+Manufacturer
+PROTEK
+Manufacturer Part
+SRV05-4-P-T7
+Supplier Footprint
+SOT-23-6
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
+Reverse Stand-Off Voltage (Vrwm)
+5V
+Clamping Voltage
+12V
+Peak Pulse Current (Ipp)
+1A@8/20us
+Voltage - Breakdown
+6V
+Type
+TVS
+Description
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Symbol
+SRV05-4-P-T7
+Designator
+TV5
+Name
+SRV05-4-P-T7
+Device
+SRV05-4-P-T7_C85364
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge169_1
+
+*
+]
+[
+DESIGNATOR
+TV3
+FOOTPRINT
+SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
+PARTTYPE
+SRV05-4-P-T7_C85364
+DESCRIPTION
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Component Kind
+Standard
+LCSC Part Name
+SRV05-4-P-T7
+Supplier Part
+C85364
+Manufacturer
+PROTEK
+Manufacturer Part
+SRV05-4-P-T7
+Supplier Footprint
+SOT-23-6
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
+Reverse Stand-Off Voltage (Vrwm)
+5V
+Clamping Voltage
+12V
+Peak Pulse Current (Ipp)
+1A@8/20us
+Voltage - Breakdown
+6V
+Type
+TVS
+Description
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Symbol
+SRV05-4-P-T7
+Designator
+TV3
+Name
+SRV05-4-P-T7
+Device
+SRV05-4-P-T7_C85364
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge170_1
+
+*
+]
+(
+$1I10936\$1N697 
+U1-1 74HC4052PW,118-2Y0 Passive 
+U2-3 HAL403SO-OUT Passive 
+)
+(
+$1I10936\$1N698 
+U1-2 74HC4052PW,118-2Y2 Passive 
+U3-3 HAL403SO-OUT Passive 
+)
+(
+$1N11051 
+U1-3 74HC4052PW,118-2Z Passive 
+U37-17 STM32F103C8T6-PA7 Passive 
+)
+(
+$1I10936\$1N699 
+U1-4 74HC4052PW,118-2Y3 Passive 
+U4-3 HAL403SO-OUT Passive 
+)
+(
+$1I10936\$1N703 
+U1-5 74HC4052PW,118-2Y1 Passive 
+U5-3 HAL403SO-OUT Passive 
+)
+(
+GND 
+U1-6 74HC4052PW,118-E# Passive 
+U1-7 74HC4052PW,118-VEE Passive 
+U1-8 74HC4052PW,118-GND Passive 
+U2-2 HAL403SO-GND Passive 
+U3-2 HAL403SO-GND Passive 
+U4-2 HAL403SO-GND Passive 
+U5-2 HAL403SO-GND Passive 
+U6-2 HAL403SO-GND Passive 
+U7-2 HAL403SO-GND Passive 
+U8-2 HAL403SO-GND Passive 
+U9-2 HAL403SO-GND Passive 
+U10-6 74HC4052PW,118-E# Passive 
+U10-7 74HC4052PW,118-VEE Passive 
+U10-8 74HC4052PW,118-GND Passive 
+U11-2 HAL403SO-GND Passive 
+U12-2 HAL403SO-GND Passive 
+U13-2 HAL403SO-GND Passive 
+U14-2 HAL403SO-GND Passive 
+U15-2 HAL403SO-GND Passive 
+U16-2 HAL403SO-GND Passive 
+U17-2 HAL403SO-GND Passive 
+U18-2 HAL403SO-GND Passive 
+U19-6 74HC4052PW,118-E# Passive 
+U19-7 74HC4052PW,118-VEE Passive 
+U19-8 74HC4052PW,118-GND Passive 
+U20-2 HAL403SO-GND Passive 
+U21-2 HAL403SO-GND Passive 
+U22-2 HAL403SO-GND Passive 
+U23-2 HAL403SO-GND Passive 
+U24-2 HAL403SO-GND Passive 
+U25-2 HAL403SO-GND Passive 
+U26-2 HAL403SO-GND Passive 
+U27-2 HAL403SO-GND Passive 
+U28-6 74HC4052PW,118-E# Passive 
+U28-7 74HC4052PW,118-VEE Passive 
+U28-8 74HC4052PW,118-GND Passive 
+U29-2 HAL403SO-GND Passive 
+U30-2 HAL403SO-GND Passive 
+U31-2 HAL403SO-GND Passive 
+U32-2 HAL403SO-GND Passive 
+U33-2 HAL403SO-GND Passive 
+U34-2 HAL403SO-GND Passive 
+U35-2 HAL403SO-GND Passive 
+U36-2 HAL403SO-GND Passive 
+R8-1 0402WGF1002TCE-1 Input   
+R7-1 0402WGF1002TCE-1 Input   
+R2-1 0402WGF1002TCE-1 Input   
+R3-1 0402WGF1002TCE-1 Input   
+SW3-1 TS-1088-AR02016-1 Passive 
+C36-2 CC0603KRX7R9BB104-2 Passive 
+D6-1 H5VND5BA-1 Passive 
+U37-8 STM32F103C8T6-VSSA Passive 
+U37-23 STM32F103C8T6-VSS_1 Passive 
+U37-35 STM32F103C8T6-VSS_2 Passive 
+U37-44 STM32F103C8T6-BOOT0 Passive 
+U37-47 STM32F103C8T6-VSS_3 Passive 
+U38-2 HAL403SO-GND Passive 
+C1-2 CL05B104KO5NNNC-2 Passive 
+C2-2 CL05B104KO5NNNC-2 Passive 
+C4-2 CL05B104KO5NNNC-2 Passive 
+C8-1 CL05B103KB5NNNC-1 Input   
+C7-1 CL05A105KA5NQNC-1 Passive 
+C5-2 CL05B104KO5NNNC-2 Passive 
+C10-1 CL05A106MQ5NUNC-1 Input   
+U45-1 B8B-PH-SM4-TBT(LF)(SN)-1 Passive 
+TV1-2 SRV05-4-P-T7_C85364-2 Input   
+TV2-2 SRV05-4-P-T7_C85364-2 Input   
+LED_CPU-2 KT-0805G-K Passive 
+LED_POW-2 KT-0805Y-- Passive 
+U46-1 B8B-PH-SM4-TBT(LF)(SN)-1 Passive 
+TV5-2 SRV05-4-P-T7_C85364-2 Input   
+TV3-2 SRV05-4-P-T7_C85364-2 Input   
+)
+(
+SEL1 
+U1-9 74HC4052PW,118-S1 Passive 
+U10-9 74HC4052PW,118-S1 Passive 
+U19-9 74HC4052PW,118-S1 Passive 
+U28-9 74HC4052PW,118-S1 Passive 
+U37-22 STM32F103C8T6-PB11 Passive 
+)
+(
+SEL0 
+U1-10 74HC4052PW,118-S0 Passive 
+U10-10 74HC4052PW,118-S0 Passive 
+U19-10 74HC4052PW,118-S0 Passive 
+U28-10 74HC4052PW,118-S0 Passive 
+U37-21 STM32F103C8T6-PB10 Passive 
+)
+(
+$1I10936\$1N711 
+U1-11 74HC4052PW,118-1Y3 Passive 
+U9-3 HAL403SO-OUT Passive 
+)
+(
+$1I10936\$1N710 
+U1-12 74HC4052PW,118-1Y0 Passive 
+U8-3 HAL403SO-OUT Passive 
+)
+(
+$1N11050 
+U1-13 74HC4052PW,118-1Z Passive 
+U37-16 STM32F103C8T6-PA6 Passive 
+)
+(
+$1I10936\$1N708 
+U1-14 74HC4052PW,118-1Y1 Passive 
+U7-3 HAL403SO-OUT Passive 
+)
+(
+$1I10936\$1N707 
+U1-15 74HC4052PW,118-1Y2 Passive 
+U6-3 HAL403SO-OUT Passive 
+)
+(
+VCC 
+U1-16 74HC4052PW,118-VCC Passive 
+U2-1 HAL403SO-VCC Passive 
+U3-1 HAL403SO-VCC Passive 
+U4-1 HAL403SO-VCC Passive 
+U5-1 HAL403SO-VCC Passive 
+U6-1 HAL403SO-VCC Passive 
+U7-1 HAL403SO-VCC Passive 
+U8-1 HAL403SO-VCC Passive 
+U9-1 HAL403SO-VCC Passive 
+U10-16 74HC4052PW,118-VCC Passive 
+U11-1 HAL403SO-VCC Passive 
+U12-1 HAL403SO-VCC Passive 
+U13-1 HAL403SO-VCC Passive 
+U14-1 HAL403SO-VCC Passive 
+U15-1 HAL403SO-VCC Passive 
+U16-1 HAL403SO-VCC Passive 
+U17-1 HAL403SO-VCC Passive 
+U18-1 HAL403SO-VCC Passive 
+U19-16 74HC4052PW,118-VCC Passive 
+U20-1 HAL403SO-VCC Passive 
+U21-1 HAL403SO-VCC Passive 
+U22-1 HAL403SO-VCC Passive 
+U23-1 HAL403SO-VCC Passive 
+U24-1 HAL403SO-VCC Passive 
+U25-1 HAL403SO-VCC Passive 
+U26-1 HAL403SO-VCC Passive 
+U27-1 HAL403SO-VCC Passive 
+U28-16 74HC4052PW,118-VCC Passive 
+U29-1 HAL403SO-VCC Passive 
+U30-1 HAL403SO-VCC Passive 
+U31-1 HAL403SO-VCC Passive 
+U32-1 HAL403SO-VCC Passive 
+U33-1 HAL403SO-VCC Passive 
+U34-1 HAL403SO-VCC Passive 
+U35-1 HAL403SO-VCC Passive 
+U36-1 HAL403SO-VCC Passive 
+R9-1 0402WGF1002TCE-1 Input   
+U37-1 STM32F103C8T6-VBAT Passive 
+U37-9 STM32F103C8T6-VDDA Passive 
+U37-24 STM32F103C8T6-VDD_1 Passive 
+U37-36 STM32F103C8T6-VDD_2 Passive 
+U37-48 STM32F103C8T6-VDD_3 Passive 
+U38-1 HAL403SO-VCC Passive 
+C1-1 CL05B104KO5NNNC-1 Passive 
+C2-1 CL05B104KO5NNNC-1 Passive 
+C4-1 CL05B104KO5NNNC-1 Passive 
+C8-2 CL05B103KB5NNNC-2 Input   
+C7-2 CL05A105KA5NQNC-2 Passive 
+C5-1 CL05B104KO5NNNC-1 Passive 
+C10-2 CL05A106MQ5NUNC-2 Input   
+U45-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
+TV1-5 SRV05-4-P-T7_C85364-5 Input   
+TV2-5 SRV05-4-P-T7_C85364-5 Input   
+R5-2 0402WGF1002TCE-2 Input   
+U46-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
+R1-2 0402WGF1002TCE-2 Input   
+TV5-5 SRV05-4-P-T7_C85364-5 Input   
+TV3-5 SRV05-4-P-T7_C85364-5 Input   
+)
+(
+$1I10958\$1N697 
+U10-1 74HC4052PW,118-2Y0 Passive 
+U11-3 HAL403SO-OUT Passive 
+)
+(
+$1I10958\$1N698 
+U10-2 74HC4052PW,118-2Y2 Passive 
+U12-3 HAL403SO-OUT Passive 
+)
+(
+$1N11053 
+U10-3 74HC4052PW,118-2Z Passive 
+U37-19 STM32F103C8T6-PB1 Passive 
+)
+(
+$1I10958\$1N699 
+U10-4 74HC4052PW,118-2Y3 Passive 
+U13-3 HAL403SO-OUT Passive 
+)
+(
+$1I10958\$1N703 
+U10-5 74HC4052PW,118-2Y1 Passive 
+U14-3 HAL403SO-OUT Passive 
+)
+(
+$1I10958\$1N711 
+U10-11 74HC4052PW,118-1Y3 Passive 
+U18-3 HAL403SO-OUT Passive 
+)
+(
+$1I10958\$1N710 
+U10-12 74HC4052PW,118-1Y0 Passive 
+U17-3 HAL403SO-OUT Passive 
+)
+(
+$1N11052 
+U10-13 74HC4052PW,118-1Z Passive 
+U37-18 STM32F103C8T6-PB0 Passive 
+)
+(
+$1I10958\$1N708 
+U10-14 74HC4052PW,118-1Y1 Passive 
+U16-3 HAL403SO-OUT Passive 
+)
+(
+$1I10958\$1N707 
+U10-15 74HC4052PW,118-1Y2 Passive 
+U15-3 HAL403SO-OUT Passive 
+)
+(
+$1I10980\$1N697 
+U19-1 74HC4052PW,118-2Y0 Passive 
+U20-3 HAL403SO-OUT Passive 
+)
+(
+$1I10980\$1N698 
+U19-2 74HC4052PW,118-2Y2 Passive 
+U21-3 HAL403SO-OUT Passive 
+)
+(
+$1N11049 
+U19-3 74HC4052PW,118-2Z Passive 
+U37-15 STM32F103C8T6-PA5 Passive 
+)
+(
+$1I10980\$1N699 
+U19-4 74HC4052PW,118-2Y3 Passive 
+U22-3 HAL403SO-OUT Passive 
+)
+(
+$1I10980\$1N703 
+U19-5 74HC4052PW,118-2Y1 Passive 
+U23-3 HAL403SO-OUT Passive 
+)
+(
+$1I10980\$1N711 
+U19-11 74HC4052PW,118-1Y3 Passive 
+U27-3 HAL403SO-OUT Passive 
+)
+(
+$1I10980\$1N710 
+U19-12 74HC4052PW,118-1Y0 Passive 
+U26-3 HAL403SO-OUT Passive 
+)
+(
+$1N11048 
+U19-13 74HC4052PW,118-1Z Passive 
+U37-14 STM32F103C8T6-PA4 Passive 
+)
+(
+$1I10980\$1N708 
+U19-14 74HC4052PW,118-1Y1 Passive 
+U25-3 HAL403SO-OUT Passive 
+)
+(
+$1I10980\$1N707 
+U19-15 74HC4052PW,118-1Y2 Passive 
+U24-3 HAL403SO-OUT Passive 
+)
+(
+$1I11002\$1N697 
+U28-1 74HC4052PW,118-2Y0 Passive 
+U29-3 HAL403SO-OUT Passive 
+)
+(
+$1I11002\$1N698 
+U28-2 74HC4052PW,118-2Y2 Passive 
+U30-3 HAL403SO-OUT Passive 
+)
+(
+$1N11047 
+U28-3 74HC4052PW,118-2Z Passive 
+U37-13 STM32F103C8T6-PA3 Passive 
+)
+(
+$1I11002\$1N699 
+U28-4 74HC4052PW,118-2Y3 Passive 
+U31-3 HAL403SO-OUT Passive 
+)
+(
+$1I11002\$1N703 
+U28-5 74HC4052PW,118-2Y1 Passive 
+U32-3 HAL403SO-OUT Passive 
+)
+(
+$1I11002\$1N711 
+U28-11 74HC4052PW,118-1Y3 Passive 
+U36-3 HAL403SO-OUT Passive 
+)
+(
+$1I11002\$1N710 
+U28-12 74HC4052PW,118-1Y0 Passive 
+U35-3 HAL403SO-OUT Passive 
+)
+(
+$1N11046 
+U28-13 74HC4052PW,118-1Z Passive 
+U37-12 STM32F103C8T6-PA2 Passive 
+)
+(
+$1I11002\$1N708 
+U28-14 74HC4052PW,118-1Y1 Passive 
+U34-3 HAL403SO-OUT Passive 
+)
+(
+$1I11002\$1N707 
+U28-15 74HC4052PW,118-1Y2 Passive 
+U33-3 HAL403SO-OUT Passive 
+)
+(
+$1N21732 
+R8-2 0402WGF1002TCE-2 Input   
+U37-41 STM32F103C8T6-PB5 Passive 
+)
+(
+$1N21730 
+R7-2 0402WGF1002TCE-2 Input   
+U37-43 STM32F103C8T6-PB7 Passive 
+)
+(
+$1N21733 
+R2-2 0402WGF1002TCE-2 Input   
+U37-46 STM32F103C8T6-PB9 Passive 
+)
+(
+$1N21734 
+R3-2 0402WGF1002TCE-2 Input   
+U37-45 STM32F103C8T6-PB8 Passive 
+)
+(
+$1N21731 
+R9-2 0402WGF1002TCE-2 Input   
+U37-42 STM32F103C8T6-PB6 Passive 
+)
+(
+RESET 
+SW3-2 TS-1088-AR02016-2 Passive 
+C36-1 CC0603KRX7R9BB104-1 Passive 
+D6-2 H5VND5BA-2 Passive 
+U37-7 STM32F103C8T6-NRST Passive 
+U45-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
+TV2-4 SRV05-4-P-T7_C85364-4 Input   
+U46-6 B8B-PH-SM4-TBT(LF)(SN)-6 Passive 
+TV5-6 SRV05-4-P-T7_C85364-6 Input   
+)
+(
+$1N11070 
+U37-11 STM32F103C8T6-PA1 Passive 
+U38-3 HAL403SO-OUT Passive 
+)
+(
+SPI_NSS 
+U37-25 STM32F103C8T6-PB12 Passive 
+U45-7 B8B-PH-SM4-TBT(LF)(SN)-7 Passive 
+TV1-3 SRV05-4-P-T7_C85364-3 Input   
+R1-1 0402WGF1002TCE-1 Input   
+)
+(
+SPI_SCK 
+U37-26 STM32F103C8T6-PB13 Passive 
+U45-6 B8B-PH-SM4-TBT(LF)(SN)-6 Passive 
+TV1-1 SRV05-4-P-T7_C85364-1 Input   
+)
+(
+SPI_MISO 
+U37-27 STM32F103C8T6-PB14 Passive 
+U45-5 B8B-PH-SM4-TBT(LF)(SN)-5 Passive 
+TV1-6 SRV05-4-P-T7_C85364-6 Input   
+)
+(
+SPI_MOSI 
+U37-28 STM32F103C8T6-PB15 Passive 
+U45-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive 
+TV1-4 SRV05-4-P-T7_C85364-4 Input   
+)
+(
+USART_TX 
+U37-30 STM32F103C8T6-PA9 Passive 
+TV2-6 SRV05-4-P-T7_C85364-6 Input   
+U46-7 B8B-PH-SM4-TBT(LF)(SN)-7 Passive 
+)
+(
+PA12 
+U37-33 STM32F103C8T6-PA12 Passive 
+R19-2 0402WGF1002TCE-2 Input   
+)
+(
+SWDIO 
+U37-34 STM32F103C8T6-PA13 Passive 
+TV2-3 SRV05-4-P-T7_C85364-3 Input   
+U46-5 B8B-PH-SM4-TBT(LF)(SN)-5 Passive 
+)
+(
+SWCLK 
+U37-37 STM32F103C8T6-PA14 Passive 
+TV2-1 SRV05-4-P-T7_C85364-1 Input   
+U46-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive 
+)
+(
+SWO 
+U37-39 STM32F103C8T6-PB3 Passive 
+U46-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
+TV3-6 SRV05-4-P-T7_C85364-6 Input   
+)
+(
+READY 
+U45-8 B8B-PH-SM4-TBT(LF)(SN)-8 Passive 
+TV5-4 SRV05-4-P-T7_C85364-4 Input   
+)
+(
+$1N21019 
+LED_CPU-1 KT-0805G-A Passive 
+R19-1 0402WGF1002TCE-1 Input   
+)
+(
+$1N21024 
+LED_POW-1 KT-0805Y-+ Passive 
+R5-1 0402WGF1002TCE-1 Input   
+)
+(
+USART_RX 
+U46-8 B8B-PH-SM4-TBT(LF)(SN)-8 Passive 
+TV3-4 SRV05-4-P-T7_C85364-4 Input   
+)

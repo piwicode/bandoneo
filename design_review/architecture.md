@@ -2,7 +2,7 @@
 
 ## Motherboard MCU Selection
 
-The motherboard uses a pre-certified STM32 wireless module to avoid custom antenna design and RF certification. The STM32WB5MMGH6TR is selected as interim: it covers BLE-MIDI, USB-MIDI, and DIN MIDI today, and shares the STM32 ecosystem with the STM32WBA6 that will replace it. Motherboard PCB redesign should be expected at migration.
+The motherboard uses a pre-certified STM32 wireless module to avoid custom antenna design and RF certification. The STM32WB5MMGH6TR is selected as interim: it covers BLE-MIDI and USB-MIDI today, and shares the STM32 ecosystem with the STM32WBA6 that will replace it. Motherboard PCB redesign should be expected at migration.
 
 STM32WBA5M is not eligible because it lacks USB.
 STM32WBA6M is not  release expected end of 2026.
@@ -54,5 +54,5 @@ Each board (motherboard and both wing boards) exposes a dedicated 8-wire program
 
 ## ESD Protection
 
-All external-facing ports (USB, DIN MIDI, internal bus, programming ports, pedal inputs) are protected with a TVS diode array placed close to the connector, before any MCU pin or active device.
+All external-facing ports (USB, internal bus, programming ports, pedal inputs) are protected with a TVS diode array placed close to the connector, before any MCU pin or active device.
 

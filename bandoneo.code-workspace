@@ -5,10 +5,6 @@
 			"path": "."
 		},
 		{
-			"name": "datasheets",
-			"path": "../datasheets"
-		},
-		{
 			"name": "STM32CubeWB",
 			"path": "../STM32CubeWB"
 		},

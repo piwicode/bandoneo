@@ -60,7 +60,7 @@ No air sensor or bellows simulation:
 **Connectivity & Output:**
 - **Bluetooth LE-MIDI:** Pair with phone or computer for on-the-go practice and composition.
 - **Bluetooth Audio:** Minimal latency audio synthesis to wireless headsets.
-- **DIN 5-pin MIDI:** Hardware compatibility (to be confirmed in design constraints).
+- **No DIN 5-pin MIDI:** Omitted (not used, adds complexity).
 - **No Audio Jack:** Omitted (not used, adds complexity).
 
 ## User Feedback & Status

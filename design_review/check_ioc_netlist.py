@@ -34,7 +34,7 @@ SKIP_SIGNALS = {"GPIO_Input", "GPIO_Output", "GPIO_Analog"}
 
 def parse_ioc(path: Path) -> dict[str, dict]:
     """Return {pin: {'signal': str, 'label': str|None}} for PA.., PB.., ..."""
-    pin_re = re.compile(r"^(P[A-H]\d{1,2})\.(Signal|GPIO_Label)=(.*)$")
+    pin_re = re.compile(r"^(P[A-H]\d{1,2}(?:-[A-Z0-9]+)?)\.(Signal|GPIO_Label)=(.*)$")
     pins: dict[str, dict] = defaultdict(dict)
     for line in path.read_text(encoding="utf-8", errors="replace").splitlines():
         m = pin_re.match(line.strip())

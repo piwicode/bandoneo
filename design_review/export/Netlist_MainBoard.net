@@ -1111,228 +1111,6 @@ gge199
 ]
 [
 DESIGNATOR
-SW3
-FOOTPRINT
-SW-SMD_L3.9-W3.0-P4.45
-PARTTYPE
-TS-1088-AR02016
-DESCRIPTION
-Circuit:SPST Actuator Style:Round Button Operating Force:160gf Mounting Style:Brick nogging Switch Length:4mm Switch Width:3mm Switch Height:2mm Strike Gundam:不带 Contact Current:50mA Voltage Rating (DC):12V Insulation Resistance:100MΩ Actuator/Cap Color:B
-Component Kind
-Standard
-LCSC Part Name
-4*3*2mm 立贴 轻触开关
-Supplier Part
-C720477
-Manufacturer
-XUNPU(讯普)
-Manufacturer Part
-TS-1088-AR02016
-Supplier Footprint
-SMD
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20200810/C720475_60D09DD6C54279ADDB2DC25100F1CC11.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-SW-SMD_L3.9-W2.9-H2.0-LS4.8
-Circuit
-SPST
-Actuator Style
-Round Button
-Operating Force
-160gf
-Mounting Style
-Brick nogging
-Switch Length
-4mm
-Switch Width
-3mm
-Switch Height
-2mm
-Strike Gundam
-不带
-Contact Current
-50mA
-Voltage Rating (DC)
-12V
-Insulation Resistance
-100MΩ
-Actuator/Cap Color
-Black
-Pin Style
-SMDSplicing
-Mechanical Life
-10万次
-Operating Temperature
--30℃~+80℃
-Description
-Circuit:SPST Actuator Style:Round Button Operating Force:160gf Mounting Style:Brick nogging Switch Length:4mm Switch Width:3mm Switch Height:2mm Strike Gundam:不带 Contact Current:50mA Voltage Rating (DC):12V Insulation Resistance:100MΩ Actuator/Cap Color:B
-Symbol
-TS-1088-AR02016
-Designator
-SW3
-Name
-TS-1088-AR02016
-Device
-TS-1088-AR02016
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge47_3
-
-*
-]
-[
-DESIGNATOR
-C36
-FOOTPRINT
-C0603
-PARTTYPE
-CC0603KRX7R9BB104
-DESCRIPTION
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
-Component Kind
-Standard
-LCSC Part Name
-100nF ±10% 50V
-Supplier Part
-C14663
-Manufacturer
-YAGEO(国巨)
-Manufacturer Part
-CC0603KRX7R9BB104
-Supplier Footprint
-0603
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20170116/1484561234239.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-C0603_L1.6-W0.8-H0.8
-Tolerance
-±10%
-Voltage Rated
-
-Temperature Coefficient
-
-Value
-100nF
-Description
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
-Symbol
-CL05B104KO5NNNC
-Designator
-C36
-Device
-CC0603KRX7R9BB104
-Unique ID
-gge195_3
-Reuse Block
-
-Group ID
-
-Channel ID
-
-
-*
-]
-[
-DESIGNATOR
-D6
-FOOTPRINT
-SOD-523_L1.2-W0.8-LS1.6-BI
-PARTTYPE
-H5VND5BA
-DESCRIPTION
-Polarity:Bidirectional Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:15V Peak Pulse Current (Ipp):8A@8/20us Peak Pulse Power Dissipation (Ppp):120W@8/20us Voltage - Breakdown:8V Reverse Leakage Current (Ir):200nA Number of Channels:1 Operating Temp
-Component Kind
-Standard
-LCSC Part Name
-双向ESD 5V截止 峰值浪涌电流：8A@8/20us
-Supplier Part
-C42413899
-Manufacturer
-R+O(宏嘉诚)
-Manufacturer Part
-H5VND5BA
-Supplier Footprint
-SOD-523
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://item.szlcsc.com/datasheet/H5VND5BA/44403780.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-SOD-523_L1.2-W0.8-LS1.6-BI
-Polarity
-Bidirectional
-Reverse Stand-Off Voltage (Vrwm)
-5V
-Clamping Voltage
-15V
-Peak Pulse Current (Ipp)
-8A@8/20us
-Peak Pulse Power Dissipation (Ppp)
-120W@8/20us
-Voltage - Breakdown
-8V
-Reverse Leakage Current (Ir)
-200nA
-Number of Channels
-1
-Operating Temperature
--55℃~+125℃
-level of protection
-IEC 61000-4-2；IEC 61000-4-5
-Type
-ESD
-Junction Capacitance
-20pF
-Description
-Polarity:Bidirectional Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:15V Peak Pulse Current (Ipp):8A@8/20us Peak Pulse Power Dissipation (Ppp):120W@8/20us Voltage - Breakdown:8V Reverse Leakage Current (Ir):200nA Number of Channels:1 Operating Temp
-Symbol
-H5VND5BA
-Designator
-D6
-Name
-H5VND5BA
-Device
-H5VND5BA
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge200
-
-*
-]
-[
-DESIGNATOR
 U1
 FOOTPRINT
 LCC-LGA-86_L11.0-W7.3_STM32WB5MMGH6TR
@@ -4737,6 +4515,66 @@ gge252
 ]
 [
 DESIGNATOR
+C39
+FOOTPRINT
+C0603
+PARTTYPE
+CC0603KRX7R9BB104
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Component Kind
+Standard
+Symbol
+CC0603KRX7R9BB104
+LCSC Part Name
+100nF ±10% 50V
+Supplier Part
+C14663
+Manufacturer
+YAGEO(国巨)
+Manufacturer Part
+CC0603KRX7R9BB104
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20170116/1484561234239.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0603_L1.6-W0.8-H0.8
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Designator
+C39
+Value
+100nF
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Device
+CC0603KRX7R9BB104
+Unique ID
+gge226_1
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
 R37
 FOOTPRINT
 R0603
@@ -4805,67 +4643,7 @@ gge251_1
 ]
 [
 DESIGNATOR
-C39
-FOOTPRINT
-C0603
-PARTTYPE
-CC0603KRX7R9BB104
-DESCRIPTION
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
-Component Kind
-Standard
-Symbol
-CC0603KRX7R9BB104
-LCSC Part Name
-100nF ±10% 50V
-Supplier Part
-C14663
-Manufacturer
-YAGEO(国巨)
-Manufacturer Part
-CC0603KRX7R9BB104
-Supplier Footprint
-0603
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20170116/1484561234239.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-C0603_L1.6-W0.8-H0.8
-Tolerance
-±10%
-Voltage Rated
-
-Temperature Coefficient
-
-Designator
-C39
-Value
-100nF
-Description
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
-Device
-CC0603KRX7R9BB104
-Unique ID
-gge226_1
-Reuse Block
-
-Group ID
-
-Channel ID
-
-
-*
-]
-[
-DESIGNATOR
-BOOT0
+FN3_BOOT0
 FOOTPRINT
 SW-SMD_L3.9-W3.0-P4.45
 PARTTYPE
@@ -4931,7 +4709,7 @@ Circuit:SPST Actuator Style:Round Button Operating Force:160gf Mounting Style:Br
 Symbol
 TS-1088-AR02016
 Designator
-BOOT0
+FN3_BOOT0
 Name
 TS-1088-AR02016
 Device
@@ -4944,6 +4722,144 @@ Channel ID
 
 Unique ID
 gge47_4
+
+*
+]
+[
+DESIGNATOR
+C40
+FOOTPRINT
+C0603
+PARTTYPE
+CC0603KRX7R9BB104
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Component Kind
+Standard
+LCSC Part Name
+100nF ±10% 50V
+Supplier Part
+C14663
+Manufacturer
+YAGEO(国巨)
+Manufacturer Part
+CC0603KRX7R9BB104
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20170116/1484561234239.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0603_L1.6-W0.8-H0.8
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Value
+100nF
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Symbol
+CL05B104KO5NNNC
+Designator
+C40
+Device
+CC0603KRX7R9BB104
+Unique ID
+gge195_4
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+D8
+FOOTPRINT
+SOD-523_L1.2-W0.8-LS1.6-BI
+PARTTYPE
+H5VND5BA
+DESCRIPTION
+Polarity:Bidirectional Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:15V Peak Pulse Current (Ipp):8A@8/20us Peak Pulse Power Dissipation (Ppp):120W@8/20us Voltage - Breakdown:8V Reverse Leakage Current (Ir):200nA Number of Channels:1 Operating Temp
+Component Kind
+Standard
+LCSC Part Name
+双向ESD 5V截止 峰值浪涌电流：8A@8/20us
+Supplier Part
+C42413899
+Manufacturer
+R+O(宏嘉诚)
+Manufacturer Part
+H5VND5BA
+Supplier Footprint
+SOD-523
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/H5VND5BA/44403780.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOD-523_L1.2-W0.8-LS1.6-BI
+Polarity
+Bidirectional
+Reverse Stand-Off Voltage (Vrwm)
+5V
+Clamping Voltage
+15V
+Peak Pulse Current (Ipp)
+8A@8/20us
+Peak Pulse Power Dissipation (Ppp)
+120W@8/20us
+Voltage - Breakdown
+8V
+Reverse Leakage Current (Ir)
+200nA
+Number of Channels
+1
+Operating Temperature
+-55℃~+125℃
+level of protection
+IEC 61000-4-2；IEC 61000-4-5
+Type
+ESD
+Junction Capacitance
+20pF
+Description
+Polarity:Bidirectional Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:15V Peak Pulse Current (Ipp):8A@8/20us Peak Pulse Power Dissipation (Ppp):120W@8/20us Voltage - Breakdown:8V Reverse Leakage Current (Ir):200nA Number of Channels:1 Operating Temp
+Symbol
+H5VND5BA
+Designator
+D8
+Name
+H5VND5BA
+Device
+H5VND5BA
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge257
 
 *
 ]
@@ -7061,9 +6977,6 @@ D2-1 H5VND5BA-1 Passive
 SW2-1 TS-1088-AR02016-1 Passive 
 C35-2 CC0603KRX7R9BB104-2 Passive 
 D5-1 H5VND5BA-1 Passive 
-SW3-1 TS-1088-AR02016-1 Passive 
-C36-2 CC0603KRX7R9BB104-2 Passive 
-D6-1 H5VND5BA-1 Passive 
 U1-5 STM32WB5MMGH6TR-VSS Passive 
 U1-16 STM32WB5MMGH6TR-VSS Passive 
 U1-31 STM32WB5MMGH6TR-VSS Passive 
@@ -7102,8 +7015,10 @@ D7-1 SMBJ13A_C10209-A Input
 LED_FN2-1 NCD0805R1_C84256-- Passive 
 LED_FN3-1 NCD0805R1_C84256-- Passive 
 C38-2 1206B475K500NT-2 Input   
-R37-2 0603WAF1002T5E-2 Input   
 C39-2 CC0603KRX7R9BB104-2 Input   
+R37-2 0603WAF1002T5E-2 Input   
+C40-2 CC0603KRX7R9BB104-2 Passive 
+D8-1 H5VND5BA-1 Passive 
 CN1-3 S3B-XH-SM4-TB(LF)(SN)_C5306495-3 Passive 
 R14-1 0603WAF1000T5E-1 Input   
 C18-2 GRM21BR61H106KE43L-2 Passive 
@@ -7152,13 +7067,6 @@ D5-2 H5VND5BA-2 Passive
 U1-83 STM32WB5MMGH6TR-PC8 Passive 
 )
 (
-SW_FN3 
-SW3-2 TS-1088-AR02016-2 Passive 
-C36-1 CC0603KRX7R9BB104-1 Passive 
-D6-2 H5VND5BA-2 Passive 
-U1-75 STM32WB5MMGH6TR-PD8 Passive 
-)
-(
 L_NRST 
 U1-1 STM32WB5MMGH6TR-PA2 Passive 
 LEFT_WING_PORT-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
@@ -7201,7 +7109,7 @@ C32-1 CC0603KRX7R9BB104-1 Passive
 TV12-5 SRV05-4-P-T7_C85364-5 Input   
 TV14-5 SRV05-4-P-T7_C85364-5 Input   
 C38-1 1206B475K500NT-1 Input   
-BOOT0-1 TS-1088-AR02016-1 Passive 
+FN3_BOOT0-1 TS-1088-AR02016-1 Passive 
 U55-5 TLV75533PDBVR-OUT Passive 
 C22-2 CL31B105KBHNNNE-2 Passive 
 C23-2 1206B475K500NT-2 Input   
@@ -7236,10 +7144,12 @@ R30-2 0603WAF3901T5E-2 Input
 TV14-1 SRV05-4-P-T7_C85364-1 Input   
 )
 (
-$1N39321 
+SW_FN3_BOOT0 
 U1-13 STM32WB5MMGH6TR-PH3-BOOT0 Passive 
 R37-1 0603WAF1002T5E-1 Input   
-BOOT0-2 TS-1088-AR02016-2 Passive 
+FN3_BOOT0-2 TS-1088-AR02016-2 Passive 
+C40-1 CC0603KRX7R9BB104-1 Passive 
+D8-2 H5VND5BA-2 Passive 
 )
 (
 POW_SCL 
@@ -7260,8 +7170,10 @@ LEFT_WING_PORT-5 B8B-PH-SM4-TBT(LF)(SN)-5 Passive
 TV4-6 SRV05-4-P-T7_C85364-6 Input   
 )
 (
-POW_SWO 
+PGM_SWO 
 U1-21 STM32WB5MMGH6TR-PB3 Passive 
+PROGRAM_PORT-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
+TV7-6 SRV05-4-P-T7_C85364-6 Input   
 )
 (
 LC_DATA 
@@ -7320,11 +7232,6 @@ R_SPI_SCK
 U1-34 STM32WB5MMGH6TR-PD1 Passive 
 RIGHT_WING_PORT-6 B8B-PH-SM4-TBT(LF)(SN)-6 Passive 
 TV2-1 SRV05-4-P-T7_C85364-1 Input   
-)
-(
-LED_FN3 
-U1-36 STM32WB5MMGH6TR-PC6 Passive 
-R36-1 0603WAF3300T5E-1 Input   
 )
 (
 PGM_USART_TX 
@@ -7428,6 +7335,10 @@ U1-74 STM32WB5MMGH6TR-PD9 Passive
 R27-1 0603WAF3300T5E-1 Input   
 )
 (
+SW_FN3 
+U1-75 STM32WB5MMGH6TR-PD8 Passive 
+)
+(
 POW_NCE 
 U1-76 STM32WB5MMGH6TR-PD15 Passive 
 U47-9 BQ25895RTWR-CE Input   
@@ -7439,11 +7350,6 @@ USB1-1 HC-TYPE-B-2.0-VS15-1.5A-15-VCC Passive
 D7-2 SMBJ13A_C10209-K Input   
 U47-1 BQ25895RTWR-VBUS Input   
 C14-1 CL31B105KBHNNNE-1 Passive 
-)
-(
-PGM_SWO 
-PROGRAM_PORT-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
-TV7-6 SRV05-4-P-T7_C85364-6 Input   
 )
 (
 POW_QON 
@@ -7528,6 +7434,10 @@ R35-2 0603WAF3300T5E-2 Input
 $1N39144 
 LED_FN3-2 NCD0805R1_C84256-+ Passive 
 R36-2 0603WAF3300T5E-2 Input   
+)
+(
+LED_FN3 
+R36-1 0603WAF3300T5E-1 Input   
 )
 (
 POW_TS 

@@ -22,6 +22,15 @@ Each wing board connects to the motherboard over a full-duplex SPI bus (motherbo
 
 Each transaction carries a wing identification code, a complete raw keyboard state frame, and a checksum. The wing ID encodes the keyboard layout (e.g. Rheinische Lage, Einheitsgriff), so the motherboard applies the correct key-to-note mapping at runtime — the same firmware supports multiple layouts without recompilation.
 
+Wing is slave, motherboard is master.
+Master initiate the cycle: 
+  1x 16 bits: request id = 0x0001
+Slave repsonds with:
+  1 x 16 bits: board identifier = 0x0001
+40 x 16 bits: sample value
+
+1Khz sampling rate requires 672 kbit/s < 4000 kbit/s max slave bus speed.
+
 ## System Power States
 
 The system has four power states:

@@ -4449,9 +4449,9 @@ R19
 FOOTPRINT
 R0402
 PARTTYPE
-0402WGF1002TCE
+0402WGF1001TCE
 DESCRIPTION
-Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
+Type:Thick Film Resistor Resistance:1kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
 Component Kind
 Standard
 Supplier
@@ -4459,19 +4459,19 @@ LCSC
 Manufacturer
 UNI-ROYAL(厚声)
 Manufacturer Part
-0402WGF1002TCE
+0402WGF1001TCE
 Supplier Part
-C25744
+C11702
 Value
-10kΩ
+1kΩ
 JLCPCB Part Class
 Basic Part
 LCSC Part Name
-10kΩ ±1% 62.5mW 厚膜电阻
+1kΩ ±1% 62.5mW 厚膜电阻
 Supplier Footprint
 0402
 Datasheet
-https://item.szlcsc.com/datasheet/0402WGF1002TCE/26487.html
+https://item.szlcsc.com/datasheet/0402WGF1001TCE/12256.html
 Add into BOM
 yes
 Convert to PCB
@@ -4491,23 +4491,17 @@ Temperature Coefficient
 Operating Temperature
 -55℃~+155℃
 Description
-Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
+Type:Thick Film Resistor Resistance:1kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
 Symbol
-0402WGF2201TCE
+0402WGF1001TCE
 Designator
 R19
 Name
-10kΩ
+1kΩ
 Device
-0402WGF1002TCE
+0402WGF1001TCE
 Unique ID
 gge167
-Reuse Block
-
-Group ID
-
-Channel ID
-
 
 *
 ]
@@ -4517,9 +4511,9 @@ R5
 FOOTPRINT
 R0402
 PARTTYPE
-0402WGF1002TCE
+0402WGF1001TCE
 DESCRIPTION
-Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
+Type:Thick Film Resistor Resistance:1kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
 Component Kind
 Standard
 Supplier
@@ -4527,19 +4521,19 @@ LCSC
 Manufacturer
 UNI-ROYAL(厚声)
 Manufacturer Part
-0402WGF1002TCE
+0402WGF1001TCE
 Supplier Part
-C25744
+C11702
 Value
-10kΩ
+1kΩ
 JLCPCB Part Class
 Basic Part
 LCSC Part Name
-10kΩ ±1% 62.5mW 厚膜电阻
+1kΩ ±1% 62.5mW 厚膜电阻
 Supplier Footprint
 0402
 Datasheet
-https://item.szlcsc.com/datasheet/0402WGF1002TCE/26487.html
+https://item.szlcsc.com/datasheet/0402WGF1001TCE/12256.html
 Add into BOM
 yes
 Convert to PCB
@@ -4559,29 +4553,23 @@ Temperature Coefficient
 Operating Temperature
 -55℃~+155℃
 Description
-Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
+Type:Thick Film Resistor Resistance:1kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
 Symbol
-0402WGF2201TCE
+0402WGF1001TCE
 Designator
 R5
 Name
-10kΩ
+1kΩ
 Device
-0402WGF1002TCE
+0402WGF1001TCE
 Unique ID
 gge167_1
-Reuse Block
-
-Group ID
-
-Channel ID
-
 
 *
 ]
 [
 DESIGNATOR
-U46
+PROGRAM_PORT
 FOOTPRINT
 CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
 PARTTYPE
@@ -4657,7 +4645,7 @@ Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Ser
 Symbol
 B8B-PH-SM4-TBT(LF)(SN)
 Designator
-U46
+PROGRAM_PORT
 Name
 B8B-PH-SM4-TBT(LF)(SN)
 Device
@@ -4869,6 +4857,72 @@ gge170_1
 
 *
 ]
+[
+DESIGNATOR
+L1
+FOOTPRINT
+L0603
+PARTTYPE
+GZ1608D601TF
+DESCRIPTION
+Impedance @ Frequency:600Ω@100MHz Tolerance:±25% Tolerance:±25% DC Resistance(DCR):450mΩ Current Rating:200mA Number of Circuits:1 Operating Temperature:-55℃~+125℃ Operating Temperature:-55℃~+125℃
+Component Kind
+Standard
+Symbol
+GZ1608D601TF
+Designator
+L1
+LCSC Part Name
+单路 0603磁珠 阻抗600Ω@100MHz
+Supplier Part
+C1002
+Manufacturer
+Sunlord(顺络)
+Manufacturer Part
+GZ1608D601TF
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/GZ1608D601TF/1354.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+L0603_L1.6-W0.8-H0.5_BEAD
+Impedance @ Frequency
+600Ω@100MHz
+Tolerance
+±25%
+DC Resistance(DCR)
+450mΩ
+Current Rating
+200mA
+Number of Circuits
+1
+Operating Temperature
+-55℃~+125℃
+Name
+GZ1608D601TF
+Description
+Impedance @ Frequency:600Ω@100MHz Tolerance:±25% Tolerance:±25% DC Resistance(DCR):450mΩ Current Rating:200mA Number of Circuits:1 Operating Temperature:-55℃~+125℃ Operating Temperature:-55℃~+125℃
+Device
+GZ1608D601TF
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge199
+
+*
+]
 (
 $1I10936\$1N697 
 U1-1 74HC4052PW,118-2Y0 Passive 
@@ -4965,7 +5019,7 @@ TV1-2 SRV05-4-P-T7_C85364-2 Input
 TV2-2 SRV05-4-P-T7_C85364-2 Input   
 LED_CPU-2 KT-0805G-K Passive 
 LED_POW-2 KT-0805Y-- Passive 
-U46-1 B8B-PH-SM4-TBT(LF)(SN)-1 Passive 
+PROGRAM_PORT-1 B8B-PH-SM4-TBT(LF)(SN)-1 Passive 
 TV5-2 SRV05-4-P-T7_C85364-2 Input   
 TV3-2 SRV05-4-P-T7_C85364-2 Input   
 )
@@ -5050,7 +5104,6 @@ U35-1 SC4011SO-N-TR-VCC Passive
 U36-1 SC4011SO-N-TR-VCC Passive 
 R6-1 0402WGF1002TCE-1 Input   
 U37-1 STM32F103C8T6-VBAT Passive 
-U37-9 STM32F103C8T6-VDDA Passive 
 U37-24 STM32F103C8T6-VDD_1 Passive 
 U37-36 STM32F103C8T6-VDD_2 Passive 
 U37-48 STM32F103C8T6-VDD_3 Passive 
@@ -5058,18 +5111,17 @@ U38-1 HAL403SO-VCC Passive
 C1-1 CL05B104KO5NNNC-1 Passive 
 C2-1 CL05B104KO5NNNC-1 Passive 
 C4-1 CL05B104KO5NNNC-1 Passive 
-C8-2 CL05B103KB5NNNC-2 Input   
-C7-2 CL05A105KA5NQNC-2 Passive 
 C5-1 CL05B104KO5NNNC-1 Passive 
 C10-2 CL05A106MQ5NUNC-2 Input   
 U45-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
 TV1-5 SRV05-4-P-T7_C85364-5 Input   
 TV2-5 SRV05-4-P-T7_C85364-5 Input   
-R5-2 0402WGF1002TCE-2 Input   
-U46-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
+R5-2 0402WGF1001TCE-2 Input   
+PROGRAM_PORT-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
 R7-2 0402WGF1002TCE-2 Input   
 TV5-5 SRV05-4-P-T7_C85364-5 Input   
 TV3-5 SRV05-4-P-T7_C85364-5 Input   
+L1-1 GZ1608D601TF-1 Passive 
 )
 (
 $1I10958\$1N697 
@@ -5222,40 +5274,47 @@ U28-15 74HC4052PW,118-1Y2 Passive
 U33-3 SC4011SO-N-TR-OUT Passive 
 )
 (
-$1N21732 
+ID0 
 R1-2 0402WGF1002TCE-2 Input   
 U37-41 STM32F103C8T6-PB5 Passive 
 )
 (
-$1N21730 
+ID2 
 R2-2 0402WGF1002TCE-2 Input   
 U37-43 STM32F103C8T6-PB7 Passive 
 )
 (
-$1N21733 
+ID4 
 R3-2 0402WGF1002TCE-2 Input   
 U37-46 STM32F103C8T6-PB9 Passive 
 )
 (
-$1N21734 
+ID3 
 R4-2 0402WGF1002TCE-2 Input   
 U37-45 STM32F103C8T6-PB8 Passive 
 )
 (
-$1N21731 
+ID1 
 R6-2 0402WGF1002TCE-2 Input   
 U37-42 STM32F103C8T6-PB6 Passive 
 )
 (
-RESET 
+PGM_RESET 
 SW3-2 TS-1088-AR02016-2 Passive 
 C36-1 CC0603KRX7R9BB104-1 Passive 
 D6-2 H5VND5BA-2 Passive 
 U37-7 STM32F103C8T6-NRST Passive 
 U45-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
 TV2-4 SRV05-4-P-T7_C85364-4 Input   
-U46-6 B8B-PH-SM4-TBT(LF)(SN)-6 Passive 
+PROGRAM_PORT-6 B8B-PH-SM4-TBT(LF)(SN)-6 Passive 
 TV5-6 SRV05-4-P-T7_C85364-6 Input   
+)
+(
+VDDA 
+U37-9 STM32F103C8T6-VDDA Passive 
+C8-2 CL05B103KB5NNNC-2 Input   
+C7-2 CL05A105KA5NQNC-2 Passive 
+L1-2 GZ1608D601TF-2 Passive 
 )
 (
 $1N11070 
@@ -5288,32 +5347,33 @@ U45-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive
 TV1-4 SRV05-4-P-T7_C85364-4 Input   
 )
 (
-USART_TX 
+PGM_USART_TX 
 U37-30 STM32F103C8T6-PA9 Passive 
 TV2-6 SRV05-4-P-T7_C85364-6 Input   
-U46-7 B8B-PH-SM4-TBT(LF)(SN)-7 Passive 
+PROGRAM_PORT-7 B8B-PH-SM4-TBT(LF)(SN)-7 Passive 
 )
 (
-PA12 
-U37-33 STM32F103C8T6-PA12 Passive 
-R19-2 0402WGF1002TCE-2 Input   
+PGM_USART_RX 
+U37-31 STM32F103C8T6-PA10 Passive 
+PROGRAM_PORT-8 B8B-PH-SM4-TBT(LF)(SN)-8 Passive 
+TV3-4 SRV05-4-P-T7_C85364-4 Input   
 )
 (
-SWDIO 
+PGM_SWDIO 
 U37-34 STM32F103C8T6-PA13 Passive 
 TV2-3 SRV05-4-P-T7_C85364-3 Input   
-U46-5 B8B-PH-SM4-TBT(LF)(SN)-5 Passive 
+PROGRAM_PORT-5 B8B-PH-SM4-TBT(LF)(SN)-5 Passive 
 )
 (
-SWCLK 
+PGM_SWCLK 
 U37-37 STM32F103C8T6-PA14 Passive 
 TV2-1 SRV05-4-P-T7_C85364-1 Input   
-U46-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive 
+PROGRAM_PORT-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive 
 )
 (
-SWO 
+PGM_SWO 
 U37-39 STM32F103C8T6-PB3 Passive 
-U46-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
+PROGRAM_PORT-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
 TV3-6 SRV05-4-P-T7_C85364-6 Input   
 )
 (
@@ -5324,15 +5384,14 @@ TV5-4 SRV05-4-P-T7_C85364-4 Input
 (
 $1N21019 
 LED_CPU-1 KT-0805G-A Passive 
-R19-1 0402WGF1002TCE-1 Input   
+R19-1 0402WGF1001TCE-1 Input   
 )
 (
 $1N21024 
 LED_POW-1 KT-0805Y-+ Passive 
-R5-1 0402WGF1002TCE-1 Input   
+R5-1 0402WGF1001TCE-1 Input   
 )
 (
-USART_RX 
-U46-8 B8B-PH-SM4-TBT(LF)(SN)-8 Passive 
-TV3-4 SRV05-4-P-T7_C85364-4 Input   
+PA12 
+R19-2 0402WGF1001TCE-2 Input   
 )

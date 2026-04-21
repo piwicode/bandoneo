@@ -59,6 +59,25 @@ state.
 
 The main board module includes filtering capacitors.
 
+## Wing MCU Decoupling (STM32F103C8T6, LQFP48)
+
+Per datasheet Figure 14 (Power supply scheme) and AN2586, the LQFP48
+package needs:
+
+- **4 × 100 nF**, one per VDD-type pin: VBAT (1), VDD_1 (24),
+  VDD_2 (36), VDD_3 (48). The "5 × 100 nF" figure in the datasheet
+  refers to LQFP100, which has an extra VDD pin.
+- **1 × 4.7 µF bulk** on VDD_3 (10 µF used, exceeds spec).
+- **1 µF + 10 nF** on VDDA (pin 9), referenced to VSSA (pin 8).
+
+Wing design matches this: C1/C2/C4/C5 = 4 × 100 nF, C10 = 10 µF bulk,
+C7 = 1 µF and C8 = 10 nF on VDDA. Placement rule: each 100 nF within
+a few mm of its VDD pin; VDDA pair adjacent to pins 8/9.
+
+A ferrite bead between VDD and VDDA is an AN2586 enhancement for ADC
+noise (not a datasheet requirement). Justified here because PA1 reads
+the HAL403 linear Hall and the mux outputs are sampled via ADC.
+
 ## Expression pedal: 
 
 M-Audio EX-P and Roland EV-5 have wiper on the TRS tip.

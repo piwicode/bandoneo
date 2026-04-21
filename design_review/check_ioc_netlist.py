@@ -16,8 +16,22 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-MCU_REFDES = "U1"
-MCU_PART = "STM32WB5MMGH6TR"
+BOARDS = [
+    {
+        "name": "MainBoard",
+        "ioc": "code/mother-wb5mm/mother-wb5mm.ioc",
+        "netlist": "design_review/export/Netlist_MainBoard.net",
+        "refdes": "U1",
+        "part": "STM32WB5MMGH6TR",
+    },
+    {
+        "name": "WingLeft",
+        "ioc": "code/wing-f103/wing-f103/wing-f103.ioc",
+        "netlist": "design_review/export/Netlist_WingLeft.net",
+        "refdes": "U37",
+        "part": "STM32F103C8T6",
+    },
+]
 
 # Signals whose net name is conventional and does not need a GPIO_Label.
 SIGNAL_NET_HINTS = {
@@ -45,8 +59,8 @@ def parse_ioc(path: Path) -> dict[str, dict]:
     return pins
 
 
-def parse_netlist(path: Path) -> dict[str, str]:
-    """Return {mcu_pin_name: net_name} for pins of MCU_REFDES/MCU_PART."""
+def parse_netlist(path: Path, refdes: str, part: str) -> dict[str, str]:
+    """Return {mcu_pin_name: net_name} for pins of refdes/part."""
     text = path.read_text(encoding="utf-8", errors="replace")
     # Net blocks look like:
     # (
@@ -56,7 +70,7 @@ def parse_netlist(path: Path) -> dict[str, str]:
     # )
     net_block_re = re.compile(r"\(\s*\n(.*?)\n\)", re.DOTALL)
     pin_line_re = re.compile(
-        rf"^{re.escape(MCU_REFDES)}-(\d+)\s+{re.escape(MCU_PART)}-(\S+)\s",
+        rf"^{re.escape(refdes)}-(\d+)\s+{re.escape(part)}-(\S+)\s",
     )
     mapping: dict[str, str] = {}
     for block in net_block_re.findall(text):

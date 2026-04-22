@@ -194,6 +194,19 @@ Used as reference for WB5MMG internals, **not placed on the BOM**. Key facts tha
 - **Externals**: 100 nF on VDD, 100 nF on REFIN.
 - **Role in this design**: digitizes the Wheatstone bridge of the push/pull loadcell that replaces the acoustic bellows. Differential AINP/AINN across the bridge, PGA ×128. 40 or 640 Hz output is ample for bellows-like dynamics and decoupled from the 1 kHz key-scan loop on the wings — see [hardware.md](hardware.md).
 
+### SN74LVC125A-Q1 — quad tri-state buffer (wing power-domain isolation)
+[datasheets/sn74lvc125a-q1.pdf](datasheets/sn74lvc125a-q1.pdf) (or TI SN74LVC125A-Q1)
+
+- **Package on BOM**: TSSOP-14 (PW), AEC-Q100 Grade 1 (−40 … +125 °C). Q1 variant is an automotive-qualified die-identical version of SN74LVC125A; plain SN74LVC125APWR would be functionally equivalent.
+- **Pinout**: 1 `1/OE`, 2 `1A`, 3 `1Y`, 4 `2/OE`, 5 `2A`, 6 `2Y`, 7 `GND`, 8 `3Y`, 9 `3A`, 10 `3/OE`, 11 `4Y`, 12 `4A`, 13 `4/OE`, 14 `VCC`.
+- **Supply**: VCC 1.65–3.6 V; I<sub>Q</sub> ≤ 20 µA; I<sub>OL</sub> / I<sub>OH</sub> = 24 mA.
+- **Propagation delay**: 2.5 ns typ @ 3.3 V / 50 pF — negligible against MHz-range SPI.
+- **Ioff (partial-power-down)**: **≤10 µA leakage on every I/O when VCC = 0**, for input voltages up to 3.6 V. This is the key feature for this design: powering the buffer from the gated wing rail makes every wing-facing signal self-isolating when the wing is shut off. No firmware sequencing required to prevent back-feed.
+- **Overvoltage-tolerant inputs**: A and OE pins accept 0–5.5 V regardless of VCC — no forward-biased clamp back into VCC when driven above the rail.
+- **OE polarity**: active-low. Tying `OE#` to GND keeps the channel always enabled; driving it high forces the output to high-Z.
+- **Externals**: 100 nF from VCC to GND at pin 14, close to the package. No other externals.
+- **Use in this design**: U61 (WingLeft) and U63 (WingRight) isolate the four SPI bus signals (SCK, NSS, MOSI main→wing; MISO wing→main) between the main MCU domain and the gated wing rail (`L_VCC` / `R_VCC`, downstream of per-wing TPS2553). NRST (open-drain from main, BAT54C to 3.3 V) and READY (passive-input with internal pulldown on main, active-high drive from wing) bypass the buffer — see [hardware.md](hardware.md) "Wing Power Gating and Back-feed Isolation".
+
 ### 74HC4052PW (Nexperia, ,118) — analog mux (key scanning)
 [datasheets/74HC4052.pdf](datasheets/74HC4052.pdf)
 
@@ -220,6 +233,7 @@ Used as reference for WB5MMG internals, **not placed on the BOM**. Key facts tha
 | Battery OVP/OCP | BQ25895 internal | 104 % VREG, 9 A system |
 | 3.3 V rail short | TLV755P foldback + thermal | Regulated down to ~1 V out |
 | USB sourcing short (OTG / 5 V port) | TPS2553 current-limit + /FAULT | Constant-current mode, not latch |
+| Back-feed into an unpowered wing via SPI signals | SN74LVC125A-Q1 (U61, U63) powered from gated wing rail | Ioff drives all I/O to high-Z when wing VCC = 0 |
 
 ## Open Items for Design Review
 

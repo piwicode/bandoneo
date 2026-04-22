@@ -3611,142 +3611,6 @@ gge229
 ]
 [
 DESIGNATOR
-R13
-FOOTPRINT
-R0603
-PARTTYPE
-0603WAF100JT5E
-DESCRIPTION
-Type:Thick Film Resistor Resistance:10Ω Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±400ppm/℃ Temperature Coefficient:±400ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
-Component Kind
-Standard
-Supplier
-LCSC
-Manufacturer
-UNI-ROYAL(厚声)
-Manufacturer Part
-0603WAF100JT5E
-Supplier Part
-C22859
-Value
-10Ω
-JLCPCB Part Class
-Basic Part
-LCSC Part Name
-10Ω ±1% 100mW 厚膜电阻
-Supplier Footprint
-0603
-Datasheet
-https://item.szlcsc.com/datasheet/0603WAF100JT5E/23586.html
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-R0603
-Type
-Thick Film Resistor
-Tolerance
-±1%
-Power(Watts)
-100mW
-Voltage-Supply(Max)
-75V
-Temperature Coefficient
-±400ppm/℃
-Operating Temperature
--55℃~+155℃
-Description
-Type:Thick Film Resistor Resistance:10Ω Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±400ppm/℃ Temperature Coefficient:±400ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
-Symbol
-0603WAF100JT5E
-Designator
-R13
-Name
-10Ω
-Device
-0603WAF100JT5E
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge230
-
-*
-]
-[
-DESIGNATOR
-R14
-FOOTPRINT
-R0603
-PARTTYPE
-0603WAF1000T5E
-DESCRIPTION
-Type:Thick Film Resistors Resistance: Tolerance:±1% Tolerance:±1% Power(Watts): Overload Voltage (Max): Temperature Coefficient:±200ppm/℃ Temperature Coefficient:±200ppm/℃ Operating Temperature Range:-55℃~+155℃ Operating Temperature Range:-55℃~+155℃
-Component Kind
-Standard
-LCSC Part Name
-100Ω ±1% 100mW 厚膜电阻
-Supplier Part
-C22775
-Manufacturer
-UNI-ROYAL(厚声)
-Manufacturer Part
-0603WAF1000T5E
-Supplier Footprint
-0603
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20200306/C422600_1E6D84923E4A46A82E41ADD87F860B5C.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-R0603
-Type
-Thick Film Resistors
-Value
-100Ω
-Tolerance
-±1%
-Power(Watts)
-
-Overload Voltage (Max)
-
-Temperature Coefficient
-±200ppm/℃
-Operating Temperature Range
--55℃~+155℃
-Description
-Type:Thick Film Resistors Resistance: Tolerance:±1% Tolerance:±1% Power(Watts): Overload Voltage (Max): Temperature Coefficient:±200ppm/℃ Temperature Coefficient:±200ppm/℃ Operating Temperature Range:-55℃~+155℃ Operating Temperature Range:-55℃~+155℃
-Symbol
-0603WAF1000T5E
-Designator
-R14
-Name
-100Ω
-Device
-0603WAF1000T5E
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge231
-
-*
-]
-[
-DESIGNATOR
 R15
 FOOTPRINT
 R0603
@@ -3815,7 +3679,7 @@ gge232
 ]
 [
 DESIGNATOR
-LED_CHARGE1
+LED_CHARGE
 FOOTPRINT
 LED0805-R-RD
 PARTTYPE
@@ -3877,7 +3741,7 @@ Illumination Color:Yellow Voltage - Forward(Vf):1.8V~2.4V Voltage - Forward(Vf):
 Symbol
 17-21SUYC/TR8
 Designator
-LED_CHARGE1
+LED_CHARGE
 Name
 KT-0805Y
 Device
@@ -4418,74 +4282,6 @@ Channel ID
 
 Unique ID
 gge240
-
-*
-]
-[
-DESIGNATOR
-R9
-FOOTPRINT
-R0603
-PARTTYPE
-0603WAF4701T5E
-DESCRIPTION
-Type:Thick Film Resistor Resistance:4.7kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
-Component Kind
-Standard
-LCSC Part Name
-4.7kΩ ±1% 100mW 厚膜电阻
-Supplier Part
-C23162
-Manufacturer
-UNI-ROYAL(厚声)
-Manufacturer Part
-0603WAF4701T5E
-Supplier Footprint
-0603
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://item.szlcsc.com/datasheet/0603WAF4701T5E/23889.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-R0603
-Type
-Thick Film Resistor
-Value
-4.7kΩ
-Tolerance
-±1%
-Power(Watts)
-100mW
-Voltage-Supply(Max)
-75V
-Temperature Coefficient
-±100ppm/℃
-Operating Temperature
--55℃~+155℃
-Description
-Type:Thick Film Resistor Resistance:4.7kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
-Symbol
-0603WAF4701T5E
-Designator
-R9
-Name
-4.7kΩ
-Device
-0603WAF4701T5E
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge241
 
 *
 ]
@@ -5473,13 +5269,81 @@ gge234_1
 ]
 [
 DESIGNATOR
+R42
+FOOTPRINT
+R0402
+PARTTYPE
+0402WGF1001TCE
+DESCRIPTION
+Type:Thick Film Resistor Resistance:1kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
+Component Kind
+Standard
+LCSC Part Name
+1kΩ ±1% 62.5mW 厚膜电阻
+Supplier Footprint
+0402
+Datasheet
+https://item.szlcsc.com/datasheet/0402WGF1001TCE/12256.html
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0402_L1.0-W0.5-H0.4
+Type
+Thick Film Resistor
+Tolerance
+±1%
+Power(Watts)
+62.5mW
+Voltage-Supply(Max)
+50V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Supplier
+LCSC
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0402WGF1001TCE
+Supplier Part
+C11702
+Value
+1kΩ
+JLCPCB Part Class
+Basic Part
+Description
+Type:Thick Film Resistor Resistance:1kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
+Symbol
+0402WGF1001TCE
+Designator
+R42
+Name
+1kΩ
+Device
+0402WGF1001TCE
+Unique ID
+gge167
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
 R39
 FOOTPRINT
 R0603
 PARTTYPE
-0603WAF1200T5E
+0603WAF8202T5E
 DESCRIPTION
-Type:Thick Film Resistor Resistance:120Ω Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Type:Thick Film Resistor Resistance:82kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
 Component Kind
 Standard
 Supplier
@@ -5487,19 +5351,19 @@ LCSC
 Manufacturer
 UNI-ROYAL(厚声)
 Manufacturer Part
-0603WAF1200T5E
+0603WAF8202T5E
 Supplier Part
-C22787
+C23254
 Value
-120Ω
+82kΩ
 JLCPCB Part Class
 Basic Part
 LCSC Part Name
-120Ω ±1% 100mW 厚膜电阻
+82kΩ ±1% 100mW 厚膜电阻
 Supplier Footprint
 0603
 Datasheet
-https://item.szlcsc.com/datasheet/0603WAF1200T5E/23514.html
+https://item.szlcsc.com/datasheet/0603WAF8202T5E/23981.html
 Add into BOM
 yes
 Convert to PCB
@@ -5519,23 +5383,23 @@ Temperature Coefficient
 Operating Temperature
 -55℃~+155℃
 Description
-Type:Thick Film Resistor Resistance:120Ω Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Type:Thick Film Resistor Resistance:82kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
 Symbol
-0603WAF1200T5E
+0603WAF8202T5E
 Designator
 R39
 Name
-120Ω
+82kΩ
 Device
-0603WAF1200T5E
+0603WAF8202T5E
+Unique ID
+gge258
 Reuse Block
 
 Group ID
 
 Channel ID
 
-Unique ID
-gge258
 
 *
 ]
@@ -6059,9 +5923,9 @@ R38
 FOOTPRINT
 R0603
 PARTTYPE
-0603WAF1200T5E
+0603WAF8202T5E
 DESCRIPTION
-Type:Thick Film Resistor Resistance:120Ω Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Type:Thick Film Resistor Resistance:82kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
 Component Kind
 Standard
 Supplier
@@ -6069,19 +5933,19 @@ LCSC
 Manufacturer
 UNI-ROYAL(厚声)
 Manufacturer Part
-0603WAF1200T5E
+0603WAF8202T5E
 Supplier Part
-C22787
+C23254
 Value
-120Ω
+82kΩ
 JLCPCB Part Class
 Basic Part
 LCSC Part Name
-120Ω ±1% 100mW 厚膜电阻
+82kΩ ±1% 100mW 厚膜电阻
 Supplier Footprint
 0603
 Datasheet
-https://item.szlcsc.com/datasheet/0603WAF1200T5E/23514.html
+https://item.szlcsc.com/datasheet/0603WAF8202T5E/23981.html
 Add into BOM
 yes
 Convert to PCB
@@ -6101,23 +5965,23 @@ Temperature Coefficient
 Operating Temperature
 -55℃~+155℃
 Description
-Type:Thick Film Resistor Resistance:120Ω Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Type:Thick Film Resistor Resistance:82kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
 Symbol
-0603WAF1200T5E
+0603WAF8202T5E
 Designator
 R38
 Name
-120Ω
+82kΩ
 Device
-0603WAF1200T5E
+0603WAF8202T5E
+Unique ID
+gge260
 Reuse Block
 
 Group ID
 
 Channel ID
 
-Unique ID
-gge260
 
 *
 ]
@@ -7229,6 +7093,608 @@ gge253
 
 *
 ]
+[
+DESIGNATOR
+C41
+FOOTPRINT
+C1206
+PARTTYPE
+CL31B105KBHNNNE
+DESCRIPTION
+Capacitance:1uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Component Kind
+Standard
+LCSC Part Name
+1uF ±10% 50V
+Supplier Part
+C1848
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL31B105KBHNNNE
+Supplier Footprint
+1206
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/CL31B105KBHNNNE/2200.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C1206_L3.2-W1.6-H1.3
+Value
+1uF
+Tolerance
+±10%
+Voltage Rating
+50V
+Temperature Coefficient
+X7R
+Description
+Capacitance:1uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Symbol
+CL31B105KBHNNNE
+Designator
+C41
+Name
+1uF
+Device
+CL31B105KBHNNNE
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge240_1
+
+*
+]
+[
+DESIGNATOR
+C42
+FOOTPRINT
+C1206
+PARTTYPE
+CL31B105KBHNNNE
+DESCRIPTION
+Capacitance:1uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Component Kind
+Standard
+LCSC Part Name
+1uF ±10% 50V
+Supplier Part
+C1848
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL31B105KBHNNNE
+Supplier Footprint
+1206
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/CL31B105KBHNNNE/2200.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C1206_L3.2-W1.6-H1.3
+Value
+1uF
+Tolerance
+±10%
+Voltage Rating
+50V
+Temperature Coefficient
+X7R
+Description
+Capacitance:1uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Symbol
+CL31B105KBHNNNE
+Designator
+C42
+Name
+1uF
+Device
+CL31B105KBHNNNE
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge240_2
+
+*
+]
+[
+DESIGNATOR
+R40
+FOOTPRINT
+R0603
+PARTTYPE
+0603WAF1003T5E
+DESCRIPTION
+Type:Thick Film Resistor Resistance:100kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Component Kind
+Standard
+LCSC Part Name
+100kΩ ±1% 100mW 厚膜电阻
+Supplier Part
+C25803
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0603WAF1003T5E
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/0603WAF1003T5E/26546.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0603
+Type
+Thick Film Resistor
+Value
+100kΩ
+Tolerance
+±1%
+Power(Watts)
+100mW
+Voltage-Supply(Max)
+75V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+Type:Thick Film Resistor Resistance:100kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Symbol
+0603WAF1003T5E
+Designator
+R40
+Name
+100kΩ
+Device
+0603WAF1003T5E
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge262
+
+*
+]
+[
+DESIGNATOR
+R41
+FOOTPRINT
+R0603
+PARTTYPE
+0603WAF1003T5E
+DESCRIPTION
+Type:Thick Film Resistor Resistance:100kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Component Kind
+Standard
+LCSC Part Name
+100kΩ ±1% 100mW 厚膜电阻
+Supplier Part
+C25803
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0603WAF1003T5E
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/0603WAF1003T5E/26546.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0603
+Type
+Thick Film Resistor
+Value
+100kΩ
+Tolerance
+±1%
+Power(Watts)
+100mW
+Voltage-Supply(Max)
+75V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+Type:Thick Film Resistor Resistance:100kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Symbol
+0603WAF1003T5E
+Designator
+R41
+Name
+100kΩ
+Device
+0603WAF1003T5E
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge263
+
+*
+]
+[
+DESIGNATOR
+U61
+FOOTPRINT
+TSSOP-14_L5.0-W4.4-P0.65-LS6.4-BL
+PARTTYPE
+SN74LVC125AQPWRQ1
+DESCRIPTION
+Input type:- output type:Tri-State Voltage - Supply:1.65V~3.6V Voltage - Supply:1.65V~3.6V Number of Elements:4 Number of Bits per Element:1 Channel Type:- Current - Output Low(IOL):24mA Current - Output High(IOH):24mA Logic Family:74LVC Operating Tempera
+Component Kind
+Standard
+LCSC Part Name
+三态输出，四路总线缓冲门
+Supplier Part
+C134144
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74LVC125AQPWRQ1
+Supplier Footprint
+TSSOP-14
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://www.ti.com/cn/lit/gpn/sn74lvc125a-q1
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+TSSOP-14_L5.0-W4.4-H1.0-LS6.4-P0.65
+Input type
+-
+output type
+Tri-State
+Voltage - Supply
+1.65V~3.6V
+Number of Elements
+4
+Number of Bits per Element
+1
+Channel Type
+-
+Current - Output Low(IOL)
+24mA
+Current - Output High(IOH)
+24mA
+Logic Family
+74LVC
+Operating Temperature
+-40℃~+125℃
+Quiescent Current
+20uA
+Propagation Delay
+2.5ns@3.3V,50pF
+Description
+Input type:- output type:Tri-State Voltage - Supply:1.65V~3.6V Voltage - Supply:1.65V~3.6V Number of Elements:4 Number of Bits per Element:1 Channel Type:- Current - Output Low(IOL):24mA Current - Output High(IOH):24mA Logic Family:74LVC Operating Tempera
+Symbol
+SN74LVC125AQPWRQ1
+Designator
+U61
+Name
+SN74LVC125AQPWRQ1
+Device
+SN74LVC125AQPWRQ1
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge264
+
+*
+]
+[
+DESIGNATOR
+U63
+FOOTPRINT
+TSSOP-14_L5.0-W4.4-P0.65-LS6.4-BL
+PARTTYPE
+SN74LVC125AQPWRQ1
+DESCRIPTION
+Input type:- output type:Tri-State Voltage - Supply:1.65V~3.6V Voltage - Supply:1.65V~3.6V Number of Elements:4 Number of Bits per Element:1 Channel Type:- Current - Output Low(IOL):24mA Current - Output High(IOH):24mA Logic Family:74LVC Operating Tempera
+Component Kind
+Standard
+LCSC Part Name
+三态输出，四路总线缓冲门
+Supplier Part
+C134144
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74LVC125AQPWRQ1
+Supplier Footprint
+TSSOP-14
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://www.ti.com/cn/lit/gpn/sn74lvc125a-q1
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+TSSOP-14_L5.0-W4.4-H1.0-LS6.4-P0.65
+Input type
+-
+output type
+Tri-State
+Voltage - Supply
+1.65V~3.6V
+Number of Elements
+4
+Number of Bits per Element
+1
+Channel Type
+-
+Current - Output Low(IOL)
+24mA
+Current - Output High(IOH)
+24mA
+Logic Family
+74LVC
+Operating Temperature
+-40℃~+125℃
+Quiescent Current
+20uA
+Propagation Delay
+2.5ns@3.3V,50pF
+Description
+Input type:- output type:Tri-State Voltage - Supply:1.65V~3.6V Voltage - Supply:1.65V~3.6V Number of Elements:4 Number of Bits per Element:1 Channel Type:- Current - Output Low(IOL):24mA Current - Output High(IOH):24mA Logic Family:74LVC Operating Tempera
+Symbol
+SN74LVC125AQPWRQ1
+Designator
+U63
+Name
+SN74LVC125AQPWRQ1
+Device
+SN74LVC125AQPWRQ1
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge265
+
+*
+]
+[
+DESIGNATOR
+C2
+FOOTPRINT
+C0402
+PARTTYPE
+CL05B104KO5NNNC
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Component Kind
+Standard
+LCSC Part Name
+100nF ±10% 16V
+Supplier Part
+C1525
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL05B104KO5NNNC
+Supplier Footprint
+0402
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0402_L1.0-W0.5-H0.5
+Value
+100nF
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Symbol
+CL05B104KO5NNNC
+Designator
+C2
+Name
+100nF
+Device
+CL05B104KO5NNNC
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge49
+
+*
+]
+[
+DESIGNATOR
+C44
+FOOTPRINT
+C0402
+PARTTYPE
+CL05B104KO5NNNC
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Component Kind
+Standard
+LCSC Part Name
+100nF ±10% 16V
+Supplier Part
+C1525
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL05B104KO5NNNC
+Supplier Footprint
+0402
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0402_L1.0-W0.5-H0.5
+Value
+100nF
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Symbol
+CL05B104KO5NNNC
+Designator
+C44
+Name
+100nF
+Device
+CL05B104KO5NNNC
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge49_1
+
+*
+]
+[
+DESIGNATOR
+C45
+FOOTPRINT
+C0402
+PARTTYPE
+CL05B104KO5NNNC
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Component Kind
+Standard
+LCSC Part Name
+100nF ±10% 16V
+Supplier Part
+C1525
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL05B104KO5NNNC
+Supplier Footprint
+0402
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0402_L1.0-W0.5-H0.5
+Value
+100nF
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Symbol
+CL05B104KO5NNNC
+Designator
+C45
+Name
+100nF
+Device
+CL05B104KO5NNNC
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge49_2
+
+*
+]
 (
 $1N34230 
 SW-2 TS-1088-AR02016-2 Passive 
@@ -7279,7 +7745,7 @@ R37-2 0603WAF1002T5E-2 Input
 C40-2 CC0603KRX7R9BB104-2 Passive 
 D8-1 H5VND5BA-1 Passive 
 CN1-3 S3B-XH-SM4-TB(LF)(SN)_C5306495-3 Passive 
-R14-1 0603WAF1000T5E-1 Input   
+R15-1 0603WAF3002T5E-1 Input   
 C18-2 GRM21BR61H106KE43L-2 Passive 
 C19-2 GRM21BR61H106KE43L-2 Passive 
 U47-8 BQ25895RTWR-OTG Input   
@@ -7295,7 +7761,7 @@ C22-1 CL31B105KBHNNNE-1 Passive
 C23-1 1206B475K500NT-1 Input   
 C24-1 1206B475K500NT-1 Input   
 C37-1 GRM21BR61H106KE43L-1 Passive 
-R39-2 0603WAF1200T5E-2 Input   
+R39-2 0603WAF8202T5E-2 Input   
 TV3-2 SRV05-4-P-T7_C85364-2 Input   
 U60-2 TPS2553DBVR-GND Passive 
 TV2-2 SRV05-4-P-T7_C85364-2 Input   
@@ -7303,7 +7769,7 @@ RIGHT_WING_PORT1-1 B8B-PH-SM4-TBT(LF)(SN)-1 Passive
 TV5-2 SRV05-4-P-T7_C85364-2 Input   
 TV4-2 SRV05-4-P-T7_C85364-2 Input   
 LEFT_WING_PORT1-1 B8B-PH-SM4-TBT(LF)(SN)-1 Passive 
-R38-2 0603WAF1200T5E-2 Input   
+R38-2 0603WAF8202T5E-2 Input   
 U59-2 TPS2553DBVR-GND Passive 
 PROGRAM_PORT1-1 B8B-PH-SM4-TBT(LF)(SN)-1 Passive 
 TV11-2 SRV05-4-P-T7_C85364-2 Input   
@@ -7316,6 +7782,20 @@ USB1-4 HC-TYPE-B-2.0-VS15-1.5A-15-GND Passive
 USB1-5 HC-TYPE-B-2.0-VS15-1.5A-15-GND Passive 
 USB1-6 HC-TYPE-B-2.0-VS15-1.5A-15-GND Passive 
 D7-1 SMBJ13A_C10209-A Input   
+C41-1 CL31B105KBHNNNE-1 Passive 
+C42-1 CL31B105KBHNNNE-1 Passive 
+U61-1 SN74LVC125AQPWRQ1-1OE# Passive 
+U61-4 SN74LVC125AQPWRQ1-2OE# Passive 
+U61-7 SN74LVC125AQPWRQ1-GND Passive 
+U61-10 SN74LVC125AQPWRQ1-3OE# Passive 
+U61-13 SN74LVC125AQPWRQ1-4OE# Passive 
+U63-1 SN74LVC125AQPWRQ1-1OE# Passive 
+U63-4 SN74LVC125AQPWRQ1-2OE# Passive 
+U63-7 SN74LVC125AQPWRQ1-GND Passive 
+U63-10 SN74LVC125AQPWRQ1-3OE# Passive 
+U63-13 SN74LVC125AQPWRQ1-4OE# Passive 
+C2-1 CL05B104KO5NNNC-1 Passive 
+C44-1 CL05B104KO5NNNC-1 Passive 
 )
 (
 $1N16140 
@@ -7356,8 +7836,7 @@ LEFT_WING_PORT1-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive
 (
 L_SPI_SCK 
 U1-2 STM32WB5MMGH6TR-PA1 Passive 
-TV4-1 SRV05-4-P-T7_C85364-1 Input   
-LEFT_WING_PORT1-6 B8B-PH-SM4-TBT(LF)(SN)-6 Passive 
+U61-2 SN74LVC125AQPWRQ1-1A Passive 
 )
 (
 L_READY 
@@ -7381,11 +7860,7 @@ C23-2 1206B475K500NT-2 Input
 R33-1 0603WAF4701T5E-1 Input   
 R32-1 0603WAF4701T5E-1 Input   
 R34-2 0603WAF1002T5E-2 Input   
-TV3-5 SRV05-4-P-T7_C85364-5 Input   
 U60-1 TPS2553DBVR-IN Passive 
-TV2-5 SRV05-4-P-T7_C85364-5 Input   
-TV5-5 SRV05-4-P-T7_C85364-5 Input   
-TV4-5 SRV05-4-P-T7_C85364-5 Input   
 U59-1 TPS2553DBVR-IN Passive 
 PROGRAM_PORT1-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
 TV11-5 SRV05-4-P-T7_C85364-5 Input   
@@ -7396,6 +7871,10 @@ EXPR_PEDAL1-4 PJ-603A-4 Input
 SUS_PEDAL1-4 PJ-603A-4 Input   
 C31-1 CC0603KRX7R9BB104-1 Input   
 C32-1 CC0603KRX7R9BB104-1 Passive 
+C41-2 CL31B105KBHNNNE-2 Passive 
+C42-2 CL31B105KBHNNNE-2 Passive 
+R40-1 0603WAF1003T5E-1 Input   
+R41-1 0603WAF1003T5E-1 Input   
 )
 (
 EXP_PEDAL 
@@ -7441,18 +7920,17 @@ R33-2 0603WAF4701T5E-2 Input
 L_NFAULT 
 U1-18 STM32WB5MMGH6TR-PB7 Passive 
 U59-4 TPS2553DBVR-/FAULT Passive 
+R40-2 0603WAF1003T5E-2 Input   
 )
 (
 L_SPI_MOSI 
 U1-19 STM32WB5MMGH6TR-PB5 Passive 
-TV4-4 SRV05-4-P-T7_C85364-4 Input   
-LEFT_WING_PORT1-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive 
+U61-9 SN74LVC125AQPWRQ1-3A Passive 
 )
 (
 L_SPI_MISO 
 U1-20 STM32WB5MMGH6TR-PB4 Passive 
-TV4-6 SRV05-4-P-T7_C85364-6 Input   
-LEFT_WING_PORT1-5 B8B-PH-SM4-TBT(LF)(SN)-5 Passive 
+U61-11 SN74LVC125AQPWRQ1-4Y Passive 
 )
 (
 PGM_SWO 
@@ -7490,8 +7968,7 @@ TV11-1 SRV05-4-P-T7_C85364-1 Input
 (
 L_SPI_NSS 
 U1-27 STM32WB5MMGH6TR-PA15 Passive 
-TV4-3 SRV05-4-P-T7_C85364-3 Input   
-LEFT_WING_PORT1-7 B8B-PH-SM4-TBT(LF)(SN)-7 Passive 
+U61-5 SN74LVC125AQPWRQ1-2A Passive 
 )
 (
 PGM_USART_RX 
@@ -7514,14 +7991,12 @@ USB1-2 HC-TYPE-B-2.0-VS15-1.5A-15-D- Passive
 (
 R_SPI_NSS 
 U1-33 STM32WB5MMGH6TR-PD0 Passive 
-TV2-3 SRV05-4-P-T7_C85364-3 Input   
-RIGHT_WING_PORT1-7 B8B-PH-SM4-TBT(LF)(SN)-7 Passive 
+U63-5 SN74LVC125AQPWRQ1-2A Passive 
 )
 (
 R_SPI_SCK 
 U1-34 STM32WB5MMGH6TR-PD1 Passive 
-TV2-1 SRV05-4-P-T7_C85364-1 Input   
-RIGHT_WING_PORT1-6 B8B-PH-SM4-TBT(LF)(SN)-6 Passive 
+U63-2 SN74LVC125AQPWRQ1-1A Passive 
 )
 (
 PGM_USART_TX 
@@ -7602,8 +8077,7 @@ U59-3 TPS2553DBVR-EN Passive
 (
 R_SPI_MISO 
 U1-70 STM32WB5MMGH6TR-PD3 Passive 
-TV2-6 SRV05-4-P-T7_C85364-6 Input   
-RIGHT_WING_PORT1-5 B8B-PH-SM4-TBT(LF)(SN)-5 Passive 
+U63-11 SN74LVC125AQPWRQ1-4Y Passive 
 )
 (
 R_READY 
@@ -7621,8 +8095,7 @@ RIGHT_WING_PORT1-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive
 (
 R_SPI_MOSI 
 U1-73 STM32WB5MMGH6TR-PD4 Passive 
-TV2-4 SRV05-4-P-T7_C85364-4 Input   
-RIGHT_WING_PORT1-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive 
+U63-9 SN74LVC125AQPWRQ1-3A Passive 
 )
 (
 LED_CH1 
@@ -7643,6 +8116,7 @@ R34-1 0603WAF1002T5E-1 Input
 R_NFAULT 
 U1-81 STM32WB5MMGH6TR-PD6 Passive 
 U60-4 TPS2553DBVR-/FAULT Passive 
+R41-2 0603WAF1003T5E-2 Input   
 )
 (
 POW_QON 
@@ -7725,7 +8199,7 @@ R36-1 0603WAF3300T5E-1 Input
 (
 POW_TS 
 CN1-2 S3B-XH-SM4-TB(LF)(SN)_C5306495-2 Passive 
-R13-1 0603WAF100JT5E-1 Input   
+R12-1 0603WAF1200T5E-1 Input   
 R15-2 0603WAF3002T5E-2 Input   
 U47-11 BQ25895RTWR-TS Input   
 )
@@ -7748,24 +8222,14 @@ R11-1 0603WAF5101T5E-1 Input
 R12-2 0603WAF1200T5E-2 Input   
 )
 (
-$2N334 
-R12-1 0603WAF1200T5E-1 Input   
-R13-2 0603WAF100JT5E-2 Input   
-)
-(
-$2N335 
-R14-2 0603WAF1000T5E-2 Input   
-R15-1 0603WAF3002T5E-1 Input   
-)
-(
 $2N1118 
-LED_CHARGE1-2 KT-0805Y-- Passive 
+LED_CHARGE-2 KT-0805Y-- Passive 
 U47-4 BQ25895RTWR-STAT Input   
 )
 (
-$2N1119 
-LED_CHARGE1-1 KT-0805Y-+ Passive 
-R9-2 0603WAF4701T5E-2 Input   
+$2N7089 
+LED_CHARGE-1 KT-0805Y-+ Passive 
+R42-1 0402WGF1001TCE-1 Input   
 )
 (
 VSYS 
@@ -7774,13 +8238,13 @@ R17-1 0603WAF1002T5E-1 Input
 U48-2 APH0630T2R2M-2 Passive 
 U47-15 BQ25895RTWR-SYS Input   
 U47-16 BQ25895RTWR-SYS Input   
-R9-1 0603WAF4701T5E-1 Input   
 C16-2 GRM21BR61H106KE43L-2 Passive 
 C15-2 GRM21BR61H106KE43L-2 Passive 
 U55-1 TLV75533PDBVR-IN Passive 
 C21-2 CL31B105KBHNNNE-2 Passive 
 R18-1 0603WAF1002T5E-1 Input   
 C37-2 GRM21BR61H106KE43L-2 Passive 
+R42-2 0402WGF1001TCE-2 Input   
 )
 (
 $2N1138 
@@ -7833,22 +8297,78 @@ R18-2 0603WAF1002T5E-2 Input
 )
 (
 $4N584 
-R39-1 0603WAF1200T5E-1 Input   
+R39-1 0603WAF8202T5E-1 Input   
 U60-5 TPS2553DBVR-ILIM Passive 
 )
 (
 R_VCC 
+TV3-5 SRV05-4-P-T7_C85364-5 Input   
 U60-6 TPS2553DBVR-OUT Passive 
+TV2-5 SRV05-4-P-T7_C85364-5 Input   
 RIGHT_WING_PORT1-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
+U63-14 SN74LVC125AQPWRQ1-VCC Passive 
+C44-2 CL05B104KO5NNNC-2 Passive 
+)
+(
+R_SPI_SCK_P 
+TV2-1 SRV05-4-P-T7_C85364-1 Input   
+RIGHT_WING_PORT1-6 B8B-PH-SM4-TBT(LF)(SN)-6 Passive 
+U63-3 SN74LVC125AQPWRQ1-1Y Passive 
+)
+(
+R_SPI_NSS_P 
+TV2-3 SRV05-4-P-T7_C85364-3 Input   
+RIGHT_WING_PORT1-7 B8B-PH-SM4-TBT(LF)(SN)-7 Passive 
+U63-6 SN74LVC125AQPWRQ1-2Y Passive 
+)
+(
+R_SPI_MOSI_P 
+TV2-4 SRV05-4-P-T7_C85364-4 Input   
+RIGHT_WING_PORT1-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive 
+U63-8 SN74LVC125AQPWRQ1-3Y Passive 
+)
+(
+R_SPI_MISO_P 
+TV2-6 SRV05-4-P-T7_C85364-6 Input   
+RIGHT_WING_PORT1-5 B8B-PH-SM4-TBT(LF)(SN)-5 Passive 
+U63-12 SN74LVC125AQPWRQ1-4A Passive 
 )
 (
 L_VCC 
+TV5-5 SRV05-4-P-T7_C85364-5 Input   
+TV4-5 SRV05-4-P-T7_C85364-5 Input   
 LEFT_WING_PORT1-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
 U59-6 TPS2553DBVR-OUT Passive 
+U61-14 SN74LVC125AQPWRQ1-VCC Passive 
+C2-2 CL05B104KO5NNNC-2 Passive 
+)
+(
+L_SPI_SCK_P 
+TV4-1 SRV05-4-P-T7_C85364-1 Input   
+LEFT_WING_PORT1-6 B8B-PH-SM4-TBT(LF)(SN)-6 Passive 
+U61-3 SN74LVC125AQPWRQ1-1Y Passive 
+)
+(
+L_SPI_NSS_P 
+TV4-3 SRV05-4-P-T7_C85364-3 Input   
+LEFT_WING_PORT1-7 B8B-PH-SM4-TBT(LF)(SN)-7 Passive 
+U61-6 SN74LVC125AQPWRQ1-2Y Passive 
+)
+(
+L_SPI_MOSI_P 
+TV4-4 SRV05-4-P-T7_C85364-4 Input   
+LEFT_WING_PORT1-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive 
+U61-8 SN74LVC125AQPWRQ1-3Y Passive 
+)
+(
+L_SPI_MISO_P 
+TV4-6 SRV05-4-P-T7_C85364-6 Input   
+LEFT_WING_PORT1-5 B8B-PH-SM4-TBT(LF)(SN)-5 Passive 
+U61-12 SN74LVC125AQPWRQ1-4A Passive 
 )
 (
 $4N673 
-R38-1 0603WAF1200T5E-1 Input   
+R38-1 0603WAF8202T5E-1 Input   
 U59-5 TPS2553DBVR-ILIM Passive 
 )
 (

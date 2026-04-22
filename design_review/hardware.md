@@ -14,37 +14,66 @@ flow to GND. This does not prevent the component to protect D+ and D- from high 
 ## Charging
 
 The board supports 2200 mAh batteries charging at 1C with internal thermistor protection.
+Such as [18650CA-1S-3J](https://fr.farnell.com/bak-technology/18650ca-1s-3j/batt-rechargeable-li-ion-3-7v/dp/2401852) with a 10K NTC
+
 
 Fast charging negociation is done by the MCU and the information is passed to powerline via I2C. The charge D+ and D- are left floating
 to avoid interferences with the MCU.
 
 ## Power Consumption
 
-Estimated from the BOMs in [export/](export/) at the 3.3 V rail, with typical datasheet values at room temperature. Hall sensor count: **33 (WingLeft) + 38 (WingRight) = 71** (of which WingLeft U11–U18 are still SC4011 pending migration; both parts spec the same ICC).
+Estimated from the BOMs in [export/](export/) at the 3.3 V rail, with typical datasheet values at room temperature. Hall sensor count: **33 (WingLeft) + 38 (WingRight) = 71**.
 
 | Block | Part | Qty | I typ (mA) | Subtotal (mA) |
 |---|---|---:|---:|---:|
 | Main MCU, BLE active | STM32WB5MMG | 1 | 10 | 10 |
 | Wing MCU @ 72 MHz | STM32F103C8T6 | 2 | 25 | 50 |
-| Key-position Hall sensor | SC4015 / SC4011 | 71 | 2.5 | 178 |
-| Linear Hall (WingLeft) | HAL403 | 1 | 6 | 6 |
+| Key-position Hall sensor | SC4015 | 71 | 2.5 | 178 |
 | Analog mux (static) | 74HC4052 | 9 | <0.01 | ~0 |
 | Load-cell ADC | CS1237 | 1 | 1.5 | 1.5 |
 | LEDs (POW + BT + ~2 status) | — | ~4 | 3 | ~10 |
 | LDO Iq + leakage | TLV755P + misc | — | — | ~1 |
-| **Total (playing, BLE streaming)** | | | | **~257** |
+| **Total (playing, BLE streaming)** | | | | **~251** |
 
-At ~257 mA × 3.3 V ≈ **0.85 W** steady-state. Hall sensors dominate (~69 %); duty-cycling their supply via a side-channel FET — or gating banks through the 74HC4052 Ē pins — is the largest available power-saving lever.
+At ~251 mA × 3.3 V ≈ **0.83 W** steady-state. Hall sensors dominate (~71 %); duty-cycling their supply via a side-channel FET — or gating banks through the 74HC4052 Ē pins — is the largest available power-saving lever.
 
-Peak transient: BLE TX burst (+10 mA on U1) plus all status LEDs lit (+25 mA) bumps the rail to ~290 mA briefly. TLV755P is rated 500 mA, comfortable margin.
+Peak transient: BLE TX burst (+10 mA on U1) plus all status LEDs lit (+25 mA) bumps the rail to ~285 mA briefly. TLV755P is rated 500 mA, comfortable margin.
 
-**Battery runtime.** 2200 mAh Li-ion at 3.7 V nominal, LDO efficiency ≈ 3.3 / 3.7 = 89 %: battery draw ≈ 257 mA, runtime ≈ **8.5 h**, well above the 2 h requirement. Headroom covers aging and cold-temperature capacity loss.
+**Battery runtime.** 2200 mAh Li-ion at 3.7 V nominal, LDO efficiency ≈ 3.3 / 3.7 = 89 %: battery draw ≈ 251 mA, runtime ≈ **8.8 h**, well above the 2 h requirement. Headroom covers aging and cold-temperature capacity loss.
 
 **Charge mode** (USB in, MCU idle, wings powered but not sampling):
 wing MCUs in STOP + Hall sensors still powered ≈ 150 mA; with wing
 rails gated off this drops to ~15 mA (charge-indicator LED + charger
 Iq + MCU idle). Worth gating the wing VCC from the motherboard in this
 state.
+
+## Wing Power Gating and Back-feed Isolation
+
+Each wing's VCC rail (`L_VCC`, `R_VCC`) is switched on the motherboard by a per-wing TPS2553 current-limited power switch. The main MCU can cut either wing independently — used in charge mode to save ~150 mA per idle wing, and as a fault response if OCP/OVP trips.
+
+**Why back-feed matters.** When a wing rail is cut but the main MCU keeps driving signal lines into the wing connector, every signal line becomes a back-feed path: main drives 3.3 V → trace → wing MCU pin ESD clamp → dead wing VDD. With five bus signals each capable of sourcing ~20 mA, aggregate injection can latch up the wing MCU (STM32 latch-up threshold ≈ 100 mA/pin) and pushes the "off" wing rail to ~2.6 V, defeating the isolation the TPS2553 was meant to provide.
+
+**Isolation strategy — SN74LVC125A on the gated rail (U61 left, U63 right).** One quad tri-state buffer per wing sits at the wing connector on the motherboard, **powered from the gated wing rail** (`L_VCC` / `R_VCC`, downstream of TPS2553). When the wing rail drops, the buffer loses VCC, and its `Ioff` feature forces every input and output to high-Z (<10 µA leakage). No path exists for current to flow main → buffer → wing in either direction. All four OE# pins tie to GND; tri-state is controlled by the VCC side, not by firmware.
+
+Channel assignment:
+
+| Ch | A (input) | Y (output) | Signal / direction |
+|---|---|---|---|
+| 1 | Main SCK | Wing SCK | main → wing |
+| 2 | Main NSS | Wing NSS | main → wing |
+| 3 | Main MOSI | Wing MOSI | main → wing |
+| 4 | Wing MISO | Main MISO | wing → main |
+
+**Signals that bypass the buffer.**
+
+- **NRST** is driven open-drain by the main MCU through BAT54C to 3.3 V; idle high is provided by the wing MCU's internal NRST pull-up. When the wing rail is cut, the main releases NRST — nothing sources current into the dead wing.
+- **READY** is direct-connected (no buffer). The main MCU keeps READY as a passive input with its internal pull-down enabled and no external pull-up. The wing drives actively high to signal ready, low to signal busy. With the wing off the wing pin is high-Z, the pull-down resolves the line to "not ready", and because the main never sources current onto the line it cannot back-power the wing MCU.
+
+**Firmware ordering.** Before deasserting `L_EN` / `R_EN`, configure the READY pin as input with internal pull-down. The buffered SPI signals can be left driven — Ioff handles them. On power-up, wait for the TPS2553 soft-start (~2 ms) before sampling READY or initiating SPI traffic, so the buffer has a stable VCC before passing logic.
+
+**Wing-port ESD steering.** The SRV05-4 arrays at each wing port (TV4/TV5 left, TV2/TV3 right) tie pin 5 to the **gated wing rail**, not to main 3.3 V. This keeps ESD energy in the same power domain as the buffer's output drivers, so transient steering currents don't cross power-domain boundaries.
+
+**Required externals, not yet in the BOM.** Add a 100 nF bypass cap from pin 14 to GND at each buffer (U61, U63), plus a ≥10 µF bulk cap on each TPS2553 output (`L_VCC`, `R_VCC`) close to the wing connector. The TPS2553 datasheet requires output capacitance for stable regulation; the local 100 nF is standard logic IC hygiene.
 
 ## Main MCU
 
@@ -67,7 +96,8 @@ a few mm of its VDD pin; VDDA pair adjacent to pins 8/9.
 
 A ferrite bead between VDD and VDDA is an AN2586 enhancement for ADC
 noise (not a datasheet requirement). Justified here because PA1 reads
-the HAL403 linear Hall and the mux outputs are sampled via ADC.
+an SC4015 linear Hall directly (bypassing the mux) and the mux outputs
+are sampled via ADC.
 
 ## Key Sensing: Magnet / Hall-sensor Pairing
 

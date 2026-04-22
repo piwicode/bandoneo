@@ -31,6 +31,13 @@ BOARDS = [
         "refdes": "U37",
         "part": "STM32F103C8T6",
     },
+    {
+        "name": "WingRight",
+        "ioc": "code/wing-f103/wing-f103/wing-f103.ioc",
+        "netlist": "design_review/export/Netlist_WingRight.net",
+        "refdes": "U46",
+        "part": "STM32F103C8T6",
+    },
 ]
 
 # Signals whose net name is conventional and does not need a GPIO_Label.
@@ -40,6 +47,7 @@ SIGNAL_NET_HINTS = {
     "SYS_JTMS-SWDIO": {"SWDIO", "SWD_IO", "JTMS"},
     "SYS_JTCK-SWCLK": {"SWCLK", "SWD_CLK", "JTCK"},
     "SYS_JTDO-SWO": {"SWO", "SWD_SWO", "JTDO"},
+    "SYS_JTDO-TRACESWO": {"SWO", "SWD_SWO", "JTDO", "TRACESWO"},
 }
 
 # These .ioc signals are internal or do not need a matching net.
@@ -86,7 +94,11 @@ def parse_netlist(path: Path, refdes: str, part: str) -> dict[str, str]:
     return mapping
 
 
-def check(ioc_pins: dict[str, dict], net_map: dict[str, str]) -> list[str]:
+def check(
+    ioc_pins: dict[str, dict],
+    net_map: dict[str, str],
+    refdes: str,
+) -> list[str]:
     errors: list[str] = []
 
     for pin, info in sorted(ioc_pins.items()):
@@ -97,7 +109,7 @@ def check(ioc_pins: dict[str, dict], net_map: dict[str, str]) -> list[str]:
         if net is None:
             errors.append(
                 f"[MISSING]  {pin} configured in .ioc (signal={signal}, label={label}) "
-                f"but no net found on {MCU_REFDES}-{pin}"
+                f"but no net found on {refdes}-{pin}"
             )
             continue
 
@@ -130,51 +142,51 @@ def check(ioc_pins: dict[str, dict], net_map: dict[str, str]) -> list[str]:
             "GND", "AGND", "VDD", "VCC", "NC",
         }:
             errors.append(
-                f"[UNCONF]   {pin} connected to net {net!r} on {MCU_REFDES} "
+                f"[UNCONF]   {pin} connected to net {net!r} on {refdes} "
                 f"but not configured in .ioc"
             )
 
     return errors
 
 
-def main() -> int:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument(
-        "--ioc",
-        type=Path,
-        default=Path(__file__).resolve().parents[1]
-        / "code/mother-wb5mm/mother-wb5mm.ioc",
-    )
-    parser.add_argument(
-        "--netlist",
-        type=Path,
-        default=Path(__file__).resolve().parent / "export/Netlist_MainBoard.net",
-    )
-    args = parser.parse_args()
+def check_board(board: dict, repo_root: Path) -> int:
+    name = board["name"]
+    ioc_path = repo_root / board["ioc"]
+    netlist_path = repo_root / board["netlist"]
+    refdes, part = board["refdes"], board["part"]
 
-    if not args.ioc.is_file():
-        print(f"ioc file not found: {args.ioc}", file=sys.stderr)
+    print(f"=== {name}: {refdes} ({part}) ===")
+    if not ioc_path.is_file():
+        print(f"  ioc file not found: {ioc_path}", file=sys.stderr)
         return 2
-    if not args.netlist.is_file():
-        print(f"netlist not found: {args.netlist}", file=sys.stderr)
+    if not netlist_path.is_file():
+        print(f"  netlist not found: {netlist_path}", file=sys.stderr)
         return 2
 
-    ioc_pins = parse_ioc(args.ioc)
-    net_map = parse_netlist(args.netlist)
+    ioc_pins = parse_ioc(ioc_path)
+    net_map = parse_netlist(netlist_path, refdes, part)
+    print(f"  ioc pins configured: {len(ioc_pins)}")
+    print(f"  {refdes} pins found in netlist: {len(net_map)}")
 
-    print(f"ioc pins configured: {len(ioc_pins)}")
-    print(f"{MCU_REFDES} ({MCU_PART}) pins found in netlist: {len(net_map)}")
-    print()
-
-    errors = check(ioc_pins, net_map)
+    errors = check(ioc_pins, net_map, refdes)
     if not errors:
-        print("OK: .ioc and netlist are consistent.")
+        print("  OK: .ioc and netlist are consistent.\n")
         return 0
-
     for e in errors:
-        print(e)
-    print(f"\n{len(errors)} inconsistency(ies) found.")
+        print(f"  {e}")
+    print(f"  {len(errors)} inconsistency(ies) found.\n")
     return 1
+
+
+def main() -> int:
+    argparse.ArgumentParser(description=__doc__).parse_args()
+    repo_root = Path(__file__).resolve().parents[1]
+    exit_code = 0
+    for board in BOARDS:
+        rc = check_board(board, repo_root)
+        if rc != 0:
+            exit_code = rc if exit_code == 0 else exit_code
+    return exit_code
 
 
 if __name__ == "__main__":

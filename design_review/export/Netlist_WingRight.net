@@ -3705,6 +3705,518 @@ gge193
 ]
 [
 DESIGNATOR
+R37
+FOOTPRINT
+R0603
+PARTTYPE
+0603WAF1002T5E
+DESCRIPTION
+Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Component Kind
+Standard
+LCSC Part Name
+厚膜电阻 10kΩ ±1% 100mW
+Supplier Part
+C25804
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0603WAF1002T5E
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/0603WAF1002T5E/26547.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+Symbol
+0603WAF1002T5E
+3D Model Title
+R0603
+Type
+Thick Film Resistor
+Value
+10kΩ
+Tolerance
+±1%
+Power(Watts)
+100mW
+Voltage-Supply(Max)
+75V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Designator
+R37
+Name
+10kΩ
+Device
+0603WAF1002T5E
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge251_1
+
+*
+]
+[
+DESIGNATOR
+FN3_BOOT0
+FOOTPRINT
+SW-SMD_L3.9-W3.0-P4.45
+PARTTYPE
+TS-1088-AR02016
+DESCRIPTION
+Circuit:SPST Actuator Style:Round Button Operating Force:160gf Mounting Style:Brick nogging Switch Length:4mm Switch Width:3mm Switch Height:2mm Strike Gundam:不带 Contact Current:50mA Voltage Rating (DC):12V Insulation Resistance:100MΩ Actuator/Cap Color:B
+Component Kind
+Standard
+LCSC Part Name
+4*3*2mm 立贴 轻触开关
+Supplier Part
+C720477
+Manufacturer
+XUNPU(讯普)
+Manufacturer Part
+TS-1088-AR02016
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20200810/C720475_60D09DD6C54279ADDB2DC25100F1CC11.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SW-SMD_L3.9-W2.9-H2.0-LS4.8
+Circuit
+SPST
+Actuator Style
+Round Button
+Operating Force
+160gf
+Mounting Style
+Brick nogging
+Switch Length
+4mm
+Switch Width
+3mm
+Switch Height
+2mm
+Strike Gundam
+不带
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Actuator/Cap Color
+Black
+Pin Style
+SMDSplicing
+Mechanical Life
+10万次
+Operating Temperature
+-30℃~+80℃
+Description
+Circuit:SPST Actuator Style:Round Button Operating Force:160gf Mounting Style:Brick nogging Switch Length:4mm Switch Width:3mm Switch Height:2mm Strike Gundam:不带 Contact Current:50mA Voltage Rating (DC):12V Insulation Resistance:100MΩ Actuator/Cap Color:B
+Symbol
+TS-1088-AR02016
+Designator
+FN3_BOOT0
+Name
+TS-1088-AR02016
+Device
+TS-1088-AR02016
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge47_4
+
+*
+]
+[
+DESIGNATOR
+C40
+FOOTPRINT
+C0603
+PARTTYPE
+CC0603KRX7R9BB104
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Component Kind
+Standard
+LCSC Part Name
+100nF ±10% 50V
+Supplier Part
+C14663
+Manufacturer
+YAGEO(国巨)
+Manufacturer Part
+CC0603KRX7R9BB104
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20170116/1484561234239.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0603_L1.6-W0.8-H0.8
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Value
+100nF
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Symbol
+CL05B104KO5NNNC
+Designator
+C40
+Device
+CC0603KRX7R9BB104
+Unique ID
+gge195_4
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+D8
+FOOTPRINT
+SOD-523_L1.2-W0.8-LS1.6-BI
+PARTTYPE
+H5VND5BA
+DESCRIPTION
+Polarity:Bidirectional Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:15V Peak Pulse Current (Ipp):8A@8/20us Peak Pulse Power Dissipation (Ppp):120W@8/20us Voltage - Breakdown:8V Reverse Leakage Current (Ir):200nA Number of Channels:1 Operating Temp
+Component Kind
+Standard
+LCSC Part Name
+双向ESD 5V截止 峰值浪涌电流：8A@8/20us
+Supplier Part
+C42413899
+Manufacturer
+R+O(宏嘉诚)
+Manufacturer Part
+H5VND5BA
+Supplier Footprint
+SOD-523
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/H5VND5BA/44403780.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOD-523_L1.2-W0.8-LS1.6-BI
+Polarity
+Bidirectional
+Reverse Stand-Off Voltage (Vrwm)
+5V
+Clamping Voltage
+15V
+Peak Pulse Current (Ipp)
+8A@8/20us
+Peak Pulse Power Dissipation (Ppp)
+120W@8/20us
+Voltage - Breakdown
+8V
+Reverse Leakage Current (Ir)
+200nA
+Number of Channels
+1
+Operating Temperature
+-55℃~+125℃
+level of protection
+IEC 61000-4-2；IEC 61000-4-5
+Type
+ESD
+Junction Capacitance
+20pF
+Description
+Polarity:Bidirectional Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:15V Peak Pulse Current (Ipp):8A@8/20us Peak Pulse Power Dissipation (Ppp):120W@8/20us Voltage - Breakdown:8V Reverse Leakage Current (Ir):200nA Number of Channels:1 Operating Temp
+Symbol
+H5VND5BA
+Designator
+D8
+Name
+H5VND5BA
+Device
+H5VND5BA
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge257
+
+*
+]
+[
+DESIGNATOR
+SW4
+FOOTPRINT
+SW-SMD_L3.9-W3.0-P4.45
+PARTTYPE
+TS-1088-AR02016
+DESCRIPTION
+Circuit:SPST Actuator Style:Round Button Operating Force:160gf Mounting Style:Brick nogging Switch Length:4mm Switch Width:3mm Switch Height:2mm Strike Gundam:不带 Contact Current:50mA Voltage Rating (DC):12V Insulation Resistance:100MΩ Actuator/Cap Color:B
+Component Kind
+Standard
+LCSC Part Name
+4*3*2mm 立贴 轻触开关
+Supplier Part
+C720477
+Manufacturer
+XUNPU(讯普)
+Manufacturer Part
+TS-1088-AR02016
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20200810/C720475_60D09DD6C54279ADDB2DC25100F1CC11.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SW-SMD_L3.9-W2.9-H2.0-LS4.8
+Circuit
+SPST
+Actuator Style
+Round Button
+Operating Force
+160gf
+Mounting Style
+Brick nogging
+Switch Length
+4mm
+Switch Width
+3mm
+Switch Height
+2mm
+Strike Gundam
+不带
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Actuator/Cap Color
+Black
+Pin Style
+SMDSplicing
+Mechanical Life
+10万次
+Operating Temperature
+-30℃~+80℃
+Description
+Circuit:SPST Actuator Style:Round Button Operating Force:160gf Mounting Style:Brick nogging Switch Length:4mm Switch Width:3mm Switch Height:2mm Strike Gundam:不带 Contact Current:50mA Voltage Rating (DC):12V Insulation Resistance:100MΩ Actuator/Cap Color:B
+Symbol
+TS-1088-AR02016
+Designator
+SW4
+Name
+TS-1088-AR02016
+Device
+TS-1088-AR02016
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge47_1
+
+*
+]
+[
+DESIGNATOR
+C41
+FOOTPRINT
+C0603
+PARTTYPE
+CC0603KRX7R9BB104
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Component Kind
+Standard
+LCSC Part Name
+100nF ±10% 50V
+Supplier Part
+C14663
+Manufacturer
+YAGEO(国巨)
+Manufacturer Part
+CC0603KRX7R9BB104
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20170116/1484561234239.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0603_L1.6-W0.8-H0.8
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Value
+100nF
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Symbol
+CL05B104KO5NNNC
+Designator
+C41
+Device
+CC0603KRX7R9BB104
+Unique ID
+gge195_2
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+D9
+FOOTPRINT
+SOD-523_L1.2-W0.8-LS1.6-BI
+PARTTYPE
+H5VND5BA
+DESCRIPTION
+Polarity:Bidirectional Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:15V Peak Pulse Current (Ipp):8A@8/20us Peak Pulse Power Dissipation (Ppp):120W@8/20us Voltage - Breakdown:8V Reverse Leakage Current (Ir):200nA Number of Channels:1 Operating Temp
+Component Kind
+Standard
+LCSC Part Name
+双向ESD 5V截止 峰值浪涌电流：8A@8/20us
+Supplier Part
+C42413899
+Manufacturer
+R+O(宏嘉诚)
+Manufacturer Part
+H5VND5BA
+Supplier Footprint
+SOD-523
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/H5VND5BA/44403780.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOD-523_L1.2-W0.8-LS1.6-BI
+Polarity
+Bidirectional
+Reverse Stand-Off Voltage (Vrwm)
+5V
+Clamping Voltage
+15V
+Peak Pulse Current (Ipp)
+8A@8/20us
+Peak Pulse Power Dissipation (Ppp)
+120W@8/20us
+Voltage - Breakdown
+8V
+Reverse Leakage Current (Ir)
+200nA
+Number of Channels
+1
+Operating Temperature
+-55℃~+125℃
+level of protection
+IEC 61000-4-2；IEC 61000-4-5
+Type
+ESD
+Junction Capacitance
+20pF
+Description
+Polarity:Bidirectional Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:15V Peak Pulse Current (Ipp):8A@8/20us Peak Pulse Power Dissipation (Ppp):120W@8/20us Voltage - Breakdown:8V Reverse Leakage Current (Ir):200nA Number of Channels:1 Operating Temp
+Symbol
+H5VND5BA
+Designator
+D9
+Name
+H5VND5BA
+Device
+H5VND5BA
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge258
+
+*
+]
+[
+DESIGNATOR
 C3
 FOOTPRINT
 C0402
@@ -4673,7 +5185,7 @@ gge178
 ]
 [
 DESIGNATOR
-LED_CPU
+LED_FN1
 FOOTPRINT
 LED0805-R-RD
 PARTTYPE
@@ -4737,7 +5249,7 @@ Lamp Holder Type:- Illumination Color:Emerald Green Voltage - Forward(Vf):2.6V~3
 Symbol
 0805G (Green)
 Designator
-LED_CPU
+LED_FN1
 Name
 KT-0805G
 Device
@@ -4839,29 +5351,17 @@ R7
 FOOTPRINT
 R0402
 PARTTYPE
-0402WGF1002TCE
+0402WGF1001TCE
 DESCRIPTION
-Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
+Type:Thick Film Resistor Resistance:1kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
 Component Kind
 Standard
-Supplier
-LCSC
-Manufacturer
-UNI-ROYAL(厚声)
-Manufacturer Part
-0402WGF1002TCE
-Supplier Part
-C25744
-Value
-10kΩ
-JLCPCB Part Class
-Basic Part
 LCSC Part Name
-10kΩ ±1% 62.5mW 厚膜电阻
+1kΩ ±1% 62.5mW 厚膜电阻
 Supplier Footprint
 0402
 Datasheet
-https://item.szlcsc.com/datasheet/0402WGF1002TCE/26487.html
+https://item.szlcsc.com/datasheet/0402WGF1001TCE/12256.html
 Add into BOM
 yes
 Convert to PCB
@@ -4880,16 +5380,28 @@ Temperature Coefficient
 ±100ppm/℃
 Operating Temperature
 -55℃~+155℃
+Supplier
+LCSC
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0402WGF1001TCE
+Supplier Part
+C11702
+Value
+1kΩ
+JLCPCB Part Class
+Basic Part
 Description
-Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
+Type:Thick Film Resistor Resistance:1kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
 Symbol
-0402WGF2201TCE
+0402WGF1001TCE
 Designator
 R7
 Name
-10kΩ
+1kΩ
 Device
-0402WGF1002TCE
+0402WGF1001TCE
 Unique ID
 gge167
 Reuse Block
@@ -4907,29 +5419,17 @@ R9
 FOOTPRINT
 R0402
 PARTTYPE
-0402WGF1002TCE
+0402WGF1001TCE
 DESCRIPTION
-Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
+Type:Thick Film Resistor Resistance:1kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
 Component Kind
 Standard
-Supplier
-LCSC
-Manufacturer
-UNI-ROYAL(厚声)
-Manufacturer Part
-0402WGF1002TCE
-Supplier Part
-C25744
-Value
-10kΩ
-JLCPCB Part Class
-Basic Part
 LCSC Part Name
-10kΩ ±1% 62.5mW 厚膜电阻
+1kΩ ±1% 62.5mW 厚膜电阻
 Supplier Footprint
 0402
 Datasheet
-https://item.szlcsc.com/datasheet/0402WGF1002TCE/26487.html
+https://item.szlcsc.com/datasheet/0402WGF1001TCE/12256.html
 Add into BOM
 yes
 Convert to PCB
@@ -4948,16 +5448,28 @@ Temperature Coefficient
 ±100ppm/℃
 Operating Temperature
 -55℃~+155℃
+Supplier
+LCSC
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0402WGF1001TCE
+Supplier Part
+C11702
+Value
+1kΩ
+JLCPCB Part Class
+Basic Part
 Description
-Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
+Type:Thick Film Resistor Resistance:1kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
 Symbol
-0402WGF2201TCE
+0402WGF1001TCE
 Designator
 R9
 Name
-10kΩ
+1kΩ
 Device
-0402WGF1002TCE
+0402WGF1001TCE
 Unique ID
 gge167_1
 Reuse Block
@@ -5321,6 +5833,72 @@ gge169_1
 
 *
 ]
+[
+DESIGNATOR
+L1
+FOOTPRINT
+L0603
+PARTTYPE
+GZ1608D601TF
+DESCRIPTION
+Impedance @ Frequency:600Ω@100MHz Tolerance:±25% Tolerance:±25% DC Resistance(DCR):450mΩ Current Rating:200mA Number of Circuits:1 Operating Temperature:-55℃~+125℃ Operating Temperature:-55℃~+125℃
+Component Kind
+Standard
+LCSC Part Name
+单路 0603磁珠 阻抗600Ω@100MHz
+Supplier Part
+C1002
+Manufacturer
+Sunlord(顺络)
+Manufacturer Part
+GZ1608D601TF
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/GZ1608D601TF/1354.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+L0603_L1.6-W0.8-H0.5_BEAD
+Impedance @ Frequency
+600Ω@100MHz
+Tolerance
+±25%
+DC Resistance(DCR)
+450mΩ
+Current Rating
+200mA
+Number of Circuits
+1
+Operating Temperature
+-55℃~+125℃
+Description
+Impedance @ Frequency:600Ω@100MHz Tolerance:±25% Tolerance:±25% DC Resistance(DCR):450mΩ Current Rating:200mA Number of Circuits:1 Operating Temperature:-55℃~+125℃ Operating Temperature:-55℃~+125℃
+Symbol
+GZ1608D601TF
+Designator
+L1
+Name
+GZ1608D601TF
+Device
+GZ1608D601TF
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge199
+
+*
+]
 (
 $1I10936\$1N697 
 U13-1 74HC4052PW,118-2Y0 Passive 
@@ -5332,7 +5910,7 @@ U13-2 74HC4052PW,118-2Y2 Passive
 U12-3 SC4011SO-N-TR-OUT Passive 
 )
 (
-$1N11049 
+A_IN3 
 U13-3 74HC4052PW,118-2Z Passive 
 U46-13 STM32F103C8T6-PA3 Passive 
 )
@@ -5410,13 +5988,18 @@ R4-1 0402WGF1002TCE-1 Input
 SW3-1 TS-1088-AR02016-1 Passive 
 C36-2 CC0603KRX7R9BB104-2 Passive 
 D6-1 H5VND5BA-1 Passive 
+R37-2 0603WAF1002T5E-2 Input   
+C40-2 CC0603KRX7R9BB104-2 Passive 
+D8-1 H5VND5BA-1 Passive 
+SW4-1 TS-1088-AR02016-1 Passive 
+C41-2 CC0603KRX7R9BB104-2 Passive 
+D9-1 H5VND5BA-1 Passive 
 C3-2 CL05B104KO5NNNC-2 Passive 
 C2-2 CL05B104KO5NNNC-2 Passive 
 C4-2 CL05B104KO5NNNC-2 Passive 
 U46-8 STM32F103C8T6-VSSA Passive 
 U46-23 STM32F103C8T6-VSS_1 Passive 
 U46-35 STM32F103C8T6-VSS_2 Passive 
-U46-44 STM32F103C8T6-BOOT0 Passive 
 U46-47 STM32F103C8T6-VSS_3 Passive 
 C5-2 CL05B104KO5NNNC-2 Passive 
 C6-1 CL05A105KA5NQNC-1 Passive 
@@ -5424,7 +6007,7 @@ C7-1 CL05B103KB5NNNC-1 Input
 RIGHT_PORT-1 B8B-PH-SM4-TBT(LF)(SN)-1 Passive 
 TV1-2 SRV05-4-P-T7_C85364-2 Input   
 TV2-2 SRV05-4-P-T7_C85364-2 Input   
-LED_CPU-2 KT-0805G-K Passive 
+LED_FN1-2 KT-0805G-K Passive 
 LED_POW-2 KT-0805Y-- Passive 
 PROGRAM_PORT-1 B8B-PH-SM4-TBT(LF)(SN)-1 Passive 
 C1-1 CL05A106MQ5NUNC-1 Input   
@@ -5460,7 +6043,7 @@ U13-12 74HC4052PW,118-1Y0 Passive
 U16-3 SC4011SO-N-TR-OUT Passive 
 )
 (
-$1N11048 
+A_IN2 
 U13-13 74HC4052PW,118-1Z Passive 
 U46-12 STM32F103C8T6-PA2 Passive 
 )
@@ -5520,6 +6103,7 @@ U38-1 SC4011SO-N-TR-VCC Passive
 U41-1 SC4011SO-N-TR-VCC Passive 
 U42-1 SC4011SO-N-TR-VCC Passive 
 R5-1 0402WGF1002TCE-1 Input   
+FN3_BOOT0-1 TS-1088-AR02016-1 Passive 
 C3-1 CL05B104KO5NNNC-1 Passive 
 C2-1 CL05B104KO5NNNC-1 Passive 
 C4-1 CL05B104KO5NNNC-1 Passive 
@@ -5529,17 +6113,16 @@ U46-24 STM32F103C8T6-VDD_1 Passive
 U46-36 STM32F103C8T6-VDD_2 Passive 
 U46-48 STM32F103C8T6-VDD_3 Passive 
 C5-1 CL05B104KO5NNNC-1 Passive 
-C6-2 CL05A105KA5NQNC-2 Passive 
-C7-2 CL05B103KB5NNNC-2 Input   
 RIGHT_PORT-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
 TV1-5 SRV05-4-P-T7_C85364-5 Input   
 TV2-5 SRV05-4-P-T7_C85364-5 Input   
-R9-2 0402WGF1002TCE-2 Input   
+R9-2 0402WGF1001TCE-2 Input   
 PROGRAM_PORT-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
 C1-2 CL05A106MQ5NUNC-2 Input   
 R8-2 0402WGF1002TCE-2 Input   
 TV3-5 SRV05-4-P-T7_C85364-5 Input   
 TV5-5 SRV05-4-P-T7_C85364-5 Input   
+L1-1 GZ1608D601TF-1 Passive 
 )
 (
 $1I10958\$1N697 
@@ -5552,7 +6135,7 @@ U4-2 74HC4052PW,118-2Y2 Passive
 U3-3 SC4011SO-N-TR-OUT Passive 
 )
 (
-$1N11047 
+A_IN1 
 U4-3 74HC4052PW,118-2Z Passive 
 U46-11 STM32F103C8T6-PA1 Passive 
 )
@@ -5577,7 +6160,7 @@ U4-12 74HC4052PW,118-1Y0 Passive
 U7-3 SC4011SO-N-TR-OUT Passive 
 )
 (
-$1N11046 
+A_IN0 
 U4-13 74HC4052PW,118-1Z Passive 
 U46-10 STM32F103C8T6-PA0-WKUP Passive 
 )
@@ -5602,7 +6185,7 @@ U22-2 74HC4052PW,118-2Y2 Passive
 U21-3 SC4011SO-N-TR-OUT Passive 
 )
 (
-$1N11051 
+A_IN5 
 U22-3 74HC4052PW,118-2Z Passive 
 U46-15 STM32F103C8T6-PA5 Passive 
 )
@@ -5627,7 +6210,7 @@ U22-12 74HC4052PW,118-1Y0 Passive
 U25-3 SC4011SO-N-TR-OUT Passive 
 )
 (
-$1N11050 
+A_IN4 
 U22-13 74HC4052PW,118-1Z Passive 
 U46-14 STM32F103C8T6-PA4 Passive 
 )
@@ -5652,7 +6235,7 @@ U31-2 74HC4052PW,118-2Y2 Passive
 U30-3 SC4011SO-N-TR-OUT Passive 
 )
 (
-$1N11053 
+A_IN7 
 U31-3 74HC4052PW,118-2Z Passive 
 U46-17 STM32F103C8T6-PA7 Passive 
 )
@@ -5677,7 +6260,7 @@ U31-12 74HC4052PW,118-1Y0 Passive
 U34-3 SC4011SO-N-TR-OUT Passive 
 )
 (
-$1N11052 
+A_IN6 
 U31-13 74HC4052PW,118-1Z Passive 
 U46-16 STM32F103C8T6-PA6 Passive 
 )
@@ -5702,7 +6285,7 @@ U40-2 74HC4052PW,118-2Y2 Passive
 U39-3 SC4011SO-N-TR-OUT Passive 
 )
 (
-$1N11074 
+A_IN9 
 U40-3 74HC4052PW,118-2Z Passive 
 U46-19 STM32F103C8T6-PB1 Passive 
 )
@@ -5717,7 +6300,7 @@ U40-12 74HC4052PW,118-1Y0 Passive
 U42-3 SC4011SO-N-TR-OUT Passive 
 )
 (
-$1N11070 
+A_IN8 
 U40-13 74HC4052PW,118-1Z Passive 
 U46-18 STM32F103C8T6-PB0 Passive 
 )
@@ -5732,40 +6315,54 @@ U40-15 74HC4052PW,118-1Y2 Passive
 U38-3 SC4011SO-N-TR-OUT Passive 
 )
 (
-$1N22577 
+ID4 
 R1-2 0402WGF1002TCE-2 Input   
 U46-46 STM32F103C8T6-PB9 Passive 
 )
 (
-$1N22579 
+ID3 
 R2-2 0402WGF1002TCE-2 Input   
 U46-45 STM32F103C8T6-PB8 Passive 
 )
 (
-$1N22571 
+ID2 
 R3-2 0402WGF1002TCE-2 Input   
 U46-43 STM32F103C8T6-PB7 Passive 
 )
 (
-$1N22573 
+ID1 
 R4-2 0402WGF1002TCE-2 Input   
 U46-42 STM32F103C8T6-PB6 Passive 
 )
 (
-$1N22575 
+ID0 
 R5-2 0402WGF1002TCE-2 Input   
 U46-41 STM32F103C8T6-PB5 Passive 
 )
 (
-RESET 
+PGM_NRST 
 SW3-2 TS-1088-AR02016-2 Passive 
 C36-1 CC0603KRX7R9BB104-1 Passive 
 D6-2 H5VND5BA-2 Passive 
 U46-7 STM32F103C8T6-NRST Passive 
 RIGHT_PORT-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
-TV2-4 SRV05-4-P-T7_C85364-4 Input   
 PROGRAM_PORT-6 B8B-PH-SM4-TBT(LF)(SN)-6 Passive 
 TV5-6 SRV05-4-P-T7_C85364-6 Input   
+)
+(
+BOOT0 
+R37-1 0603WAF1002T5E-1 Input   
+FN3_BOOT0-2 TS-1088-AR02016-2 Passive 
+C40-1 CC0603KRX7R9BB104-1 Passive 
+D8-2 H5VND5BA-2 Passive 
+U46-44 STM32F103C8T6-BOOT0 Passive 
+)
+(
+SW_FN1 
+SW4-2 TS-1088-AR02016-2 Passive 
+C41-1 CC0603KRX7R9BB104-1 Passive 
+D9-2 H5VND5BA-2 Passive 
+U46-33 STM32F103C8T6-PA12 Passive 
 )
 (
 SPI_NSS 
@@ -5793,50 +6390,63 @@ RIGHT_PORT-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive
 TV1-4 SRV05-4-P-T7_C85364-4 Input   
 )
 (
-USART_TX 
+READY 
+U46-29 STM32F103C8T6-PA8 Passive 
+RIGHT_PORT-8 B8B-PH-SM4-TBT(LF)(SN)-8 Passive 
+TV5-4 SRV05-4-P-T7_C85364-4 Input   
+)
+(
+PGM_USART_TX 
 U46-30 STM32F103C8T6-PA9 Passive 
 TV2-6 SRV05-4-P-T7_C85364-6 Input   
 PROGRAM_PORT-7 B8B-PH-SM4-TBT(LF)(SN)-7 Passive 
 )
 (
-PA12 
-U46-33 STM32F103C8T6-PA12 Passive 
-R7-2 0402WGF1002TCE-2 Input   
+PGM_USART_RX 
+U46-31 STM32F103C8T6-PA10 Passive 
+PROGRAM_PORT-8 B8B-PH-SM4-TBT(LF)(SN)-8 Passive 
+TV3-4 SRV05-4-P-T7_C85364-4 Input   
 )
 (
-SWDIO 
+LED_FN1 
+U46-32 STM32F103C8T6-PA11 Passive 
+R7-2 0402WGF1001TCE-2 Input   
+)
+(
+PGM_SWDIO 
 U46-34 STM32F103C8T6-PA13 Passive 
 TV2-3 SRV05-4-P-T7_C85364-3 Input   
 PROGRAM_PORT-5 B8B-PH-SM4-TBT(LF)(SN)-5 Passive 
 )
 (
-SWCLK 
+PGM_SWCLK 
 U46-37 STM32F103C8T6-PA14 Passive 
 TV2-1 SRV05-4-P-T7_C85364-1 Input   
 PROGRAM_PORT-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive 
 )
 (
-READY 
-RIGHT_PORT-8 B8B-PH-SM4-TBT(LF)(SN)-8 Passive 
-TV5-4 SRV05-4-P-T7_C85364-4 Input   
-)
-(
-$1N18835 
-LED_CPU-1 KT-0805G-A Passive 
-R7-1 0402WGF1002TCE-1 Input   
-)
-(
-$1N18841 
-LED_POW-1 KT-0805Y-+ Passive 
-R9-1 0402WGF1002TCE-1 Input   
-)
-(
-SWO 
+PGM_SWO 
+U46-39 STM32F103C8T6-PB3 Passive 
 PROGRAM_PORT-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
 TV3-6 SRV05-4-P-T7_C85364-6 Input   
 )
 (
-USART_RX 
-PROGRAM_PORT-8 B8B-PH-SM4-TBT(LF)(SN)-8 Passive 
-TV3-4 SRV05-4-P-T7_C85364-4 Input   
+VDDA 
+C6-2 CL05A105KA5NQNC-2 Passive 
+C7-2 CL05B103KB5NNNC-2 Input   
+L1-2 GZ1608D601TF-2 Passive 
+)
+(
+PGM_RESET 
+TV2-4 SRV05-4-P-T7_C85364-4 Input   
+)
+(
+$1N18835 
+LED_FN1-1 KT-0805G-A Passive 
+R7-1 0402WGF1001TCE-1 Input   
+)
+(
+$1N18841 
+LED_POW-1 KT-0805Y-+ Passive 
+R9-1 0402WGF1001TCE-1 Input   
 )

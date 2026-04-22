@@ -1185,356 +1185,6 @@ gge166
 ]
 [
 DESIGNATOR
-USB1
-FOOTPRINT
-USB-B-SMD_HC-TYPE-B-2.0-VS15-1.5A-15
-PARTTYPE
-HC-TYPE-B-2.0-VS15-1.5A-15
-DESCRIPTION
-Connector Type:Type-B Gender:Female Mounting Style:Standing paste Number of Contacts:4P Number of Ports:1 Current Rating - Power (Max):1.5A Operating Temperature Range:-20℃~+60℃ Operating Temperature Range:-20℃~+60℃
-Component Kind
-Standard
-LCSC Part Name
-Type-B 母 立贴
-Supplier Part
-C5377899
-Manufacturer
-HCTL(华灿天禄)
-Manufacturer Part
-HC-TYPE-B-2.0-VS15-1.5A-15
-Supplier Footprint
-SMD
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20230320/144330B5AC7CB9E19EA5796A523C1B66.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-USB-B-SMD_HC-TYPE-B-2.0-VS15-1.5A-15
-Connector Type
-Type-B
-Gender
-Female
-Mounting Style
-Standing paste
-Number of Contacts
-4P
-Number of Ports
-1
-Current Rating - Power (Max)
-1.5A
-Operating Temperature Range
--20℃~+60℃
-Description
-Connector Type:Type-B Gender:Female Mounting Style:Standing paste Number of Contacts:4P Number of Ports:1 Current Rating - Power (Max):1.5A Operating Temperature Range:-20℃~+60℃ Operating Temperature Range:-20℃~+60℃
-Symbol
-HC-TYPE-B-2.0-VS15-1.5A-15
-Designator
-USB1
-Name
-HC-TYPE-B-2.0-VS15-1.5A-15
-Device
-HC-TYPE-B-2.0-VS15-1.5A-15
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge168
-
-*
-]
-[
-DESIGNATOR
-LEFT_WING_PORT
-FOOTPRINT
-CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
-PARTTYPE
-B8B-PH-SM4-TBT(LF)(SN)
-DESCRIPTION
-Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
-Component Kind
-Standard
-LCSC Part Name
-1x8P 间距:2mm 立贴 系列:PH
-Supplier Part
-C265441
-Manufacturer
-JST
-Manufacturer Part
-B8B-PH-SM4-TBT(LF)(SN)
-Supplier Footprint
-SMD,P=2mm
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://item.szlcsc.com/datasheet/B8B-PH-SM4-TBT(LF)(SN)/255723.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
-Pins Structure
-1x8P
-Pitch
-2mm
-Mounting Type
-Surface Mount,Vertical
-Reference Series
-PH
-Number of Pins
-8P
-Number of Rows
-1
-Number of PINs Per Row
-8
-Row Spacing
--
-Current Rating
-2A
-Contact Material
-Copper Alloy
-Contact Plating
-Tin
-Operating Temperature
--25℃~+85℃
-Voltage Rating
-100V
-Plastic Material
-PA
-Flame Retardant Rating
-UL94V-0
-Supplementary Features
-Auxiliary Solder Pin
-Color
-Beige
-Z-Height of the Board
-6.6mm
-X-Length of Bottom Edge on Board (Spacing Line)
-19.95mm
-Y-Width of Bottom Edge on Board
-7mm
-Description
-Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
-Symbol
-B8B-PH-SM4-TBT(LF)(SN)
-Designator
-LEFT_WING_PORT
-Name
-B8B-PH-SM4-TBT(LF)(SN)
-Device
-B8B-PH-SM4-TBT(LF)(SN)
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge165
-
-*
-]
-[
-DESIGNATOR
-RIGHT_WING_PORT
-FOOTPRINT
-CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
-PARTTYPE
-B8B-PH-SM4-TBT(LF)(SN)
-DESCRIPTION
-Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
-Component Kind
-Standard
-LCSC Part Name
-1x8P 间距:2mm 立贴 系列:PH
-Supplier Part
-C265441
-Manufacturer
-JST
-Manufacturer Part
-B8B-PH-SM4-TBT(LF)(SN)
-Supplier Footprint
-SMD,P=2mm
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://item.szlcsc.com/datasheet/B8B-PH-SM4-TBT(LF)(SN)/255723.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
-Pins Structure
-1x8P
-Pitch
-2mm
-Mounting Type
-Surface Mount,Vertical
-Reference Series
-PH
-Number of Pins
-8P
-Number of Rows
-1
-Number of PINs Per Row
-8
-Row Spacing
--
-Current Rating
-2A
-Contact Material
-Copper Alloy
-Contact Plating
-Tin
-Operating Temperature
--25℃~+85℃
-Voltage Rating
-100V
-Plastic Material
-PA
-Flame Retardant Rating
-UL94V-0
-Supplementary Features
-Auxiliary Solder Pin
-Color
-Beige
-Z-Height of the Board
-6.6mm
-X-Length of Bottom Edge on Board (Spacing Line)
-19.95mm
-Y-Width of Bottom Edge on Board
-7mm
-Description
-Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
-Symbol
-B8B-PH-SM4-TBT(LF)(SN)
-Designator
-RIGHT_WING_PORT
-Name
-B8B-PH-SM4-TBT(LF)(SN)
-Device
-B8B-PH-SM4-TBT(LF)(SN)
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge165_1
-
-*
-]
-[
-DESIGNATOR
-PROGRAM_PORT
-FOOTPRINT
-CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
-PARTTYPE
-B8B-PH-SM4-TBT(LF)(SN)
-DESCRIPTION
-Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
-Component Kind
-Standard
-LCSC Part Name
-1x8P 间距:2mm 立贴 系列:PH
-Supplier Part
-C265441
-Manufacturer
-JST
-Manufacturer Part
-B8B-PH-SM4-TBT(LF)(SN)
-Supplier Footprint
-SMD,P=2mm
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://item.szlcsc.com/datasheet/B8B-PH-SM4-TBT(LF)(SN)/255723.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
-Pins Structure
-1x8P
-Pitch
-2mm
-Mounting Type
-Surface Mount,Vertical
-Reference Series
-PH
-Number of Pins
-8P
-Number of Rows
-1
-Number of PINs Per Row
-8
-Row Spacing
--
-Current Rating
-2A
-Contact Material
-Copper Alloy
-Contact Plating
-Tin
-Operating Temperature
--25℃~+85℃
-Voltage Rating
-100V
-Plastic Material
-PA
-Flame Retardant Rating
-UL94V-0
-Supplementary Features
-Auxiliary Solder Pin
-Color
-Beige
-Z-Height of the Board
-6.6mm
-X-Length of Bottom Edge on Board (Spacing Line)
-19.95mm
-Y-Width of Bottom Edge on Board
-7mm
-Description
-Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
-Symbol
-B8B-PH-SM4-TBT(LF)(SN)
-Designator
-PROGRAM_PORT
-Name
-B8B-PH-SM4-TBT(LF)(SN)
-Device
-B8B-PH-SM4-TBT(LF)(SN)
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge165_2
-
-*
-]
-[
-DESIGNATOR
 U54
 FOOTPRINT
 SOT-23-3_L2.9-W1.3-P1.90-LS2.8-BR
@@ -1734,454 +1384,6 @@ Channel ID
 
 Unique ID
 gge203
-
-*
-]
-[
-DESIGNATOR
-TV1
-FOOTPRINT
-SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
-PARTTYPE
-SRV05-4-P-T7_C85364
-DESCRIPTION
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Component Kind
-Standard
-LCSC Part Name
-SRV05-4-P-T7
-Supplier Part
-C85364
-Manufacturer
-PROTEK
-Manufacturer Part
-SRV05-4-P-T7
-Supplier Footprint
-SOT-23-6
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
-Reverse Stand-Off Voltage (Vrwm)
-5V
-Clamping Voltage
-12V
-Peak Pulse Current (Ipp)
-1A@8/20us
-Voltage - Breakdown
-6V
-Type
-TVS
-Description
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Symbol
-SRV05-4-P-T7
-Designator
-TV1
-Name
-SRV05-4-P-T7
-Device
-SRV05-4-P-T7_C85364
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge169
-
-*
-]
-[
-DESIGNATOR
-TV2
-FOOTPRINT
-SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
-PARTTYPE
-SRV05-4-P-T7_C85364
-DESCRIPTION
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Component Kind
-Standard
-LCSC Part Name
-SRV05-4-P-T7
-Supplier Part
-C85364
-Manufacturer
-PROTEK
-Manufacturer Part
-SRV05-4-P-T7
-Supplier Footprint
-SOT-23-6
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
-Reverse Stand-Off Voltage (Vrwm)
-5V
-Clamping Voltage
-12V
-Peak Pulse Current (Ipp)
-1A@8/20us
-Voltage - Breakdown
-6V
-Type
-TVS
-Description
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Symbol
-SRV05-4-P-T7
-Designator
-TV2
-Name
-SRV05-4-P-T7
-Device
-SRV05-4-P-T7_C85364
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge169_1
-
-*
-]
-[
-DESIGNATOR
-TV3
-FOOTPRINT
-SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
-PARTTYPE
-SRV05-4-P-T7_C85364
-DESCRIPTION
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Component Kind
-Standard
-LCSC Part Name
-SRV05-4-P-T7
-Supplier Part
-C85364
-Manufacturer
-PROTEK
-Manufacturer Part
-SRV05-4-P-T7
-Supplier Footprint
-SOT-23-6
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
-Reverse Stand-Off Voltage (Vrwm)
-5V
-Clamping Voltage
-12V
-Peak Pulse Current (Ipp)
-1A@8/20us
-Voltage - Breakdown
-6V
-Type
-TVS
-Description
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Symbol
-SRV05-4-P-T7
-Designator
-TV3
-Name
-SRV05-4-P-T7
-Device
-SRV05-4-P-T7_C85364
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge169_2
-
-*
-]
-[
-DESIGNATOR
-TV4
-FOOTPRINT
-SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
-PARTTYPE
-SRV05-4-P-T7_C85364
-DESCRIPTION
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Component Kind
-Standard
-LCSC Part Name
-SRV05-4-P-T7
-Supplier Part
-C85364
-Manufacturer
-PROTEK
-Manufacturer Part
-SRV05-4-P-T7
-Supplier Footprint
-SOT-23-6
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
-Reverse Stand-Off Voltage (Vrwm)
-5V
-Clamping Voltage
-12V
-Peak Pulse Current (Ipp)
-1A@8/20us
-Voltage - Breakdown
-6V
-Type
-TVS
-Description
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Symbol
-SRV05-4-P-T7
-Designator
-TV4
-Name
-SRV05-4-P-T7
-Device
-SRV05-4-P-T7_C85364
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge169_3
-
-*
-]
-[
-DESIGNATOR
-TV5
-FOOTPRINT
-SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
-PARTTYPE
-SRV05-4-P-T7_C85364
-DESCRIPTION
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Component Kind
-Standard
-LCSC Part Name
-SRV05-4-P-T7
-Supplier Part
-C85364
-Manufacturer
-PROTEK
-Manufacturer Part
-SRV05-4-P-T7
-Supplier Footprint
-SOT-23-6
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
-Reverse Stand-Off Voltage (Vrwm)
-5V
-Clamping Voltage
-12V
-Peak Pulse Current (Ipp)
-1A@8/20us
-Voltage - Breakdown
-6V
-Type
-TVS
-Description
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Symbol
-SRV05-4-P-T7
-Designator
-TV5
-Name
-SRV05-4-P-T7
-Device
-SRV05-4-P-T7_C85364
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge169_4
-
-*
-]
-[
-DESIGNATOR
-TV11
-FOOTPRINT
-SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
-PARTTYPE
-SRV05-4-P-T7_C85364
-DESCRIPTION
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Component Kind
-Standard
-LCSC Part Name
-SRV05-4-P-T7
-Supplier Part
-C85364
-Manufacturer
-PROTEK
-Manufacturer Part
-SRV05-4-P-T7
-Supplier Footprint
-SOT-23-6
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
-Reverse Stand-Off Voltage (Vrwm)
-5V
-Clamping Voltage
-12V
-Peak Pulse Current (Ipp)
-1A@8/20us
-Voltage - Breakdown
-6V
-Type
-TVS
-Description
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Symbol
-SRV05-4-P-T7
-Designator
-TV11
-Name
-SRV05-4-P-T7
-Device
-SRV05-4-P-T7_C85364
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge170
-
-*
-]
-[
-DESIGNATOR
-TV7
-FOOTPRINT
-SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
-PARTTYPE
-SRV05-4-P-T7_C85364
-DESCRIPTION
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Component Kind
-Standard
-LCSC Part Name
-SRV05-4-P-T7
-Supplier Part
-C85364
-Manufacturer
-PROTEK
-Manufacturer Part
-SRV05-4-P-T7
-Supplier Footprint
-SOT-23-6
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
-Reverse Stand-Off Voltage (Vrwm)
-5V
-Clamping Voltage
-12V
-Peak Pulse Current (Ipp)
-1A@8/20us
-Voltage - Breakdown
-6V
-Type
-TVS
-Description
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Symbol
-SRV05-4-P-T7
-Designator
-TV7
-Name
-SRV05-4-P-T7
-Device
-SRV05-4-P-T7_C85364
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge170_1
 
 *
 ]
@@ -3227,138 +2429,6 @@ gge218
 ]
 [
 DESIGNATOR
-EXPR_PEDAL
-FOOTPRINT
-AUDIO-TH_PJ-603A
-PARTTYPE
-PJ-603A
-DESCRIPTION
-Connector Type:6.35mm Headphone Jack Current Rating:500mA Voltage Rating (Max):30V Contact Material:Brass Contact Plating:Silver Operating Temperature:-20℃~+70℃ Operating Temperature:-20℃~+70℃
-Component Kind
-Standard
-Supplier
-LCSC
-Supplier Part
-C309273
-Manufacturer
-HOOYA(皓宇电子)
-Manufacturer Part
-PJ-603A
-JLCPCB Part Class
-Extended Part
-LCSC Part Name
-三件套 6.35mm耳机座
-Supplier Footprint
-插件
-Datasheet
-https://item.szlcsc.com/datasheet/PJ-603A/292934.html
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-AUDIO-SMD_PJ-603A
-Connector Type
-6.35mm Headphone Jack
-Current Rating
-500mA
-Voltage Rating (Max)
-30V
-Contact Material
-Brass
-Contact Plating
-Silver
-Operating Temperature
--20℃~+70℃
-Description
-Connector Type:6.35mm Headphone Jack Current Rating:500mA Voltage Rating (Max):30V Contact Material:Brass Contact Plating:Silver Operating Temperature:-20℃~+70℃ Operating Temperature:-20℃~+70℃
-Symbol
-PJ-603A
-Designator
-EXPR_PEDAL
-Name
-PJ-603A
-Device
-PJ-603A
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge219
-
-*
-]
-[
-DESIGNATOR
-SUS_PEDAL
-FOOTPRINT
-AUDIO-TH_PJ-603A
-PARTTYPE
-PJ-603A
-DESCRIPTION
-Connector Type:6.35mm Headphone Jack Current Rating:500mA Voltage Rating (Max):30V Contact Material:Brass Contact Plating:Silver Operating Temperature:-20℃~+70℃ Operating Temperature:-20℃~+70℃
-Component Kind
-Standard
-Supplier
-LCSC
-Supplier Part
-C309273
-Manufacturer
-HOOYA(皓宇电子)
-Manufacturer Part
-PJ-603A
-JLCPCB Part Class
-Extended Part
-LCSC Part Name
-三件套 6.35mm耳机座
-Supplier Footprint
-插件
-Datasheet
-https://item.szlcsc.com/datasheet/PJ-603A/292934.html
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-AUDIO-SMD_PJ-603A
-Connector Type
-6.35mm Headphone Jack
-Current Rating
-500mA
-Voltage Rating (Max)
-30V
-Contact Material
-Brass
-Contact Plating
-Silver
-Operating Temperature
--20℃~+70℃
-Description
-Connector Type:6.35mm Headphone Jack Current Rating:500mA Voltage Rating (Max):30V Contact Material:Brass Contact Plating:Silver Operating Temperature:-20℃~+70℃ Operating Temperature:-20℃~+70℃
-Symbol
-PJ-603A
-Designator
-SUS_PEDAL
-Name
-PJ-603A
-Device
-PJ-603A
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge220
-
-*
-]
-[
-DESIGNATOR
 LED_FN1
 FOOTPRINT
 LED0805-RD
@@ -3509,142 +2579,6 @@ gge222
 ]
 [
 DESIGNATOR
-R30
-FOOTPRINT
-R0603
-PARTTYPE
-0603WAF3901T5E
-DESCRIPTION
-Type:Thick Film Resistor Resistance:3.9kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
-Component Kind
-Standard
-LCSC Part Name
-3.9kΩ ±1% 100mW 厚膜电阻
-Supplier Part
-C23018
-Manufacturer
-UNI-ROYAL(厚声)
-Manufacturer Part
-0603WAF3901T5E
-Supplier Footprint
-0603
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://item.szlcsc.com/datasheet/0603WAF3901T5E/23745.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-R0603
-Type
-Thick Film Resistor
-Value
-3.9kΩ
-Tolerance
-±1%
-Power(Watts)
-100mW
-Voltage-Supply(Max)
-75V
-Temperature Coefficient
-±100ppm/℃
-Operating Temperature
--55℃~+155℃
-Description
-Type:Thick Film Resistor Resistance:3.9kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
-Symbol
-0603WAF3901T5E
-Designator
-R30
-Name
-3.9kΩ
-Device
-0603WAF3901T5E
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge223
-
-*
-]
-[
-DESIGNATOR
-R31
-FOOTPRINT
-R0603
-PARTTYPE
-0603WAF3901T5E
-DESCRIPTION
-Type:Thick Film Resistor Resistance:3.9kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
-Component Kind
-Standard
-LCSC Part Name
-3.9kΩ ±1% 100mW 厚膜电阻
-Supplier Part
-C23018
-Manufacturer
-UNI-ROYAL(厚声)
-Manufacturer Part
-0603WAF3901T5E
-Supplier Footprint
-0603
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://item.szlcsc.com/datasheet/0603WAF3901T5E/23745.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-R0603
-Type
-Thick Film Resistor
-Value
-3.9kΩ
-Tolerance
-±1%
-Power(Watts)
-100mW
-Voltage-Supply(Max)
-75V
-Temperature Coefficient
-±100ppm/℃
-Operating Temperature
--55℃~+155℃
-Description
-Type:Thick Film Resistor Resistance:3.9kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
-Symbol
-0603WAF3901T5E
-Designator
-R31
-Name
-3.9kΩ
-Device
-0603WAF3901T5E
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge224
-
-*
-]
-[
-DESIGNATOR
 U58
 FOOTPRINT
 SOIC-8_L5.0-W4.0-P1.27-LS6.0-BL
@@ -3732,422 +2666,6 @@ Channel ID
 
 Unique ID
 gge225
-
-*
-]
-[
-DESIGNATOR
-LOAD_CELL_PORT
-FOOTPRINT
-CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
-PARTTYPE
-B8B-PH-SM4-TBT(LF)(SN)
-DESCRIPTION
-Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
-Component Kind
-Standard
-LCSC Part Name
-1x8P 间距:2mm 立贴 系列:PH
-Supplier Part
-C265441
-Manufacturer
-JST
-Manufacturer Part
-B8B-PH-SM4-TBT(LF)(SN)
-Supplier Footprint
-SMD,P=2mm
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://item.szlcsc.com/datasheet/B8B-PH-SM4-TBT(LF)(SN)/255723.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
-Pins Structure
-1x8P
-Pitch
-2mm
-Mounting Type
-Surface Mount,Vertical
-Reference Series
-PH
-Number of Pins
-8P
-Number of Rows
-1
-Number of PINs Per Row
-8
-Row Spacing
--
-Current Rating
-2A
-Contact Material
-Copper Alloy
-Contact Plating
-Tin
-Operating Temperature
--25℃~+85℃
-Voltage Rating
-100V
-Plastic Material
-PA
-Flame Retardant Rating
-UL94V-0
-Supplementary Features
-Auxiliary Solder Pin
-Color
-Beige
-Z-Height of the Board
-6.6mm
-X-Length of Bottom Edge on Board (Spacing Line)
-19.95mm
-Y-Width of Bottom Edge on Board
-7mm
-Description
-Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
-Symbol
-B8B-PH-SM4-TBT(LF)(SN)
-Designator
-LOAD_CELL_PORT
-Name
-B8B-PH-SM4-TBT(LF)(SN)
-Device
-B8B-PH-SM4-TBT(LF)(SN)
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge165_3
-
-*
-]
-[
-DESIGNATOR
-C31
-FOOTPRINT
-C0603
-PARTTYPE
-CC0603KRX7R9BB104
-DESCRIPTION
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
-Component Kind
-Standard
-Symbol
-CC0603KRX7R9BB104
-LCSC Part Name
-100nF ±10% 50V
-Supplier Part
-C14663
-Manufacturer
-YAGEO(国巨)
-Manufacturer Part
-CC0603KRX7R9BB104
-Supplier Footprint
-0603
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20170116/1484561234239.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-C0603_L1.6-W0.8-H0.8
-Tolerance
-±10%
-Voltage Rated
-
-Temperature Coefficient
-
-Designator
-C31
-Value
-100nF
-Description
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
-Device
-CC0603KRX7R9BB104
-Unique ID
-gge226
-Reuse Block
-
-Group ID
-
-Channel ID
-
-
-*
-]
-[
-DESIGNATOR
-C32
-FOOTPRINT
-C0603
-PARTTYPE
-CC0603KRX7R9BB104
-DESCRIPTION
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
-Component Kind
-Standard
-Supplier Part
-C14663
-Manufacturer
-YAGEO(国巨)
-Manufacturer Part
-CC0603KRX7R9BB104
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20170116/1484561234239.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-C0603_L1.6-W0.8-H0.8
-Tolerance
-±10%
-Voltage Rated
-
-Temperature Coefficient
-
-LCSC Part Name
-100nF ±10% 50V
-Supplier Footprint
-0603
-Value
-100nF
-Description
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
-Symbol
-CL05B104KO5NNNC
-Designator
-C32
-Device
-CC0603KRX7R9BB104
-Unique ID
-gge195_6
-Reuse Block
-
-Group ID
-
-Channel ID
-
-
-*
-]
-[
-DESIGNATOR
-TV12
-FOOTPRINT
-SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
-PARTTYPE
-SRV05-4-P-T7_C85364
-DESCRIPTION
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Component Kind
-Standard
-LCSC Part Name
-SRV05-4-P-T7
-Supplier Part
-C85364
-Manufacturer
-PROTEK
-Manufacturer Part
-SRV05-4-P-T7
-Supplier Footprint
-SOT-23-6
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
-Reverse Stand-Off Voltage (Vrwm)
-5V
-Clamping Voltage
-12V
-Peak Pulse Current (Ipp)
-1A@8/20us
-Voltage - Breakdown
-6V
-Type
-TVS
-Description
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Symbol
-SRV05-4-P-T7
-Designator
-TV12
-Name
-SRV05-4-P-T7
-Device
-SRV05-4-P-T7_C85364
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge170_2
-
-*
-]
-[
-DESIGNATOR
-TV14
-FOOTPRINT
-SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
-PARTTYPE
-SRV05-4-P-T7_C85364
-DESCRIPTION
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Component Kind
-Standard
-LCSC Part Name
-SRV05-4-P-T7
-Supplier Part
-C85364
-Manufacturer
-PROTEK
-Manufacturer Part
-SRV05-4-P-T7
-Supplier Footprint
-SOT-23-6
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
-Reverse Stand-Off Voltage (Vrwm)
-5V
-Clamping Voltage
-12V
-Peak Pulse Current (Ipp)
-1A@8/20us
-Voltage - Breakdown
-6V
-Type
-TVS
-Description
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Symbol
-SRV05-4-P-T7
-Designator
-TV14
-Name
-SRV05-4-P-T7
-Device
-SRV05-4-P-T7_C85364
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge170_3
-
-*
-]
-[
-DESIGNATOR
-D7
-FOOTPRINT
-SMB_L4.6-W3.6-LS5.3-RD
-PARTTYPE
-SMBJ13A_C10209
-DESCRIPTION
-Polarity:Unidirectional Reverse Stand-Off Voltage (Vrwm):13V Clamping Voltage:21.5V Peak Pulse Current (Ipp):27.9A@10/1000us Peak Pulse Power Dissipation (Ppp):600W@10/1000us Voltage - Breakdown:16.5V Reverse Leakage Current (Ir):1uA Operating Temperature
-Component Kind
-Standard
-Supplier
-LCSC
-Manufacturer Part
-SMBJ13A
-Manufacturer
-RUILON(瑞隆源)
-Supplier Part
-C10209
-JLCPCB Part Class
-Extended Part
-LCSC Part Name
-单向TVS 13V截止 峰值浪涌电流：27.9A@10/1000us
-Supplier Footprint
-DO-214AA(SMB)
-Datasheet
-https://item.szlcsc.com/datasheet/SMBJ13A/10749.html
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-SMB_L4.6-W3.6-LS5.3-RD
-Polarity
-Unidirectional
-Reverse Stand-Off Voltage (Vrwm)
-13V
-Clamping Voltage
-21.5V
-Peak Pulse Current (Ipp)
-27.9A@10/1000us
-Peak Pulse Power Dissipation (Ppp)
-600W@10/1000us
-Voltage - Breakdown
-16.5V
-Reverse Leakage Current (Ir)
-1uA
-Operating Temperature
--55℃~+150℃
-level of protection
-IEC 61000-4-4；IEC 61000-4-2
-Type
-TVS
-Description
-Polarity:Unidirectional Reverse Stand-Off Voltage (Vrwm):13V Clamping Voltage:21.5V Peak Pulse Current (Ipp):27.9A@10/1000us Peak Pulse Power Dissipation (Ppp):600W@10/1000us Voltage - Breakdown:16.5V Reverse Leakage Current (Ir):1uA Operating Temperature
-Symbol
-SMBJ13A
-Designator
-D7
-Name
-SMBJ13A
-Device
-SMBJ13A_C10209
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge253
 
 *
 ]
@@ -6953,6 +5471,1764 @@ gge234_1
 
 *
 ]
+[
+DESIGNATOR
+R39
+FOOTPRINT
+R0603
+PARTTYPE
+0603WAF1200T5E
+DESCRIPTION
+Type:Thick Film Resistor Resistance:120Ω Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Component Kind
+Standard
+Supplier
+LCSC
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0603WAF1200T5E
+Supplier Part
+C22787
+Value
+120Ω
+JLCPCB Part Class
+Basic Part
+LCSC Part Name
+120Ω ±1% 100mW 厚膜电阻
+Supplier Footprint
+0603
+Datasheet
+https://item.szlcsc.com/datasheet/0603WAF1200T5E/23514.html
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0603
+Type
+Thick Film Resistor
+Tolerance
+±1%
+Power(Watts)
+100mW
+Voltage-Supply(Max)
+75V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+Type:Thick Film Resistor Resistance:120Ω Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Symbol
+0603WAF1200T5E
+Designator
+R39
+Name
+120Ω
+Device
+0603WAF1200T5E
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge258
+
+*
+]
+[
+DESIGNATOR
+TV3
+FOOTPRINT
+SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
+PARTTYPE
+SRV05-4-P-T7_C85364
+DESCRIPTION
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Component Kind
+Standard
+LCSC Part Name
+SRV05-4-P-T7
+Supplier Part
+C85364
+Manufacturer
+PROTEK
+Manufacturer Part
+SRV05-4-P-T7
+Supplier Footprint
+SOT-23-6
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
+Reverse Stand-Off Voltage (Vrwm)
+5V
+Clamping Voltage
+12V
+Peak Pulse Current (Ipp)
+1A@8/20us
+Voltage - Breakdown
+6V
+Type
+TVS
+Description
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Symbol
+SRV05-4-P-T7
+Designator
+TV3
+Name
+SRV05-4-P-T7
+Device
+SRV05-4-P-T7_C85364
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge169_2
+
+*
+]
+[
+DESIGNATOR
+U60
+FOOTPRINT
+SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
+PARTTYPE
+TPS2553DBVR
+DESCRIPTION
+Type:High Side Switch Number of Channels:1 Control Input Logic:Active High Maximum Continuous Current:1.5A Voltage - Supply:2.5V~6.5V Voltage - Supply:2.5V~6.5V RDS(on):85mΩ Operating Temperature	-:-40℃~+150℃ Operating Temperature	-:-40℃~+150℃ Features:Ov
+Component Kind
+Standard
+LCSC Part Name
+精密可调限流电源分配开关
+Supplier Part
+C55266
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+TPS2553DBVR
+Supplier Footprint
+SOT-23-6
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://www.ti.com/cn/lit/gpn/tps2553
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
+Type
+High Side Switch
+Number of Channels
+1
+Control Input Logic
+Active High
+Maximum Continuous Current
+1.5A
+Voltage - Supply
+2.5V~6.5V
+RDS(on)
+85mΩ
+Operating Temperature	-
+-40℃~+150℃
+Features
+Overtemperature protection (OTP)；Overcurrent Protection(OCP)
+Description
+Type:High Side Switch Number of Channels:1 Control Input Logic:Active High Maximum Continuous Current:1.5A Voltage - Supply:2.5V~6.5V Voltage - Supply:2.5V~6.5V RDS(on):85mΩ Operating Temperature	-:-40℃~+150℃ Operating Temperature	-:-40℃~+150℃ Features:Ov
+Symbol
+TPS2553DBVR
+Designator
+U60
+Name
+TPS2553DBVR
+Device
+TPS2553DBVR
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge259
+
+*
+]
+[
+DESIGNATOR
+TV2
+FOOTPRINT
+SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
+PARTTYPE
+SRV05-4-P-T7_C85364
+DESCRIPTION
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Component Kind
+Standard
+LCSC Part Name
+SRV05-4-P-T7
+Supplier Part
+C85364
+Manufacturer
+PROTEK
+Manufacturer Part
+SRV05-4-P-T7
+Supplier Footprint
+SOT-23-6
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
+Reverse Stand-Off Voltage (Vrwm)
+5V
+Clamping Voltage
+12V
+Peak Pulse Current (Ipp)
+1A@8/20us
+Voltage - Breakdown
+6V
+Type
+TVS
+Description
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Symbol
+SRV05-4-P-T7
+Designator
+TV2
+Name
+SRV05-4-P-T7
+Device
+SRV05-4-P-T7_C85364
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge169_1
+
+*
+]
+[
+DESIGNATOR
+RIGHT_WING_PORT1
+FOOTPRINT
+CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
+PARTTYPE
+B8B-PH-SM4-TBT(LF)(SN)
+DESCRIPTION
+Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
+Component Kind
+Standard
+LCSC Part Name
+1x8P 间距:2mm 立贴 系列:PH
+Supplier Part
+C265441
+Manufacturer
+JST
+Manufacturer Part
+B8B-PH-SM4-TBT(LF)(SN)
+Supplier Footprint
+SMD,P=2mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/B8B-PH-SM4-TBT(LF)(SN)/255723.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
+Pins Structure
+1x8P
+Pitch
+2mm
+Mounting Type
+Surface Mount,Vertical
+Reference Series
+PH
+Number of Pins
+8P
+Number of Rows
+1
+Number of PINs Per Row
+8
+Row Spacing
+-
+Current Rating
+2A
+Contact Material
+Copper Alloy
+Contact Plating
+Tin
+Operating Temperature
+-25℃~+85℃
+Voltage Rating
+100V
+Plastic Material
+PA
+Flame Retardant Rating
+UL94V-0
+Supplementary Features
+Auxiliary Solder Pin
+Color
+Beige
+Z-Height of the Board
+6.6mm
+X-Length of Bottom Edge on Board (Spacing Line)
+19.95mm
+Y-Width of Bottom Edge on Board
+7mm
+Description
+Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
+Symbol
+B8B-PH-SM4-TBT(LF)(SN)
+Designator
+RIGHT_WING_PORT1
+Name
+B8B-PH-SM4-TBT(LF)(SN)
+Device
+B8B-PH-SM4-TBT(LF)(SN)
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge165_1
+
+*
+]
+[
+DESIGNATOR
+TV5
+FOOTPRINT
+SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
+PARTTYPE
+SRV05-4-P-T7_C85364
+DESCRIPTION
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Component Kind
+Standard
+LCSC Part Name
+SRV05-4-P-T7
+Supplier Part
+C85364
+Manufacturer
+PROTEK
+Manufacturer Part
+SRV05-4-P-T7
+Supplier Footprint
+SOT-23-6
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
+Reverse Stand-Off Voltage (Vrwm)
+5V
+Clamping Voltage
+12V
+Peak Pulse Current (Ipp)
+1A@8/20us
+Voltage - Breakdown
+6V
+Type
+TVS
+Description
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Symbol
+SRV05-4-P-T7
+Designator
+TV5
+Name
+SRV05-4-P-T7
+Device
+SRV05-4-P-T7_C85364
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge169_4
+
+*
+]
+[
+DESIGNATOR
+TV4
+FOOTPRINT
+SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
+PARTTYPE
+SRV05-4-P-T7_C85364
+DESCRIPTION
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Component Kind
+Standard
+LCSC Part Name
+SRV05-4-P-T7
+Supplier Part
+C85364
+Manufacturer
+PROTEK
+Manufacturer Part
+SRV05-4-P-T7
+Supplier Footprint
+SOT-23-6
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
+Reverse Stand-Off Voltage (Vrwm)
+5V
+Clamping Voltage
+12V
+Peak Pulse Current (Ipp)
+1A@8/20us
+Voltage - Breakdown
+6V
+Type
+TVS
+Description
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Symbol
+SRV05-4-P-T7
+Designator
+TV4
+Name
+SRV05-4-P-T7
+Device
+SRV05-4-P-T7_C85364
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge169_3
+
+*
+]
+[
+DESIGNATOR
+LEFT_WING_PORT1
+FOOTPRINT
+CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
+PARTTYPE
+B8B-PH-SM4-TBT(LF)(SN)
+DESCRIPTION
+Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
+Component Kind
+Standard
+LCSC Part Name
+1x8P 间距:2mm 立贴 系列:PH
+Supplier Part
+C265441
+Manufacturer
+JST
+Manufacturer Part
+B8B-PH-SM4-TBT(LF)(SN)
+Supplier Footprint
+SMD,P=2mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/B8B-PH-SM4-TBT(LF)(SN)/255723.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
+Pins Structure
+1x8P
+Pitch
+2mm
+Mounting Type
+Surface Mount,Vertical
+Reference Series
+PH
+Number of Pins
+8P
+Number of Rows
+1
+Number of PINs Per Row
+8
+Row Spacing
+-
+Current Rating
+2A
+Contact Material
+Copper Alloy
+Contact Plating
+Tin
+Operating Temperature
+-25℃~+85℃
+Voltage Rating
+100V
+Plastic Material
+PA
+Flame Retardant Rating
+UL94V-0
+Supplementary Features
+Auxiliary Solder Pin
+Color
+Beige
+Z-Height of the Board
+6.6mm
+X-Length of Bottom Edge on Board (Spacing Line)
+19.95mm
+Y-Width of Bottom Edge on Board
+7mm
+Description
+Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
+Symbol
+B8B-PH-SM4-TBT(LF)(SN)
+Designator
+LEFT_WING_PORT1
+Name
+B8B-PH-SM4-TBT(LF)(SN)
+Device
+B8B-PH-SM4-TBT(LF)(SN)
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge165
+
+*
+]
+[
+DESIGNATOR
+R38
+FOOTPRINT
+R0603
+PARTTYPE
+0603WAF1200T5E
+DESCRIPTION
+Type:Thick Film Resistor Resistance:120Ω Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Component Kind
+Standard
+Supplier
+LCSC
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0603WAF1200T5E
+Supplier Part
+C22787
+Value
+120Ω
+JLCPCB Part Class
+Basic Part
+LCSC Part Name
+120Ω ±1% 100mW 厚膜电阻
+Supplier Footprint
+0603
+Datasheet
+https://item.szlcsc.com/datasheet/0603WAF1200T5E/23514.html
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0603
+Type
+Thick Film Resistor
+Tolerance
+±1%
+Power(Watts)
+100mW
+Voltage-Supply(Max)
+75V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+Type:Thick Film Resistor Resistance:120Ω Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Symbol
+0603WAF1200T5E
+Designator
+R38
+Name
+120Ω
+Device
+0603WAF1200T5E
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge260
+
+*
+]
+[
+DESIGNATOR
+U59
+FOOTPRINT
+SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
+PARTTYPE
+TPS2553DBVR
+DESCRIPTION
+Type:High Side Switch Number of Channels:1 Control Input Logic:Active High Maximum Continuous Current:1.5A Voltage - Supply:2.5V~6.5V Voltage - Supply:2.5V~6.5V RDS(on):85mΩ Operating Temperature	-:-40℃~+150℃ Operating Temperature	-:-40℃~+150℃ Features:Ov
+Component Kind
+Standard
+LCSC Part Name
+精密可调限流电源分配开关
+Supplier Part
+C55266
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+TPS2553DBVR
+Supplier Footprint
+SOT-23-6
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://www.ti.com/cn/lit/gpn/tps2553
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
+Type
+High Side Switch
+Number of Channels
+1
+Control Input Logic
+Active High
+Maximum Continuous Current
+1.5A
+Voltage - Supply
+2.5V~6.5V
+RDS(on)
+85mΩ
+Operating Temperature	-
+-40℃~+150℃
+Features
+Overtemperature protection (OTP)；Overcurrent Protection(OCP)
+Description
+Type:High Side Switch Number of Channels:1 Control Input Logic:Active High Maximum Continuous Current:1.5A Voltage - Supply:2.5V~6.5V Voltage - Supply:2.5V~6.5V RDS(on):85mΩ Operating Temperature	-:-40℃~+150℃ Operating Temperature	-:-40℃~+150℃ Features:Ov
+Symbol
+TPS2553DBVR
+Designator
+U59
+Name
+TPS2553DBVR
+Device
+TPS2553DBVR
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge261
+
+*
+]
+[
+DESIGNATOR
+PROGRAM_PORT1
+FOOTPRINT
+CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
+PARTTYPE
+B8B-PH-SM4-TBT(LF)(SN)
+DESCRIPTION
+Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
+Component Kind
+Standard
+LCSC Part Name
+1x8P 间距:2mm 立贴 系列:PH
+Supplier Part
+C265441
+Manufacturer
+JST
+Manufacturer Part
+B8B-PH-SM4-TBT(LF)(SN)
+Supplier Footprint
+SMD,P=2mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/B8B-PH-SM4-TBT(LF)(SN)/255723.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
+Pins Structure
+1x8P
+Pitch
+2mm
+Mounting Type
+Surface Mount,Vertical
+Reference Series
+PH
+Number of Pins
+8P
+Number of Rows
+1
+Number of PINs Per Row
+8
+Row Spacing
+-
+Current Rating
+2A
+Contact Material
+Copper Alloy
+Contact Plating
+Tin
+Operating Temperature
+-25℃~+85℃
+Voltage Rating
+100V
+Plastic Material
+PA
+Flame Retardant Rating
+UL94V-0
+Supplementary Features
+Auxiliary Solder Pin
+Color
+Beige
+Z-Height of the Board
+6.6mm
+X-Length of Bottom Edge on Board (Spacing Line)
+19.95mm
+Y-Width of Bottom Edge on Board
+7mm
+Description
+Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
+Symbol
+B8B-PH-SM4-TBT(LF)(SN)
+Designator
+PROGRAM_PORT1
+Name
+B8B-PH-SM4-TBT(LF)(SN)
+Device
+B8B-PH-SM4-TBT(LF)(SN)
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge165_2
+
+*
+]
+[
+DESIGNATOR
+TV11
+FOOTPRINT
+SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
+PARTTYPE
+SRV05-4-P-T7_C85364
+DESCRIPTION
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Component Kind
+Standard
+LCSC Part Name
+SRV05-4-P-T7
+Supplier Part
+C85364
+Manufacturer
+PROTEK
+Manufacturer Part
+SRV05-4-P-T7
+Supplier Footprint
+SOT-23-6
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
+Reverse Stand-Off Voltage (Vrwm)
+5V
+Clamping Voltage
+12V
+Peak Pulse Current (Ipp)
+1A@8/20us
+Voltage - Breakdown
+6V
+Type
+TVS
+Description
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Symbol
+SRV05-4-P-T7
+Designator
+TV11
+Name
+SRV05-4-P-T7
+Device
+SRV05-4-P-T7_C85364
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge170
+
+*
+]
+[
+DESIGNATOR
+TV7
+FOOTPRINT
+SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
+PARTTYPE
+SRV05-4-P-T7_C85364
+DESCRIPTION
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Component Kind
+Standard
+LCSC Part Name
+SRV05-4-P-T7
+Supplier Part
+C85364
+Manufacturer
+PROTEK
+Manufacturer Part
+SRV05-4-P-T7
+Supplier Footprint
+SOT-23-6
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
+Reverse Stand-Off Voltage (Vrwm)
+5V
+Clamping Voltage
+12V
+Peak Pulse Current (Ipp)
+1A@8/20us
+Voltage - Breakdown
+6V
+Type
+TVS
+Description
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Symbol
+SRV05-4-P-T7
+Designator
+TV7
+Name
+SRV05-4-P-T7
+Device
+SRV05-4-P-T7_C85364
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge170_1
+
+*
+]
+[
+DESIGNATOR
+LOAD_CELL_PORT1
+FOOTPRINT
+CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
+PARTTYPE
+B8B-PH-SM4-TBT(LF)(SN)
+DESCRIPTION
+Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
+Component Kind
+Standard
+LCSC Part Name
+1x8P 间距:2mm 立贴 系列:PH
+Supplier Part
+C265441
+Manufacturer
+JST
+Manufacturer Part
+B8B-PH-SM4-TBT(LF)(SN)
+Supplier Footprint
+SMD,P=2mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/B8B-PH-SM4-TBT(LF)(SN)/255723.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
+Pins Structure
+1x8P
+Pitch
+2mm
+Mounting Type
+Surface Mount,Vertical
+Reference Series
+PH
+Number of Pins
+8P
+Number of Rows
+1
+Number of PINs Per Row
+8
+Row Spacing
+-
+Current Rating
+2A
+Contact Material
+Copper Alloy
+Contact Plating
+Tin
+Operating Temperature
+-25℃~+85℃
+Voltage Rating
+100V
+Plastic Material
+PA
+Flame Retardant Rating
+UL94V-0
+Supplementary Features
+Auxiliary Solder Pin
+Color
+Beige
+Z-Height of the Board
+6.6mm
+X-Length of Bottom Edge on Board (Spacing Line)
+19.95mm
+Y-Width of Bottom Edge on Board
+7mm
+Description
+Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
+Symbol
+B8B-PH-SM4-TBT(LF)(SN)
+Designator
+LOAD_CELL_PORT1
+Name
+B8B-PH-SM4-TBT(LF)(SN)
+Device
+B8B-PH-SM4-TBT(LF)(SN)
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge165_3
+
+*
+]
+[
+DESIGNATOR
+TV12
+FOOTPRINT
+SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
+PARTTYPE
+SRV05-4-P-T7_C85364
+DESCRIPTION
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Component Kind
+Standard
+LCSC Part Name
+SRV05-4-P-T7
+Supplier Part
+C85364
+Manufacturer
+PROTEK
+Manufacturer Part
+SRV05-4-P-T7
+Supplier Footprint
+SOT-23-6
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
+Reverse Stand-Off Voltage (Vrwm)
+5V
+Clamping Voltage
+12V
+Peak Pulse Current (Ipp)
+1A@8/20us
+Voltage - Breakdown
+6V
+Type
+TVS
+Description
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Symbol
+SRV05-4-P-T7
+Designator
+TV12
+Name
+SRV05-4-P-T7
+Device
+SRV05-4-P-T7_C85364
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge170_2
+
+*
+]
+[
+DESIGNATOR
+TV14
+FOOTPRINT
+SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
+PARTTYPE
+SRV05-4-P-T7_C85364
+DESCRIPTION
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Component Kind
+Standard
+LCSC Part Name
+SRV05-4-P-T7
+Supplier Part
+C85364
+Manufacturer
+PROTEK
+Manufacturer Part
+SRV05-4-P-T7
+Supplier Footprint
+SOT-23-6
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
+Reverse Stand-Off Voltage (Vrwm)
+5V
+Clamping Voltage
+12V
+Peak Pulse Current (Ipp)
+1A@8/20us
+Voltage - Breakdown
+6V
+Type
+TVS
+Description
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Symbol
+SRV05-4-P-T7
+Designator
+TV14
+Name
+SRV05-4-P-T7
+Device
+SRV05-4-P-T7_C85364
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge170_3
+
+*
+]
+[
+DESIGNATOR
+EXPR_PEDAL1
+FOOTPRINT
+AUDIO-TH_PJ-603A
+PARTTYPE
+PJ-603A
+DESCRIPTION
+Connector Type:6.35mm Headphone Jack Current Rating:500mA Voltage Rating (Max):30V Contact Material:Brass Contact Plating:Silver Operating Temperature:-20℃~+70℃ Operating Temperature:-20℃~+70℃
+Component Kind
+Standard
+Supplier
+LCSC
+Supplier Part
+C309273
+Manufacturer
+HOOYA(皓宇电子)
+Manufacturer Part
+PJ-603A
+JLCPCB Part Class
+Extended Part
+LCSC Part Name
+三件套 6.35mm耳机座
+Supplier Footprint
+插件
+Datasheet
+https://item.szlcsc.com/datasheet/PJ-603A/292934.html
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+AUDIO-SMD_PJ-603A
+Connector Type
+6.35mm Headphone Jack
+Current Rating
+500mA
+Voltage Rating (Max)
+30V
+Contact Material
+Brass
+Contact Plating
+Silver
+Operating Temperature
+-20℃~+70℃
+Description
+Connector Type:6.35mm Headphone Jack Current Rating:500mA Voltage Rating (Max):30V Contact Material:Brass Contact Plating:Silver Operating Temperature:-20℃~+70℃ Operating Temperature:-20℃~+70℃
+Symbol
+PJ-603A
+Designator
+EXPR_PEDAL1
+Name
+PJ-603A
+Device
+PJ-603A
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge219
+
+*
+]
+[
+DESIGNATOR
+SUS_PEDAL1
+FOOTPRINT
+AUDIO-TH_PJ-603A
+PARTTYPE
+PJ-603A
+DESCRIPTION
+Connector Type:6.35mm Headphone Jack Current Rating:500mA Voltage Rating (Max):30V Contact Material:Brass Contact Plating:Silver Operating Temperature:-20℃~+70℃ Operating Temperature:-20℃~+70℃
+Component Kind
+Standard
+Supplier
+LCSC
+Supplier Part
+C309273
+Manufacturer
+HOOYA(皓宇电子)
+Manufacturer Part
+PJ-603A
+JLCPCB Part Class
+Extended Part
+LCSC Part Name
+三件套 6.35mm耳机座
+Supplier Footprint
+插件
+Datasheet
+https://item.szlcsc.com/datasheet/PJ-603A/292934.html
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+AUDIO-SMD_PJ-603A
+Connector Type
+6.35mm Headphone Jack
+Current Rating
+500mA
+Voltage Rating (Max)
+30V
+Contact Material
+Brass
+Contact Plating
+Silver
+Operating Temperature
+-20℃~+70℃
+Description
+Connector Type:6.35mm Headphone Jack Current Rating:500mA Voltage Rating (Max):30V Contact Material:Brass Contact Plating:Silver Operating Temperature:-20℃~+70℃ Operating Temperature:-20℃~+70℃
+Symbol
+PJ-603A
+Designator
+SUS_PEDAL1
+Name
+PJ-603A
+Device
+PJ-603A
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge220
+
+*
+]
+[
+DESIGNATOR
+R30
+FOOTPRINT
+R0603
+PARTTYPE
+0603WAF3901T5E
+DESCRIPTION
+Type:Thick Film Resistor Resistance:3.9kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Component Kind
+Standard
+LCSC Part Name
+3.9kΩ ±1% 100mW 厚膜电阻
+Supplier Part
+C23018
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0603WAF3901T5E
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/0603WAF3901T5E/23745.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0603
+Type
+Thick Film Resistor
+Value
+3.9kΩ
+Tolerance
+±1%
+Power(Watts)
+100mW
+Voltage-Supply(Max)
+75V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+Type:Thick Film Resistor Resistance:3.9kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Symbol
+0603WAF3901T5E
+Designator
+R30
+Name
+3.9kΩ
+Device
+0603WAF3901T5E
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge223
+
+*
+]
+[
+DESIGNATOR
+R31
+FOOTPRINT
+R0603
+PARTTYPE
+0603WAF3901T5E
+DESCRIPTION
+Type:Thick Film Resistor Resistance:3.9kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Component Kind
+Standard
+LCSC Part Name
+3.9kΩ ±1% 100mW 厚膜电阻
+Supplier Part
+C23018
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0603WAF3901T5E
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/0603WAF3901T5E/23745.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0603
+Type
+Thick Film Resistor
+Value
+3.9kΩ
+Tolerance
+±1%
+Power(Watts)
+100mW
+Voltage-Supply(Max)
+75V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+Type:Thick Film Resistor Resistance:3.9kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Symbol
+0603WAF3901T5E
+Designator
+R31
+Name
+3.9kΩ
+Device
+0603WAF3901T5E
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge224
+
+*
+]
+[
+DESIGNATOR
+C31
+FOOTPRINT
+C0603
+PARTTYPE
+CC0603KRX7R9BB104
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Component Kind
+Standard
+Symbol
+CC0603KRX7R9BB104
+LCSC Part Name
+100nF ±10% 50V
+Supplier Part
+C14663
+Manufacturer
+YAGEO(国巨)
+Manufacturer Part
+CC0603KRX7R9BB104
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20170116/1484561234239.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0603_L1.6-W0.8-H0.8
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Designator
+C31
+Value
+100nF
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Device
+CC0603KRX7R9BB104
+Unique ID
+gge226
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+C32
+FOOTPRINT
+C0603
+PARTTYPE
+CC0603KRX7R9BB104
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Component Kind
+Standard
+Supplier Part
+C14663
+Manufacturer
+YAGEO(国巨)
+Manufacturer Part
+CC0603KRX7R9BB104
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20170116/1484561234239.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0603_L1.6-W0.8-H0.8
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+LCSC Part Name
+100nF ±10% 50V
+Supplier Footprint
+0603
+Value
+100nF
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Symbol
+CL05B104KO5NNNC
+Designator
+C32
+Device
+CC0603KRX7R9BB104
+Unique ID
+gge195_6
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+TV1
+FOOTPRINT
+SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
+PARTTYPE
+SRV05-4-P-T7_C85364
+DESCRIPTION
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Component Kind
+Standard
+LCSC Part Name
+SRV05-4-P-T7
+Supplier Part
+C85364
+Manufacturer
+PROTEK
+Manufacturer Part
+SRV05-4-P-T7
+Supplier Footprint
+SOT-23-6
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
+Reverse Stand-Off Voltage (Vrwm)
+5V
+Clamping Voltage
+12V
+Peak Pulse Current (Ipp)
+1A@8/20us
+Voltage - Breakdown
+6V
+Type
+TVS
+Description
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Symbol
+SRV05-4-P-T7
+Designator
+TV1
+Name
+SRV05-4-P-T7
+Device
+SRV05-4-P-T7_C85364
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge169
+
+*
+]
+[
+DESIGNATOR
+USB1
+FOOTPRINT
+USB-B-SMD_HC-TYPE-B-2.0-VS15-1.5A-15
+PARTTYPE
+HC-TYPE-B-2.0-VS15-1.5A-15
+DESCRIPTION
+Connector Type:Type-B Gender:Female Mounting Style:Standing paste Number of Contacts:4P Number of Ports:1 Current Rating - Power (Max):1.5A Operating Temperature Range:-20℃~+60℃ Operating Temperature Range:-20℃~+60℃
+Component Kind
+Standard
+LCSC Part Name
+Type-B 母 立贴
+Supplier Part
+C5377899
+Manufacturer
+HCTL(华灿天禄)
+Manufacturer Part
+HC-TYPE-B-2.0-VS15-1.5A-15
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20230320/144330B5AC7CB9E19EA5796A523C1B66.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+USB-B-SMD_HC-TYPE-B-2.0-VS15-1.5A-15
+Connector Type
+Type-B
+Gender
+Female
+Mounting Style
+Standing paste
+Number of Contacts
+4P
+Number of Ports
+1
+Current Rating - Power (Max)
+1.5A
+Operating Temperature Range
+-20℃~+60℃
+Description
+Connector Type:Type-B Gender:Female Mounting Style:Standing paste Number of Contacts:4P Number of Ports:1 Current Rating - Power (Max):1.5A Operating Temperature Range:-20℃~+60℃ Operating Temperature Range:-20℃~+60℃
+Symbol
+HC-TYPE-B-2.0-VS15-1.5A-15
+Designator
+USB1
+Name
+HC-TYPE-B-2.0-VS15-1.5A-15
+Device
+HC-TYPE-B-2.0-VS15-1.5A-15
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge168
+
+*
+]
+[
+DESIGNATOR
+D7
+FOOTPRINT
+SMB_L4.6-W3.6-LS5.3-RD
+PARTTYPE
+SMBJ13A_C10209
+DESCRIPTION
+Polarity:Unidirectional Reverse Stand-Off Voltage (Vrwm):13V Clamping Voltage:21.5V Peak Pulse Current (Ipp):27.9A@10/1000us Peak Pulse Power Dissipation (Ppp):600W@10/1000us Voltage - Breakdown:16.5V Reverse Leakage Current (Ir):1uA Operating Temperature
+Component Kind
+Standard
+Supplier
+LCSC
+Manufacturer Part
+SMBJ13A
+Manufacturer
+RUILON(瑞隆源)
+Supplier Part
+C10209
+JLCPCB Part Class
+Extended Part
+LCSC Part Name
+单向TVS 13V截止 峰值浪涌电流：27.9A@10/1000us
+Supplier Footprint
+DO-214AA(SMB)
+Datasheet
+https://item.szlcsc.com/datasheet/SMBJ13A/10749.html
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SMB_L4.6-W3.6-LS5.3-RD
+Polarity
+Unidirectional
+Reverse Stand-Off Voltage (Vrwm)
+13V
+Clamping Voltage
+21.5V
+Peak Pulse Current (Ipp)
+27.9A@10/1000us
+Peak Pulse Power Dissipation (Ppp)
+600W@10/1000us
+Voltage - Breakdown
+16.5V
+Reverse Leakage Current (Ir)
+1uA
+Operating Temperature
+-55℃~+150℃
+level of protection
+IEC 61000-4-4；IEC 61000-4-2
+Type
+TVS
+Description
+Polarity:Unidirectional Reverse Stand-Off Voltage (Vrwm):13V Clamping Voltage:21.5V Peak Pulse Current (Ipp):27.9A@10/1000us Peak Pulse Power Dissipation (Ppp):600W@10/1000us Voltage - Breakdown:16.5V Reverse Leakage Current (Ir):1uA Operating Temperature
+Symbol
+SMBJ13A
+Designator
+D7
+Name
+SMBJ13A
+Device
+SMBJ13A_C10209
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge253
+
+*
+]
 (
 $1N34230 
 SW-2 TS-1088-AR02016-2 Passive 
@@ -6986,19 +7262,6 @@ U1-59 STM32WB5MMGH6TR-RF_OUT Passive
 U1-60 STM32WB5MMGH6TR-VSS Passive 
 U1-84 STM32WB5MMGH6TR-VSS Passive 
 U1-86 STM32WB5MMGH6TR-VSS Passive 
-USB1-4 HC-TYPE-B-2.0-VS15-1.5A-15-GND Passive 
-USB1-5 HC-TYPE-B-2.0-VS15-1.5A-15-GND Passive 
-USB1-6 HC-TYPE-B-2.0-VS15-1.5A-15-GND Passive 
-LEFT_WING_PORT-1 B8B-PH-SM4-TBT(LF)(SN)-1 Passive 
-RIGHT_WING_PORT-1 B8B-PH-SM4-TBT(LF)(SN)-1 Passive 
-PROGRAM_PORT-1 B8B-PH-SM4-TBT(LF)(SN)-1 Passive 
-TV1-2 SRV05-4-P-T7_C85364-2 Input   
-TV2-2 SRV05-4-P-T7_C85364-2 Input   
-TV3-2 SRV05-4-P-T7_C85364-2 Input   
-TV4-2 SRV05-4-P-T7_C85364-2 Input   
-TV5-2 SRV05-4-P-T7_C85364-2 Input   
-TV11-2 SRV05-4-P-T7_C85364-2 Input   
-TV7-2 SRV05-4-P-T7_C85364-2 Input   
 LED_CH0-2 KT-0805Y-- Passive 
 LED_CH1-2 KT-0805Y-- Passive 
 LED_CH2-2 KT-0805Y-- Passive 
@@ -7008,10 +7271,6 @@ LED_BT_MIDI-1 NCD0805R1_C84256-- Passive
 LED_POW-2 KT-0805G-K Passive 
 LED_FN1-1 NCD0805R1_C84256-- Passive 
 U58-2 CS1237-SOP8-GND Passive 
-LOAD_CELL_PORT-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive 
-TV12-2 SRV05-4-P-T7_C85364-2 Input   
-TV14-2 SRV05-4-P-T7_C85364-2 Input   
-D7-1 SMBJ13A_C10209-A Input   
 LED_FN2-1 NCD0805R1_C84256-- Passive 
 LED_FN3-1 NCD0805R1_C84256-- Passive 
 C38-2 1206B475K500NT-2 Input   
@@ -7036,6 +7295,27 @@ C22-1 CL31B105KBHNNNE-1 Passive
 C23-1 1206B475K500NT-1 Input   
 C24-1 1206B475K500NT-1 Input   
 C37-1 GRM21BR61H106KE43L-1 Passive 
+R39-2 0603WAF1200T5E-2 Input   
+TV3-2 SRV05-4-P-T7_C85364-2 Input   
+U60-2 TPS2553DBVR-GND Passive 
+TV2-2 SRV05-4-P-T7_C85364-2 Input   
+RIGHT_WING_PORT1-1 B8B-PH-SM4-TBT(LF)(SN)-1 Passive 
+TV5-2 SRV05-4-P-T7_C85364-2 Input   
+TV4-2 SRV05-4-P-T7_C85364-2 Input   
+LEFT_WING_PORT1-1 B8B-PH-SM4-TBT(LF)(SN)-1 Passive 
+R38-2 0603WAF1200T5E-2 Input   
+U59-2 TPS2553DBVR-GND Passive 
+PROGRAM_PORT1-1 B8B-PH-SM4-TBT(LF)(SN)-1 Passive 
+TV11-2 SRV05-4-P-T7_C85364-2 Input   
+TV7-2 SRV05-4-P-T7_C85364-2 Input   
+LOAD_CELL_PORT1-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive 
+TV12-2 SRV05-4-P-T7_C85364-2 Input   
+TV14-2 SRV05-4-P-T7_C85364-2 Input   
+TV1-2 SRV05-4-P-T7_C85364-2 Input   
+USB1-4 HC-TYPE-B-2.0-VS15-1.5A-15-GND Passive 
+USB1-5 HC-TYPE-B-2.0-VS15-1.5A-15-GND Passive 
+USB1-6 HC-TYPE-B-2.0-VS15-1.5A-15-GND Passive 
+D7-1 SMBJ13A_C10209-A Input   
 )
 (
 $1N16140 
@@ -7069,21 +7349,21 @@ U1-83 STM32WB5MMGH6TR-PC8 Passive
 (
 L_NRST 
 U1-1 STM32WB5MMGH6TR-PA2 Passive 
-LEFT_WING_PORT-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
 U54-2 BAT54C_C22466350-A Passive 
 TV5-6 SRV05-4-P-T7_C85364-6 Input   
+LEFT_WING_PORT1-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
 )
 (
 L_SPI_SCK 
 U1-2 STM32WB5MMGH6TR-PA1 Passive 
-LEFT_WING_PORT-6 B8B-PH-SM4-TBT(LF)(SN)-6 Passive 
 TV4-1 SRV05-4-P-T7_C85364-1 Input   
+LEFT_WING_PORT1-6 B8B-PH-SM4-TBT(LF)(SN)-6 Passive 
 )
 (
 L_READY 
 U1-3 STM32WB5MMGH6TR-PA0 Passive 
-LEFT_WING_PORT-8 B8B-PH-SM4-TBT(LF)(SN)-8 Passive 
 TV5-4 SRV05-4-P-T7_C85364-4 Input   
+LEFT_WING_PORT1-8 B8B-PH-SM4-TBT(LF)(SN)-8 Passive 
 )
 (
 VCC 
@@ -7092,22 +7372,7 @@ U1-6 STM32WB5MMGH6TR-VDDA Passive
 U1-15 STM32WB5MMGH6TR-VBAT Passive 
 U1-17 STM32WB5MMGH6TR-VDDA Passive 
 U1-32 STM32WB5MMGH6TR-VDDUSB Passive 
-LEFT_WING_PORT-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
-RIGHT_WING_PORT-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
-PROGRAM_PORT-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
-TV2-5 SRV05-4-P-T7_C85364-5 Input   
-TV3-5 SRV05-4-P-T7_C85364-5 Input   
-TV4-5 SRV05-4-P-T7_C85364-5 Input   
-TV5-5 SRV05-4-P-T7_C85364-5 Input   
-TV11-5 SRV05-4-P-T7_C85364-5 Input   
-TV7-5 SRV05-4-P-T7_C85364-5 Input   
-EXPR_PEDAL-4 PJ-603A-4 Input   
-SUS_PEDAL-4 PJ-603A-4 Input   
 U58-7 CS1237-SOP8-VDD Passive 
-C31-1 CC0603KRX7R9BB104-1 Input   
-C32-1 CC0603KRX7R9BB104-1 Passive 
-TV12-5 SRV05-4-P-T7_C85364-5 Input   
-TV14-5 SRV05-4-P-T7_C85364-5 Input   
 C38-1 1206B475K500NT-1 Input   
 FN3_BOOT0-1 TS-1088-AR02016-1 Passive 
 U55-5 TLV75533PDBVR-OUT Passive 
@@ -7116,20 +7381,35 @@ C23-2 1206B475K500NT-2 Input
 R33-1 0603WAF4701T5E-1 Input   
 R32-1 0603WAF4701T5E-1 Input   
 R34-2 0603WAF1002T5E-2 Input   
+TV3-5 SRV05-4-P-T7_C85364-5 Input   
+U60-1 TPS2553DBVR-IN Passive 
+TV2-5 SRV05-4-P-T7_C85364-5 Input   
+TV5-5 SRV05-4-P-T7_C85364-5 Input   
+TV4-5 SRV05-4-P-T7_C85364-5 Input   
+U59-1 TPS2553DBVR-IN Passive 
+PROGRAM_PORT1-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
+TV11-5 SRV05-4-P-T7_C85364-5 Input   
+TV7-5 SRV05-4-P-T7_C85364-5 Input   
+TV12-5 SRV05-4-P-T7_C85364-5 Input   
+TV14-5 SRV05-4-P-T7_C85364-5 Input   
+EXPR_PEDAL1-4 PJ-603A-4 Input   
+SUS_PEDAL1-4 PJ-603A-4 Input   
+C31-1 CC0603KRX7R9BB104-1 Input   
+C32-1 CC0603KRX7R9BB104-1 Passive 
 )
 (
 EXP_PEDAL 
 U1-9 STM32WB5MMGH6TR-PC1 Passive 
-R31-2 0603WAF3901T5E-2 Input   
 TV14-3 SRV05-4-P-T7_C85364-3 Input   
+R31-2 0603WAF3901T5E-2 Input   
 )
 (
 M_NRST 
 U1-10 STM32WB5MMGH6TR-NRST Passive 
-PROGRAM_PORT-6 B8B-PH-SM4-TBT(LF)(SN)-6 Passive 
 U53-1 BAT54C_C22466350-A Passive 
-TV11-4 SRV05-4-P-T7_C85364-4 Input   
 C39-1 CC0603KRX7R9BB104-1 Input   
+PROGRAM_PORT1-6 B8B-PH-SM4-TBT(LF)(SN)-6 Passive 
+TV11-4 SRV05-4-P-T7_C85364-4 Input   
 )
 (
 POW_SDA 
@@ -7140,8 +7420,8 @@ R32-2 0603WAF4701T5E-2 Input
 (
 SUS_PEDAL 
 U1-12 STM32WB5MMGH6TR-PC0 Passive 
-R30-2 0603WAF3901T5E-2 Input   
 TV14-1 SRV05-4-P-T7_C85364-1 Input   
+R30-2 0603WAF3901T5E-2 Input   
 )
 (
 SW_FN3_BOOT0 
@@ -7158,21 +7438,26 @@ U47-5 BQ25895RTWR-SCL Input
 R33-2 0603WAF4701T5E-2 Input   
 )
 (
+L_NFAULT 
+U1-18 STM32WB5MMGH6TR-PB7 Passive 
+U59-4 TPS2553DBVR-/FAULT Passive 
+)
+(
 L_SPI_MOSI 
 U1-19 STM32WB5MMGH6TR-PB5 Passive 
-LEFT_WING_PORT-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive 
 TV4-4 SRV05-4-P-T7_C85364-4 Input   
+LEFT_WING_PORT1-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive 
 )
 (
 L_SPI_MISO 
 U1-20 STM32WB5MMGH6TR-PB4 Passive 
-LEFT_WING_PORT-5 B8B-PH-SM4-TBT(LF)(SN)-5 Passive 
 TV4-6 SRV05-4-P-T7_C85364-6 Input   
+LEFT_WING_PORT1-5 B8B-PH-SM4-TBT(LF)(SN)-5 Passive 
 )
 (
 PGM_SWO 
 U1-21 STM32WB5MMGH6TR-PB3 Passive 
-PROGRAM_PORT-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
+PROGRAM_PORT1-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
 TV7-6 SRV05-4-P-T7_C85364-6 Input   
 )
 (
@@ -7186,57 +7471,62 @@ U1-23 STM32WB5MMGH6TR-PC11 Passive
 U58-5 CS1237-SOP8-SCLK Passive 
 )
 (
+R_EN 
+U1-24 STM32WB5MMGH6TR-PC12 Passive 
+U60-3 TPS2553DBVR-EN Passive 
+)
+(
 PGM_SWDIO 
 U1-25 STM32WB5MMGH6TR-PA13 Passive 
-PROGRAM_PORT-5 B8B-PH-SM4-TBT(LF)(SN)-5 Passive 
+PROGRAM_PORT1-5 B8B-PH-SM4-TBT(LF)(SN)-5 Passive 
 TV11-3 SRV05-4-P-T7_C85364-3 Input   
 )
 (
 PGM_SWCLK 
 U1-26 STM32WB5MMGH6TR-PA14 Passive 
-PROGRAM_PORT-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive 
+PROGRAM_PORT1-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive 
 TV11-1 SRV05-4-P-T7_C85364-1 Input   
 )
 (
 L_SPI_NSS 
 U1-27 STM32WB5MMGH6TR-PA15 Passive 
-LEFT_WING_PORT-7 B8B-PH-SM4-TBT(LF)(SN)-7 Passive 
 TV4-3 SRV05-4-P-T7_C85364-3 Input   
+LEFT_WING_PORT1-7 B8B-PH-SM4-TBT(LF)(SN)-7 Passive 
 )
 (
 PGM_USART_RX 
 U1-28 STM32WB5MMGH6TR-PA10 Passive 
-PROGRAM_PORT-8 B8B-PH-SM4-TBT(LF)(SN)-8 Passive 
+PROGRAM_PORT1-8 B8B-PH-SM4-TBT(LF)(SN)-8 Passive 
 TV7-4 SRV05-4-P-T7_C85364-4 Input   
 )
 (
 USB_D+ 
 U1-29 STM32WB5MMGH6TR-PA12 Passive 
-USB1-3 HC-TYPE-B-2.0-VS15-1.5A-15-D+ Passive 
 TV1-3 SRV05-4-P-T7_C85364-3 Input   
+USB1-3 HC-TYPE-B-2.0-VS15-1.5A-15-D+ Passive 
 )
 (
 USB_D- 
 U1-30 STM32WB5MMGH6TR-PA11 Passive 
-USB1-2 HC-TYPE-B-2.0-VS15-1.5A-15-D- Passive 
 TV1-1 SRV05-4-P-T7_C85364-1 Input   
+USB1-2 HC-TYPE-B-2.0-VS15-1.5A-15-D- Passive 
 )
 (
 R_SPI_NSS 
 U1-33 STM32WB5MMGH6TR-PD0 Passive 
-RIGHT_WING_PORT-7 B8B-PH-SM4-TBT(LF)(SN)-7 Passive 
 TV2-3 SRV05-4-P-T7_C85364-3 Input   
+RIGHT_WING_PORT1-7 B8B-PH-SM4-TBT(LF)(SN)-7 Passive 
 )
 (
 R_SPI_SCK 
 U1-34 STM32WB5MMGH6TR-PD1 Passive 
-RIGHT_WING_PORT-6 B8B-PH-SM4-TBT(LF)(SN)-6 Passive 
 TV2-1 SRV05-4-P-T7_C85364-1 Input   
+RIGHT_WING_PORT1-6 B8B-PH-SM4-TBT(LF)(SN)-6 Passive 
 )
 (
 PGM_USART_TX 
 U1-39 STM32WB5MMGH6TR-PB6 Passive 
-PROGRAM_PORT-7 B8B-PH-SM4-TBT(LF)(SN)-7 Passive 
+PROGRAM_PORT1-7 B8B-PH-SM4-TBT(LF)(SN)-7 Passive 
 TV11-6 SRV05-4-P-T7_C85364-6 Input   
 )
 (
@@ -7287,16 +7577,16 @@ R21-1 0603WAF3300T5E-1 Input
 (
 EXP_PEDAL_INT 
 U1-61 STM32WB5MMGH6TR-PH0 Passive 
-EXPR_PEDAL-3 PJ-603A-3 Input   
-C31-2 CC0603KRX7R9BB104-2 Input   
 TV14-4 SRV05-4-P-T7_C85364-4 Input   
+EXPR_PEDAL1-3 PJ-603A-3 Input   
+C31-2 CC0603KRX7R9BB104-2 Input   
 )
 (
 SUS_PEDAL_INT 
 U1-62 STM32WB5MMGH6TR-PH1 Passive 
-SUS_PEDAL-3 PJ-603A-3 Input   
-C32-2 CC0603KRX7R9BB104-2 Passive 
 TV14-6 SRV05-4-P-T7_C85364-6 Input   
+SUS_PEDAL1-3 PJ-603A-3 Input   
+C32-2 CC0603KRX7R9BB104-2 Passive 
 )
 (
 POW_INT 
@@ -7305,29 +7595,34 @@ R7-2 0603WAF1002T5E-2 Input
 U47-7 BQ25895RTWR-INT Input   
 )
 (
+L_EN 
+U1-67 STM32WB5MMGH6TR-PD7 Passive 
+U59-3 TPS2553DBVR-EN Passive 
+)
+(
 R_SPI_MISO 
 U1-70 STM32WB5MMGH6TR-PD3 Passive 
-RIGHT_WING_PORT-5 B8B-PH-SM4-TBT(LF)(SN)-5 Passive 
 TV2-6 SRV05-4-P-T7_C85364-6 Input   
+RIGHT_WING_PORT1-5 B8B-PH-SM4-TBT(LF)(SN)-5 Passive 
 )
 (
 R_READY 
 U1-71 STM32WB5MMGH6TR-PC7 Passive 
-RIGHT_WING_PORT-8 B8B-PH-SM4-TBT(LF)(SN)-8 Passive 
 TV3-4 SRV05-4-P-T7_C85364-4 Input   
+RIGHT_WING_PORT1-8 B8B-PH-SM4-TBT(LF)(SN)-8 Passive 
 )
 (
 R_NRST 
 U1-72 STM32WB5MMGH6TR-PE3 Passive 
-RIGHT_WING_PORT-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
 U54-1 BAT54C_C22466350-A Passive 
 TV3-6 SRV05-4-P-T7_C85364-6 Input   
+RIGHT_WING_PORT1-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
 )
 (
 R_SPI_MOSI 
 U1-73 STM32WB5MMGH6TR-PD4 Passive 
-RIGHT_WING_PORT-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive 
 TV2-4 SRV05-4-P-T7_C85364-4 Input   
+RIGHT_WING_PORT1-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive 
 )
 (
 LED_CH1 
@@ -7345,11 +7640,9 @@ U47-9 BQ25895RTWR-CE Input
 R34-1 0603WAF1002T5E-1 Input   
 )
 (
-VBUS 
-USB1-1 HC-TYPE-B-2.0-VS15-1.5A-15-VCC Passive 
-D7-2 SMBJ13A_C10209-K Input   
-U47-1 BQ25895RTWR-VBUS Input   
-C14-1 CL31B105KBHNNNE-1 Passive 
+R_NFAULT 
+U1-81 STM32WB5MMGH6TR-PD6 Passive 
+U60-4 TPS2553DBVR-/FAULT Passive 
 )
 (
 POW_QON 
@@ -7392,16 +7685,6 @@ LED_POW-1 KT-0805G-A Passive
 R28-2 0603WAF3300T5E-2 Input   
 )
 (
-$1N20389 
-EXPR_PEDAL-5 PJ-603A-5 Input   
-R31-1 0603WAF3901T5E-1 Input   
-)
-(
-$1N20350 
-SUS_PEDAL-5 PJ-603A-5 Input   
-R30-1 0603WAF3901T5E-1 Input   
-)
-(
 $1N20116 
 LED_FN1-2 NCD0805R1_C84256-+ Passive 
 R29-2 0603WAF3300T5E-2 Input   
@@ -7410,19 +7693,19 @@ R29-2 0603WAF3300T5E-2 Input
 LC_E+_R 
 U58-1 CS1237-SOP8-REFIN Passive 
 U58-8 CS1237-SOP8-REFOUT Passive 
-LOAD_CELL_PORT-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
+LOAD_CELL_PORT1-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
 TV12-1 SRV05-4-P-T7_C85364-1 Input   
 )
 (
 LC_A+_G 
 U58-3 CS1237-SOP8-AINN Passive 
-LOAD_CELL_PORT-1 B8B-PH-SM4-TBT(LF)(SN)-1 Passive 
+LOAD_CELL_PORT1-1 B8B-PH-SM4-TBT(LF)(SN)-1 Passive 
 TV12-6 SRV05-4-P-T7_C85364-6 Input   
 )
 (
 LC_A-_W 
 U58-4 CS1237-SOP8-AINP Passive 
-LOAD_CELL_PORT-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
+LOAD_CELL_PORT1-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
 TV12-4 SRV05-4-P-T7_C85364-4 Input   
 )
 (
@@ -7523,6 +7806,13 @@ C19-1 GRM21BR61H106KE43L-1 Passive
 U47-23 BQ25895RTWR-PMID Input   
 )
 (
+VBUS 
+U47-1 BQ25895RTWR-VBUS Input   
+C14-1 CL31B105KBHNNNE-1 Passive 
+USB1-1 HC-TYPE-B-2.0-VS15-1.5A-15-VCC Passive 
+D7-2 SMBJ13A_C10209-K Input   
+)
+(
 $2N1127 
 U47-10 BQ25895RTWR-ILIM Input   
 R10-2 0603WAF1500T5E-2 Input   
@@ -7540,4 +7830,34 @@ R10-1 0603WAF1500T5E-1 Input
 $2N1532 
 U55-3 TLV75533PDBVR-EN Passive 
 R18-2 0603WAF1002T5E-2 Input   
+)
+(
+$4N584 
+R39-1 0603WAF1200T5E-1 Input   
+U60-5 TPS2553DBVR-ILIM Passive 
+)
+(
+R_VCC 
+U60-6 TPS2553DBVR-OUT Passive 
+RIGHT_WING_PORT1-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
+)
+(
+L_VCC 
+LEFT_WING_PORT1-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
+U59-6 TPS2553DBVR-OUT Passive 
+)
+(
+$4N673 
+R38-1 0603WAF1200T5E-1 Input   
+U59-5 TPS2553DBVR-ILIM Passive 
+)
+(
+$4N1323 
+EXPR_PEDAL1-5 PJ-603A-5 Input   
+R31-1 0603WAF3901T5E-1 Input   
+)
+(
+$4N1322 
+SUS_PEDAL1-5 PJ-603A-5 Input   
+R30-1 0603WAF3901T5E-1 Input   
 )

@@ -71,25 +71,25 @@ U2
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -101,23 +101,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U2
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge58
 Sensitivity Temperature Bleaching
@@ -145,25 +145,25 @@ U3
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -175,23 +175,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U3
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge59
 Sensitivity Temperature Bleaching
@@ -219,25 +219,25 @@ U4
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -249,23 +249,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U4
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge60
 Sensitivity Temperature Bleaching
@@ -293,25 +293,25 @@ U5
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -323,23 +323,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U5
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge61
 Sensitivity Temperature Bleaching
@@ -367,25 +367,25 @@ U6
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -397,23 +397,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U6
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge62
 Sensitivity Temperature Bleaching
@@ -441,25 +441,25 @@ U7
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -471,23 +471,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U7
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge63
 Sensitivity Temperature Bleaching
@@ -515,25 +515,25 @@ U8
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -545,23 +545,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U8
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge64
 Sensitivity Temperature Bleaching
@@ -589,25 +589,25 @@ U9
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -619,23 +619,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U9
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge65
 Sensitivity Temperature Bleaching
@@ -729,25 +729,25 @@ U11
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -759,23 +759,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U11
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge66
 Sensitivity Temperature Bleaching
@@ -803,25 +803,25 @@ U12
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -833,23 +833,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U12
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge67
 Sensitivity Temperature Bleaching
@@ -877,25 +877,25 @@ U13
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -907,23 +907,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U13
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge68
 Sensitivity Temperature Bleaching
@@ -951,25 +951,25 @@ U14
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -981,23 +981,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U14
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge69
 Sensitivity Temperature Bleaching
@@ -1025,25 +1025,25 @@ U15
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -1055,23 +1055,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U15
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge70
 Sensitivity Temperature Bleaching
@@ -1099,25 +1099,25 @@ U16
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -1129,23 +1129,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U16
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge71
 Sensitivity Temperature Bleaching
@@ -1173,25 +1173,25 @@ U17
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -1203,23 +1203,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U17
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge72
 Sensitivity Temperature Bleaching
@@ -1247,25 +1247,25 @@ U18
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -1277,23 +1277,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U18
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge73
 Sensitivity Temperature Bleaching
@@ -1387,25 +1387,25 @@ U20
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -1417,23 +1417,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U20
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge74
 Sensitivity Temperature Bleaching
@@ -1461,25 +1461,25 @@ U21
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -1491,23 +1491,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U21
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge75
 Sensitivity Temperature Bleaching
@@ -1535,25 +1535,25 @@ U22
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -1565,23 +1565,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U22
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge76
 Sensitivity Temperature Bleaching
@@ -1609,25 +1609,25 @@ U23
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -1639,23 +1639,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U23
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge77
 Sensitivity Temperature Bleaching
@@ -1683,25 +1683,25 @@ U24
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -1713,23 +1713,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U24
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge78
 Sensitivity Temperature Bleaching
@@ -1757,25 +1757,25 @@ U25
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -1787,23 +1787,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U25
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge79
 Sensitivity Temperature Bleaching
@@ -1831,25 +1831,25 @@ U26
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -1861,23 +1861,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U26
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge80
 Sensitivity Temperature Bleaching
@@ -1905,25 +1905,25 @@ U27
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -1935,23 +1935,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U27
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge81
 Sensitivity Temperature Bleaching
@@ -2045,25 +2045,25 @@ U29
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -2075,23 +2075,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U29
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge82
 Sensitivity Temperature Bleaching
@@ -2119,25 +2119,25 @@ U30
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -2149,23 +2149,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U30
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge83
 Sensitivity Temperature Bleaching
@@ -2193,25 +2193,25 @@ U31
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -2223,23 +2223,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U31
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge84
 Sensitivity Temperature Bleaching
@@ -2267,25 +2267,25 @@ U32
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -2297,23 +2297,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U32
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge85
 Sensitivity Temperature Bleaching
@@ -2341,25 +2341,25 @@ U33
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -2371,23 +2371,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U33
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge86
 Sensitivity Temperature Bleaching
@@ -2415,25 +2415,25 @@ U34
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -2445,23 +2445,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U34
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge87
 Sensitivity Temperature Bleaching
@@ -2489,25 +2489,25 @@ U35
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -2519,23 +2519,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U35
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge88
 Sensitivity Temperature Bleaching
@@ -2563,25 +2563,25 @@ U36
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-SC4011SO-N-TR
+SC4015SO-N-TR
 DESCRIPTION
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-低成本线性霍尔效应传感器IC
+线性霍尔
 Supplier Part
-C18198955
+C49363171
 Manufacturer
 Semiment(赛卓)
 Manufacturer Part
-SC4011SO-N-TR
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://item.szlcsc.com/datasheet/SC4011SO-N-TR/19353666.html
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -2593,23 +2593,23 @@ SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
 Magnetic Field Range
 ±100mT
 Sensitivity
-2.9mV/Gs
+3.9mV/Gs
 Voltage - Supply
-3.3V；5V
+2.5V~5.5V
 Supply Current
 2.5mA
 Operating Temperature
 -40℃~+105℃
 Description
-Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:2.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:3.3V；5V Voltage - Supply:3.3V；5V Supply Current:2.5mA Operating T
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U36
 Name
-SC4011SO-N-TR
+SC4015SO-N-TR
 Device
-SC4011SO-N-TR
+SC4015SO-N-TR
 Unique ID
 gge89
 Sensitivity Temperature Bleaching
@@ -4085,25 +4085,25 @@ U38
 FOOTPRINT
 SOT-23-Switch
 PARTTYPE
-HAL403SO
+SC4015SO-N-TR
 DESCRIPTION
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Component Kind
 Standard
 LCSC Part Name
-HAL403SO
+线性霍尔
 Supplier Part
-C42387470
+C49363171
 Manufacturer
-Hallwee(霍尔微电子)
+Semiment(赛卓)
 Manufacturer Part
-HAL403SO
+SC4015SO-N-TR
 Supplier Footprint
-SOT-23-3L
+SOT23-3L
 JLCPCB Part Class
 Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20241128/0AD14AFEC9C57666357D0A65CB4C20D7.pdf
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
 Supplier
 LCSC
 Add into BOM
@@ -4111,29 +4111,39 @@ yes
 Convert to PCB
 yes
 3D Model Title
-SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR-CW
-Type
--
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
 Voltage - Supply
--
+2.5V~5.5V
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
 Description
-Type:- Voltage - Supply:- Voltage - Supply:-
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Sensitivity Temperature Bleaching:- Sensitivity Temperature Bleaching:- Linearity:- Linearity:- Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operati
 Symbol
-HAL403SO
+SC4015SO-N-TR
 Designator
 U38
 Name
-HAL403SO
+SC4015SO-N-TR
 Device
-HAL403SO
+SC4015SO-N-TR
+Unique ID
+gge179
+Sensitivity Temperature Bleaching
+-
+Linearity
+-
 Reuse Block
 
 Group ID
 
 Channel ID
 
-Unique ID
-gge179
 
 *
 ]
@@ -5450,12 +5460,10 @@ gge199
 (
 $1I10936\$1N697 
 U1-1 74HC4052PW,118-2Y0 Passive 
-U2-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10936\$1N698 
 U1-2 74HC4052PW,118-2Y2 Passive 
-U3-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 A_IN6 
@@ -5465,59 +5473,57 @@ U37-17 STM32F103C8T6-PA7 Passive
 (
 $1I10936\$1N699 
 U1-4 74HC4052PW,118-2Y3 Passive 
-U4-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10936\$1N703 
 U1-5 74HC4052PW,118-2Y1 Passive 
-U5-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 GND 
 U1-6 74HC4052PW,118-E# Passive 
 U1-7 74HC4052PW,118-VEE Passive 
 U1-8 74HC4052PW,118-GND Passive 
-U2-2 SC4011SO-N-TR-GND Passive 
-U3-2 SC4011SO-N-TR-GND Passive 
-U4-2 SC4011SO-N-TR-GND Passive 
-U5-2 SC4011SO-N-TR-GND Passive 
-U6-2 SC4011SO-N-TR-GND Passive 
-U7-2 SC4011SO-N-TR-GND Passive 
-U8-2 SC4011SO-N-TR-GND Passive 
-U9-2 SC4011SO-N-TR-GND Passive 
+U2-2 SC4015SO-N-TR-GND Passive 
+U3-2 SC4015SO-N-TR-GND Passive 
+U4-2 SC4015SO-N-TR-GND Passive 
+U5-2 SC4015SO-N-TR-GND Passive 
+U6-2 SC4015SO-N-TR-GND Passive 
+U7-2 SC4015SO-N-TR-GND Passive 
+U8-2 SC4015SO-N-TR-GND Passive 
+U9-2 SC4015SO-N-TR-GND Passive 
 U10-6 74HC4052PW,118-E# Passive 
 U10-7 74HC4052PW,118-VEE Passive 
 U10-8 74HC4052PW,118-GND Passive 
-U11-2 SC4011SO-N-TR-GND Passive 
-U12-2 SC4011SO-N-TR-GND Passive 
-U13-2 SC4011SO-N-TR-GND Passive 
-U14-2 SC4011SO-N-TR-GND Passive 
-U15-2 SC4011SO-N-TR-GND Passive 
-U16-2 SC4011SO-N-TR-GND Passive 
-U17-2 SC4011SO-N-TR-GND Passive 
-U18-2 SC4011SO-N-TR-GND Passive 
+U11-2 SC4015SO-N-TR-GND Passive 
+U12-2 SC4015SO-N-TR-GND Passive 
+U13-2 SC4015SO-N-TR-GND Passive 
+U14-2 SC4015SO-N-TR-GND Passive 
+U15-2 SC4015SO-N-TR-GND Passive 
+U16-2 SC4015SO-N-TR-GND Passive 
+U17-2 SC4015SO-N-TR-GND Passive 
+U18-2 SC4015SO-N-TR-GND Passive 
 U19-6 74HC4052PW,118-E# Passive 
 U19-7 74HC4052PW,118-VEE Passive 
 U19-8 74HC4052PW,118-GND Passive 
-U20-2 SC4011SO-N-TR-GND Passive 
-U21-2 SC4011SO-N-TR-GND Passive 
-U22-2 SC4011SO-N-TR-GND Passive 
-U23-2 SC4011SO-N-TR-GND Passive 
-U24-2 SC4011SO-N-TR-GND Passive 
-U25-2 SC4011SO-N-TR-GND Passive 
-U26-2 SC4011SO-N-TR-GND Passive 
-U27-2 SC4011SO-N-TR-GND Passive 
+U20-2 SC4015SO-N-TR-GND Passive 
+U21-2 SC4015SO-N-TR-GND Passive 
+U22-2 SC4015SO-N-TR-GND Passive 
+U23-2 SC4015SO-N-TR-GND Passive 
+U24-2 SC4015SO-N-TR-GND Passive 
+U25-2 SC4015SO-N-TR-GND Passive 
+U26-2 SC4015SO-N-TR-GND Passive 
+U27-2 SC4015SO-N-TR-GND Passive 
 U28-6 74HC4052PW,118-E# Passive 
 U28-7 74HC4052PW,118-VEE Passive 
 U28-8 74HC4052PW,118-GND Passive 
-U29-2 SC4011SO-N-TR-GND Passive 
-U30-2 SC4011SO-N-TR-GND Passive 
-U31-2 SC4011SO-N-TR-GND Passive 
-U32-2 SC4011SO-N-TR-GND Passive 
-U33-2 SC4011SO-N-TR-GND Passive 
-U34-2 SC4011SO-N-TR-GND Passive 
-U35-2 SC4011SO-N-TR-GND Passive 
-U36-2 SC4011SO-N-TR-GND Passive 
+U29-2 SC4015SO-N-TR-GND Passive 
+U30-2 SC4015SO-N-TR-GND Passive 
+U31-2 SC4015SO-N-TR-GND Passive 
+U32-2 SC4015SO-N-TR-GND Passive 
+U33-2 SC4015SO-N-TR-GND Passive 
+U34-2 SC4015SO-N-TR-GND Passive 
+U35-2 SC4015SO-N-TR-GND Passive 
+U36-2 SC4015SO-N-TR-GND Passive 
 R1-1 0402WGF1002TCE-1 Input   
 R2-1 0402WGF1002TCE-1 Input   
 R3-1 0402WGF1002TCE-1 Input   
@@ -5535,7 +5541,7 @@ U37-8 STM32F103C8T6-VSSA Passive
 U37-23 STM32F103C8T6-VSS_1 Passive 
 U37-35 STM32F103C8T6-VSS_2 Passive 
 U37-47 STM32F103C8T6-VSS_3 Passive 
-U38-2 HAL403SO-GND Passive 
+U38-2 SC4015SO-N-TR-GND Passive 
 C1-2 CL05B104KO5NNNC-2 Passive 
 C2-2 CL05B104KO5NNNC-2 Passive 
 C4-2 CL05B104KO5NNNC-2 Passive 
@@ -5571,12 +5577,10 @@ U37-21 STM32F103C8T6-PB10 Passive
 (
 $1I10936\$1N711 
 U1-11 74HC4052PW,118-1Y3 Passive 
-U9-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10936\$1N710 
 U1-12 74HC4052PW,118-1Y0 Passive 
-U8-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 A_IN5 
@@ -5586,58 +5590,56 @@ U37-16 STM32F103C8T6-PA6 Passive
 (
 $1I10936\$1N708 
 U1-14 74HC4052PW,118-1Y1 Passive 
-U7-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10936\$1N707 
 U1-15 74HC4052PW,118-1Y2 Passive 
-U6-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 VCC 
 U1-16 74HC4052PW,118-VCC Passive 
-U2-1 SC4011SO-N-TR-VCC Passive 
-U3-1 SC4011SO-N-TR-VCC Passive 
-U4-1 SC4011SO-N-TR-VCC Passive 
-U5-1 SC4011SO-N-TR-VCC Passive 
-U6-1 SC4011SO-N-TR-VCC Passive 
-U7-1 SC4011SO-N-TR-VCC Passive 
-U8-1 SC4011SO-N-TR-VCC Passive 
-U9-1 SC4011SO-N-TR-VCC Passive 
+U2-1 SC4015SO-N-TR-VDD Passive 
+U3-1 SC4015SO-N-TR-VDD Passive 
+U4-1 SC4015SO-N-TR-VDD Passive 
+U5-1 SC4015SO-N-TR-VDD Passive 
+U6-1 SC4015SO-N-TR-VDD Passive 
+U7-1 SC4015SO-N-TR-VDD Passive 
+U8-1 SC4015SO-N-TR-VDD Passive 
+U9-1 SC4015SO-N-TR-VDD Passive 
 U10-16 74HC4052PW,118-VCC Passive 
-U11-1 SC4011SO-N-TR-VCC Passive 
-U12-1 SC4011SO-N-TR-VCC Passive 
-U13-1 SC4011SO-N-TR-VCC Passive 
-U14-1 SC4011SO-N-TR-VCC Passive 
-U15-1 SC4011SO-N-TR-VCC Passive 
-U16-1 SC4011SO-N-TR-VCC Passive 
-U17-1 SC4011SO-N-TR-VCC Passive 
-U18-1 SC4011SO-N-TR-VCC Passive 
+U11-1 SC4015SO-N-TR-VDD Passive 
+U12-1 SC4015SO-N-TR-VDD Passive 
+U13-1 SC4015SO-N-TR-VDD Passive 
+U14-1 SC4015SO-N-TR-VDD Passive 
+U15-1 SC4015SO-N-TR-VDD Passive 
+U16-1 SC4015SO-N-TR-VDD Passive 
+U17-1 SC4015SO-N-TR-VDD Passive 
+U18-1 SC4015SO-N-TR-VDD Passive 
 U19-16 74HC4052PW,118-VCC Passive 
-U20-1 SC4011SO-N-TR-VCC Passive 
-U21-1 SC4011SO-N-TR-VCC Passive 
-U22-1 SC4011SO-N-TR-VCC Passive 
-U23-1 SC4011SO-N-TR-VCC Passive 
-U24-1 SC4011SO-N-TR-VCC Passive 
-U25-1 SC4011SO-N-TR-VCC Passive 
-U26-1 SC4011SO-N-TR-VCC Passive 
-U27-1 SC4011SO-N-TR-VCC Passive 
+U20-1 SC4015SO-N-TR-VDD Passive 
+U21-1 SC4015SO-N-TR-VDD Passive 
+U22-1 SC4015SO-N-TR-VDD Passive 
+U23-1 SC4015SO-N-TR-VDD Passive 
+U24-1 SC4015SO-N-TR-VDD Passive 
+U25-1 SC4015SO-N-TR-VDD Passive 
+U26-1 SC4015SO-N-TR-VDD Passive 
+U27-1 SC4015SO-N-TR-VDD Passive 
 U28-16 74HC4052PW,118-VCC Passive 
-U29-1 SC4011SO-N-TR-VCC Passive 
-U30-1 SC4011SO-N-TR-VCC Passive 
-U31-1 SC4011SO-N-TR-VCC Passive 
-U32-1 SC4011SO-N-TR-VCC Passive 
-U33-1 SC4011SO-N-TR-VCC Passive 
-U34-1 SC4011SO-N-TR-VCC Passive 
-U35-1 SC4011SO-N-TR-VCC Passive 
-U36-1 SC4011SO-N-TR-VCC Passive 
+U29-1 SC4015SO-N-TR-VDD Passive 
+U30-1 SC4015SO-N-TR-VDD Passive 
+U31-1 SC4015SO-N-TR-VDD Passive 
+U32-1 SC4015SO-N-TR-VDD Passive 
+U33-1 SC4015SO-N-TR-VDD Passive 
+U34-1 SC4015SO-N-TR-VDD Passive 
+U35-1 SC4015SO-N-TR-VDD Passive 
+U36-1 SC4015SO-N-TR-VDD Passive 
 R6-1 0402WGF1002TCE-1 Input   
 FN3_BOOT0-1 TS-1088-AR02016-1 Passive 
 U37-1 STM32F103C8T6-VBAT Passive 
 U37-24 STM32F103C8T6-VDD_1 Passive 
 U37-36 STM32F103C8T6-VDD_2 Passive 
 U37-48 STM32F103C8T6-VDD_3 Passive 
-U38-1 HAL403SO-VCC Passive 
+U38-1 SC4015SO-N-TR-VDD Passive 
 C1-1 CL05B104KO5NNNC-1 Passive 
 C2-1 CL05B104KO5NNNC-1 Passive 
 C4-1 CL05B104KO5NNNC-1 Passive 
@@ -5656,12 +5658,10 @@ L1-1 GZ1608D601TF-1 Passive
 (
 $1I10958\$1N697 
 U10-1 74HC4052PW,118-2Y0 Passive 
-U11-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10958\$1N698 
 U10-2 74HC4052PW,118-2Y2 Passive 
-U12-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 A_IN8 
@@ -5671,22 +5671,18 @@ U37-19 STM32F103C8T6-PB1 Passive
 (
 $1I10958\$1N699 
 U10-4 74HC4052PW,118-2Y3 Passive 
-U13-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10958\$1N703 
 U10-5 74HC4052PW,118-2Y1 Passive 
-U14-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10958\$1N711 
 U10-11 74HC4052PW,118-1Y3 Passive 
-U18-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10958\$1N710 
 U10-12 74HC4052PW,118-1Y0 Passive 
-U17-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 A_IN7 
@@ -5696,22 +5692,18 @@ U37-18 STM32F103C8T6-PB0 Passive
 (
 $1I10958\$1N708 
 U10-14 74HC4052PW,118-1Y1 Passive 
-U16-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10958\$1N707 
 U10-15 74HC4052PW,118-1Y2 Passive 
-U15-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10980\$1N697 
 U19-1 74HC4052PW,118-2Y0 Passive 
-U20-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10980\$1N698 
 U19-2 74HC4052PW,118-2Y2 Passive 
-U21-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 A_IN4 
@@ -5721,22 +5713,18 @@ U37-15 STM32F103C8T6-PA5 Passive
 (
 $1I10980\$1N699 
 U19-4 74HC4052PW,118-2Y3 Passive 
-U22-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10980\$1N703 
 U19-5 74HC4052PW,118-2Y1 Passive 
-U23-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10980\$1N711 
 U19-11 74HC4052PW,118-1Y3 Passive 
-U27-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10980\$1N710 
 U19-12 74HC4052PW,118-1Y0 Passive 
-U26-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 A_IN3 
@@ -5746,22 +5734,18 @@ U37-14 STM32F103C8T6-PA4 Passive
 (
 $1I10980\$1N708 
 U19-14 74HC4052PW,118-1Y1 Passive 
-U25-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I10980\$1N707 
 U19-15 74HC4052PW,118-1Y2 Passive 
-U24-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I11002\$1N697 
 U28-1 74HC4052PW,118-2Y0 Passive 
-U29-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I11002\$1N698 
 U28-2 74HC4052PW,118-2Y2 Passive 
-U30-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 A_IN2 
@@ -5771,22 +5755,18 @@ U37-13 STM32F103C8T6-PA3 Passive
 (
 $1I11002\$1N699 
 U28-4 74HC4052PW,118-2Y3 Passive 
-U31-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I11002\$1N703 
 U28-5 74HC4052PW,118-2Y1 Passive 
-U32-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I11002\$1N711 
 U28-11 74HC4052PW,118-1Y3 Passive 
-U36-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I11002\$1N710 
 U28-12 74HC4052PW,118-1Y0 Passive 
-U35-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 A_IN1 
@@ -5796,12 +5776,10 @@ U37-12 STM32F103C8T6-PA2 Passive
 (
 $1I11002\$1N708 
 U28-14 74HC4052PW,118-1Y1 Passive 
-U34-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 $1I11002\$1N707 
 U28-15 74HC4052PW,118-1Y2 Passive 
-U33-3 SC4011SO-N-TR-OUT Passive 
 )
 (
 ID0 
@@ -5863,7 +5841,7 @@ L1-2 GZ1608D601TF-2 Passive
 (
 A_IN0 
 U37-11 STM32F103C8T6-PA1 Passive 
-U38-3 HAL403SO-OUT Passive 
+U38-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 SPI_NSS 

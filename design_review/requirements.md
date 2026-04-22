@@ -24,54 +24,51 @@ Cube enclosure with two vertical keyboards (wing boards) facing outward, mirrori
 **Role:** Keyboard interface and local sampling.
 
 - **Input:** Small form-factor magnetic switches (velocity-sensitive).
-  - Enables expressive performance
-  - Eable configurable triggering thresholds.
+  - Enables expressive performance.
+  - Allows configurable triggering thresholds.
 - **Travel:** Linear (vs. pivot). Minor impact on feel vs. acoustic bandoneon.
 - **Resistance:** Matched to bandoneon course for familiar playability.
 - **Sampling:** Dedicated MCU on each wing board samples switches at 1 kHz.
   - Reduces latency; decouples keyboard capture from I/O processing.
 - **Output:** Raw key state data → motherboard via internal bus.
 
-### Air Device: Not Implemented
-
-No air sensor or bellows simulation:
-- **Rationale:** Avoid complicated mechanical design and moving parts (which become brittle).
-- **Push/Pull Sensing:** Under investigation—may use loadcell to measure push/pull effort (requires experimentation).
-- **Alternative:** Pedal-based switch between push and pull modes if loadcell proves impractical.
+### Push/Pull Sensing
+A loadcell measures bellows-replacement effort (push vs. pull). No moving air parts — the goal is to avoid brittle mechanical assemblies. If the loadcell approach proves impractical, fallback is a pedal-based push/pull mode switch.
 
 ### Motherboard
 **Role:** Central collection, processing, and I/O.
 
-- **Input:** Key state from both wing boards.
+- **Input:** Key state from both wing boards; push/pull loadcell; pedals.
 - **Processing:** Velocity computation, MIDI event generation, threshold tuning.
-- **Output:** 
+- **Output:**
   - Wireless: Bluetooth LE-MIDI
   - Wired: USB-MIDI
-  - Legacy: DIN 5-pin MIDI
 - **Features:** Threshold configuration, latency optimization, MIDI panic button (sends note-off to all notes for stage emergency reset).
-- **Power:** Rechargeable battery with USB charging. Minimum 2 hours continuous operation on battery. Manual force power-off for debug/reset or user emergency shutdown.
+- **Power:** Rechargeable battery with USB charging. Minimum 2 h continuous operation on battery. Manual force power-off for debug/reset or user emergency shutdown.
 
 ## Peripherals
 
-**Input Devices:**
-- **Sustain Pedal:** Play as piano; sustain note release.
-- **Volume Pedal:** Control push/pull effort or switch modes.
+**Pedal Inputs (two TRS jacks with presence sensing):**
+- **Sustain Pedal:** Piano-mode sustain (note release hold).
+- **Expression Pedal:** Continuous control (volume, push/pull effort, or other CC mapping). Compatible with M-Audio EX-P / Roland EV-5 (see [hardware.md](hardware.md)).
 
-**Connectivity & Output:**
-- **Bluetooth LE-MIDI:** Pair with phone or computer for on-the-go practice and composition.
-- **Bluetooth Audio:** Minimal latency audio synthesis to wireless headsets.
-- **No DIN 5-pin MIDI:** Omitted (not used, adds complexity).
-- **No Audio Jack:** Omitted (not used, adds complexity).
+**Connectivity:**
+- **Bluetooth LE-MIDI:** Pair with phone or computer for practice and composition.
+- **USB-MIDI:** Studio / DAW use; also charges the battery.
+
+**Deferred (not in v1):**
+- **DIN 5-pin MIDI:** No clear use case; proper opto-isolation adds parts and board area. Revisit post-release.
+- **Bluetooth Audio:** STM32WB5MMG lacks classic A2DP. Waiting on STM32WBA6M general availability (expected end of 2026) rather than adding a separate audio frontend.
+- **Audio jack:** Not needed if BT-Audio path is added later; redundant with USB-MIDI for now.
 
 ## User Feedback & Status
 
-- **Charging Progress:** User can observe charging progress while connected to USB.
-- **Fast Charging:** User knows when fast charging is active.
-- **Battery Level:** User can check remaining battery capacity.
-- **Power State:** User knows whether device is on or off.
-- **Bluetooth Audio Status:** User knows BT audio connection state (pairing, paired, active).
-- **Bluetooth MIDI Status:** User knows BT MIDI connection state (pairing, paired, active).
-- **Auto Power-Off:** Device automatically turns off after period of inactivity to preserve battery.
+- **Charging progress** while USB is connected.
+- **Fast-charge active** indicator.
+- **Battery level** readout.
+- **Power state** (on / off / charging).
+- **BLE-MIDI connection state** (pairing, paired, active).
+- **Auto power-off:** after a period of inactivity, the device enters ship mode to preserve battery (see [architecture.md](architecture.md)).
 
 ## Developer Friendliness
 

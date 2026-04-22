@@ -2,10 +2,10 @@
 
 ## Motherboard MCU Selection
 
-The motherboard uses a pre-certified STM32 wireless module to avoid custom antenna design and RF certification. The STM32WB5MMGH6TR is selected as interim: it covers BLE-MIDI and USB-MIDI today, and shares the STM32 ecosystem with the STM32WBA6 that will replace it. Motherboard PCB redesign should be expected at migration.
+The motherboard uses a pre-certified STM32 wireless module to avoid custom antenna design and RF certification. The **STM32WB5MMGH6TR** is selected as an interim choice: it covers BLE-MIDI and USB-MIDI today and shares the STM32 ecosystem with the STM32WBA6M that is expected to replace it. A motherboard PCB redesign should be expected at that migration — BLE-Audio (A2DP) support then becomes viable, which is why audio output is deferred for v1.
 
-STM32WBA5M is not eligible because it lacks USB.
-STM32WBA6M is not  release expected end of 2026.
+- **STM32WBA5M** — not eligible: lacks a USB front-end; adding a companion MCU just for USB-MIDI is too disruptive.
+- **STM32WBA6M** — not yet released; general availability expected end of 2026.
 
 ## Internal Bus: Motherboard to Wing Boards
 
@@ -22,14 +22,12 @@ Each wing board connects to the motherboard over a full-duplex SPI bus (motherbo
 
 Each transaction carries a wing identification code, a complete raw keyboard state frame, and a checksum. The wing ID encodes the keyboard layout (e.g. Rheinische Lage, Einheitsgriff), so the motherboard applies the correct key-to-note mapping at runtime — the same firmware supports multiple layouts without recompilation.
 
-Wing is slave, motherboard is master.
-Master initiate the cycle: 
-  1x 16 bits: request id = 0x0001
-Slave repsonds with:
-  1 x 16 bits: board identifier = 0x0001
-40 x 16 bits: sample value
+Motherboard is master, wing is slave. The master initiates each cycle:
 
-1Khz sampling rate requires 672 kbit/s < 4000 kbit/s max slave bus speed.
+- Master → slave: `1 × 16 bits` — request ID (`0x0001`)
+- Slave → master: `1 × 16 bits` — board identifier + `40 × 16 bits` — sample values
+
+40 sample slots match the largest wing (WingRight, 5 × 74HC4052 × 8 = 40 channels; WingLeft uses 32 and pads the rest). 1 kHz polling → **672 kbit/s**, well under the 4 Mbit/s slave-mode ceiling of the STM32F103 SPI.
 
 ## System Power States
 
@@ -46,7 +44,7 @@ The system has four power states:
 
 **Charge mode** is entered when USB is connected but the user has not powered the instrument on. All boards are powered (wing boards included), but the motherboard MCU only drives the charging status indicator. Powering the wings in this state is a simplification justified by their low power consumption relative to the USB supply current budget.
 
-**Ship mode** cuts all system power. It is used for storage and transport to prevent battery drain. The device cannot be used or charged while in ship mode; connecting USB exits ship mode and enters charge mode.
+**Ship mode** cuts all system power. It is used for storage and transport to prevent battery drain, and is also the target state for the auto-power-off inactivity timer. The device cannot be used or charged while in ship mode; connecting USB (or pulsing BQ25895 QON) exits ship mode and enters charge mode.
 
 ## Programming Port
 

@@ -2,7 +2,7 @@
 ## ESD Protection
 
 High speed charging can use 12V on VBUS, and BQ25895 VBUS max is 22V.
-SMAJ13A diode protects VBUS clamping at 21.5V < BQ25895 VBUS max of 22V
+SMBJ13A diode protects VBUS clamping at 21.5V < BQ25895 VBUS max of 22V
 and with Reverse standoff voltage 13V >  12V max charging voltage
 
 
@@ -20,34 +20,25 @@ to avoid interferences with the MCU.
 
 ## Power Consumption
 
-Estimated from the BOMs in [export/](export/) at the 3.3 V rail, with
-typical datasheet values at room temperature. Hall sensor count: 32
-(left wing) + 38 (right wing) = 70.
+Estimated from the BOMs in [export/](export/) at the 3.3 V rail, with typical datasheet values at room temperature. Hall sensor count: **33 (WingLeft) + 38 (WingRight) = 71** (of which WingLeft U11–U18 are still SC4011 pending migration; both parts spec the same ICC).
 
 | Block | Part | Qty | I typ (mA) | Subtotal (mA) |
 |---|---|---:|---:|---:|
 | Main MCU, BLE active | STM32WB5MMG | 1 | 10 | 10 |
 | Wing MCU @ 72 MHz | STM32F103C8T6 | 2 | 25 | 50 |
-| Key position Hall switch | SC4011 | 70 | 2 | 140 |
-| Linear Hall (wing L) | HAL403 | 1 | 6 | 6 |
+| Key-position Hall sensor | SC4015 / SC4011 | 71 | 2.5 | 178 |
+| Linear Hall (WingLeft) | HAL403 | 1 | 6 | 6 |
 | Analog mux (static) | 74HC4052 | 9 | <0.01 | ~0 |
 | Load-cell ADC | CS1237 | 1 | 1.5 | 1.5 |
 | LEDs (POW + BT + ~2 status) | — | ~4 | 3 | ~10 |
-| LDO Iq + leakage | TLV75533 + misc | — | — | ~1 |
-| **Total (playing, BLE streaming)** | | | | **~220** |
+| LDO Iq + leakage | TLV755P + misc | — | — | ~1 |
+| **Total (playing, BLE streaming)** | | | | **~257** |
 
-At ~220 mA × 3.3 V ≈ **0.73 W** steady-state. Hall sensors dominate
-(~64 %); cutting their average draw (duty-cycled power via a
-side-channel FET or lower-Iq replacement) is the largest lever.
+At ~257 mA × 3.3 V ≈ **0.85 W** steady-state. Hall sensors dominate (~69 %); duty-cycling their supply via a side-channel FET — or gating banks through the 74HC4052 Ē pins — is the largest available power-saving lever.
 
-Peak transient: BLE TX burst (+10 mA on U1) plus all 8 channel LEDs lit
-(+25 mA) bumps the rail to ~255 mA briefly. TLV75533 is rated 500 mA,
-comfortable margin.
+Peak transient: BLE TX burst (+10 mA on U1) plus all status LEDs lit (+25 mA) bumps the rail to ~290 mA briefly. TLV755P is rated 500 mA, comfortable margin.
 
-**Battery runtime.** 2200 mAh Li-ion at 3.7 V nominal, LDO efficiency
-≈ 3.3 / 3.7 = 89 %: battery draw ≈ 220 mA, runtime ≈ **10 h**, well
-above the 2 h requirement. Headroom covers aging and cold-temperature
-capacity loss.
+**Battery runtime.** 2200 mAh Li-ion at 3.7 V nominal, LDO efficiency ≈ 3.3 / 3.7 = 89 %: battery draw ≈ 257 mA, runtime ≈ **8.5 h**, well above the 2 h requirement. Headroom covers aging and cold-temperature capacity loss.
 
 **Charge mode** (USB in, MCU idle, wings powered but not sampling):
 wing MCUs in STOP + Hall sensors still powered ≈ 150 mA; with wing
@@ -78,26 +69,53 @@ A ferrite bead between VDD and VDDA is an AN2586 enhancement for ADC
 noise (not a datasheet requirement). Justified here because PA1 reads
 the HAL403 linear Hall and the mux outputs are sampled via ADC.
 
-## Expression pedal: 
+## Key Sensing: Magnet / Hall-sensor Pairing
 
-M-Audio EX-P and Roland EV-5 have wiper on the TRS tip.
+Each key uses a **Gateron Magnetic Jade Pro mini** switch (KS-33D, total travel 3.5 ± 0.2 mm) paired with an **SC4015SO-N** linear Hall sensor mounted on the opposite side of the 1.5 mm PCB (SMD, marked face toward the switch).
 
-With knob at maximum:
-R(Ring-Sleeve) = 65 kΩ constant
-R(Tip-Sleeve) = 53.64 kΩ heel, 64 kΩ tip
-R(Tip-Ring) = 12.46 kΩ heel, 1 kΩ tip
+**Polarity.** Gateron specifies the magnet N-pole facing down toward the PCB. The SC4015**-N** variant is activated by N-pole approach to its marked face, so the geometry is correct: as the key is pressed, V<sub>OUT</sub> moves from the quiescent 2.2 V *down* toward 0.8 V.
 
-With knob at minimum:
-R(Ring-Sleeve) = 11.47 kΩ constant
-R(Tip-Sleeve) = 1 kΩ heel, 12.46 kΩ tip
-R(Tip-Ring) = 12.46 kΩ heel, 1 kΩ tip
+**Field at the sensor pad** (Gateron-spec, numbers already through the PCB):
 
-Changing M-AUDIO mode to "Other" swaps tip and ring.
+| Key state | Field @ sensor | V<sub>OUT</sub> typ (2.0 mV/Gs) |
+|---|---|---|
+| Rest (0 mm) | 75 ± 10 Gs | ≈ 2.05 V |
+| Full press (3.5 mm, 500 gf) | 680 ± 70 Gs | ≈ 0.84 V |
 
-The port should also accept a sustain pedal with TS jack
-which shorts ring and the sleeve. In that case pressing the pedal should be equivalent to pushing the expression pedal tip.
+Gateron's figures assume their reference PCB (≈ 1.6 mm). Our 1.5 mm stack puts the sensor 0.1 mm closer to the magnet — field slightly higher, inside the ±10 % tolerance.
 
-Measuring R(Tip-Ring) ignores all pedal tunning which seems nice.
-Using a 4 kΩ pullup results in a voltage variation from .66V to 
-2.5V (56% of the range) using a maximum of 0.8mA.
+**Usable ADC swing**: ~1.2 V across 3.5 mm, i.e. ~1500 LSB on a 12-bit / 3.3 V ADC (~430 LSB/mm). In the worst-case combination (field at +10 %, sensor sensitivity at its +10 % limit), output clamps at the 0.8 V floor during the last ~0.1–0.2 mm of travel — no effect on note detection or velocity since the velocity-relevant portion of travel is mapped well before bottom-out.
+
+## 3.3 V Rail (TLV755P)
+
+TLV755P input (pin 1, IN) is fed from **VSYS** (BQ25895 pin 15/16), not directly from the battery. This gives two properties:
+
+- Power is sourced from USB or battery through the BQ25895 power-path — the 3.3 V rail is continuous across source transitions.
+- The LDO sits **behind** BQ25895's battery protection (OVP, OCP, thermal, BATFET); nothing on the 3.3 V rail can bypass those safeguards.
+
+VSYS(MIN) = 3.5 V guarantees the LDO stays out of dropout at full load (needs ≥ 3.55 V for 3.3 V / 500 mA per datasheet).
+
+## Push/Pull Sensor (CS1237)
+
+The instrument replaces the acoustic bellows with a loadcell that measures the push/pull effort the player applies. The loadcell is a 4-wire Wheatstone bridge; the **CS1237** 24-bit Σ-Δ ADC digitizes the bridge output directly (differential AINP/AINN, internal REFOUT tied to REFIN, PGA ×128). Output rate is configured at 40 or 640 Hz — well above the mechanical bandwidth of breath-like dynamics and far below the 1 kHz key-sampling loop on the wings.
+
+The CS1237 lives on the motherboard, next to the loadcell connector. Its 2-wire interface is bit-banged from the WB5MMG.
+
+## Pedals
+
+Two TRS 6.35 mm jacks on the motherboard, with mechanical presence sensing (switched contact that reports whether a plug is inserted):
+
+- **Sustain port** — expects a TS pedal shorting Tip–Sleeve. Digital input with pull-up; presence sense gates the MIDI sustain event.
+- **Expression port** — accepts M-Audio EX-P / Roland EV-5 and compatible TRS pots. The MCU measures **R(Tip-Ring)** via a 4 kΩ pull-up, which ignores per-pedal tip/ring wiring tuning. Voltage varies from ~0.66 V (min) to ~2.5 V (max) — 56 % of the ADC range, drawing ≤ 0.8 mA. The same measurement also accepts a TS sustain pedal plugged into this jack (Tip–Ring short = full deflection), so users who only have a sustain pedal are not stuck.
+
+### Expression pedal reference measurements
+
+M-Audio EX-P and Roland EV-5 have the wiper on the TRS tip.
+
+| Knob | R(Ring-Sleeve) | R(Tip-Sleeve) heel / tip | R(Tip-Ring) heel / tip |
+|---|---|---|---|
+| max | 65 kΩ | 53.64 / 64 kΩ | 12.46 / 1 kΩ |
+| min | 11.47 kΩ | 1 / 12.46 kΩ | 12.46 / 1 kΩ |
+
+Setting M-Audio mode to "Other" swaps tip and ring.
 

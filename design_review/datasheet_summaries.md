@@ -101,7 +101,7 @@ Used as reference for WB5MMG internals, **not placed on the BOM**. Key facts tha
 - **Protection**: foldback current limit (~720 mA), thermal shutdown at 165 °C, active output discharge.
 - **Dropout at 3.3 V / 500 mA**: 150 mV typ / 215 mV max @ 85 °C → **VIN ≥ 3.55 V needed to maintain 3.3 V at full load**. From a single Li-Ion (3.0–4.2 V), output may droop during deep discharge.
 - **PSRR**: 46 dB @ 100 kHz.
-- **Review check**: verify which rail feeds TLV755P input — if it is VSYS (BQ25895), VSYS(MIN)=3.5 V will keep it in regulation; if direct from battery, regulation fails below ~3.55 V.
+- **Input rail in this design**: **VSYS** (BQ25895) — keeps the LDO out of dropout via VSYS(MIN) = 3.5 V, and keeps the 3.3 V rail behind BQ25895's battery protections (OVP, OCP, thermal, BATFET). See [hardware.md](hardware.md).
 
 ### TPS2553DBV — current-limited USB power switch
 [datasheets/TPS2553DBVR.pdf](datasheets/TPS2553DBVR.pdf)
@@ -119,22 +119,23 @@ Used as reference for WB5MMG internals, **not placed on the BOM**. Key facts tha
 
 ## Protection / ESD
 
-### SMAJ13A — unidirectional TVS (⚠️ BOM mismatch)
-[datasheets/SMAJ13A.pdf](datasheets/SMAJ13A.pdf)
+### SMBJ13A — unidirectional TVS
+[datasheets/SMBJ13A.pdf](datasheets/SMBJ13A.pdf)
 
-- **Package**: SMA (DO-214AC). **400 W** peak pulse power (10/1000 µs).
-- **VRWM = 13 V**, VBR(min) = 14.4 V, **VC = 21.5 V @ IPP = 18.6 A**.
-- ⚠️ **BOM inconsistency**: the current BOM lists **SMBJ13A** (SMB package, 600 W) but the datasheet on disk is **SMAJ13A** (SMA package, 400 W). Either update the BOM or swap the datasheet. **Action required before fabrication.**
-- **Use in this design**: VBUS clamp (USB 5 V rail) / adapter input protection.
+- **Package**: SMB (DO-214AA). **600 W** peak pulse power (10/1000 µs), IFSM = 100 A (8.3 ms half-sine).
+- **VRWM = 13 V**, VBR(min) = 14.4 V / VBR(max) = 16.5 V @ IT = 1 mA, **VC = 21.5 V @ IPP = 27.9 A**.
+- IR ≤ 1 µA @ VRWM; typical operating/storage range −55 … +150 °C.
+- **Use in this design**: VBUS clamp (USB 5 V rail) / adapter input protection. VC = 21.5 V sits just under the BQ25895 VBUS abs-max of 22 V.
 - **Polarity**: unidirectional — cathode toward the protected line, anode to GND.
+- **Layout**: short, wide trace to GND; place as close as possible to the connector pin being protected.
 
 ### H5VND5BA — bidirectional low-capacitance ESD diode
 [datasheets/H5VND5BA.pdf](datasheets/H5VND5BA.pdf)
 
 - **Package**: SOD-523 (0402-sized footprint).
 - **Bidirectional**, VRWM = ±5 V, VBR = 6–8 V, VC = 8 V @ 1 A / 15 V @ 8 A.
-- **CJ ≤ 20 pF typ** — usable on USB 2.0 FS, DIN-MIDI, I²C, audio. **Not suited to USB 3 / HDMI (capacitance too high)**.
-- **Use**: placed on I/O lines that see user contact (5-pin DIN MIDI, keys, external connectors).
+- **CJ ≤ 20 pF typ** — usable on USB 2.0 FS, I²C, audio-range analog. **Not suited to USB 3 / HDMI (capacitance too high)**.
+- **Use in this design**: reserved for high-impedance user-touched I/O that the SRV05-4 doesn't already cover (e.g. programming-port lines if exposed externally). Pedal jacks and USB data lines use SRV05-4 packages instead.
 - **IEC 61000-4-2**: rated ±8 kV contact, ±15 kV air.
 
 ### SRV05-4 — 4-channel ESD diode array
@@ -143,8 +144,9 @@ Used as reference for WB5MMG internals, **not placed on the BOM**. Key facts tha
 - **Package**: SOT-23-6.
 - 4 I/O channels + VCC + GND, using steering diodes to VCC/GND rails and an internal TVS.
 - **VWM = 5 V**, VC = 12 V @ 1 A, **CJ ≈ 3.5 pF typ per line** — suitable for USB 2.0 D+/D−.
-- **Use**: USB data lines and similar 4-lane bundles.
+- **Use in this design**: USB D+/D− on the MainBoard, and a second package on the two pedal TRS jacks (Tip + Ring × 2 = 4 lines).
 - **Layout**: place immediately at the connector, route protected lines through the device (not stubbed).
+- **Pin-5 floating on the USB instance** (see [hardware.md](hardware.md)): prevents ESD current steering into the 3.3 V rail and MCU.
 
 ### BAT54 — Schottky diode (steering / protection)
 [datasheets/BAT54.pdf](datasheets/BAT54.pdf)
@@ -158,26 +160,39 @@ Used as reference for WB5MMG internals, **not placed on the BOM**. Key facts tha
 
 ## Sensing / ADC / Mux
 
-### SC4011SO-N — linear Hall-effect sensor (key position, per-key)
-[datasheets/SC4011SO-N-TR.pdf](datasheets/SC4011SO-N-TR.pdf)
+### SC4015SO-N — linear Hall-effect sensor (key position, per-key)
+[datasheets/SC4015_EN.pdf](datasheets/SC4015_EN.pdf)
 
-- **Package**: SOT-23 (3-pin: VCC, GND, OUT).
-- **Supply**: 2.5–18 V. **At 3.3 V: sensitivity ≈ 1.6 mV/Gauss**, VOUT(Q) = VCC/2 (quiescent), rail-to-rail-ish within ~100 mV.
-- **Bandwidth**: DC to ~30 kHz. Response time a few µs.
-- **Externals**: 0.1 µF from VCC to GND at the sensor; **optional 1 nF on OUT** as a low-pass (noise filtering before the mux/ADC).
+- **Package**: SOT23-3L (pin 1 VDD, 2 GND, 3 OUT).
+- **Supply**: 2.2–5.5 V (abs-max 25 V). **ICC typ 2.5 mA / max 6 mA @ 5 V, 25 °C.**
+- **Response**: T<sub>RESP</sub> = 1 µs, T<sub>PO</sub> ≤ 0.8 µs (fast enough to settle inside one ADC acquisition slot).
+- **At 3.3 V**: **sensitivity 2.0 mV/Gs typ** (min 1.8 / max 2.2), V<sub>OUT(Q)</sub> ≈ 2.2 V (**unipolar** — quiescent sits near the top rail). Linear output range 0.8 V → 2.2 V; the useful single-sided swing on the active polarity is **~1.4 V**.
+- **Active polarity** (`-N` variant): output drops below V<sub>OUT(Q)</sub> when an **N-pole** approaches the marked face. With the sensor mounted on the opposite side of the PCB, marked face toward the switch, this matches Gateron magnetic switches (N-pole faces PCB) — see the magnet/sensor pairing analysis in [hardware.md](hardware.md).
+- **Externals**: 0.1 µF from VDD to GND at the sensor; **optional 1 nF on OUT** for noise filtering ahead of the mux/ADC.
 - **Output impedance**: low; drives the 74HC4052 input directly. With 80 Ω Ron mux and the ADC sampling cap, settling is dominated by the ADC sample time, not the sensor.
-- **Integration note**: 142 sensors × 3.3 V × typ quiescent current → budget the sensor supply current draw (check SC4011 ICC vs. VCC curve). Consider whether all 142 are always-powered or gated in banks.
+- **Quantity**: 71 total (33 WingLeft + 38 WingRight).
 
-### CS1237 — 24-bit Σ-Δ ADC (auxiliary analog, if used)
+### Gateron Magnetic Jade Pro mini (KS-33D) — keyboard switch / magnet
+[datasheets/GATERONLowProfileMagneticJadeProSwitchSPEC.pdf](datasheets/GATERONLowProfileMagneticJadeProSwitchSPEC.pdf)
+
+- **Mechanical**: low-profile keyboard switch, total travel **3.5 ± 0.2 mm**, initial force 40 ± 10 gf, total-travel force < 110 gf, life 100 M cycles.
+- **Magnet orientation**: N-pole faces down toward the PCB (drawing page 7).
+- **Magnetic flux at the Hall sensor pad** (Gateron-spec, sensor on the opposite side of the PCB):
+  - Free position (0 mm): **75 ± 10 Gs**
+  - Full travel @ 500 gf: **680 ± 70 Gs**
+- **PCB stack assumption**: numbers above presume Gateron's reference PCB (~1.6 mm). At our 1.5 mm stack the sensor sits 0.1 mm closer → field marginally stronger, inside the spec ±10 % tolerance.
+- **Pairing with SC4015-N at 3.3 V** (typical): rest V<sub>OUT</sub> ≈ 2.05 V, full-press V<sub>OUT</sub> ≈ 0.84 V → ~1.21 V active swing across 3.5 mm. Worst-case (high field × high sensitivity) clamps at the 0.8 V floor in the last ~0.1–0.2 mm of travel — harmless for velocity capture.
+
+### CS1237 — 24-bit Σ-Δ ADC (push/pull loadcell)
 [datasheets/DS_CS1237_V1.1.pdf](datasheets/DS_CS1237_V1.1.pdf)
 
 - **Package**: SOP-8. Pinout: 1 REFIN, 2 GND, 3 AINN, 4 AINP, 5 SCLK, 6 DRDY/DOUT, 7 VDD, 8 REFOUT.
-- **Supply**: VDD 3.0–3.6 V (for logic) or 4.5–5.5 V (ratiometric). Internal 5.2 MHz osc, no crystal.
-- **Interface**: 2-wire (SCLK, DRDY/DOUT) — DRDY pulses when new sample is ready. Not standard SPI; bit-banged on most MCUs.
-- **PGA**: ×1 / ×2 / ×64 / ×128. **Data rates: 10 / 40 / 640 / 1280 Hz** — note 1280 Hz is fastest; not suitable if you need per-key 1 kHz polling across many channels.
-- **Reference**: internal REFOUT drives REFIN (tie together for default), or external ref for better absolute accuracy.
+- **Supply**: VDD 3.0–3.6 V (logic) or 4.5–5.5 V (ratiometric). Internal 5.2 MHz oscillator, no crystal.
+- **Interface**: 2-wire (SCLK, DRDY/DOUT) — DRDY pulses when new sample is ready. Not standard SPI; bit-banged on the WB5MMG.
+- **PGA**: ×1 / ×2 / ×64 / ×128. **Data rates: 10 / 40 / 640 / 1280 Hz**.
+- **Reference**: internal REFOUT tied to REFIN (default), ratiometric with the bridge excitation.
 - **Externals**: 100 nF on VDD, 100 nF on REFIN.
-- **Review context**: the primary key-sensing path is STM32 ADC + 74HC4052 mux. CS1237 — if present — is likely for a single high-precision channel (battery gauge, pressure, bellows?). Confirm what it actually digitizes in [hardware.md](hardware.md).
+- **Role in this design**: digitizes the Wheatstone bridge of the push/pull loadcell that replaces the acoustic bellows. Differential AINP/AINN across the bridge, PGA ×128. 40 or 640 Hz output is ample for bellows-like dynamics and decoupled from the 1 kHz key-scan loop on the wings — see [hardware.md](hardware.md).
 
 ### 74HC4052PW (Nexperia, ,118) — analog mux (key scanning)
 [datasheets/74HC4052.pdf](datasheets/74HC4052.pdf)
@@ -185,11 +200,11 @@ Used as reference for WB5MMG internals, **not placed on the BOM**. Key facts tha
 - **Package**: TSSOP-16 (PW suffix), Nexperia ,118 reel.
 - **Function**: dual 4-channel analog multiplexer/demux. Two select inputs (S0, S1), one active-low enable (Ē).
 - **Supply**: VCC 2–10 V (with VEE 0 V for unipolar), or VCC/VEE split for bipolar signal range.
-- **Ron at 3.3 V**: ~80 Ω typ (100 Ω max over temp). Not a precision mux, but adequate for driving an MCU ADC sample-and-hold with sufficient settling time (which the STM32 ADC sampling time register controls).
-- **Leakage**: a few nA at room temp; grows to ~1 µA at 85 °C — negligible for 3.3 V full-scale Hall signals.
-- **Architecture note (for review)**: 142 keys → typical topology is ~18 muxes × 8 channels or similar tree. Verify total number of mux stages and that the ADC acquisition time is set for the worst-case series Ron (multiple muxes cascaded would stack Ron, which matters for settling against the ADC sample cap).
+- **Ron at 3.3 V**: ~80 Ω typ (100 Ω max over temp). Not a precision mux, but adequate for driving an MCU ADC sample-and-hold with sufficient settling time (configured via the STM32 ADC sampling-time register).
+- **Leakage**: a few nA at room temp; ~1 µA at 85 °C — negligible against 3.3 V full-scale Hall signals.
+- **Topology in this design**: single-stage flat mux array — **WingLeft: 4 packages × 8 channels = 32 sensors**; **WingRight: 5 packages × 8 channels = 40 channels** (38 sensors, 2 spare). No cascading, so only one Ron appears in series with the ADC sample cap.
 - **Externals**: 100 nF bypass on VCC per package.
-- **Enable Ē**: when disabled, all channels open — useful for bank-switching power.
+- **Enable Ē**: when disabled, all channels open — available for bank-switching power if duty-cycling is later added.
 
 ---
 
@@ -197,20 +212,19 @@ Used as reference for WB5MMG internals, **not placed on the BOM**. Key facts tha
 
 | Threat | Defense | Notes |
 |---|---|---|
-| USB VBUS overvoltage / surge | SMAJ13A (⚠ BOM says SMBJ13A) | Verify package & part number match |
-| USB D+/D− ESD | SRV05-4 | 3.5 pF, USB 2.0 FS OK |
-| External user-touched I/O (MIDI DIN, keys) | H5VND5BA | Bidirectional, 20 pF max — OK for MIDI & audio |
-| Charger overvoltage (VBUS > 14.6 V) | BQ25895 internal VACOV | Plus SMAJ13A as coarse clamp |
+| USB VBUS overvoltage / surge | SMBJ13A | 600 W, VC = 21.5 V (< BQ25895 VBUS abs-max 22 V) |
+| USB D+/D− ESD | SRV05-4 (USB instance, pin 5 floating) | 3.5 pF, USB 2.0 FS OK |
+| Pedal TRS jack ESD (Tip + Ring × 2 jacks) | SRV05-4 (pedal instance) | Slow analog lines; 4 channels = 2 jacks |
+| Other user-touched I/O (programming port, etc.) | H5VND5BA (as needed) | Bidirectional, 20 pF max |
+| Charger overvoltage (VBUS > 14.6 V) | BQ25895 internal VACOV | Plus SMBJ13A as coarse clamp |
 | Battery OVP/OCP | BQ25895 internal | 104 % VREG, 9 A system |
 | 3.3 V rail short | TLV755P foldback + thermal | Regulated down to ~1 V out |
 | USB sourcing short (OTG / 5 V port) | TPS2553 current-limit + /FAULT | Constant-current mode, not latch |
 
 ## Open Items for Design Review
 
-1. **SMAJ13A vs. SMBJ13A**: BOM / datasheet mismatch on TVS — choose one and align.
-2. **TLV755P input rail**: confirm it is VSYS from BQ25895 (stays ≥3.5 V) rather than direct VBAT.
-3. **CS1237 role**: document in [hardware.md](hardware.md) what signal it digitizes and whether its 1280 Hz max rate is compatible with that role.
-4. **74HC4052 architecture**: document the number of mux stages and ADC sample-time configuration; Ron-vs-sample-cap settling needs to be verified for worst-case topology.
-5. **WB5MMG layout**: verify 2.5/7.6/1.3 mm antenna clearance, sensitive-GPIO capacitors on PB10/PB11/PC5, and ANT_IN/RF_OUT/ANT_NC pad handling on the MainBoard layout.
-6. **STM32F103 DFU path**: with BOOT0 repurposed as FN3, document the recovery procedure for entering system-memory bootloader.
-7. **BAT54 variant**: confirm which of BAT54/A/C/S is placed (footprints differ).
+1. **ADC sample-time configuration**: confirm the STM32F103 ADC sampling time is set long enough to settle through one 74HC4052 Ron (~80 Ω) plus SC4015 output impedance into the ADC sample-and-hold cap — spec sheet and scope trace welcome.
+2. **WB5MMG layout**: verify 2.5 / 7.6 / 1.3 mm antenna clearance, the 3.3 pF caps on sensitive GPIOs (PB10, PB11, PC5), and ANT_IN / RF_OUT / ANT_NC pad handling on the MainBoard layout.
+3. **STM32F103 DFU path**: with BOOT0 repurposed as FN3, document the recovery procedure for entering the system-memory bootloader (and confirm BOOT1 latches correctly at reset).
+4. **BAT54 variant**: confirm which of BAT54 / A / C / S is placed — the three topologies share a SOT-23 package but differ in footprint connectivity.
+5. **Pedal-jack SRV05-4 wiring**: confirm pin-5 handling on the pedal-jack SRV05-4 package (tied to 3.3 V vs. floating as on the USB instance), since pedal Tip/Ring lines carry slow analog — steering to rail is acceptable here, but the choice should be documented.

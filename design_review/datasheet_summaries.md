@@ -110,7 +110,7 @@ Used as reference for WB5MMG internals, **not placed on the BOM**. Key facts tha
 - **Supply**: 2.5–6.5 V. Up to 1.5 A load. 85 mΩ rDS(on) typ.
 - **Current limit**: programmed by R_ILIM, 15–232 kΩ range. IOS ≈ K_ILIM / R_ILIM; ±6 % accuracy around 1.7 A.
 - **Behavior**: TPS2553 (no "-1") is **constant-current** on fault (auto-recover) — correct choice for USB ports. -1 variant **latches off**.
-- **Externals**: 0.1 µF minimum on IN (10 µF typical in reference), 120 µF on OUT per USB spec (shared across ports OK), 10 kΩ pull-up on /FAULT.
+- **Externals**: 0.1 µF minimum on IN (10 µF typical in reference), 10 kΩ pull-up on /FAULT. **No output cap is required** — TPS2553 is a current-limited pass FET, not a feedback regulator; the 120 µF on OUT seen in reference schematics is only the USB 2.0 downstream-port compliance cap, not a stability requirement. In non-USB applications (e.g., the bandoneo's wing power gating) the OUT cap can be omitted.
 - **Reverse-voltage protection**: trips when VOUT > VIN by 135 mV for 4 ms — useful if downstream can back-drive.
 - **Protection**: 15 kV IEC 61000-4-2 air / 8 kV contact ESD at connector **with external capacitance** present.
 - **Review check**: R_ILIM value in schematic must correspond to the configured limit (e.g., 20 kΩ → ~1.3 A). Verify DBV vs. DRV package on BOM matches footprint.

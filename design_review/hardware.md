@@ -73,8 +73,6 @@ Channel assignment:
 
 **Wing-port ESD steering.** The SRV05-4 arrays at each wing port (TV4/TV5 left, TV2/TV3 right) tie pin 5 to the **gated wing rail**, not to main 3.3 V. This keeps ESD energy in the same power domain as the buffer's output drivers, so transient steering currents don't cross power-domain boundaries.
 
-**Required externals, not yet in the BOM.** Add a 100 nF bypass cap from pin 14 to GND at each buffer (U61, U63), plus a ≥10 µF bulk cap on each TPS2553 output (`L_VCC`, `R_VCC`) close to the wing connector. The TPS2553 datasheet requires output capacitance for stable regulation; the local 100 nF is standard logic IC hygiene.
-
 ## Main MCU
 
 The main board module includes filtering capacitors.

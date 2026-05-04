@@ -4659,100 +4659,6 @@ gge52
 ]
 [
 DESIGNATOR
-RIGHT_PORT
-FOOTPRINT
-CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
-PARTTYPE
-B8B-PH-SM4-TBT(LF)(SN)
-DESCRIPTION
-Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
-Component Kind
-Standard
-LCSC Part Name
-1x8P 间距:2mm 立贴 系列:PH
-Supplier Part
-C265441
-Manufacturer
-JST
-Manufacturer Part
-B8B-PH-SM4-TBT(LF)(SN)
-Supplier Footprint
-SMD,P=2mm
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://item.szlcsc.com/datasheet/B8B-PH-SM4-TBT(LF)(SN)/255723.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
-Pins Structure
-1x8P
-Pitch
-2mm
-Mounting Type
-Surface Mount,Vertical
-Reference Series
-PH
-Number of Pins
-8P
-Number of Rows
-1
-Number of PINs Per Row
-8
-Row Spacing
--
-Current Rating
-2A
-Contact Material
-Copper Alloy
-Contact Plating
-Tin
-Operating Temperature
--25℃~+85℃
-Voltage Rating
-100V
-Plastic Material
-PA
-Flame Retardant Rating
-UL94V-0
-Supplementary Features
-Auxiliary Solder Pin
-Color
-Beige
-Z-Height of the Board
-6.6mm
-X-Length of Bottom Edge on Board (Spacing Line)
-19.95mm
-Y-Width of Bottom Edge on Board
-7mm
-Description
-Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
-Symbol
-B8B-PH-SM4-TBT(LF)(SN)
-Designator
-RIGHT_PORT
-Name
-B8B-PH-SM4-TBT(LF)(SN)
-Device
-B8B-PH-SM4-TBT(LF)(SN)
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge165
-
-*
-]
-[
-DESIGNATOR
 TV1
 FOOTPRINT
 SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
@@ -5483,100 +5389,6 @@ Channel ID
 ]
 [
 DESIGNATOR
-PROGRAM_PORT
-FOOTPRINT
-CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
-PARTTYPE
-B8B-PH-SM4-TBT(LF)(SN)
-DESCRIPTION
-Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
-Component Kind
-Standard
-LCSC Part Name
-1x8P 间距:2mm 立贴 系列:PH
-Supplier Part
-C265441
-Manufacturer
-JST
-Manufacturer Part
-B8B-PH-SM4-TBT(LF)(SN)
-Supplier Footprint
-SMD,P=2mm
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://item.szlcsc.com/datasheet/B8B-PH-SM4-TBT(LF)(SN)/255723.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
-Pins Structure
-1x8P
-Pitch
-2mm
-Mounting Type
-Surface Mount,Vertical
-Reference Series
-PH
-Number of Pins
-8P
-Number of Rows
-1
-Number of PINs Per Row
-8
-Row Spacing
--
-Current Rating
-2A
-Contact Material
-Copper Alloy
-Contact Plating
-Tin
-Operating Temperature
--25℃~+85℃
-Voltage Rating
-100V
-Plastic Material
-PA
-Flame Retardant Rating
-UL94V-0
-Supplementary Features
-Auxiliary Solder Pin
-Color
-Beige
-Z-Height of the Board
-6.6mm
-X-Length of Bottom Edge on Board (Spacing Line)
-19.95mm
-Y-Width of Bottom Edge on Board
-7mm
-Description
-Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
-Symbol
-B8B-PH-SM4-TBT(LF)(SN)
-Designator
-PROGRAM_PORT
-Name
-B8B-PH-SM4-TBT(LF)(SN)
-Device
-B8B-PH-SM4-TBT(LF)(SN)
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge165_1
-
-*
-]
-[
-DESIGNATOR
 C1
 FOOTPRINT
 C0402
@@ -5899,13 +5711,133 @@ gge199
 
 *
 ]
+[
+DESIGNATOR
+CN1
+FOOTPRINT
+CONN-SMD_10P-P2.54_72454-010VLF
+PARTTYPE
+72454-010VLF
+DESCRIPTION
+Pins Structure:2x5P Pitch:2.54mm Mounting Type:Surface Mount,Vertical Reference Series:- Number of Pins:10P Number of Rows:2 Number of PINs Per Row:5 Row Spacing:2.54mm Current Rating:1A Contact Material:Phosphor Bronze Contact Plating:Tin Operating Tempe
+Component Kind
+Standard
+LCSC Part Name
+2x5P 间距:2.54mm 立贴
+Supplier Part
+C236047
+Manufacturer
+Amphenol
+Manufacturer Part
+72454-010VLF
+Supplier Footprint
+SMD,P=2.54mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/72454-010VLF/235722.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+CONN-SMD_2x5P-L20.1-W8.8-H12.8-P2.54
+Pins Structure
+2x5P
+Pitch
+2.54mm
+Mounting Type
+Surface Mount,Vertical
+Reference Series
+-
+Number of Pins
+10P
+Number of Rows
+2
+Number of PINs Per Row
+5
+Row Spacing
+2.54mm
+Current Rating
+1A
+Contact Material
+Phosphor Bronze
+Contact Plating
+Tin
+Operating Temperature
+-65℃~+105℃
+Description
+Pins Structure:2x5P Pitch:2.54mm Mounting Type:Surface Mount,Vertical Reference Series:- Number of Pins:10P Number of Rows:2 Number of PINs Per Row:5 Row Spacing:2.54mm Current Rating:1A Contact Material:Phosphor Bronze Contact Plating:Tin Operating Tempe
+Symbol
+72454-010VLF
+Designator
+CN1
+Name
+72454-010VLF
+Device
+72454-010VLF
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge268_1
+Comment
+RIGHT_WING_CONNECTOR
+
+*
+]
+[
+DESIGNATOR
+CN3
+FOOTPRINT
+TC2070_Landing_Pattern
+PARTTYPE
+STDC14_Connector
+DESCRIPTION
+PROGRAM_CONNECTOR
+Component Kind
+Standard
+Symbol
+STDC14_Pogo_Pins
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+
+Designator
+CN3
+Name
+
+Description
+PROGRAM_CONNECTOR
+Device
+STDC14_Connector
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge259
+
+*
+]
 (
 $1I10936\$1N697 
 U13-1 74HC4052PW,118-2Y0 Passive 
+U10-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 $1I10936\$1N698 
 U13-2 74HC4052PW,118-2Y2 Passive 
+U12-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 A_IN3 
@@ -5915,10 +5847,12 @@ U46-13 STM32F103C8T6-PA3 Passive
 (
 $1I10936\$1N699 
 U13-4 74HC4052PW,118-2Y3 Passive 
+U15-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 $1I10936\$1N703 
 U13-5 74HC4052PW,118-2Y1 Passive 
+U17-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 GND 
@@ -6000,15 +5934,18 @@ U46-47 STM32F103C8T6-VSS_3 Passive
 C5-2 CL05B104KO5NNNC-2 Passive 
 C6-1 CL05A105KA5NQNC-1 Passive 
 C7-1 CL05B103KB5NNNC-1 Input   
-RIGHT_PORT-1 B8B-PH-SM4-TBT(LF)(SN)-1 Passive 
 TV1-2 SRV05-4-P-T7_C85364-2 Input   
 TV2-2 SRV05-4-P-T7_C85364-2 Input   
 LED_FN1-2 KT-0805G-K Passive 
 LED_POW-2 KT-0805Y-- Passive 
-PROGRAM_PORT-1 B8B-PH-SM4-TBT(LF)(SN)-1 Passive 
 C1-1 CL05A106MQ5NUNC-1 Input   
 TV3-2 SRV05-4-P-T7_C85364-2 Input   
 TV5-2 SRV05-4-P-T7_C85364-2 Input   
+CN1-3 72454-010VLF-3 Passive 
+CN1-5 72454-010VLF-5 Passive 
+CN1-7 72454-010VLF-7 Passive 
+CN3-5 STDC14_Connector-GND Input   
+CN3-7 STDC14_Connector-GND Input   
 )
 (
 SEL1 
@@ -6031,10 +5968,12 @@ U46-21 STM32F103C8T6-PB10 Passive
 (
 $1I10936\$1N711 
 U13-11 74HC4052PW,118-1Y3 Passive 
+U18-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 $1I10936\$1N710 
 U13-12 74HC4052PW,118-1Y0 Passive 
+U16-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 A_IN2 
@@ -6044,10 +5983,12 @@ U46-12 STM32F103C8T6-PA2 Passive
 (
 $1I10936\$1N708 
 U13-14 74HC4052PW,118-1Y1 Passive 
+U14-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 $1I10936\$1N707 
 U13-15 74HC4052PW,118-1Y2 Passive 
+U11-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 VCC 
@@ -6105,24 +6046,26 @@ U46-24 STM32F103C8T6-VDD_1 Passive
 U46-36 STM32F103C8T6-VDD_2 Passive 
 U46-48 STM32F103C8T6-VDD_3 Passive 
 C5-1 CL05B104KO5NNNC-1 Passive 
-RIGHT_PORT-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
 TV1-5 SRV05-4-P-T7_C85364-5 Input   
 TV2-5 SRV05-4-P-T7_C85364-5 Input   
 R9-2 0402WGF1001TCE-2 Input   
-PROGRAM_PORT-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
 C1-2 CL05A106MQ5NUNC-2 Input   
 R8-2 0402WGF1002TCE-2 Input   
 TV3-5 SRV05-4-P-T7_C85364-5 Input   
 TV5-5 SRV05-4-P-T7_C85364-5 Input   
 L1-1 GZ1608D601TF-1 Passive 
+CN1-1 72454-010VLF-1 Passive 
+CN3-3 STDC14_Connector-T_VCC Input   
 )
 (
 $1I10958\$1N697 
 U4-1 74HC4052PW,118-2Y0 Passive 
+U1-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 $1I10958\$1N698 
 U4-2 74HC4052PW,118-2Y2 Passive 
+U3-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 A_IN1 
@@ -6132,18 +6075,22 @@ U46-11 STM32F103C8T6-PA1 Passive
 (
 $1I10958\$1N699 
 U4-4 74HC4052PW,118-2Y3 Passive 
+U6-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 $1I10958\$1N703 
 U4-5 74HC4052PW,118-2Y1 Passive 
+U8-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 $1I10958\$1N711 
 U4-11 74HC4052PW,118-1Y3 Passive 
+U9-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 $1I10958\$1N710 
 U4-12 74HC4052PW,118-1Y0 Passive 
+U7-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 A_IN0 
@@ -6153,18 +6100,22 @@ U46-10 STM32F103C8T6-PA0-WKUP Passive
 (
 $1I10958\$1N708 
 U4-14 74HC4052PW,118-1Y1 Passive 
+U5-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 $1I10958\$1N707 
 U4-15 74HC4052PW,118-1Y2 Passive 
+U2-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 $1I10980\$1N697 
 U22-1 74HC4052PW,118-2Y0 Passive 
+U19-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 $1I10980\$1N698 
 U22-2 74HC4052PW,118-2Y2 Passive 
+U21-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 A_IN5 
@@ -6174,18 +6125,22 @@ U46-15 STM32F103C8T6-PA5 Passive
 (
 $1I10980\$1N699 
 U22-4 74HC4052PW,118-2Y3 Passive 
+U24-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 $1I10980\$1N703 
 U22-5 74HC4052PW,118-2Y1 Passive 
+U26-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 $1I10980\$1N711 
 U22-11 74HC4052PW,118-1Y3 Passive 
+U27-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 $1I10980\$1N710 
 U22-12 74HC4052PW,118-1Y0 Passive 
+U25-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 A_IN4 
@@ -6195,18 +6150,22 @@ U46-14 STM32F103C8T6-PA4 Passive
 (
 $1I10980\$1N708 
 U22-14 74HC4052PW,118-1Y1 Passive 
+U23-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 $1I10980\$1N707 
 U22-15 74HC4052PW,118-1Y2 Passive 
+U20-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 $1I11002\$1N697 
 U31-1 74HC4052PW,118-2Y0 Passive 
+U28-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 $1I11002\$1N698 
 U31-2 74HC4052PW,118-2Y2 Passive 
+U30-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 A_IN7 
@@ -6216,18 +6175,22 @@ U46-17 STM32F103C8T6-PA7 Passive
 (
 $1I11002\$1N699 
 U31-4 74HC4052PW,118-2Y3 Passive 
+U33-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 $1I11002\$1N703 
 U31-5 74HC4052PW,118-2Y1 Passive 
+U35-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 $1I11002\$1N711 
 U31-11 74HC4052PW,118-1Y3 Passive 
+U36-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 $1I11002\$1N710 
 U31-12 74HC4052PW,118-1Y0 Passive 
+U34-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 A_IN6 
@@ -6237,18 +6200,22 @@ U46-16 STM32F103C8T6-PA6 Passive
 (
 $1I11002\$1N708 
 U31-14 74HC4052PW,118-1Y1 Passive 
+U32-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 $1I11002\$1N707 
 U31-15 74HC4052PW,118-1Y2 Passive 
+U29-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 $1I18136\$1N697 
 U40-1 74HC4052PW,118-2Y0 Passive 
+U37-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 $1I18136\$1N698 
 U40-2 74HC4052PW,118-2Y2 Passive 
+U39-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 A_IN9 
@@ -6258,10 +6225,12 @@ U46-19 STM32F103C8T6-PB1 Passive
 (
 $1I18136\$1N703 
 U40-5 74HC4052PW,118-2Y1 Passive 
+U43-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 $1I18136\$1N710 
 U40-12 74HC4052PW,118-1Y0 Passive 
+U42-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 A_IN8 
@@ -6271,10 +6240,12 @@ U46-18 STM32F103C8T6-PB0 Passive
 (
 $1I18136\$1N708 
 U40-14 74HC4052PW,118-1Y1 Passive 
+U41-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 $1I18136\$1N707 
 U40-15 74HC4052PW,118-1Y2 Passive 
+U38-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 ID4 
@@ -6307,9 +6278,8 @@ SW3-2 TS-1088-AR02016-2 Passive
 C36-1 CC0603KRX7R9BB104-1 Passive 
 D6-2 H5VND5BA-2 Passive 
 U46-7 STM32F103C8T6-NRST Passive 
-RIGHT_PORT-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
-PROGRAM_PORT-6 B8B-PH-SM4-TBT(LF)(SN)-6 Passive 
 TV5-6 SRV05-4-P-T7_C85364-6 Input   
+CN1-9 72454-010VLF-9 Passive 
 )
 (
 BOOT0 
@@ -6329,45 +6299,45 @@ U46-33 STM32F103C8T6-PA12 Passive
 (
 SPI_NSS 
 U46-25 STM32F103C8T6-PB12 Passive 
-RIGHT_PORT-7 B8B-PH-SM4-TBT(LF)(SN)-7 Passive 
 TV1-3 SRV05-4-P-T7_C85364-3 Input   
 R8-1 0402WGF1002TCE-1 Input   
+CN1-8 72454-010VLF-8 Passive 
 )
 (
 SPI_SCK 
 U46-26 STM32F103C8T6-PB13 Passive 
-RIGHT_PORT-6 B8B-PH-SM4-TBT(LF)(SN)-6 Passive 
 TV1-1 SRV05-4-P-T7_C85364-1 Input   
+CN1-6 72454-010VLF-6 Passive 
 )
 (
 SPI_MISO 
 U46-27 STM32F103C8T6-PB14 Passive 
-RIGHT_PORT-5 B8B-PH-SM4-TBT(LF)(SN)-5 Passive 
 TV1-6 SRV05-4-P-T7_C85364-6 Input   
+CN1-4 72454-010VLF-4 Passive 
 )
 (
 SPI_MOSI 
 U46-28 STM32F103C8T6-PB15 Passive 
-RIGHT_PORT-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive 
 TV1-4 SRV05-4-P-T7_C85364-4 Input   
+CN1-2 72454-010VLF-2 Passive 
 )
 (
 READY 
 U46-29 STM32F103C8T6-PA8 Passive 
-RIGHT_PORT-8 B8B-PH-SM4-TBT(LF)(SN)-8 Passive 
 TV5-4 SRV05-4-P-T7_C85364-4 Input   
+CN1-10 72454-010VLF-10 Passive 
 )
 (
 PGM_USART_TX 
 U46-30 STM32F103C8T6-PA9 Passive 
 TV2-6 SRV05-4-P-T7_C85364-6 Input   
-PROGRAM_PORT-7 B8B-PH-SM4-TBT(LF)(SN)-7 Passive 
+CN3-14 STDC14_Connector-T VCP TX Input   
 )
 (
 PGM_USART_RX 
 U46-31 STM32F103C8T6-PA10 Passive 
-PROGRAM_PORT-8 B8B-PH-SM4-TBT(LF)(SN)-8 Passive 
 TV3-4 SRV05-4-P-T7_C85364-4 Input   
+CN3-13 STDC14_Connector-T_VCP_RX Input   
 )
 (
 LED_FN1 
@@ -6378,19 +6348,25 @@ R7-2 0402WGF1001TCE-2 Input
 PGM_SWDIO 
 U46-34 STM32F103C8T6-PA13 Passive 
 TV2-3 SRV05-4-P-T7_C85364-3 Input   
-PROGRAM_PORT-5 B8B-PH-SM4-TBT(LF)(SN)-5 Passive 
+CN3-4 STDC14_Connector-T_JTMS/T_SWDIO Input   
 )
 (
 PGM_SWCLK 
 U46-37 STM32F103C8T6-PA14 Passive 
 TV2-1 SRV05-4-P-T7_C85364-1 Input   
-PROGRAM_PORT-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive 
+CN3-6 STDC14_Connector-T_JCLK/T_SWCLK Input   
+)
+(
+PGM_DETECT 
+U46-38 STM32F103C8T6-PA15 Passive 
+TV3-1 SRV05-4-P-T7_C85364-1 Input   
+CN3-11 STDC14_Connector-GNDDetect Input   
 )
 (
 PGM_SWO 
 U46-39 STM32F103C8T6-PB3 Passive 
-PROGRAM_PORT-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
 TV3-6 SRV05-4-P-T7_C85364-6 Input   
+CN3-8 STDC14_Connector-T_JTDO/T_SWO Input   
 )
 (
 VDDA 
@@ -6401,6 +6377,7 @@ L1-2 GZ1608D601TF-2 Passive
 (
 PGM_RESET 
 TV2-4 SRV05-4-P-T7_C85364-4 Input   
+CN3-12 STDC14_Connector-#RST Input   
 )
 (
 $1N18835 

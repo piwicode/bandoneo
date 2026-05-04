@@ -1,7 +1,7 @@
 PROTEL NETLIST 2.0
 [
 DESIGNATOR
-SW
+SW1
 FOOTPRINT
 SW-SMD_L3.9-W3.0-P4.45
 PARTTYPE
@@ -67,7 +67,7 @@ Circuit:SPST Actuator Style:Round Button Operating Force:160gf Mounting Style:Br
 Symbol
 TS-1088-AR02016
 Designator
-SW
+SW1
 Name
 TS-1088-AR02016
 Device
@@ -85,7 +85,7 @@ gge47_1
 ]
 [
 DESIGNATOR
-C
+C1
 FOOTPRINT
 C0603
 PARTTYPE
@@ -129,7 +129,7 @@ Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coeffici
 Symbol
 CL05B104KO5NNNC
 Designator
-C
+C1
 Device
 CC0603KRX7R9BB104
 Unique ID
@@ -145,7 +145,7 @@ Channel ID
 ]
 [
 DESIGNATOR
-D
+D1
 FOOTPRINT
 SOD-523_L1.2-W0.8-LS1.6-BI
 PARTTYPE
@@ -205,7 +205,7 @@ Polarity:Bidirectional Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:15V 
 Symbol
 H5VND5BA
 Designator
-D
+D1
 Name
 H5VND5BA
 Device
@@ -223,7 +223,7 @@ gge193
 ]
 [
 DESIGNATOR
-SW_POWER2
+SW3
 FOOTPRINT
 SW-SMD_L3.9-W3.0-P4.45
 PARTTYPE
@@ -289,7 +289,7 @@ Circuit:SPST Actuator Style:Round Button Operating Force:160gf Mounting Style:Br
 Symbol
 TS-1088-AR02016
 Designator
-SW_POWER2
+SW3
 Name
 TS-1088-AR02016
 Device
@@ -307,7 +307,7 @@ gge47_6
 ]
 [
 DESIGNATOR
-C33
+C8
 FOOTPRINT
 C0603
 PARTTYPE
@@ -351,7 +351,7 @@ Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coeffici
 Symbol
 CL05B104KO5NNNC
 Designator
-C33
+C8
 Device
 CC0603KRX7R9BB104
 Unique ID
@@ -445,7 +445,7 @@ gge194
 ]
 [
 DESIGNATOR
-SW1
+SW6
 FOOTPRINT
 SW-SMD_L3.9-W3.0-P4.45
 PARTTYPE
@@ -511,7 +511,7 @@ Circuit:SPST Actuator Style:Round Button Operating Force:160gf Mounting Style:Br
 Symbol
 TS-1088-AR02016
 Designator
-SW1
+SW6
 Name
 TS-1088-AR02016
 Device
@@ -751,7 +751,7 @@ gge196
 ]
 [
 DESIGNATOR
-C1
+C9
 FOOTPRINT
 C0603
 PARTTYPE
@@ -795,7 +795,7 @@ Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coeffici
 Symbol
 CL05B104KO5NNNC
 Designator
-C1
+C9
 Device
 CC0603KRX7R9BB104
 Unique ID
@@ -1106,6 +1106,228 @@ Channel ID
 
 Unique ID
 gge199
+
+*
+]
+[
+DESIGNATOR
+SW5
+FOOTPRINT
+SW-SMD_L3.9-W3.0-P4.45
+PARTTYPE
+TS-1088-AR02016
+DESCRIPTION
+Circuit:SPST Actuator Style:Round Button Operating Force:160gf Mounting Style:Brick nogging Switch Length:4mm Switch Width:3mm Switch Height:2mm Strike Gundam:不带 Contact Current:50mA Voltage Rating (DC):12V Insulation Resistance:100MΩ Actuator/Cap Color:B
+Component Kind
+Standard
+LCSC Part Name
+4*3*2mm 立贴 轻触开关
+Supplier Part
+C720477
+Manufacturer
+XUNPU(讯普)
+Manufacturer Part
+TS-1088-AR02016
+Supplier Footprint
+SMD
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20200810/C720475_60D09DD6C54279ADDB2DC25100F1CC11.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SW-SMD_L3.9-W2.9-H2.0-LS4.8
+Circuit
+SPST
+Actuator Style
+Round Button
+Operating Force
+160gf
+Mounting Style
+Brick nogging
+Switch Length
+4mm
+Switch Width
+3mm
+Switch Height
+2mm
+Strike Gundam
+不带
+Contact Current
+50mA
+Voltage Rating (DC)
+12V
+Insulation Resistance
+100MΩ
+Actuator/Cap Color
+Black
+Pin Style
+SMDSplicing
+Mechanical Life
+10万次
+Operating Temperature
+-30℃~+80℃
+Description
+Circuit:SPST Actuator Style:Round Button Operating Force:160gf Mounting Style:Brick nogging Switch Length:4mm Switch Width:3mm Switch Height:2mm Strike Gundam:不带 Contact Current:50mA Voltage Rating (DC):12V Insulation Resistance:100MΩ Actuator/Cap Color:B
+Symbol
+TS-1088-AR02016
+Designator
+SW5
+Name
+TS-1088-AR02016
+Device
+TS-1088-AR02016
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge47_3
+
+*
+]
+[
+DESIGNATOR
+C47
+FOOTPRINT
+C0603
+PARTTYPE
+CC0603KRX7R9BB104
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Component Kind
+Standard
+LCSC Part Name
+100nF ±10% 50V
+Supplier Part
+C14663
+Manufacturer
+YAGEO(国巨)
+Manufacturer Part
+CC0603KRX7R9BB104
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20170116/1484561234239.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0603_L1.6-W0.8-H0.8
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Value
+100nF
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Symbol
+CL05B104KO5NNNC
+Designator
+C47
+Device
+CC0603KRX7R9BB104
+Unique ID
+gge195_3
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+D9
+FOOTPRINT
+SOD-523_L1.2-W0.8-LS1.6-BI
+PARTTYPE
+H5VND5BA
+DESCRIPTION
+Polarity:Bidirectional Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:15V Peak Pulse Current (Ipp):8A@8/20us Peak Pulse Power Dissipation (Ppp):120W@8/20us Voltage - Breakdown:8V Reverse Leakage Current (Ir):200nA Number of Channels:1 Operating Temp
+Component Kind
+Standard
+LCSC Part Name
+双向ESD 5V截止 峰值浪涌电流：8A@8/20us
+Supplier Part
+C42413899
+Manufacturer
+R+O(宏嘉诚)
+Manufacturer Part
+H5VND5BA
+Supplier Footprint
+SOD-523
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/H5VND5BA/44403780.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOD-523_L1.2-W0.8-LS1.6-BI
+Polarity
+Bidirectional
+Reverse Stand-Off Voltage (Vrwm)
+5V
+Clamping Voltage
+15V
+Peak Pulse Current (Ipp)
+8A@8/20us
+Peak Pulse Power Dissipation (Ppp)
+120W@8/20us
+Voltage - Breakdown
+8V
+Reverse Leakage Current (Ir)
+200nA
+Number of Channels
+1
+Operating Temperature
+-55℃~+125℃
+level of protection
+IEC 61000-4-2；IEC 61000-4-5
+Type
+ESD
+Junction Capacitance
+20pF
+Description
+Polarity:Bidirectional Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:15V Peak Pulse Current (Ipp):8A@8/20us Peak Pulse Power Dissipation (Ppp):120W@8/20us Voltage - Breakdown:8V Reverse Leakage Current (Ir):200nA Number of Channels:1 Operating Temp
+Symbol
+H5VND5BA
+Designator
+D9
+Name
+H5VND5BA
+Device
+H5VND5BA
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge199_1
 
 *
 ]
@@ -2579,98 +2801,6 @@ gge222
 ]
 [
 DESIGNATOR
-U58
-FOOTPRINT
-SOIC-8_L5.0-W4.0-P1.27-LS6.0-BL
-PARTTYPE
-CS1237-SOP8
-DESCRIPTION
-Resolution(Bits):24 Sampling Rate:10Hz number of channels:1 Voltage - Supply:3V~5.5V Voltage - Supply:3V~5.5V Interface:SPI differential input:Yes Integral non - linearity:- Integral non - linearity:- Operating Temperature:-40℃~+85℃ Operating Temperature:
-Component Kind
-Standard
-LCSC Part Name
-1通道 24位ADC SPI接口
-Supplier Part
-C77801
-Manufacturer
-CHIPSEA(芯海科技)
-Manufacturer Part
-CS1237-SOP8
-Supplier Footprint
-SOP-8
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://item.szlcsc.com/datasheet/CS1237-SOP8/78934.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-SOIC-8_L5.0-W4.0-P1.27-LS6.0-BL
-Resolution(Bits)
-24
-Sampling Rate
-10Hz
-number of channels
-1
-Voltage - Supply
-3V~5.5V
-Interface
-SPI
-differential input
-Yes
-Integral non - linearity
--
-Operating Temperature
--40℃~+85℃
-Signal-to-Noise Ratio
--
-Clock/Oscillator
-Built-in
-Clock Frequency
-5.2MHz
-Voltage Reference
-Built-in；External
-Voltage Reference Drift
--
-Programmable Gain
-Support
-Temperature Sensors
-Built-in
-ADC architecture
-Sigma-Delta
-Data rate
-1.28kHz；10Hz；640Hz；40Hz
-Quiescent Current (Iq)
-100nA
-Full-Scale Range(FSR)
--
-Description
-Resolution(Bits):24 Sampling Rate:10Hz number of channels:1 Voltage - Supply:3V~5.5V Voltage - Supply:3V~5.5V Interface:SPI differential input:Yes Integral non - linearity:- Integral non - linearity:- Operating Temperature:-40℃~+85℃ Operating Temperature:
-Symbol
-CS1237-SO
-Designator
-U58
-Name
-CS1237-SOP8
-Device
-CS1237-SOP8
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge225
-
-*
-]
-[
-DESIGNATOR
 LED_FN2
 FOOTPRINT
 LED0805-RD
@@ -2966,68 +3096,6 @@ Channel ID
 
 Unique ID
 gge222_2
-
-*
-]
-[
-DESIGNATOR
-C38
-FOOTPRINT
-C1206
-PARTTYPE
-1206B475K500NT
-DESCRIPTION
-Capacitance:4.7uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
-Component Kind
-Standard
-LCSC Part Name
-4.7uF ±10% 50V
-Supplier Part
-C29823
-Manufacturer
-FH(风华)
-Manufacturer Part
-1206B475K500NT
-Supplier Footprint
-1206
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://item.szlcsc.com/datasheet/1206B475K500NT/30577.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-C1206_L3.2-W1.6-H1.3
-Value
-4.7uF
-Tolerance
-±10%
-Voltage Rating
-50V
-Temperature Coefficient
-X7R
-Description
-Capacitance:4.7uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
-Symbol
-1206B475K500NT
-Designator
-C38
-Name
-4.7uF
-Device
-1206B475K500NT
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge252
 
 *
 ]
@@ -3383,7 +3451,383 @@ gge257
 ]
 [
 DESIGNATOR
-CN1
+CP1
+FOOTPRINT
+C1206
+PARTTYPE
+CL31B105KBHNNNE
+DESCRIPTION
+Capacitance:1uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Component Kind
+Standard
+LCSC Part Name
+1uF ±10% 50V
+Supplier Part
+C1848
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL31B105KBHNNNE
+Supplier Footprint
+1206
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/CL31B105KBHNNNE/2200.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C1206_L3.2-W1.6-H1.3
+Value
+1uF
+Tolerance
+±10%
+Voltage Rating
+50V
+Temperature Coefficient
+X7R
+Description
+Capacitance:1uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Symbol
+CL31B105KBHNNNE
+Designator
+CP1
+Name
+1uF
+Device
+CL31B105KBHNNNE
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge240_3
+
+*
+]
+[
+DESIGNATOR
+CP2
+FOOTPRINT
+C1206
+PARTTYPE
+CL31B105KBHNNNE
+DESCRIPTION
+Capacitance:1uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Component Kind
+Standard
+LCSC Part Name
+1uF ±10% 50V
+Supplier Part
+C1848
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL31B105KBHNNNE
+Supplier Footprint
+1206
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/CL31B105KBHNNNE/2200.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C1206_L3.2-W1.6-H1.3
+Value
+1uF
+Tolerance
+±10%
+Voltage Rating
+50V
+Temperature Coefficient
+X7R
+Description
+Capacitance:1uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Symbol
+CL31B105KBHNNNE
+Designator
+CP2
+Name
+1uF
+Device
+CL31B105KBHNNNE
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge240_4
+
+*
+]
+[
+DESIGNATOR
+C45
+FOOTPRINT
+C0402
+PARTTYPE
+0402B102K500NT
+DESCRIPTION
+Capacitance:1nF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Component Kind
+Standard
+LCSC Part Name
+1nF ±10% 50V
+Supplier Part
+C1523
+Manufacturer
+FH(风华)
+Manufacturer Part
+0402B102K500NT
+Supplier Footprint
+0402
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/0402B102K500NT/1875.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0402_L1.0-W0.5-H0.5
+Value
+1nF
+Tolerance
+±10%
+Voltage Rating
+50V
+Temperature Coefficient
+X7R
+Description
+Capacitance:1nF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Symbol
+0402B102K500NT
+Designator
+C45
+Name
+1nF
+Device
+0402B102K500NT
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge266
+
+*
+]
+[
+DESIGNATOR
+C46
+FOOTPRINT
+C0402
+PARTTYPE
+0402B102K500NT
+DESCRIPTION
+Capacitance:1nF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Component Kind
+Standard
+LCSC Part Name
+1nF ±10% 50V
+Supplier Part
+C1523
+Manufacturer
+FH(风华)
+Manufacturer Part
+0402B102K500NT
+Supplier Footprint
+0402
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/0402B102K500NT/1875.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0402_L1.0-W0.5-H0.5
+Value
+1nF
+Tolerance
+±10%
+Voltage Rating
+50V
+Temperature Coefficient
+X7R
+Description
+Capacitance:1nF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Symbol
+0402B102K500NT
+Designator
+C46
+Name
+1nF
+Device
+0402B102K500NT
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge267
+
+*
+]
+[
+DESIGNATOR
+U57
+FOOTPRINT
+SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR-CW
+PARTTYPE
+SC4015SO-N-TR
+DESCRIPTION
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operating Temperature:-40℃~+105℃ Operating Temperature:-40℃~+105℃
+Component Kind
+Standard
+LCSC Part Name
+线性霍尔
+Supplier Part
+C49363171
+Manufacturer
+Semiment(赛卓)
+Manufacturer Part
+SC4015SO-N-TR
+Supplier Footprint
+SOT23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+2.5V~5.5V
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operating Temperature:-40℃~+105℃ Operating Temperature:-40℃~+105℃
+Symbol
+SC4015SO-N-TR
+Designator
+U57
+Name
+SC4015SO-N-TR
+Device
+SC4015SO-N-TR
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge269
+
+*
+]
+[
+DESIGNATOR
+U58
+FOOTPRINT
+SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR-CW
+PARTTYPE
+SC4015SO-N-TR
+DESCRIPTION
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operating Temperature:-40℃~+105℃ Operating Temperature:-40℃~+105℃
+Component Kind
+Standard
+LCSC Part Name
+线性霍尔
+Supplier Part
+C49363171
+Manufacturer
+Semiment(赛卓)
+Manufacturer Part
+SC4015SO-N-TR
+Supplier Footprint
+SOT23-3L
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/SC4015SO-N-TR/51868409.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3L_L2.9-W1.6-H1.1-LS2.8-P0.95
+Magnetic Field Range
+±100mT
+Sensitivity
+3.9mV/Gs
+Voltage - Supply
+2.5V~5.5V
+Supply Current
+2.5mA
+Operating Temperature
+-40℃~+105℃
+Description
+Magnetic Field Range:±100mT Magnetic Field Range:±100mT Sensitivity:3.9mV/Gs Voltage - Supply:2.5V~5.5V Voltage - Supply:2.5V~5.5V Supply Current:2.5mA Operating Temperature:-40℃~+105℃ Operating Temperature:-40℃~+105℃
+Symbol
+SC4015SO-N-TR
+Designator
+U58
+Name
+SC4015SO-N-TR
+Device
+SC4015SO-N-TR
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge270
+
+*
+]
+[
+DESIGNATOR
+BAT
 FOOTPRINT
 CONN-TH_S3B-XH-SM4-TB-LF-SN
 PARTTYPE
@@ -3457,7 +3901,7 @@ Pins Structure:1x3P Pitch:2.5mm Mounting Type:Surface Mount, Right Angle Referen
 Symbol
 S3B-XH-SM4-TB(LF)(SN)
 Designator
-CN1
+BAT
 Name
 S3B-XH-SM4-TB(LF)(SN)
 Device
@@ -5337,7 +5781,7 @@ Channel ID
 ]
 [
 DESIGNATOR
-R39
+R3
 FOOTPRINT
 R0603
 PARTTYPE
@@ -5387,7 +5831,7 @@ Type:Thick Film Resistor Resistance:82kΩ Tolerance:±1% Tolerance:±1% Power(Wa
 Symbol
 0603WAF8202T5E
 Designator
-R39
+R3
 Name
 82kΩ
 Device
@@ -5405,7 +5849,7 @@ Channel ID
 ]
 [
 DESIGNATOR
-TV3
+TV4
 FOOTPRINT
 SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
 PARTTYPE
@@ -5451,7 +5895,7 @@ Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp
 Symbol
 SRV05-4-P-T7
 Designator
-TV3
+TV4
 Name
 SRV05-4-P-T7
 Device
@@ -5469,7 +5913,7 @@ gge169_2
 ]
 [
 DESIGNATOR
-U60
+U5
 FOOTPRINT
 SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
 PARTTYPE
@@ -5521,7 +5965,7 @@ Type:High Side Switch Number of Channels:1 Control Input Logic:Active High Maxim
 Symbol
 TPS2553DBVR
 Designator
-U60
+U5
 Name
 TPS2553DBVR
 Device
@@ -5539,7 +5983,7 @@ gge259
 ]
 [
 DESIGNATOR
-TV2
+TV3
 FOOTPRINT
 SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
 PARTTYPE
@@ -5585,7 +6029,7 @@ Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp
 Symbol
 SRV05-4-P-T7
 Designator
-TV2
+TV3
 Name
 SRV05-4-P-T7
 Device
@@ -5603,101 +6047,7 @@ gge169_1
 ]
 [
 DESIGNATOR
-RIGHT_WING_PORT1
-FOOTPRINT
-CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
-PARTTYPE
-B8B-PH-SM4-TBT(LF)(SN)
-DESCRIPTION
-Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
-Component Kind
-Standard
-LCSC Part Name
-1x8P 间距:2mm 立贴 系列:PH
-Supplier Part
-C265441
-Manufacturer
-JST
-Manufacturer Part
-B8B-PH-SM4-TBT(LF)(SN)
-Supplier Footprint
-SMD,P=2mm
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://item.szlcsc.com/datasheet/B8B-PH-SM4-TBT(LF)(SN)/255723.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
-Pins Structure
-1x8P
-Pitch
-2mm
-Mounting Type
-Surface Mount,Vertical
-Reference Series
-PH
-Number of Pins
-8P
-Number of Rows
-1
-Number of PINs Per Row
-8
-Row Spacing
--
-Current Rating
-2A
-Contact Material
-Copper Alloy
-Contact Plating
-Tin
-Operating Temperature
--25℃~+85℃
-Voltage Rating
-100V
-Plastic Material
-PA
-Flame Retardant Rating
-UL94V-0
-Supplementary Features
-Auxiliary Solder Pin
-Color
-Beige
-Z-Height of the Board
-6.6mm
-X-Length of Bottom Edge on Board (Spacing Line)
-19.95mm
-Y-Width of Bottom Edge on Board
-7mm
-Description
-Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
-Symbol
-B8B-PH-SM4-TBT(LF)(SN)
-Designator
-RIGHT_WING_PORT1
-Name
-B8B-PH-SM4-TBT(LF)(SN)
-Device
-B8B-PH-SM4-TBT(LF)(SN)
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge165_1
-
-*
-]
-[
-DESIGNATOR
-TV5
+TV2
 FOOTPRINT
 SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
 PARTTYPE
@@ -5743,7 +6093,7 @@ Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp
 Symbol
 SRV05-4-P-T7
 Designator
-TV5
+TV2
 Name
 SRV05-4-P-T7
 Device
@@ -5761,7 +6111,7 @@ gge169_4
 ]
 [
 DESIGNATOR
-TV4
+TV1
 FOOTPRINT
 SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
 PARTTYPE
@@ -5807,7 +6157,7 @@ Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp
 Symbol
 SRV05-4-P-T7
 Designator
-TV4
+TV1
 Name
 SRV05-4-P-T7
 Device
@@ -5825,101 +6175,7 @@ gge169_3
 ]
 [
 DESIGNATOR
-LEFT_WING_PORT1
-FOOTPRINT
-CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
-PARTTYPE
-B8B-PH-SM4-TBT(LF)(SN)
-DESCRIPTION
-Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
-Component Kind
-Standard
-LCSC Part Name
-1x8P 间距:2mm 立贴 系列:PH
-Supplier Part
-C265441
-Manufacturer
-JST
-Manufacturer Part
-B8B-PH-SM4-TBT(LF)(SN)
-Supplier Footprint
-SMD,P=2mm
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://item.szlcsc.com/datasheet/B8B-PH-SM4-TBT(LF)(SN)/255723.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
-Pins Structure
-1x8P
-Pitch
-2mm
-Mounting Type
-Surface Mount,Vertical
-Reference Series
-PH
-Number of Pins
-8P
-Number of Rows
-1
-Number of PINs Per Row
-8
-Row Spacing
--
-Current Rating
-2A
-Contact Material
-Copper Alloy
-Contact Plating
-Tin
-Operating Temperature
--25℃~+85℃
-Voltage Rating
-100V
-Plastic Material
-PA
-Flame Retardant Rating
-UL94V-0
-Supplementary Features
-Auxiliary Solder Pin
-Color
-Beige
-Z-Height of the Board
-6.6mm
-X-Length of Bottom Edge on Board (Spacing Line)
-19.95mm
-Y-Width of Bottom Edge on Board
-7mm
-Description
-Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
-Symbol
-B8B-PH-SM4-TBT(LF)(SN)
-Designator
-LEFT_WING_PORT1
-Name
-B8B-PH-SM4-TBT(LF)(SN)
-Device
-B8B-PH-SM4-TBT(LF)(SN)
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge165
-
-*
-]
-[
-DESIGNATOR
-R38
+R1
 FOOTPRINT
 R0603
 PARTTYPE
@@ -5969,7 +6225,7 @@ Type:Thick Film Resistor Resistance:82kΩ Tolerance:±1% Tolerance:±1% Power(Wa
 Symbol
 0603WAF8202T5E
 Designator
-R38
+R1
 Name
 82kΩ
 Device
@@ -5987,7 +6243,7 @@ Channel ID
 ]
 [
 DESIGNATOR
-U59
+U3
 FOOTPRINT
 SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
 PARTTYPE
@@ -6039,7 +6295,7 @@ Type:High Side Switch Number of Channels:1 Control Input Logic:Active High Maxim
 Symbol
 TPS2553DBVR
 Designator
-U59
+U3
 Name
 TPS2553DBVR
 Device
@@ -6057,101 +6313,7 @@ gge261
 ]
 [
 DESIGNATOR
-PROGRAM_PORT1
-FOOTPRINT
-CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
-PARTTYPE
-B8B-PH-SM4-TBT(LF)(SN)
-DESCRIPTION
-Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
-Component Kind
-Standard
-LCSC Part Name
-1x8P 间距:2mm 立贴 系列:PH
-Supplier Part
-C265441
-Manufacturer
-JST
-Manufacturer Part
-B8B-PH-SM4-TBT(LF)(SN)
-Supplier Footprint
-SMD,P=2mm
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://item.szlcsc.com/datasheet/B8B-PH-SM4-TBT(LF)(SN)/255723.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
-Pins Structure
-1x8P
-Pitch
-2mm
-Mounting Type
-Surface Mount,Vertical
-Reference Series
-PH
-Number of Pins
-8P
-Number of Rows
-1
-Number of PINs Per Row
-8
-Row Spacing
--
-Current Rating
-2A
-Contact Material
-Copper Alloy
-Contact Plating
-Tin
-Operating Temperature
--25℃~+85℃
-Voltage Rating
-100V
-Plastic Material
-PA
-Flame Retardant Rating
-UL94V-0
-Supplementary Features
-Auxiliary Solder Pin
-Color
-Beige
-Z-Height of the Board
-6.6mm
-X-Length of Bottom Edge on Board (Spacing Line)
-19.95mm
-Y-Width of Bottom Edge on Board
-7mm
-Description
-Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
-Symbol
-B8B-PH-SM4-TBT(LF)(SN)
-Designator
-PROGRAM_PORT1
-Name
-B8B-PH-SM4-TBT(LF)(SN)
-Device
-B8B-PH-SM4-TBT(LF)(SN)
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge165_2
-
-*
-]
-[
-DESIGNATOR
-TV11
+TV5
 FOOTPRINT
 SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
 PARTTYPE
@@ -6197,7 +6359,7 @@ Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp
 Symbol
 SRV05-4-P-T7
 Designator
-TV11
+TV5
 Name
 SRV05-4-P-T7
 Device
@@ -6215,7 +6377,7 @@ gge170
 ]
 [
 DESIGNATOR
-TV7
+TV6
 FOOTPRINT
 SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
 PARTTYPE
@@ -6261,7 +6423,7 @@ Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp
 Symbol
 SRV05-4-P-T7
 Designator
-TV7
+TV6
 Name
 SRV05-4-P-T7
 Device
@@ -6279,101 +6441,7 @@ gge170_1
 ]
 [
 DESIGNATOR
-LOAD_CELL_PORT1
-FOOTPRINT
-CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
-PARTTYPE
-B8B-PH-SM4-TBT(LF)(SN)
-DESCRIPTION
-Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
-Component Kind
-Standard
-LCSC Part Name
-1x8P 间距:2mm 立贴 系列:PH
-Supplier Part
-C265441
-Manufacturer
-JST
-Manufacturer Part
-B8B-PH-SM4-TBT(LF)(SN)
-Supplier Footprint
-SMD,P=2mm
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://item.szlcsc.com/datasheet/B8B-PH-SM4-TBT(LF)(SN)/255723.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-CONN-SMD_8P-P2.00_JST_B8B-PH-SM4-TBT-LF-SN
-Pins Structure
-1x8P
-Pitch
-2mm
-Mounting Type
-Surface Mount,Vertical
-Reference Series
-PH
-Number of Pins
-8P
-Number of Rows
-1
-Number of PINs Per Row
-8
-Row Spacing
--
-Current Rating
-2A
-Contact Material
-Copper Alloy
-Contact Plating
-Tin
-Operating Temperature
--25℃~+85℃
-Voltage Rating
-100V
-Plastic Material
-PA
-Flame Retardant Rating
-UL94V-0
-Supplementary Features
-Auxiliary Solder Pin
-Color
-Beige
-Z-Height of the Board
-6.6mm
-X-Length of Bottom Edge on Board (Spacing Line)
-19.95mm
-Y-Width of Bottom Edge on Board
-7mm
-Description
-Pins Structure:1x8P Pitch:2mm Mounting Type:Surface Mount,Vertical Reference Series:PH Number of Pins:8P Number of Rows:1 Number of PINs Per Row:8 Row Spacing:- Current Rating:2A Contact Material:Copper Alloy Contact Plating:Tin Operating Temperature:-25℃
-Symbol
-B8B-PH-SM4-TBT(LF)(SN)
-Designator
-LOAD_CELL_PORT1
-Name
-B8B-PH-SM4-TBT(LF)(SN)
-Device
-B8B-PH-SM4-TBT(LF)(SN)
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge165_3
-
-*
-]
-[
-DESIGNATOR
-TV12
+TV7
 FOOTPRINT
 SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
 PARTTYPE
@@ -6419,71 +6487,7 @@ Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp
 Symbol
 SRV05-4-P-T7
 Designator
-TV12
-Name
-SRV05-4-P-T7
-Device
-SRV05-4-P-T7_C85364
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge170_2
-
-*
-]
-[
-DESIGNATOR
-TV14
-FOOTPRINT
-SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
-PARTTYPE
-SRV05-4-P-T7_C85364
-DESCRIPTION
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Component Kind
-Standard
-LCSC Part Name
-SRV05-4-P-T7
-Supplier Part
-C85364
-Manufacturer
-PROTEK
-Manufacturer Part
-SRV05-4-P-T7
-Supplier Footprint
-SOT-23-6
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
-Reverse Stand-Off Voltage (Vrwm)
-5V
-Clamping Voltage
-12V
-Peak Pulse Current (Ipp)
-1A@8/20us
-Voltage - Breakdown
-6V
-Type
-TVS
-Description
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Symbol
-SRV05-4-P-T7
-Designator
-TV14
+TV7
 Name
 SRV05-4-P-T7
 Device
@@ -6633,7 +6637,7 @@ gge220
 ]
 [
 DESIGNATOR
-R30
+R6
 FOOTPRINT
 R0603
 PARTTYPE
@@ -6683,7 +6687,7 @@ Type:Thick Film Resistor Resistance:3.9kΩ Tolerance:±1% Tolerance:±1% Power(W
 Symbol
 0603WAF3901T5E
 Designator
-R30
+R6
 Name
 3.9kΩ
 Device
@@ -6701,7 +6705,7 @@ gge223
 ]
 [
 DESIGNATOR
-R31
+R5
 FOOTPRINT
 R0603
 PARTTYPE
@@ -6751,7 +6755,7 @@ Type:Thick Film Resistor Resistance:3.9kΩ Tolerance:±1% Tolerance:±1% Power(W
 Symbol
 0603WAF3901T5E
 Designator
-R31
+R5
 Name
 3.9kΩ
 Device
@@ -6769,7 +6773,7 @@ gge224
 ]
 [
 DESIGNATOR
-C31
+C6
 FOOTPRINT
 C0603
 PARTTYPE
@@ -6809,7 +6813,7 @@ Voltage Rated
 Temperature Coefficient
 
 Designator
-C31
+C6
 Value
 100nF
 Description
@@ -6829,7 +6833,7 @@ Channel ID
 ]
 [
 DESIGNATOR
-C32
+C7
 FOOTPRINT
 C0603
 PARTTYPE
@@ -6873,7 +6877,7 @@ Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coeffici
 Symbol
 CL05B104KO5NNNC
 Designator
-C32
+C7
 Device
 CC0603KRX7R9BB104
 Unique ID
@@ -6889,7 +6893,7 @@ Channel ID
 ]
 [
 DESIGNATOR
-TV1
+TV8
 FOOTPRINT
 SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
 PARTTYPE
@@ -6935,7 +6939,7 @@ Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp
 Symbol
 SRV05-4-P-T7
 Designator
-TV1
+TV8
 Name
 SRV05-4-P-T7
 Device
@@ -7021,7 +7025,7 @@ gge168
 ]
 [
 DESIGNATOR
-D7
+D6
 FOOTPRINT
 SMB_L4.6-W3.6-LS5.3-RD
 PARTTYPE
@@ -7077,7 +7081,7 @@ Polarity:Unidirectional Reverse Stand-Off Voltage (Vrwm):13V Clamping Voltage:21
 Symbol
 SMBJ13A
 Designator
-D7
+D6
 Name
 SMBJ13A
 Device
@@ -7095,7 +7099,7 @@ gge253
 ]
 [
 DESIGNATOR
-C41
+C3
 FOOTPRINT
 C1206
 PARTTYPE
@@ -7139,7 +7143,7 @@ Capacitance:1uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature C
 Symbol
 CL31B105KBHNNNE
 Designator
-C41
+C3
 Name
 1uF
 Device
@@ -7157,7 +7161,7 @@ gge240_1
 ]
 [
 DESIGNATOR
-C42
+C5
 FOOTPRINT
 C1206
 PARTTYPE
@@ -7201,7 +7205,7 @@ Capacitance:1uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature C
 Symbol
 CL31B105KBHNNNE
 Designator
-C42
+C5
 Name
 1uF
 Device
@@ -7219,7 +7223,7 @@ gge240_2
 ]
 [
 DESIGNATOR
-R40
+R2
 FOOTPRINT
 R0603
 PARTTYPE
@@ -7269,7 +7273,7 @@ Type:Thick Film Resistor Resistance:100kΩ Tolerance:±1% Tolerance:±1% Power(W
 Symbol
 0603WAF1003T5E
 Designator
-R40
+R2
 Name
 100kΩ
 Device
@@ -7287,7 +7291,7 @@ gge262
 ]
 [
 DESIGNATOR
-R41
+R4
 FOOTPRINT
 R0603
 PARTTYPE
@@ -7337,7 +7341,7 @@ Type:Thick Film Resistor Resistance:100kΩ Tolerance:±1% Tolerance:±1% Power(W
 Symbol
 0603WAF1003T5E
 Designator
-R41
+R4
 Name
 100kΩ
 Device
@@ -7355,7 +7359,7 @@ gge263
 ]
 [
 DESIGNATOR
-U61
+U2
 FOOTPRINT
 TSSOP-14_L5.0-W4.4-P0.65-LS6.4-BL
 PARTTYPE
@@ -7415,7 +7419,7 @@ Input type:- output type:Tri-State Voltage - Supply:1.65V~3.6V Voltage - Supply:
 Symbol
 SN74LVC125AQPWRQ1
 Designator
-U61
+U2
 Name
 SN74LVC125AQPWRQ1
 Device
@@ -7433,7 +7437,7 @@ gge264
 ]
 [
 DESIGNATOR
-U63
+U4
 FOOTPRINT
 TSSOP-14_L5.0-W4.4-P0.65-LS6.4-BL
 PARTTYPE
@@ -7493,7 +7497,7 @@ Input type:- output type:Tri-State Voltage - Supply:1.65V~3.6V Voltage - Supply:
 Symbol
 SN74LVC125AQPWRQ1
 Designator
-U63
+U4
 Name
 SN74LVC125AQPWRQ1
 Device
@@ -7573,7 +7577,7 @@ gge49
 ]
 [
 DESIGNATOR
-C44
+C4
 FOOTPRINT
 C0402
 PARTTYPE
@@ -7617,7 +7621,7 @@ Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coeffici
 Symbol
 CL05B104KO5NNNC
 Designator
-C44
+C4
 Name
 100nF
 Device
@@ -7635,29 +7639,29 @@ gge49_1
 ]
 [
 DESIGNATOR
-C45
+CN2
 FOOTPRINT
-C0402
+CONN-SMD_10P-P2.54_72454-010VLF
 PARTTYPE
-CL05B104KO5NNNC
+72454-010VLF
 DESCRIPTION
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Pins Structure:2x5P Pitch:2.54mm Mounting Type:Surface Mount,Vertical Reference Series:- Number of Pins:10P Number of Rows:2 Number of PINs Per Row:5 Row Spacing:2.54mm Current Rating:1A Contact Material:Phosphor Bronze Contact Plating:Tin Operating Tempe
 Component Kind
 Standard
 LCSC Part Name
-100nF ±10% 16V
+2x5P 间距:2.54mm 立贴
 Supplier Part
-C1525
+C236047
 Manufacturer
-SAMSUNG(三星)
+Amphenol
 Manufacturer Part
-CL05B104KO5NNNC
+72454-010VLF
 Supplier Footprint
-0402
+SMD,P=2.54mm
 JLCPCB Part Class
-Basic Part
+Extended Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf
+https://item.szlcsc.com/datasheet/72454-010VLF/235722.html
 Supplier
 LCSC
 Add into BOM
@@ -7665,25 +7669,41 @@ yes
 Convert to PCB
 yes
 3D Model Title
-C0402_L1.0-W0.5-H0.5
-Value
-100nF
-Tolerance
-±10%
-Voltage Rated
-
-Temperature Coefficient
-
+CONN-SMD_2x5P-L20.1-W8.8-H12.8-P2.54
+Pins Structure
+2x5P
+Pitch
+2.54mm
+Mounting Type
+Surface Mount,Vertical
+Reference Series
+-
+Number of Pins
+10P
+Number of Rows
+2
+Number of PINs Per Row
+5
+Row Spacing
+2.54mm
+Current Rating
+1A
+Contact Material
+Phosphor Bronze
+Contact Plating
+Tin
+Operating Temperature
+-65℃~+105℃
 Description
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Pins Structure:2x5P Pitch:2.54mm Mounting Type:Surface Mount,Vertical Reference Series:- Number of Pins:10P Number of Rows:2 Number of PINs Per Row:5 Row Spacing:2.54mm Current Rating:1A Contact Material:Phosphor Bronze Contact Plating:Tin Operating Tempe
 Symbol
-CL05B104KO5NNNC
+72454-010VLF
 Designator
-C45
+CN2
 Name
-100nF
+72454-010VLF
 Device
-CL05B104KO5NNNC
+72454-010VLF
 Reuse Block
 
 Group ID
@@ -7691,34 +7711,157 @@ Group ID
 Channel ID
 
 Unique ID
-gge49_2
+gge268
+Comment
+RIGHT_WING_CONNECTOR
+
+*
+]
+[
+DESIGNATOR
+CN3
+FOOTPRINT
+TC2070_Landing_Pattern
+PARTTYPE
+STDC14_Connector
+DESCRIPTION
+PROGRAM_CONNECTOR
+Component Kind
+Standard
+Symbol
+STDC14_Pogo_Pins
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+
+Designator
+CN3
+Name
+
+Description
+PROGRAM_CONNECTOR
+Device
+STDC14_Connector
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge271
+
+*
+]
+[
+DESIGNATOR
+CN1
+FOOTPRINT
+CONN-SMD_10P-P2.54_72454-010VLF
+PARTTYPE
+72454-010VLF
+DESCRIPTION
+Pins Structure:2x5P Pitch:2.54mm Mounting Type:Surface Mount,Vertical Reference Series:- Number of Pins:10P Number of Rows:2 Number of PINs Per Row:5 Row Spacing:2.54mm Current Rating:1A Contact Material:Phosphor Bronze Contact Plating:Tin Operating Tempe
+Component Kind
+Standard
+LCSC Part Name
+2x5P 间距:2.54mm 立贴
+Supplier Part
+C236047
+Manufacturer
+Amphenol
+Manufacturer Part
+72454-010VLF
+Supplier Footprint
+SMD,P=2.54mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/72454-010VLF/235722.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+CONN-SMD_2x5P-L20.1-W8.8-H12.8-P2.54
+Pins Structure
+2x5P
+Pitch
+2.54mm
+Mounting Type
+Surface Mount,Vertical
+Reference Series
+-
+Number of Pins
+10P
+Number of Rows
+2
+Number of PINs Per Row
+5
+Row Spacing
+2.54mm
+Current Rating
+1A
+Contact Material
+Phosphor Bronze
+Contact Plating
+Tin
+Operating Temperature
+-65℃~+105℃
+Description
+Pins Structure:2x5P Pitch:2.54mm Mounting Type:Surface Mount,Vertical Reference Series:- Number of Pins:10P Number of Rows:2 Number of PINs Per Row:5 Row Spacing:2.54mm Current Rating:1A Contact Material:Phosphor Bronze Contact Plating:Tin Operating Tempe
+Symbol
+72454-010VLF
+Designator
+CN1
+Name
+72454-010VLF
+Device
+72454-010VLF
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge268_1
+Comment
+LEFT_WING_CONNECTOR
 
 *
 ]
 (
 $1N34230 
-SW-2 TS-1088-AR02016-2 Passive 
-C-1 CC0603KRX7R9BB104-1 Passive 
-D-2 H5VND5BA-2 Passive 
+SW1-2 TS-1088-AR02016-2 Passive 
+C1-1 CC0603KRX7R9BB104-1 Passive 
+D1-2 H5VND5BA-2 Passive 
 U56-3 BAT54C_C22466350-K Passive 
 )
 (
-AGND 
-SW-1 TS-1088-AR02016-1 Passive 
-C-2 CC0603KRX7R9BB104-2 Passive 
-D-1 H5VND5BA-1 Passive 
-SW_POWER2-1 TS-1088-AR02016-1 Passive 
-C33-2 CC0603KRX7R9BB104-2 Passive 
-D3-1 H5VND5BA-1 Passive 
+GND 
 SW1-1 TS-1088-AR02016-1 Passive 
+C1-2 CC0603KRX7R9BB104-2 Passive 
+D1-1 H5VND5BA-1 Passive 
+SW3-1 TS-1088-AR02016-1 Passive 
+C8-2 CC0603KRX7R9BB104-2 Passive 
+D3-1 H5VND5BA-1 Passive 
+SW6-1 TS-1088-AR02016-1 Passive 
 C34-2 CC0603KRX7R9BB104-2 Passive 
 D4-1 H5VND5BA-1 Passive 
 SW4-1 TS-1088-AR02016-1 Passive 
-C1-2 CC0603KRX7R9BB104-2 Passive 
+C9-2 CC0603KRX7R9BB104-2 Passive 
 D2-1 H5VND5BA-1 Passive 
 SW2-1 TS-1088-AR02016-1 Passive 
 C35-2 CC0603KRX7R9BB104-2 Passive 
 D5-1 H5VND5BA-1 Passive 
+SW5-1 TS-1088-AR02016-1 Passive 
+C47-2 CC0603KRX7R9BB104-2 Passive 
+D9-1 H5VND5BA-1 Passive 
 U1-5 STM32WB5MMGH6TR-VSS Passive 
 U1-16 STM32WB5MMGH6TR-VSS Passive 
 U1-31 STM32WB5MMGH6TR-VSS Passive 
@@ -7736,21 +7879,28 @@ LED_CH4-2 KT-0805Y-- Passive
 LED_BT_MIDI-1 NCD0805R1_C84256-- Passive 
 LED_POW-2 KT-0805G-K Passive 
 LED_FN1-1 NCD0805R1_C84256-- Passive 
-U58-2 CS1237-SOP8-GND Passive 
 LED_FN2-1 NCD0805R1_C84256-- Passive 
 LED_FN3-1 NCD0805R1_C84256-- Passive 
-C38-2 1206B475K500NT-2 Input   
 C39-2 CC0603KRX7R9BB104-2 Input   
 R37-2 0603WAF1002T5E-2 Input   
 C40-2 CC0603KRX7R9BB104-2 Passive 
 D8-1 H5VND5BA-1 Passive 
-CN1-3 S3B-XH-SM4-TB(LF)(SN)_C5306495-3 Passive 
+CP1-2 CL31B105KBHNNNE-2 Passive 
+CP2-2 CL31B105KBHNNNE-2 Passive 
+C45-1 0402B102K500NT-1 Input   
+C46-1 0402B102K500NT-1 Input   
+U57-2 SC4015SO-N-TR-GND Passive 
+U58-2 SC4015SO-N-TR-GND Passive 
+BAT-5 S3B-XH-SM4-TB(LF)(SN)_C5306495-5 Passive 
+BAT-4 S3B-XH-SM4-TB(LF)(SN)_C5306495-4 Passive 
+BAT-3 S3B-XH-SM4-TB(LF)(SN)_C5306495-3 Passive 
 R15-1 0603WAF3002T5E-1 Input   
 C18-2 GRM21BR61H106KE43L-2 Passive 
 C19-2 GRM21BR61H106KE43L-2 Passive 
 U47-8 BQ25895RTWR-OTG Input   
 U47-17 BQ25895RTWR-PGND Input   
 U47-18 BQ25895RTWR-PGND Input   
+C14-2 CL31B105KBHNNNE-2 Passive 
 C16-1 GRM21BR61H106KE43L-1 Passive 
 C15-1 GRM21BR61H106KE43L-1 Passive 
 C13-1 CL31A106KBHNNNE-1 Input   
@@ -7761,53 +7911,56 @@ C22-1 CL31B105KBHNNNE-1 Passive
 C23-1 1206B475K500NT-1 Input   
 C24-1 1206B475K500NT-1 Input   
 C37-1 GRM21BR61H106KE43L-1 Passive 
-R39-2 0603WAF8202T5E-2 Input   
-TV3-2 SRV05-4-P-T7_C85364-2 Input   
-U60-2 TPS2553DBVR-GND Passive 
-TV2-2 SRV05-4-P-T7_C85364-2 Input   
-RIGHT_WING_PORT1-1 B8B-PH-SM4-TBT(LF)(SN)-1 Passive 
-TV5-2 SRV05-4-P-T7_C85364-2 Input   
+R3-2 0603WAF8202T5E-2 Input   
 TV4-2 SRV05-4-P-T7_C85364-2 Input   
-LEFT_WING_PORT1-1 B8B-PH-SM4-TBT(LF)(SN)-1 Passive 
-R38-2 0603WAF8202T5E-2 Input   
-U59-2 TPS2553DBVR-GND Passive 
-PROGRAM_PORT1-1 B8B-PH-SM4-TBT(LF)(SN)-1 Passive 
-TV11-2 SRV05-4-P-T7_C85364-2 Input   
-TV7-2 SRV05-4-P-T7_C85364-2 Input   
-LOAD_CELL_PORT1-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive 
-TV12-2 SRV05-4-P-T7_C85364-2 Input   
-TV14-2 SRV05-4-P-T7_C85364-2 Input   
+U5-2 TPS2553DBVR-GND Passive 
+TV3-2 SRV05-4-P-T7_C85364-2 Input   
+TV2-2 SRV05-4-P-T7_C85364-2 Input   
 TV1-2 SRV05-4-P-T7_C85364-2 Input   
+R1-2 0603WAF8202T5E-2 Input   
+U3-2 TPS2553DBVR-GND Passive 
+TV5-2 SRV05-4-P-T7_C85364-2 Input   
+TV6-2 SRV05-4-P-T7_C85364-2 Input   
+TV7-2 SRV05-4-P-T7_C85364-2 Input   
+TV8-2 SRV05-4-P-T7_C85364-2 Input   
 USB1-4 HC-TYPE-B-2.0-VS15-1.5A-15-GND Passive 
 USB1-5 HC-TYPE-B-2.0-VS15-1.5A-15-GND Passive 
 USB1-6 HC-TYPE-B-2.0-VS15-1.5A-15-GND Passive 
-D7-1 SMBJ13A_C10209-A Input   
-C41-1 CL31B105KBHNNNE-1 Passive 
-C42-1 CL31B105KBHNNNE-1 Passive 
-U61-1 SN74LVC125AQPWRQ1-1OE# Passive 
-U61-4 SN74LVC125AQPWRQ1-2OE# Passive 
-U61-7 SN74LVC125AQPWRQ1-GND Passive 
-U61-10 SN74LVC125AQPWRQ1-3OE# Passive 
-U61-13 SN74LVC125AQPWRQ1-4OE# Passive 
-U63-1 SN74LVC125AQPWRQ1-1OE# Passive 
-U63-4 SN74LVC125AQPWRQ1-2OE# Passive 
-U63-7 SN74LVC125AQPWRQ1-GND Passive 
-U63-10 SN74LVC125AQPWRQ1-3OE# Passive 
-U63-13 SN74LVC125AQPWRQ1-4OE# Passive 
+D6-1 SMBJ13A_C10209-A Input   
+C3-1 CL31B105KBHNNNE-1 Passive 
+C5-1 CL31B105KBHNNNE-1 Passive 
+U2-1 SN74LVC125AQPWRQ1-1OE# Passive 
+U2-4 SN74LVC125AQPWRQ1-2OE# Passive 
+U2-7 SN74LVC125AQPWRQ1-GND Passive 
+U2-10 SN74LVC125AQPWRQ1-3OE# Passive 
+U2-13 SN74LVC125AQPWRQ1-4OE# Passive 
+U4-1 SN74LVC125AQPWRQ1-1OE# Passive 
+U4-4 SN74LVC125AQPWRQ1-2OE# Passive 
+U4-7 SN74LVC125AQPWRQ1-GND Passive 
+U4-10 SN74LVC125AQPWRQ1-3OE# Passive 
+U4-13 SN74LVC125AQPWRQ1-4OE# Passive 
 C2-1 CL05B104KO5NNNC-1 Passive 
-C44-1 CL05B104KO5NNNC-1 Passive 
+C4-1 CL05B104KO5NNNC-1 Passive 
+CN2-3 72454-010VLF-3 Passive 
+CN2-5 72454-010VLF-5 Passive 
+CN2-7 72454-010VLF-7 Passive 
+CN3-5 STDC14_Connector-GND Input   
+CN3-7 STDC14_Connector-GND Input   
+CN1-3 72454-010VLF-3 Passive 
+CN1-5 72454-010VLF-5 Passive 
+CN1-7 72454-010VLF-7 Passive 
 )
 (
 $1N16140 
-SW_POWER2-2 TS-1088-AR02016-2 Passive 
-C33-1 CC0603KRX7R9BB104-1 Passive 
+SW3-2 TS-1088-AR02016-2 Passive 
+C8-1 CC0603KRX7R9BB104-1 Passive 
 D3-2 H5VND5BA-2 Passive 
 U54-3 BAT54C_C22466350-K Passive 
 U53-3 BAT54C_C22466350-K Passive 
 )
 (
 SW_BT_MIDI 
-SW1-2 TS-1088-AR02016-2 Passive 
+SW6-2 TS-1088-AR02016-2 Passive 
 C34-1 CC0603KRX7R9BB104-1 Passive 
 D4-2 H5VND5BA-2 Passive 
 U1-56 STM32WB5MMGH6TR-PA3 Passive 
@@ -7815,7 +7968,7 @@ U1-56 STM32WB5MMGH6TR-PA3 Passive
 (
 SW_FN1 
 SW4-2 TS-1088-AR02016-2 Passive 
-C1-1 CC0603KRX7R9BB104-1 Passive 
+C9-1 CC0603KRX7R9BB104-1 Passive 
 D2-2 H5VND5BA-2 Passive 
 U1-54 STM32WB5MMGH6TR-PA5 Passive 
 )
@@ -7827,22 +7980,29 @@ D5-2 H5VND5BA-2 Passive
 U1-83 STM32WB5MMGH6TR-PC8 Passive 
 )
 (
+SW_FN3 
+SW5-2 TS-1088-AR02016-2 Passive 
+C47-1 CC0603KRX7R9BB104-1 Passive 
+D9-2 H5VND5BA-2 Passive 
+U1-75 STM32WB5MMGH6TR-PD8 Passive 
+)
+(
 L_NRST 
 U1-1 STM32WB5MMGH6TR-PA2 Passive 
 U54-2 BAT54C_C22466350-A Passive 
-TV5-6 SRV05-4-P-T7_C85364-6 Input   
-LEFT_WING_PORT1-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
+TV2-6 SRV05-4-P-T7_C85364-6 Input   
+CN1-9 72454-010VLF-9 Passive 
 )
 (
 L_SPI_SCK 
 U1-2 STM32WB5MMGH6TR-PA1 Passive 
-U61-2 SN74LVC125AQPWRQ1-1A Passive 
+U2-2 SN74LVC125AQPWRQ1-1A Passive 
 )
 (
 L_READY 
 U1-3 STM32WB5MMGH6TR-PA0 Passive 
-TV5-4 SRV05-4-P-T7_C85364-4 Input   
-LEFT_WING_PORT1-8 B8B-PH-SM4-TBT(LF)(SN)-8 Passive 
+TV2-4 SRV05-4-P-T7_C85364-4 Input   
+CN1-10 72454-010VLF-10 Passive 
 )
 (
 VCC 
@@ -7851,44 +8011,57 @@ U1-6 STM32WB5MMGH6TR-VDDA Passive
 U1-15 STM32WB5MMGH6TR-VBAT Passive 
 U1-17 STM32WB5MMGH6TR-VDDA Passive 
 U1-32 STM32WB5MMGH6TR-VDDUSB Passive 
-U58-7 CS1237-SOP8-VDD Passive 
-C38-1 1206B475K500NT-1 Input   
 FN3_BOOT0-1 TS-1088-AR02016-1 Passive 
+CP1-1 CL31B105KBHNNNE-1 Passive 
+CP2-1 CL31B105KBHNNNE-1 Passive 
+U57-1 SC4015SO-N-TR-VDD Passive 
+U58-1 SC4015SO-N-TR-VDD Passive 
 U55-5 TLV75533PDBVR-OUT Passive 
 C22-2 CL31B105KBHNNNE-2 Passive 
 C23-2 1206B475K500NT-2 Input   
 R33-1 0603WAF4701T5E-1 Input   
 R32-1 0603WAF4701T5E-1 Input   
 R34-2 0603WAF1002T5E-2 Input   
-U60-1 TPS2553DBVR-IN Passive 
-U59-1 TPS2553DBVR-IN Passive 
-PROGRAM_PORT1-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
-TV11-5 SRV05-4-P-T7_C85364-5 Input   
+U5-1 TPS2553DBVR-IN Passive 
+U3-1 TPS2553DBVR-IN Passive 
+TV5-5 SRV05-4-P-T7_C85364-5 Input   
+TV6-5 SRV05-4-P-T7_C85364-5 Input   
 TV7-5 SRV05-4-P-T7_C85364-5 Input   
-TV12-5 SRV05-4-P-T7_C85364-5 Input   
-TV14-5 SRV05-4-P-T7_C85364-5 Input   
 EXPR_PEDAL1-4 PJ-603A-4 Input   
 SUS_PEDAL1-4 PJ-603A-4 Input   
-C31-1 CC0603KRX7R9BB104-1 Input   
-C32-1 CC0603KRX7R9BB104-1 Passive 
-C41-2 CL31B105KBHNNNE-2 Passive 
-C42-2 CL31B105KBHNNNE-2 Passive 
-R40-1 0603WAF1003T5E-1 Input   
-R41-1 0603WAF1003T5E-1 Input   
+C6-1 CC0603KRX7R9BB104-1 Input   
+C7-1 CC0603KRX7R9BB104-1 Passive 
+C3-2 CL31B105KBHNNNE-2 Passive 
+C5-2 CL31B105KBHNNNE-2 Passive 
+R2-1 0603WAF1003T5E-1 Input   
+R4-1 0603WAF1003T5E-1 Input   
+CN3-3 STDC14_Connector-T_VCC Input   
+)
+(
+PRESSURE2 
+U1-7 STM32WB5MMGH6TR-PC3 Passive 
+C46-2 0402B102K500NT-2 Input   
+U58-3 SC4015SO-N-TR-OUT Passive 
+)
+(
+PRESSURE1 
+U1-8 STM32WB5MMGH6TR-PC2 Passive 
+C45-2 0402B102K500NT-2 Input   
+U57-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 EXP_PEDAL 
 U1-9 STM32WB5MMGH6TR-PC1 Passive 
-TV14-3 SRV05-4-P-T7_C85364-3 Input   
-R31-2 0603WAF3901T5E-2 Input   
+TV7-3 SRV05-4-P-T7_C85364-3 Input   
+R5-2 0603WAF3901T5E-2 Input   
 )
 (
 M_NRST 
 U1-10 STM32WB5MMGH6TR-NRST Passive 
 U53-1 BAT54C_C22466350-A Passive 
 C39-1 CC0603KRX7R9BB104-1 Input   
-PROGRAM_PORT1-6 B8B-PH-SM4-TBT(LF)(SN)-6 Passive 
-TV11-4 SRV05-4-P-T7_C85364-4 Input   
+TV5-4 SRV05-4-P-T7_C85364-4 Input   
+CN3-12 STDC14_Connector-#RST Input   
 )
 (
 POW_SDA 
@@ -7899,8 +8072,8 @@ R32-2 0603WAF4701T5E-2 Input
 (
 SUS_PEDAL 
 U1-12 STM32WB5MMGH6TR-PC0 Passive 
-TV14-1 SRV05-4-P-T7_C85364-1 Input   
-R30-2 0603WAF3901T5E-2 Input   
+TV7-1 SRV05-4-P-T7_C85364-1 Input   
+R6-2 0603WAF3901T5E-2 Input   
 )
 (
 SW_FN3_BOOT0 
@@ -7919,90 +8092,85 @@ R33-2 0603WAF4701T5E-2 Input
 (
 L_NFAULT 
 U1-18 STM32WB5MMGH6TR-PB7 Passive 
-U59-4 TPS2553DBVR-/FAULT Passive 
-R40-2 0603WAF1003T5E-2 Input   
+U3-4 TPS2553DBVR-/FAULT Passive 
+R2-2 0603WAF1003T5E-2 Input   
 )
 (
 L_SPI_MOSI 
 U1-19 STM32WB5MMGH6TR-PB5 Passive 
-U61-9 SN74LVC125AQPWRQ1-3A Passive 
+U2-9 SN74LVC125AQPWRQ1-3A Passive 
 )
 (
 L_SPI_MISO 
 U1-20 STM32WB5MMGH6TR-PB4 Passive 
-U61-11 SN74LVC125AQPWRQ1-4Y Passive 
+U2-11 SN74LVC125AQPWRQ1-4Y Passive 
 )
 (
 PGM_SWO 
 U1-21 STM32WB5MMGH6TR-PB3 Passive 
-PROGRAM_PORT1-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
-TV7-6 SRV05-4-P-T7_C85364-6 Input   
-)
-(
-LC_DATA 
-U1-22 STM32WB5MMGH6TR-PC10 Passive 
-U58-6 CS1237-SOP8-DRDY#/DOUT Passive 
-)
-(
-LC_CLK 
-U1-23 STM32WB5MMGH6TR-PC11 Passive 
-U58-5 CS1237-SOP8-SCLK Passive 
+TV6-6 SRV05-4-P-T7_C85364-6 Input   
+CN3-8 STDC14_Connector-T_JTDO/T_SWO Input   
 )
 (
 R_EN 
 U1-24 STM32WB5MMGH6TR-PC12 Passive 
-U60-3 TPS2553DBVR-EN Passive 
+U5-3 TPS2553DBVR-EN Passive 
 )
 (
 PGM_SWDIO 
 U1-25 STM32WB5MMGH6TR-PA13 Passive 
-PROGRAM_PORT1-5 B8B-PH-SM4-TBT(LF)(SN)-5 Passive 
-TV11-3 SRV05-4-P-T7_C85364-3 Input   
+TV5-3 SRV05-4-P-T7_C85364-3 Input   
+CN3-4 STDC14_Connector-T_JTMS/T_SWDIO Input   
 )
 (
 PGM_SWCLK 
 U1-26 STM32WB5MMGH6TR-PA14 Passive 
-PROGRAM_PORT1-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive 
-TV11-1 SRV05-4-P-T7_C85364-1 Input   
+TV5-1 SRV05-4-P-T7_C85364-1 Input   
+CN3-6 STDC14_Connector-T_JCLK/T_SWCLK Input   
 )
 (
 L_SPI_NSS 
 U1-27 STM32WB5MMGH6TR-PA15 Passive 
-U61-5 SN74LVC125AQPWRQ1-2A Passive 
+U2-5 SN74LVC125AQPWRQ1-2A Passive 
 )
 (
 PGM_USART_RX 
 U1-28 STM32WB5MMGH6TR-PA10 Passive 
-PROGRAM_PORT1-8 B8B-PH-SM4-TBT(LF)(SN)-8 Passive 
-TV7-4 SRV05-4-P-T7_C85364-4 Input   
+TV6-4 SRV05-4-P-T7_C85364-4 Input   
+CN3-13 STDC14_Connector-T_VCP_RX Input   
 )
 (
 USB_D+ 
 U1-29 STM32WB5MMGH6TR-PA12 Passive 
-TV1-3 SRV05-4-P-T7_C85364-3 Input   
+TV8-3 SRV05-4-P-T7_C85364-3 Input   
 USB1-3 HC-TYPE-B-2.0-VS15-1.5A-15-D+ Passive 
 )
 (
 USB_D- 
 U1-30 STM32WB5MMGH6TR-PA11 Passive 
-TV1-1 SRV05-4-P-T7_C85364-1 Input   
+TV8-1 SRV05-4-P-T7_C85364-1 Input   
 USB1-2 HC-TYPE-B-2.0-VS15-1.5A-15-D- Passive 
 )
 (
 R_SPI_NSS 
 U1-33 STM32WB5MMGH6TR-PD0 Passive 
-U63-5 SN74LVC125AQPWRQ1-2A Passive 
+U4-5 SN74LVC125AQPWRQ1-2A Passive 
 )
 (
 R_SPI_SCK 
 U1-34 STM32WB5MMGH6TR-PD1 Passive 
-U63-2 SN74LVC125AQPWRQ1-1A Passive 
+U4-2 SN74LVC125AQPWRQ1-1A Passive 
+)
+(
+PGM_DETECT 
+U1-36 STM32WB5MMGH6TR-PC6 Passive 
+CN3-11 STDC14_Connector-GNDDetect Input   
 )
 (
 PGM_USART_TX 
 U1-39 STM32WB5MMGH6TR-PB6 Passive 
-PROGRAM_PORT1-7 B8B-PH-SM4-TBT(LF)(SN)-7 Passive 
-TV11-6 SRV05-4-P-T7_C85364-6 Input   
+TV5-6 SRV05-4-P-T7_C85364-6 Input   
+CN3-14 STDC14_Connector-T VCP TX Input   
 )
 (
 LED_FN2 
@@ -8030,6 +8198,11 @@ U1-48 STM32WB5MMGH6TR-PB2 Passive
 R19-1 0603WAF3300T5E-1 Input   
 )
 (
+LED_FN3 
+U1-49 STM32WB5MMGH6TR-PC4 Passive 
+R36-1 0603WAF3300T5E-1 Input   
+)
+(
 LED_POWER 
 U1-50 STM32WB5MMGH6TR-PA8 Passive 
 R28-1 0603WAF3300T5E-1 Input   
@@ -8052,16 +8225,16 @@ R21-1 0603WAF3300T5E-1 Input
 (
 EXP_PEDAL_INT 
 U1-61 STM32WB5MMGH6TR-PH0 Passive 
-TV14-4 SRV05-4-P-T7_C85364-4 Input   
+TV7-4 SRV05-4-P-T7_C85364-4 Input   
 EXPR_PEDAL1-3 PJ-603A-3 Input   
-C31-2 CC0603KRX7R9BB104-2 Input   
+C6-2 CC0603KRX7R9BB104-2 Input   
 )
 (
 SUS_PEDAL_INT 
 U1-62 STM32WB5MMGH6TR-PH1 Passive 
-TV14-6 SRV05-4-P-T7_C85364-6 Input   
+TV7-6 SRV05-4-P-T7_C85364-6 Input   
 SUS_PEDAL1-3 PJ-603A-3 Input   
-C32-2 CC0603KRX7R9BB104-2 Passive 
+C7-2 CC0603KRX7R9BB104-2 Passive 
 )
 (
 POW_INT 
@@ -8072,39 +8245,35 @@ U47-7 BQ25895RTWR-INT Input
 (
 L_EN 
 U1-67 STM32WB5MMGH6TR-PD7 Passive 
-U59-3 TPS2553DBVR-EN Passive 
+U3-3 TPS2553DBVR-EN Passive 
 )
 (
 R_SPI_MISO 
 U1-70 STM32WB5MMGH6TR-PD3 Passive 
-U63-11 SN74LVC125AQPWRQ1-4Y Passive 
+U4-11 SN74LVC125AQPWRQ1-4Y Passive 
 )
 (
 R_READY 
 U1-71 STM32WB5MMGH6TR-PC7 Passive 
-TV3-4 SRV05-4-P-T7_C85364-4 Input   
-RIGHT_WING_PORT1-8 B8B-PH-SM4-TBT(LF)(SN)-8 Passive 
+TV4-4 SRV05-4-P-T7_C85364-4 Input   
+CN2-10 72454-010VLF-10 Passive 
 )
 (
 R_NRST 
 U1-72 STM32WB5MMGH6TR-PE3 Passive 
 U54-1 BAT54C_C22466350-A Passive 
-TV3-6 SRV05-4-P-T7_C85364-6 Input   
-RIGHT_WING_PORT1-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
+TV4-6 SRV05-4-P-T7_C85364-6 Input   
+CN2-9 72454-010VLF-9 Passive 
 )
 (
 R_SPI_MOSI 
 U1-73 STM32WB5MMGH6TR-PD4 Passive 
-U63-9 SN74LVC125AQPWRQ1-3A Passive 
+U4-9 SN74LVC125AQPWRQ1-3A Passive 
 )
 (
 LED_CH1 
 U1-74 STM32WB5MMGH6TR-PD9 Passive 
 R27-1 0603WAF3300T5E-1 Input   
-)
-(
-SW_FN3 
-U1-75 STM32WB5MMGH6TR-PD8 Passive 
 )
 (
 POW_NCE 
@@ -8115,8 +8284,8 @@ R34-1 0603WAF1002T5E-1 Input
 (
 R_NFAULT 
 U1-81 STM32WB5MMGH6TR-PD6 Passive 
-U60-4 TPS2553DBVR-/FAULT Passive 
-R41-2 0603WAF1003T5E-2 Input   
+U5-4 TPS2553DBVR-/FAULT Passive 
+R4-2 0603WAF1003T5E-2 Input   
 )
 (
 POW_QON 
@@ -8164,25 +8333,6 @@ LED_FN1-2 NCD0805R1_C84256-+ Passive
 R29-2 0603WAF3300T5E-2 Input   
 )
 (
-LC_E+_R 
-U58-1 CS1237-SOP8-REFIN Passive 
-U58-8 CS1237-SOP8-REFOUT Passive 
-LOAD_CELL_PORT1-3 B8B-PH-SM4-TBT(LF)(SN)-3 Passive 
-TV12-1 SRV05-4-P-T7_C85364-1 Input   
-)
-(
-LC_A+_G 
-U58-3 CS1237-SOP8-AINN Passive 
-LOAD_CELL_PORT1-1 B8B-PH-SM4-TBT(LF)(SN)-1 Passive 
-TV12-6 SRV05-4-P-T7_C85364-6 Input   
-)
-(
-LC_A-_W 
-U58-4 CS1237-SOP8-AINP Passive 
-LOAD_CELL_PORT1-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
-TV12-4 SRV05-4-P-T7_C85364-4 Input   
-)
-(
 $1N39058 
 LED_FN2-2 NCD0805R1_C84256-+ Passive 
 R35-2 0603WAF3300T5E-2 Input   
@@ -8193,19 +8343,15 @@ LED_FN3-2 NCD0805R1_C84256-+ Passive
 R36-2 0603WAF3300T5E-2 Input   
 )
 (
-LED_FN3 
-R36-1 0603WAF3300T5E-1 Input   
-)
-(
 POW_TS 
-CN1-2 S3B-XH-SM4-TB(LF)(SN)_C5306495-2 Passive 
+BAT-2 S3B-XH-SM4-TB(LF)(SN)_C5306495-2 Passive 
 R12-1 0603WAF1200T5E-1 Input   
 R15-2 0603WAF3002T5E-2 Input   
 U47-11 BQ25895RTWR-TS Input   
 )
 (
 BAT_V+ 
-CN1-1 S3B-XH-SM4-TB(LF)(SN)_C5306495-1 Passive 
+BAT-1 S3B-XH-SM4-TB(LF)(SN)_C5306495-1 Passive 
 U47-13 BQ25895RTWR-BAT Input   
 U47-14 BQ25895RTWR-BAT Input   
 C13-2 CL31A106KBHNNNE-2 Input   
@@ -8274,16 +8420,12 @@ VBUS
 U47-1 BQ25895RTWR-VBUS Input   
 C14-1 CL31B105KBHNNNE-1 Passive 
 USB1-1 HC-TYPE-B-2.0-VS15-1.5A-15-VCC Passive 
-D7-2 SMBJ13A_C10209-K Input   
+D6-2 SMBJ13A_C10209-K Input   
 )
 (
 $2N1127 
 U47-10 BQ25895RTWR-ILIM Input   
 R10-2 0603WAF1500T5E-2 Input   
-)
-(
-$2N1147 
-C14-2 CL31B105KBHNNNE-2 Passive 
 )
 (
 $2N1151 
@@ -8297,87 +8439,87 @@ R18-2 0603WAF1002T5E-2 Input
 )
 (
 $4N584 
-R39-1 0603WAF8202T5E-1 Input   
-U60-5 TPS2553DBVR-ILIM Passive 
+R3-1 0603WAF8202T5E-1 Input   
+U5-5 TPS2553DBVR-ILIM Passive 
 )
 (
 R_VCC 
+TV4-5 SRV05-4-P-T7_C85364-5 Input   
+U5-6 TPS2553DBVR-OUT Passive 
 TV3-5 SRV05-4-P-T7_C85364-5 Input   
-U60-6 TPS2553DBVR-OUT Passive 
-TV2-5 SRV05-4-P-T7_C85364-5 Input   
-RIGHT_WING_PORT1-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
-U63-14 SN74LVC125AQPWRQ1-VCC Passive 
-C44-2 CL05B104KO5NNNC-2 Passive 
+U4-14 SN74LVC125AQPWRQ1-VCC Passive 
+C4-2 CL05B104KO5NNNC-2 Passive 
+CN2-1 72454-010VLF-1 Passive 
 )
 (
 R_SPI_SCK_P 
-TV2-1 SRV05-4-P-T7_C85364-1 Input   
-RIGHT_WING_PORT1-6 B8B-PH-SM4-TBT(LF)(SN)-6 Passive 
-U63-3 SN74LVC125AQPWRQ1-1Y Passive 
+TV3-1 SRV05-4-P-T7_C85364-1 Input   
+U4-3 SN74LVC125AQPWRQ1-1Y Passive 
+CN2-6 72454-010VLF-6 Passive 
 )
 (
 R_SPI_NSS_P 
-TV2-3 SRV05-4-P-T7_C85364-3 Input   
-RIGHT_WING_PORT1-7 B8B-PH-SM4-TBT(LF)(SN)-7 Passive 
-U63-6 SN74LVC125AQPWRQ1-2Y Passive 
+TV3-3 SRV05-4-P-T7_C85364-3 Input   
+U4-6 SN74LVC125AQPWRQ1-2Y Passive 
+CN2-8 72454-010VLF-8 Passive 
 )
 (
 R_SPI_MOSI_P 
-TV2-4 SRV05-4-P-T7_C85364-4 Input   
-RIGHT_WING_PORT1-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive 
-U63-8 SN74LVC125AQPWRQ1-3Y Passive 
+TV3-4 SRV05-4-P-T7_C85364-4 Input   
+U4-8 SN74LVC125AQPWRQ1-3Y Passive 
+CN2-2 72454-010VLF-2 Passive 
 )
 (
 R_SPI_MISO_P 
-TV2-6 SRV05-4-P-T7_C85364-6 Input   
-RIGHT_WING_PORT1-5 B8B-PH-SM4-TBT(LF)(SN)-5 Passive 
-U63-12 SN74LVC125AQPWRQ1-4A Passive 
+TV3-6 SRV05-4-P-T7_C85364-6 Input   
+U4-12 SN74LVC125AQPWRQ1-4A Passive 
+CN2-4 72454-010VLF-4 Passive 
 )
 (
 L_VCC 
-TV5-5 SRV05-4-P-T7_C85364-5 Input   
-TV4-5 SRV05-4-P-T7_C85364-5 Input   
-LEFT_WING_PORT1-2 B8B-PH-SM4-TBT(LF)(SN)-2 Passive 
-U59-6 TPS2553DBVR-OUT Passive 
-U61-14 SN74LVC125AQPWRQ1-VCC Passive 
+TV2-5 SRV05-4-P-T7_C85364-5 Input   
+TV1-5 SRV05-4-P-T7_C85364-5 Input   
+U3-6 TPS2553DBVR-OUT Passive 
+U2-14 SN74LVC125AQPWRQ1-VCC Passive 
 C2-2 CL05B104KO5NNNC-2 Passive 
+CN1-1 72454-010VLF-1 Passive 
 )
 (
 L_SPI_SCK_P 
-TV4-1 SRV05-4-P-T7_C85364-1 Input   
-LEFT_WING_PORT1-6 B8B-PH-SM4-TBT(LF)(SN)-6 Passive 
-U61-3 SN74LVC125AQPWRQ1-1Y Passive 
+TV1-1 SRV05-4-P-T7_C85364-1 Input   
+U2-3 SN74LVC125AQPWRQ1-1Y Passive 
+CN1-6 72454-010VLF-6 Passive 
 )
 (
 L_SPI_NSS_P 
-TV4-3 SRV05-4-P-T7_C85364-3 Input   
-LEFT_WING_PORT1-7 B8B-PH-SM4-TBT(LF)(SN)-7 Passive 
-U61-6 SN74LVC125AQPWRQ1-2Y Passive 
+TV1-3 SRV05-4-P-T7_C85364-3 Input   
+U2-6 SN74LVC125AQPWRQ1-2Y Passive 
+CN1-8 72454-010VLF-8 Passive 
 )
 (
 L_SPI_MOSI_P 
-TV4-4 SRV05-4-P-T7_C85364-4 Input   
-LEFT_WING_PORT1-4 B8B-PH-SM4-TBT(LF)(SN)-4 Passive 
-U61-8 SN74LVC125AQPWRQ1-3Y Passive 
+TV1-4 SRV05-4-P-T7_C85364-4 Input   
+U2-8 SN74LVC125AQPWRQ1-3Y Passive 
+CN1-2 72454-010VLF-2 Passive 
 )
 (
 L_SPI_MISO_P 
-TV4-6 SRV05-4-P-T7_C85364-6 Input   
-LEFT_WING_PORT1-5 B8B-PH-SM4-TBT(LF)(SN)-5 Passive 
-U61-12 SN74LVC125AQPWRQ1-4A Passive 
+TV1-6 SRV05-4-P-T7_C85364-6 Input   
+U2-12 SN74LVC125AQPWRQ1-4A Passive 
+CN1-4 72454-010VLF-4 Passive 
 )
 (
 $4N673 
-R38-1 0603WAF8202T5E-1 Input   
-U59-5 TPS2553DBVR-ILIM Passive 
+R1-1 0603WAF8202T5E-1 Input   
+U3-5 TPS2553DBVR-ILIM Passive 
 )
 (
 $4N1323 
 EXPR_PEDAL1-5 PJ-603A-5 Input   
-R31-1 0603WAF3901T5E-1 Input   
+R5-1 0603WAF3901T5E-1 Input   
 )
 (
 $4N1322 
 SUS_PEDAL1-5 PJ-603A-5 Input   
-R30-1 0603WAF3901T5E-1 Input   
+R6-1 0603WAF3901T5E-1 Input   
 )

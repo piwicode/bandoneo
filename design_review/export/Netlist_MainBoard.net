@@ -3453,27 +3453,27 @@ gge257
 DESIGNATOR
 CP1
 FOOTPRINT
-C1206
+C0603
 PARTTYPE
-CL31B105KBHNNNE
+CC0603KRX7R9BB104
 DESCRIPTION
-Capacitance:1uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
 Component Kind
 Standard
 LCSC Part Name
-1uF ±10% 50V
+100nF ±10% 50V
 Supplier Part
-C1848
+C14663
 Manufacturer
-SAMSUNG(三星)
+YAGEO(国巨)
 Manufacturer Part
-CL31B105KBHNNNE
+CC0603KRX7R9BB104
 Supplier Footprint
-1206
+0603
 JLCPCB Part Class
 Basic Part
 Datasheet
-https://item.szlcsc.com/datasheet/CL31B105KBHNNNE/2200.html
+https://atta.szlcsc.com/upload/public/pdf/source/20170116/1484561234239.pdf
 Supplier
 LCSC
 Add into BOM
@@ -3481,33 +3481,31 @@ yes
 Convert to PCB
 yes
 3D Model Title
-C1206_L3.2-W1.6-H1.3
-Value
-1uF
+C0603_L1.6-W0.8-H0.8
 Tolerance
 ±10%
-Voltage Rating
-50V
+Voltage Rated
+
 Temperature Coefficient
-X7R
+
+Value
+100nF
 Description
-Capacitance:1uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
 Symbol
 CL31B105KBHNNNE
 Designator
 CP1
-Name
-1uF
 Device
-CL31B105KBHNNNE
+CC0603KRX7R9BB104
+Unique ID
+gge240_3
 Reuse Block
 
 Group ID
 
 Channel ID
 
-Unique ID
-gge240_3
 
 *
 ]
@@ -3515,27 +3513,87 @@ gge240_3
 DESIGNATOR
 CP2
 FOOTPRINT
-C1206
+C0603
 PARTTYPE
-CL31B105KBHNNNE
+CC0603KRX7R9BB104
 DESCRIPTION
-Capacitance:1uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
 Component Kind
 Standard
 LCSC Part Name
-1uF ±10% 50V
+100nF ±10% 50V
 Supplier Part
-C1848
+C14663
+Manufacturer
+YAGEO(国巨)
+Manufacturer Part
+CC0603KRX7R9BB104
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20170116/1484561234239.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0603_L1.6-W0.8-H0.8
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Value
+100nF
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Symbol
+CL31B105KBHNNNE
+Designator
+CP2
+Device
+CC0603KRX7R9BB104
+Unique ID
+gge240_4
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+C45
+FOOTPRINT
+C0603
+PARTTYPE
+CL10B102KB8NNNC
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Component Kind
+Standard
+LCSC Part Name
+1nF ±10% 50V
+Supplier Part
+C1588
 Manufacturer
 SAMSUNG(三星)
 Manufacturer Part
-CL31B105KBHNNNE
+CL10B102KB8NNNC
 Supplier Footprint
-1206
+0603
 JLCPCB Part Class
 Basic Part
 Datasheet
-https://item.szlcsc.com/datasheet/CL31B105KBHNNNE/2200.html
+https://atta.szlcsc.com/upload/public/pdf/source/20160103/1457707679526.pdf
 Supplier
 LCSC
 Add into BOM
@@ -3543,95 +3601,31 @@ yes
 Convert to PCB
 yes
 3D Model Title
-C1206_L3.2-W1.6-H1.3
-Value
-1uF
+C0603_L1.6-W0.8-H0.8
 Tolerance
 ±10%
-Voltage Rating
-50V
+Voltage Rated
+
 Temperature Coefficient
-X7R
-Description
-Capacitance:1uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
-Symbol
-CL31B105KBHNNNE
-Designator
-CP2
-Name
-1uF
-Device
-CL31B105KBHNNNE
-Reuse Block
 
-Group ID
-
-Channel ID
-
-Unique ID
-gge240_4
-
-*
-]
-[
-DESIGNATOR
-C45
-FOOTPRINT
-C0402
-PARTTYPE
-0402B102K500NT
-DESCRIPTION
-Capacitance:1nF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
-Component Kind
-Standard
-LCSC Part Name
-1nF ±10% 50V
-Supplier Part
-C1523
-Manufacturer
-FH(风华)
-Manufacturer Part
-0402B102K500NT
-Supplier Footprint
-0402
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://item.szlcsc.com/datasheet/0402B102K500NT/1875.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-C0402_L1.0-W0.5-H0.5
 Value
 1nF
-Tolerance
-±10%
-Voltage Rating
-50V
-Temperature Coefficient
-X7R
 Description
-Capacitance:1nF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
 Symbol
 0402B102K500NT
 Designator
 C45
-Name
-1nF
 Device
-0402B102K500NT
-Reuse Block
-
-Group ID
-
-Channel ID
-
+CL10B102KB8NNNC
 Unique ID
 gge266
+Reuse Block
+
+Group ID
+
+Channel ID
+
 
 *
 ]
@@ -3639,27 +3633,27 @@ gge266
 DESIGNATOR
 C46
 FOOTPRINT
-C0402
+C0603
 PARTTYPE
-0402B102K500NT
+CL10B102KB8NNNC
 DESCRIPTION
-Capacitance:1nF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
 Component Kind
 Standard
 LCSC Part Name
 1nF ±10% 50V
 Supplier Part
-C1523
+C1588
 Manufacturer
-FH(风华)
+SAMSUNG(三星)
 Manufacturer Part
-0402B102K500NT
+CL10B102KB8NNNC
 Supplier Footprint
-0402
+0603
 JLCPCB Part Class
 Basic Part
 Datasheet
-https://item.szlcsc.com/datasheet/0402B102K500NT/1875.html
+https://atta.szlcsc.com/upload/public/pdf/source/20160103/1457707679526.pdf
 Supplier
 LCSC
 Add into BOM
@@ -3667,33 +3661,31 @@ yes
 Convert to PCB
 yes
 3D Model Title
-C0402_L1.0-W0.5-H0.5
-Value
-1nF
+C0603_L1.6-W0.8-H0.8
 Tolerance
 ±10%
-Voltage Rating
-50V
+Voltage Rated
+
 Temperature Coefficient
-X7R
+
+Value
+1nF
 Description
-Capacitance:1nF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
 Symbol
 0402B102K500NT
 Designator
 C46
-Name
-1nF
 Device
-0402B102K500NT
+CL10B102KB8NNNC
+Unique ID
+gge267
 Reuse Block
 
 Group ID
 
 Channel ID
 
-Unique ID
-gge267
 
 *
 ]
@@ -5133,27 +5125,27 @@ gge247
 DESIGNATOR
 C21
 FOOTPRINT
-C1206
+C0603
 PARTTYPE
-CL31B105KBHNNNE
+CL10A105KB8NNNC
 DESCRIPTION
-Capacitance:1uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Temperature Coefficient: Tolerance: Tolerance: Voltage Rated: Capacitance: 
 Component Kind
 Standard
 LCSC Part Name
-1uF ±10% 50V
+1uF(105) ±10% 50V
 Supplier Part
-C1848
+C15849
 Manufacturer
 SAMSUNG(三星)
 Manufacturer Part
-CL31B105KBHNNNE
+CL10A105KB8NNNC
 Supplier Footprint
-1206
+0603
 JLCPCB Part Class
 Basic Part
 Datasheet
-https://item.szlcsc.com/datasheet/CL31B105KBHNNNE/2200.html
+https://atta.szlcsc.com/upload/public/pdf/source/20160103/1457707679084.pdf
 Supplier
 LCSC
 Add into BOM
@@ -5161,33 +5153,31 @@ yes
 Convert to PCB
 yes
 3D Model Title
-C1206_L3.2-W1.6-H1.3
+C0603_L1.6-W0.8-H0.8
+Temperature Coefficient
+
+Tolerance
+
+Voltage Rated
+
 Value
 1uF
-Tolerance
-±10%
-Voltage Rating
-50V
-Temperature Coefficient
-X7R
 Description
-Capacitance:1uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Temperature Coefficient: Tolerance: Tolerance: Voltage Rated: Capacitance: 
 Symbol
 CL31B105KBHNNNE
 Designator
 C21
-Name
-1uF
 Device
-CL31B105KBHNNNE
+CL10A105KB8NNNC
+Unique ID
+gge248
 Reuse Block
 
 Group ID
 
 Channel ID
 
-Unique ID
-gge248
 
 *
 ]
@@ -5195,27 +5185,27 @@ gge248
 DESIGNATOR
 C22
 FOOTPRINT
-C1206
+C0603
 PARTTYPE
-CL31B105KBHNNNE
+CL10A105KB8NNNC
 DESCRIPTION
-Capacitance:1uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Temperature Coefficient: Tolerance: Tolerance: Voltage Rated: Capacitance: 
 Component Kind
 Standard
 LCSC Part Name
-1uF ±10% 50V
+1uF(105) ±10% 50V
 Supplier Part
-C1848
+C15849
 Manufacturer
 SAMSUNG(三星)
 Manufacturer Part
-CL31B105KBHNNNE
+CL10A105KB8NNNC
 Supplier Footprint
-1206
+0603
 JLCPCB Part Class
 Basic Part
 Datasheet
-https://item.szlcsc.com/datasheet/CL31B105KBHNNNE/2200.html
+https://atta.szlcsc.com/upload/public/pdf/source/20160103/1457707679084.pdf
 Supplier
 LCSC
 Add into BOM
@@ -5223,33 +5213,31 @@ yes
 Convert to PCB
 yes
 3D Model Title
-C1206_L3.2-W1.6-H1.3
+C0603_L1.6-W0.8-H0.8
+Temperature Coefficient
+
+Tolerance
+
+Voltage Rated
+
 Value
 1uF
-Tolerance
-±10%
-Voltage Rating
-50V
-Temperature Coefficient
-X7R
 Description
-Capacitance:1uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Temperature Coefficient: Tolerance: Tolerance: Voltage Rated: Capacitance: 
 Symbol
 CL31B105KBHNNNE
 Designator
 C22
-Name
-1uF
 Device
-CL31B105KBHNNNE
+CL10A105KB8NNNC
+Unique ID
+gge249
 Reuse Block
 
 Group ID
 
 Channel ID
 
-Unique ID
-gge249
 
 *
 ]
@@ -7101,27 +7089,27 @@ gge253
 DESIGNATOR
 C3
 FOOTPRINT
-C1206
+C0603
 PARTTYPE
-CL31B105KBHNNNE
+CL10A105KB8NNNC
 DESCRIPTION
-Capacitance:1uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Temperature Coefficient: Tolerance: Tolerance: Voltage Rated: Capacitance: 
 Component Kind
 Standard
 LCSC Part Name
-1uF ±10% 50V
+1uF(105) ±10% 50V
 Supplier Part
-C1848
+C15849
 Manufacturer
 SAMSUNG(三星)
 Manufacturer Part
-CL31B105KBHNNNE
+CL10A105KB8NNNC
 Supplier Footprint
-1206
+0603
 JLCPCB Part Class
 Basic Part
 Datasheet
-https://item.szlcsc.com/datasheet/CL31B105KBHNNNE/2200.html
+https://atta.szlcsc.com/upload/public/pdf/source/20160103/1457707679084.pdf
 Supplier
 LCSC
 Add into BOM
@@ -7129,33 +7117,31 @@ yes
 Convert to PCB
 yes
 3D Model Title
-C1206_L3.2-W1.6-H1.3
+C0603_L1.6-W0.8-H0.8
+Temperature Coefficient
+
+Tolerance
+
+Voltage Rated
+
 Value
 1uF
-Tolerance
-±10%
-Voltage Rating
-50V
-Temperature Coefficient
-X7R
 Description
-Capacitance:1uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Temperature Coefficient: Tolerance: Tolerance: Voltage Rated: Capacitance: 
 Symbol
 CL31B105KBHNNNE
 Designator
 C3
-Name
-1uF
 Device
-CL31B105KBHNNNE
+CL10A105KB8NNNC
+Unique ID
+gge240_1
 Reuse Block
 
 Group ID
 
 Channel ID
 
-Unique ID
-gge240_1
 
 *
 ]
@@ -7163,27 +7149,27 @@ gge240_1
 DESIGNATOR
 C5
 FOOTPRINT
-C1206
+C0603
 PARTTYPE
-CL31B105KBHNNNE
+CL10A105KB8NNNC
 DESCRIPTION
-Capacitance:1uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Temperature Coefficient: Tolerance: Tolerance: Voltage Rated: Capacitance: 
 Component Kind
 Standard
 LCSC Part Name
-1uF ±10% 50V
+1uF(105) ±10% 50V
 Supplier Part
-C1848
+C15849
 Manufacturer
 SAMSUNG(三星)
 Manufacturer Part
-CL31B105KBHNNNE
+CL10A105KB8NNNC
 Supplier Footprint
-1206
+0603
 JLCPCB Part Class
 Basic Part
 Datasheet
-https://item.szlcsc.com/datasheet/CL31B105KBHNNNE/2200.html
+https://atta.szlcsc.com/upload/public/pdf/source/20160103/1457707679084.pdf
 Supplier
 LCSC
 Add into BOM
@@ -7191,33 +7177,31 @@ yes
 Convert to PCB
 yes
 3D Model Title
-C1206_L3.2-W1.6-H1.3
+C0603_L1.6-W0.8-H0.8
+Temperature Coefficient
+
+Tolerance
+
+Voltage Rated
+
 Value
 1uF
-Tolerance
-±10%
-Voltage Rating
-50V
-Temperature Coefficient
-X7R
 Description
-Capacitance:1uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Temperature Coefficient: Tolerance: Tolerance: Voltage Rated: Capacitance: 
 Symbol
 CL31B105KBHNNNE
 Designator
 C5
-Name
-1uF
 Device
-CL31B105KBHNNNE
+CL10A105KB8NNNC
+Unique ID
+gge240_2
 Reuse Block
 
 Group ID
 
 Channel ID
 
-Unique ID
-gge240_2
 
 *
 ]
@@ -7885,10 +7869,10 @@ C39-2 CC0603KRX7R9BB104-2 Input
 R37-2 0603WAF1002T5E-2 Input   
 C40-2 CC0603KRX7R9BB104-2 Passive 
 D8-1 H5VND5BA-1 Passive 
-CP1-2 CL31B105KBHNNNE-2 Passive 
-CP2-2 CL31B105KBHNNNE-2 Passive 
-C45-1 0402B102K500NT-1 Input   
-C46-1 0402B102K500NT-1 Input   
+CP1-2 CC0603KRX7R9BB104-2 Passive 
+CP2-2 CC0603KRX7R9BB104-2 Passive 
+C45-1 CL10B102KB8NNNC-1 Input   
+C46-1 CL10B102KB8NNNC-1 Input   
 U57-2 SC4015SO-N-TR-GND Passive 
 U58-2 SC4015SO-N-TR-GND Passive 
 BAT-5 S3B-XH-SM4-TB(LF)(SN)_C5306495-5 Passive 
@@ -7906,8 +7890,8 @@ C15-1 GRM21BR61H106KE43L-1 Passive
 C13-1 CL31A106KBHNNNE-1 Input   
 R16-1 0603WAF100JT5E-1 Input   
 U55-2 TLV75533PDBVR-GND Passive 
-C21-1 CL31B105KBHNNNE-1 Passive 
-C22-1 CL31B105KBHNNNE-1 Passive 
+C21-1 CL10A105KB8NNNC-1 Passive 
+C22-1 CL10A105KB8NNNC-1 Passive 
 C23-1 1206B475K500NT-1 Input   
 C24-1 1206B475K500NT-1 Input   
 C37-1 GRM21BR61H106KE43L-1 Passive 
@@ -7927,8 +7911,8 @@ USB1-4 HC-TYPE-B-2.0-VS15-1.5A-15-GND Passive
 USB1-5 HC-TYPE-B-2.0-VS15-1.5A-15-GND Passive 
 USB1-6 HC-TYPE-B-2.0-VS15-1.5A-15-GND Passive 
 D6-1 SMBJ13A_C10209-A Input   
-C3-1 CL31B105KBHNNNE-1 Passive 
-C5-1 CL31B105KBHNNNE-1 Passive 
+C3-1 CL10A105KB8NNNC-1 Passive 
+C5-1 CL10A105KB8NNNC-1 Passive 
 U2-1 SN74LVC125AQPWRQ1-1OE# Passive 
 U2-4 SN74LVC125AQPWRQ1-2OE# Passive 
 U2-7 SN74LVC125AQPWRQ1-GND Passive 
@@ -7990,7 +7974,7 @@ U1-75 STM32WB5MMGH6TR-PD8 Passive
 L_NRST 
 U1-1 STM32WB5MMGH6TR-PA2 Passive 
 U54-2 BAT54C_C22466350-A Passive 
-TV2-6 SRV05-4-P-T7_C85364-6 Input   
+TV2-4 SRV05-4-P-T7_C85364-4 Input   
 CN1-9 72454-010VLF-9 Passive 
 )
 (
@@ -8001,7 +7985,7 @@ U2-2 SN74LVC125AQPWRQ1-1A Passive
 (
 L_READY 
 U1-3 STM32WB5MMGH6TR-PA0 Passive 
-TV2-4 SRV05-4-P-T7_C85364-4 Input   
+TV2-3 SRV05-4-P-T7_C85364-3 Input   
 CN1-10 72454-010VLF-10 Passive 
 )
 (
@@ -8012,12 +7996,12 @@ U1-15 STM32WB5MMGH6TR-VBAT Passive
 U1-17 STM32WB5MMGH6TR-VDDA Passive 
 U1-32 STM32WB5MMGH6TR-VDDUSB Passive 
 FN3_BOOT0-1 TS-1088-AR02016-1 Passive 
-CP1-1 CL31B105KBHNNNE-1 Passive 
-CP2-1 CL31B105KBHNNNE-1 Passive 
+CP1-1 CC0603KRX7R9BB104-1 Passive 
+CP2-1 CC0603KRX7R9BB104-1 Passive 
 U57-1 SC4015SO-N-TR-VDD Passive 
 U58-1 SC4015SO-N-TR-VDD Passive 
 U55-5 TLV75533PDBVR-OUT Passive 
-C22-2 CL31B105KBHNNNE-2 Passive 
+C22-2 CL10A105KB8NNNC-2 Passive 
 C23-2 1206B475K500NT-2 Input   
 R33-1 0603WAF4701T5E-1 Input   
 R32-1 0603WAF4701T5E-1 Input   
@@ -8031,8 +8015,8 @@ EXPR_PEDAL1-4 PJ-603A-4 Input
 SUS_PEDAL1-4 PJ-603A-4 Input   
 C6-1 CC0603KRX7R9BB104-1 Input   
 C7-1 CC0603KRX7R9BB104-1 Passive 
-C3-2 CL31B105KBHNNNE-2 Passive 
-C5-2 CL31B105KBHNNNE-2 Passive 
+C3-2 CL10A105KB8NNNC-2 Passive 
+C5-2 CL10A105KB8NNNC-2 Passive 
 R2-1 0603WAF1003T5E-1 Input   
 R4-1 0603WAF1003T5E-1 Input   
 CN3-3 STDC14_Connector-T_VCC Input   
@@ -8040,13 +8024,13 @@ CN3-3 STDC14_Connector-T_VCC Input
 (
 PRESSURE2 
 U1-7 STM32WB5MMGH6TR-PC3 Passive 
-C46-2 0402B102K500NT-2 Input   
+C46-2 CL10B102KB8NNNC-2 Input   
 U58-3 SC4015SO-N-TR-OUT Passive 
 )
 (
 PRESSURE1 
 U1-8 STM32WB5MMGH6TR-PC2 Passive 
-C45-2 0402B102K500NT-2 Input   
+C45-2 CL10B102KB8NNNC-2 Input   
 U57-3 SC4015SO-N-TR-OUT Passive 
 )
 (
@@ -8255,14 +8239,14 @@ U4-11 SN74LVC125AQPWRQ1-4Y Passive
 (
 R_READY 
 U1-71 STM32WB5MMGH6TR-PC7 Passive 
-TV4-4 SRV05-4-P-T7_C85364-4 Input   
+TV4-3 SRV05-4-P-T7_C85364-3 Input   
 CN2-10 72454-010VLF-10 Passive 
 )
 (
 R_NRST 
 U1-72 STM32WB5MMGH6TR-PE3 Passive 
 U54-1 BAT54C_C22466350-A Passive 
-TV4-6 SRV05-4-P-T7_C85364-6 Input   
+TV4-4 SRV05-4-P-T7_C85364-4 Input   
 CN2-9 72454-010VLF-9 Passive 
 )
 (
@@ -8387,7 +8371,7 @@ U47-16 BQ25895RTWR-SYS Input
 C16-2 GRM21BR61H106KE43L-2 Passive 
 C15-2 GRM21BR61H106KE43L-2 Passive 
 U55-1 TLV75533PDBVR-IN Passive 
-C21-2 CL31B105KBHNNNE-2 Passive 
+C21-2 CL10A105KB8NNNC-2 Passive 
 R18-1 0603WAF1002T5E-1 Input   
 C37-2 GRM21BR61H106KE43L-2 Passive 
 R42-2 0402WGF1001TCE-2 Input   
@@ -8452,28 +8436,26 @@ C4-2 CL05B104KO5NNNC-2 Passive
 CN2-1 72454-010VLF-1 Passive 
 )
 (
-R_SPI_SCK_P 
+$4N10892 
 TV3-1 SRV05-4-P-T7_C85364-1 Input   
+)
+(
+R_SPI_MISO_P 
+TV3-3 SRV05-4-P-T7_C85364-3 Input   
+U4-12 SN74LVC125AQPWRQ1-4A Passive 
+CN2-4 72454-010VLF-4 Passive 
+)
+(
+R_SPI_SCK_P 
+TV3-4 SRV05-4-P-T7_C85364-4 Input   
 U4-3 SN74LVC125AQPWRQ1-1Y Passive 
 CN2-6 72454-010VLF-6 Passive 
 )
 (
 R_SPI_NSS_P 
-TV3-3 SRV05-4-P-T7_C85364-3 Input   
+TV3-6 SRV05-4-P-T7_C85364-6 Input   
 U4-6 SN74LVC125AQPWRQ1-2Y Passive 
 CN2-8 72454-010VLF-8 Passive 
-)
-(
-R_SPI_MOSI_P 
-TV3-4 SRV05-4-P-T7_C85364-4 Input   
-U4-8 SN74LVC125AQPWRQ1-3Y Passive 
-CN2-2 72454-010VLF-2 Passive 
-)
-(
-R_SPI_MISO_P 
-TV3-6 SRV05-4-P-T7_C85364-6 Input   
-U4-12 SN74LVC125AQPWRQ1-4A Passive 
-CN2-4 72454-010VLF-4 Passive 
 )
 (
 L_VCC 
@@ -8485,28 +8467,28 @@ C2-2 CL05B104KO5NNNC-2 Passive
 CN1-1 72454-010VLF-1 Passive 
 )
 (
-L_SPI_SCK_P 
-TV1-1 SRV05-4-P-T7_C85364-1 Input   
-U2-3 SN74LVC125AQPWRQ1-1Y Passive 
-CN1-6 72454-010VLF-6 Passive 
-)
-(
-L_SPI_NSS_P 
-TV1-3 SRV05-4-P-T7_C85364-3 Input   
-U2-6 SN74LVC125AQPWRQ1-2Y Passive 
-CN1-8 72454-010VLF-8 Passive 
-)
-(
 L_SPI_MOSI_P 
-TV1-4 SRV05-4-P-T7_C85364-4 Input   
+TV1-1 SRV05-4-P-T7_C85364-1 Input   
 U2-8 SN74LVC125AQPWRQ1-3Y Passive 
 CN1-2 72454-010VLF-2 Passive 
 )
 (
 L_SPI_MISO_P 
-TV1-6 SRV05-4-P-T7_C85364-6 Input   
+TV1-3 SRV05-4-P-T7_C85364-3 Input   
 U2-12 SN74LVC125AQPWRQ1-4A Passive 
 CN1-4 72454-010VLF-4 Passive 
+)
+(
+L_SPI_SCK_P 
+TV1-4 SRV05-4-P-T7_C85364-4 Input   
+U2-3 SN74LVC125AQPWRQ1-1Y Passive 
+CN1-6 72454-010VLF-6 Passive 
+)
+(
+L_SPI_NSS_P 
+TV1-6 SRV05-4-P-T7_C85364-6 Input   
+U2-6 SN74LVC125AQPWRQ1-2Y Passive 
+CN1-8 72454-010VLF-8 Passive 
 )
 (
 $4N673 
@@ -8522,4 +8504,9 @@ R5-1 0603WAF3901T5E-1 Input
 $4N1322 
 SUS_PEDAL1-5 PJ-603A-5 Input   
 R6-1 0603WAF3901T5E-1 Input   
+)
+(
+R_SPI_MOSI_P 
+U4-8 SN74LVC125AQPWRQ1-3Y Passive 
+CN2-2 72454-010VLF-2 Passive 
 )

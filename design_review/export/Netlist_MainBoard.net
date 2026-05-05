@@ -1333,6 +1333,1230 @@ gge199_1
 ]
 [
 DESIGNATOR
+U3
+FOOTPRINT
+SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
+PARTTYPE
+TPS2553DBVR
+DESCRIPTION
+Type:High Side Switch Number of Channels:1 Control Input Logic:Active High Maximum Continuous Current:1.5A Voltage - Supply:2.5V~6.5V Voltage - Supply:2.5V~6.5V RDS(on):85mΩ Operating Temperature	-:-40℃~+150℃ Operating Temperature	-:-40℃~+150℃ Features:Ov
+Component Kind
+Standard
+LCSC Part Name
+精密可调限流电源分配开关
+Supplier Part
+C55266
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+TPS2553DBVR
+Supplier Footprint
+SOT-23-6
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://www.ti.com/cn/lit/gpn/tps2553
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
+Type
+High Side Switch
+Number of Channels
+1
+Control Input Logic
+Active High
+Maximum Continuous Current
+1.5A
+Voltage - Supply
+2.5V~6.5V
+RDS(on)
+85mΩ
+Operating Temperature	-
+-40℃~+150℃
+Features
+Overtemperature protection (OTP)；Overcurrent Protection(OCP)
+Description
+Type:High Side Switch Number of Channels:1 Control Input Logic:Active High Maximum Continuous Current:1.5A Voltage - Supply:2.5V~6.5V Voltage - Supply:2.5V~6.5V RDS(on):85mΩ Operating Temperature	-:-40℃~+150℃ Operating Temperature	-:-40℃~+150℃ Features:Ov
+Symbol
+TPS2553DBVR
+Designator
+U3
+Name
+TPS2553DBVR
+Device
+TPS2553DBVR
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge261
+
+*
+]
+[
+DESIGNATOR
+R2
+FOOTPRINT
+R0603
+PARTTYPE
+0603WAF1003T5E
+DESCRIPTION
+Type:Thick Film Resistor Resistance:100kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Component Kind
+Standard
+LCSC Part Name
+100kΩ ±1% 100mW 厚膜电阻
+Supplier Part
+C25803
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0603WAF1003T5E
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/0603WAF1003T5E/26546.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0603
+Type
+Thick Film Resistor
+Value
+100kΩ
+Tolerance
+±1%
+Power(Watts)
+100mW
+Voltage-Supply(Max)
+75V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+Type:Thick Film Resistor Resistance:100kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Symbol
+0603WAF1003T5E
+Designator
+R2
+Name
+100kΩ
+Device
+0603WAF1003T5E
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge262
+
+*
+]
+[
+DESIGNATOR
+R1
+FOOTPRINT
+R0603
+PARTTYPE
+0603WAF8202T5E
+DESCRIPTION
+Type:Thick Film Resistor Resistance:82kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
+Component Kind
+Standard
+Supplier
+LCSC
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0603WAF8202T5E
+Supplier Part
+C23254
+Value
+82kΩ
+JLCPCB Part Class
+Basic Part
+LCSC Part Name
+82kΩ ±1% 100mW 厚膜电阻
+Supplier Footprint
+0603
+Datasheet
+https://item.szlcsc.com/datasheet/0603WAF8202T5E/23981.html
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0603
+Type
+Thick Film Resistor
+Tolerance
+±1%
+Power(Watts)
+100mW
+Voltage-Supply(Max)
+75V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+Type:Thick Film Resistor Resistance:82kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
+Symbol
+0603WAF8202T5E
+Designator
+R1
+Name
+82kΩ
+Device
+0603WAF8202T5E
+Unique ID
+gge260
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U2
+FOOTPRINT
+TSSOP-14_L5.0-W4.4-P0.65-LS6.4-BL
+PARTTYPE
+SN74LVC125AQPWRQ1
+DESCRIPTION
+Input type:- output type:Tri-State Voltage - Supply:1.65V~3.6V Voltage - Supply:1.65V~3.6V Number of Elements:4 Number of Bits per Element:1 Channel Type:- Current - Output Low(IOL):24mA Current - Output High(IOH):24mA Logic Family:74LVC Operating Tempera
+Component Kind
+Standard
+LCSC Part Name
+三态输出，四路总线缓冲门
+Supplier Part
+C134144
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74LVC125AQPWRQ1
+Supplier Footprint
+TSSOP-14
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://www.ti.com/cn/lit/gpn/sn74lvc125a-q1
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+TSSOP-14_L5.0-W4.4-H1.0-LS6.4-P0.65
+Input type
+-
+output type
+Tri-State
+Voltage - Supply
+1.65V~3.6V
+Number of Elements
+4
+Number of Bits per Element
+1
+Channel Type
+-
+Current - Output Low(IOL)
+24mA
+Current - Output High(IOH)
+24mA
+Logic Family
+74LVC
+Operating Temperature
+-40℃~+125℃
+Quiescent Current
+20uA
+Propagation Delay
+2.5ns@3.3V,50pF
+Description
+Input type:- output type:Tri-State Voltage - Supply:1.65V~3.6V Voltage - Supply:1.65V~3.6V Number of Elements:4 Number of Bits per Element:1 Channel Type:- Current - Output Low(IOL):24mA Current - Output High(IOH):24mA Logic Family:74LVC Operating Tempera
+Symbol
+SN74LVC125AQPWRQ1
+Designator
+U2
+Name
+SN74LVC125AQPWRQ1
+Device
+SN74LVC125AQPWRQ1
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge264
+
+*
+]
+[
+DESIGNATOR
+C3
+FOOTPRINT
+C0603
+PARTTYPE
+CL10A105KB8NNNC
+DESCRIPTION
+Temperature Coefficient: Tolerance: Tolerance: Voltage Rated: Capacitance: 
+Component Kind
+Standard
+LCSC Part Name
+1uF(105) ±10% 50V
+Supplier Part
+C15849
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL10A105KB8NNNC
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20160103/1457707679084.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0603_L1.6-W0.8-H0.8
+Temperature Coefficient
+
+Tolerance
+
+Voltage Rated
+
+Value
+1uF
+Description
+Temperature Coefficient: Tolerance: Tolerance: Voltage Rated: Capacitance: 
+Symbol
+CL31B105KBHNNNE
+Designator
+C3
+Device
+CL10A105KB8NNNC
+Unique ID
+gge240_1
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+C2
+FOOTPRINT
+C0603
+PARTTYPE
+CC0603KRX7R9BB104
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Component Kind
+Standard
+Symbol
+CC0603KRX7R9BB104
+LCSC Part Name
+100nF ±10% 50V
+Supplier Part
+C14663
+Manufacturer
+YAGEO(国巨)
+Manufacturer Part
+CC0603KRX7R9BB104
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20170116/1484561234239.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0603_L1.6-W0.8-H0.8
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Designator
+C2
+Value
+100nF
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Device
+CC0603KRX7R9BB104
+Unique ID
+gge226_2
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+TV1
+FOOTPRINT
+SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
+PARTTYPE
+SRV05-4-P-T7_C85364
+DESCRIPTION
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Component Kind
+Standard
+LCSC Part Name
+SRV05-4-P-T7
+Supplier Part
+C85364
+Manufacturer
+PROTEK
+Manufacturer Part
+SRV05-4-P-T7
+Supplier Footprint
+SOT-23-6
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
+Reverse Stand-Off Voltage (Vrwm)
+5V
+Clamping Voltage
+12V
+Peak Pulse Current (Ipp)
+1A@8/20us
+Voltage - Breakdown
+6V
+Type
+TVS
+Description
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Symbol
+SRV05-4-P-T7
+Designator
+TV1
+Name
+SRV05-4-P-T7
+Device
+SRV05-4-P-T7_C85364
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge169_3
+
+*
+]
+[
+DESIGNATOR
+TV2
+FOOTPRINT
+SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
+PARTTYPE
+SRV05-4-P-T7_C85364
+DESCRIPTION
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Component Kind
+Standard
+LCSC Part Name
+SRV05-4-P-T7
+Supplier Part
+C85364
+Manufacturer
+PROTEK
+Manufacturer Part
+SRV05-4-P-T7
+Supplier Footprint
+SOT-23-6
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
+Reverse Stand-Off Voltage (Vrwm)
+5V
+Clamping Voltage
+12V
+Peak Pulse Current (Ipp)
+1A@8/20us
+Voltage - Breakdown
+6V
+Type
+TVS
+Description
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Symbol
+SRV05-4-P-T7
+Designator
+TV2
+Name
+SRV05-4-P-T7
+Device
+SRV05-4-P-T7_C85364
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge169_4
+
+*
+]
+[
+DESIGNATOR
+CN1
+FOOTPRINT
+CONN-SMD_10P-P2.54_72454-010VLF
+PARTTYPE
+72454-010VLF
+DESCRIPTION
+Pins Structure:2x5P Pitch:2.54mm Mounting Type:Surface Mount,Vertical Reference Series:- Number of Pins:10P Number of Rows:2 Number of PINs Per Row:5 Row Spacing:2.54mm Current Rating:1A Contact Material:Phosphor Bronze Contact Plating:Tin Operating Tempe
+Component Kind
+Standard
+LCSC Part Name
+2x5P 间距:2.54mm 立贴
+Supplier Part
+C236047
+Manufacturer
+Amphenol
+Manufacturer Part
+72454-010VLF
+Supplier Footprint
+SMD,P=2.54mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/72454-010VLF/235722.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+CONN-SMD_2x5P-L20.1-W8.8-H12.8-P2.54
+Pins Structure
+2x5P
+Pitch
+2.54mm
+Mounting Type
+Surface Mount,Vertical
+Reference Series
+-
+Number of Pins
+10P
+Number of Rows
+2
+Number of PINs Per Row
+5
+Row Spacing
+2.54mm
+Current Rating
+1A
+Contact Material
+Phosphor Bronze
+Contact Plating
+Tin
+Operating Temperature
+-65℃~+105℃
+Description
+Pins Structure:2x5P Pitch:2.54mm Mounting Type:Surface Mount,Vertical Reference Series:- Number of Pins:10P Number of Rows:2 Number of PINs Per Row:5 Row Spacing:2.54mm Current Rating:1A Contact Material:Phosphor Bronze Contact Plating:Tin Operating Tempe
+Symbol
+72454-010VLF
+Designator
+CN1
+Name
+72454-010VLF
+Device
+72454-010VLF
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge268_1
+Comment
+LEFT_WING_CONNECTOR
+
+*
+]
+[
+DESIGNATOR
+U4
+FOOTPRINT
+SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
+PARTTYPE
+TPS2553DBVR
+DESCRIPTION
+Type:High Side Switch Number of Channels:1 Control Input Logic:Active High Maximum Continuous Current:1.5A Voltage - Supply:2.5V~6.5V Voltage - Supply:2.5V~6.5V RDS(on):85mΩ Operating Temperature	-:-40℃~+150℃ Operating Temperature	-:-40℃~+150℃ Features:Ov
+Component Kind
+Standard
+LCSC Part Name
+精密可调限流电源分配开关
+Supplier Part
+C55266
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+TPS2553DBVR
+Supplier Footprint
+SOT-23-6
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://www.ti.com/cn/lit/gpn/tps2553
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
+Type
+High Side Switch
+Number of Channels
+1
+Control Input Logic
+Active High
+Maximum Continuous Current
+1.5A
+Voltage - Supply
+2.5V~6.5V
+RDS(on)
+85mΩ
+Operating Temperature	-
+-40℃~+150℃
+Features
+Overtemperature protection (OTP)；Overcurrent Protection(OCP)
+Description
+Type:High Side Switch Number of Channels:1 Control Input Logic:Active High Maximum Continuous Current:1.5A Voltage - Supply:2.5V~6.5V Voltage - Supply:2.5V~6.5V RDS(on):85mΩ Operating Temperature	-:-40℃~+150℃ Operating Temperature	-:-40℃~+150℃ Features:Ov
+Symbol
+TPS2553DBVR
+Designator
+U4
+Name
+TPS2553DBVR
+Device
+TPS2553DBVR
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge275
+
+*
+]
+[
+DESIGNATOR
+R3
+FOOTPRINT
+R0603
+PARTTYPE
+0603WAF1003T5E
+DESCRIPTION
+Type:Thick Film Resistor Resistance:100kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Component Kind
+Standard
+LCSC Part Name
+100kΩ ±1% 100mW 厚膜电阻
+Supplier Part
+C25803
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0603WAF1003T5E
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/0603WAF1003T5E/26546.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0603
+Type
+Thick Film Resistor
+Value
+100kΩ
+Tolerance
+±1%
+Power(Watts)
+100mW
+Voltage-Supply(Max)
+75V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+Type:Thick Film Resistor Resistance:100kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Symbol
+0603WAF1003T5E
+Designator
+R3
+Name
+100kΩ
+Device
+0603WAF1003T5E
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge276
+
+*
+]
+[
+DESIGNATOR
+R4
+FOOTPRINT
+R0603
+PARTTYPE
+0603WAF8202T5E
+DESCRIPTION
+Type:Thick Film Resistor Resistance:82kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
+Component Kind
+Standard
+Supplier
+LCSC
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0603WAF8202T5E
+Supplier Part
+C23254
+Value
+82kΩ
+JLCPCB Part Class
+Basic Part
+LCSC Part Name
+82kΩ ±1% 100mW 厚膜电阻
+Supplier Footprint
+0603
+Datasheet
+https://item.szlcsc.com/datasheet/0603WAF8202T5E/23981.html
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0603
+Type
+Thick Film Resistor
+Tolerance
+±1%
+Power(Watts)
+100mW
+Voltage-Supply(Max)
+75V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
+Description
+Type:Thick Film Resistor Resistance:82kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
+Symbol
+0603WAF8202T5E
+Designator
+R4
+Name
+82kΩ
+Device
+0603WAF8202T5E
+Unique ID
+gge277
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+U5
+FOOTPRINT
+TSSOP-14_L5.0-W4.4-P0.65-LS6.4-BL
+PARTTYPE
+SN74LVC125AQPWRQ1
+DESCRIPTION
+Input type:- output type:Tri-State Voltage - Supply:1.65V~3.6V Voltage - Supply:1.65V~3.6V Number of Elements:4 Number of Bits per Element:1 Channel Type:- Current - Output Low(IOL):24mA Current - Output High(IOH):24mA Logic Family:74LVC Operating Tempera
+Component Kind
+Standard
+LCSC Part Name
+三态输出，四路总线缓冲门
+Supplier Part
+C134144
+Manufacturer
+TI(德州仪器)
+Manufacturer Part
+SN74LVC125AQPWRQ1
+Supplier Footprint
+TSSOP-14
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://www.ti.com/cn/lit/gpn/sn74lvc125a-q1
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+TSSOP-14_L5.0-W4.4-H1.0-LS6.4-P0.65
+Input type
+-
+output type
+Tri-State
+Voltage - Supply
+1.65V~3.6V
+Number of Elements
+4
+Number of Bits per Element
+1
+Channel Type
+-
+Current - Output Low(IOL)
+24mA
+Current - Output High(IOH)
+24mA
+Logic Family
+74LVC
+Operating Temperature
+-40℃~+125℃
+Quiescent Current
+20uA
+Propagation Delay
+2.5ns@3.3V,50pF
+Description
+Input type:- output type:Tri-State Voltage - Supply:1.65V~3.6V Voltage - Supply:1.65V~3.6V Number of Elements:4 Number of Bits per Element:1 Channel Type:- Current - Output Low(IOL):24mA Current - Output High(IOH):24mA Logic Family:74LVC Operating Tempera
+Symbol
+SN74LVC125AQPWRQ1
+Designator
+U5
+Name
+SN74LVC125AQPWRQ1
+Device
+SN74LVC125AQPWRQ1
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge278
+
+*
+]
+[
+DESIGNATOR
+C5
+FOOTPRINT
+C0603
+PARTTYPE
+CL10A105KB8NNNC
+DESCRIPTION
+Temperature Coefficient: Tolerance: Tolerance: Voltage Rated: Capacitance: 
+Component Kind
+Standard
+LCSC Part Name
+1uF(105) ±10% 50V
+Supplier Part
+C15849
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL10A105KB8NNNC
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20160103/1457707679084.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0603_L1.6-W0.8-H0.8
+Temperature Coefficient
+
+Tolerance
+
+Voltage Rated
+
+Value
+1uF
+Description
+Temperature Coefficient: Tolerance: Tolerance: Voltage Rated: Capacitance: 
+Symbol
+CL31B105KBHNNNE
+Designator
+C5
+Device
+CL10A105KB8NNNC
+Unique ID
+gge280
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+C4
+FOOTPRINT
+C0603
+PARTTYPE
+CC0603KRX7R9BB104
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Component Kind
+Standard
+Symbol
+CC0603KRX7R9BB104
+LCSC Part Name
+100nF ±10% 50V
+Supplier Part
+C14663
+Manufacturer
+YAGEO(国巨)
+Manufacturer Part
+CC0603KRX7R9BB104
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20170116/1484561234239.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0603_L1.6-W0.8-H0.8
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Designator
+C4
+Value
+100nF
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Device
+CC0603KRX7R9BB104
+Unique ID
+gge226_3
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+TV3
+FOOTPRINT
+SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
+PARTTYPE
+SRV05-4-P-T7_C85364
+DESCRIPTION
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Component Kind
+Standard
+LCSC Part Name
+SRV05-4-P-T7
+Supplier Part
+C85364
+Manufacturer
+PROTEK
+Manufacturer Part
+SRV05-4-P-T7
+Supplier Footprint
+SOT-23-6
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
+Reverse Stand-Off Voltage (Vrwm)
+5V
+Clamping Voltage
+12V
+Peak Pulse Current (Ipp)
+1A@8/20us
+Voltage - Breakdown
+6V
+Type
+TVS
+Description
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Symbol
+SRV05-4-P-T7
+Designator
+TV3
+Name
+SRV05-4-P-T7
+Device
+SRV05-4-P-T7_C85364
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge281
+
+*
+]
+[
+DESIGNATOR
+TV4
+FOOTPRINT
+SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
+PARTTYPE
+SRV05-4-P-T7_C85364
+DESCRIPTION
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Component Kind
+Standard
+LCSC Part Name
+SRV05-4-P-T7
+Supplier Part
+C85364
+Manufacturer
+PROTEK
+Manufacturer Part
+SRV05-4-P-T7
+Supplier Footprint
+SOT-23-6
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
+Reverse Stand-Off Voltage (Vrwm)
+5V
+Clamping Voltage
+12V
+Peak Pulse Current (Ipp)
+1A@8/20us
+Voltage - Breakdown
+6V
+Type
+TVS
+Description
+Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
+Symbol
+SRV05-4-P-T7
+Designator
+TV4
+Name
+SRV05-4-P-T7
+Device
+SRV05-4-P-T7_C85364
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge282
+
+*
+]
+[
+DESIGNATOR
+CN2
+FOOTPRINT
+CONN-SMD_10P-P2.54_72454-010VLF
+PARTTYPE
+72454-010VLF
+DESCRIPTION
+Pins Structure:2x5P Pitch:2.54mm Mounting Type:Surface Mount,Vertical Reference Series:- Number of Pins:10P Number of Rows:2 Number of PINs Per Row:5 Row Spacing:2.54mm Current Rating:1A Contact Material:Phosphor Bronze Contact Plating:Tin Operating Tempe
+Component Kind
+Standard
+LCSC Part Name
+2x5P 间距:2.54mm 立贴
+Supplier Part
+C236047
+Manufacturer
+Amphenol
+Manufacturer Part
+72454-010VLF
+Supplier Footprint
+SMD,P=2.54mm
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/72454-010VLF/235722.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+CONN-SMD_2x5P-L20.1-W8.8-H12.8-P2.54
+Pins Structure
+2x5P
+Pitch
+2.54mm
+Mounting Type
+Surface Mount,Vertical
+Reference Series
+-
+Number of Pins
+10P
+Number of Rows
+2
+Number of PINs Per Row
+5
+Row Spacing
+2.54mm
+Current Rating
+1A
+Contact Material
+Phosphor Bronze
+Contact Plating
+Tin
+Operating Temperature
+-65℃~+105℃
+Description
+Pins Structure:2x5P Pitch:2.54mm Mounting Type:Surface Mount,Vertical Reference Series:- Number of Pins:10P Number of Rows:2 Number of PINs Per Row:5 Row Spacing:2.54mm Current Rating:1A Contact Material:Phosphor Bronze Contact Plating:Tin Operating Tempe
+Symbol
+72454-010VLF
+Designator
+CN2
+Name
+72454-010VLF
+Device
+72454-010VLF
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge283
+Comment
+LEFT_WING_CONNECTOR
+
+*
+]
+[
+DESIGNATOR
 U1
 FOOTPRINT
 LCC-LGA-86_L11.0-W7.3_STM32WB5MMGH6TR
@@ -4465,25 +5689,25 @@ C18
 FOOTPRINT
 C0805
 PARTTYPE
-GRM21BR61H106KE43L
+CL21A106KAYNNNE
 DESCRIPTION
-Capacitance:10uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X5R
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
 Component Kind
 Standard
 LCSC Part Name
-10uF ±10% 50V
+10uF ±10% 25V
 Supplier Part
-C440198
+C15850
 Manufacturer
-muRata(村田)
+SAMSUNG(三星)
 Manufacturer Part
-GRM21BR61H106KE43L
+CL21A106KAYNNNE
 Supplier Footprint
 0805
 JLCPCB Part Class
 Basic Part
 Datasheet
-https://item.szlcsc.com/datasheet/GRM21BR61H106KE43L/439567.html
+https://atta.szlcsc.com/upload/public/pdf/source/20160103/1457707679302.pdf
 Supplier
 LCSC
 Add into BOM
@@ -4496,28 +5720,26 @@ Value
 10uF
 Tolerance
 ±10%
-Voltage Rating
-50V
+Voltage Rated
+
 Temperature Coefficient
-X5R
+
 Description
-Capacitance:10uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X5R
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
 Symbol
 GRM21BR61H106KE43L
 Designator
 C18
-Name
-10uF
 Device
-GRM21BR61H106KE43L
+CL21A106KAYNNNE
+Unique ID
+gge237
 Reuse Block
 
 Group ID
 
 Channel ID
 
-Unique ID
-gge237
 
 *
 ]
@@ -4527,25 +5749,25 @@ C19
 FOOTPRINT
 C0805
 PARTTYPE
-GRM21BR61H106KE43L
+CL21A106KAYNNNE
 DESCRIPTION
-Capacitance:10uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X5R
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
 Component Kind
 Standard
 LCSC Part Name
-10uF ±10% 50V
+10uF ±10% 25V
 Supplier Part
-C440198
+C15850
 Manufacturer
-muRata(村田)
+SAMSUNG(三星)
 Manufacturer Part
-GRM21BR61H106KE43L
+CL21A106KAYNNNE
 Supplier Footprint
 0805
 JLCPCB Part Class
 Basic Part
 Datasheet
-https://item.szlcsc.com/datasheet/GRM21BR61H106KE43L/439567.html
+https://atta.szlcsc.com/upload/public/pdf/source/20160103/1457707679302.pdf
 Supplier
 LCSC
 Add into BOM
@@ -4558,28 +5780,26 @@ Value
 10uF
 Tolerance
 ±10%
-Voltage Rating
-50V
+Voltage Rated
+
 Temperature Coefficient
-X5R
+
 Description
-Capacitance:10uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X5R
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
 Symbol
 GRM21BR61H106KE43L
 Designator
 C19
-Name
-10uF
 Device
-GRM21BR61H106KE43L
+CL21A106KAYNNNE
+Unique ID
+gge238
 Reuse Block
 
 Group ID
 
 Channel ID
 
-Unique ID
-gge238
 
 *
 ]
@@ -4663,27 +5883,27 @@ gge239
 DESIGNATOR
 C14
 FOOTPRINT
-C1206
+C0805
 PARTTYPE
-CL31B105KBHNNNE
+CL21B105KBFNNNE
 DESCRIPTION
-Capacitance:1uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
 Component Kind
 Standard
 LCSC Part Name
 1uF ±10% 50V
 Supplier Part
-C1848
+C28323
 Manufacturer
 SAMSUNG(三星)
 Manufacturer Part
-CL31B105KBHNNNE
+CL21B105KBFNNNE
 Supplier Footprint
-1206
+0805
 JLCPCB Part Class
 Basic Part
 Datasheet
-https://item.szlcsc.com/datasheet/CL31B105KBHNNNE/2200.html
+https://atta.szlcsc.com/upload/public/pdf/source/20160103/1457707718219.pdf
 Supplier
 LCSC
 Add into BOM
@@ -4691,33 +5911,33 @@ yes
 Convert to PCB
 yes
 3D Model Title
-C1206_L3.2-W1.6-H1.3
+C0805_L2.0-W1.3-H1.3
 Value
 1uF
 Tolerance
 ±10%
-Voltage Rating
-50V
+Voltage Rated
+
 Temperature Coefficient
-X7R
+
 Description
-Capacitance:1uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
 Symbol
 CL31B105KBHNNNE
 Designator
 C14
-Name
-1uF
 Device
-CL31B105KBHNNNE
-Reuse Block
-
-Group ID
-
-Channel ID
-
+CL21B105KBFNNNE
 Unique ID
 gge240
+Name
+1uF
+Reuse Block
+
+Group ID
+
+Channel ID
+
 
 *
 ]
@@ -4727,149 +5947,25 @@ C16
 FOOTPRINT
 C0805
 PARTTYPE
-GRM21BR61H106KE43L
+CL21A106KAYNNNE
 DESCRIPTION
-Capacitance:10uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X5R
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
 Component Kind
 Standard
 LCSC Part Name
-10uF ±10% 50V
+10uF ±10% 25V
 Supplier Part
-C440198
-Manufacturer
-muRata(村田)
-Manufacturer Part
-GRM21BR61H106KE43L
-Supplier Footprint
-0805
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://item.szlcsc.com/datasheet/GRM21BR61H106KE43L/439567.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-C0805_L2.0-W1.3-H1.3
-Value
-10uF
-Tolerance
-±10%
-Voltage Rating
-50V
-Temperature Coefficient
-X5R
-Description
-Capacitance:10uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X5R
-Symbol
-GRM21BR61H106KE43L
-Designator
-C16
-Name
-10uF
-Device
-GRM21BR61H106KE43L
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge242
-
-*
-]
-[
-DESIGNATOR
-C15
-FOOTPRINT
-C0805
-PARTTYPE
-GRM21BR61H106KE43L
-DESCRIPTION
-Capacitance:10uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X5R
-Component Kind
-Standard
-LCSC Part Name
-10uF ±10% 50V
-Supplier Part
-C440198
-Manufacturer
-muRata(村田)
-Manufacturer Part
-GRM21BR61H106KE43L
-Supplier Footprint
-0805
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://item.szlcsc.com/datasheet/GRM21BR61H106KE43L/439567.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-C0805_L2.0-W1.3-H1.3
-Value
-10uF
-Tolerance
-±10%
-Voltage Rating
-50V
-Temperature Coefficient
-X5R
-Description
-Capacitance:10uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X5R
-Symbol
-GRM21BR61H106KE43L
-Designator
-C15
-Name
-10uF
-Device
-GRM21BR61H106KE43L
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge243
-
-*
-]
-[
-DESIGNATOR
-C13
-FOOTPRINT
-C1206
-PARTTYPE
-CL31A106KBHNNNE
-DESCRIPTION
-Capacitance:10uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X5R
-Component Kind
-Standard
-LCSC Part Name
-10uF ±10% 50V
-Supplier Part
-C13585
+C15850
 Manufacturer
 SAMSUNG(三星)
 Manufacturer Part
-CL31A106KBHNNNE
+CL21A106KAYNNNE
 Supplier Footprint
-1206
+0805
 JLCPCB Part Class
 Basic Part
 Datasheet
-https://item.szlcsc.com/datasheet/CL31A106KBHNNNE/14236.html
+https://atta.szlcsc.com/upload/public/pdf/source/20160103/1457707679302.pdf
 Supplier
 LCSC
 Add into BOM
@@ -4877,33 +5973,157 @@ yes
 Convert to PCB
 yes
 3D Model Title
-C1206_L3.2-W1.6-H1.3
-Value
-10uF
+C0805_L2.0-W1.3-H1.3
 Tolerance
 ±10%
-Voltage Rating
-50V
+Voltage Rated
+
 Temperature Coefficient
-X5R
+
+Value
+10uF
 Description
-Capacitance:10uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X5R
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
 Symbol
-CL31A106KBHNNNE
+GRM21BR61H106KE43L
 Designator
-C13
+C16
+Device
+CL21A106KAYNNNE
+Unique ID
+gge242
 Name
 10uF
-Device
-CL31A106KBHNNNE
 Reuse Block
 
 Group ID
 
 Channel ID
 
+
+*
+]
+[
+DESIGNATOR
+C15
+FOOTPRINT
+C0805
+PARTTYPE
+CL21A106KAYNNNE
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Component Kind
+Standard
+LCSC Part Name
+10uF ±10% 25V
+Supplier Part
+C15850
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL21A106KAYNNNE
+Supplier Footprint
+0805
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20160103/1457707679302.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0805_L2.0-W1.3-H1.3
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Value
+10uF
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Symbol
+GRM21BR61H106KE43L
+Designator
+C15
+Device
+CL21A106KAYNNNE
+Unique ID
+gge243
+Name
+10uF
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+C13
+FOOTPRINT
+C0805
+PARTTYPE
+CL21A106KAYNNNE
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Component Kind
+Standard
+LCSC Part Name
+10uF ±10% 25V
+Supplier Part
+C15850
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL21A106KAYNNNE
+Supplier Footprint
+0805
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20160103/1457707679302.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0805_L2.0-W1.3-H1.3
+Value
+10uF
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Symbol
+CL31A106KBHNNNE
+Designator
+C13
+Device
+CL21A106KAYNNNE
 Unique ID
 gge244
+Name
+10uF
+Reuse Block
+
+Group ID
+
+Channel ID
+
 
 *
 ]
@@ -5245,27 +6465,27 @@ Channel ID
 DESIGNATOR
 C23
 FOOTPRINT
-C1206
+C0805
 PARTTYPE
-1206B475K500NT
+CL21A475KAQNNNE
 DESCRIPTION
-Capacitance:4.7uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
 Component Kind
 Standard
 LCSC Part Name
-4.7uF ±10% 50V
+4.7uF ±10% 25V
 Supplier Part
-C29823
+C1779
 Manufacturer
-FH(风华)
+SAMSUNG(三星)
 Manufacturer Part
-1206B475K500NT
+CL21A475KAQNNNE
 Supplier Footprint
-1206
+0805
 JLCPCB Part Class
 Basic Part
 Datasheet
-https://item.szlcsc.com/datasheet/1206B475K500NT/30577.html
+https://atta.szlcsc.com/upload/public/pdf/source/20160103/1457707696447.pdf
 Supplier
 LCSC
 Add into BOM
@@ -5273,33 +6493,31 @@ yes
 Convert to PCB
 yes
 3D Model Title
-C1206_L3.2-W1.6-H1.3
+C0805_L2.0-W1.3-H1.3
 Value
 4.7uF
 Tolerance
 ±10%
-Voltage Rating
-50V
+Voltage Rated
+
 Temperature Coefficient
-X7R
+
 Description
-Capacitance:4.7uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
 Symbol
 1206B475K500NT
 Designator
 C23
-Name
-4.7uF
 Device
-1206B475K500NT
+CL21A475KAQNNNE
+Unique ID
+gge250
 Reuse Block
 
 Group ID
 
 Channel ID
 
-Unique ID
-gge250
 
 *
 ]
@@ -5375,89 +6593,27 @@ gge251
 DESIGNATOR
 C24
 FOOTPRINT
-C1206
-PARTTYPE
-1206B475K500NT
-DESCRIPTION
-Capacitance:4.7uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
-Component Kind
-Standard
-LCSC Part Name
-4.7uF ±10% 50V
-Supplier Part
-C29823
-Manufacturer
-FH(风华)
-Manufacturer Part
-1206B475K500NT
-Supplier Footprint
-1206
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://item.szlcsc.com/datasheet/1206B475K500NT/30577.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-C1206_L3.2-W1.6-H1.3
-Value
-4.7uF
-Tolerance
-±10%
-Voltage Rating
-50V
-Temperature Coefficient
-X7R
-Description
-Capacitance:4.7uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R
-Symbol
-1206B475K500NT
-Designator
-C24
-Name
-4.7uF
-Device
-1206B475K500NT
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge256
-
-*
-]
-[
-DESIGNATOR
-C37
-FOOTPRINT
 C0805
 PARTTYPE
-GRM21BR61H106KE43L
+CL21A475KAQNNNE
 DESCRIPTION
-Capacitance:10uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X5R
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
 Component Kind
 Standard
 LCSC Part Name
-10uF ±10% 50V
+4.7uF ±10% 25V
 Supplier Part
-C440198
+C1779
 Manufacturer
-muRata(村田)
+SAMSUNG(三星)
 Manufacturer Part
-GRM21BR61H106KE43L
+CL21A475KAQNNNE
 Supplier Footprint
 0805
 JLCPCB Part Class
 Basic Part
 Datasheet
-https://item.szlcsc.com/datasheet/GRM21BR61H106KE43L/439567.html
+https://atta.szlcsc.com/upload/public/pdf/source/20160103/1457707696447.pdf
 Supplier
 LCSC
 Add into BOM
@@ -5467,31 +6623,91 @@ yes
 3D Model Title
 C0805_L2.0-W1.3-H1.3
 Value
-10uF
+4.7uF
 Tolerance
 ±10%
-Voltage Rating
-50V
+Voltage Rated
+
 Temperature Coefficient
-X5R
+
 Description
-Capacitance:10uF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X5R
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
 Symbol
-GRM21BR61H106KE43L
+1206B475K500NT
 Designator
-C37
-Name
-10uF
+C24
 Device
-GRM21BR61H106KE43L
+CL21A475KAQNNNE
+Unique ID
+gge256
 Reuse Block
 
 Group ID
 
 Channel ID
 
+
+*
+]
+[
+DESIGNATOR
+C37
+FOOTPRINT
+C0805
+PARTTYPE
+CL21A106KAYNNNE
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Component Kind
+Standard
+LCSC Part Name
+10uF ±10% 25V
+Supplier Part
+C15850
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL21A106KAYNNNE
+Supplier Footprint
+0805
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20160103/1457707679302.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0805_L2.0-W1.3-H1.3
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Value
+10uF
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Symbol
+GRM21BR61H106KE43L
+Designator
+C37
+Device
+CL21A106KAYNNNE
 Unique ID
 gge242_1
+Name
+10uF
+Reuse Block
+
+Group ID
+
+Channel ID
+
 
 *
 ]
@@ -5703,59 +6919,43 @@ gge234_1
 DESIGNATOR
 R42
 FOOTPRINT
-R0402
+R0603
 PARTTYPE
-0402WGF1001TCE
+0603WAF1001T5E
 DESCRIPTION
-Type:Thick Film Resistor Resistance:1kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
+
 Component Kind
 Standard
 LCSC Part Name
-1kΩ ±1% 62.5mW 厚膜电阻
+1KΩ(1001) ±1% 编带
 Supplier Footprint
-0402
+0603
 Datasheet
-https://item.szlcsc.com/datasheet/0402WGF1001TCE/12256.html
+https://atta.szlcsc.com/upload/public/pdf/source/20170920/C21190_1505887441885980538.pdf
 Add into BOM
 yes
 Convert to PCB
 yes
 3D Model Title
-R0402_L1.0-W0.5-H0.4
-Type
-Thick Film Resistor
-Tolerance
-±1%
-Power(Watts)
-62.5mW
-Voltage-Supply(Max)
-50V
-Temperature Coefficient
-±100ppm/℃
-Operating Temperature
--55℃~+155℃
+R0603_L1.6-W0.8-H0.8
+Description
+
 Supplier
 LCSC
 Manufacturer
 UNI-ROYAL(厚声)
 Manufacturer Part
-0402WGF1001TCE
+0603WAF1001T5E
 Supplier Part
-C11702
-Value
-1kΩ
+C21190
 JLCPCB Part Class
 Basic Part
-Description
-Type:Thick Film Resistor Resistance:1kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
 Symbol
 0402WGF1001TCE
 Designator
 R42
-Name
-1kΩ
 Device
-0402WGF1001TCE
+0603WAF1001T5E
 Unique ID
 gge167
 Reuse Block
@@ -5764,538 +6964,6 @@ Group ID
 
 Channel ID
 
-
-*
-]
-[
-DESIGNATOR
-R3
-FOOTPRINT
-R0603
-PARTTYPE
-0603WAF8202T5E
-DESCRIPTION
-Type:Thick Film Resistor Resistance:82kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
-Component Kind
-Standard
-Supplier
-LCSC
-Manufacturer
-UNI-ROYAL(厚声)
-Manufacturer Part
-0603WAF8202T5E
-Supplier Part
-C23254
-Value
-82kΩ
-JLCPCB Part Class
-Basic Part
-LCSC Part Name
-82kΩ ±1% 100mW 厚膜电阻
-Supplier Footprint
-0603
-Datasheet
-https://item.szlcsc.com/datasheet/0603WAF8202T5E/23981.html
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-R0603
-Type
-Thick Film Resistor
-Tolerance
-±1%
-Power(Watts)
-100mW
-Voltage-Supply(Max)
-75V
-Temperature Coefficient
-±100ppm/℃
-Operating Temperature
--55℃~+155℃
-Description
-Type:Thick Film Resistor Resistance:82kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
-Symbol
-0603WAF8202T5E
-Designator
-R3
-Name
-82kΩ
-Device
-0603WAF8202T5E
-Unique ID
-gge258
-Reuse Block
-
-Group ID
-
-Channel ID
-
-
-*
-]
-[
-DESIGNATOR
-TV4
-FOOTPRINT
-SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
-PARTTYPE
-SRV05-4-P-T7_C85364
-DESCRIPTION
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Component Kind
-Standard
-LCSC Part Name
-SRV05-4-P-T7
-Supplier Part
-C85364
-Manufacturer
-PROTEK
-Manufacturer Part
-SRV05-4-P-T7
-Supplier Footprint
-SOT-23-6
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
-Reverse Stand-Off Voltage (Vrwm)
-5V
-Clamping Voltage
-12V
-Peak Pulse Current (Ipp)
-1A@8/20us
-Voltage - Breakdown
-6V
-Type
-TVS
-Description
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Symbol
-SRV05-4-P-T7
-Designator
-TV4
-Name
-SRV05-4-P-T7
-Device
-SRV05-4-P-T7_C85364
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge169_2
-
-*
-]
-[
-DESIGNATOR
-U5
-FOOTPRINT
-SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
-PARTTYPE
-TPS2553DBVR
-DESCRIPTION
-Type:High Side Switch Number of Channels:1 Control Input Logic:Active High Maximum Continuous Current:1.5A Voltage - Supply:2.5V~6.5V Voltage - Supply:2.5V~6.5V RDS(on):85mΩ Operating Temperature	-:-40℃~+150℃ Operating Temperature	-:-40℃~+150℃ Features:Ov
-Component Kind
-Standard
-LCSC Part Name
-精密可调限流电源分配开关
-Supplier Part
-C55266
-Manufacturer
-TI(德州仪器)
-Manufacturer Part
-TPS2553DBVR
-Supplier Footprint
-SOT-23-6
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://www.ti.com/cn/lit/gpn/tps2553
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
-Type
-High Side Switch
-Number of Channels
-1
-Control Input Logic
-Active High
-Maximum Continuous Current
-1.5A
-Voltage - Supply
-2.5V~6.5V
-RDS(on)
-85mΩ
-Operating Temperature	-
--40℃~+150℃
-Features
-Overtemperature protection (OTP)；Overcurrent Protection(OCP)
-Description
-Type:High Side Switch Number of Channels:1 Control Input Logic:Active High Maximum Continuous Current:1.5A Voltage - Supply:2.5V~6.5V Voltage - Supply:2.5V~6.5V RDS(on):85mΩ Operating Temperature	-:-40℃~+150℃ Operating Temperature	-:-40℃~+150℃ Features:Ov
-Symbol
-TPS2553DBVR
-Designator
-U5
-Name
-TPS2553DBVR
-Device
-TPS2553DBVR
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge259
-
-*
-]
-[
-DESIGNATOR
-TV3
-FOOTPRINT
-SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
-PARTTYPE
-SRV05-4-P-T7_C85364
-DESCRIPTION
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Component Kind
-Standard
-LCSC Part Name
-SRV05-4-P-T7
-Supplier Part
-C85364
-Manufacturer
-PROTEK
-Manufacturer Part
-SRV05-4-P-T7
-Supplier Footprint
-SOT-23-6
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
-Reverse Stand-Off Voltage (Vrwm)
-5V
-Clamping Voltage
-12V
-Peak Pulse Current (Ipp)
-1A@8/20us
-Voltage - Breakdown
-6V
-Type
-TVS
-Description
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Symbol
-SRV05-4-P-T7
-Designator
-TV3
-Name
-SRV05-4-P-T7
-Device
-SRV05-4-P-T7_C85364
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge169_1
-
-*
-]
-[
-DESIGNATOR
-TV2
-FOOTPRINT
-SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
-PARTTYPE
-SRV05-4-P-T7_C85364
-DESCRIPTION
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Component Kind
-Standard
-LCSC Part Name
-SRV05-4-P-T7
-Supplier Part
-C85364
-Manufacturer
-PROTEK
-Manufacturer Part
-SRV05-4-P-T7
-Supplier Footprint
-SOT-23-6
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
-Reverse Stand-Off Voltage (Vrwm)
-5V
-Clamping Voltage
-12V
-Peak Pulse Current (Ipp)
-1A@8/20us
-Voltage - Breakdown
-6V
-Type
-TVS
-Description
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Symbol
-SRV05-4-P-T7
-Designator
-TV2
-Name
-SRV05-4-P-T7
-Device
-SRV05-4-P-T7_C85364
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge169_4
-
-*
-]
-[
-DESIGNATOR
-TV1
-FOOTPRINT
-SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
-PARTTYPE
-SRV05-4-P-T7_C85364
-DESCRIPTION
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Component Kind
-Standard
-LCSC Part Name
-SRV05-4-P-T7
-Supplier Part
-C85364
-Manufacturer
-PROTEK
-Manufacturer Part
-SRV05-4-P-T7
-Supplier Footprint
-SOT-23-6
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20161024/1477288764689.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
-Reverse Stand-Off Voltage (Vrwm)
-5V
-Clamping Voltage
-12V
-Peak Pulse Current (Ipp)
-1A@8/20us
-Voltage - Breakdown
-6V
-Type
-TVS
-Description
-Reverse Stand-Off Voltage (Vrwm):5V Clamping Voltage:12V Peak Pulse Current (Ipp):1A@8/20us Voltage - Breakdown:6V Type:TVS
-Symbol
-SRV05-4-P-T7
-Designator
-TV1
-Name
-SRV05-4-P-T7
-Device
-SRV05-4-P-T7_C85364
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge169_3
-
-*
-]
-[
-DESIGNATOR
-R1
-FOOTPRINT
-R0603
-PARTTYPE
-0603WAF8202T5E
-DESCRIPTION
-Type:Thick Film Resistor Resistance:82kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
-Component Kind
-Standard
-Supplier
-LCSC
-Manufacturer
-UNI-ROYAL(厚声)
-Manufacturer Part
-0603WAF8202T5E
-Supplier Part
-C23254
-Value
-82kΩ
-JLCPCB Part Class
-Basic Part
-LCSC Part Name
-82kΩ ±1% 100mW 厚膜电阻
-Supplier Footprint
-0603
-Datasheet
-https://item.szlcsc.com/datasheet/0603WAF8202T5E/23981.html
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-R0603
-Type
-Thick Film Resistor
-Tolerance
-±1%
-Power(Watts)
-100mW
-Voltage-Supply(Max)
-75V
-Temperature Coefficient
-±100ppm/℃
-Operating Temperature
--55℃~+155℃
-Description
-Type:Thick Film Resistor Resistance:82kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
-Symbol
-0603WAF8202T5E
-Designator
-R1
-Name
-82kΩ
-Device
-0603WAF8202T5E
-Unique ID
-gge260
-Reuse Block
-
-Group ID
-
-Channel ID
-
-
-*
-]
-[
-DESIGNATOR
-U3
-FOOTPRINT
-SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
-PARTTYPE
-TPS2553DBVR
-DESCRIPTION
-Type:High Side Switch Number of Channels:1 Control Input Logic:Active High Maximum Continuous Current:1.5A Voltage - Supply:2.5V~6.5V Voltage - Supply:2.5V~6.5V RDS(on):85mΩ Operating Temperature	-:-40℃~+150℃ Operating Temperature	-:-40℃~+150℃ Features:Ov
-Component Kind
-Standard
-LCSC Part Name
-精密可调限流电源分配开关
-Supplier Part
-C55266
-Manufacturer
-TI(德州仪器)
-Manufacturer Part
-TPS2553DBVR
-Supplier Footprint
-SOT-23-6
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://www.ti.com/cn/lit/gpn/tps2553
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-SOT-23-6_L2.9-W1.6-H1.5-LS2.8-P0.95
-Type
-High Side Switch
-Number of Channels
-1
-Control Input Logic
-Active High
-Maximum Continuous Current
-1.5A
-Voltage - Supply
-2.5V~6.5V
-RDS(on)
-85mΩ
-Operating Temperature	-
--40℃~+150℃
-Features
-Overtemperature protection (OTP)；Overcurrent Protection(OCP)
-Description
-Type:High Side Switch Number of Channels:1 Control Input Logic:Active High Maximum Continuous Current:1.5A Voltage - Supply:2.5V~6.5V Voltage - Supply:2.5V~6.5V RDS(on):85mΩ Operating Temperature	-:-40℃~+150℃ Operating Temperature	-:-40℃~+150℃ Features:Ov
-Symbol
-TPS2553DBVR
-Designator
-U3
-Name
-TPS2553DBVR
-Device
-TPS2553DBVR
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge261
 
 *
 ]
@@ -7087,622 +7755,6 @@ gge253
 ]
 [
 DESIGNATOR
-C3
-FOOTPRINT
-C0603
-PARTTYPE
-CL10A105KB8NNNC
-DESCRIPTION
-Temperature Coefficient: Tolerance: Tolerance: Voltage Rated: Capacitance: 
-Component Kind
-Standard
-LCSC Part Name
-1uF(105) ±10% 50V
-Supplier Part
-C15849
-Manufacturer
-SAMSUNG(三星)
-Manufacturer Part
-CL10A105KB8NNNC
-Supplier Footprint
-0603
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20160103/1457707679084.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-C0603_L1.6-W0.8-H0.8
-Temperature Coefficient
-
-Tolerance
-
-Voltage Rated
-
-Value
-1uF
-Description
-Temperature Coefficient: Tolerance: Tolerance: Voltage Rated: Capacitance: 
-Symbol
-CL31B105KBHNNNE
-Designator
-C3
-Device
-CL10A105KB8NNNC
-Unique ID
-gge240_1
-Reuse Block
-
-Group ID
-
-Channel ID
-
-
-*
-]
-[
-DESIGNATOR
-C5
-FOOTPRINT
-C0603
-PARTTYPE
-CL10A105KB8NNNC
-DESCRIPTION
-Temperature Coefficient: Tolerance: Tolerance: Voltage Rated: Capacitance: 
-Component Kind
-Standard
-LCSC Part Name
-1uF(105) ±10% 50V
-Supplier Part
-C15849
-Manufacturer
-SAMSUNG(三星)
-Manufacturer Part
-CL10A105KB8NNNC
-Supplier Footprint
-0603
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20160103/1457707679084.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-C0603_L1.6-W0.8-H0.8
-Temperature Coefficient
-
-Tolerance
-
-Voltage Rated
-
-Value
-1uF
-Description
-Temperature Coefficient: Tolerance: Tolerance: Voltage Rated: Capacitance: 
-Symbol
-CL31B105KBHNNNE
-Designator
-C5
-Device
-CL10A105KB8NNNC
-Unique ID
-gge240_2
-Reuse Block
-
-Group ID
-
-Channel ID
-
-
-*
-]
-[
-DESIGNATOR
-R2
-FOOTPRINT
-R0603
-PARTTYPE
-0603WAF1003T5E
-DESCRIPTION
-Type:Thick Film Resistor Resistance:100kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
-Component Kind
-Standard
-LCSC Part Name
-100kΩ ±1% 100mW 厚膜电阻
-Supplier Part
-C25803
-Manufacturer
-UNI-ROYAL(厚声)
-Manufacturer Part
-0603WAF1003T5E
-Supplier Footprint
-0603
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://item.szlcsc.com/datasheet/0603WAF1003T5E/26546.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-R0603
-Type
-Thick Film Resistor
-Value
-100kΩ
-Tolerance
-±1%
-Power(Watts)
-100mW
-Voltage-Supply(Max)
-75V
-Temperature Coefficient
-±100ppm/℃
-Operating Temperature
--55℃~+155℃
-Description
-Type:Thick Film Resistor Resistance:100kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
-Symbol
-0603WAF1003T5E
-Designator
-R2
-Name
-100kΩ
-Device
-0603WAF1003T5E
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge262
-
-*
-]
-[
-DESIGNATOR
-R4
-FOOTPRINT
-R0603
-PARTTYPE
-0603WAF1003T5E
-DESCRIPTION
-Type:Thick Film Resistor Resistance:100kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
-Component Kind
-Standard
-LCSC Part Name
-100kΩ ±1% 100mW 厚膜电阻
-Supplier Part
-C25803
-Manufacturer
-UNI-ROYAL(厚声)
-Manufacturer Part
-0603WAF1003T5E
-Supplier Footprint
-0603
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://item.szlcsc.com/datasheet/0603WAF1003T5E/26546.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-R0603
-Type
-Thick Film Resistor
-Value
-100kΩ
-Tolerance
-±1%
-Power(Watts)
-100mW
-Voltage-Supply(Max)
-75V
-Temperature Coefficient
-±100ppm/℃
-Operating Temperature
--55℃~+155℃
-Description
-Type:Thick Film Resistor Resistance:100kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
-Symbol
-0603WAF1003T5E
-Designator
-R4
-Name
-100kΩ
-Device
-0603WAF1003T5E
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge263
-
-*
-]
-[
-DESIGNATOR
-U2
-FOOTPRINT
-TSSOP-14_L5.0-W4.4-P0.65-LS6.4-BL
-PARTTYPE
-SN74LVC125AQPWRQ1
-DESCRIPTION
-Input type:- output type:Tri-State Voltage - Supply:1.65V~3.6V Voltage - Supply:1.65V~3.6V Number of Elements:4 Number of Bits per Element:1 Channel Type:- Current - Output Low(IOL):24mA Current - Output High(IOH):24mA Logic Family:74LVC Operating Tempera
-Component Kind
-Standard
-LCSC Part Name
-三态输出，四路总线缓冲门
-Supplier Part
-C134144
-Manufacturer
-TI(德州仪器)
-Manufacturer Part
-SN74LVC125AQPWRQ1
-Supplier Footprint
-TSSOP-14
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://www.ti.com/cn/lit/gpn/sn74lvc125a-q1
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-TSSOP-14_L5.0-W4.4-H1.0-LS6.4-P0.65
-Input type
--
-output type
-Tri-State
-Voltage - Supply
-1.65V~3.6V
-Number of Elements
-4
-Number of Bits per Element
-1
-Channel Type
--
-Current - Output Low(IOL)
-24mA
-Current - Output High(IOH)
-24mA
-Logic Family
-74LVC
-Operating Temperature
--40℃~+125℃
-Quiescent Current
-20uA
-Propagation Delay
-2.5ns@3.3V,50pF
-Description
-Input type:- output type:Tri-State Voltage - Supply:1.65V~3.6V Voltage - Supply:1.65V~3.6V Number of Elements:4 Number of Bits per Element:1 Channel Type:- Current - Output Low(IOL):24mA Current - Output High(IOH):24mA Logic Family:74LVC Operating Tempera
-Symbol
-SN74LVC125AQPWRQ1
-Designator
-U2
-Name
-SN74LVC125AQPWRQ1
-Device
-SN74LVC125AQPWRQ1
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge264
-
-*
-]
-[
-DESIGNATOR
-U4
-FOOTPRINT
-TSSOP-14_L5.0-W4.4-P0.65-LS6.4-BL
-PARTTYPE
-SN74LVC125AQPWRQ1
-DESCRIPTION
-Input type:- output type:Tri-State Voltage - Supply:1.65V~3.6V Voltage - Supply:1.65V~3.6V Number of Elements:4 Number of Bits per Element:1 Channel Type:- Current - Output Low(IOL):24mA Current - Output High(IOH):24mA Logic Family:74LVC Operating Tempera
-Component Kind
-Standard
-LCSC Part Name
-三态输出，四路总线缓冲门
-Supplier Part
-C134144
-Manufacturer
-TI(德州仪器)
-Manufacturer Part
-SN74LVC125AQPWRQ1
-Supplier Footprint
-TSSOP-14
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://www.ti.com/cn/lit/gpn/sn74lvc125a-q1
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-TSSOP-14_L5.0-W4.4-H1.0-LS6.4-P0.65
-Input type
--
-output type
-Tri-State
-Voltage - Supply
-1.65V~3.6V
-Number of Elements
-4
-Number of Bits per Element
-1
-Channel Type
--
-Current - Output Low(IOL)
-24mA
-Current - Output High(IOH)
-24mA
-Logic Family
-74LVC
-Operating Temperature
--40℃~+125℃
-Quiescent Current
-20uA
-Propagation Delay
-2.5ns@3.3V,50pF
-Description
-Input type:- output type:Tri-State Voltage - Supply:1.65V~3.6V Voltage - Supply:1.65V~3.6V Number of Elements:4 Number of Bits per Element:1 Channel Type:- Current - Output Low(IOL):24mA Current - Output High(IOH):24mA Logic Family:74LVC Operating Tempera
-Symbol
-SN74LVC125AQPWRQ1
-Designator
-U4
-Name
-SN74LVC125AQPWRQ1
-Device
-SN74LVC125AQPWRQ1
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge265
-
-*
-]
-[
-DESIGNATOR
-C2
-FOOTPRINT
-C0402
-PARTTYPE
-CL05B104KO5NNNC
-DESCRIPTION
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
-Component Kind
-Standard
-LCSC Part Name
-100nF ±10% 16V
-Supplier Part
-C1525
-Manufacturer
-SAMSUNG(三星)
-Manufacturer Part
-CL05B104KO5NNNC
-Supplier Footprint
-0402
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-C0402_L1.0-W0.5-H0.5
-Value
-100nF
-Tolerance
-±10%
-Voltage Rated
-
-Temperature Coefficient
-
-Description
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
-Symbol
-CL05B104KO5NNNC
-Designator
-C2
-Name
-100nF
-Device
-CL05B104KO5NNNC
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge49
-
-*
-]
-[
-DESIGNATOR
-C4
-FOOTPRINT
-C0402
-PARTTYPE
-CL05B104KO5NNNC
-DESCRIPTION
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
-Component Kind
-Standard
-LCSC Part Name
-100nF ±10% 16V
-Supplier Part
-C1525
-Manufacturer
-SAMSUNG(三星)
-Manufacturer Part
-CL05B104KO5NNNC
-Supplier Footprint
-0402
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-C0402_L1.0-W0.5-H0.5
-Value
-100nF
-Tolerance
-±10%
-Voltage Rated
-
-Temperature Coefficient
-
-Description
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
-Symbol
-CL05B104KO5NNNC
-Designator
-C4
-Name
-100nF
-Device
-CL05B104KO5NNNC
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge49_1
-
-*
-]
-[
-DESIGNATOR
-CN2
-FOOTPRINT
-CONN-SMD_10P-P2.54_72454-010VLF
-PARTTYPE
-72454-010VLF
-DESCRIPTION
-Pins Structure:2x5P Pitch:2.54mm Mounting Type:Surface Mount,Vertical Reference Series:- Number of Pins:10P Number of Rows:2 Number of PINs Per Row:5 Row Spacing:2.54mm Current Rating:1A Contact Material:Phosphor Bronze Contact Plating:Tin Operating Tempe
-Component Kind
-Standard
-LCSC Part Name
-2x5P 间距:2.54mm 立贴
-Supplier Part
-C236047
-Manufacturer
-Amphenol
-Manufacturer Part
-72454-010VLF
-Supplier Footprint
-SMD,P=2.54mm
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://item.szlcsc.com/datasheet/72454-010VLF/235722.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-CONN-SMD_2x5P-L20.1-W8.8-H12.8-P2.54
-Pins Structure
-2x5P
-Pitch
-2.54mm
-Mounting Type
-Surface Mount,Vertical
-Reference Series
--
-Number of Pins
-10P
-Number of Rows
-2
-Number of PINs Per Row
-5
-Row Spacing
-2.54mm
-Current Rating
-1A
-Contact Material
-Phosphor Bronze
-Contact Plating
-Tin
-Operating Temperature
--65℃~+105℃
-Description
-Pins Structure:2x5P Pitch:2.54mm Mounting Type:Surface Mount,Vertical Reference Series:- Number of Pins:10P Number of Rows:2 Number of PINs Per Row:5 Row Spacing:2.54mm Current Rating:1A Contact Material:Phosphor Bronze Contact Plating:Tin Operating Tempe
-Symbol
-72454-010VLF
-Designator
-CN2
-Name
-72454-010VLF
-Device
-72454-010VLF
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge268
-Comment
-RIGHT_WING_CONNECTOR
-
-*
-]
-[
-DESIGNATOR
 CN3
 FOOTPRINT
 TC2070_Landing_Pattern
@@ -7739,86 +7791,6 @@ gge271
 
 *
 ]
-[
-DESIGNATOR
-CN1
-FOOTPRINT
-CONN-SMD_10P-P2.54_72454-010VLF
-PARTTYPE
-72454-010VLF
-DESCRIPTION
-Pins Structure:2x5P Pitch:2.54mm Mounting Type:Surface Mount,Vertical Reference Series:- Number of Pins:10P Number of Rows:2 Number of PINs Per Row:5 Row Spacing:2.54mm Current Rating:1A Contact Material:Phosphor Bronze Contact Plating:Tin Operating Tempe
-Component Kind
-Standard
-LCSC Part Name
-2x5P 间距:2.54mm 立贴
-Supplier Part
-C236047
-Manufacturer
-Amphenol
-Manufacturer Part
-72454-010VLF
-Supplier Footprint
-SMD,P=2.54mm
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://item.szlcsc.com/datasheet/72454-010VLF/235722.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-CONN-SMD_2x5P-L20.1-W8.8-H12.8-P2.54
-Pins Structure
-2x5P
-Pitch
-2.54mm
-Mounting Type
-Surface Mount,Vertical
-Reference Series
--
-Number of Pins
-10P
-Number of Rows
-2
-Number of PINs Per Row
-5
-Row Spacing
-2.54mm
-Current Rating
-1A
-Contact Material
-Phosphor Bronze
-Contact Plating
-Tin
-Operating Temperature
--65℃~+105℃
-Description
-Pins Structure:2x5P Pitch:2.54mm Mounting Type:Surface Mount,Vertical Reference Series:- Number of Pins:10P Number of Rows:2 Number of PINs Per Row:5 Row Spacing:2.54mm Current Rating:1A Contact Material:Phosphor Bronze Contact Plating:Tin Operating Tempe
-Symbol
-72454-010VLF
-Designator
-CN1
-Name
-72454-010VLF
-Device
-72454-010VLF
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge268_1
-Comment
-LEFT_WING_CONNECTOR
-
-*
-]
 (
 $1N34230 
 SW1-2 TS-1088-AR02016-2 Passive 
@@ -7846,6 +7818,34 @@ D5-1 H5VND5BA-1 Passive
 SW5-1 TS-1088-AR02016-1 Passive 
 C47-2 CC0603KRX7R9BB104-2 Passive 
 D9-1 H5VND5BA-1 Passive 
+U3-2 TPS2553DBVR-GND Passive 
+R1-2 0603WAF8202T5E-2 Input   
+U2-1 SN74LVC125AQPWRQ1-1OE# Passive 
+U2-4 SN74LVC125AQPWRQ1-2OE# Passive 
+U2-7 SN74LVC125AQPWRQ1-GND Passive 
+U2-10 SN74LVC125AQPWRQ1-3OE# Passive 
+U2-13 SN74LVC125AQPWRQ1-4OE# Passive 
+C3-1 CL10A105KB8NNNC-1 Passive 
+C2-2 CC0603KRX7R9BB104-2 Input   
+TV1-2 SRV05-4-P-T7_C85364-2 Input   
+TV2-2 SRV05-4-P-T7_C85364-2 Input   
+CN1-3 72454-010VLF-3 Passive 
+CN1-5 72454-010VLF-5 Passive 
+CN1-7 72454-010VLF-7 Passive 
+U4-2 TPS2553DBVR-GND Passive 
+R4-2 0603WAF8202T5E-2 Input   
+U5-1 SN74LVC125AQPWRQ1-1OE# Passive 
+U5-4 SN74LVC125AQPWRQ1-2OE# Passive 
+U5-7 SN74LVC125AQPWRQ1-GND Passive 
+U5-10 SN74LVC125AQPWRQ1-3OE# Passive 
+U5-13 SN74LVC125AQPWRQ1-4OE# Passive 
+C5-1 CL10A105KB8NNNC-1 Passive 
+C4-2 CC0603KRX7R9BB104-2 Input   
+TV3-2 SRV05-4-P-T7_C85364-2 Input   
+TV4-2 SRV05-4-P-T7_C85364-2 Input   
+CN2-3 72454-010VLF-3 Passive 
+CN2-5 72454-010VLF-5 Passive 
+CN2-7 72454-010VLF-7 Passive 
 U1-5 STM32WB5MMGH6TR-VSS Passive 
 U1-16 STM32WB5MMGH6TR-VSS Passive 
 U1-31 STM32WB5MMGH6TR-VSS Passive 
@@ -7879,30 +7879,22 @@ BAT-5 S3B-XH-SM4-TB(LF)(SN)_C5306495-5 Passive
 BAT-4 S3B-XH-SM4-TB(LF)(SN)_C5306495-4 Passive 
 BAT-3 S3B-XH-SM4-TB(LF)(SN)_C5306495-3 Passive 
 R15-1 0603WAF3002T5E-1 Input   
-C18-2 GRM21BR61H106KE43L-2 Passive 
-C19-2 GRM21BR61H106KE43L-2 Passive 
+C18-2 CL21A106KAYNNNE-2 Passive 
+C19-2 CL21A106KAYNNNE-2 Passive 
 U47-8 BQ25895RTWR-OTG Input   
 U47-17 BQ25895RTWR-PGND Input   
 U47-18 BQ25895RTWR-PGND Input   
-C14-2 CL31B105KBHNNNE-2 Passive 
-C16-1 GRM21BR61H106KE43L-1 Passive 
-C15-1 GRM21BR61H106KE43L-1 Passive 
-C13-1 CL31A106KBHNNNE-1 Input   
+C14-2 CL21B105KBFNNNE-2 Passive 
+C16-1 CL21A106KAYNNNE-1 Passive 
+C15-1 CL21A106KAYNNNE-1 Passive 
+C13-1 CL21A106KAYNNNE-1 Input   
 R16-1 0603WAF100JT5E-1 Input   
 U55-2 TLV75533PDBVR-GND Passive 
 C21-1 CL10A105KB8NNNC-1 Passive 
 C22-1 CL10A105KB8NNNC-1 Passive 
-C23-1 1206B475K500NT-1 Input   
-C24-1 1206B475K500NT-1 Input   
-C37-1 GRM21BR61H106KE43L-1 Passive 
-R3-2 0603WAF8202T5E-2 Input   
-TV4-2 SRV05-4-P-T7_C85364-2 Input   
-U5-2 TPS2553DBVR-GND Passive 
-TV3-2 SRV05-4-P-T7_C85364-2 Input   
-TV2-2 SRV05-4-P-T7_C85364-2 Input   
-TV1-2 SRV05-4-P-T7_C85364-2 Input   
-R1-2 0603WAF8202T5E-2 Input   
-U3-2 TPS2553DBVR-GND Passive 
+C23-1 CL21A475KAQNNNE-1 Input   
+C24-1 CL21A475KAQNNNE-1 Input   
+C37-1 CL21A106KAYNNNE-1 Passive 
 TV5-2 SRV05-4-P-T7_C85364-2 Input   
 TV6-2 SRV05-4-P-T7_C85364-2 Input   
 TV7-2 SRV05-4-P-T7_C85364-2 Input   
@@ -7911,28 +7903,8 @@ USB1-4 HC-TYPE-B-2.0-VS15-1.5A-15-GND Passive
 USB1-5 HC-TYPE-B-2.0-VS15-1.5A-15-GND Passive 
 USB1-6 HC-TYPE-B-2.0-VS15-1.5A-15-GND Passive 
 D6-1 SMBJ13A_C10209-A Input   
-C3-1 CL10A105KB8NNNC-1 Passive 
-C5-1 CL10A105KB8NNNC-1 Passive 
-U2-1 SN74LVC125AQPWRQ1-1OE# Passive 
-U2-4 SN74LVC125AQPWRQ1-2OE# Passive 
-U2-7 SN74LVC125AQPWRQ1-GND Passive 
-U2-10 SN74LVC125AQPWRQ1-3OE# Passive 
-U2-13 SN74LVC125AQPWRQ1-4OE# Passive 
-U4-1 SN74LVC125AQPWRQ1-1OE# Passive 
-U4-4 SN74LVC125AQPWRQ1-2OE# Passive 
-U4-7 SN74LVC125AQPWRQ1-GND Passive 
-U4-10 SN74LVC125AQPWRQ1-3OE# Passive 
-U4-13 SN74LVC125AQPWRQ1-4OE# Passive 
-C2-1 CL05B104KO5NNNC-1 Passive 
-C4-1 CL05B104KO5NNNC-1 Passive 
-CN2-3 72454-010VLF-3 Passive 
-CN2-5 72454-010VLF-5 Passive 
-CN2-7 72454-010VLF-7 Passive 
 CN3-5 STDC14_Connector-GND Input   
 CN3-7 STDC14_Connector-GND Input   
-CN1-3 72454-010VLF-3 Passive 
-CN1-5 72454-010VLF-5 Passive 
-CN1-7 72454-010VLF-7 Passive 
 )
 (
 $1N16140 
@@ -7971,25 +7943,13 @@ D9-2 H5VND5BA-2 Passive
 U1-75 STM32WB5MMGH6TR-PD8 Passive 
 )
 (
-L_NRST 
-U1-1 STM32WB5MMGH6TR-PA2 Passive 
-U54-2 BAT54C_C22466350-A Passive 
-TV2-4 SRV05-4-P-T7_C85364-4 Input   
-CN1-9 72454-010VLF-9 Passive 
-)
-(
-L_SPI_SCK 
-U1-2 STM32WB5MMGH6TR-PA1 Passive 
-U2-2 SN74LVC125AQPWRQ1-1A Passive 
-)
-(
-L_READY 
-U1-3 STM32WB5MMGH6TR-PA0 Passive 
-TV2-3 SRV05-4-P-T7_C85364-3 Input   
-CN1-10 72454-010VLF-10 Passive 
-)
-(
 VCC 
+U3-1 TPS2553DBVR-IN Passive 
+R2-1 0603WAF1003T5E-1 Input   
+C3-2 CL10A105KB8NNNC-2 Passive 
+U4-1 TPS2553DBVR-IN Passive 
+R3-1 0603WAF1003T5E-1 Input   
+C5-2 CL10A105KB8NNNC-2 Passive 
 U1-4 STM32WB5MMGH6TR-VREF+ Passive 
 U1-6 STM32WB5MMGH6TR-VDDA Passive 
 U1-15 STM32WB5MMGH6TR-VBAT Passive 
@@ -8002,12 +7962,10 @@ U57-1 SC4015SO-N-TR-VDD Passive
 U58-1 SC4015SO-N-TR-VDD Passive 
 U55-5 TLV75533PDBVR-OUT Passive 
 C22-2 CL10A105KB8NNNC-2 Passive 
-C23-2 1206B475K500NT-2 Input   
+C23-2 CL21A475KAQNNNE-2 Input   
 R33-1 0603WAF4701T5E-1 Input   
 R32-1 0603WAF4701T5E-1 Input   
 R34-2 0603WAF1002T5E-2 Input   
-U5-1 TPS2553DBVR-IN Passive 
-U3-1 TPS2553DBVR-IN Passive 
 TV5-5 SRV05-4-P-T7_C85364-5 Input   
 TV6-5 SRV05-4-P-T7_C85364-5 Input   
 TV7-5 SRV05-4-P-T7_C85364-5 Input   
@@ -8015,11 +7973,167 @@ EXPR_PEDAL1-4 PJ-603A-4 Input
 SUS_PEDAL1-4 PJ-603A-4 Input   
 C6-1 CC0603KRX7R9BB104-1 Input   
 C7-1 CC0603KRX7R9BB104-1 Passive 
-C3-2 CL10A105KB8NNNC-2 Passive 
-C5-2 CL10A105KB8NNNC-2 Passive 
-R2-1 0603WAF1003T5E-1 Input   
-R4-1 0603WAF1003T5E-1 Input   
 CN3-3 STDC14_Connector-T_VCC Input   
+)
+(
+$4I14963\L_EN 
+U3-3 TPS2553DBVR-EN Passive 
+)
+(
+$4I14963\L_NFAULT 
+U3-4 TPS2553DBVR-/FAULT Passive 
+R2-2 0603WAF1003T5E-2 Input   
+)
+(
+$4I14963\$1N407 
+U3-5 TPS2553DBVR-ILIM Passive 
+R1-1 0603WAF8202T5E-1 Input   
+)
+(
+$4I14963\VDD_P 
+U3-6 TPS2553DBVR-OUT Passive 
+U2-14 SN74LVC125AQPWRQ1-VCC Passive 
+C2-1 CC0603KRX7R9BB104-1 Input   
+TV1-5 SRV05-4-P-T7_C85364-5 Input   
+TV2-5 SRV05-4-P-T7_C85364-5 Input   
+CN1-1 72454-010VLF-1 Passive 
+)
+(
+L_SPI_SCK 
+U2-2 SN74LVC125AQPWRQ1-1A Passive 
+U1-2 STM32WB5MMGH6TR-PA1 Passive 
+)
+(
+$4I14963\SPI_SCK_P 
+U2-3 SN74LVC125AQPWRQ1-1Y Passive 
+TV1-4 SRV05-4-P-T7_C85364-4 Input   
+CN1-6 72454-010VLF-6 Passive 
+)
+(
+L_SPI_NSS 
+U2-5 SN74LVC125AQPWRQ1-2A Passive 
+U1-27 STM32WB5MMGH6TR-PA15 Passive 
+)
+(
+$4I14963\SPI_NSS_P 
+U2-6 SN74LVC125AQPWRQ1-2Y Passive 
+TV2-1 SRV05-4-P-T7_C85364-1 Input   
+CN1-8 72454-010VLF-8 Passive 
+)
+(
+$4I14963\SPI_MOSI_P 
+U2-8 SN74LVC125AQPWRQ1-3Y Passive 
+TV1-1 SRV05-4-P-T7_C85364-1 Input   
+CN1-2 72454-010VLF-2 Passive 
+)
+(
+L_SPI_MOSI 
+U2-9 SN74LVC125AQPWRQ1-3A Passive 
+U1-19 STM32WB5MMGH6TR-PB5 Passive 
+)
+(
+L_SPI_MISO 
+U2-11 SN74LVC125AQPWRQ1-4Y Passive 
+U1-20 STM32WB5MMGH6TR-PB4 Passive 
+)
+(
+$4I14963\SPI_MISO_P 
+U2-12 SN74LVC125AQPWRQ1-4A Passive 
+TV1-3 SRV05-4-P-T7_C85364-3 Input   
+CN1-4 72454-010VLF-4 Passive 
+)
+(
+L_READY 
+TV2-3 SRV05-4-P-T7_C85364-3 Input   
+CN1-10 72454-010VLF-10 Passive 
+U1-3 STM32WB5MMGH6TR-PA0 Passive 
+)
+(
+L_NRST 
+TV2-4 SRV05-4-P-T7_C85364-4 Input   
+CN1-9 72454-010VLF-9 Passive 
+U1-1 STM32WB5MMGH6TR-PA2 Passive 
+U54-2 BAT54C_C22466350-A Passive 
+)
+(
+$4I16422\L_EN 
+U4-3 TPS2553DBVR-EN Passive 
+)
+(
+$4I16422\L_NFAULT 
+U4-4 TPS2553DBVR-/FAULT Passive 
+R3-2 0603WAF1003T5E-2 Input   
+)
+(
+$4I16422\$1N407 
+U4-5 TPS2553DBVR-ILIM Passive 
+R4-1 0603WAF8202T5E-1 Input   
+)
+(
+$4I16422\VDD_P 
+U4-6 TPS2553DBVR-OUT Passive 
+U5-14 SN74LVC125AQPWRQ1-VCC Passive 
+C4-1 CC0603KRX7R9BB104-1 Input   
+TV3-5 SRV05-4-P-T7_C85364-5 Input   
+TV4-5 SRV05-4-P-T7_C85364-5 Input   
+CN2-1 72454-010VLF-1 Passive 
+)
+(
+R_SPI_SCK 
+U5-2 SN74LVC125AQPWRQ1-1A Passive 
+U1-34 STM32WB5MMGH6TR-PD1 Passive 
+)
+(
+$4I16422\SPI_SCK_P 
+U5-3 SN74LVC125AQPWRQ1-1Y Passive 
+TV3-4 SRV05-4-P-T7_C85364-4 Input   
+CN2-6 72454-010VLF-6 Passive 
+)
+(
+R_SPI_NSS 
+U5-5 SN74LVC125AQPWRQ1-2A Passive 
+U1-33 STM32WB5MMGH6TR-PD0 Passive 
+)
+(
+$4I16422\SPI_NSS_P 
+U5-6 SN74LVC125AQPWRQ1-2Y Passive 
+TV4-1 SRV05-4-P-T7_C85364-1 Input   
+CN2-8 72454-010VLF-8 Passive 
+)
+(
+$4I16422\SPI_MOSI_P 
+U5-8 SN74LVC125AQPWRQ1-3Y Passive 
+TV3-1 SRV05-4-P-T7_C85364-1 Input   
+CN2-2 72454-010VLF-2 Passive 
+)
+(
+R_SPI_MOSI 
+U5-9 SN74LVC125AQPWRQ1-3A Passive 
+U1-73 STM32WB5MMGH6TR-PD4 Passive 
+)
+(
+R_SPI_MISO 
+U5-11 SN74LVC125AQPWRQ1-4Y Passive 
+U1-70 STM32WB5MMGH6TR-PD3 Passive 
+)
+(
+$4I16422\SPI_MISO_P 
+U5-12 SN74LVC125AQPWRQ1-4A Passive 
+TV3-3 SRV05-4-P-T7_C85364-3 Input   
+CN2-4 72454-010VLF-4 Passive 
+)
+(
+R_READY 
+TV4-3 SRV05-4-P-T7_C85364-3 Input   
+CN2-10 72454-010VLF-10 Passive 
+U1-71 STM32WB5MMGH6TR-PC7 Passive 
+)
+(
+R_NRST 
+TV4-4 SRV05-4-P-T7_C85364-4 Input   
+CN2-9 72454-010VLF-9 Passive 
+U1-72 STM32WB5MMGH6TR-PE3 Passive 
+U54-1 BAT54C_C22466350-A Passive 
 )
 (
 PRESSURE2 
@@ -8076,18 +8190,6 @@ R33-2 0603WAF4701T5E-2 Input
 (
 L_NFAULT 
 U1-18 STM32WB5MMGH6TR-PB7 Passive 
-U3-4 TPS2553DBVR-/FAULT Passive 
-R2-2 0603WAF1003T5E-2 Input   
-)
-(
-L_SPI_MOSI 
-U1-19 STM32WB5MMGH6TR-PB5 Passive 
-U2-9 SN74LVC125AQPWRQ1-3A Passive 
-)
-(
-L_SPI_MISO 
-U1-20 STM32WB5MMGH6TR-PB4 Passive 
-U2-11 SN74LVC125AQPWRQ1-4Y Passive 
 )
 (
 PGM_SWO 
@@ -8098,7 +8200,6 @@ CN3-8 STDC14_Connector-T_JTDO/T_SWO Input
 (
 R_EN 
 U1-24 STM32WB5MMGH6TR-PC12 Passive 
-U5-3 TPS2553DBVR-EN Passive 
 )
 (
 PGM_SWDIO 
@@ -8111,11 +8212,6 @@ PGM_SWCLK
 U1-26 STM32WB5MMGH6TR-PA14 Passive 
 TV5-1 SRV05-4-P-T7_C85364-1 Input   
 CN3-6 STDC14_Connector-T_JCLK/T_SWCLK Input   
-)
-(
-L_SPI_NSS 
-U1-27 STM32WB5MMGH6TR-PA15 Passive 
-U2-5 SN74LVC125AQPWRQ1-2A Passive 
 )
 (
 PGM_USART_RX 
@@ -8134,16 +8230,6 @@ USB_D-
 U1-30 STM32WB5MMGH6TR-PA11 Passive 
 TV8-1 SRV05-4-P-T7_C85364-1 Input   
 USB1-2 HC-TYPE-B-2.0-VS15-1.5A-15-D- Passive 
-)
-(
-R_SPI_NSS 
-U1-33 STM32WB5MMGH6TR-PD0 Passive 
-U4-5 SN74LVC125AQPWRQ1-2A Passive 
-)
-(
-R_SPI_SCK 
-U1-34 STM32WB5MMGH6TR-PD1 Passive 
-U4-2 SN74LVC125AQPWRQ1-1A Passive 
 )
 (
 PGM_DETECT 
@@ -8229,30 +8315,6 @@ U47-7 BQ25895RTWR-INT Input
 (
 L_EN 
 U1-67 STM32WB5MMGH6TR-PD7 Passive 
-U3-3 TPS2553DBVR-EN Passive 
-)
-(
-R_SPI_MISO 
-U1-70 STM32WB5MMGH6TR-PD3 Passive 
-U4-11 SN74LVC125AQPWRQ1-4Y Passive 
-)
-(
-R_READY 
-U1-71 STM32WB5MMGH6TR-PC7 Passive 
-TV4-3 SRV05-4-P-T7_C85364-3 Input   
-CN2-10 72454-010VLF-10 Passive 
-)
-(
-R_NRST 
-U1-72 STM32WB5MMGH6TR-PE3 Passive 
-U54-1 BAT54C_C22466350-A Passive 
-TV4-4 SRV05-4-P-T7_C85364-4 Input   
-CN2-9 72454-010VLF-9 Passive 
-)
-(
-R_SPI_MOSI 
-U1-73 STM32WB5MMGH6TR-PD4 Passive 
-U4-9 SN74LVC125AQPWRQ1-3A Passive 
 )
 (
 LED_CH1 
@@ -8268,8 +8330,6 @@ R34-1 0603WAF1002T5E-1 Input
 (
 R_NFAULT 
 U1-81 STM32WB5MMGH6TR-PD6 Passive 
-U5-4 TPS2553DBVR-/FAULT Passive 
-R4-2 0603WAF1003T5E-2 Input   
 )
 (
 POW_QON 
@@ -8338,13 +8398,13 @@ BAT_V+
 BAT-1 S3B-XH-SM4-TB(LF)(SN)_C5306495-1 Passive 
 U47-13 BQ25895RTWR-BAT Input   
 U47-14 BQ25895RTWR-BAT Input   
-C13-2 CL31A106KBHNNNE-2 Input   
+C13-2 CL21A106KAYNNNE-2 Input   
 )
 (
 POW_REGN 
 R11-2 0603WAF5101T5E-2 Input   
 U47-22 BQ25895RTWR-REGN Input   
-C24-2 1206B475K500NT-2 Input   
+C24-2 CL21A475KAQNNNE-2 Input   
 )
 (
 $2N333 
@@ -8359,7 +8419,7 @@ U47-4 BQ25895RTWR-STAT Input
 (
 $2N7089 
 LED_CHARGE-1 KT-0805Y-+ Passive 
-R42-1 0402WGF1001TCE-1 Input   
+R42-1 0603WAF1001T5E-1 Input   
 )
 (
 VSYS 
@@ -8368,13 +8428,13 @@ R17-1 0603WAF1002T5E-1 Input
 U48-2 APH0630T2R2M-2 Passive 
 U47-15 BQ25895RTWR-SYS Input   
 U47-16 BQ25895RTWR-SYS Input   
-C16-2 GRM21BR61H106KE43L-2 Passive 
-C15-2 GRM21BR61H106KE43L-2 Passive 
+C16-2 CL21A106KAYNNNE-2 Passive 
+C15-2 CL21A106KAYNNNE-2 Passive 
 U55-1 TLV75533PDBVR-IN Passive 
 C21-2 CL10A105KB8NNNC-2 Passive 
 R18-1 0603WAF1002T5E-1 Input   
-C37-2 GRM21BR61H106KE43L-2 Passive 
-R42-2 0402WGF1001TCE-2 Input   
+C37-2 CL21A106KAYNNNE-2 Passive 
+R42-2 0603WAF1001T5E-2 Input   
 )
 (
 $2N1138 
@@ -8395,14 +8455,14 @@ U47-21 BQ25895RTWR-BTST Input
 )
 (
 $2N1141 
-C18-1 GRM21BR61H106KE43L-1 Passive 
-C19-1 GRM21BR61H106KE43L-1 Passive 
+C18-1 CL21A106KAYNNNE-1 Passive 
+C19-1 CL21A106KAYNNNE-1 Passive 
 U47-23 BQ25895RTWR-PMID Input   
 )
 (
 VBUS 
 U47-1 BQ25895RTWR-VBUS Input   
-C14-1 CL31B105KBHNNNE-1 Passive 
+C14-1 CL21B105KBFNNNE-1 Passive 
 USB1-1 HC-TYPE-B-2.0-VS15-1.5A-15-VCC Passive 
 D6-2 SMBJ13A_C10209-K Input   
 )
@@ -8422,80 +8482,6 @@ U55-3 TLV75533PDBVR-EN Passive
 R18-2 0603WAF1002T5E-2 Input   
 )
 (
-$4N584 
-R3-1 0603WAF8202T5E-1 Input   
-U5-5 TPS2553DBVR-ILIM Passive 
-)
-(
-R_VCC 
-TV4-5 SRV05-4-P-T7_C85364-5 Input   
-U5-6 TPS2553DBVR-OUT Passive 
-TV3-5 SRV05-4-P-T7_C85364-5 Input   
-U4-14 SN74LVC125AQPWRQ1-VCC Passive 
-C4-2 CL05B104KO5NNNC-2 Passive 
-CN2-1 72454-010VLF-1 Passive 
-)
-(
-$4N10892 
-TV3-1 SRV05-4-P-T7_C85364-1 Input   
-)
-(
-R_SPI_MISO_P 
-TV3-3 SRV05-4-P-T7_C85364-3 Input   
-U4-12 SN74LVC125AQPWRQ1-4A Passive 
-CN2-4 72454-010VLF-4 Passive 
-)
-(
-R_SPI_SCK_P 
-TV3-4 SRV05-4-P-T7_C85364-4 Input   
-U4-3 SN74LVC125AQPWRQ1-1Y Passive 
-CN2-6 72454-010VLF-6 Passive 
-)
-(
-R_SPI_NSS_P 
-TV3-6 SRV05-4-P-T7_C85364-6 Input   
-U4-6 SN74LVC125AQPWRQ1-2Y Passive 
-CN2-8 72454-010VLF-8 Passive 
-)
-(
-L_VCC 
-TV2-5 SRV05-4-P-T7_C85364-5 Input   
-TV1-5 SRV05-4-P-T7_C85364-5 Input   
-U3-6 TPS2553DBVR-OUT Passive 
-U2-14 SN74LVC125AQPWRQ1-VCC Passive 
-C2-2 CL05B104KO5NNNC-2 Passive 
-CN1-1 72454-010VLF-1 Passive 
-)
-(
-L_SPI_MOSI_P 
-TV1-1 SRV05-4-P-T7_C85364-1 Input   
-U2-8 SN74LVC125AQPWRQ1-3Y Passive 
-CN1-2 72454-010VLF-2 Passive 
-)
-(
-L_SPI_MISO_P 
-TV1-3 SRV05-4-P-T7_C85364-3 Input   
-U2-12 SN74LVC125AQPWRQ1-4A Passive 
-CN1-4 72454-010VLF-4 Passive 
-)
-(
-L_SPI_SCK_P 
-TV1-4 SRV05-4-P-T7_C85364-4 Input   
-U2-3 SN74LVC125AQPWRQ1-1Y Passive 
-CN1-6 72454-010VLF-6 Passive 
-)
-(
-L_SPI_NSS_P 
-TV1-6 SRV05-4-P-T7_C85364-6 Input   
-U2-6 SN74LVC125AQPWRQ1-2Y Passive 
-CN1-8 72454-010VLF-8 Passive 
-)
-(
-$4N673 
-R1-1 0603WAF8202T5E-1 Input   
-U3-5 TPS2553DBVR-ILIM Passive 
-)
-(
 $4N1323 
 EXPR_PEDAL1-5 PJ-603A-5 Input   
 R5-1 0603WAF3901T5E-1 Input   
@@ -8504,9 +8490,4 @@ R5-1 0603WAF3901T5E-1 Input
 $4N1322 
 SUS_PEDAL1-5 PJ-603A-5 Input   
 R6-1 0603WAF3901T5E-1 Input   
-)
-(
-R_SPI_MOSI_P 
-U4-8 SN74LVC125AQPWRQ1-3Y Passive 
-CN2-2 72454-010VLF-2 Passive 
 )

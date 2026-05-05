@@ -73,6 +73,37 @@ Channel assignment:
 
 **Wing-port ESD steering.** The SRV05-4 arrays at each wing port (TV4/TV5 left, TV2/TV3 right) tie pin 5 to the **gated wing rail**, not to main 3.3 V. This keeps ESD energy in the same power domain as the buffer's output drivers, so transient steering currents don't cross power-domain boundaries.
 
+## Wing Bus Connector
+
+The motherboard↔wing bus uses a **2×5 (10-way) shrouded IDC header on 2.54 mm pitch**. The choice is driven by serviceability and prototyping ergonomics rather than electrical need — the bus runs at well under 1 MHz effective, so it does not require a controlled-impedance or high-density connector.
+
+- **2.54 mm pitch** is the de-facto Dupont jumper pitch. During bring-up and tinkering, individual signals can be probed, patched, or fanned out to a breadboard with off-the-shelf jumper leads — no custom breakouts.
+- **2×5 IDC ribbon assemblies** (10-way flat cable with crimped IDC sockets) are commodity parts stocked by every distributor, in any length, and a damaged cable is swapped without touching either board.
+- The **shroud notch** keys the cable, preventing reverse insertion.
+
+The wing bus carries 8 signals (see [architecture.md](architecture.md)); the 10-way connector leaves two spare pins for ground returns.
+
+## PCB Manufacturing Strategy: JLCPCB Economic, 2-Layer
+
+All three boards (motherboard, left wing, right wing) are manufactured via **JLCPCB Standard (Economic) service**: 2 copper layers, no buried/blind vias, 1 oz copper weight, standard soldermask and silkscreen.
+
+**2-layer constraint — no dedicated VCC plane:**
+
+- **Layer 1:** Signal + GND plane (split GND where necessary)
+- **Layer 2:** Signal + power traces (3.3V, 5V, VBAT routed as traces, not planes)
+
+**Implications for power distribution:**
+
+1. **3.3V rail:** Distributed via wide traces (24–32 mil minimum) rather than a continuous plane. High-current sources (BQ25895 charger, TLV755P LDO output, wing power switches TPS2553) require direct copper widths to minimize resistance and transient voltage sag.
+
+2. **No distributed plane capacitance:** Decoupling capacitors become critical — they are the only capacitive reservoir for transient current. Each power rail segment (motherboard main, left wing, right wing) gets dedicated bulk (10 µF) and bypass (100 nF per IC) capacitance placed within 5 mm of the load.
+
+3. **GND plane preserved:** The single GND plane on Layer 1 serves as the common return path for all signals and power. This is the primary defense against noise coupling to analog sensor lines (Hall outputs, ADC inputs). Sensitive traces route on Layer 2 with GND return traces of equal width run parallel and adjacent.
+
+4. **Thermal management:** Dissipation is modest (~0.8 W steady-state, dominated by Hall sensors); thermal vias under high-power ICs (BQ25895, TLV755P) tie directly to the GND plane for passive cooling. No separate thermal plane needed.
+
+**Trade-off:** Economic 2-layer design saves cost (~20 % vs. 4-layer) at the expense of denser PCB layout, stricter decoupling discipline, and slightly tighter voltage margins. The 251 mA steady-state current is well within the headroom of these constraints; peak transients (BLE TX + LEDs = 285 mA) remain comfortable on a 500 mA LDO.
+
 ## Main MCU
 
 The main board module includes filtering capacitors.
@@ -113,6 +144,29 @@ Each key uses a **Gateron Magnetic Jade Pro mini** switch (KS-33D, total travel 
 Gateron's figures assume their reference PCB (≈ 1.6 mm). Our 1.5 mm stack puts the sensor 0.1 mm closer to the magnet — field slightly higher, inside the ±10 % tolerance.
 
 **Usable ADC swing**: ~1.2 V across 3.5 mm, i.e. ~1500 LSB on a 12-bit / 3.3 V ADC (~430 LSB/mm). In the worst-case combination (field at +10 %, sensor sensitivity at its +10 % limit), output clamps at the 0.8 V floor during the last ~0.1–0.2 mm of travel — no effect on note detection or velocity since the velocity-relevant portion of travel is mapped well before bottom-out.
+
+## Charger Input Power Distribution (BQ25895RTWR)
+
+The BQ25895 is the highest-current source on the motherboard: **5 A charge current** (1C on a 2200 mAh cell). With only 2 layers and no VCC plane, power routing to the charger input (VSYS, pins 15/16) requires careful attention.
+
+**Input decoupling (VBAT → BQ25895 IN):**
+
+The BQ25895 datasheet recommends 10 µF bulk + 100 nF bypass close to the input pins. Layout strategy for 2-layer:
+
+- **10 µF bulk capacitor (U48):** Placed **≤ 5 mm** from BQ25895 pins 15/16, with short wide traces (32 mil minimum) connecting VBAT pad → capacitor → BQ25895. Both capacitor and IC pins have dedicated vias (12 mil minimum diameter) to GND plane.
+- **100 nF bypass (C23):** Placed adjacent to the bulk cap, tied with the same trace topology.
+- **No thermal relief:** Both capacitor pads and charger pins have direct (no thermal spokes) via connections to the GND plane to minimize inductance.
+
+**Output decoupling (VSYS → TLV755P LDO input):**
+
+VSYS (pins 15/16 output, post-internal MOSFET) feeds the TLV755P LDO. The impedance between BQ25895 and LDO input is part of the feedback network for the charger's constant-current mode; a 10 µF capacitor between VSYS and GND (placed near the charger) stabilizes the charger output during charge transients.
+
+- **10 µF at charger output (C48):** Dedicated 32 mil wide traces from charger pins → capacitor → GND, kept short (< 10 mm from charger).
+- This capacitor decouples the charger's internal feedback loop, not the LDO input. The LDO has its own input filtering (see below).
+
+**Multiple VCC pins on BQ25895 (QFN-24):**
+
+The BQ25895 has multiple power pins. Each tie to the bulk capacitor bank via **separate short traces** (not a single shared trace); this distributes the 5 A charge current across multiple paths and minimizes trace resistance. Traces are 24–32 mil wide, running directly from IC pads to the bulk capacitor common node.
 
 ## 3.3 V Rail (TLV755P)
 

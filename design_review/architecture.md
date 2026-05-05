@@ -48,16 +48,13 @@ The system has four power states:
 
 ## Programming Port
 
-Each board (motherboard and both wing boards) exposes a dedicated 8-wire programming port for firmware flashing and debugging. The port combines an SWD debug interface, a trace output line, a UART console, and board control:
+Each board (motherboard and both wing boards) exposes **14 pogo-pin pads laid out per the STDC14 pinout** for firmware flashing and debugging — no through-hole header, no shroud, no board area spent on a connector that is touched only at the factory and during occasional rework. A spring-loaded pogo jig matching the STDC14 footprint is pressed against the pads when needed.
 
-- **GND** — common ground
-- **VCC** — reference voltage (board-powered; used by the probe for level sensing, not to power the board)
-- **SWDIO** — SWD bidirectional data
-- **SWCLK** — SWD clock
-- **SWO** — single-wire trace output (ITM/ETM); optional but available for real-time tracing
-- **RESET** — forces MCU reset when asserted low; allows the probe to halt the CPU before it executes
-- **TX** — UART transmit from MCU; used for log output and debug console
-- **RX** — UART receive into MCU; used for debug console input
+STDC14 carries the full debug interface: SWD (SWDIO/SWCLK), SWO trace, NRST, UART VCP (TX/RX), target VCC reference, and several GND returns — everything needed for flashing, halting, real-time tracing, and serial console without falling back to test points.
+
+**Why STDC14, not the legacy 20-pin Cortex headers.** STDC14 is ST's modern compact debug standard and is the native footprint of the STLINK-V3 family. It packs the same SWD + SWO + VCP signals into a much smaller area, which is the deciding factor for these boards.
+
+**Why ST-Link, not J-Link.** Segger's affordable J-Link variants (EDU, EDU Mini) are licensed for **non-commercial use only**; the cheapest commercially-licensed J-Link is roughly an order of magnitude more expensive. ST-Link probes — in particular the STLINK-V3 series, which exposes STDC14 directly — are inexpensive, commercially licensable out of the box, and natively supported by the STM32 toolchain used on every board in this project.
 
 ## ESD Protection
 

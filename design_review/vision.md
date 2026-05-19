@@ -12,4 +12,4 @@ Create an **affordable, open-source electronic bandoneon** so beginners can lear
 - **Playable:** Full 142-key "Rheinische Lage" layout, authentic feel, <5 ms latency.
 - **Quiet:** Practice anywhere without disturbance.
 - **Open:** Fully open-source and reproducible.
-- **Connected:** Wireless (BLE-MIDI) and wired (USB-MIDI).
+- **Connected:** USB to phone, tablet, or computer (USB-MIDI). A powered hub at the host side combines wall-charger power passthrough, headphone audio, and downstream USB to the instrument — one cable from the hub carries MIDI in, power in, and headphone audio out at the host.

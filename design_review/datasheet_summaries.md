@@ -39,20 +39,20 @@ Used as reference for WB5MMG internals, **not placed on the BOM**. Key facts tha
 - 72 fast I/Os, 70 of them 5 V-tolerant (on the full-size package — count differs on WB5MMG which exposes ~68).
 - **Review use**: consult for register-level behavior, supply current tables, ADC accuracy — the WB5MMG datasheet does not duplicate these.
 
-### STM32F103C8 — wing MCU (WingLeft / WingRight)
-[datasheets/stm32f103x8.pdf](datasheets/stm32f103x8.pdf)
+### STM32G474CBT6 — shared MCU (MainBoard, WingLeft, WingRight)
 
-- **Package on BOM**: LQFP48 (STM32F103C8T6).
-- **Core**: Cortex-M3 @ 72 MHz, 64 KB flash, 20 KB SRAM.
-- **Supply**: VDD 2.0–3.6 V; VDDA/VSSA dedicated; VBAT 1.8–3.6 V for RTC + backup registers.
-- **Peripherals on C8 (48-pin)**: 2× I²C, 2× SPI, 3× USART, 1× USB FS, 1× CAN (USB and CAN share pins — mutually exclusive), 2× 12-bit ADC (10 channels, 0–3.6 V), 7-ch DMA, 3× GP 16-bit timers + 1× advanced PWM timer, 2 watchdogs.
-- **GPIOs**: 37 I/O on LQFP48, almost all 5 V-tolerant. 16 EXTI lines.
-- **Clocks**: 4–16 MHz HSE (8 MHz typical for USB), 32.768 kHz LSE, 8 MHz HSI, 40 kHz LSI. **USB requires HSE + PLL → 48 MHz USBCLK**.
-- **ADC**: 1 µs conversion requires APB2 at 14/28/56 MHz. Max conversion clock 14 MHz. VDDA ≥ 2.4 V when ADC is used.
-- **Boot modes**: Flash / System memory (USART1 bootloader) / SRAM, selected via BOOT0/BOOT1.
-- **Typical externals**: one 100 nF per VDD pair + 4.7 µF bulk on VDDA; 100 nF on NRST; 8 MHz crystal with 2× 18–22 pF; 32.768 kHz crystal if RTC needed.
-- **Debug**: SWD (2-wire) or JTAG (5-wire).
-- **Review note**: current design uses BOOT0 re-purposed as FN3 (see [hardware.md](hardware.md)) — confirm BOOT1 is latched at reset and that FN3 routing does not prevent entering system bootloader for DFU recovery.
+- **Package on BOM**: LQFP48 (STM32G474CBT6) — same part on all three boards.
+- **Core**: Cortex-M4F (FPU + DSP + MPU) @ 170 MHz, 128 KB flash, 128 KB SRAM.
+- **Supply**: VDD 1.71–3.6 V; VDDA/VSSA dedicated; VBAT 1.55–3.6 V for RTC + backup registers (not used here — VBAT tied to VDD).
+- **Peripherals on CB (48-pin)**: 3× I²C, 3× SPI, 5× UART/USART (including LPUART), 1× USB 2.0 FS device (crystal-less via HSI48 + CRS), 1× FDCAN, 2× 12-bit ADCs (up to 4.27 Msps with hardware oversampling, 0–3.3 V), 4-ch DMA + DMAMUX, 1× advanced PWM timer + multiple GP timers, 2 watchdogs.
+- **GPIOs**: 38 I/O on LQFP48, all 5 V-tolerant. EXTI on every line.
+- **Clocks**: HSI16 internal, HSI48 internal for USB SOF lock via CRS, optional HSE 4–48 MHz (not populated), optional LSE 32.768 kHz (not populated). **No external crystal needed** — USB enumerates against HSI48 trimmed by CRS, system clock derived from HSI16 × PLL up to 170 MHz.
+- **ADC**: 12-bit, 4.27 Msps. With hardware oversampling settable up to 16-bit effective resolution. VDDA ≥ 2.4 V when ADC is used.
+- **Boot modes**: Flash / System memory (USART/USB DFU bootloader) / SRAM, selected via BOOT0 pin (no BOOT1 on G4).
+- **Typical externals**: one 100 nF per VDD pin + 4.7 µF bulk; 1 µF + 10 nF on VDDA referenced to VSSA, with a ferrite bead between VDD and VDDA; 100 nF on NRST.
+- **Debug**: SWD + SWO (2 + 1 wires); built-in USB DFU available for factory programming if BOOT0 is asserted at reset.
+- **Why G4 instead of F1 or G431.** Same SKU runs on all three boards (no toolchain split), USB without a crystal, plenty of pin/peripheral budget for two independent SPI buses on the motherboard. G4 is *extended* on JLCPCB (small per-unit surcharge over basic-part G431), accepted in exchange for the single-SKU simplification.
+- **Review note**: design uses BOOT0/PB8 re-purposed as FN3 (see [hardware.md](hardware.md)) — confirm FN3 routing does not prevent BOOT0=1 at reset for DFU recovery.
 
 ---
 
@@ -183,29 +183,17 @@ Used as reference for WB5MMG internals, **not placed on the BOM**. Key facts tha
 - **PCB stack assumption**: numbers above presume Gateron's reference PCB (~1.6 mm). At our 1.5 mm stack the sensor sits 0.1 mm closer → field marginally stronger, inside the spec ±10 % tolerance.
 - **Pairing with SC4015-N at 3.3 V** (typical): rest V<sub>OUT</sub> ≈ 2.05 V, full-press V<sub>OUT</sub> ≈ 0.84 V → ~1.21 V active swing across 3.5 mm. Worst-case (high field × high sensitivity) clamps at the 0.8 V floor in the last ~0.1–0.2 mm of travel — harmless for velocity capture.
 
-### CS1237 — 24-bit Σ-Δ ADC (push/pull loadcell)
+### CS1237 — 24-bit Σ-Δ ADC (evaluated, not placed)
 [datasheets/DS_CS1237_V1.1.pdf](datasheets/DS_CS1237_V1.1.pdf)
 
+- **Status**: evaluated for a loadcell-based push/pull readout, **not on the current BOM**. The loadcell approach was rejected on feel (near-zero compliance removes proprioceptive feedback the player needs); the design now uses a spring-blade + 2× SC4015 hall sensors on the motherboard. See [hardware.md](hardware.md) §"Push/Pull Sensor".
 - **Package**: SOP-8. Pinout: 1 REFIN, 2 GND, 3 AINN, 4 AINP, 5 SCLK, 6 DRDY/DOUT, 7 VDD, 8 REFOUT.
 - **Supply**: VDD 3.0–3.6 V (logic) or 4.5–5.5 V (ratiometric). Internal 5.2 MHz oscillator, no crystal.
-- **Interface**: 2-wire (SCLK, DRDY/DOUT) — DRDY pulses when new sample is ready. Not standard SPI; bit-banged on the WB5MMG.
+- **Interface**: 2-wire (SCLK, DRDY/DOUT) — DRDY pulses when new sample is ready. Not standard SPI; would be bit-banged from the main MCU if used.
 - **PGA**: ×1 / ×2 / ×64 / ×128. **Data rates: 10 / 40 / 640 / 1280 Hz**.
 - **Reference**: internal REFOUT tied to REFIN (default), ratiometric with the bridge excitation.
 - **Externals**: 100 nF on VDD, 100 nF on REFIN.
-- **Role in this design**: digitizes the Wheatstone bridge of the push/pull loadcell that replaces the acoustic bellows. Differential AINP/AINN across the bridge, PGA ×128. 40 or 640 Hz output is ample for bellows-like dynamics and decoupled from the 1 kHz key-scan loop on the wings — see [hardware.md](hardware.md).
-
-### SN74LVC125A-Q1 — quad tri-state buffer (wing power-domain isolation)
-[datasheets/sn74lvc125a-q1.pdf](datasheets/sn74lvc125a-q1.pdf) (or TI SN74LVC125A-Q1)
-
-- **Package on BOM**: TSSOP-14 (PW), AEC-Q100 Grade 1 (−40 … +125 °C). Q1 variant is an automotive-qualified die-identical version of SN74LVC125A; plain SN74LVC125APWR would be functionally equivalent.
-- **Pinout**: 1 `1/OE`, 2 `1A`, 3 `1Y`, 4 `2/OE`, 5 `2A`, 6 `2Y`, 7 `GND`, 8 `3Y`, 9 `3A`, 10 `3/OE`, 11 `4Y`, 12 `4A`, 13 `4/OE`, 14 `VCC`.
-- **Supply**: VCC 1.65–3.6 V; I<sub>Q</sub> ≤ 20 µA; I<sub>OL</sub> / I<sub>OH</sub> = 24 mA.
-- **Propagation delay**: 2.5 ns typ @ 3.3 V / 50 pF — negligible against MHz-range SPI.
-- **Ioff (partial-power-down)**: **≤10 µA leakage on every I/O when VCC = 0**, for input voltages up to 3.6 V. This is the key feature for this design: powering the buffer from the gated wing rail makes every wing-facing signal self-isolating when the wing is shut off. No firmware sequencing required to prevent back-feed.
-- **Overvoltage-tolerant inputs**: A and OE pins accept 0–5.5 V regardless of VCC — no forward-biased clamp back into VCC when driven above the rail.
-- **OE polarity**: active-low. Tying `OE#` to GND keeps the channel always enabled; driving it high forces the output to high-Z.
-- **Externals**: 100 nF from VCC to GND at pin 14, close to the package. No other externals.
-- **Use in this design**: U61 (WingLeft) and U63 (WingRight) isolate the four SPI bus signals (SCK, NSS, MOSI main→wing; MISO wing→main) between the main MCU domain and the gated wing rail (`L_VCC` / `R_VCC`, downstream of per-wing TPS2553). NRST (open-drain from main, BAT54C to 3.3 V) and READY (passive-input with internal pulldown on main, active-high drive from wing) bypass the buffer — see [hardware.md](hardware.md) "Wing Power Gating and Back-feed Isolation".
+- **Kept as reference**: if a future variant ever wants a force-curve push/pull mode (e.g., a non-bandoneonist preset), CS1237 remains a credible single-IC choice for a 4-wire Wheatstone bridge.
 
 ### 74HC4052PW (Nexperia, ,118) — analog mux (key scanning)
 [datasheets/74HC4052.pdf](datasheets/74HC4052.pdf)
@@ -225,20 +213,18 @@ Used as reference for WB5MMG internals, **not placed on the BOM**. Key facts tha
 
 | Threat | Defense | Notes |
 |---|---|---|
-| USB VBUS overvoltage / surge | SMBJ13A | 600 W, VC = 21.5 V (< BQ25895 VBUS abs-max 22 V) |
+| USB VBUS overvoltage / surge | SMBJ5.0A | 600 W, VC ≈ 9.2 V — well below LDO and MCU abs-max |
 | USB D+/D− ESD | SRV05-4 (USB instance, pin 5 floating) | 3.5 pF, USB 2.0 FS OK |
 | Pedal TRS jack ESD (Tip + Ring × 2 jacks) | SRV05-4 (pedal instance) | Slow analog lines; 4 channels = 2 jacks |
+| Wing-bus ESD at the IDC connector | SRV05-4 × 2 per wing (SPI + NRST + READY) | Pin 5 tied to 3.3 V (same rail as the wings) |
 | Other user-touched I/O (programming port, etc.) | H5VND5BA (as needed) | Bidirectional, 20 pF max |
-| Charger overvoltage (VBUS > 14.6 V) | BQ25895 internal VACOV | Plus SMBJ13A as coarse clamp |
-| Battery OVP/OCP | BQ25895 internal | 104 % VREG, 9 A system |
 | 3.3 V rail short | TLV755P foldback + thermal | Regulated down to ~1 V out |
-| USB sourcing short (OTG / 5 V port) | TPS2553 current-limit + /FAULT | Constant-current mode, not latch |
-| Back-feed into an unpowered wing via SPI signals | SN74LVC125A-Q1 (U61, U63) powered from gated wing rail | Ioff drives all I/O to high-Z when wing VCC = 0 |
+| VBUS sourcing short on the host side (optional) | Polyfuse / eFuse on VBUS (suggested) | ~500 mA hold / 1 A trip; not currently placed |
 
 ## Open Items for Design Review
 
-1. **ADC sample-time configuration**: confirm the STM32F103 ADC sampling time is set long enough to settle through one 74HC4052 Ron (~80 Ω) plus SC4015 output impedance into the ADC sample-and-hold cap — spec sheet and scope trace welcome.
-2. **WB5MMG layout**: verify 2.5 / 7.6 / 1.3 mm antenna clearance, the 3.3 pF caps on sensitive GPIOs (PB10, PB11, PC5), and ANT_IN / RF_OUT / ANT_NC pad handling on the MainBoard layout.
-3. **STM32F103 DFU path**: with BOOT0 repurposed as FN3, document the recovery procedure for entering the system-memory bootloader (and confirm BOOT1 latches correctly at reset).
-4. **BAT54 variant**: confirm which of BAT54 / A / C / S is placed — the three topologies share a SOT-23 package but differ in footprint connectivity.
-5. **Pedal-jack SRV05-4 wiring**: confirm pin-5 handling on the pedal-jack SRV05-4 package (tied to 3.3 V vs. floating as on the USB instance), since pedal Tip/Ring lines carry slow analog — steering to rail is acceptable here, but the choice should be documented.
+1. **ADC sample-time configuration**: confirm the STM32G474 ADC sampling time is set long enough to settle through one 74HC4052 Ron (~80 Ω) plus SC4015 output impedance into the ADC sample-and-hold cap — spec sheet and scope trace welcome.
+2. **G474 DFU path**: with BOOT0/PB8 repurposed as FN3, document the recovery procedure for entering the system-memory bootloader (button-held-at-reset sequence) and confirm FN3 firmware doesn't drive PB8 in a way that interferes with the boot-pin sample.
+3. **BAT54 variant**: confirm which of BAT54 / A / C / S is placed — the three topologies share a SOT-23 package but differ in footprint connectivity. (BOM says BAT54C — common cathode — verify.)
+4. **Pedal-jack SRV05-4 wiring**: confirm pin-5 handling on the pedal-jack SRV05-4 package (tied to 3.3 V vs. floating as on the USB instance), since pedal Tip/Ring lines carry slow analog — steering to rail is acceptable here, but the choice should be documented.
+5. **LDO thermal**: at 5 V → 3.3 V × ~0.3 A ≈ 0.5 W, TLV755P in SOT-23-5 sits at the edge of its 125 °C absmax in warm ambients — consider moving to a buck (TPS62933) or a larger LDO package.

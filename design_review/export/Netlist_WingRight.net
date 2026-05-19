@@ -3143,165 +3143,29 @@ HAL403SO
 ]
 [
 DESIGNATOR
-R1
-FOOTPRINT
-R0402
-PARTTYPE
-0402WGF1002TCE
-DESCRIPTION
-Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
-Component Kind
-Standard
-LCSC Part Name
-10kΩ ±1% 62.5mW 厚膜电阻
-Supplier Part
-C25744
-Manufacturer
-UNI-ROYAL(厚声)
-Manufacturer Part
-0402WGF1002TCE
-Supplier Footprint
-0402
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://item.szlcsc.com/datasheet/0402WGF1002TCE/26487.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-R0402_L1.0-W0.5-H0.4
-Type
-Thick Film Resistor
-Value
-10kΩ
-Tolerance
-±1%
-Power(Watts)
-62.5mW
-Voltage-Supply(Max)
-50V
-Temperature Coefficient
-±100ppm/℃
-Operating Temperature
--55℃~+155℃
-Description
-Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
-Symbol
-0402WGF1002TCE
-Designator
-R1
-Name
-10kΩ
-Device
-0402WGF1002TCE
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge194
-
-*
-]
-[
-DESIGNATOR
-R2
-FOOTPRINT
-R0402
-PARTTYPE
-0402WGF1002TCE
-DESCRIPTION
-Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
-Component Kind
-Standard
-LCSC Part Name
-10kΩ ±1% 62.5mW 厚膜电阻
-Supplier Part
-C25744
-Manufacturer
-UNI-ROYAL(厚声)
-Manufacturer Part
-0402WGF1002TCE
-Supplier Footprint
-0402
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://item.szlcsc.com/datasheet/0402WGF1002TCE/26487.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-R0402_L1.0-W0.5-H0.4
-Type
-Thick Film Resistor
-Value
-10kΩ
-Tolerance
-±1%
-Power(Watts)
-62.5mW
-Voltage-Supply(Max)
-50V
-Temperature Coefficient
-±100ppm/℃
-Operating Temperature
--55℃~+155℃
-Description
-Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
-Symbol
-0402WGF1002TCE
-Designator
-R2
-Name
-10kΩ
-Device
-0402WGF1002TCE
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge195
-
-*
-]
-[
-DESIGNATOR
 R3
 FOOTPRINT
-R0402
+R0603
 PARTTYPE
-0402WGF1002TCE
+0603WAF1002T5E
 DESCRIPTION
-Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+
 Component Kind
 Standard
 LCSC Part Name
-10kΩ ±1% 62.5mW 厚膜电阻
+10KΩ(1002) ±1% 编带
 Supplier Part
-C25744
+C25804
 Manufacturer
 UNI-ROYAL(厚声)
 Manufacturer Part
-0402WGF1002TCE
+0603WAF1002T5E
 Supplier Footprint
-0402
+0603
 JLCPCB Part Class
 Basic Part
 Datasheet
-https://item.szlcsc.com/datasheet/0402WGF1002TCE/26487.html
+https://atta.szlcsc.com/upload/public/pdf/source/20170920/C25804_1505901551523983377.pdf
 Supplier
 LCSC
 Add into BOM
@@ -3309,7 +3173,7 @@ yes
 Convert to PCB
 yes
 3D Model Title
-R0402_L1.0-W0.5-H0.4
+R0603_L1.6-W0.8-H0.8
 Type
 Thick Film Resistor
 Value
@@ -3325,7 +3189,7 @@ Temperature Coefficient
 Operating Temperature
 -55℃~+155℃
 Description
-Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+
 Symbol
 0402WGF1002TCE
 Designator
@@ -3333,7 +3197,7 @@ R3
 Name
 10kΩ
 Device
-0402WGF1002TCE
+0603WAF1002T5E
 Reuse Block
 
 Group ID
@@ -3349,27 +3213,27 @@ gge196
 DESIGNATOR
 R4
 FOOTPRINT
-R0402
+R0603
 PARTTYPE
-0402WGF1002TCE
+0603WAF1002T5E
 DESCRIPTION
-Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+
 Component Kind
 Standard
 LCSC Part Name
-10kΩ ±1% 62.5mW 厚膜电阻
+10KΩ(1002) ±1% 编带
 Supplier Part
-C25744
+C25804
 Manufacturer
 UNI-ROYAL(厚声)
 Manufacturer Part
-0402WGF1002TCE
+0603WAF1002T5E
 Supplier Footprint
-0402
+0603
 JLCPCB Part Class
 Basic Part
 Datasheet
-https://item.szlcsc.com/datasheet/0402WGF1002TCE/26487.html
+https://atta.szlcsc.com/upload/public/pdf/source/20170920/C25804_1505901551523983377.pdf
 Supplier
 LCSC
 Add into BOM
@@ -3377,7 +3241,7 @@ yes
 Convert to PCB
 yes
 3D Model Title
-R0402_L1.0-W0.5-H0.4
+R0603_L1.6-W0.8-H0.8
 Type
 Thick Film Resistor
 Value
@@ -3393,7 +3257,7 @@ Temperature Coefficient
 Operating Temperature
 -55℃~+155℃
 Description
-Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+
 Symbol
 0402WGF1002TCE
 Designator
@@ -3401,7 +3265,7 @@ R4
 Name
 10kΩ
 Device
-0402WGF1002TCE
+0603WAF1002T5E
 Reuse Block
 
 Group ID
@@ -3417,27 +3281,27 @@ gge197
 DESIGNATOR
 R5
 FOOTPRINT
-R0402
+R0603
 PARTTYPE
-0402WGF1002TCE
+0603WAF1002T5E
 DESCRIPTION
-Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+
 Component Kind
 Standard
 LCSC Part Name
-10kΩ ±1% 62.5mW 厚膜电阻
+10KΩ(1002) ±1% 编带
 Supplier Part
-C25744
+C25804
 Manufacturer
 UNI-ROYAL(厚声)
 Manufacturer Part
-0402WGF1002TCE
+0603WAF1002T5E
 Supplier Footprint
-0402
+0603
 JLCPCB Part Class
 Basic Part
 Datasheet
-https://item.szlcsc.com/datasheet/0402WGF1002TCE/26487.html
+https://atta.szlcsc.com/upload/public/pdf/source/20170920/C25804_1505901551523983377.pdf
 Supplier
 LCSC
 Add into BOM
@@ -3445,7 +3309,7 @@ yes
 Convert to PCB
 yes
 3D Model Title
-R0402_L1.0-W0.5-H0.4
+R0603_L1.6-W0.8-H0.8
 Type
 Thick Film Resistor
 Value
@@ -3461,7 +3325,7 @@ Temperature Coefficient
 Operating Temperature
 -55℃~+155℃
 Description
-Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+
 Symbol
 0402WGF1002TCE
 Designator
@@ -3469,7 +3333,7 @@ R5
 Name
 10kΩ
 Device
-0402WGF1002TCE
+0603WAF1002T5E
 Reuse Block
 
 Group ID
@@ -4217,448 +4081,6 @@ gge258
 ]
 [
 DESIGNATOR
-C3
-FOOTPRINT
-C0402
-PARTTYPE
-CL05B104KO5NNNC
-DESCRIPTION
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
-Component Kind
-Standard
-LCSC Part Name
-100nF ±10% 16V
-Supplier Part
-C1525
-Manufacturer
-SAMSUNG(三星)
-Manufacturer Part
-CL05B104KO5NNNC
-Supplier Footprint
-0402
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-C0402_L1.0-W0.5-H0.5
-Value
-100nF
-Tolerance
-±10%
-Voltage Rated
-
-Temperature Coefficient
-
-Description
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
-Symbol
-CL05B104KO5NNNC
-Designator
-C3
-Name
-100nF
-Device
-CL05B104KO5NNNC
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge48
-
-*
-]
-[
-DESIGNATOR
-C2
-FOOTPRINT
-C0402
-PARTTYPE
-CL05B104KO5NNNC
-DESCRIPTION
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
-Component Kind
-Standard
-LCSC Part Name
-100nF ±10% 16V
-Supplier Part
-C1525
-Manufacturer
-SAMSUNG(三星)
-Manufacturer Part
-CL05B104KO5NNNC
-Supplier Footprint
-0402
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-C0402_L1.0-W0.5-H0.5
-Value
-100nF
-Tolerance
-±10%
-Voltage Rated
-
-Temperature Coefficient
-
-Description
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
-Symbol
-CL05B104KO5NNNC
-Designator
-C2
-Name
-100nF
-Device
-CL05B104KO5NNNC
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge49
-
-*
-]
-[
-DESIGNATOR
-C4
-FOOTPRINT
-C0402
-PARTTYPE
-CL05B104KO5NNNC
-DESCRIPTION
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
-Component Kind
-Standard
-LCSC Part Name
-100nF ±10% 16V
-Supplier Part
-C1525
-Manufacturer
-SAMSUNG(三星)
-Manufacturer Part
-CL05B104KO5NNNC
-Supplier Footprint
-0402
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-C0402_L1.0-W0.5-H0.5
-Value
-100nF
-Tolerance
-±10%
-Voltage Rated
-
-Temperature Coefficient
-
-Description
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
-Symbol
-CL05B104KO5NNNC
-Designator
-C4
-Name
-100nF
-Device
-CL05B104KO5NNNC
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge55
-
-*
-]
-[
-DESIGNATOR
-U46
-FOOTPRINT
-LQFP-48_L7.0-W7.0-P0.50-LS9.0-BL
-PARTTYPE
-STM32F103C8T6
-DESCRIPTION
-CPU Core:ARM-M3 CPU Maximum Speed:72MHz Program Storage Size:64KB Program Memory Type:FLASH Number of I/O:37 ADC (Bit):12bit Voltage - Supply:2V~3.6V Voltage - Supply:2V~3.6V Applications:-
-Component Kind
-Standard
-LCSC Part Name
-主流增强型ARM Cortex-M3 MCU，具有64 KB Flash、72 MHz CPU、电机控制、USB和CAN
-Supplier Part
-C8734
-Manufacturer
-ST(意法半导体)
-Manufacturer Part
-STM32F103C8T6
-Supplier Footprint
-LQFP-48(7x7)
-JLCPCB Part Class
-Extended Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20220812/8363ACEC51AD55ECEB84799464F7CB85.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-LQFP-48_L7.0-W7.0-H1.4-LS9.0-P0.50
-CPU Core
-ARM-M3
-CPU Maximum Speed
-72MHz
-Program Storage Size
-64KB
-Program Memory Type
-FLASH
-Number of I/O
-37
-ADC (Bit)
-12bit
-Voltage - Supply
-2V~3.6V
-Applications
--
-Description
-CPU Core:ARM-M3 CPU Maximum Speed:72MHz Program Storage Size:64KB Program Memory Type:FLASH Number of I/O:37 ADC (Bit):12bit Voltage - Supply:2V~3.6V Voltage - Supply:2V~3.6V Applications:-
-Symbol
-STM32F103C8T6
-Designator
-U46
-Name
-STM32F103C8T6
-Device
-STM32F103C8T6
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge99
-
-*
-]
-[
-DESIGNATOR
-C5
-FOOTPRINT
-C0402
-PARTTYPE
-CL05B104KO5NNNC
-DESCRIPTION
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
-Component Kind
-Standard
-LCSC Part Name
-100nF ±10% 16V
-Supplier Part
-C1525
-Manufacturer
-SAMSUNG(三星)
-Manufacturer Part
-CL05B104KO5NNNC
-Supplier Footprint
-0402
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-C0402_L1.0-W0.5-H0.5
-Value
-100nF
-Tolerance
-±10%
-Voltage Rated
-
-Temperature Coefficient
-
-Description
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
-Symbol
-CL05B104KO5NNNC
-Designator
-C5
-Name
-100nF
-Device
-CL05B104KO5NNNC
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge55_1
-
-*
-]
-[
-DESIGNATOR
-C6
-FOOTPRINT
-C0402
-PARTTYPE
-CL05A105KA5NQNC
-DESCRIPTION
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
-Component Kind
-Standard
-LCSC Part Name
-1uF ±10% 25V
-Supplier Part
-C52923
-Manufacturer
-SAMSUNG(三星)
-Manufacturer Part
-CL05A105KA5NQNC
-Supplier Footprint
-0402
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-C0402_L1.0-W0.5-H0.5
-Value
-1uF
-Tolerance
-±10%
-Voltage Rated
-
-Temperature Coefficient
-
-Description
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
-Symbol
-CL05A105KA5NQNC
-Designator
-C6
-Name
-1uF
-Device
-CL05A105KA5NQNC
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge53
-
-*
-]
-[
-DESIGNATOR
-C7
-FOOTPRINT
-C0402
-PARTTYPE
-CL05B103KB5NNNC
-DESCRIPTION
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
-Component Kind
-Standard
-LCSC Part Name
-10nF ±10% 50V
-Supplier Part
-C15195
-Manufacturer
-SAMSUNG(三星)
-Manufacturer Part
-CL05B103KB5NNNC
-Supplier Footprint
-0402
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-C0402_L1.0-W0.5-H0.5
-Tolerance
-±10%
-Voltage Rated
-
-Temperature Coefficient
-
-Description
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
-Value
-10nF
-Symbol
-CL05B103KB5NNNC
-Designator
-C7
-Name
-10nF
-Device
-CL05B103KB5NNNC
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge52
-
-*
-]
-[
-DESIGNATOR
 TV1
 FOOTPRINT
 SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
@@ -5091,7 +4513,7 @@ gge178
 ]
 [
 DESIGNATOR
-LED_FN1
+LED_FN0
 FOOTPRINT
 LED0805-R-RD
 PARTTYPE
@@ -5155,7 +4577,7 @@ Lamp Holder Type:- Illumination Color:Emerald Green Voltage - Forward(Vf):2.6V~3
 Symbol
 0805G (Green)
 Designator
-LED_FN1
+LED_FN0
 Name
 KT-0805G
 Device
@@ -5255,61 +4677,49 @@ gge187
 DESIGNATOR
 R7
 FOOTPRINT
-R0402
+R0603
 PARTTYPE
-0402WGF1001TCE
+0603WAF1001T5E
 DESCRIPTION
-Type:Thick Film Resistor Resistance:1kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
+
 Component Kind
 Standard
 LCSC Part Name
-1kΩ ±1% 62.5mW 厚膜电阻
+1KΩ(1001) ±1% 编带
 Supplier Footprint
-0402
+0603
 Datasheet
-https://item.szlcsc.com/datasheet/0402WGF1001TCE/12256.html
+https://atta.szlcsc.com/upload/public/pdf/source/20170920/C21190_1505887441885980538.pdf
 Add into BOM
 yes
 Convert to PCB
 yes
 3D Model Title
-R0402_L1.0-W0.5-H0.4
-Type
-Thick Film Resistor
-Tolerance
-±1%
-Power(Watts)
-62.5mW
-Voltage-Supply(Max)
-50V
-Temperature Coefficient
-±100ppm/℃
-Operating Temperature
--55℃~+155℃
+R0603_L1.6-W0.8-H0.8
+Description
+
 Supplier
 LCSC
 Manufacturer
 UNI-ROYAL(厚声)
 Manufacturer Part
-0402WGF1001TCE
+0603WAF1001T5E
 Supplier Part
-C11702
-Value
-1kΩ
+
 JLCPCB Part Class
 Basic Part
-Description
-Type:Thick Film Resistor Resistance:1kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
 Symbol
 0402WGF1001TCE
 Designator
 R7
-Name
-1kΩ
 Device
-0402WGF1001TCE
+0603WAF1001T5E
 Unique ID
 gge167
+Name
+1KΩ
+Value
+1KΩ
 Reuse Block
 
 Group ID
@@ -5323,129 +4733,55 @@ Channel ID
 DESIGNATOR
 R9
 FOOTPRINT
-R0402
+R0603
 PARTTYPE
-0402WGF1001TCE
+0603WAF1001T5E
 DESCRIPTION
-Type:Thick Film Resistor Resistance:1kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
+
 Component Kind
 Standard
 LCSC Part Name
-1kΩ ±1% 62.5mW 厚膜电阻
+1KΩ(1001) ±1% 编带
 Supplier Footprint
-0402
+0603
 Datasheet
-https://item.szlcsc.com/datasheet/0402WGF1001TCE/12256.html
+https://atta.szlcsc.com/upload/public/pdf/source/20170920/C21190_1505887441885980538.pdf
 Add into BOM
 yes
 Convert to PCB
 yes
 3D Model Title
-R0402_L1.0-W0.5-H0.4
-Type
-Thick Film Resistor
-Tolerance
-±1%
-Power(Watts)
-62.5mW
-Voltage-Supply(Max)
-50V
-Temperature Coefficient
-±100ppm/℃
-Operating Temperature
--55℃~+155℃
+R0603_L1.6-W0.8-H0.8
+Description
+
 Supplier
 LCSC
 Manufacturer
 UNI-ROYAL(厚声)
 Manufacturer Part
-0402WGF1001TCE
+0603WAF1001T5E
 Supplier Part
-C11702
-Value
-1kΩ
+
 JLCPCB Part Class
 Basic Part
-Description
-Type:Thick Film Resistor Resistance:1kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
 Symbol
 0402WGF1001TCE
 Designator
 R9
-Name
-1kΩ
 Device
-0402WGF1001TCE
+0603WAF1001T5E
 Unique ID
 gge167_1
-Reuse Block
-
-Group ID
-
-Channel ID
-
-
-*
-]
-[
-DESIGNATOR
-C1
-FOOTPRINT
-C0402
-PARTTYPE
-CL05A106MQ5NUNC
-DESCRIPTION
-Capacitance:10uF Tolerance:±20% Tolerance:±20% Voltage Rating:6.3V Temperature Coefficient:X5R
-Component Kind
-Standard
-LCSC Part Name
-10uF ±20% 6.3V
-Supplier Part
-C15525
-Manufacturer
-SAMSUNG(三星)
-Manufacturer Part
-CL05A106MQ5NUNC
-Supplier Footprint
-0402
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://item.szlcsc.com/datasheet/CL05A106MQ5NUNC/16204.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-C0402_L1.0-W0.5-H0.5
-Value
-10uF
-Tolerance
-±20%
-Voltage Rating
-6.3V
-Temperature Coefficient
-X5R
-Description
-Capacitance:10uF Tolerance:±20% Tolerance:±20% Voltage Rating:6.3V Temperature Coefficient:X5R
-Symbol
-CL05A106MQ5NUNC
-Designator
-C1
 Name
-10uF
-Device
-CL05A106MQ5NUNC
+1KΩ
+Value
+1KΩ
 Reuse Block
 
 Group ID
 
 Channel ID
 
-Unique ID
-gge188
 
 *
 ]
@@ -5453,27 +4789,25 @@ gge188
 DESIGNATOR
 R8
 FOOTPRINT
-R0402
+R0603
 PARTTYPE
-0402WGF1002TCE
+0603WAF1002T5E
 DESCRIPTION
-Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
+Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
 Component Kind
 Standard
 LCSC Part Name
-10kΩ ±1% 62.5mW 厚膜电阻
-Supplier Part
-C25744
+厚膜电阻 10kΩ ±1% 100mW
 Manufacturer
 UNI-ROYAL(厚声)
 Manufacturer Part
-0402WGF1002TCE
+0603WAF1002T5E
 Supplier Footprint
-0402
+0603
 JLCPCB Part Class
 Basic Part
 Datasheet
-https://item.szlcsc.com/datasheet/0402WGF1002TCE/26487.html
+https://item.szlcsc.com/datasheet/0603WAF1002T5E/26547.html
 Supplier
 LCSC
 Add into BOM
@@ -5481,39 +4815,35 @@ yes
 Convert to PCB
 yes
 3D Model Title
-R0402_L1.0-W0.5-H0.4
-Type
-Thick Film Resistor
+R0603
+Description
+Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
+Supplier Part
+C25804
+Symbol
+0402WGF1002TCE
+Designator
+R8
+Device
+0603WAF1002T5E
+Unique ID
+gge166
+Name
+10kΩ
 Value
 10kΩ
+Type
+Thick Film Resistor
 Tolerance
 ±1%
 Power(Watts)
-62.5mW
+100mW
 Voltage-Supply(Max)
-50V
+75V
 Temperature Coefficient
 ±100ppm/℃
 Operating Temperature
 -55℃~+155℃
-Description
-Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):62.5mW Voltage-Supply(Max):50V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃
-Symbol
-0402WGF1002TCE
-Designator
-R8
-Name
-10kΩ
-Device
-0402WGF1002TCE
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge166
 
 *
 ]
@@ -5647,72 +4977,6 @@ gge169_1
 ]
 [
 DESIGNATOR
-L1
-FOOTPRINT
-L0603
-PARTTYPE
-GZ1608D601TF
-DESCRIPTION
-Impedance @ Frequency:600Ω@100MHz Tolerance:±25% Tolerance:±25% DC Resistance(DCR):450mΩ Current Rating:200mA Number of Circuits:1 Operating Temperature:-55℃~+125℃ Operating Temperature:-55℃~+125℃
-Component Kind
-Standard
-LCSC Part Name
-单路 0603磁珠 阻抗600Ω@100MHz
-Supplier Part
-C1002
-Manufacturer
-Sunlord(顺络)
-Manufacturer Part
-GZ1608D601TF
-Supplier Footprint
-0603
-JLCPCB Part Class
-Basic Part
-Datasheet
-https://item.szlcsc.com/datasheet/GZ1608D601TF/1354.html
-Supplier
-LCSC
-Add into BOM
-yes
-Convert to PCB
-yes
-3D Model Title
-L0603_L1.6-W0.8-H0.5_BEAD
-Impedance @ Frequency
-600Ω@100MHz
-Tolerance
-±25%
-DC Resistance(DCR)
-450mΩ
-Current Rating
-200mA
-Number of Circuits
-1
-Operating Temperature
--55℃~+125℃
-Description
-Impedance @ Frequency:600Ω@100MHz Tolerance:±25% Tolerance:±25% DC Resistance(DCR):450mΩ Current Rating:200mA Number of Circuits:1 Operating Temperature:-55℃~+125℃ Operating Temperature:-55℃~+125℃
-Symbol
-GZ1608D601TF
-Designator
-L1
-Name
-GZ1608D601TF
-Device
-GZ1608D601TF
-Reuse Block
-
-Group ID
-
-Channel ID
-
-Unique ID
-gge199
-
-*
-]
-[
-DESIGNATOR
 CN1
 FOOTPRINT
 CONN-SMD_10P-P2.54_72454-010VLF
@@ -5829,6 +5093,988 @@ gge259
 
 *
 ]
+[
+DESIGNATOR
+R40
+FOOTPRINT
+R0603
+PARTTYPE
+0603WAF1003T5E
+DESCRIPTION
+Type:Thick Film Resistors Resistance: Tolerance:±1% Tolerance:±1% Power(Watts): Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Overload Voltage (Max): Operating Temperature Range:-55℃~+155℃ Operating Temperature Range:-55℃~+155℃ 
+Component Kind
+Standard
+Supplier
+LCSC
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0603WAF1003T5E
+Supplier Part
+C25803
+Value
+100kΩ
+JLCPCB Part Class
+Basic Part
+LCSC Part Name
+100kΩ ±1% 100mW
+Supplier Footprint
+0603
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20200306/C422600_1E6D84923E4A46A82E41ADD87F860B5C.pdf
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0603_L1.6-W0.8-H0.8
+Type
+Thick Film Resistors
+Tolerance
+±1%
+Power(Watts)
+
+Temperature Coefficient
+±100ppm/℃
+Overload Voltage (Max)
+
+Operating Temperature Range
+-55℃~+155℃
+Description
+Type:Thick Film Resistors Resistance: Tolerance:±1% Tolerance:±1% Power(Watts): Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Overload Voltage (Max): Operating Temperature Range:-55℃~+155℃ Operating Temperature Range:-55℃~+155℃ 
+Symbol
+0402WGF1003TCE
+Designator
+R40
+Device
+0603WAF1003T5E
+Unique ID
+gge261
+Name
+100kΩ
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+R41
+FOOTPRINT
+R0603
+PARTTYPE
+0603WAF1001T5E
+DESCRIPTION
+
+Component Kind
+Standard
+LCSC Part Name
+1KΩ(1001) ±1% 编带
+Supplier Footprint
+0603
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20170920/C21190_1505887441885980538.pdf
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0603_L1.6-W0.8-H0.8
+Description
+
+Supplier
+LCSC
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0603WAF1001T5E
+Supplier Part
+
+JLCPCB Part Class
+Basic Part
+Symbol
+0402WGF1001TCE
+Designator
+R41
+Device
+0603WAF1001T5E
+Unique ID
+gge167_2
+Name
+1KΩ
+Value
+1KΩ
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
+[
+DESIGNATOR
+Q1
+FOOTPRINT
+SOT-23_L2.9-W1.3-P1.90-LS2.4-BR
+PARTTYPE
+AO3401A_C15127
+DESCRIPTION
+Number:1 P-Channel Drain to Source Voltage:30V Current - Continuous Drain(Id):4A RDS(on):47mΩ@10V；85mΩ@2.5V；60mΩ@4.5V Pd - Power Dissipation:- Gate Threshold Voltage (Vgs(th)):900mV Gate Charge(Qg):14nC@10V Input Capacitance(Ciss):645pF Reverse Transfer C
+Component Kind
+Standard
+LCSC Part Name
+1个P沟道 耐压:30V 电流:4A
+Supplier Part
+C15127
+Manufacturer
+AOS
+Manufacturer Part
+AO3401A
+Supplier Footprint
+SOT-23
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/AO3401A/15801.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOT-23-3P_L2.9-W1.3-H1.0-LS2.4-P0.95
+Number
+1 P-Channel
+Drain to Source Voltage
+30V
+Current - Continuous Drain(Id)
+4A
+RDS(on)
+47mΩ@10V；85mΩ@2.5V；60mΩ@4.5V
+Pd - Power Dissipation
+-
+Gate Threshold Voltage (Vgs(th))
+900mV
+Gate Charge(Qg)
+14nC@10V
+Input Capacitance(Ciss)
+645pF
+Reverse Transfer Capacitance (Crss@Vds)
+55pF
+Operating Temperature
+-
+Type
+-
+Output Capacitance(Coss)
+80pF
+Description
+Number:1 P-Channel Drain to Source Voltage:30V Current - Continuous Drain(Id):4A RDS(on):47mΩ@10V；85mΩ@2.5V；60mΩ@4.5V Pd - Power Dissipation:- Gate Threshold Voltage (Vgs(th)):900mV Gate Charge(Qg):14nC@10V Input Capacitance(Ciss):645pF Reverse Transfer C
+Symbol
+AO3401A
+Designator
+Q1
+Name
+AO3401A
+Device
+AO3401A_C15127
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge262
+
+*
+]
+[
+DESIGNATOR
+U44
+FOOTPRINT
+LQFP-48_L7.0-W7.0-P0.50-LS9.0-BL
+PARTTYPE
+STM32G474CBT6
+DESCRIPTION
+CPU Core:ARM Cortex-M4F CPU Maximum Speed:170MHz Core Size:32 Bit Program Storage Size:128KB Program Memory Type:FLASH RAM Size:128KB EEPROM:- Number of I/O:38 ADC (Bit):12bit DAC (Bit):12bit Oscillator Type:Built-in Voltage - Supply:1.71V~3.6V Voltage -
+Component Kind
+Standard
+LCSC Part Name
+Arm Cortex-M4 32位MCU+FPU，170 MHz/213 DMIPS，128 KB SRAM，丰富的模拟功能、数学加速器，184 ps 12通道高分辨率定时器
+Supplier Part
+C730123
+Manufacturer
+ST(意法半导体)
+Manufacturer Part
+STM32G474CBT6
+Supplier Footprint
+LQFP-48(7x7)
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/STM32G474CBT6/778078.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+LQFP-48_L7.0-W7.0-H1.4-LS9.0-P0.50
+CPU Core
+ARM Cortex-M4F
+CPU Maximum Speed
+170MHz
+Core Size
+32 Bit
+Program Storage Size
+128KB
+Program Memory Type
+FLASH
+RAM Size
+128KB
+EEPROM
+-
+Number of I/O
+38
+ADC (Bit)
+12bit
+DAC (Bit)
+12bit
+Oscillator Type
+Built-in
+Voltage - Supply
+1.71V~3.6V
+Operating Temperature
+-40℃~+85℃
+Description
+CPU Core:ARM Cortex-M4F CPU Maximum Speed:170MHz Core Size:32 Bit Program Storage Size:128KB Program Memory Type:FLASH RAM Size:128KB EEPROM:- Number of I/O:38 ADC (Bit):12bit DAC (Bit):12bit Oscillator Type:Built-in Voltage - Supply:1.71V~3.6V Voltage -
+Symbol
+STM32G474CBT6
+Designator
+U44
+Name
+STM32G474CBT6
+Device
+STM32G474CBT6
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge260
+
+*
+]
+[
+DESIGNATOR
+C50
+FOOTPRINT
+C0402
+PARTTYPE
+CL05B104KO5NNNC
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Component Kind
+Standard
+LCSC Part Name
+100nF ±10% 16V
+Supplier Part
+C1525
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL05B104KO5NNNC
+Supplier Footprint
+0402
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0402_L1.0-W0.5-H0.5
+Value
+100nF
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Symbol
+CL05B104KO5NNNC
+Designator
+C50
+Name
+100nF
+Device
+CL05B104KO5NNNC
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge49
+
+*
+]
+[
+DESIGNATOR
+C55
+FOOTPRINT
+C0402
+PARTTYPE
+CL05A105KA5NQNC
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Component Kind
+Standard
+LCSC Part Name
+1uF ±10% 25V
+Supplier Part
+C52923
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL05A105KA5NQNC
+Supplier Footprint
+0402
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0402_L1.0-W0.5-H0.5
+Value
+1uF
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Symbol
+CL05A105KA5NQNC
+Designator
+C55
+Name
+1uF
+Device
+CL05A105KA5NQNC
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge53_1
+
+*
+]
+[
+DESIGNATOR
+C7
+FOOTPRINT
+C0402
+PARTTYPE
+CL05A105KA5NQNC
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Component Kind
+Standard
+LCSC Part Name
+1uF ±10% 25V
+Supplier Part
+C52923
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL05A105KA5NQNC
+Supplier Footprint
+0402
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0402_L1.0-W0.5-H0.5
+Value
+1uF
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Symbol
+CL05A105KA5NQNC
+Designator
+C7
+Name
+1uF
+Device
+CL05A105KA5NQNC
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge53
+
+*
+]
+[
+DESIGNATOR
+L1
+FOOTPRINT
+L0603
+PARTTYPE
+GZ1608D601TF
+DESCRIPTION
+Impedance @ Frequency:600Ω@100MHz Tolerance:±25% Tolerance:±25% DC Resistance(DCR):450mΩ Current Rating:200mA Number of Circuits:1 Operating Temperature:-55℃~+125℃ Operating Temperature:-55℃~+125℃
+Component Kind
+Standard
+LCSC Part Name
+单路 0603磁珠 阻抗600Ω@100MHz
+Supplier Part
+C1002
+Manufacturer
+Sunlord(顺络)
+Manufacturer Part
+GZ1608D601TF
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/GZ1608D601TF/1354.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+L0603_L1.6-W0.8-H0.5_BEAD
+Impedance @ Frequency
+600Ω@100MHz
+Tolerance
+±25%
+DC Resistance(DCR)
+450mΩ
+Current Rating
+200mA
+Number of Circuits
+1
+Operating Temperature
+-55℃~+125℃
+Description
+Impedance @ Frequency:600Ω@100MHz Tolerance:±25% Tolerance:±25% DC Resistance(DCR):450mΩ Current Rating:200mA Number of Circuits:1 Operating Temperature:-55℃~+125℃ Operating Temperature:-55℃~+125℃
+Symbol
+GZ1608D601TF
+Designator
+L1
+Name
+GZ1608D601TF
+Device
+GZ1608D601TF
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge199
+
+*
+]
+[
+DESIGNATOR
+C53
+FOOTPRINT
+C0402
+PARTTYPE
+CL05B104KO5NNNC
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Component Kind
+Standard
+LCSC Part Name
+100nF ±10% 16V
+Supplier Part
+C1525
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL05B104KO5NNNC
+Supplier Footprint
+0402
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0402_L1.0-W0.5-H0.5
+Value
+100nF
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Symbol
+CL05B104KO5NNNC
+Designator
+C53
+Name
+100nF
+Device
+CL05B104KO5NNNC
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge49_3
+
+*
+]
+[
+DESIGNATOR
+C54
+FOOTPRINT
+C0805
+PARTTYPE
+CL21A475KAQNNNE
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Component Kind
+Standard
+LCSC Part Name
+4.7uF ±10% 25V
+Supplier Part
+C1779
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL21A475KAQNNNE
+Supplier Footprint
+0805
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20160103/1457707696447.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0805_L2.0-W1.3-H1.3
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Value
+4.7uF
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Symbol
+1206B475K500NT
+Designator
+C54
+Device
+CL21A475KAQNNNE
+Unique ID
+gge250_1
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Name
+4.7uF
+
+*
+]
+[
+DESIGNATOR
+C52
+FOOTPRINT
+C0402
+PARTTYPE
+CL05B104KO5NNNC
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Component Kind
+Standard
+LCSC Part Name
+100nF ±10% 16V
+Supplier Part
+C1525
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL05B104KO5NNNC
+Supplier Footprint
+0402
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0402_L1.0-W0.5-H0.5
+Value
+100nF
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Symbol
+CL05B104KO5NNNC
+Designator
+C52
+Name
+100nF
+Device
+CL05B104KO5NNNC
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge49_2
+
+*
+]
+[
+DESIGNATOR
+C51
+FOOTPRINT
+C0402
+PARTTYPE
+CL05B104KO5NNNC
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Component Kind
+Standard
+LCSC Part Name
+100nF ±10% 16V
+Supplier Part
+C1525
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL05B104KO5NNNC
+Supplier Footprint
+0402
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0402_L1.0-W0.5-H0.5
+Value
+100nF
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Symbol
+CL05B104KO5NNNC
+Designator
+C51
+Name
+100nF
+Device
+CL05B104KO5NNNC
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge49_1
+
+*
+]
+[
+DESIGNATOR
+C8
+FOOTPRINT
+C0402
+PARTTYPE
+CL05B103KB5NNNC
+DESCRIPTION
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Component Kind
+Standard
+LCSC Part Name
+10nF ±10% 50V
+Supplier Part
+C15195
+Manufacturer
+SAMSUNG(三星)
+Manufacturer Part
+CL05B103KB5NNNC
+Supplier Footprint
+0402
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+C0402_L1.0-W0.5-H0.5
+Tolerance
+±10%
+Voltage Rated
+
+Temperature Coefficient
+
+Description
+Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient:
+Value
+10nF
+Symbol
+CL05B103KB5NNNC
+Designator
+C8
+Name
+10nF
+Device
+CL05B103KB5NNNC
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge52
+
+*
+]
+[
+DESIGNATOR
+LED_READY1
+FOOTPRINT
+LED0805-R-RD
+PARTTYPE
+KT-0805Y
+DESCRIPTION
+Illumination Color:Yellow Voltage - Forward(Vf):1.8V~2.4V Voltage - Forward(Vf):1.8V~2.4V Power(Watts):40mW Forward Current:- Wavelength - Dominant:584nm~594nm Wavelength - Dominant:584nm~594nm Peak Wavelength:596nm Diode Configuration:- Lens Color:Water
+Component Kind
+Standard
+LCSC Part Name
+0805 黄灯 高亮
+Supplier Part
+C2296
+Manufacturer
+KENTO
+Manufacturer Part
+KT-0805Y
+Supplier Footprint
+0805
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://item.szlcsc.com/datasheet/KT-0805Y/2669.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+LED0805-RD
+Illumination Color
+Yellow
+Voltage - Forward(Vf)
+1.8V~2.4V
+Power(Watts)
+40mW
+Forward Current
+-
+Wavelength - Dominant
+584nm~594nm
+Peak Wavelength
+596nm
+Diode Configuration
+-
+Lens Color
+Water Clear
+Color Temperature
+-
+Luminous Intensity
+175mcd
+Viewing Angle
+120°
+Mounting Style
+-
+Operating Temperature
+-40℃~+85℃
+Description
+Illumination Color:Yellow Voltage - Forward(Vf):1.8V~2.4V Voltage - Forward(Vf):1.8V~2.4V Power(Watts):40mW Forward Current:- Wavelength - Dominant:584nm~594nm Wavelength - Dominant:584nm~594nm Peak Wavelength:596nm Diode Configuration:- Lens Color:Water
+Symbol
+17-21SUYC/TR8
+Designator
+LED_READY1
+Name
+KT-0805Y
+Device
+KT-0805Y
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge187_1
+Comment
+READY
+
+*
+]
+[
+DESIGNATOR
+R42
+FOOTPRINT
+R0603
+PARTTYPE
+0603WAF1001T5E
+DESCRIPTION
+
+Component Kind
+Standard
+LCSC Part Name
+1KΩ(1001) ±1% 编带
+Supplier Footprint
+0603
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20170920/C21190_1505887441885980538.pdf
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0603_L1.6-W0.8-H0.8
+Description
+
+Supplier
+LCSC
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0603WAF1001T5E
+Supplier Part
+
+JLCPCB Part Class
+Basic Part
+Symbol
+0402WGF1001TCE
+Designator
+R42
+Device
+0603WAF1001T5E
+Unique ID
+gge167_3
+Name
+1KΩ
+Value
+1KΩ
+Reuse Block
+
+Group ID
+
+Channel ID
+
+
+*
+]
 (
 $1I10936\$1N697 
 U13-1 74HC4052PW,118-2Y0 Passive 
@@ -5842,7 +6088,7 @@ U12-3 SC4015SO-N-TR-OUT Passive
 (
 A_IN3 
 U13-3 74HC4052PW,118-2Z Passive 
-U46-13 STM32F103C8T6-PA3 Passive 
+U44-15 STM32G474CBT6-PA7 Passive 
 )
 (
 $1I10936\$1N699 
@@ -5911,10 +6157,8 @@ U43-2 SC4015SO-N-TR-GND Passive
 U38-2 SC4015SO-N-TR-GND Passive 
 U41-2 SC4015SO-N-TR-GND Passive 
 U42-2 SC4015SO-N-TR-GND Passive 
-R1-1 0402WGF1002TCE-1 Input   
-R2-1 0402WGF1002TCE-1 Input   
-R3-1 0402WGF1002TCE-1 Input   
-R4-1 0402WGF1002TCE-1 Input   
+R3-1 0603WAF1002T5E-1 Input   
+R4-1 0603WAF1002T5E-1 Input   
 SW3-1 TS-1088-AR02016-1 Passive 
 C36-2 CC0603KRX7R9BB104-2 Passive 
 D6-1 H5VND5BA-1 Passive 
@@ -5924,21 +6168,10 @@ D8-1 H5VND5BA-1 Passive
 SW4-1 TS-1088-AR02016-1 Passive 
 C41-2 CC0603KRX7R9BB104-2 Passive 
 D9-1 H5VND5BA-1 Passive 
-C3-2 CL05B104KO5NNNC-2 Passive 
-C2-2 CL05B104KO5NNNC-2 Passive 
-C4-2 CL05B104KO5NNNC-2 Passive 
-U46-8 STM32F103C8T6-VSSA Passive 
-U46-23 STM32F103C8T6-VSS_1 Passive 
-U46-35 STM32F103C8T6-VSS_2 Passive 
-U46-47 STM32F103C8T6-VSS_3 Passive 
-C5-2 CL05B104KO5NNNC-2 Passive 
-C6-1 CL05A105KA5NQNC-1 Passive 
-C7-1 CL05B103KB5NNNC-1 Input   
 TV1-2 SRV05-4-P-T7_C85364-2 Input   
 TV2-2 SRV05-4-P-T7_C85364-2 Input   
-LED_FN1-2 KT-0805G-K Passive 
+LED_FN0-2 KT-0805G-K Passive 
 LED_POW-2 KT-0805Y-- Passive 
-C1-1 CL05A106MQ5NUNC-1 Input   
 TV3-2 SRV05-4-P-T7_C85364-2 Input   
 TV5-2 SRV05-4-P-T7_C85364-2 Input   
 CN1-3 72454-010VLF-3 Passive 
@@ -5946,6 +6179,20 @@ CN1-5 72454-010VLF-5 Passive
 CN1-7 72454-010VLF-7 Passive 
 CN3-5 STDC14_Connector-GND Input   
 CN3-7 STDC14_Connector-GND Input   
+U44-19 STM32G474CBT6-VSSA Passive 
+U44-20 STM32G474CBT6-VREF+ Passive 
+U44-23 STM32G474CBT6-VSS Passive 
+U44-35 STM32G474CBT6-VSS Passive 
+U44-47 STM32G474CBT6-VSS Passive 
+C50-2 CL05B104KO5NNNC-2 Passive 
+C55-1 CL05A105KA5NQNC-1 Passive 
+C7-1 CL05A105KA5NQNC-1 Passive 
+C53-2 CL05B104KO5NNNC-2 Passive 
+C54-1 CL21A475KAQNNNE-1 Input   
+C52-2 CL05B104KO5NNNC-2 Passive 
+C51-2 CL05B104KO5NNNC-2 Passive 
+C8-1 CL05B103KB5NNNC-1 Input   
+LED_READY1-2 KT-0805Y-- Passive 
 )
 (
 SEL1 
@@ -5954,7 +6201,7 @@ U4-9 74HC4052PW,118-S1 Passive
 U22-9 74HC4052PW,118-S1 Passive 
 U31-9 74HC4052PW,118-S1 Passive 
 U40-9 74HC4052PW,118-S1 Passive 
-U46-22 STM32F103C8T6-PB11 Passive 
+U44-4 STM32G474CBT6-PC15-OSC32_OUT Passive 
 )
 (
 SEL0 
@@ -5963,7 +6210,7 @@ U4-10 74HC4052PW,118-S0 Passive
 U22-10 74HC4052PW,118-S0 Passive 
 U31-10 74HC4052PW,118-S0 Passive 
 U40-10 74HC4052PW,118-S0 Passive 
-U46-21 STM32F103C8T6-PB10 Passive 
+U44-3 STM32G474CBT6-PC14-OSC32_IN Passive 
 )
 (
 $1I10936\$1N711 
@@ -5978,7 +6225,7 @@ U16-3 SC4015SO-N-TR-OUT Passive
 (
 A_IN2 
 U13-13 74HC4052PW,118-1Z Passive 
-U46-12 STM32F103C8T6-PA2 Passive 
+U44-14 STM32G474CBT6-PA6 Passive 
 )
 (
 $1I10936\$1N708 
@@ -5993,6 +6240,34 @@ U11-3 SC4015SO-N-TR-OUT Passive
 (
 VCC 
 U13-16 74HC4052PW,118-VCC Passive 
+U4-16 74HC4052PW,118-VCC Passive 
+U22-16 74HC4052PW,118-VCC Passive 
+U31-16 74HC4052PW,118-VCC Passive 
+U40-16 74HC4052PW,118-VCC Passive 
+R5-1 0603WAF1002T5E-1 Input   
+FN3_BOOT0-1 TS-1088-AR02016-1 Passive 
+TV1-5 SRV05-4-P-T7_C85364-5 Input   
+TV2-5 SRV05-4-P-T7_C85364-5 Input   
+R9-2 0603WAF1001T5E-2 Input   
+R8-2 0603WAF1002T5E-2 Input   
+TV3-5 SRV05-4-P-T7_C85364-5 Input   
+TV5-5 SRV05-4-P-T7_C85364-5 Input   
+CN1-1 72454-010VLF-1 Passive 
+CN3-3 STDC14_Connector-T_VCC Input   
+R40-2 0603WAF1003T5E-2 Input   
+Q1-2 AO3401A_C15127-S Passive 
+U44-1 STM32G474CBT6-VBAT Passive 
+U44-24 STM32G474CBT6-VDD Passive 
+U44-36 STM32G474CBT6-VDD Passive 
+U44-48 STM32G474CBT6-VDD Passive 
+L1-1 GZ1608D601TF-1 Passive 
+C53-1 CL05B104KO5NNNC-1 Passive 
+C54-2 CL21A475KAQNNNE-2 Input   
+C52-1 CL05B104KO5NNNC-1 Passive 
+C51-1 CL05B104KO5NNNC-1 Passive 
+)
+(
+VDDH 
 U10-1 SC4015SO-N-TR-VDD Passive 
 U12-1 SC4015SO-N-TR-VDD Passive 
 U15-1 SC4015SO-N-TR-VDD Passive 
@@ -6001,7 +6276,6 @@ U11-1 SC4015SO-N-TR-VDD Passive
 U14-1 SC4015SO-N-TR-VDD Passive 
 U16-1 SC4015SO-N-TR-VDD Passive 
 U18-1 SC4015SO-N-TR-VDD Passive 
-U4-16 74HC4052PW,118-VCC Passive 
 U1-1 SC4015SO-N-TR-VDD Passive 
 U3-1 SC4015SO-N-TR-VDD Passive 
 U6-1 SC4015SO-N-TR-VDD Passive 
@@ -6010,7 +6284,6 @@ U2-1 SC4015SO-N-TR-VDD Passive
 U5-1 SC4015SO-N-TR-VDD Passive 
 U7-1 SC4015SO-N-TR-VDD Passive 
 U9-1 SC4015SO-N-TR-VDD Passive 
-U22-16 74HC4052PW,118-VCC Passive 
 U19-1 SC4015SO-N-TR-VDD Passive 
 U21-1 SC4015SO-N-TR-VDD Passive 
 U24-1 SC4015SO-N-TR-VDD Passive 
@@ -6019,7 +6292,6 @@ U20-1 SC4015SO-N-TR-VDD Passive
 U23-1 SC4015SO-N-TR-VDD Passive 
 U25-1 SC4015SO-N-TR-VDD Passive 
 U27-1 SC4015SO-N-TR-VDD Passive 
-U31-16 74HC4052PW,118-VCC Passive 
 U28-1 SC4015SO-N-TR-VDD Passive 
 U30-1 SC4015SO-N-TR-VDD Passive 
 U33-1 SC4015SO-N-TR-VDD Passive 
@@ -6028,34 +6300,13 @@ U29-1 SC4015SO-N-TR-VDD Passive
 U32-1 SC4015SO-N-TR-VDD Passive 
 U34-1 SC4015SO-N-TR-VDD Passive 
 U36-1 SC4015SO-N-TR-VDD Passive 
-U40-16 74HC4052PW,118-VCC Passive 
 U37-1 SC4015SO-N-TR-VDD Passive 
 U39-1 SC4015SO-N-TR-VDD Passive 
 U43-1 SC4015SO-N-TR-VDD Passive 
 U38-1 SC4015SO-N-TR-VDD Passive 
 U41-1 SC4015SO-N-TR-VDD Passive 
 U42-1 SC4015SO-N-TR-VDD Passive 
-R5-1 0402WGF1002TCE-1 Input   
-FN3_BOOT0-1 TS-1088-AR02016-1 Passive 
-C3-1 CL05B104KO5NNNC-1 Passive 
-C2-1 CL05B104KO5NNNC-1 Passive 
-C4-1 CL05B104KO5NNNC-1 Passive 
-U46-1 STM32F103C8T6-VBAT Passive 
-U46-9 STM32F103C8T6-VDDA Passive 
-U46-24 STM32F103C8T6-VDD_1 Passive 
-U46-36 STM32F103C8T6-VDD_2 Passive 
-U46-48 STM32F103C8T6-VDD_3 Passive 
-C5-1 CL05B104KO5NNNC-1 Passive 
-TV1-5 SRV05-4-P-T7_C85364-5 Input   
-TV2-5 SRV05-4-P-T7_C85364-5 Input   
-R9-2 0402WGF1001TCE-2 Input   
-C1-2 CL05A106MQ5NUNC-2 Input   
-R8-2 0402WGF1002TCE-2 Input   
-TV3-5 SRV05-4-P-T7_C85364-5 Input   
-TV5-5 SRV05-4-P-T7_C85364-5 Input   
-L1-1 GZ1608D601TF-1 Passive 
-CN1-1 72454-010VLF-1 Passive 
-CN3-3 STDC14_Connector-T_VCC Input   
+Q1-3 AO3401A_C15127-D Passive 
 )
 (
 $1I10958\$1N697 
@@ -6070,7 +6321,7 @@ U3-3 SC4015SO-N-TR-OUT Passive
 (
 A_IN1 
 U4-3 74HC4052PW,118-2Z Passive 
-U46-11 STM32F103C8T6-PA1 Passive 
+U44-9 STM32G474CBT6-PA1 Passive 
 )
 (
 $1I10958\$1N699 
@@ -6095,7 +6346,7 @@ U7-3 SC4015SO-N-TR-OUT Passive
 (
 A_IN0 
 U4-13 74HC4052PW,118-1Z Passive 
-U46-10 STM32F103C8T6-PA0-WKUP Passive 
+U44-8 STM32G474CBT6-PA0 Passive 
 )
 (
 $1I10958\$1N708 
@@ -6120,7 +6371,7 @@ U21-3 SC4015SO-N-TR-OUT Passive
 (
 A_IN5 
 U22-3 74HC4052PW,118-2Z Passive 
-U46-15 STM32F103C8T6-PA5 Passive 
+U44-17 STM32G474CBT6-PB1 Passive 
 )
 (
 $1I10980\$1N699 
@@ -6145,7 +6396,7 @@ U25-3 SC4015SO-N-TR-OUT Passive
 (
 A_IN4 
 U22-13 74HC4052PW,118-1Z Passive 
-U46-14 STM32F103C8T6-PA4 Passive 
+U44-16 STM32G474CBT6-PB0 Passive 
 )
 (
 $1I10980\$1N708 
@@ -6170,7 +6421,7 @@ U30-3 SC4015SO-N-TR-OUT Passive
 (
 A_IN7 
 U31-3 74HC4052PW,118-2Z Passive 
-U46-17 STM32F103C8T6-PA7 Passive 
+U44-30 STM32G474CBT6-PA8 Passive 
 )
 (
 $1I11002\$1N699 
@@ -6195,7 +6446,7 @@ U34-3 SC4015SO-N-TR-OUT Passive
 (
 A_IN6 
 U31-13 74HC4052PW,118-1Z Passive 
-U46-16 STM32F103C8T6-PA6 Passive 
+U44-31 STM32G474CBT6-PA9 Passive 
 )
 (
 $1I11002\$1N708 
@@ -6220,7 +6471,7 @@ U39-3 SC4015SO-N-TR-OUT Passive
 (
 A_IN9 
 U40-3 74HC4052PW,118-2Z Passive 
-U46-19 STM32F103C8T6-PB1 Passive 
+U44-28 STM32G474CBT6-PB14 Passive 
 )
 (
 $1I18136\$1N703 
@@ -6235,7 +6486,7 @@ U42-3 SC4015SO-N-TR-OUT Passive
 (
 A_IN8 
 U40-13 74HC4052PW,118-1Z Passive 
-U46-18 STM32F103C8T6-PB0 Passive 
+U44-29 STM32G474CBT6-PB15 Passive 
 )
 (
 $1I18136\$1N708 
@@ -6248,38 +6499,28 @@ U40-15 74HC4052PW,118-1Y2 Passive
 U38-3 SC4015SO-N-TR-OUT Passive 
 )
 (
-ID4 
-R1-2 0402WGF1002TCE-2 Input   
-U46-46 STM32F103C8T6-PB9 Passive 
-)
-(
-ID3 
-R2-2 0402WGF1002TCE-2 Input   
-U46-45 STM32F103C8T6-PB8 Passive 
-)
-(
 ID2 
-R3-2 0402WGF1002TCE-2 Input   
-U46-43 STM32F103C8T6-PB7 Passive 
+R3-2 0603WAF1002T5E-2 Input   
+U44-6 STM32G474CBT6-PF1-OSC_OUT Passive 
 )
 (
 ID1 
-R4-2 0402WGF1002TCE-2 Input   
-U46-42 STM32F103C8T6-PB6 Passive 
+R4-2 0603WAF1002T5E-2 Input   
+U44-5 STM32G474CBT6-PF0-OSC_IN Passive 
 )
 (
 ID0 
-R5-2 0402WGF1002TCE-2 Input   
-U46-41 STM32F103C8T6-PB5 Passive 
+R5-2 0603WAF1002T5E-2 Input   
+U44-2 STM32G474CBT6-PC13 Passive 
 )
 (
 PGM_NRST 
 SW3-2 TS-1088-AR02016-2 Passive 
 C36-1 CC0603KRX7R9BB104-1 Passive 
 D6-2 H5VND5BA-2 Passive 
-U46-7 STM32F103C8T6-NRST Passive 
 TV5-6 SRV05-4-P-T7_C85364-6 Input   
 CN1-9 72454-010VLF-9 Passive 
+U44-7 STM32G474CBT6-PG10-NRST Passive 
 )
 (
 BOOT0 
@@ -6287,92 +6528,51 @@ R37-1 0603WAF1002T5E-1 Input
 FN3_BOOT0-2 TS-1088-AR02016-2 Passive 
 C40-1 CC0603KRX7R9BB104-1 Passive 
 D8-2 H5VND5BA-2 Passive 
-U46-44 STM32F103C8T6-BOOT0 Passive 
+U44-45 STM32G474CBT6-PB8-BOOT0 Passive 
 )
 (
-SW_FN1 
+SW_FN0 
 SW4-2 TS-1088-AR02016-2 Passive 
 C41-1 CC0603KRX7R9BB104-1 Passive 
 D9-2 H5VND5BA-2 Passive 
-U46-33 STM32F103C8T6-PA12 Passive 
-)
-(
-SPI_NSS 
-U46-25 STM32F103C8T6-PB12 Passive 
-TV1-3 SRV05-4-P-T7_C85364-3 Input   
-R8-1 0402WGF1002TCE-1 Input   
-CN1-8 72454-010VLF-8 Passive 
+U44-27 STM32G474CBT6-PB13 Passive 
 )
 (
 SPI_SCK 
-U46-26 STM32F103C8T6-PB13 Passive 
 TV1-1 SRV05-4-P-T7_C85364-1 Input   
 CN1-6 72454-010VLF-6 Passive 
+U44-13 STM32G474CBT6-PA5 Passive 
 )
 (
-SPI_MISO 
-U46-27 STM32F103C8T6-PB14 Passive 
-TV1-6 SRV05-4-P-T7_C85364-6 Input   
-CN1-4 72454-010VLF-4 Passive 
+SPI_NSS 
+TV1-3 SRV05-4-P-T7_C85364-3 Input   
+R8-1 0603WAF1002T5E-1 Input   
+CN1-8 72454-010VLF-8 Passive 
+U44-12 STM32G474CBT6-PA4 Passive 
 )
 (
 SPI_MOSI 
-U46-28 STM32F103C8T6-PB15 Passive 
 TV1-4 SRV05-4-P-T7_C85364-4 Input   
 CN1-2 72454-010VLF-2 Passive 
+U44-42 STM32G474CBT6-PB5 Passive 
 )
 (
-READY 
-U46-29 STM32F103C8T6-PA8 Passive 
-TV5-4 SRV05-4-P-T7_C85364-4 Input   
-CN1-10 72454-010VLF-10 Passive 
-)
-(
-PGM_USART_TX 
-U46-30 STM32F103C8T6-PA9 Passive 
-TV2-6 SRV05-4-P-T7_C85364-6 Input   
-CN3-14 STDC14_Connector-T VCP TX Input   
-)
-(
-PGM_USART_RX 
-U46-31 STM32F103C8T6-PA10 Passive 
-TV3-4 SRV05-4-P-T7_C85364-4 Input   
-CN3-13 STDC14_Connector-T_VCP_RX Input   
-)
-(
-LED_FN1 
-U46-32 STM32F103C8T6-PA11 Passive 
-R7-2 0402WGF1001TCE-2 Input   
-)
-(
-PGM_SWDIO 
-U46-34 STM32F103C8T6-PA13 Passive 
-TV2-3 SRV05-4-P-T7_C85364-3 Input   
-CN3-4 STDC14_Connector-T_JTMS/T_SWDIO Input   
+SPI_MISO 
+TV1-6 SRV05-4-P-T7_C85364-6 Input   
+CN1-4 72454-010VLF-4 Passive 
+U44-41 STM32G474CBT6-PB4 Passive 
 )
 (
 PGM_SWCLK 
-U46-37 STM32F103C8T6-PA14 Passive 
 TV2-1 SRV05-4-P-T7_C85364-1 Input   
 CN3-6 STDC14_Connector-T_JCLK/T_SWCLK Input   
+U44-38 STM32G474CBT6-PA14 Passive 
 )
 (
-PGM_DETECT 
-U46-38 STM32F103C8T6-PA15 Passive 
-TV3-1 SRV05-4-P-T7_C85364-1 Input   
-CN3-11 STDC14_Connector-GNDDetect Input   
-)
-(
-PGM_SWO 
-U46-39 STM32F103C8T6-PB3 Passive 
-TV3-6 SRV05-4-P-T7_C85364-6 Input   
-CN3-8 STDC14_Connector-T_JTDO/T_SWO Input   
-)
-(
-VDDA 
-C6-2 CL05A105KA5NQNC-2 Passive 
-C7-2 CL05B103KB5NNNC-2 Input   
-L1-2 GZ1608D601TF-2 Passive 
+PGM_SWDIO 
+TV2-3 SRV05-4-P-T7_C85364-3 Input   
+CN3-4 STDC14_Connector-T_JTMS/T_SWDIO Input   
+U44-37 STM32G474CBT6-PA13 Passive 
 )
 (
 PGM_RESET 
@@ -6380,12 +6580,73 @@ TV2-4 SRV05-4-P-T7_C85364-4 Input
 CN3-12 STDC14_Connector-#RST Input   
 )
 (
+PGM_USART_TX 
+TV2-6 SRV05-4-P-T7_C85364-6 Input   
+CN3-14 STDC14_Connector-T VCP TX Input   
+U44-43 STM32G474CBT6-PB6 Passive 
+)
+(
 $1N18835 
-LED_FN1-1 KT-0805G-A Passive 
-R7-1 0402WGF1001TCE-1 Input   
+LED_FN0-1 KT-0805G-A Passive 
+R7-1 0603WAF1001T5E-1 Input   
 )
 (
 $1N18841 
 LED_POW-1 KT-0805Y-+ Passive 
-R9-1 0402WGF1001TCE-1 Input   
+R9-1 0603WAF1001T5E-1 Input   
+)
+(
+LED_FN0 
+R7-2 0603WAF1001T5E-2 Input   
+U44-26 STM32G474CBT6-PB12 Passive 
+)
+(
+PGM_DETECT 
+TV3-1 SRV05-4-P-T7_C85364-1 Input   
+CN3-11 STDC14_Connector-GNDDetect Input   
+U44-39 STM32G474CBT6-PA15 Passive 
+)
+(
+PGM_USART_RX 
+TV3-4 SRV05-4-P-T7_C85364-4 Input   
+CN3-13 STDC14_Connector-T_VCP_RX Input   
+U44-32 STM32G474CBT6-PA10 Passive 
+)
+(
+PGM_SWO 
+TV3-6 SRV05-4-P-T7_C85364-6 Input   
+CN3-8 STDC14_Connector-T_JTDO/T_SWO Input   
+U44-40 STM32G474CBT6-PB3 Passive 
+)
+(
+READY 
+TV5-4 SRV05-4-P-T7_C85364-4 Input   
+CN1-10 72454-010VLF-10 Passive 
+U44-44 STM32G474CBT6-PB7 Passive 
+R42-2 0603WAF1001T5E-2 Input   
+)
+(
+$1N39913 
+R40-1 0603WAF1003T5E-1 Input   
+R41-2 0603WAF1001T5E-2 Input   
+Q1-1 AO3401A_C15127-G Passive 
+)
+(
+HALL_NEN 
+R41-1 0603WAF1001T5E-1 Input   
+U44-25 STM32G474CBT6-PB11 Passive 
+)
+(
+VDDA 
+U44-21 STM32G474CBT6-VDDA Passive 
+C50-1 CL05B104KO5NNNC-1 Passive 
+C55-2 CL05A105KA5NQNC-2 Passive 
+C7-2 CL05A105KA5NQNC-2 Passive 
+L1-2 GZ1608D601TF-2 Passive 
+C8-2 CL05B103KB5NNNC-2 Input   
+)
+(
+$1N45682 
+LED_READY1-1 KT-0805Y-+ Passive 
+R42-1 0603WAF1001T5E-1 Input   
 )

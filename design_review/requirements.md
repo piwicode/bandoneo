@@ -33,18 +33,16 @@ Cube enclosure with two vertical keyboards (wing boards) facing outward, mirrori
 - **Output:** Raw key state data → motherboard via internal bus.
 
 ### Push/Pull Sensing
-A loadcell measures bellows-replacement effort (push vs. pull). No moving air parts — the goal is to avoid brittle mechanical assemblies. If the loadcell approach proves impractical, fallback is a pedal-based push/pull mode switch.
+A **spring-blade flexure** measures bellows-replacement effort (push vs. pull): the blade deflects proportionally to the player's effort and two hall sensors read its position. No moving air parts — the goal is to avoid brittle mechanical assemblies. A loadcell was evaluated and rejected: the near-zero compliance of a loadcell removes the proprioceptive feedback that bandoneonists rely on (it plays like pressing on a wall), whereas the spring blade preserves the small, defined travel that lets the player modulate effort by feel. If the spring-blade approach proves impractical, fallback is a pedal-based push/pull mode switch.
 
 ### Motherboard
 **Role:** Central collection, processing, and I/O.
 
-- **Input:** Key state from both wing boards; push/pull loadcell; pedals.
+- **Input:** Key state from both wing boards; push/pull spring-blade hall sensors; pedals.
 - **Processing:** Velocity computation, MIDI event generation, threshold tuning.
-- **Output:**
-  - Wireless: Bluetooth LE-MIDI
-  - Wired: USB-MIDI
+- **Output:** USB-MIDI.
 - **Features:** Threshold configuration, latency optimization, MIDI panic button (sends note-off to all notes for stage emergency reset).
-- **Power:** Rechargeable battery with USB charging. Minimum 2 h continuous operation on battery. Manual force power-off for debug/reset or user emergency shutdown.
+- **Power:** Bus-powered from USB VBUS (5 V, USB 2.0) — no internal battery, no on-board charger. A powered hub between the host phone/computer and a wall charger supplies the instrument (~1.25 W at the VBUS budget) while keeping the host charged. Unplugging the cable powers the instrument off; there is no on/off switch. **Connector choice (USB-A / USB-B / USB-C / Micro-B) is a separate decision driven by mechanical reliability and is not constrained by the electrical design.**
 
 ## Peripherals
 
@@ -53,22 +51,21 @@ A loadcell measures bellows-replacement effort (push vs. pull). No moving air pa
 - **Expression Pedal:** Continuous control (volume, push/pull effort, or other CC mapping). Compatible with M-Audio EX-P / Roland EV-5 (see [hardware.md](hardware.md)).
 
 **Connectivity:**
-- **Bluetooth LE-MIDI:** Pair with phone or computer for practice and composition.
-- **USB-MIDI:** Studio / DAW use; also charges the battery.
+- **USB-MIDI:** Connect to phone, tablet, or computer for practice, performance, and composition. The host runs the soft-synth; the instrument is a MIDI controller only.
+- **Hub workflow (reference setup):** A powered hub at the host combines (a) wall-charger power passthrough to the host, (b) a 3.5 mm headphone jack tied to the host's audio output, and (c) a downstream USB port for the instrument. One cable from the hub to the instrument carries both VBUS power and USB-MIDI; headphones and charger plug into the hub, not the instrument.
+
 
 **Deferred (not in v1):**
 - **DIN 5-pin MIDI:** No clear use case; proper opto-isolation adds parts and board area. Revisit post-release.
-- **Bluetooth Audio:** STM32WB5MMG lacks classic A2DP. Waiting on STM32WBA6M general availability (expected end of 2026) rather than adding a separate audio frontend.
-- **Audio jack:** Not needed if BT-Audio path is added later; redundant with USB-MIDI for now.
+- **Wireless (BLE-MIDI):** Removed from v1 in favour of the wired hub workflow above, which makes wireless redundant for the supported use cases (phone practice, DAW studio, stage). Revisit only if a battery-powered standalone mode is added later — that would re-introduce battery, charger, and a wireless module together.
+- **On-board audio jack:** Not needed — the hub at the host exposes a headphone jack tied to the host's audio output, which already carries the soft-synth output. Putting an audio DAC on the instrument would duplicate that path.
 
 ## User Feedback & Status
 
-- **Charging progress** while USB is connected.
-- **Fast-charge active** indicator.
-- **Battery level** readout.
-- **Power state** (on / off / charging).
-- **BLE-MIDI connection state** (pairing, paired, active).
-- **Auto power-off:** after a period of inactivity, the device enters ship mode to preserve battery (see [architecture.md](architecture.md)).
+- **Power state** (USB connected / not connected) — single LED tied to the 3.3 V rail is sufficient.
+- **USB-MIDI enumeration state** (host present, data activity) — second LED driven by the MCU.
+
+Battery, charging, ship-mode, auto-power-off, and BLE pairing indicators are all dropped along with the subsystems they reported on.
 
 ## Developer Friendliness
 

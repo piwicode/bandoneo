@@ -19,24 +19,24 @@ from pathlib import Path
 BOARDS = [
     {
         "name": "MainBoard",
-        "ioc": "code/mother-wb5mm/mother-wb5mm.ioc",
+        "ioc": "code/main-g474/main-g474.ioc",
         "netlist": "design_review/export/Netlist_MainBoard.net",
-        "refdes": "U1",
-        "part": "STM32WB5MMGH6TR",
+        "refdes": "U44",
+        "part": "STM32G474CBT6",
     },
     {
         "name": "WingLeft",
-        "ioc": "code/wing-f103/wing-f103/wing-f103.ioc",
+        "ioc": "code/wing-g474/wing-g474.ioc",
         "netlist": "design_review/export/Netlist_WingLeft.net",
-        "refdes": "U37",
-        "part": "STM32F103C8T6",
+        "refdes": "U39",
+        "part": "STM32G474CBT6",
     },
     {
         "name": "WingRight",
-        "ioc": "code/wing-f103/wing-f103/wing-f103.ioc",
+        "ioc": "code/wing-g474/wing-g474.ioc",
         "netlist": "design_review/export/Netlist_WingRight.net",
-        "refdes": "U46",
-        "part": "STM32F103C8T6",
+        "refdes": "U44",
+        "part": "STM32G474CBT6",
     },
 ]
 
@@ -50,13 +50,19 @@ SIGNAL_NET_HINTS = {
     "SYS_JTDO-TRACESWO": {"SWO", "SWD_SWO", "JTDO", "TRACESWO"},
 }
 
+# Pins whose role is fixed by the pin name itself, with no Signal/Label in the
+# .ioc. Maps pin-name suffix to acceptable substrings in the net name.
+PIN_SUFFIX_NET_HINTS = {
+    "NRST": {"NRST", "RESET"},
+}
+
 # These .ioc signals are internal or do not need a matching net.
 SKIP_SIGNALS = {"GPIO_Input", "GPIO_Output", "GPIO_Analog"}
 
 
 def parse_ioc(path: Path) -> dict[str, dict]:
     """Return {pin: {'signal': str, 'label': str|None}} for PA.., PB.., ..."""
-    pin_re = re.compile(r"^(P[A-H]\d{1,2}(?:-[A-Z0-9]+)?)\.(Signal|GPIO_Label)=(.*)$")
+    pin_re = re.compile(r"^(P[A-H]\d{1,2}(?:-[A-Z0-9_]+)?)\.(Signal|GPIO_Label)=(.*)$")
     pins: dict[str, dict] = defaultdict(dict)
     for line in path.read_text(encoding="utf-8", errors="replace").splitlines():
         m = pin_re.match(line.strip())
@@ -138,13 +144,24 @@ def check(
 
     ioc_pin_set = set(ioc_pins)
     for pin, net in sorted(net_map.items()):
-        if pin.startswith("P") and pin not in ioc_pin_set and net.upper() not in {
-            "GND", "AGND", "VDD", "VCC", "NC",
-        }:
+        if not pin.startswith("P") or pin in ioc_pin_set:
+            continue
+        if net.upper() in {"GND", "AGND", "VDD", "VCC", "NC"}:
+            continue
+        suffix = pin.rsplit("-", 1)[1] if "-" in pin else None
+        if suffix in PIN_SUFFIX_NET_HINTS:
+            hints = PIN_SUFFIX_NET_HINTS[suffix]
+            if any(h in net.upper() for h in hints):
+                continue
             errors.append(
-                f"[UNCONF]   {pin} connected to net {net!r} on {refdes} "
-                f"but not configured in .ioc"
+                f"[HINT]     {pin}: expected net containing one of "
+                f"{sorted(hints)}, got {net!r}"
             )
+            continue
+        errors.append(
+            f"[UNCONF]   {pin} connected to net {net!r} on {refdes} "
+            f"but not configured in .ioc"
+        )
 
     return errors
 

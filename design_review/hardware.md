@@ -1,77 +1,52 @@
 
-## ESD Protection
+## ESD and VBUS Protection
 
-High speed charging can use 12V on VBUS, and BQ25895 VBUS max is 22V.
-SMBJ13A diode protects VBUS clamping at 21.5V < BQ25895 VBUS max of 22V
-and with Reverse standoff voltage 13V >  12V max charging voltage
+The instrument is bus-powered from USB VBUS at the standard 5 V (USB 2.0) — no PD voltage negotiation is performed, no battery, no buck/charger on the input. The connector type is a separate mechanical decision; the electrical front end below works with any USB 2.0 receptacle. This simplifies the protection considerably:
 
-
-D+ and D- are protected with a regular SRV05 with pin 5 floating.
-Connecting pin 5 to VCC could make current flow to the voltage regulator
-and the MCU which is detrimental. Floating pin 5 forces the current to
-flow to GND. This does not prevent the component to protect D+ and D- from high voltage.
-
-## Charging
-
-The board supports 2200 mAh batteries charging at 1C with internal thermistor protection.
-Such as [18650CA-1S-3J](https://fr.farnell.com/bak-technology/18650ca-1s-3j/batt-rechargeable-li-ion-3-7v/dp/2401852) with a 10K NTC
-
-
-Fast charging negociation is done by the MCU and the information is passed to powerline via I2C. The charge D+ and D- are left floating
-to avoid interferences with the MCU.
+- **VBUS TVS:** an `SMBJ5.0A` (or equivalent 5 V standoff TVS) clamps transient surges to ≈ 9.2 V, well below the downstream LDO's absolute-max input. Reverse standoff 5 V matches the only operating voltage VBUS will see; a misbehaving source pushing higher voltage is clamped, not propagated to the LDO. (The previous `SMBJ13A` rated for 12 V fast-charge negotiation is no longer needed — there is no PD negotiation to permit higher voltages in the first place.)
+- **Optional polyfuse / eFuse on VBUS:** the previous design relied on BQ25895 for input OCP. With the charger gone, an inline polyfuse (~500 mA hold / ~1 A trip) or a small eFuse (TPS25200, TPS2553 on the input rail, etc.) provides input current limiting against a downstream short — cheap insurance for a bus-powered device.
+- **D+ / D- ESD:** unchanged — SRV05 with pin 5 left **floating** so transient current flows to GND, not into VCC. The detailed reasoning in the prior revision still applies: tying pin 5 to VCC would push ESD current through the rail into the LDO and MCU; floating pin 5 keeps the clamp's GND path while not back-biasing the rail.
 
 ## Power Consumption
 
-Estimated from the BOMs in [export/](export/) at the 3.3 V rail, with typical datasheet values at room temperature. Hall sensor count: **33 (WingLeft) + 38 (WingRight) = 71**.
+Estimated from the BOMs in [export/](export/) at the 3.3 V rail, with typical datasheet values at room temperature. Hall sensor count: **33 (WingLeft) + 38 (WingRight) = 71** key-position sensors, plus **2 on the motherboard** for push/pull sensing — **73 total, all gated**.
 
-| Block | Part | Qty | I typ (mA) | Subtotal (mA) |
-|---|---|---:|---:|---:|
-| Main MCU, BLE active | STM32WB5MMG | 1 | 10 | 10 |
-| Wing MCU @ 72 MHz | STM32F103C8T6 | 2 | 25 | 50 |
-| Key-position Hall sensor | SC4015 | 71 | 2.5 | 178 |
-| Analog mux (static) | 74HC4052 | 9 | <0.01 | ~0 |
-| Load-cell ADC | CS1237 | 1 | 1.5 | 1.5 |
-| LEDs (POW + BT + ~2 status) | — | ~4 | 3 | ~10 |
-| LDO Iq + leakage | TLV755P + misc | — | — | ~1 |
-| **Total (playing, BLE streaming)** | | | | **~251** |
+**Hall sensor power gating.** Each board carries one AO3401A P-channel MOSFET (Q1) whose drain feeds a switched `VDDH` rail. The MCU drives the gate, enabling `VDDH` only during each scan window:
 
-At ~251 mA × 3.3 V ≈ **0.83 W** steady-state. Hall sensors dominate (~71 %); duty-cycling their supply via a side-channel FET — or gating banks through the 74HC4052 Ē pins — is the largest available power-saving lever.
+- **Wings**: 33 / 38 SC4015 sensors per board, scanned via 4 / 5 × 74HC4052 muxes at 1 kHz. Window ≈ ~40 channels × ~6 µs settle+convert = **~240 µs ON / 1 000 µs period ≈ 25 % duty cycle**.
+- **Motherboard**: 2 SC4015 sensors for push/pull, gated by the same Q1 topology but sampled at the push/pull rate (a few hundred Hz at most — mechanical bandwidth). Duty cycle is dominated by the wings' loop, so the motherboard's 2 sensors run at **≤ 25 %** in the worst case where main schedules them inside the same window.
 
-Peak transient: BLE TX burst (+10 mA on U1) plus all status LEDs lit (+25 mA) bumps the rail to ~285 mA briefly. TLV755P is rated 500 mA, comfortable margin.
+The SC4015 datasheet T<sub>PO</sub> ≤ 0.8 µs makes the start-up overhead negligible against the sweep window.
 
-**Battery runtime.** 2200 mAh Li-ion at 3.7 V nominal, LDO efficiency ≈ 3.3 / 3.7 = 89 %: battery draw ≈ 251 mA, runtime ≈ **8.8 h**, well above the 2 h requirement. Headroom covers aging and cold-temperature capacity loss.
+| Block | Part | Qty | I typ (mA) | Duty | Subtotal avg (mA) |
+|---|---|---:|---:|---:|---:|
+| Main MCU @ 170 MHz | STM32G474CBT6 | 1 | ~30 | 100 % | 30 |
+| Wing MCU @ 170 MHz | STM32G474CBT6 | 2 | ~30 | 100 % | 60 |
+| Key Hall (gated via wing AO3401A) | SC4015 | 71 | 2.5 | 25 % | ~44 |
+| Push/pull Hall (gated via main AO3401A) | SC4015 | 2 | 2.5 | ≤ 25 % | ≤ 1.3 |
+| Analog mux (static) | 74HC4052 | 9 | <0.01 | 100 % | ~0 |
+| LEDs (POW + ~3 status) | — | ~4 | 3 | — | ~10 |
+| LDO I<sub>Q</sub> + leakage | TLV755P + misc | — | — | — | ~1 |
+| **Total average (playing, USB-MIDI streaming)** | | | | | **~146** |
 
-**Charge mode** (USB in, MCU idle, wings powered but not sampling):
-wing MCUs in STOP + Hall sensors still powered ≈ 150 mA; with wing
-rails gated off this drops to ~15 mA (charge-indicator LED + charger
-Iq + MCU idle). Worth gating the wing VCC from the motherboard in this
-state.
+At ~146 mA × 3.3 V ≈ **0.48 W** delivered, average. Drawn from 5 V VBUS through a linear regulator (3.3 / 5 = 66 % efficiency), the input side sees ≈ **146 mA at 5 V / 0.73 W average** — comfortably inside the USB 2.0 default 500 mA / 2.5 W budget, with plenty of margin for a low-power 100 mA / 500 mW port if ever needed.
 
-## Wing Power Gating and Back-feed Isolation
+**Peak vs. average.** During the ~240 µs scan window the gated-Hall current adds ~183 mA (73 × 2.5 mA) on top of the always-on ~101 mA (MCUs + LEDs + LDO Iq), so instantaneous draw spikes to **~284 mA**. The 4.7 µF bulk cap (C54) and the LDO's transient response cover the step. Outside the window the rail is back to ~101 mA. Both wings scan independently (separate MCUs), but the LDO sees the sum — worst case both sweeps overlap; the motherboard's push/pull window is small enough to be scheduled inside the same envelope.
 
-Each wing's VCC rail (`L_VCC`, `R_VCC`) is switched on the motherboard by a per-wing TPS2553 current-limited power switch. The main MCU can cut either wing independently — used in charge mode to save ~150 mA per idle wing, and as a fault response if OCP/OVP trips.
+**LDO thermal — comfortable after gating.** TLV755P (SOT-23-5) dissipates **(5 V − 3.3 V) × 0.146 A ≈ 250 mW** averaged. θ<sub>JA</sub> ≈ 195 °C/W gives ~49 °C rise — junction at ~74 °C in 25 °C ambient, ~89 °C in 40 °C ambient. Well below the 125 °C abs-max. Peak-current excursions (~284 mA × 1.7 V ≈ 483 mW) for 240 µs every 1 ms barely budge the junction temperature thanks to the package's thermal mass. The earlier review item — buck regulator or larger LDO package — is no longer required; the SOT-23-5 LDO is the right pick for the gated load profile.
 
-**Why back-feed matters.** When a wing rail is cut but the main MCU keeps driving signal lines into the wing connector, every signal line becomes a back-feed path: main drives 3.3 V → trace → wing MCU pin ESD clamp → dead wing VDD. With five bus signals each capable of sourcing ~20 mA, aggregate injection can latch up the wing MCU (STM32 latch-up threshold ≈ 100 mA/pin) and pushes the "off" wing rail to ~2.6 V, defeating the isolation the TPS2553 was meant to provide.
+If gating ever has to be disabled (e.g., during bring-up before firmware controls the AO3401A gates), the LDO falls back to ~300 mA / 510 mW worst-case, which is at the edge of SOT-23-5's thermal envelope — keep that in mind for first-power-on without firmware. Default the gate to OFF at reset (P-FET gate pulled high by R40 to VCC) so the hall sensors are de-energised until firmware enables them.
 
-**Isolation strategy — SN74LVC125A on the gated rail (U61 left, U63 right).** One quad tri-state buffer per wing sits at the wing connector on the motherboard, **powered from the gated wing rail** (`L_VCC` / `R_VCC`, downstream of TPS2553). When the wing rail drops, the buffer loses VCC, and its `Ioff` feature forces every input and output to high-Z (<10 µA leakage). No path exists for current to flow main → buffer → wing in either direction. All four OE# pins tie to GND; tri-state is controlled by the VCC side, not by firmware.
+## Wing Power and Bus Interface
 
-Channel assignment:
+Each wing is powered directly from the motherboard's 3.3 V rail through pin 1 of its 2×5 IDC connector. There is **no per-wing power switch (no TPS2553), no gated wing rail, and no back-feed buffer (no SN74LVC125A)**. With the battery removed, there is no operating mode that powers the motherboard while leaving a wing off — when VBUS is present the whole instrument is powered, when VBUS is gone everything is off — so the back-feed path that the isolation buffer was protecting against no longer exists in any normal operating state.
 
-| Ch | A (input) | Y (output) | Signal / direction |
-|---|---|---|---|
-| 1 | Main SCK | Wing SCK | main → wing |
-| 2 | Main NSS | Wing NSS | main → wing |
-| 3 | Main MOSI | Wing MOSI | main → wing |
-| 4 | Wing MISO | Main MISO | wing → main |
+**Wing reset and presence handling.**
 
-**Signals that bypass the buffer.**
+- **NRST** is driven open-drain by the motherboard MCU through a BAT54C steering diode to 3.3 V (U53 main reset, U54 wing reset). The wing MCU's internal NRST pull-up provides idle-high. The open-drain topology means the motherboard can never source current into a wing that is somehow held in reset by another agent (e.g., a programmer connected to a wing).
+- **READY** is a passive input on the motherboard with the internal pull-down enabled. The wing drives the line actively high once its firmware has initialised. If a wing is absent, unprogrammed, or still booting, the pull-down resolves the line to "not ready" and the motherboard simply doesn't poll that wing — no external resistor needed.
 
-- **NRST** is driven open-drain by the main MCU through BAT54C to 3.3 V; idle high is provided by the wing MCU's internal NRST pull-up. When the wing rail is cut, the main releases NRST — nothing sources current into the dead wing.
-- **READY** is direct-connected (no buffer). The main MCU keeps READY as a passive input with its internal pull-down enabled and no external pull-up. The wing drives actively high to signal ready, low to signal busy. With the wing off the wing pin is high-Z, the pull-down resolves the line to "not ready", and because the main never sources current onto the line it cannot back-power the wing MCU.
-
-**Firmware ordering.** Before deasserting `L_EN` / `R_EN`, configure the READY pin as input with internal pull-down. The buffered SPI signals can be left driven — Ioff handles them. On power-up, wait for the TPS2553 soft-start (~2 ms) before sampling READY or initiating SPI traffic, so the buffer has a stable VCC before passing logic.
-
-**Wing-port ESD steering.** The SRV05-4 arrays at each wing port (TV4/TV5 left, TV2/TV3 right) tie pin 5 to the **gated wing rail**, not to main 3.3 V. This keeps ESD energy in the same power domain as the buffer's output drivers, so transient steering currents don't cross power-domain boundaries.
+**Wing-port ESD.** The SRV05-4 arrays at the wing connectors (TV1/TV2 left, TV3/TV4 right) tie pin 5 to the motherboard's 3.3 V rail. Since this is the same rail that powers the wings, ESD steering currents stay in a single power domain.
 
 ## Wing Bus Connector
 
@@ -90,43 +65,34 @@ All three boards (motherboard, left wing, right wing) are manufactured via **JLC
 **2-layer constraint — no dedicated VCC plane:**
 
 - **Layer 1:** Signal + GND plane (split GND where necessary)
-- **Layer 2:** Signal + power traces (3.3V, 5V, VBAT routed as traces, not planes)
+- **Layer 2:** Signal + power traces (5 V VBUS and 3.3 V routed as traces, not planes; the wings receive 3.3 V directly through their connectors — no separate per-wing rail)
 
 **Implications for power distribution:**
 
-1. **3.3V rail:** Distributed via wide traces (24–32 mil minimum) rather than a continuous plane. High-current sources (BQ25895 charger, TLV755P LDO output, wing power switches TPS2553) require direct copper widths to minimize resistance and transient voltage sag.
+1. **3.3 V rail:** Distributed via wide traces (24–32 mil minimum) rather than a continuous plane. The TLV755P LDO output and the wing-connector VCC pins require direct copper widths to minimize resistance and transient voltage sag.
 
 2. **No distributed plane capacitance:** Decoupling capacitors become critical — they are the only capacitive reservoir for transient current. Each power rail segment (motherboard main, left wing, right wing) gets dedicated bulk (10 µF) and bypass (100 nF per IC) capacitance placed within 5 mm of the load.
 
 3. **GND plane preserved:** The single GND plane on Layer 1 serves as the common return path for all signals and power. This is the primary defense against noise coupling to analog sensor lines (Hall outputs, ADC inputs). Sensitive traces route on Layer 2 with GND return traces of equal width run parallel and adjacent.
 
-4. **Thermal management:** Dissipation is modest (~0.8 W steady-state, dominated by Hall sensors); thermal vias under high-power ICs (BQ25895, TLV755P) tie directly to the GND plane for passive cooling. No separate thermal plane needed.
+4. **Thermal management:** Steady-state dissipation is ~1.0 W, dominated by Hall sensors and the LDO drop from 5 V to 3.3 V. Thermal vias under the TLV755P tie directly to the GND plane for passive cooling. See the LDO thermal note in "Power Consumption" — at 5 V input the LDO is the new thermal hotspot and likely wants a larger package or a switch to a buck regulator.
 
-**Trade-off:** Economic 2-layer design saves cost (~20 % vs. 4-layer) at the expense of denser PCB layout, stricter decoupling discipline, and slightly tighter voltage margins. The 251 mA steady-state current is well within the headroom of these constraints; peak transients (BLE TX + LEDs = 285 mA) remain comfortable on a 500 mA LDO.
+**Trade-off:** Economic 2-layer design saves cost (~20 % vs. 4-layer) at the expense of denser PCB layout, stricter decoupling discipline, and slightly tighter voltage margins. The ~146 mA average current at 3.3 V (and ~284 mA peak during Hall scan windows) is well within the LDO's 500 mA rating.
 
-## Main MCU
+## Passive Form Factor
 
-The main board module includes filtering capacitors.
+Default passive footprint for both resistors and capacitors is **0603**, picked for hand-rework ergonomics on this 2-layer prototype-friendly design. **0402** is reserved for the per-pin MCU bypass caps (the 100 nF on each VDD pin, the VDDA 1 µF + 10 nF filter, and the NRST cap), where the smaller pad pair lets the cap sit between two adjacent 0.5 mm-pitch package pads — minimising the decoupling loop area, which dominates supply impedance at the M4F's switching harmonics. Bulk reservoir caps (4.7 µF / 10 µF) stay in **0805** because the dielectric volume forces a larger package anyway.
 
-## Wing MCU Decoupling (STM32F103C8T6, LQFP48)
+## MCU Decoupling (STM32G474CBT6, LQFP48)
 
-Per datasheet Figure 14 (Power supply scheme) and AN2586, the LQFP48
-package needs:
+All three boards run the **same STM32G474CBT6** in LQFP48 with the same decoupling pattern, per the G474 datasheet "Power supply scheme" and AN4488. The LQFP48 package has:
 
-- **4 × 100 nF**, one per VDD-type pin: VBAT (1), VDD_1 (24),
-  VDD_2 (36), VDD_3 (48). The "5 × 100 nF" figure in the datasheet
-  refers to LQFP100, which has an extra VDD pin.
-- **1 × 4.7 µF bulk** on VDD_3 (10 µF used, exceeds spec).
-- **1 µF + 10 nF** on VDDA (pin 9), referenced to VSSA (pin 8).
+- **3 × VDD pins** (24, 36, 48) plus **VBAT** (1) — one 100 nF X7R per pin within a few mm of the package. On the motherboard these are C50, C51, C52, C53 (0402, 100 nF). VBAT is tied to VCC since no backup battery is fitted.
+- **1 × 4.7 µF bulk** ceramic on VDD (C54, 0805). Provides the local reservoir absent a 3.3 V plane on the 2-layer stackup. An additional 1 µF (C55) sits on the same rail.
+- **VDDA filter** (pin 21): a ferrite bead between VDD and VDDA (L1, GZ1608D601TF, 600 Ω @ 100 MHz, 200 mA — comfortable for VDDA at ~10 mA when the ADC runs), plus 1 µF (C49) + 10 nF (C48) on VDDA referenced to VSSA. The ferrite is justified on every board: the motherboard reads the pedal pots, and the wings sample 32–40 Hall channels through the on-chip ADC.
+- **NRST cap**: 100 nF (C39) close to the NRST pin, per AN4488.
 
-Wing design matches this: C1/C2/C4/C5 = 4 × 100 nF, C10 = 10 µF bulk,
-C7 = 1 µF and C8 = 10 nF on VDDA. Placement rule: each 100 nF within
-a few mm of its VDD pin; VDDA pair adjacent to pins 8/9.
-
-A ferrite bead between VDD and VDDA is an AN2586 enhancement for ADC
-noise (not a datasheet requirement). Justified here because PA1 reads
-an SC4015 linear Hall directly (bypassing the mux) and the mux outputs
-are sampled via ADC.
+**No HSE crystal.** G474's USB-FS uses HSI48 with the Clock Recovery System (CRS), locked to USB SOF — so no external crystal is needed for USB enumeration, and no 32.768 kHz LSE either (no RTC requirement). PF0/PF1, freed up from OSC_IN/OSC_OUT, are repurposed as GPIO (right-wing SPI2 NSS/SCK on the motherboard; bank-mux control on the wings).
 
 ## Key Sensing: Magnet / Hall-sensor Pairing
 
@@ -145,43 +111,27 @@ Gateron's figures assume their reference PCB (≈ 1.6 mm). Our 1.5 mm stack puts
 
 **Usable ADC swing**: ~1.2 V across 3.5 mm, i.e. ~1500 LSB on a 12-bit / 3.3 V ADC (~430 LSB/mm). In the worst-case combination (field at +10 %, sensor sensitivity at its +10 % limit), output clamps at the 0.8 V floor during the last ~0.1–0.2 mm of travel — no effect on note detection or velocity since the velocity-relevant portion of travel is mapped well before bottom-out.
 
-## Charger Input Power Distribution (BQ25895RTWR)
-
-The BQ25895 is the highest-current source on the motherboard: **5 A charge current** (1C on a 2200 mAh cell). With only 2 layers and no VCC plane, power routing to the charger input (VSYS, pins 15/16) requires careful attention.
-
-**Input decoupling (VBAT → BQ25895 IN):**
-
-The BQ25895 datasheet recommends 10 µF bulk + 100 nF bypass close to the input pins. Layout strategy for 2-layer:
-
-- **10 µF bulk capacitor (U48):** Placed **≤ 5 mm** from BQ25895 pins 15/16, with short wide traces (32 mil minimum) connecting VBAT pad → capacitor → BQ25895. Both capacitor and IC pins have dedicated vias (12 mil minimum diameter) to GND plane.
-- **100 nF bypass (C23):** Placed adjacent to the bulk cap, tied with the same trace topology.
-- **No thermal relief:** Both capacitor pads and charger pins have direct (no thermal spokes) via connections to the GND plane to minimize inductance.
-
-**Output decoupling (VSYS → TLV755P LDO input):**
-
-VSYS (pins 15/16 output, post-internal MOSFET) feeds the TLV755P LDO. The impedance between BQ25895 and LDO input is part of the feedback network for the charger's constant-current mode; a 10 µF capacitor between VSYS and GND (placed near the charger) stabilizes the charger output during charge transients.
-
-- **10 µF at charger output (C48):** Dedicated 32 mil wide traces from charger pins → capacitor → GND, kept short (< 10 mm from charger).
-- This capacitor decouples the charger's internal feedback loop, not the LDO input. The LDO has its own input filtering (see below).
-
-**Multiple VCC pins on BQ25895 (QFN-24):**
-
-The BQ25895 has multiple power pins. Each tie to the bulk capacitor bank via **separate short traces** (not a single shared trace); this distributes the 5 A charge current across multiple paths and minimizes trace resistance. Traces are 24–32 mil wide, running directly from IC pads to the bulk capacitor common node.
-
 ## 3.3 V Rail (TLV755P)
 
-TLV755P input (pin 1, IN) is fed from **VSYS** (BQ25895 pin 15/16), not directly from the battery. This gives two properties:
+TLV755P input (pin 1, IN) is fed from **VBUS** through the USB front-end (TVS clamp, optional polyfuse/eFuse). VBUS is the only upstream source — no battery, no buck, no charger — so the LDO sees the standard USB 2.0 5 V ± tolerance (4.40 V min at full 500 mA draw with worst-case cable IR drop, 5.25 V max).
 
-- Power is sourced from USB or battery through the BQ25895 power-path — the 3.3 V rail is continuous across source transitions.
-- The LDO sits **behind** BQ25895's battery protection (OVP, OCP, thermal, BATFET); nothing on the 3.3 V rail can bypass those safeguards.
+- **Dropout headroom:** the TLV755P needs ≥ 3.55 V for 3.3 V / 500 mA per datasheet. Comfortable even at the worst-case 4.40 V VBUS minimum, with margin remaining after the TVS clamp's negligible leakage drop.
+- **Hot-plug behaviour:** when the cable is connected, VBUS ramps over ~10 ms; the LDO follows; both wings come up on the same 3.3 V rail simultaneously. Unplugging cuts power instantly — no orderly shutdown is performed (there is nothing to save: no battery state, and no log persistence beyond what the firmware writes synchronously to flash).
+- **Input decoupling:** 10 µF bulk + 100 nF bypass within a few mm of the LDO input pin, with the TVS clamp anchored between them and the USB connector.
 
-VSYS(MIN) = 3.5 V guarantees the LDO stays out of dropout at full load (needs ≥ 3.55 V for 3.3 V / 500 mA per datasheet).
+See the "Power Consumption" section above for the thermal review item — at 5 V input the LDO dissipates ~450 mW, which is borderline for SOT-23-5 in warm ambients.
 
-## Push/Pull Sensor (CS1237)
+## Push/Pull Sensor (spring blade + hall sensors)
 
-The instrument replaces the acoustic bellows with a loadcell that measures the push/pull effort the player applies. The loadcell is a 4-wire Wheatstone bridge; the **CS1237** 24-bit Σ-Δ ADC digitizes the bridge output directly (differential AINP/AINN, internal REFOUT tied to REFIN, PGA ×128). Output rate is configured at 40 or 640 Hz — well above the mechanical bandwidth of breath-like dynamics and far below the 1 kHz key-sampling loop on the wings.
+The instrument replaces the acoustic bellows with a **flexure-style spring blade** whose deflection is read by two SC4015 linear hall sensors on the motherboard (U57, U58). As the player pushes or pulls, the blade flexes one way or the other; a small magnet on the moving end translates that deflection into a bipolar field at the sensor faces. The two sensors are read into ADC channels PB1 and PB12 — one biased to detect push, the other pull — and the firmware differences them to recover the signed effort with rest-position cancellation.
 
-The CS1237 lives on the motherboard, next to the loadcell connector. Its 2-wire interface is bit-banged from the WB5MMG.
+**Why this over a loadcell.** The first prototype used a loadcell + CS1237 24-bit Σ-Δ ADC. The electrical path was clean, but the mechanical feel was wrong: the loadcell's near-zero compliance means the player gets no proprioceptive feedback as they ramp effort — it plays like pressing on a wall. A spring blade gives a small, defined travel proportional to effort, which is what bandoneonists already expect from the bellows. The hall-based readout also fits the existing per-key sensor BOM (same SC4015 part, same supply, same ADC pipeline), so no new parts class is introduced.
+
+**Why two sensors.** A single hall on a unipolar magnet only resolves one direction. With two sensors mounted on either side of the blade's neutral position (or one above / one below, with opposing N-pole orientations), push and pull each push exactly one sensor below quiescent and leave the other at rest. Subtracting the two readings gives a signed value through zero, with the resting offset cancelled — robust against temperature drift in either sensor.
+
+**Power.** Both sensors share the motherboard's gated `VDDH` rail (see "Power Consumption") via Q1 (AO3401A) — sampled in step with the rest of the hall network, default-OFF at reset.
+
+The deferred loadcell + CS1237 path is no longer on the BOM. If a future variant ever wants the bridge approach (e.g., a force-curve mode for non-bandoneonists), CS1237 is still a credible choice — see archived notes.
 
 ## Pedals
 

@@ -81,7 +81,16 @@ All three boards (motherboard, left wing, right wing) are manufactured via **JLC
 
 ## Passive Form Factor
 
-Default passive footprint for both resistors and capacitors is **0603**, picked for hand-rework ergonomics on this 2-layer prototype-friendly design. **0402** is reserved for the per-pin MCU bypass caps (the 100 nF on each VDD pin, the VDDA 1 µF + 10 nF filter, and the NRST cap), where the smaller pad pair lets the cap sit between two adjacent 0.5 mm-pitch package pads — minimising the decoupling loop area, which dominates supply impedance at the M4F's switching harmonics. Bulk reservoir caps (4.7 µF / 10 µF) stay in **0805** because the dielectric volume forces a larger package anyway.
+Default passive footprint for both resistors and capacitors is **0603**, picked for hand-rework ergonomics on this 2-layer prototype-friendly design. **0402** is reserved exclusively for the **MCU load capacitors** that sit directly between the package's 0.5 mm-pitch pads — the 100 nF per-VDD bypass (C50–C53) and the VDDA / VREF+ filter pair (C7/C8/C55/C57/C58 depending on board). The smaller pad geometry minimises the decoupling loop inductance that dominates supply impedance at the M4F's switching harmonics; nothing else on the board needs this. NRST, debounce, ESD, and signal-filter caps all stay 0603. Bulk reservoir caps (4.7 µF) stay in **0805** because the dielectric volume forces a larger package anyway.
+
+## LED Brightness Scheme
+
+Two current-limit tiers, by visual purpose:
+
+- **MainBoard FN status LEDs (R29/R35/R36 = 330 Ω → ~4 mA)** — sit *behind* their respective function buttons (SW2/SW3/SW4) and glow through the translucent button cap. The higher current overcomes the diffuser loss so the LED is legible at-a-glance during play.
+- **All other LEDs (1 kΩ → ~1.3 mA)** — POW on all three boards, READY on each wing, and the wing's FN LEDs (which are not used as runtime indicators in current firmware). These are open-air status LEDs at modest 0805 brightness; 1 kΩ is enough to be obviously-on under office lighting without being distracting on a dark stage.
+
+Net LED current contribution to the rail: ~10 mA total worst-case across the system, well inside the 500 mA LDO budget.
 
 ## MCU Decoupling (STM32G474CBT6, LQFP48)
 

@@ -4798,6 +4798,8 @@ Component Kind
 Standard
 LCSC Part Name
 厚膜电阻 10kΩ ±1% 100mW
+Supplier Part
+C25804
 Manufacturer
 UNI-ROYAL(厚声)
 Manufacturer Part
@@ -4816,22 +4818,6 @@ Convert to PCB
 yes
 3D Model Title
 R0603
-Description
-Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
-Supplier Part
-C25804
-Symbol
-0402WGF1002TCE
-Designator
-R8
-Device
-0603WAF1002T5E
-Unique ID
-gge166
-Name
-10kΩ
-Value
-10kΩ
 Type
 Thick Film Resistor
 Tolerance
@@ -4844,6 +4830,26 @@ Temperature Coefficient
 ±100ppm/℃
 Operating Temperature
 -55℃~+155℃
+Description
+Type:Thick Film Resistor Resistance:10kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
+Symbol
+0402WGF1002TCE
+Designator
+R8
+Device
+0603WAF1002T5E
+Unique ID
+gge166
+Name
+10kΩ
+Value
+10kΩ
+Reuse Block
+
+Group ID
+
+Channel ID
+
 
 *
 ]
@@ -6075,6 +6081,72 @@ Channel ID
 
 *
 ]
+[
+DESIGNATOR
+D10
+FOOTPRINT
+SOD-323_L1.8-W1.3-LS2.5-RD
+PARTTYPE
+1N5819WS_C27636104
+DESCRIPTION
+Diode Configuration:1 Independent Voltage - Forward(Vf@If):900mV@3A Voltage - DC Reverse(Vr):40V Current - Rectified:1A Reverse Leakage Current (Ir):1mA@40V Non-Repetitive Peak Forward Surge Current:9A
+Component Kind
+Standard
+Symbol
+1N5819WS_C27636104
+Designator
+D10
+LCSC Part Name
+电压:40V 电流:1A
+Supplier Part
+C27636104
+Manufacturer
+DOWO(东沃)
+Manufacturer Part
+1N5819WS
+Supplier Footprint
+SOD-323
+JLCPCB Part Class
+Extended Part
+Datasheet
+https://item.szlcsc.com/datasheet/1N5819WS/29373139.html
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+SOD-323_L1.8-W1.3-LS2.5-RD
+Diode Configuration
+1 Independent
+Voltage - Forward(Vf@If)
+900mV@3A
+Voltage - DC Reverse(Vr)
+40V
+Current - Rectified
+1A
+Reverse Leakage Current (Ir)
+1mA@40V
+Non-Repetitive Peak Forward Surge Current
+9A
+Name
+1N5819WS
+Description
+Diode Configuration:1 Independent Voltage - Forward(Vf@If):900mV@3A Voltage - DC Reverse(Vr):40V Current - Rectified:1A Reverse Leakage Current (Ir):1mA@40V Non-Repetitive Peak Forward Surge Current:9A
+Device
+1N5819WS_C27636104
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge263
+
+*
+]
 (
 $1I10936\$1N697 
 U13-1 74HC4052PW,118-2Y0 Passive 
@@ -6180,7 +6252,6 @@ CN1-7 72454-010VLF-7 Passive
 CN3-5 STDC14_Connector-GND Input   
 CN3-7 STDC14_Connector-GND Input   
 U44-19 STM32G474CBT6-VSSA Passive 
-U44-20 STM32G474CBT6-VREF+ Passive 
 U44-23 STM32G474CBT6-VSS Passive 
 U44-35 STM32G474CBT6-VSS Passive 
 U44-47 STM32G474CBT6-VSS Passive 
@@ -6529,6 +6600,7 @@ FN3_BOOT0-2 TS-1088-AR02016-2 Passive
 C40-1 CC0603KRX7R9BB104-1 Passive 
 D8-2 H5VND5BA-2 Passive 
 U44-45 STM32G474CBT6-PB8-BOOT0 Passive 
+D10-1 1N5819WS_C27636104-C Passive 
 )
 (
 SW_FN0 
@@ -6624,6 +6696,7 @@ TV5-4 SRV05-4-P-T7_C85364-4 Input
 CN1-10 72454-010VLF-10 Passive 
 U44-44 STM32G474CBT6-PB7 Passive 
 R42-2 0603WAF1001T5E-2 Input   
+D10-2 1N5819WS_C27636104-A Passive 
 )
 (
 $1N39913 
@@ -6638,6 +6711,7 @@ U44-25 STM32G474CBT6-PB11 Passive
 )
 (
 VDDA 
+U44-20 STM32G474CBT6-VREF+ Passive 
 U44-21 STM32G474CBT6-VDDA Passive 
 C50-1 CL05B104KO5NNNC-1 Passive 
 C55-2 CL05A105KA5NQNC-2 Passive 

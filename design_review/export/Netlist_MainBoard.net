@@ -2933,6 +2933,142 @@ gge290
 ]
 [
 DESIGNATOR
+R44
+FOOTPRINT
+R0603
+PARTTYPE
+0603WAF1000T5E
+DESCRIPTION
+Type:Thick Film Resistors Resistance: Tolerance:±1% Tolerance:±1% Power(Watts): Overload Voltage (Max): Temperature Coefficient:±200ppm/℃ Temperature Coefficient:±200ppm/℃ Operating Temperature Range:-55℃~+155℃ Operating Temperature Range:-55℃~+155℃
+Component Kind
+Standard
+Symbol
+0603WAF1000T5E
+Designator
+R44
+LCSC Part Name
+100Ω ±1% 100mW 厚膜电阻
+Supplier Part
+C22775
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0603WAF1000T5E
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20200306/C422600_1E6D84923E4A46A82E41ADD87F860B5C.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0603
+Type
+Thick Film Resistors
+Value
+100Ω
+Tolerance
+±1%
+Power(Watts)
+
+Overload Voltage (Max)
+
+Temperature Coefficient
+±200ppm/℃
+Operating Temperature Range
+-55℃~+155℃
+Name
+100Ω
+Description
+Type:Thick Film Resistors Resistance: Tolerance:±1% Tolerance:±1% Power(Watts): Overload Voltage (Max): Temperature Coefficient:±200ppm/℃ Temperature Coefficient:±200ppm/℃ Operating Temperature Range:-55℃~+155℃ Operating Temperature Range:-55℃~+155℃
+Device
+0603WAF1000T5E
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge290_1
+
+*
+]
+[
+DESIGNATOR
+R45
+FOOTPRINT
+R0603
+PARTTYPE
+0603WAF1000T5E
+DESCRIPTION
+Type:Thick Film Resistors Resistance: Tolerance:±1% Tolerance:±1% Power(Watts): Overload Voltage (Max): Temperature Coefficient:±200ppm/℃ Temperature Coefficient:±200ppm/℃ Operating Temperature Range:-55℃~+155℃ Operating Temperature Range:-55℃~+155℃
+Component Kind
+Standard
+Symbol
+0603WAF1000T5E
+Designator
+R45
+LCSC Part Name
+100Ω ±1% 100mW 厚膜电阻
+Supplier Part
+C22775
+Manufacturer
+UNI-ROYAL(厚声)
+Manufacturer Part
+0603WAF1000T5E
+Supplier Footprint
+0603
+JLCPCB Part Class
+Basic Part
+Datasheet
+https://atta.szlcsc.com/upload/public/pdf/source/20200306/C422600_1E6D84923E4A46A82E41ADD87F860B5C.pdf
+Supplier
+LCSC
+Add into BOM
+yes
+Convert to PCB
+yes
+3D Model Title
+R0603
+Type
+Thick Film Resistors
+Value
+100Ω
+Tolerance
+±1%
+Power(Watts)
+
+Overload Voltage (Max)
+
+Temperature Coefficient
+±200ppm/℃
+Operating Temperature Range
+-55℃~+155℃
+Name
+100Ω
+Description
+Type:Thick Film Resistors Resistance: Tolerance:±1% Tolerance:±1% Power(Watts): Overload Voltage (Max): Temperature Coefficient:±200ppm/℃ Temperature Coefficient:±200ppm/℃ Operating Temperature Range:-55℃~+155℃ Operating Temperature Range:-55℃~+155℃
+Device
+0603WAF1000T5E
+Reuse Block
+
+Group ID
+
+Channel ID
+
+Unique ID
+gge289_1
+
+*
+]
+[
+DESIGNATOR
 TV5
 FOOTPRINT
 SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR
@@ -4757,13 +4893,14 @@ U44-12 STM32G474CBT6-PA4 Passive
 L_READY 
 TV2-3 SRV05-4-P-T7_C85364-3 Input   
 CN1-10 72454-010VLF-10 Passive 
-U44-16 STM32G474CBT6-PB0 Passive 
+R45-1 0603WAF1000T5E-1 Input   
 )
 (
 L_NRST 
 TV2-4 SRV05-4-P-T7_C85364-4 Input   
 CN1-9 72454-010VLF-9 Passive 
 U54-2 BAT54C_C22466350-A Passive 
+R42-1 0603WAF1000T5E-1 Input   
 )
 (
 VCC 
@@ -4826,13 +4963,14 @@ U44-5 STM32G474CBT6-PF0-OSC_IN Passive
 R_READY 
 TV3-3 SRV05-4-P-T7_C85364-3 Input   
 CN2-10 72454-010VLF-10 Passive 
-U44-30 STM32G474CBT6-PA8 Passive 
+R44-2 0603WAF1000T5E-2 Input   
 )
 (
 R_NRST 
 TV3-4 SRV05-4-P-T7_C85364-4 Input   
 CN2-9 72454-010VLF-9 Passive 
 U54-1 BAT54C_C22466350-A Passive 
+R43-2 0603WAF1000T5E-2 Input   
 )
 (
 R_SPI_MOSI 
@@ -4927,6 +5065,11 @@ EXPR_PEDAL1-3 PJ-603A-3 Input
 C6-2 CC0603KRX7R9BB104-2 Input   
 )
 (
+$1N61205 
+U44-16 STM32G474CBT6-PB0 Passive 
+R45-2 0603WAF1000T5E-2 Input   
+)
+(
 HALL0 
 U44-17 STM32G474CBT6-PB1 Passive 
 U57-3 SC4015SO-N-TR-OUT Passive 
@@ -4962,6 +5105,11 @@ C46-2 CL10B102KB8NNNC-2 Input
 $1N61116 
 U44-27 STM32G474CBT6-PB13 Passive 
 R43-1 0603WAF1000T5E-1 Input   
+)
+(
+$1N61211 
+U44-30 STM32G474CBT6-PA8 Passive 
+R44-1 0603WAF1000T5E-1 Input   
 )
 (
 PGM_USART_TX 
@@ -5014,14 +5162,6 @@ CN3-8 STDC14_Connector-T_JTDO/T_SWO Input
 $1N59026 
 LED_POW1-1 KT-0805Y-+ Passive 
 R38-1 0603WAF1001T5E-1 Input   
-)
-(
-L_RESET 
-R42-1 0603WAF1000T5E-1 Input   
-)
-(
-R_RESET 
-R43-2 0603WAF1000T5E-2 Input   
 )
 (
 VBUS 

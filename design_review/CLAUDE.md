@@ -1,6 +1,6 @@
 # Context
 
-Recreates the Argentine bandoneon with authentic "Rheinische Lage" 142-key layout. Hall-effect sensors measure key position 1000×/second for precision and responsiveness with zero mechanical wear. A loadcell replaces the acoustic bellows to sense push/pull effort. v1 connectivity: Bluetooth LE-MIDI (wireless) and USB-MIDI (studio). DIN-MIDI and Bluetooth Audio are deferred — see [requirements.md](requirements.md).
+Recreates the Argentine bandoneon with authentic "Rheinische Lage" 142-key layout. Hall-effect sensors measure key position 1000×/second for precision and responsiveness with zero mechanical wear. A blade spring instrumented with a pair of Hall-effect sensors measuring its flexion replaces the acoustic bellows to sense push/pull effort. v1 connectivity: USB-MIDI only (bus-powered, no battery, no wireless). Bluetooth LE-MIDI and DIN-MIDI are deferred — see [requirements.md](requirements.md).
 
 # Goal
 

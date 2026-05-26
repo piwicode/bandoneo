@@ -6,38 +6,7 @@ Cross-reference: BOM files live in [export/](export/); the PDFs are symlinked in
 
 ---
 
-## Processors / Wireless
-
-### STM32WB5MMG — BLE 5.0 + 802.15.4 SiP module (MainBoard)
-[datasheets/stm32wb5mmgh6tr.pdf](datasheets/stm32wb5mmgh6tr.pdf)
-
-- **Package**: LGA-86, 7.3 × 11 × 1.342 mm, 0.435 mm pitch.
-- **Core**: STM32WB55VGY die (Cortex-M4 @ 64 MHz + Cortex-M0+ for radio), 1 MB flash, 256 KB SRAM.
-- **Integrated**: 32 MHz HSE crystal, 32.768 kHz LSE crystal, SMPS passives, IPD matching, chip antenna — **no external RF/clock components required**.
-- **Supply**: VDD 1.8–3.6 V; separate VDDA (analog) and VDDUSB (USB). VBAT for RTC backup.
-- **Peripherals exposed**: 2× DMA (7ch), USART + LPUART, 2× SPI (up to 32 Mbit/s), 2× I²C, SAI, USB 2.0 FS (crystal-less, BCD/LPM), TSC (18 sensors), LCD 8×40, timers (1× adv 4ch, 2× GP 2ch, 1× 32-bit 4ch, 2× LP), 12-bit ADC.
-- **Critical integration rules**:
-  - **Antenna clearance**: keep 2.5 mm from board edge at antenna side, 7.6 mm clearance width, 1.3 mm from long edge (datasheet Fig. 4). No copper/ground right of the module.
-  - **Ground plane**: solid, vias at ≤2 mm spacing; ANT_NC pad soldered to unconnected pad.
-  - **ANT_IN and RF_OUT pads must tie to GND** (internal antenna is used).
-  - **Sensitive GPIOs** PB10, PB11, PC5 — recommend a 3.3 pF capacitor in 0201 at pin and ground-bordered tracks.
-  - **Reset**: internal pull-up present; only a 100 nF cap to GND on NRST needed.
-  - **SMPS**: always-on at 4 MHz, passives already inside the module — nothing external to add.
-  - **LSE**: must configure `RCC_BDCR_LSEDRV[1:0] = 11` (high drive); HSETUNE preloaded, do not change.
-  - **LCD/USB/SAI signals** overlap with GPIO — must be checked at pin-mux time.
-- **Enclosure effects**: metal case must stay ≥46 mm (a-dim) from the antenna for negligible impact; any contact of plastic case with antenna detunes it.
-- **Two-layer PCB supported** using only the outer-ring pads; four-layer required if inner pads are used.
-
-### STM32WB55RG — underlying MCU for the module (reference only)
-[datasheets/stm32wb55rg-datasheet.pdf](datasheets/stm32wb55rg-datasheet.pdf)
-
-Used as reference for WB5MMG internals, **not placed on the BOM**. Key facts that transfer:
-- Cortex-M4 (64 MHz, FPU, DSP, MPU) + Cortex-M0+ for radio.
-- VDD 1.71–3.6 V, integrated SMPS with bypass fallback below VBOR.
-- 12-bit ADC 4.26 Msps (up to 16-bit with hardware oversampling).
-- BLE 5.4 / 802.15.4 / Thread 1.3 / Zigbee 3.0 stacks; 2 Mbps support; +6 dBm TX.
-- 72 fast I/Os, 70 of them 5 V-tolerant (on the full-size package — count differs on WB5MMG which exposes ~68).
-- **Review use**: consult for register-level behavior, supply current tables, ADC accuracy — the WB5MMG datasheet does not duplicate these.
+## Processors
 
 ### STM32G474CBT6 — shared MCU (MainBoard, WingLeft, WingRight)
 
@@ -58,38 +27,6 @@ Used as reference for WB5MMG internals, **not placed on the BOM**. Key facts tha
 
 ## Power
 
-### BQ25895 — single-cell Li-Ion charger + boost (MainBoard)
-[datasheets/bq25895.pdf](datasheets/bq25895.pdf)
-
-- **Package**: WQFN-24, 4×4 mm with exposed PowerPAD (must be soldered, star-connected to PGND).
-- **Function**: 5-A switch-mode buck charger from 3.9–14 V input; boost (OTG) 4.55–5.55 V @ 3.1 A; integrated BATFET and power-path (NVDC).
-- **Pinout (must-route nets)**:
-  - VBUS (1) ← USB/adapter. **1 µF ceramic from VBUS to PGND, right at the pin.**
-  - SW (19, 20) ← power inductor. **2.2 µH on current BOM (APH0630T2R2M).**
-  - BTST (21) ← 0.047 µF bootstrap cap to SW.
-  - REGN (22) ← 4.7 µF (10 V rating) ceramic to analog GND. REGN also biases TS.
-  - PMID (23) ← boost output; ≥40 µF for 2.4 A OTG, ≥60 µF for 3.1 A OTG.
-  - SYS (15, 16) ← 20 µF close.
-  - BAT (13, 14) ← 10 µF close.
-  - PGND (17, 18) connects single-point to AGND near IC.
-  - TS (11) ← NTC divider from REGN (103AT-2 recommended). **Required — charge suspends if TS out of range.**
-  - CE (9) active-low charge enable — must be driven high or low, not floating.
-  - QON (12) has internal pull-up; pulse low to exit ship mode / reset system.
-  - STAT, INT, SCL, SDA, DSEL — open-drain, need 10 kΩ pull-ups to the host logic rail (1.8–3.3 V). SDA/SCL at I²C 400 kHz max.
-- **Protection limits**: absmax VBUS −2 / +22 V; VACOV rising 14–14.6 V; battery OVP at 104 % of VREG (2 % hysteresis); system OCP 9 A; thermal shutdown 160 °C.
-- **Register defaults of note**: REG01 default changed from 0x06 → 0x05 in Rev C (affects boost/charge at reset).
-- **Thermal**: RθJA = 31.8 °C/W (good), RθJC(bot) = 2.0 °C/W — exposed pad is the primary path. Use multiple thermal vias.
-- **Layout highlights**: single-point PGND-to-AGND join at IC; tight loop VBUS→1µF→PGND; BTST/SW trace short; REGN cap right at pin.
-- **Watchdog**: 40 s default; disable via WATCHDOG bits for systems not servicing I²C continuously.
-
-### APH0630T2R2M — power inductor for BQ25895
-[datasheets/APH0630T2R2M.pdf](datasheets/APH0630T2R2M.pdf)
-
-- **Size**: 7 × 6.6 × 2.8 mm SMD.
-- **L = 2.2 µH**, **Isat ≈ 10 A**, **Irms ≈ 9.5 A**, **DCR = 15 mΩ**.
-- Matches BQ25895 recommended 1–2.2 µH range at 1.5 MHz and the 5 A charge / 3.1 A boost ratings with margin.
-- **Review check**: routed as short, wide copper between SW (pins 19–20) and BAT; keep away from sensitive analog traces.
-
 ### TLV755P — 500 mA LDO (3.3 V rail)
 [datasheets/tlv755p.pdf](datasheets/tlv755p.pdf)
 
@@ -99,35 +36,22 @@ Used as reference for WB5MMG internals, **not placed on the BOM**. Key facts tha
 - **Enable**: EN active-high (VHI ≥ 1 V). If always-on, tie EN to IN. Internal 120 Ω pulldown on output during shutdown for clean re-start.
 - **UVLO**: VIN rising threshold ~1.3 V.
 - **Protection**: foldback current limit (~720 mA), thermal shutdown at 165 °C, active output discharge.
-- **Dropout at 3.3 V / 500 mA**: 150 mV typ / 215 mV max @ 85 °C → **VIN ≥ 3.55 V needed to maintain 3.3 V at full load**. From a single Li-Ion (3.0–4.2 V), output may droop during deep discharge.
+- **Dropout at 3.3 V / 500 mA**: 150 mV typ / 215 mV max @ 85 °C → **VIN ≥ 3.55 V needed to maintain 3.3 V at full load**. Comfortable at VBUS 4.40 V worst-case minimum.
 - **PSRR**: 46 dB @ 100 kHz.
-- **Input rail in this design**: **VSYS** (BQ25895) — keeps the LDO out of dropout via VSYS(MIN) = 3.5 V, and keeps the 3.3 V rail behind BQ25895's battery protections (OVP, OCP, thermal, BATFET). See [hardware.md](hardware.md).
-
-### TPS2553DBV — current-limited USB power switch
-[datasheets/TPS2553DBVR.pdf](datasheets/TPS2553DBVR.pdf)
-
-- **Package**: SOT-23-6 (DBV). Pin 1 IN, 2 GND, 3 EN (active-high on TPS2553), 4 /FAULT, 5 ILIM, 6 OUT.
-- **Supply**: 2.5–6.5 V. Up to 1.5 A load. 85 mΩ rDS(on) typ.
-- **Current limit**: programmed by R_ILIM, 15–232 kΩ range. IOS ≈ K_ILIM / R_ILIM; ±6 % accuracy around 1.7 A.
-- **Behavior**: TPS2553 (no "-1") is **constant-current** on fault (auto-recover) — correct choice for USB ports. -1 variant **latches off**.
-- **Externals**: 0.1 µF minimum on IN (10 µF typical in reference), 10 kΩ pull-up on /FAULT. **No output cap is required** — TPS2553 is a current-limited pass FET, not a feedback regulator; the 120 µF on OUT seen in reference schematics is only the USB 2.0 downstream-port compliance cap, not a stability requirement. In non-USB applications (e.g., the bandoneo's wing power gating) the OUT cap can be omitted.
-- **Reverse-voltage protection**: trips when VOUT > VIN by 135 mV for 4 ms — useful if downstream can back-drive.
-- **Protection**: 15 kV IEC 61000-4-2 air / 8 kV contact ESD at connector **with external capacitance** present.
-- **Review check**: R_ILIM value in schematic must correspond to the configured limit (e.g., 20 kΩ → ~1.3 A). Verify DBV vs. DRV package on BOM matches footprint.
+- **Input rail in this design**: **VBUS** through the USB TVS/polyfuse front-end. No battery, no charger, no VSYS intermediate rail.
 
 ---
 
 ## Protection / ESD
 
-### SMBJ13A — unidirectional TVS
-[datasheets/SMBJ13A.pdf](datasheets/SMBJ13A.pdf)
+### SMF5.0A — unidirectional TVS (VBUS clamp)
+[datasheets/SMF5.0A](datasheets/)
 
-- **Package**: SMB (DO-214AA). **600 W** peak pulse power (10/1000 µs), IFSM = 100 A (8.3 ms half-sine).
-- **VRWM = 13 V**, VBR(min) = 14.4 V / VBR(max) = 16.5 V @ IT = 1 mA, **VC = 21.5 V @ IPP = 27.9 A**.
-- IR ≤ 1 µA @ VRWM; typical operating/storage range −55 … +150 °C.
-- **Use in this design**: VBUS clamp (USB 5 V rail) / adapter input protection. VC = 21.5 V sits just under the BQ25895 VBUS abs-max of 22 V.
-- **Polarity**: unidirectional — cathode toward the protected line, anode to GND.
-- **Layout**: short, wide trace to GND; place as close as possible to the connector pin being protected.
+- **Package**: SOD-123FL. **200 W** peak pulse power (10/1000 µs), Ipp = 21.7 A.
+- **VRWM = 5 V**, VBR(min) = 7 V @ IT = 1 mA, **VC = 9.2 V @ IPP = 21.7 A**.
+- IR ≤ 400 µA @ VRWM; operating range −55 … +150 °C.
+- **Use in this design**: VBUS clamp (USB 5 V rail). VC = 9.2 V is well below the TLV755P abs-max input (5.5 V continuous — the TVS clamps transients, not steady-state). Unidirectional, cathode to VBUS, anode to GND.
+- **Layout**: short, wide trace to GND; place immediately after the USB connector.
 
 ### H5VND5BA — bidirectional low-capacitance ESD diode
 [datasheets/H5VND5BA.pdf](datasheets/H5VND5BA.pdf)
@@ -153,7 +77,7 @@ Used as reference for WB5MMG internals, **not placed on the BOM**. Key facts tha
 
 - **Package**: SOT-23. Variants: BAT54 (series), BAT54A (common-anode), BAT54C (common-cathode), BAT54S (series-pair).
 - **Ratings**: VR 30 V, IF 200 mA avg (600 mA surge), **VF = 320 mV @ 1 mA**, **trr = 5 ns**, **CT = 10 pF**.
-- **Use**: low-forward-drop signal steering (e.g., power-OR'ing of USB 5 V vs. battery rails, isolation on boot pins, reset ORing).
+- **Use**: low-forward-drop signal steering (e.g., open-drain reset ORing on the wing NRST lines, boot-pin isolation).
 - **Review check**: verify which BAT54 variant the BOM calls out — the three topologies have different footprints.
 
 ---
@@ -213,7 +137,7 @@ Used as reference for WB5MMG internals, **not placed on the BOM**. Key facts tha
 
 | Threat | Defense | Notes |
 |---|---|---|
-| USB VBUS overvoltage / surge | SMBJ5.0A | 600 W, VC ≈ 9.2 V — well below LDO and MCU abs-max |
+| USB VBUS overvoltage / surge | SMF5.0A (D5) | 200 W, VC ≈ 9.2 V — well below TLV755P input abs-max |
 | USB D+/D− ESD | SRV05-4 (USB instance, pin 5 floating) | 3.5 pF, USB 2.0 FS OK |
 | Pedal TRS jack ESD (Tip + Ring × 2 jacks) | SRV05-4 (pedal instance) | Slow analog lines; 4 channels = 2 jacks |
 | Wing-bus ESD at the IDC connector | SRV05-4 × 2 per wing (SPI + NRST + READY) | Pin 5 tied to 3.3 V (same rail as the wings) |
@@ -227,4 +151,3 @@ Used as reference for WB5MMG internals, **not placed on the BOM**. Key facts tha
 2. **G474 DFU path**: with BOOT0/PB8 repurposed as FN3, document the recovery procedure for entering the system-memory bootloader (button-held-at-reset sequence) and confirm FN3 firmware doesn't drive PB8 in a way that interferes with the boot-pin sample.
 3. **BAT54 variant**: confirm which of BAT54 / A / C / S is placed — the three topologies share a SOT-23 package but differ in footprint connectivity. (BOM says BAT54C — common cathode — verify.)
 4. **Pedal-jack SRV05-4 wiring**: confirm pin-5 handling on the pedal-jack SRV05-4 package (tied to 3.3 V vs. floating as on the USB instance), since pedal Tip/Ring lines carry slow analog — steering to rail is acceptable here, but the choice should be documented.
-5. **LDO thermal**: at 5 V → 3.3 V × ~0.3 A ≈ 0.5 W, TLV755P in SOT-23-5 sits at the edge of its 125 °C absmax in warm ambients — consider moving to a buck (TPS62933) or a larger LDO package.

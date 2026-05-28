@@ -3,7 +3,7 @@
 
 The instrument is bus-powered from USB VBUS at the standard 5 V (USB 2.0) — no PD voltage negotiation is performed, no battery, no buck/charger on the input. The connector type is a separate mechanical decision; the electrical front end below works with any USB 2.0 receptacle. This simplifies the protection considerably:
 
-- **VBUS TVS:** an `SMBJ5.0A` (or equivalent 5 V standoff TVS) clamps transient surges to ≈ 9.2 V, well below the downstream LDO's absolute-max input. Reverse standoff 5 V matches the only operating voltage VBUS will see; a misbehaving source pushing higher voltage is clamped, not propagated to the LDO. (The previous `SMBJ13A` rated for 12 V fast-charge negotiation is no longer needed — there is no PD negotiation to permit higher voltages in the first place.)
+- **VBUS TVS:** an `SMF5.0A` (SOD-123FL, unidirectional, 200 W peak) clamps transient surges to ≈ 9.2 V, well below the downstream LDO's absolute-max input. Reverse standoff 5 V matches the only operating voltage VBUS will see; a misbehaving source pushing higher voltage is clamped, not propagated to the LDO.
 - **Optional polyfuse / eFuse on VBUS:** the previous design relied on BQ25895 for input OCP. With the charger gone, an inline polyfuse (~500 mA hold / ~1 A trip) or a small eFuse (TPS25200, TPS2553 on the input rail, etc.) provides input current limiting against a downstream short — cheap insurance for a bus-powered device.
 - **D+ / D- ESD:** unchanged — SRV05 with pin 5 left **floating** so transient current flows to GND, not into VCC. The detailed reasoning in the prior revision still applies: tying pin 5 to VCC would push ESD current through the rail into the LDO and MCU; floating pin 5 keeps the clamp's GND path while not back-biasing the rail.
 
@@ -75,7 +75,7 @@ All three boards (motherboard, left wing, right wing) are manufactured via **JLC
 
 3. **GND plane preserved:** The single GND plane on Layer 1 serves as the common return path for all signals and power. This is the primary defense against noise coupling to analog sensor lines (Hall outputs, ADC inputs). Sensitive traces route on Layer 2 with GND return traces of equal width run parallel and adjacent.
 
-4. **Thermal management:** Steady-state dissipation is ~1.0 W, dominated by Hall sensors and the LDO drop from 5 V to 3.3 V. Thermal vias under the TLV755P tie directly to the GND plane for passive cooling. See the LDO thermal note in "Power Consumption" — at 5 V input the LDO is the new thermal hotspot and likely wants a larger package or a switch to a buck regulator.
+4. **Thermal management:** Average dissipation ~250 mW in the TLV755P (SOT-23-5), within its thermal budget at the gated load profile — see "Power Consumption". Thermal vias under the LDO tie directly to the GND plane for passive cooling.
 
 **Trade-off:** Economic 2-layer design saves cost (~20 % vs. 4-layer) at the expense of denser PCB layout, stricter decoupling discipline, and slightly tighter voltage margins. The ~146 mA average current at 3.3 V (and ~284 mA peak during Hall scan windows) is well within the LDO's 500 mA rating.
 
@@ -87,10 +87,31 @@ Default passive footprint for both resistors and capacitors is **0603**, picked 
 
 Two current-limit tiers, by visual purpose:
 
-- **MainBoard FN status LEDs (R29/R35/R36 = 330 Ω → ~4 mA)** — sit *behind* their respective function buttons (SW2/SW3/SW4) and glow through the translucent button cap. The higher current overcomes the diffuser loss so the LED is legible at-a-glance during play.
+- **MainBoard FN status LEDs (R29/R35/R36 = 330 Ω → ~4 mA)** — sit *behind* their respective function buttons (SW2/SW3/SW4 = FN1/FN2/FN3 — **not** SW1/FN0, which is the BOOT0 switch and has no associated LED) and glow through the translucent button cap. The higher current overcomes the diffuser loss so the LED is legible at-a-glance during play.
 - **All other LEDs (1 kΩ → ~1.3 mA)** — POW on all three boards, READY on each wing, and the wing's FN LEDs (which are not used as runtime indicators in current firmware). These are open-air status LEDs at modest 0805 brightness; 1 kΩ is enough to be obviously-on under office lighting without being distracting on a dark stage.
 
 Net LED current contribution to the rail: ~10 mA total worst-case across the system, well inside the 500 mA LDO budget.
+
+## Function and Boot Buttons
+
+### MainBoard
+
+Four SMD tactile switches (SW1–SW4). SW1 is the BOOT0 button; SW2–SW4 are function buttons FN1–FN3.
+
+| Designator | Function | GPIO | Logic | Pull | LED |
+|---|---|---|---|---|---|
+| SW1 | BOOT0 | PB8 / BOOT0 | **High when pressed** (switch ties PB8 to 3.3 V) | None — no external pull-up or pull-down | No |
+| SW2 | FN1 | — | Low when pressed (switch ties GPIO to GND) | MCU internal pull-up | Yes (330 Ω, behind cap) |
+| SW3 | FN2 | — | Low when pressed | MCU internal pull-up | Yes (330 Ω, behind cap) |
+| SW4 | FN3 | — | Low when pressed | MCU internal pull-up | Yes (330 Ω, behind cap) |
+
+**BOOT0 / DFU recovery.** Holding SW1 at power-on forces BOOT0 = 1, which causes the STM32G474 to enter its system-memory bootloader (USB DFU or UART). There is no external pull-up or pull-down on PB8/BOOT0 — the pin floats unless SW1 is pressed or firmware drives it. Since the G474 samples BOOT0 only during the first clock cycles after reset, normal firmware operation (which may later drive PB8 as a GPIO) does not interfere with the boot-pin sample provided the pin was not driven high before reset de-asserted. To enter DFU: hold SW1, apply power (or press NRST), then release SW1 after enumeration.
+
+**No external pull resistors on any of the four buttons.** FN1–FN3 rely on MCU internal pull-ups. BOOT0 (SW1) relies on the internal BOOT0 pull-down that the STM32G474 applies after the boot-mode latch is captured (~1 µs after reset de-assertion) — in normal operation PB8 is then controlled by firmware.
+
+### Wing Boards
+
+Each wing board carries one dedicated **BOOT0 pushbutton** wired the same way as SW1 on the motherboard: the switch ties BOOT0 directly to 3.3 V, **no external pull-up or pull-down**. There are no FN buttons on the wing boards; all user-facing controls are on the motherboard.
 
 ## MCU Decoupling (STM32G474CBT6, LQFP48)
 
@@ -128,7 +149,7 @@ TLV755P input (pin 1, IN) is fed from **VBUS** through the USB front-end (TVS cl
 - **Hot-plug behaviour:** when the cable is connected, VBUS ramps over ~10 ms; the LDO follows; both wings come up on the same 3.3 V rail simultaneously. Unplugging cuts power instantly — no orderly shutdown is performed (there is nothing to save: no battery state, and no log persistence beyond what the firmware writes synchronously to flash).
 - **Input decoupling:** 10 µF bulk + 100 nF bypass within a few mm of the LDO input pin, with the TVS clamp anchored between them and the USB connector.
 
-See the "Power Consumption" section above for the thermal review item — at 5 V input the LDO dissipates ~450 mW, which is borderline for SOT-23-5 in warm ambients.
+See the "Power Consumption" section above for the thermal analysis — at the gated load profile the SOT-23-5 package is adequate.
 
 ## Push/Pull Sensor (spring blade + hall sensors)
 
@@ -147,7 +168,7 @@ The deferred loadcell + CS1237 path is no longer on the BOM. If a future variant
 Two TRS 6.35 mm jacks on the motherboard, with mechanical presence sensing (switched contact that reports whether a plug is inserted):
 
 - **Sustain port** — expects a TS pedal shorting Tip–Sleeve. Digital input with pull-up; presence sense gates the MIDI sustain event.
-- **Expression port** — accepts M-Audio EX-P / Roland EV-5 and compatible TRS pots. The MCU measures **R(Tip-Ring)** via a 4 kΩ pull-up, which ignores per-pedal tip/ring wiring tuning. Voltage varies from ~0.66 V (min) to ~2.5 V (max) — 56 % of the ADC range, drawing ≤ 0.8 mA. The same measurement also accepts a TS sustain pedal plugged into this jack (Tip–Ring short = full deflection), so users who only have a sustain pedal are not stuck.
+- **Expression port** — accepts M-Audio EX-P / Roland EV-5 and compatible TRS pots. The MCU measures **R(Tip-Ring)** via a **3.9 kΩ pull-up** (R7, basic-part E24 value — nearest standard to 4 kΩ, < 3 % deviation, negligible effect on the voltage range). Voltage varies from ~0.67 V (min) to ~2.5 V (max) — 56 % of the ADC range, drawing ≤ 0.85 mA. The same measurement also accepts a TS sustain pedal plugged into this jack (Tip–Ring short = full deflection), so users who only have a sustain pedal are not stuck.
 
 ### Expression pedal reference measurements
 
@@ -159,4 +180,24 @@ M-Audio EX-P and Roland EV-5 have the wiper on the TRS tip.
 | min | 11.47 kΩ | 1 / 12.46 kΩ | 12.46 / 1 kΩ |
 
 Setting M-Audio mode to "Other" swaps tip and ring.
+
+## USB Connector Choice (USB-B)
+
+The instrument uses a **USB Type-B** receptacle (USB1, right-angle SMD). The choice is deliberate:
+
+- **Mechanical robustness**: USB-B connectors have a large, deep socket with four substantial through-hole anchor pins. The mating plug latches positively and requires a deliberate pull to remove — no accidental disconnects during performance.
+- **Cable retention**: the square-socket geometry prevents the cable from wiggling free when the instrument is moved on stage or rested on a stand.
+- **Standard MIDI device convention**: USB-B is the established connector for hardware synthesisers, keyboards, and audio interfaces. Experienced musicians already own USB-A-to-B cables.
+
+USB-C would offer a smaller footprint and reversibility, but its connector body is less robust to lateral stress and the cable can be unplugged with a light tug — an unacceptable failure mode mid-performance. No PD negotiation is performed (VBUS is taken as-is at 5 V), so the CC pull-down resistors that USB-C requires add complexity for no benefit here.
+
+## Programming Port (STDC14 Pogo Pads)
+
+Each board (motherboard and both wings) exposes **14 pogo-pin landing pads** laid out per the **STDC14** pinout (ST's modern compact debug standard). There is **no connector body** on the BOM — the pads are bare copper, touched by a **TC2070-IDC-050** spring-loaded pogo jig pressed against the board when programming or debugging.
+
+**Why no connector.** A through-hole or SMD STDC14 header would consume board area touched only at the factory and during occasional rework. The pogo-pad approach leaves the footprint as a solder-free land pattern; the jig is held by hand or a fixture for the few seconds needed to flash firmware.
+
+**Mating jig**: Tag-Connect TC2070-IDC-050 (0.050" / 1.27 mm pitch, 14-pin, with legs). The legs anchor the jig to the board during the programming cycle. This jig is **not on the BOM** — it is a workshop tool, one per programmer setup.
+
+STDC14 carries: SWD (SWDIO/SWCLK), SWO trace, NRST, UART VCP (TX/RX), target VCC reference, and GND returns — everything needed for flashing, halting, real-time tracing, and serial console.
 

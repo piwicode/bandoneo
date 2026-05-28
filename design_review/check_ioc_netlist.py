@@ -16,26 +16,77 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
+# STM32G474CBT6 is LQFP48. Maps physical pin number -> port name used in .ioc.
+# Power/NRST pins have no port name and are omitted; the checker skips them.
+STM32G474_LQFP48_PINMAP: dict[str, str] = {
+    # Left side, top→bottom
+    "2":  "PC13",
+    "3":  "PC14-OSC32_IN",
+    "4":  "PC15-OSC32_OUT",
+    "5":  "PF0-OSC_IN",
+    "6":  "PF1-OSC_OUT",
+    # pin 7: PG10-NRST (no ioc entry)
+    "8":  "PA0",
+    "9":  "PA1",
+    "10": "PA2",
+    "11": "PA3",
+    "12": "PA4",
+    # Bottom, left→right
+    "13": "PA5",
+    "14": "PA6",
+    "15": "PA7",
+    "16": "PB0",
+    "17": "PB1",
+    "18": "PB2",
+    # pins 19–22: VSSA, VDDA, VREF+, PA4 analog (power/ref, no ioc GPIO entry)
+    # Right side, bottom→top
+    "25": "PB11",
+    "26": "PB12",
+    "27": "PB13",
+    "28": "PB14",
+    "29": "PB15",
+    "30": "PA8",
+    "31": "PA9",
+    "32": "PA10",
+    "33": "PA11",
+    "34": "PA12",
+    # pins 35–36: VSS, VDD
+    # Top, right→left
+    "37": "PA13",
+    "38": "PA14",
+    "39": "PA15",
+    "40": "PB3",
+    "41": "PB4",
+    "42": "PB5",
+    "43": "PB6",
+    "44": "PB7",
+    "45": "PB8-BOOT0",
+    "46": "PB9",
+    # pins 47–48: VSS, VDD
+}
+
+# Package to pin map lookup
+PART_PINMAP: dict[str, dict[str, str]] = {
+    "STM32G474CBT6": STM32G474_LQFP48_PINMAP,
+}
+
 BOARDS = [
     {
         "name": "MainBoard",
         "ioc": "code/main-g474/main-g474.ioc",
         "netlist": "design_review/export/Netlist_MainBoard.net",
-        "refdes": "U44",
         "part": "STM32G474CBT6",
     },
     {
         "name": "WingLeft",
         "ioc": "code/wing-g474/wing-g474.ioc",
         "netlist": "design_review/export/Netlist_WingLeft.net",
-        "refdes": "U39",
         "part": "STM32G474CBT6",
     },
     {
         "name": "WingRight",
         "ioc": "code/wing-g474/wing-g474.ioc",
         "netlist": "design_review/export/Netlist_WingRight.net",
-        "refdes": "U44",
         "part": "STM32G474CBT6",
     },
 ]
@@ -73,19 +124,74 @@ def parse_ioc(path: Path) -> dict[str, dict]:
     return pins
 
 
-def parse_netlist(path: Path, refdes: str, part: str) -> dict[str, str]:
-    """Return {mcu_pin_name: net_name} for pins of refdes/part."""
+def find_refdes(path: Path, part: str) -> str:
+    """Return the refdes of the single component matching part in the netlist."""
     text = path.read_text(encoding="utf-8", errors="replace")
-    # Net blocks look like:
-    # (
-    # NET_NAME
-    # REF-PIN PART-PINNAME Passive
-    # ...
-    # )
+    refdes_re = re.compile(rf"^(\S+)-\d+\s+{re.escape(part)}-", re.MULTILINE)
+    matches = refdes_re.findall(text)
+    if not matches:
+        raise ValueError(f"No component with part {part!r} found in {path}")
+    refdes = matches[0]
+    if len(set(matches)) > 1:
+        raise ValueError(
+            f"Multiple components with part {part!r} found in {path}: {sorted(set(matches))}"
+        )
+    return refdes
+
+
+def parse_netlist(path: Path, part: str) -> tuple[str, dict[str, str]]:
+    """Return (refdes, {port_name: net_name}) for the single component matching part.
+
+    When an MCU pin sits on an anonymous stub net (name starts with '$') and that
+    net contains exactly one resistor pin, the net on the resistor's other pin is
+    used instead — supporting series protection resistors between the MCU and the
+    named signal net.
+    """
+    refdes = find_refdes(path, part)
+    pinmap = PART_PINMAP.get(part, {})
+    text = path.read_text(encoding="utf-8", errors="replace")
     net_block_re = re.compile(r"\(\s*\n(.*?)\n\)", re.DOTALL)
     pin_line_re = re.compile(
         rf"^{re.escape(refdes)}-(\d+)\s+{re.escape(part)}-(\S+)\s",
     )
+    member_re = re.compile(r"^(\S+)-(\d+)\s+(\S+)-\S+\s")
+
+    # Build full net→members index and refdes→net index for all components.
+    net_members: dict[str, list[tuple[str, str]]] = {}  # net → [(refdes, pin_num)]
+    refdes_nets: dict[str, dict[str, str]] = {}         # refdes → {pin_num → net}
+    for block in net_block_re.findall(text):
+        lines = [ln.strip() for ln in block.splitlines() if ln.strip()]
+        if not lines:
+            continue
+        net_name = lines[0].strip()
+        members = net_members.setdefault(net_name, [])
+        for ln in lines[1:]:
+            m = member_re.match(ln)
+            if m:
+                rd, pn = m.group(1), m.group(2)
+                members.append((rd, pn))
+                refdes_nets.setdefault(rd, {})[pn] = net_name
+
+    def resolve_net(net_name: str) -> str:
+        """Follow a single series resistor if net_name is an anonymous stub."""
+        if not net_name.startswith("$"):
+            return net_name
+        members = net_members.get(net_name, [])
+        # Expect exactly 2 members (MCU pin + one resistor pin) on the stub net.
+        if len(members) != 2:
+            return net_name
+        for rd, pn in members:
+            if rd == refdes:
+                continue
+            # rd is the resistor; find the net on its other pin.
+            other_nets = {
+                n for p, n in refdes_nets.get(rd, {}).items()
+                if p != pn and n != net_name
+            }
+            if len(other_nets) == 1:
+                return other_nets.pop()
+        return net_name
+
     mapping: dict[str, str] = {}
     for block in net_block_re.findall(text):
         lines = [ln.strip() for ln in block.splitlines() if ln.strip()]
@@ -95,9 +201,13 @@ def parse_netlist(path: Path, refdes: str, part: str) -> dict[str, str]:
         for ln in lines[1:]:
             m = pin_line_re.match(ln)
             if m:
-                pin_name = m.group(2)  # e.g. PA3, NRST
-                mapping[pin_name] = net_name
-    return mapping
+                pin_num, field = m.group(1), m.group(2)
+                if re.search(r"[A-Za-z]", field):
+                    port_name = field
+                else:
+                    port_name = pinmap.get(pin_num, pin_num)
+                mapping[port_name] = resolve_net(net_name)
+    return refdes, mapping
 
 
 def check(
@@ -170,9 +280,8 @@ def check_board(board: dict, repo_root: Path) -> int:
     name = board["name"]
     ioc_path = repo_root / board["ioc"]
     netlist_path = repo_root / board["netlist"]
-    refdes, part = board["refdes"], board["part"]
+    part = board["part"]
 
-    print(f"=== {name}: {refdes} ({part}) ===")
     if not ioc_path.is_file():
         print(f"  ioc file not found: {ioc_path}", file=sys.stderr)
         return 2
@@ -181,7 +290,8 @@ def check_board(board: dict, repo_root: Path) -> int:
         return 2
 
     ioc_pins = parse_ioc(ioc_path)
-    net_map = parse_netlist(netlist_path, refdes, part)
+    refdes, net_map = parse_netlist(netlist_path, part)
+    print(f"=== {name}: {refdes} ({part}) ===")
     print(f"  ioc pins configured: {len(ioc_pins)}")
     print(f"  {refdes} pins found in netlist: {len(net_map)}")
 

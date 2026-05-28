@@ -60,11 +60,11 @@ The motherboard is bus-powered from the USB VBUS pin (5 V, ≤ 500 mA at the ins
 | **Powered** | USB VBUS | All | Full operation |
 | **Unpowered** | — | None | Off |
 
-The on-board 3.3 V LDO is fed directly from VBUS through the USB ESD/OVP front-end (see [hardware.md](hardware.md)). The USB connector type (USB-A, USB-B, USB-C, etc.) is a mechanical choice — the electrical design only assumes USB 2.0 VBUS (5 V) and a USB-FS D+/D- pair. The wings are powered directly from the motherboard's 3.3 V rail through their respective connectors; there is no per-wing power switch, no gated wing rail, and no SPI back-feed buffer. With the battery removed there is no runtime motivation to cut wings independently of the motherboard — if VBUS is present the whole instrument is powered, if VBUS is gone everything is off.
+The on-board 3.3 V LDO is fed directly from VBUS through the USB ESD/OVP front-end (see [hardware.md](hardware.md)). The USB connector is **Type-B** (USB1, right-angle SMD) — chosen for mechanical robustness and cable retention on stage; see [hardware.md](hardware.md) §"USB Connector Choice". The wings are powered directly from the motherboard's 3.3 V rail through their respective connectors; there is no per-wing power switch, no gated wing rail, and no SPI back-feed buffer. With the battery removed there is no runtime motivation to cut wings independently of the motherboard — if VBUS is present the whole instrument is powered, if VBUS is gone everything is off.
 
 ## Programming Port
 
-Each board (motherboard and both wing boards) exposes **14 pogo-pin pads laid out per the STDC14 pinout** for firmware flashing and debugging — no through-hole header, no shroud, no board area spent on a connector that is touched only at the factory and during occasional rework. A spring-loaded pogo jig matching the STDC14 footprint is pressed against the pads when needed.
+Each board (motherboard and both wing boards) exposes **14 bare pogo-pin landing pads** laid out per the **STDC14** pinout — no connector body on the BOM. The mating tool is a **Tag-Connect TC2070-IDC-050** spring-loaded pogo jig pressed against the pads during programming or debug. The jig is a workshop tool, not a BOM component.
 
 STDC14 carries the full debug interface: SWD (SWDIO/SWCLK), SWO trace, NRST, UART VCP (TX/RX), target VCC reference, and several GND returns — everything needed for flashing, halting, real-time tracing, and serial console without falling back to test points.
 

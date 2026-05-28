@@ -21,7 +21,7 @@ Cross-reference: BOM files live in [export/](export/); the PDFs are symlinked in
 - **Typical externals**: one 100 nF per VDD pin + 4.7 µF bulk; 1 µF + 10 nF on VDDA referenced to VSSA, with a ferrite bead between VDD and VDDA; 100 nF on NRST.
 - **Debug**: SWD + SWO (2 + 1 wires); built-in USB DFU available for factory programming if BOOT0 is asserted at reset.
 - **Why G4 instead of F1 or G431.** Same SKU runs on all three boards (no toolchain split), USB without a crystal, plenty of pin/peripheral budget for two independent SPI buses on the motherboard. G4 is *extended* on JLCPCB (small per-unit surcharge over basic-part G431), accepted in exchange for the single-SKU simplification.
-- **Review note**: design uses BOOT0/PB8 re-purposed as FN3 (see [hardware.md](hardware.md)) — confirm FN3 routing does not prevent BOOT0=1 at reset for DFU recovery.
+- **Boot / DFU**: SW1 (BOOT0 button) ties PB8/BOOT0 to 3.3 V when pressed — no external pull-up or pull-down. Hold SW1 at power-on to enter DFU. Normal firmware may drive PB8 as GPIO after the boot-pin latch is captured. See [hardware.md](hardware.md) §"Function and Boot Buttons".
 
 ---
 
@@ -58,8 +58,9 @@ Cross-reference: BOM files live in [export/](export/); the PDFs are symlinked in
 
 - **Package**: SOD-523 (0402-sized footprint).
 - **Bidirectional**, VRWM = ±5 V, VBR = 6–8 V, VC = 8 V @ 1 A / 15 V @ 8 A.
-- **CJ ≤ 20 pF typ** — usable on USB 2.0 FS, I²C, audio-range analog. **Not suited to USB 3 / HDMI (capacitance too high)**.
-- **Use in this design**: reserved for high-impedance user-touched I/O that the SRV05-4 doesn't already cover (e.g. programming-port lines if exposed externally). Pedal jacks and USB data lines use SRV05-4 packages instead.
+- **CJ ≤ 20 pF typ** — usable on slow digital I/O, I²C, audio-range analog. Not suited to USB 2.0 FS or faster (capacitance too high for signal-integrity on high-speed data lines).
+- **Use in this design**: one per function-button line (D1–D4, four switches SW1–SW4). Placing the diode on the GPIO side of the switch simplifies the PCB trace routing — no dedicated ESD ground spur to each button is needed, and each GPIO pin is protected against hand-discharge events. The 20 pF capacitance is inconsequential on these low-frequency digital inputs.
+- **Programming port protection**: the STDC14 pogo pads are protected by a dedicated **SRV05-4** array (not H5VND5BA). The SRV05-4 CJ ≈ 3.5 pF per line is well under the 20 pF budget at SWD/SWO speeds (≤ 10 MHz). PCB trace capacitance on a short 2-layer stub (< 20 mm, 0.2 mm wide over 1 mm GND plane) adds ≈ 1–2 pF — total per-line capacitance comfortably below 10 pF. Ground copper adjacent to the pogo traces contributes negligibly at these frequencies.
 - **IEC 61000-4-2**: rated ±8 kV contact, ±15 kV air.
 
 ### SRV05-4 — 4-channel ESD diode array
@@ -68,9 +69,8 @@ Cross-reference: BOM files live in [export/](export/); the PDFs are symlinked in
 - **Package**: SOT-23-6.
 - 4 I/O channels + VCC + GND, using steering diodes to VCC/GND rails and an internal TVS.
 - **VWM = 5 V**, VC = 12 V @ 1 A, **CJ ≈ 3.5 pF typ per line** — suitable for USB 2.0 D+/D−.
-- **Use in this design**: USB D+/D− on the MainBoard, and a second package on the two pedal TRS jacks (Tip + Ring × 2 = 4 lines).
+- **Use in this design**: (1) USB D+/D− on the MainBoard — pin 5 left **floating** so ESD current flows to GND, not into VCC; (2) two pedal TRS jacks (Tip + Ring × 2 = 4 lines) — pin 5 tied to 3.3 V; (3) programming port STDC14 pogo pads (SWD, SWO, NRST, UART lines).
 - **Layout**: place immediately at the connector, route protected lines through the device (not stubbed).
-- **Pin-5 floating on the USB instance** (see [hardware.md](hardware.md)): prevents ESD current steering into the 3.3 V rail and MCU.
 
 ### BAT54 — Schottky diode (steering / protection)
 [datasheets/BAT54.pdf](datasheets/BAT54.pdf)
@@ -141,13 +141,13 @@ Cross-reference: BOM files live in [export/](export/); the PDFs are symlinked in
 | USB D+/D− ESD | SRV05-4 (USB instance, pin 5 floating) | 3.5 pF, USB 2.0 FS OK |
 | Pedal TRS jack ESD (Tip + Ring × 2 jacks) | SRV05-4 (pedal instance) | Slow analog lines; 4 channels = 2 jacks |
 | Wing-bus ESD at the IDC connector | SRV05-4 × 2 per wing (SPI + NRST + READY) | Pin 5 tied to 3.3 V (same rail as the wings) |
-| Other user-touched I/O (programming port, etc.) | H5VND5BA (as needed) | Bidirectional, 20 pF max |
+| Function buttons SW1–SW4 (GPIO lines) | H5VND5BA (D1–D4) | Bidirectional, 20 pF — fine for slow digital |
+| Programming port (STDC14 pogo pads) | SRV05-4 | 3.5 pF/line — OK for SWD/SWO ≤ 10 MHz |
 | 3.3 V rail short | TLV755P foldback + thermal | Regulated down to ~1 V out |
 | VBUS sourcing short on the host side (optional) | Polyfuse / eFuse on VBUS (suggested) | ~500 mA hold / 1 A trip; not currently placed |
 
 ## Open Items for Design Review
 
 1. **ADC sample-time configuration**: confirm the STM32G474 ADC sampling time is set long enough to settle through one 74HC4052 Ron (~80 Ω) plus SC4015 output impedance into the ADC sample-and-hold cap — spec sheet and scope trace welcome.
-2. **G474 DFU path**: with BOOT0/PB8 repurposed as FN3, document the recovery procedure for entering the system-memory bootloader (button-held-at-reset sequence) and confirm FN3 firmware doesn't drive PB8 in a way that interferes with the boot-pin sample.
-3. **BAT54 variant**: confirm which of BAT54 / A / C / S is placed — the three topologies share a SOT-23 package but differ in footprint connectivity. (BOM says BAT54C — common cathode — verify.)
-4. **Pedal-jack SRV05-4 wiring**: confirm pin-5 handling on the pedal-jack SRV05-4 package (tied to 3.3 V vs. floating as on the USB instance), since pedal Tip/Ring lines carry slow analog — steering to rail is acceptable here, but the choice should be documented.
+2. **BAT54 variant**: confirm which of BAT54 / A / C / S is placed — the three topologies share a SOT-23 package but differ in footprint connectivity. (BOM says BAT54C — common cathode — verify.)
+3. **Pedal-jack SRV05-4 wiring**: confirm pin-5 handling on the pedal-jack SRV05-4 package (tied to 3.3 V vs. floating as on the USB instance), since pedal Tip/Ring lines carry slow analog — steering to rail is acceptable here, but the choice should be documented.

@@ -1520,12 +1520,12 @@ Component Kind
 Standard
 Symbol
 STDC14_Pogo_Pins
-Add into BOM
-yes
 Convert to PCB
 yes
 3D Model Title
 
+Add into BOM
+no
 Designator
 CN3
 Name
@@ -2299,23 +2299,23 @@ R0603
 PARTTYPE
 0603WAF1001T5E
 DESCRIPTION
-
+Type:Thick Film Resistor Resistance:1kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
 Component Kind
 Standard
 LCSC Part Name
-1KΩ(1001) ±1% 编带
+1kΩ ±1% 100mW 厚膜电阻
 Supplier Footprint
 0603
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20170920/C21190_1505887441885980538.pdf
+https://item.szlcsc.com/datasheet/0603WAF1001T5E/21904.html
 Add into BOM
 yes
 Convert to PCB
 yes
 3D Model Title
-R0603_L1.6-W0.8-H0.8
+R0603
 Description
-
+Type:Thick Film Resistor Resistance:1kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
 Supplier
 LCSC
 Manufacturer
@@ -2323,7 +2323,7 @@ UNI-ROYAL(厚声)
 Manufacturer Part
 0603WAF1001T5E
 Supplier Part
-
+C21190
 JLCPCB Part Class
 Basic Part
 Symbol
@@ -2335,15 +2335,21 @@ Device
 Unique ID
 gge167_1
 Name
-1KΩ
+1kΩ
 Value
-1KΩ
-Reuse Block
-
-Group ID
-
-Channel ID
-
+1kΩ
+Type
+Thick Film Resistor
+Tolerance
+±1%
+Power(Watts)
+100mW
+Voltage-Supply(Max)
+75V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
 
 *
 ]
@@ -2669,7 +2675,7 @@ C0805
 PARTTYPE
 CL21A475KAQNNNE
 DESCRIPTION
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Capacitance:4.7uF Tolerance:±10% Tolerance:±10% Voltage Rating:25V Temperature Coefficient:X5R 
 Component Kind
 Standard
 LCSC Part Name
@@ -2685,7 +2691,7 @@ Supplier Footprint
 JLCPCB Part Class
 Basic Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20160103/1457707696447.pdf
+https://item.szlcsc.com/datasheet/CL21A475KAQNNNE/2131.html
 Supplier
 LCSC
 Add into BOM
@@ -2696,14 +2702,12 @@ yes
 C0805_L2.0-W1.3-H1.3
 Tolerance
 ±10%
-Voltage Rated
-
 Temperature Coefficient
-
+X5R
 Value
 4.7uF
 Description
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Capacitance:4.7uF Tolerance:±10% Tolerance:±10% Voltage Rating:25V Temperature Coefficient:X5R 
 Symbol
 1206B475K500NT
 Designator
@@ -2712,14 +2716,10 @@ Device
 CL21A475KAQNNNE
 Unique ID
 gge250_1
-Reuse Block
-
-Group ID
-
-Channel ID
-
 Name
 4.7uF
+Voltage Rating
+25V
 
 *
 ]
@@ -3967,7 +3967,7 @@ C0603
 PARTTYPE
 CL10B102KB8NNNC
 DESCRIPTION
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Capacitance:1nF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R 
 Component Kind
 Standard
 LCSC Part Name
@@ -3983,7 +3983,7 @@ Supplier Footprint
 JLCPCB Part Class
 Basic Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20160103/1457707679526.pdf
+https://item.szlcsc.com/datasheet/CL10B102KB8NNNC/1940.html
 Supplier
 LCSC
 Add into BOM
@@ -3994,14 +3994,16 @@ yes
 C0603_L1.6-W0.8-H0.8
 Tolerance
 ±10%
-Voltage Rated
-
+Voltage Rating
+50V
 Temperature Coefficient
-
+X7R
+Name
+1nF
 Value
 1nF
 Description
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Capacitance:1nF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R 
 Symbol
 0402B102K500NT
 Designator
@@ -4027,7 +4029,7 @@ C0603
 PARTTYPE
 CL10B102KB8NNNC
 DESCRIPTION
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Capacitance:1nF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R 
 Component Kind
 Standard
 LCSC Part Name
@@ -4043,7 +4045,7 @@ Supplier Footprint
 JLCPCB Part Class
 Basic Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20160103/1457707679526.pdf
+https://item.szlcsc.com/datasheet/CL10B102KB8NNNC/1940.html
 Supplier
 LCSC
 Add into BOM
@@ -4054,14 +4056,16 @@ yes
 C0603_L1.6-W0.8-H0.8
 Tolerance
 ±10%
-Voltage Rated
-
+Voltage Rating
+50V
 Temperature Coefficient
-
+X7R
+Name
+1nF
 Value
 1nF
 Description
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Capacitance:1nF Tolerance:±10% Tolerance:±10% Voltage Rating:50V Temperature Coefficient:X7R 
 Symbol
 0402B102K500NT
 Designator
@@ -4473,7 +4477,7 @@ C0805
 PARTTYPE
 CL21A475KAQNNNE
 DESCRIPTION
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Capacitance:4.7uF Tolerance:±10% Tolerance:±10% Voltage Rating:25V Temperature Coefficient:X5R 
 Component Kind
 Standard
 LCSC Part Name
@@ -4489,7 +4493,7 @@ Supplier Footprint
 JLCPCB Part Class
 Basic Part
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20160103/1457707696447.pdf
+https://item.szlcsc.com/datasheet/CL21A475KAQNNNE/2131.html
 Supplier
 LCSC
 Add into BOM
@@ -4500,14 +4504,16 @@ yes
 C0805_L2.0-W1.3-H1.3
 Tolerance
 ±10%
-Voltage Rated
-
+Voltage Rating
+25V
 Temperature Coefficient
-
+X5R
+Name
+4.7uF
 Value
 4.7uF
 Description
-Capacitance: Tolerance:±10% Tolerance:±10% Voltage Rated: Temperature Coefficient: 
+Capacitance:4.7uF Tolerance:±10% Tolerance:±10% Voltage Rating:25V Temperature Coefficient:X5R 
 Symbol
 1206B475K500NT
 Designator
@@ -4689,23 +4695,37 @@ R0603
 PARTTYPE
 0603WAF1001T5E
 DESCRIPTION
-
+Type:Thick Film Resistor Resistance:1kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
 Component Kind
 Standard
 LCSC Part Name
-1KΩ(1001) ±1% 编带
+1kΩ ±1% 100mW 厚膜电阻
 Supplier Footprint
 0603
 Datasheet
-https://atta.szlcsc.com/upload/public/pdf/source/20170920/C21190_1505887441885980538.pdf
+https://item.szlcsc.com/datasheet/0603WAF1001T5E/21904.html
 Add into BOM
 yes
 Convert to PCB
 yes
 3D Model Title
-R0603_L1.6-W0.8-H0.8
+R0603
+Type
+Thick Film Resistor
+Value
+1kΩ
+Tolerance
+±1%
+Power(Watts)
+100mW
+Voltage-Supply(Max)
+75V
+Temperature Coefficient
+±100ppm/℃
+Operating Temperature
+-55℃~+155℃
 Description
-
+Type:Thick Film Resistor Resistance:1kΩ Tolerance:±1% Tolerance:±1% Power(Watts):100mW Voltage-Supply(Max):75V Temperature Coefficient:±100ppm/℃ Temperature Coefficient:±100ppm/℃ Operating Temperature:-55℃~+155℃ Operating Temperature:-55℃~+155℃ 
 Supplier
 LCSC
 Manufacturer
@@ -4713,7 +4733,7 @@ UNI-ROYAL(厚声)
 Manufacturer Part
 0603WAF1001T5E
 Supplier Part
-
+C21190
 JLCPCB Part Class
 Basic Part
 Symbol
@@ -4725,9 +4745,7 @@ Device
 Unique ID
 gge167_2
 Name
-1KΩ
-Value
-1KΩ
+1kΩ
 Reuse Block
 
 Group ID
@@ -5201,6 +5219,12 @@ Q1-2 AO3401A_C15127-S Passive
 R6-2 0603WAF1003T5E-2 Input   
 )
 (
+L_BOOT0 
+TV2-1 SRV05-4-P-T7_C85364-1 Input   
+CN2-11 S062100026-11 Input   
+U1-11 STM32G474CBT6-PA3 Passive 
+)
+(
 L_SPI_MOSI 
 TV2-3 SRV05-4-P-T7_C85364-3 Input   
 CN2-9 S062100026-9 Input   
@@ -5236,6 +5260,12 @@ L_READY
 TV1-6 SRV05-4-P-T7_C85364-6 Input   
 CN2-2 S062100026-2 Input   
 R2-1 0603WAF1000T5E-1 Input   
+)
+(
+R_BOOT0 
+TV4-1 SRV05-4-P-T7_C85364-1 Input   
+CN1-11 S062100026-11 Input   
+U1-27 STM32G474CBT6-PB13 Passive 
 )
 (
 R_SPI_MOSI 
@@ -5297,7 +5327,7 @@ M_NRST
 TV5-1 SRV05-4-P-T7_C85364-1 Input   
 CN3-11 STDC14_Connector-GNDDetect Input   
 U2-1 BAT54C_C22466350-A Passive 
-U1-11 STM32G474CBT6-PA3 Passive 
+U1-7 STM32G474CBT6-PG10-NRST Passive 
 C4-1 CC0603KRX7R9BB104-1 Passive 
 )
 (

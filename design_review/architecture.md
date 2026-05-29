@@ -22,25 +22,28 @@ Trade-off: STM32G474 is an *extended* part on JLCPCB rather than basic, so it ca
 
 ## Internal Bus: Motherboard to Wing Boards
 
-Each wing board connects to the motherboard over its **own dedicated full-duplex SPI bus** — one SPI peripheral per wing on the motherboard (SPI1 → left wing, SPI2 → right wing). The two buses are electrically independent: no shared SCK/MOSI/MISO, no bus arbitration. The connector (2×5, 2.54 mm IDC) carries 10 wires:
+Each wing board connects to the motherboard over its **own dedicated full-duplex SPI bus** — one SPI peripheral per wing on the motherboard (SPI1 → left wing, SPI2 → right wing). The two buses are electrically independent: no shared SCK/MOSI/MISO, no bus arbitration. The connector (**S062100026, 2×6, 1.27 mm pitch, SMD vertical**) carries 12 wires:
 
 | Pin | Net | Direction |
 |---|---|---|
-| 1 | VCC (3.3 V from motherboard) | main → wing |
-| 2 | SPI_MOSI | main → wing |
-| 3 | GND | — |
-| 4 | SPI_MISO | wing → main |
-| 5 | GND | — |
-| 6 | SPI_SCK | main → wing |
-| 7 | GND | — |
-| 8 | SPI_NSS | main → wing |
-| 9 | NRST | main → wing (open-drain via BAT54C) |
-| 10 | READY | wing → main |
+| 1  | VCC (3.3 V from motherboard) | main → wing |
+| 2  | READY | wing → main |
+| 3  | SPI_NSS | main → wing |
+| 4  | NRST | main → wing (open-drain via BAT54C) |
+| 5  | SPI_SCK | main → wing |
+| 6  | GND | — |
+| 7  | SPI_MISO | wing → main |
+| 8  | GND | — |
+| 9  | SPI_MOSI | main → wing |
+| 10 | GND | — |
+| 11 | BOOT0 | main → wing |
+| 12 | VCC (second power return) | main → wing |
 
-Signals are interleaved with GND returns (pins 3, 5, 7) for signal integrity on the ribbon cable.
+Three GND returns (pins 6, 8, 10) interleaved with signals; two VCC pins (1 and 12) share the power load across both rows of the connector.
 
 - **NRST** is driven open-drain from the motherboard through a BAT54C to 3.3 V; the wing's internal NRST pull-up provides idle-high.
 - **READY** is driven actively high by the wing once its MCU has initialised; the motherboard configures its READY pin as input with internal pull-down so that, if a wing is absent or still booting, the line resolves to "not ready" without anyone sourcing current into the wing.
+- **BOOT0** (pin 11) is driven by the motherboard MCU (PA3 → left wing via CN2-11, PB13 → right wing via CN1-11). By asserting BOOT0 high while cycling NRST, the motherboard can force a wing into the STM32G474 system bootloader — enabling in-system firmware updates of either wing over USB without physical button access. See [hardware.md](hardware.md) §"Remote Wing Programming via BOOT0".
 
 Each SPI transaction carries a wing identification code, a complete raw keyboard state frame, and a checksum. The wing ID encodes the keyboard layout (e.g. Rheinische Lage, Einheitsgriff), so the motherboard applies the correct key-to-note mapping at runtime — the same firmware supports multiple layouts without recompilation.
 

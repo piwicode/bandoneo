@@ -46,11 +46,11 @@ Netlist: `CP1(100 nF 0603) + CP2(100 nF 0603)` on VDDH.
 ## 2. MCU Decoupling (STM32G474CBT6, U1)
 
 ### 2.1 VDD Pin Bypass Caps
-G474 LQFP48 has **4 supply pins**: VDD at pins 24, 36, 48 and VBAT at pin 1.  
-Netlist VCC net has bypass caps: **C8, C9, C10** (three × 100 nF 0402).  
-That is only **3 caps for 4 pins** — one VDD or VBAT pin appears unbypassed.  
-`hardware.md` references "C50–C53 (0402, 100 nF)" which do not exist in this BOM.  
-**FAIL** — verify whether pin 1 (VBAT) has a dedicated 100 nF, or add a 4th bypass. Update `hardware.md` designator references (C50–C53 → actual designators).
+G474 LQFP48 has **3 VDD pins** (24, 36, 48) plus **VBAT** (pin 1).  
+Netlist VCC net has bypass caps: **C8, C9, C10** (three × 100 nF 0402) — one per VDD pin.  
+VBAT does **not** require a dedicated bypass cap: the G474 datasheet Figure 16 ("Power supply scheme") shows no cap on VBAT, and the caution note only mandates decoupling for the supply pairs listed in that figure (VDD, VDDA, VREF). With VBAT tied to VDD and no backup battery, the VDD decoupling covers it.  
+`hardware.md` (lines ~84 and ~120) still references the phantom designators C50–C53 — corrected below.  
+**PASS** — cap count is correct. Doc fix applied to `hardware.md`.
 
 ### 2.2 VDD Bulk Cap
 Netlist: `C11 (4.7 µF 0805)` on VCC.  
@@ -82,9 +82,8 @@ See §1.1. **PASS**.
 
 ### 3.2 USB D+/D− (TV8, SRV05-4)
 Netlist: `TV8-1 → USB_DP(PA12, USB1-3)`, `TV8-3 → USB_DM(PA11, USB1-2)`, `TV8-2 → GND`, **`TV8-5 → VBUS`**.  
-`hardware.md` and `datasheet_summaries.md` both say "pin 5 left **floating**" for USB SRV05-4.  
-The netlist has pin 5 tied to VBUS (5 V), not floating.  
-**FAIL** — documentation must be corrected: TV8 pin 5 = VBUS (ESD steers to VBUS or GND, both valid). Remove "floating" language and document the actual VBUS connection.
+Pin 5 (V+) tied to VBUS is correct: no PD negotiation means VBUS is always 5 V, so the upper steering diodes are safe to activate. ESD charge steers to VBUS (held by SMF5.0A) or GND — full bidirectional clamping. `hardware.md` and `datasheet_summaries.md` updated to remove the erroneous "floating" language.  
+**PASS**
 
 ### 3.3 Pedal Jack ESD (TV7, SRV05-4)
 Netlist: `TV7-5 → VCC (3.3 V)`, channels: `TV7-1 → SUS_PEDAL`, `TV7-3 → EXP_PEDAL`, `TV7-4 → EXP_PEDAL_INT`, `TV7-6 → SUS_PEDAL_INT`.  
@@ -103,9 +102,9 @@ ESD devices are present; coverage is architecturally correct pending wiring veri
 Netlist: D1–D4 each have pin 1 → GND, pin 2 → respective button net.  
 **PASS** — bidirectional clamp on each GPIO line.
 
-### 3.7 Missing VBUS Polyfuse / eFuse
-`hardware.md` notes this as "suggested" but not placed. Still not in BOM.  
-**OPEN** — decide whether to add an inline polyfuse (PTC) or eFuse before V1 release. Without it, a downstream short can pull VBUS from the host without current limiting.
+### 3.7 VBUS Polyfuse / eFuse
+Deliberately not fitted for v1. Rationale: USB 2.0 host port is spec-required to limit to 500 mA; SMF5.0A clamps transient surges; TLV755P has internal foldback + thermal shutdown. A polyfuse or eFuse would be a JLCPCB extended part with no basic-part substitute, adding cost and assembly risk for marginal protection gain in this power envelope. `hardware.md` updated accordingly.  
+**SKIP — conscious decision, not an oversight.**
 
 ---
 
@@ -131,11 +130,8 @@ HSI48 + CRS per architecture.md. No crystal in BOM. VDDA ≥ 2.4 V (3.3 V VCC) a
 
 ### 5.1 Connector Part vs. Architecture Documentation
 BOM: `CN1, CN2 = S062100026`, which is **2×6 (12-pin), 1.27 mm pitch, SMD vertical**.  
-`architecture.md` describes a **"2×5 (10-way) shrouded IDC header on 2.54 mm pitch"**.  
-**FAIL** — architecture.md is out of date. Document the actual connector:
-- 12-pin (2×6), 1.27 mm pitch, SMD
-- Adds BOOT0 signal and second VCC pin vs. the 10-pin design
-- No longer a through-hole IDC ribbon assembly; servicing requires a matching SMD socket.
+`architecture.md` and `hardware.md` updated with correct connector, full 12-pin table (2× VCC, 3× GND, 4× SPI, READY, NRST, BOOT0), and trade-off note (1.27 mm cable required, no Dupont compatibility).  
+**PASS**
 
 ### 5.2 Wing Bus Signal-to-Pin Mapping (CN2 = left wing)
 | Net | CN2 pin | MCU GPIO |
@@ -167,11 +163,10 @@ BOM: `CN1, CN2 = S062100026`, which is **2×6 (12-pin), 1.27 mm pitch, SMD verti
 
 **WARN** — PF0/PF1 are used for R_SPI_NSS and R_SPI_SCK. G474 can remap SPI to alternate pins but PF0/PF1 are not standard SPI2 pins. Verify PF0/PF1 are valid GPIO-mode outputs that the firmware bit-bangs for SPI2, or that SPI2 remapping to PF0/PF1 is supported in the G474's AF table.
 
-### 5.4 Remote BOOT0 on Wing Connector (Undocumented Feature)
-Netlist: `CN2-11 = L_BOOT0 → PA3` and `CN1-11 = R_BOOT0 → PB13`.  
-The motherboard MCU can assert BOOT0 on either wing without a physical button press — enabling in-system DFU of wings via the SPI bus connector.  
-Not mentioned in `architecture.md` or `hardware.md`.  
-**FAIL** — add this to architecture.md's bus table and hardware.md's programming section. This is an important bring-up/maintenance feature.
+### 5.4 Remote BOOT0 on Wing Connector
+Netlist: `CN2-11 = L_BOOT0 → PA3`, `CN1-11 = R_BOOT0 → PB13`.  
+Documented in `architecture.md` bus table and `hardware.md` §"Remote Wing Programming via BOOT0": motherboard asserts BOOT0+NRST sequence to force either wing into system bootloader, enabling USB-to-wing firmware updates without physical button access.  
+**PASS**
 
 ### 5.5 Wing NRST Open-Drain Topology (BAT54C)
 Netlist `$1N16140` net: `U2-3(K) + U3-3(K) + SW1-2 + D1-2 + C1-1`.  
@@ -195,32 +190,20 @@ From netlist nets:
 | SW3 | SW_FN2 | PB4 (FN2) |
 | SW4 | SW_FN0_BOOT0 | PB8/BOOT0 |
 
-`hardware.md` and `datasheet_summaries.md` say **SW1 = BOOT0, SW4 = FN3**.  
-**FAIL** — documentation is completely wrong. Correct mapping:
-- **SW1** = global reset button (pulls all three MCU NRST lines low via BAT54C)
-- **SW2** = FN1 (active-low, PB6)
-- **SW3** = FN2 (active-low, PB4)
-- **SW4** = BOOT0 / FN0 (active-high, ties PB8/BOOT0 to 3.3 V)
-- **There is no FN3** — only FN1 and FN2 on the motherboard.
-
-Update `hardware.md` §"Function and Boot Buttons", `datasheet_summaries.md` §STM32G474 boot note, and `architecture.md`.
+`hardware.md` and `datasheet_summaries.md` updated with correct mapping (SW1=NRST, SW2=FN1/PB6, SW3=FN2/PB4, SW4=BOOT0/FN0/PB8). FN3 removed.  
+**PASS**
 
 ### 6.2 External Pull-Down on BOOT0 (R1)
-Netlist `SW_FN0_BOOT0` net: `R1-1 → net`, `R1-2 → GND`. R1 = 10 kΩ.  
-`hardware.md` states "No external pull resistors on any of the four buttons."  
-**FAIL** — there IS a 10 kΩ external pull-down on BOOT0/PB8. This is actually correct design practice (BOOT0 needs a defined idle-low state when SW4 is open). Remove the "no external pull" claim for SW4/BOOT0. FN1/FN2 still rely on internal pull-ups; only BOOT0 has an external pull-down.
+`hardware.md` button table updated: SW4/BOOT0 has external 10 kΩ pull-down (R1) for defined idle-low; FN1/FN2 use MCU internal pull-ups. The incorrect blanket "no external pull resistors" claim removed.  
+**PASS**
 
-### 6.3 SW1 = Global Reset Button (Undocumented)
-SW1 pin 1 → GND, SW1 pin 2 → BAT54C common cathode (`$1N16140`). Pressing SW1 grounds the cathode, forward-biasing both BAT54C diodes and pulling all NRST lines to ~0.3 V.  
-This resets **all three MCUs simultaneously** (motherboard + both wings).  
-Not mentioned anywhere in the documentation.  
-**FAIL** — add a "Global Reset (SW1)" description to `hardware.md` §"Function and Boot Buttons". This is a critical bring-up tool.
+### 6.3 SW1 = Global Reset Button
+Documented in `hardware.md` §"Function and Boot Buttons": SW1 grounds the BAT54C common cathode, forward-biasing both diodes and pulling all three MCU NRST lines to ~0.3 V simultaneously.  
+**PASS**
 
-### 6.4 LED_FN0 Has No Associated Switch
-Netlist: `LED_FN0 (NCD0805R1) anode → R9 (330 Ω) → PB9`. No button connects to PB9.  
-SW2=FN1 is PB6, LED_FN1=PB7. SW3=FN2 is PB4, LED_FN2=PB5. Pattern: LED adjacent GPIO.  
-SW4=BOOT0 is PB8. LED_FN0 is PB9. This LED sits next to the BOOT0 switch GPIO but is a **separate firmware-controlled indicator** — likely used for USB enumeration status or MIDI activity.  
-**WARN** — document what LED_FN0 (PB9) indicates. If it is behind the BOOT0 button cap, note that. If it is a standalone status LED, note that.
+### 6.4 LED_FN0
+LED_FN0 (PB9, R9 330 Ω) is the status LED behind the SW4 (BOOT0/FN0) button cap — same pattern as FN1 (PB7/SW2) and FN2 (PB5/SW3). `hardware.md` button table updated to make PB9 explicit.  
+**PASS**
 
 ### 6.5 FN Button Logic Levels
 SW2 (FN1) and SW3 (FN2): pin 1 → GND, pin 2 → GPIO. Active-low via MCU internal pull-up. ✓  
@@ -322,8 +305,8 @@ At 3.3 V − 2.0 V Vf = 1.3 V across 330 Ω → ~3.9 mA. Consistent with hardwar
 **PASS**.
 
 ### 10.2 LED_FN0 (PB9)
-Netlist: `R9(330 Ω) → PB9`. No associated switch. See §6.4.  
-**WARN** — see §6.4.
+LED behind SW4 (BOOT0/FN0) cap. See §6.4.  
+**PASS**
 
 ### 10.3 Power LED (LED_POW1, KT-0805Y yellow)
 Netlist: `LED_POW1 anode → R10(1 kΩ) → VCC`. Cathode → GND.  
@@ -396,21 +379,20 @@ Confirmed: not in BOM. Bare copper pads only.
 ## 13. Documentation Consistency
 
 ### 13.1 architecture.md — Wing Bus Table
-Table shows 10-pin 2×5 IDC, 2.54 mm. Netlist shows 12-pin 2×6 SMD, 1.27 mm. Missing BOOT0 row.  
-**FAIL** — update bus table to add BOOT0 row; update connector description.
+Updated to 12-pin 2×6 SMD 1.27 mm with BOOT0 row. See §5.1.  
+**PASS**
 
 ### 13.2 hardware.md — Function and Boot Buttons
-Entire section is wrong: SW1/SW4 roles are swapped; "no external pull resistors" is wrong (R1 pull-down on BOOT0); SW1 is not BOOT0, it is a global reset.  
-**FAIL** — rewrite section. See §6.
+Section rewritten: SW1=NRST, SW4=BOOT0/FN0, R1 pull-down documented. See §6.  
+**PASS**
 
 ### 13.3 hardware.md / datasheet_summaries.md — USB SRV05-4 Pin 5
-Both say "floating." Netlist says VBUS.  
-**FAIL** — correct both files. See §3.2.
+Both files corrected to VBUS. See §3.2.  
+**PASS**
 
 ### 13.4 datasheet_summaries.md — Protection Coverage Table
-Row "Wing-bus ESD" currently says "SRV05-4 × 2 per wing (SPI + NRST + READY)."  
-Netlist adds BOOT0 on the connector (pin 11). The bus now has 7 signals per wing (SPI×4, NRST, READY, BOOT0), covered by 2× SRV05-4 (8 channels total — adequate).  
-**FAIL** — update row to include BOOT0 in the signal list.
+Wing-bus ESD row updated to list all 7 signals (SPI×4 + NRST + READY + BOOT0, 8 channels total).  
+**PASS**
 
 ### 13.5 datasheet_summaries.md — Open Items
 - Item 2 (BAT54C variant): **CLOSED** (§12.2 above).

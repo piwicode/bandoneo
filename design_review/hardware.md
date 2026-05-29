@@ -4,8 +4,8 @@
 The instrument is bus-powered from USB VBUS at the standard 5 V (USB 2.0) — no PD voltage negotiation is performed, no battery, no buck/charger on the input. The connector type is a separate mechanical decision; the electrical front end below works with any USB 2.0 receptacle. This simplifies the protection considerably:
 
 - **VBUS TVS:** an `SMF5.0A` (SOD-123FL, unidirectional, 200 W peak) clamps transient surges to ≈ 9.2 V, well below the downstream LDO's absolute-max input. Reverse standoff 5 V matches the only operating voltage VBUS will see; a misbehaving source pushing higher voltage is clamped, not propagated to the LDO.
-- **Optional polyfuse / eFuse on VBUS:** the previous design relied on BQ25895 for input OCP. With the charger gone, an inline polyfuse (~500 mA hold / ~1 A trip) or a small eFuse (TPS25200, TPS2553 on the input rail, etc.) provides input current limiting against a downstream short — cheap insurance for a bus-powered device.
-- **D+ / D- ESD:** unchanged — SRV05 with pin 5 left **floating** so transient current flows to GND, not into VCC. The detailed reasoning in the prior revision still applies: tying pin 5 to VCC would push ESD current through the rail into the LDO and MCU; floating pin 5 keeps the clamp's GND path while not back-biasing the rail.
+- **No polyfuse / eFuse on VBUS:** deliberately not fitted. The USB 2.0 host port is already required by spec to limit current to 500 mA; the SMF5.0A TVS clamps transient surges; and the TLV755P has internal foldback + thermal shutdown. A polyfuse would be an JLCPCB extended part with no matching basic-part substitute. The combination of host OCP + TVS + LDO self-protection is judged sufficient for v1.
+- **D+ / D− ESD:** SRV05-4 (TV8) with pin 5 (V+) tied to **VBUS (5 V)**. Since no PD negotiation is performed, VBUS is always standard USB 2.0 5 V — the only voltage this pin will ever see. Tying V+ to VBUS is the correct usage: it activates both the upper and lower steering diodes, giving full bidirectional clamping on D+/D−. ESD charge steered upward disperses into the host's source impedance; the SMF5.0A is there to clamp any transient that reaches VBUS. Floating pin 5 would disable the upper diodes and halve clamping effectiveness.
 
 ## Power Consumption
 
@@ -39,7 +39,7 @@ If gating ever has to be disabled (e.g., during bring-up before firmware control
 
 ## Wing Power and Bus Interface
 
-Each wing is powered directly from the motherboard's 3.3 V rail through pin 1 of its 2×5 IDC connector. There is **no per-wing power switch (no TPS2553), no gated wing rail, and no back-feed buffer (no SN74LVC125A)**. With the battery removed, there is no operating mode that powers the motherboard while leaving a wing off — when VBUS is present the whole instrument is powered, when VBUS is gone everything is off — so the back-feed path that the isolation buffer was protecting against no longer exists in any normal operating state.
+Each wing is powered directly from the motherboard's 3.3 V rail through pins 1 and 12 of its 2×6 1.27 mm SMD connector. There is **no per-wing power switch (no TPS2553), no gated wing rail, and no back-feed buffer (no SN74LVC125A)**. With the battery removed, there is no operating mode that powers the motherboard while leaving a wing off — when VBUS is present the whole instrument is powered, when VBUS is gone everything is off — so the back-feed path that the isolation buffer was protecting against no longer exists in any normal operating state.
 
 **Wing reset and presence handling.**
 
@@ -50,13 +50,13 @@ Each wing is powered directly from the motherboard's 3.3 V rail through pin 1 of
 
 ## Wing Bus Connector
 
-The motherboard↔wing bus uses a **2×5 (10-way) shrouded IDC header on 2.54 mm pitch**. The choice is driven by serviceability and prototyping ergonomics rather than electrical need — the bus runs at well under 1 MHz effective, so it does not require a controlled-impedance or high-density connector.
+The motherboard↔wing bus uses an **S062100026 — 2×6 (12-pin), 1.27 mm pitch, SMD vertical header** (CN1 = right wing, CN2 = left wing). This is a compact, low-profile SMD part; the mating cable assembly must use the matching 1.27 mm pitch crimp housing.
 
-- **2.54 mm pitch** is the de-facto Dupont jumper pitch. During bring-up and tinkering, individual signals can be probed, patched, or fanned out to a breadboard with off-the-shelf jumper leads — no custom breakouts.
-- **2×5 IDC ribbon assemblies** (10-way flat cable with crimped IDC sockets) are commodity parts stocked by every distributor, in any length, and a damaged cable is swapped without touching either board.
-- The **shroud notch** keys the cable, preventing reverse insertion.
+The 12-pin layout carries 9 signals, 2 VCC, and 3 GND returns — see [architecture.md](architecture.md) for the full pin table. Compared to the earlier 10-pin 2.54 mm design:
 
-The wing bus carries 8 signals (see [architecture.md](architecture.md)); the 10-way connector leaves two spare pins for ground returns.
+- **BOOT0 added** (pin 11) — enables the motherboard MCU to force a wing into system bootloader mode without a physical button. See §"Remote Wing Programming via BOOT0" below.
+- **Second VCC pin** (pin 12) — shares power delivery across both connector rows, reducing pin current.
+- **1.27 mm vs. 2.54 mm pitch** — smaller footprint, but no longer Dupont-compatible; a 1.27 mm crimp cable or a flex-cable assembly is required. The trade-off is board area vs. cable-swap ergonomics.
 
 ## PCB Manufacturing Strategy: JLCPCB Economic, 2-Layer
 
@@ -81,13 +81,13 @@ All three boards (motherboard, left wing, right wing) are manufactured via **JLC
 
 ## Passive Form Factor
 
-Default passive footprint for both resistors and capacitors is **0603**, picked for hand-rework ergonomics on this 2-layer prototype-friendly design. **0402** is reserved exclusively for the **MCU load capacitors** that sit directly between the package's 0.5 mm-pitch pads — the 100 nF per-VDD bypass (C50–C53) and the VDDA / VREF+ filter pair (C7/C8/C55/C57/C58 depending on board). The smaller pad geometry minimises the decoupling loop inductance that dominates supply impedance at the M4F's switching harmonics; nothing else on the board needs this. NRST, debounce, ESD, and signal-filter caps all stay 0603. Bulk reservoir caps (4.7 µF) stay in **0805** because the dielectric volume forces a larger package anyway.
+Default passive footprint for both resistors and capacitors is **0603**, picked for hand-rework ergonomics on this 2-layer prototype-friendly design. **0402** is reserved exclusively for the **MCU load capacitors** that sit directly between the package's 0.5 mm-pitch pads — the 100 nF per-VDD bypass (C8, C9, C10) and the VDDA / VREF+ filter pair (C7/C8/C55/C57/C58 depending on board). The smaller pad geometry minimises the decoupling loop inductance that dominates supply impedance at the M4F's switching harmonics; nothing else on the board needs this. NRST, debounce, ESD, and signal-filter caps all stay 0603. Bulk reservoir caps (4.7 µF) stay in **0805** because the dielectric volume forces a larger package anyway.
 
 ## LED Brightness Scheme
 
 Two current-limit tiers, by visual purpose:
 
-- **MainBoard FN status LEDs (R29/R35/R36 = 330 Ω → ~4 mA)** — sit *behind* their respective function buttons (SW2/SW3/SW4 = FN1/FN2/FN3 — **not** SW1/FN0, which is the BOOT0 switch and has no associated LED) and glow through the translucent button cap. The higher current overcomes the diffuser loss so the LED is legible at-a-glance during play.
+- **MainBoard FN status LEDs (R29/R35/R36 = 330 Ω → ~4 mA)** — sit *behind* their respective function buttons (SW2/SW3/SW4 = FN1/FN2/FN0) and glow through the translucent button cap. The higher current overcomes the diffuser loss so the LED is legible at-a-glance during play. SW1 (global NRST) has no LED.
 - **All other LEDs (1 kΩ → ~1.3 mA)** — POW on all three boards, READY on each wing, and the wing's FN LEDs (which are not used as runtime indicators in current firmware). These are open-air status LEDs at modest 0805 brightness; 1 kΩ is enough to be obviously-on under office lighting without being distracting on a dark stage.
 
 Net LED current contribution to the rail: ~10 mA total worst-case across the system, well inside the 500 mA LDO budget.
@@ -96,28 +96,30 @@ Net LED current contribution to the rail: ~10 mA total worst-case across the sys
 
 ### MainBoard
 
-Four SMD tactile switches (SW1–SW4). SW1 is the BOOT0 button; SW2–SW4 are function buttons FN1–FN3.
+Four SMD tactile switches (SW1–SW4):
 
 | Designator | Function | GPIO | Logic | Pull | LED |
 |---|---|---|---|---|---|
-| SW1 | BOOT0 | PB8 / BOOT0 | **High when pressed** (switch ties PB8 to 3.3 V) | None — no external pull-up or pull-down | No |
-| SW2 | FN1 | — | Low when pressed (switch ties GPIO to GND) | MCU internal pull-up | Yes (330 Ω, behind cap) |
-| SW3 | FN2 | — | Low when pressed | MCU internal pull-up | Yes (330 Ω, behind cap) |
-| SW4 | FN3 | — | Low when pressed | MCU internal pull-up | Yes (330 Ω, behind cap) |
+| SW1 | Global NRST | — (NRST via BAT54C) | Pulls all 3 MCU NRST lines low when pressed | None | No |
+| SW2 | FN1 | PB6 | **Low when pressed** (ties GPIO to GND) | MCU internal pull-up | Yes (330 Ω, behind cap) |
+| SW3 | FN2 | PB4 | **Low when pressed** (ties GPIO to GND) | MCU internal pull-up | Yes (330 Ω, behind cap) |
+| SW4 | BOOT0 / FN0 | PB8 / BOOT0 | **High when pressed** (ties PB8 to 3.3 V) | **External 10 kΩ pull-down (R1) to GND** | Yes — LED_FN0, R9 (330 Ω), driven by **PB9**, behind SW4 cap |
 
-**BOOT0 / DFU recovery.** Holding SW1 at power-on forces BOOT0 = 1, which causes the STM32G474 to enter its system-memory bootloader (USB DFU or UART). There is no external pull-up or pull-down on PB8/BOOT0 — the pin floats unless SW1 is pressed or firmware drives it. Since the G474 samples BOOT0 only during the first clock cycles after reset, normal firmware operation (which may later drive PB8 as a GPIO) does not interfere with the boot-pin sample provided the pin was not driven high before reset de-asserted. To enter DFU: hold SW1, apply power (or press NRST), then release SW1 after enumeration.
+**Global NRST (SW1).** Pressing SW1 drives the open-drain NRST node through the BAT54C network, pulling all three MCU NRST pins (motherboard + both wings) low simultaneously — a full system reset without USB disconnect. SW1 has no GPIO and no LED.
 
-**No external pull resistors on any of the four buttons.** FN1–FN3 rely on MCU internal pull-ups. BOOT0 (SW1) relies on the internal BOOT0 pull-down that the STM32G474 applies after the boot-mode latch is captured (~1 µs after reset de-assertion) — in normal operation PB8 is then controlled by firmware.
+**BOOT0 / FN0 (SW4).** SW4 is dual-purpose: held at power-on (or during NRST via SW1), BOOT0 = 1 forces the motherboard MCU into system bootloader (USB DFU). In normal operation PB8/BOOT0 is sampled only at reset; firmware may thereafter drive PB8 as GPIO (FN0). The external 10 kΩ pull-down (R1) holds BOOT0 low when SW4 is open, providing a defined idle state — unlike FN1/FN2 which rely on the MCU's internal pull-ups. Active-high logic: press = FN0 asserted / DFU condition.
+
+**FN1, FN2 (SW2, SW3).** Active-low, rely on MCU internal pull-ups. No external resistors.
 
 ### Wing Boards
 
-Each wing board carries one dedicated **BOOT0 pushbutton** wired the same way as SW1 on the motherboard: the switch ties BOOT0 directly to 3.3 V, **no external pull-up or pull-down**. There are no FN buttons on the wing boards; all user-facing controls are on the motherboard.
+Each wing board carries one dedicated **BOOT0 pushbutton** wired the same way as SW4 on the motherboard: the switch ties BOOT0 directly to 3.3 V, with no external pull resistor (the wing's BOOT0 idle state is managed by the motherboard's R_BOOT0 / L_BOOT0 GPIO driving the line low through the bus connector). There are no FN buttons on the wing boards; all user-facing controls are on the motherboard. With remote BOOT0 available via the wing bus connector (see §"Remote Wing Programming via BOOT0"), the physical wing BOOT0 button is a fallback for bench use only.
 
 ## MCU Decoupling (STM32G474CBT6, LQFP48)
 
 All three boards run the **same STM32G474CBT6** in LQFP48 with the same decoupling pattern, per the G474 datasheet "Power supply scheme" and AN4488. The LQFP48 package has:
 
-- **3 × VDD pins** (24, 36, 48) plus **VBAT** (1) — one 100 nF X7R per pin within a few mm of the package. On the motherboard these are C50, C51, C52, C53 (0402, 100 nF). VBAT is tied to VCC since no backup battery is fitted.
+- **3 × VDD pins** (24, 36, 48) — one 100 nF X7R per pin within a few mm of the package (C8, C9, C10, 0402). **VBAT** (pin 1) is tied to VCC since no backup battery is fitted; it requires no dedicated bypass cap — the G474 datasheet Figure 16 does not call for one, and the VDD decoupling covers it.
 - **1 × 4.7 µF bulk** ceramic on VDD (C54, 0805). Provides the local reservoir absent a 3.3 V plane on the 2-layer stackup. An additional 1 µF (C55) sits on the same rail.
 - **VDDA filter** (pin 21): a ferrite bead between VDD and VDDA (L1, GZ1608D601TF, 600 Ω @ 100 MHz, 200 mA — comfortable for VDDA at ~10 mA when the ADC runs), plus 1 µF (C49) + 10 nF (C48) on VDDA referenced to VSSA. The ferrite is justified on every board: the motherboard reads the pedal pots, and the wings sample 32–40 Hall channels through the on-chip ADC.
 - **NRST cap**: 100 nF (C39) close to the NRST pin, per AN4488.
@@ -200,4 +202,21 @@ Each board (motherboard and both wings) exposes **14 pogo-pin landing pads** lai
 **Mating jig**: Tag-Connect TC2070-IDC-050 (0.050" / 1.27 mm pitch, 14-pin, with legs). The legs anchor the jig to the board during the programming cycle. This jig is **not on the BOM** — it is a workshop tool, one per programmer setup.
 
 STDC14 carries: SWD (SWDIO/SWCLK), SWO trace, NRST, UART VCP (TX/RX), target VCC reference, and GND returns — everything needed for flashing, halting, real-time tracing, and serial console.
+
+## Remote Wing Programming via BOOT0
+
+The wing bus connector (CN1/CN2) carries a **BOOT0** line (pin 11) driven by the motherboard MCU:
+
+- CN1-11 (`R_BOOT0`) → motherboard GPIO **PB13**
+- CN2-11 (`L_BOOT0`) → motherboard GPIO **PA3**
+
+The motherboard also controls wing **NRST** (CN1/CN2 pin 4, open-drain via BAT54C). Together these two lines allow the motherboard to force either wing into the STM32G474 system bootloader:
+
+1. Assert BOOT0 high (motherboard drives PB13/PA3 → 3.3 V).
+2. Assert NRST low, then release it.
+3. Wing MCU boots with BOOT0 = 1 → enters system bootloader (supports USART, SPI, I2C protocols).
+4. Motherboard communicates with the wing bootloader over the existing SPI bus wires (MOSI/MISO/SCK/NSS), which the STM32G474 bootloader can expose as an SPI slave interface.
+5. Motherboard receives new firmware from the USB host and relays it to the wing — a full OTA-style wing update without touching the wing board.
+
+This eliminates the need to physically access the wing's BOOT0 button or STDC14 pads for firmware updates in the field. The STDC14 pads remain available for initial factory programming and debug.
 

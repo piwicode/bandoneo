@@ -21,7 +21,7 @@ Cross-reference: BOM files live in [export/](export/); the PDFs are symlinked in
 - **Typical externals**: one 100 nF per VDD pin + 4.7 µF bulk; 1 µF + 10 nF on VDDA referenced to VSSA, with a ferrite bead between VDD and VDDA; 100 nF on NRST.
 - **Debug**: SWD + SWO (2 + 1 wires); built-in USB DFU available for factory programming if BOOT0 is asserted at reset.
 - **Why G4 instead of F1 or G431.** Same SKU runs on all three boards (no toolchain split), USB without a crystal, plenty of pin/peripheral budget for two independent SPI buses on the motherboard. G4 is *extended* on JLCPCB (small per-unit surcharge over basic-part G431), accepted in exchange for the single-SKU simplification.
-- **Boot / DFU**: SW1 (BOOT0 button) ties PB8/BOOT0 to 3.3 V when pressed — no external pull-up or pull-down. Hold SW1 at power-on to enter DFU. Normal firmware may drive PB8 as GPIO after the boot-pin latch is captured. See [hardware.md](hardware.md) §"Function and Boot Buttons".
+- **Boot / DFU**: SW4 (BOOT0 / FN0 button) ties PB8/BOOT0 to 3.3 V when pressed; external 10 kΩ pull-down (R1) holds BOOT0 low at idle. Hold SW4 while pressing SW1 (global NRST) to enter DFU. SW1 is the global reset button (pulls all 3 MCU NRST lines via BAT54C). See [hardware.md](hardware.md) §"Function and Boot Buttons".
 
 ---
 
@@ -69,7 +69,7 @@ Cross-reference: BOM files live in [export/](export/); the PDFs are symlinked in
 - **Package**: SOT-23-6.
 - 4 I/O channels + VCC + GND, using steering diodes to VCC/GND rails and an internal TVS.
 - **VWM = 5 V**, VC = 12 V @ 1 A, **CJ ≈ 3.5 pF typ per line** — suitable for USB 2.0 D+/D−.
-- **Use in this design**: (1) USB D+/D− on the MainBoard — pin 5 left **floating** so ESD current flows to GND, not into VCC; (2) two pedal TRS jacks (Tip + Ring × 2 = 4 lines) — pin 5 tied to 3.3 V; (3) programming port STDC14 pogo pads (SWD, SWO, NRST, UART lines).
+- **Use in this design**: (1) USB D+/D− on the MainBoard (TV8) — pin 5 (V+) tied to **VBUS (5 V)**; no PD negotiation so VBUS is always 5 V, upper steering diodes are active, ESD charge steers to VBUS (clamped by SMF5.0A) or GND; (2) two pedal TRS jacks (Tip + Ring × 2 = 4 lines) — pin 5 tied to 3.3 V; (3) programming port STDC14 pogo pads (SWD, SWO, NRST, UART lines).
 - **Layout**: place immediately at the connector, route protected lines through the device (not stubbed).
 
 ### BAT54 — Schottky diode (steering / protection)
@@ -138,9 +138,9 @@ Cross-reference: BOM files live in [export/](export/); the PDFs are symlinked in
 | Threat | Defense | Notes |
 |---|---|---|
 | USB VBUS overvoltage / surge | SMF5.0A (D5) | 200 W, VC ≈ 9.2 V — well below TLV755P input abs-max |
-| USB D+/D− ESD | SRV05-4 (USB instance, pin 5 floating) | 3.5 pF, USB 2.0 FS OK |
+| USB D+/D− ESD | SRV05-4 (TV8, pin 5 → VBUS) | 3.5 pF, USB 2.0 FS OK; full bidirectional clamp |
 | Pedal TRS jack ESD (Tip + Ring × 2 jacks) | SRV05-4 (pedal instance) | Slow analog lines; 4 channels = 2 jacks |
-| Wing-bus ESD at the IDC connector | SRV05-4 × 2 per wing (SPI + NRST + READY) | Pin 5 tied to 3.3 V (same rail as the wings) |
+| Wing-bus ESD at the IDC connector | SRV05-4 × 2 per wing (SPI×4 + NRST + READY + BOOT0 = 7 signals, 8 channels total) | Pin 5 tied to 3.3 V (same rail as the wings) |
 | Function buttons SW1–SW4 (GPIO lines) | H5VND5BA (D1–D4) | Bidirectional, 20 pF — fine for slow digital |
 | Programming port (STDC14 pogo pads) | SRV05-4 | 3.5 pF/line — OK for SWD/SWO ≤ 10 MHz |
 | 3.3 V rail short | TLV755P foldback + thermal | Regulated down to ~1 V out |

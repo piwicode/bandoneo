@@ -31,7 +31,7 @@ The SC4015 datasheet T<sub>PO</sub> ≤ 0.8 µs makes the start-up overhead negl
 
 At ~146 mA × 3.3 V ≈ **0.48 W** delivered, average. Drawn from 5 V VBUS through a linear regulator (3.3 / 5 = 66 % efficiency), the input side sees ≈ **146 mA at 5 V / 0.73 W average** — comfortably inside the USB 2.0 default 500 mA / 2.5 W budget, with plenty of margin for a low-power 100 mA / 500 mW port if ever needed.
 
-**Peak vs. average.** During the ~240 µs scan window the gated-Hall current adds ~183 mA (73 × 2.5 mA) on top of the always-on ~101 mA (MCUs + LEDs + LDO Iq), so instantaneous draw spikes to **~284 mA**. The 4.7 µF bulk cap (C54) and the LDO's transient response cover the step. Outside the window the rail is back to ~101 mA. Both wings scan independently (separate MCUs), but the LDO sees the sum — worst case both sweeps overlap; the motherboard's push/pull window is small enough to be scheduled inside the same envelope.
+**Peak vs. average.** During the ~240 µs scan window the gated-Hall current adds ~183 mA (73 × 2.5 mA) on top of the always-on ~101 mA (MCUs + LEDs + LDO Iq), so instantaneous draw spikes to **~284 mA**. The 4.7 µF bulk cap on the LDO output (C20 on MainBoard; C54 on each wing) and the LDO's transient response cover the step. Outside the window the rail is back to ~101 mA. Both wings scan independently (separate MCUs), but the LDO sees the sum — worst case both sweeps overlap; the motherboard's push/pull window is small enough to be scheduled inside the same envelope.
 
 **LDO thermal — comfortable after gating.** TLV755P (SOT-23-5) dissipates **(5 V − 3.3 V) × 0.146 A ≈ 250 mW** averaged. θ<sub>JA</sub> ≈ 195 °C/W gives ~49 °C rise — junction at ~74 °C in 25 °C ambient, ~89 °C in 40 °C ambient. Well below the 125 °C abs-max. Peak-current excursions (~284 mA × 1.7 V ≈ 483 mW) for 240 µs every 1 ms barely budge the junction temperature thanks to the package's thermal mass. The earlier review item — buck regulator or larger LDO package — is no longer required; the SOT-23-5 LDO is the right pick for the gated load profile.
 
@@ -81,16 +81,21 @@ All three boards (motherboard, left wing, right wing) are manufactured via **JLC
 
 ## Passive Form Factor
 
-Default passive footprint for both resistors and capacitors is **0603**, picked for hand-rework ergonomics on this 2-layer prototype-friendly design. **0402** is reserved exclusively for the **MCU load capacitors** that sit directly between the package's 0.5 mm-pitch pads — the 100 nF per-VDD bypass (C8, C9, C10) and the VDDA / VREF+ filter pair (C7/C8/C55/C57/C58 depending on board). The smaller pad geometry minimises the decoupling loop inductance that dominates supply impedance at the M4F's switching harmonics; nothing else on the board needs this. NRST, debounce, ESD, and signal-filter caps all stay 0603. Bulk reservoir caps (4.7 µF) stay in **0805** because the dielectric volume forces a larger package anyway.
+Default passive footprint for both resistors and capacitors is **0603**, picked for hand-rework ergonomics on this 2-layer prototype-friendly design. **0402** is reserved exclusively for the **MCU load capacitors** that sit directly between the package's 0.5 mm-pitch pads:
+- **MainBoard:** three per-VDD 100 nF (C8, C9, C10), VDDA filter pair 1 µF + 10 nF (C12 + C16) plus VREF+ 1 µF and 100 nF (C17, C18).
+- **Wing boards:** four per-VDD 100 nF (C50, C51, C52, C53), VDDA filter 1 µF + 10 nF (C7 + C8) and an additional 1 µF (C55).
+
+The smaller pad geometry minimises the decoupling loop inductance that dominates supply impedance at the M4F's switching harmonics; nothing else on the board needs this. NRST, debounce, ESD, and signal-filter caps all stay 0603. Bulk reservoir caps (4.7 µF — C11/C20 on MainBoard, C54 on wings) stay in **0805** because the dielectric volume forces a larger package anyway.
 
 ## LED Brightness Scheme
 
-Two current-limit tiers, by visual purpose:
+Three roles, three parts:
 
-- **MainBoard FN status LEDs (R29/R35/R36 = 330 Ω → ~4 mA)** — sit *behind* their respective function buttons (SW2/SW3/SW4 = FN1/FN2/FN0) and glow through the translucent button cap. The higher current overcomes the diffuser loss so the LED is legible at-a-glance during play. SW1 (global NRST) has no LED.
-- **All other LEDs (1 kΩ → ~1.3 mA)** — POW on all three boards, READY on each wing, and the wing's FN LEDs (which are not used as runtime indicators in current firmware). These are open-air status LEDs at modest 0805 brightness; 1 kΩ is enough to be obviously-on under office lighting without being distracting on a dark stage.
+- **MainBoard FN status LEDs (LED_FN0/FN1/FN2 = KT-0805G emerald-green 0805, Vf 2.6–3.1 V, R9/R11/R12 = 330 Ω)** — sit *behind* their respective function buttons (SW4/SW2/SW3 = FN0/FN1/FN2) and glow through the translucent button cap. At Vf-typ ≈ 2.85 V on a 3.3 V rail through 330 Ω the LED draws ~1.4 mA — dim by design intent but the at-a-glance visibility is borrowed from the green's high luminous efficiency rather than from raw current. SW1 (global NRST) has no LED.
+- **Wing FN LED (LED_FN1 = KT-0603W white 0603, Vf 2.6–3.1 V, R19/R42 = 470 Ω)** — sits behind the wing's BOOT0 button. ~0.4–1.5 mA worst-to-typ. Not used as a runtime indicator in current firmware; bench-only flag for bootloader entry.
+- **Power / Ready LEDs (KT-0805Y yellow Vf 1.8–2.4 V or KT-0805G emerald-green Vf 2.6–3.1 V, R10/R6/R9 = 1 kΩ)** — POW on all three boards (yellow), READY on each wing (green). Open-air 0805 status LEDs; 1 kΩ gives ~0.9–1.5 mA on yellow and ~0.2–0.7 mA on green — visible under office lighting without being distracting on a dark stage.
 
-Net LED current contribution to the rail: ~10 mA total worst-case across the system, well inside the 500 mA LDO budget.
+Net LED current contribution to the rail: well under 10 mA total across the whole system, comfortably inside the 500 mA LDO budget.
 
 ## Function and Boot Buttons
 
@@ -149,7 +154,7 @@ TLV755P input (pin 1, IN) is fed from **VBUS** through the USB front-end (TVS cl
 
 - **Dropout headroom:** the TLV755P needs ≥ 3.55 V for 3.3 V / 500 mA per datasheet. Comfortable even at the worst-case 4.40 V VBUS minimum, with margin remaining after the TVS clamp's negligible leakage drop.
 - **Hot-plug behaviour:** when the cable is connected, VBUS ramps over ~10 ms; the LDO follows; both wings come up on the same 3.3 V rail simultaneously. Unplugging cuts power instantly — no orderly shutdown is performed (there is nothing to save: no battery state, and no log persistence beyond what the firmware writes synchronously to flash).
-- **Input decoupling:** 10 µF bulk + 100 nF bypass within a few mm of the LDO input pin, with the TVS clamp anchored between them and the USB connector.
+- **Input decoupling:** a single 1 µF 0603 (C15) on VBUS at the LDO input pin — datasheet minimum is 0.47 µF, so 1 µF is spec-compliant with margin. The worst-case scan-window load step (~140 mA on VBUS for 240 µs) droops C15 by ~34 mV, which leaves the LDO well inside its regulation window. The TVS clamp (D5) sits between C15 and the USB connector. **Output decoupling:** 1 µF (C19) + 4.7 µF (C20) on VCC, both within a few mm of U6-5.
 
 See the "Power Consumption" section above for the thermal analysis — at the gated load profile the SOT-23-5 package is adequate.
 
@@ -202,6 +207,8 @@ Each board (motherboard and both wings) exposes **14 pogo-pin landing pads** lai
 **Mating jig**: Tag-Connect TC2070-IDC-050 (0.050" / 1.27 mm pitch, 14-pin, with legs). The legs anchor the jig to the board during the programming cycle. This jig is **not on the BOM** — it is a workshop tool, one per programmer setup.
 
 STDC14 carries: SWD (SWDIO/SWCLK), SWO trace, NRST, UART VCP (TX/RX), target VCC reference, and GND returns — everything needed for flashing, halting, real-time tracing, and serial console.
+
+**STDC14 GNDDetect (pin 11) → PA15 (mainboard) / PA15 (each wing).** Per UM2448 Rev 9 Table 6 note 6, the STLINK-V3SET firmware ties pin 11 to GND specifically so the **target** can detect that a tool is connected. The TC2070-IDC-050 cable is passive and passes pin 11 through. Firmware configures PA15 as input with the internal pull-up enabled: PA15 reads **LOW = STLINK attached**, **HIGH = no probe**. Available uses: enable a developer USB-VCP command set, blink a "debug-mode" LED, suppress the wing-bus watchdog while a probe is mid-flash, etc. The line is on `PGM_DETECT` in the netlist and protected by the same SRV05-4 arrays as the rest of the STDC14 channels.
 
 ## Remote Wing Programming via BOOT0
 

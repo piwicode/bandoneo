@@ -61,6 +61,7 @@ Cross-reference: BOM files live in [export/](export/); the PDFs are symlinked in
 - **CJ ≤ 20 pF typ** — usable on slow digital I/O, I²C, audio-range analog. Not suited to USB 2.0 FS or faster (capacitance too high for signal-integrity on high-speed data lines).
 - **Use in this design**: one per function-button line (D1–D4, four switches SW1–SW4). Placing the diode on the GPIO side of the switch simplifies the PCB trace routing — no dedicated ESD ground spur to each button is needed, and each GPIO pin is protected against hand-discharge events. The 20 pF capacitance is inconsequential on these low-frequency digital inputs.
 - **Programming port protection**: the STDC14 pogo pads are protected by a dedicated **SRV05-4** array (not H5VND5BA). The SRV05-4 CJ ≈ 3.5 pF per line is well under the 20 pF budget at SWD/SWO speeds (≤ 10 MHz). PCB trace capacitance on a short 2-layer stub (< 20 mm, 0.2 mm wide over 1 mm GND plane) adds ≈ 1–2 pF — total per-line capacitance comfortably below 10 pF. Ground copper adjacent to the pogo traces contributes negligibly at these frequencies.
+- **STDC14 pin 11 (GNDDetect) → MCU GPIO PA15**: per UM2448 Rev 9 Table 6 note 6 the STLINK-V3SET firmware ties this pin to GND so the target can detect the tool. PA15 is configured as input with internal pull-up: LOW when STLINK is mated, HIGH otherwise. See `hardware.md` §"Programming Port".
 - **IEC 61000-4-2**: rated ±8 kV contact, ±15 kV air.
 
 ### SRV05-4 — 4-channel ESD diode array

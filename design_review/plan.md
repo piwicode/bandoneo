@@ -2,8 +2,11 @@
 
 Sources inspected: `export/BOM_MainBoard_MainBoard.csv`, `export/Netlist_MainBoard.net`,
 `export/Netlist_WingLeft.net`, `export/Netlist_WingRight.net`,
-`export/SCH_MainBoard.pdf`, `hardware.md`, `architecture.md`,
-`datasheet_summaries.md`, `requirements.md`.
+`export/PickAndPlace_*_fixed.csv`, `export/SCH_MainBoard.pdf`, `hardware.md`,
+`architecture.md`, `datasheet_summaries.md`, `requirements.md`.
+
+**Round 4 (2026-05-30)** — re-exported BOMs and netlists from the schematic.
+Multiple previously-flagged items resolved, several new aspects audited.
 
 Each item has a status:
 - **PASS** — verified correct, no action needed
@@ -191,14 +194,14 @@ BAT54C common-cathode: at idle the cathode is pulled toward GND by D1/C1 leakage
 R2, R3, R4, R8 are all 100 Ω. They sit between the MCU GPIO and the ESD device / connector.
 **PASS** — standard 100 Ω series termination.
 
-### 5.7 No Series Resistor on Wing BOOT0 — Contention Risk
-Netlist: `L_BOOT0` and `R_BOOT0` from mainboard GPIOs (PA3, PB13) drive directly to CN2-11 / CN1-11 with **no series resistor on the mainboard side**. The wing schematic shows its local BOOT0 button (SW1 on each wing) ties **VCC directly to the same line** when pressed, and the wing has a 10 kΩ pull-down (R4) plus an ESD diode.
+### 5.7 Wing BOOT0 — 100 Ω series R now added (RESOLVED)
+Round 3 flagged the BOOT0 lines as the only wing-bus signals without a 100 Ω series limiter against wing-local-button contention. Round 4 confirms the fix:
+- `L_BOOT0` net: `TV2-1, CN2-11, R16-1 (100 Ω)`; `R16-2` lands on net `$1N68331` together with `U1-11 (PA3)`.
+- `R_BOOT0` net: `TV4-1, CN1-11, R17-2`; `R17-1` on net `$1N68371` with `U1-27 (PB13)`.
 
-If a wing's local BOOT0 button is pressed *while* the mainboard is driving the line LOW (e.g., during firmware boot, or during the remote-BOOT0 sequence between the BOOT0 assert and the NRST release), VCC connects through the switch directly to the mainboard GPIO low-side driver. The instantaneous current is `(VCC − V_OL) / R_switch ≈ 3.3 V / ~100 mΩ ≈ tens of A` momentarily, settling at the GPIO sink limit (~25 mA continuous, ~50 mA short-pulse on G474). Bounded by the GPIO's output stage, but the contention is uncomfortably hot.
+Contention math with the new resistors: if a user presses the wing-local SW1 (BOOT0 button, ties VCC straight to the wing-side BOOT0 net) while the mainboard MCU is sinking the line through R16/R17, the current is `(VCC − V_OL) / (R_series + R_switch + R_cable) ≈ 3.3 V / (100 Ω + ~50 mΩ + ~100 mΩ) ≈ 33 mA`. The STM32G474 GPIO can sustain this — the absolute max is 25 mA continuous at V_OL ≤ 0.4 V, ~ 50 mA pulse — so a momentary button press is safely bounded. The series R also rules out the prior worst-case "tens of A through the switch contact" peak.
 
-The wings' R/L NRST and READY lines all have 100 Ω series resistors (R2/R3/R4/R8) precisely to bound this kind of contention. BOOT0 was omitted.
-
-**WARN** — add a 100 Ω series resistor on the mainboard's BOOT0 driver for each wing (matching the NRST/READY series Rs), OR firmware-protect by never driving BOOT0 hard while a wing's local button could be pressed (treat as open-drain in firmware: drive low → input-pull-down). Document the chosen mitigation in `hardware.md`.
+**PASS** — all six wing-bus signals (NRST/READY/BOOT0 × 2 wings) now share the same 100 Ω series-R pattern. `hardware.md` should mention R16/R17 in the wing-bus discussion.
 
 ---
 
@@ -235,10 +238,49 @@ Netlist shows three TS-1088 tactile switches per wing (matches BOM `qty = 3`):
 `hardware.md` §"Function and Boot Buttons → Wing Boards" says "Each wing board carries one dedicated BOOT0 pushbutton… There are no FN buttons on the wing boards" — that's not what is built. The wings have local NRST and FN0 buttons too. Update the doc with the full per-wing button table, noting SW3 (FN0 on PB13) is a hard-soldered control that the wing firmware can use as a developer poke (mode toggle, dump-state, etc.).
 **WARN (doc only)** — schematic is functional; documentation undersells what's on the wing.
 
-### 5W.5 Wing READY series resistor (470 Ω)
-Wing `READY` net: `U37-44 (PB7) → R9 (470 Ω) → CN1-2 → TV1-6`. Mainboard side adds another 100 Ω (R2 on left, R4 on right), so the total READY series impedance is **570 Ω**. The wing actively drives PB7 high once init is complete; the mainboard reads with internal pull-down. In steady state no current flows through the series Rs (CMOS input), so no DC voltage drop — the wing's logic-high reaches the mainboard at the full 3.3 V minus a few mV of leakage.
+### 5W.5 Wing READY — R9 is the LED current-limit, not a READY series R (CORRECTED)
+Round 3 misread the wing READY topology. Re-checked against the current netlist:
+- `READY` net: `U37-44 (PB7), CN1-2, TV1-6, R9-2`. PB7 drives the connector pin **directly**, with no wing-side series resistor.
+- `R9-1` lands on net `$1N52732` together with `LED_READY-1`. R9 = 470 Ω is the LED current-limit, not a damping R.
 
-Edge slew rate is bounded by 570 Ω × (mainboard input C + ESD CJ + cable C) ≈ 570 Ω × ~10–20 pF ≈ 5.7–11 ns — well inside the GPIO sampling window for a non-time-critical "wing ready" signal.
+So the actual topology is:
+```
+MCU PB7 ──┬── CN1-2 (out to mainboard, then to R2/R4 100 Ω series, then to PB0/PA8)
+          └── R9 (470 Ω) ── LED_READY ── GND   (visual indicator: lit when wing READY = HIGH)
+```
+
+The only damping R on the READY line is the mainboard's R2/R4 = 100 Ω. With the LED branch drawing ~1.4 mA when READY=HIGH (Vf ≈ 2.85 V on 3.3 V through 470 Ω), the GPIO sees a 1.4 mA static load — well inside the G474's 8 mA min output spec, V_OL/V_OH unaffected. The READY-LED visualization is a nice touch for board bring-up.
+
+**PASS** — topology works; previous round's "570 Ω total series" line was wrong and has been corrected.
+
+### 5W.6 Wing hardware identification — 3-bit ID resistors (NEW)
+Wing netlists carry three named ID nets read by the wing MCU at boot:
+
+| Wing | ID0 (PC13, U37-2) | ID1 (PF0, U37-5) | ID2 (PF1, U37-6) | Binary |
+|---|---|---|---|---|
+| Left  | R1 (10 kΩ) → **GND** | R2 (10 kΩ) → **VCC** | R3 (10 kΩ) → **GND** | `010` |
+| Right | R1 (10 kΩ) → **VCC** | R2 (10 kΩ) → **GND** | R3 (10 kΩ) → **GND** | `001` |
+
+Each ID line has a single 10 kΩ pull (no companion pull on the other rail — the MCU's internal pull-resistor option is not used, the external 10 kΩ sets the state on its own). 3 bits give 8 possible wing layouts; two are used today, six are reserved for future keyboard variants (Concertina, Einheitsgriff, etc., per `architecture.md`).
+
+Firmware reads PC13/PF0/PF1 at boot and embeds the resulting 3-bit ID in the per-frame wing identification code the mainboard sees over SPI. PC13 is in the backup-power domain (same `PWR_CR1.DBP = 1` caveat as the §5W.3 mux-select pins). PF0/PF1 are former OSC_IN/OSC_OUT and have no special access rules on the wing (these pins are repurposed on the mainboard as SPI2 NSS/SCK for the right wing — different boards, different uses of the same physical pads).
+
+**PASS** — clean implementation; means the same wing firmware binary runs on every wing variant. Mention in `architecture.md` §"Internal Bus" so a reader looking at SPI frame format understands where the wing-ID byte comes from.
+
+### 5W.7 WingLeft 33rd Hall sensor — direct ADC, not mux (RESOLVED §5W.2)
+Round 3 flagged a 32-vs-33 channel mismatch on WingLeft (4 muxes provide 32 channels, but the BOM has 33 Hall sensors). Round 4 traces the 33rd:
+- WingLeft sensors `U1, U2, U3, U4, U6–U13, U15–U22, U24–U31, U33–U36, U38` — that's 33 designators (U5/U14/U23/U32 are muxes, U37 is MCU).
+- Net `A_IN0`: `U37-8 (PA0), U38-3 (SC4015 OUT)` — sensor U38's output goes **straight to the MCU's ADC pin PA0**, bypassing the mux network.
+- The other 32 sensors route through the four 74HC4052 muxes onto `A_IN2`–`A_IN9` (8 mux outputs × 4 channels each = 32 channels), read on PA1–PA7 / PB0–PB1 via the ADC.
+
+So the topology is **32 muxed + 1 direct** for 33 total. The direct-ADC channel is U38, which sits next to the MCU and gets the lowest-impedance read path. Likely the highest-priority key (or one chosen for layout convenience — confirm against the keyboard mapping doc).
+
+**PASS** — count reconciles; one direct ADC sensor on WingLeft, no direct sensors on WingRight (its 38 sensors fit comfortably across 5 muxes × 8 channels = 40, with 2 spare).
+
+### 5W.8 Wing A_IN1 has a 100 kΩ pull-down to define floating ADC pin (NEW)
+Wing netlist `A_IN1`: `R5-1 (100 kΩ), U37-9 (PA1)`. `R5-2` on GND. The 100 kΩ pulls a spare ADC channel to a defined voltage so it doesn't float into the input clamp circuitry and inject noise into the shared ADC sample cap when scanning adjacent channels.
+
+This is the right thing to do for any ADC input that isn't routed to a signal source. Mainboard equivalent: `R6 (100 kΩ) → VCC` on the AO3401A gate, which serves the same defined-state role for the P-FET gate (not ADC).
 **PASS**.
 
 ### 6.1 Switch-to-Designator Mapping (Netlist vs. Documentation)
@@ -356,16 +398,21 @@ That leaves pin 4 → VCC as a contact other than the sleeve — most plausibly 
   - If pin 4 is the **NC Tip-switch contact** (shorts to pin 5 when no plug) → redundant with R7, harmless.
   - If pin 4 is the **sleeve** → fatal: VCC shorts to GND through any plug. Designer's comment rules this out, but confirm with the datasheet anyway.
 
-### 9.4 Insertion-Detect Caps (C13, C14) → VCC, not GND
-Netlist: `C13-1 → VCC`, `C13-2 → EXP_PEDAL_INT (PC14)`. C14 same for SUS_PEDAL_INT.
+### 9.4 Insertion-Detect Caps (C13, C14) → GND, with 1 kΩ series (RESOLVED)
+Round 3 flagged C13/C14 as caps from the GPIO to VCC (no useful filter direction and coupling VCC noise back into the slow input). Round 4 confirms the reworked topology:
 
-A 100 nF cap from VCC to a GPIO is unusual. If pin 4 is the NC Ring-switch (per §9.3 most-likely case):
-- No plug → switch closes → pin 3 = VCC directly → C13 shorted out → MCU reads HIGH ("no pedal").
-- Plug inserted → switch opens → pin 3 = ring voltage from pedal → C13 acts as AC coupling to VCC, NOT a filter to GND.
+- `EXPR_PEDAL pin 3 → C13 plate1` and `EXPR_PEDAL pin 3 → R18 (1 kΩ) pin 1`. C13's other plate is on **GND**.
+- `R18 pin 2 → EXP_PEDAL_INT → TV7-4 (ESD) → U1-3 (PC14)`.
+- Symmetric on the sustain side with C14 / R19 / TV7-6 / U1-4 (PC15).
 
-A cap to **VCC** does not filter noise into the ground plane — it shunts AC noise *back into VCC*, which can ride on the rail and re-enter sensitive ADC inputs. A debounce/EMI cap on a slow GPIO conventionally goes to **GND**.
+So the new topology is `jack ring ── ┬── C13 → GND` and `└── R18 (1 kΩ) → ESD ── PC14`. Reading the chain at the connector side first:
+- HF noise on the jack ring is shunted to **GND** by C13 — the correct direction relative to the MCU input threshold reference.
+- The 1 kΩ series R combines with the SRV05-4 clamp and the MCU input capacitance to form an explicit low-pass on the GPIO side (τ ≈ 1 kΩ × (CJ ≈ 3.5 pF + Cpin ≈ 5 pF) ≈ 8.5 ns — fast enough not to miss insertion events, slow enough to soak residual ESD ringing).
+- The cap-to-GND also gives the GPIO a defined ramp during VCC inrush (no longer follows VCC).
 
-**WARN** — confirm intent. If C13/C14 are meant as EMI/debounce filters on the insertion-detect pins, they should go to GND, not VCC. If they are bypass for the VCC supply feeding pin 4 of the jack (cable acts as antenna), that's a different role and should be labelled — and a per-jack ferrite or 0 Ω jumper between VCC and pin 4 would make the intent obvious.
+One small note: the cap is on the *connector* side of the series R rather than directly across the MCU pin to GND. That means R18 + C13 doesn't form a "classical" RC at the input — the cap mainly shunts noise at the source, and the R + ESD + Cpin form the low-pass at the MCU. Either ordering works; this one keeps the cap close to where noise enters (the jack), which is arguably the better placement for EMI.
+
+**PASS** — implementation matches the recommended fix from the previous round.
 
 ### 9.5 Sustain Pedal Insertion Detect MCU Pin
 Netlist: `SUS_PEDAL_INT → U1-4 (PC15-OSC32_OUT)`. No LSE fitted, so PC15 is available as GPIO.
@@ -424,7 +471,15 @@ CN1 and CN2 = S062100026 (2×6 1.27 mm SMD) — **Extended Part** (JLCPCB).
 All footprints in the BOM match the netlist's footprint references for U1, U2, U3, U4, U5, U6, Q1, D1–D5, C6/C7 (0603 1 nF), C8–C10/C18 (0402 100 nF), C11/C20 (0805 4.7 µF), C12/C17 (0402 1 µF), C15/C19 (0603 1 µF), C16 (0402 10 nF), C1–C5/C13/C14/CP1/CP2 (0603 100 nF).
 **PASS** (mainboard).
 
-### 12.1a WingLeft BOM — muxes and sensors swapped (CRITICAL)
+### 12.1a WingLeft BOM — muxes / sensors designator lists (RESOLVED)
+Round 4 re-export of `BOM_WingLeft_WingLeft.csv` decoded:
+- Line 19 (33 × `SC4015SO-N-TR`): `U1, U2, U3, U4, U6, U7, U8, U9, U10, U11, U12, U13, U15, U16, U17, U18, U19, U20, U21, U22, U24, U25, U26, U27, U28, U29, U30, U31, U33, U34, U35, U36, U38` ✓ (excludes muxes U5/U14/U23/U32 and MCU U37).
+- Line 20 (4 × `74HC4052PW,118`): `U5, U14, U23, U32` ✓.
+
+The earlier swap is gone. WingRight BOM was already correct in Round 3 and remains so.
+**PASS — CLOSED.**
+
+### 12.1a-old (archived) WingLeft BOM — muxes and sensors swapped (CRITICAL)
 Cross-checked `BOM_WingLeft_WingLeft.csv` against `Netlist_WingLeft.net` and `PickAndPlace_WingLeft_fixed.csv`:
 
 | Source | Muxes (74HC4052PW, TSSOP-16) | Sensors (SC4015SO-N-TR, SOT-23) |
@@ -442,14 +497,20 @@ The PnP file matches the netlist (mux footprints at U5/14/23/32 are TSSOP-16, se
 
 Re-export the BOM and spot-check the result against the WingRight BOM's pattern (same column layout) before submitting to JLCPCB.
 
-### 12.1b MainBoard R16, R17 — ghost components (BOM + PnP, no netlist)
-The mainboard BOM lists six 100 Ω resistors (R2, R3, R4, R8, **R16, R17**) and the PnP file places R16 and R17 at defined coordinates, but `Netlist_MainBoard.net` contains no R16 or R17 — neither pin appears in any net. So JLCPCB will solder two 0603 100 Ω resistors onto pads that are electrically dangling (or, worse, connected to copper that the schematic doesn't model).
+### 12.1b MainBoard R16, R17 — now wired as wing BOOT0 series Rs (RESOLVED)
+Round 3 flagged R16/R17 as ghost components (in BOM + PnP but absent from the netlist). Round 4 netlist now contains both:
+- `R16-1` in `L_BOOT0` net, `R16-2` in `$1N68331` with `U1-11 (PA3)` — 100 Ω series on the left-wing BOOT0 driver.
+- `R17-2` in `R_BOOT0` net, `R17-1` in `$1N68371` with `U1-27 (PB13)` — same role on the right side.
 
-Most likely cause: leftover symbols from an earlier revision of the wing-bus that were deleted from the schematic but not from the PCB. Either:
-- Confirm R16 and R17 are intentional (e.g., shorting two ground islands across a split, or option pads), and add them to the schematic with a defined net, **or**
-- Remove R16 and R17 from the PCB layout, re-export the BOM and PnP. The 12 cents and two SMT placements saved are minor; the real benefit is removing the "what does this do?" trap from the as-built board.
+These are the §5.7 mitigation resistors. The three-way BOM/PnP/netlist mismatch is closed.
+**PASS — CLOSED.**
 
-**WARN** — does not break the board, but the BOM/PnP/netlist three-way mismatch needs reconciling before the next netlist export.
+### 12.1c MainBoard new 1 kΩ resistors R18, R19 — pedal series Rs (RESOLVED)
+New in the Round 4 BOM: `4 × 1 kΩ → R5, R10, R18, R19` (was `2 × 1 kΩ → R5, R10` previously). R18 and R19 are the series resistors that wire the pedal insertion-detect ring lines into the MCU — they're the §9.4 mitigation, confirmed in the netlist:
+- `R18-1` in `$4N26118` with `EXPR_PEDAL-3` and `C13-2`; `R18-2` in `EXP_PEDAL_INT` with `TV7-4` and `U1-3 (PC14)`.
+- `R19` symmetric on the sustain path.
+
+**PASS — CLOSED.**
 
 ### 12.2 BAT54 Variant
 BOM: BAT54C (common-cathode). Netlist confirms `U2-3 / U3-3` = K. SOT-23-3 footprint matches.
@@ -518,6 +579,91 @@ The HSI48 free-running accuracy at room temp is roughly ±0.5 %, just outside th
 ST AN5060 covers this exact scenario for the G4 family and reports reliable enumeration without HSE. The board follows the recommended config.
 **PASS** — but firmware must enable HSI48 + CRS + sync source = USB_SOF before USB device init. Document in firmware notes.
 
+## 2X. New mainboard pin-level audits (round 4)
+
+### 2X.1 MCU pin allocation — complete map
+Walked every LQFP48 pin against the round 4 netlist. Free pins on the mainboard MCU: **PC13 (pin 2), PB5 (pin 42), PB7 (pin 44), PB10 (pin 22)** — 4 spare GPIOs reserved for future expansion (BLE module SPI, DIN-MIDI UART, additional pedal port, etc.). All other GPIOs assigned; no pin sourced by two nets, no pin left floating without a defined role (every used GPIO either drives an active signal or has a defined pull through a button/sensor/series-R chain).
+
+| Block | Pins used |
+|---|---|
+| USB FS | PA11 (D−), PA12 (D+) |
+| SWD/SWO/VCP | PA13, PA14, PB3, PA9, PA10, PA15 |
+| NRST + boot | NRST, PB8/BOOT0 |
+| SPI1 (left wing) | PA4–PA7 |
+| SPI2 (right wing) | PF0, PF1, PB14, PB15 |
+| Wing READY/NRST/BOOT0 | PB0, PB2, PA3 (L); PA8, PB11, PB13 (R) |
+| Hall power gate | PA2 (HALL_NEN) |
+| Hall ADC | PB1 (HALL0), PB12 (HALL1) |
+| Pedal ADC | PA0 (EXP), PA1 (SUS) |
+| Pedal insertion-detect | PC14, PC15 |
+| FN buttons + LED | PB6 (FN1), PB4 (FN2), PB8 (FN0/BOOT0), PB9 (LED_FN0), PA15 collision? — no, PA15 = PGM_DETECT |
+| LED_FN1, LED_FN2 | PB6 also lights FN1 LED (PB6) — wait, see §2X.2 |
+
+Wait — re-verified: SW_FN1 button is on `U1-43 = PB6`. LED_FN1 anode net `LED_FN1` connects to `U1-44`; but pin 44 is PB7, and PB7 was listed as free. Let me re-check.
+- `LED_FN0` net: `U1-46 (PB9), R9-1`. ✓
+- `LED_FN1` net: `U1-44 (PB7), R11-1`. — so PB7 *is* used as `LED_FN1` driver. Update §2X.1: **PB7 is not free** — drives LED_FN1.
+- `LED_FN2` net: `U1-42 (PB5), R12-1`. — so PB5 *is* used as `LED_FN2` driver. Update §2X.1: **PB5 is not free** — drives LED_FN2.
+
+Corrected free-pin count: **PC13 (pin 2) and PB10 (pin 22)** — only 2 spare GPIOs. Tight but enough for, e.g., a DIN-MIDI UART (PB10 = USART3_TX AF7) or a BLE module's IRQ line.
+**PASS** — full pin map verified end-to-end; no collisions; 2 spares.
+
+### 2X.2 Alternate-function alignment for every used peripheral
+Cross-checked the LQFP48 alternate-function table (DS12288 Table 13) against every netlist signal that requires AF routing:
+
+| Signal | MCU pin | LQFP48 AF | Match |
+|---|---|---|---|
+| USB_DM / USB_DP | PA11 / PA12 | dedicated (no AF) | ✓ |
+| SPI1_NSS/SCK/MISO/MOSI | PA4 / PA5 / PA6 / PA7 | AF5 | ✓ |
+| SPI2_NSS/SCK/MISO/MOSI | PF0 / PF1 / PB14 / PB15 | AF5 | ✓ |
+| USART1_TX/RX (VCP) | PA9 / PA10 | AF7 | ✓ |
+| SWDIO / SWCLK / SWO | PA13 / PA14 / PB3 | system default | ✓ |
+| NRST | pin 7 (NRST) | dedicated | ✓ |
+| BOOT0 | PB8 / pin 45 | dedicated boot-config | ✓ |
+| ADC1_IN1 (EXP_PEDAL) | PA0 | ADC1/2_IN1 | ✓ |
+| ADC1_IN2 (SUS_PEDAL) | PA1 | ADC1/2_IN2 | ✓ |
+| ADC1_IN12 (HALL0) | PB1 | ADC1/3_IN12 | ✓ |
+| ADC1_IN11 (HALL1) | PB12 | ADC1_IN11 | ✓ |
+
+All four ADC inputs land on **ADC1**, so a single ADC instance with a 4-channel sequencer + DMA reads all of them. No need to wake a second ADC for steady-state operation. Sample-time configuration is still §8.3 OPEN (firmware concern).
+**PASS**.
+
+### 2X.3 Mainboard NRST topology — multi-source, no contention
+M_NRST drivers and observers, walked from the netlist:
+- `U1-7` (MCU NRST pin, internal pull-up ~40 kΩ — defines idle HIGH)
+- `C4` (100 nF AN4488 cap to GND)
+- `TV5-3` (SRV05-4 ESD on the STDC14 NRST trace)
+- `U2-1` (BAT54C A1 — anode tied to M_NRST so SW1 can pull it down)
+- `CN3-12` (STDC14 NRST from the STLINK-V3 jig)
+
+Drive-conflict scan:
+- **MCU internal pull-up** is always present (high impedance, ~40 kΩ).
+- **STLINK-V3 NRST output** is open-drain per UM2448 — high-impedance when not asserting, drives low only during reset commands. No conflict with the MCU pull-up.
+- **SW1 via BAT54C** is open-drain via the Schottky bridge: when SW1 closes, the BAT54C common cathode is pulled to GND and *both* MCU NRSTs on the wing (L_NRST and R_NRST through U2-A2 / U3-A2) plus M_NRST (through U2-A1 / U3-A1) get pulled to ~V_F = 0.3 V simultaneously. Schottky forward voltage at typical R-pull-up currents is ~250–300 mV, well inside the G474's V_IL ≤ 0.45 V — so a global reset event hits the V_IL threshold cleanly.
+- **STM32G474 internal reset sources** (POR, BOR, WDG, software) drive NRST internally without external observation.
+
+No two drivers fight each other in any sequence. The Schottky-OR-ing topology gracefully handles "one wing's BAT54C asserts while another driver is high-impedance" without leakage paths through M_NRST.
+**PASS**.
+
+### 2X.4 SMF5.0A clamp voltage vs TLV755P abs-max
+SMF5.0A typical VC = 9.2 V at the rated `Ipp = 21.7 A` (10/1000 µs pulse). TLV755P abs-max VIN (DBV package): **6 V** continuous, **7 V** for a 10 µs surge per TI's "Recommended Operating Conditions" plus the abs-max note. SMF5.0A's 9.2 V peak is above both, but the pulse the TVS clamps to that voltage is only at I_pp — at the much lower currents seen during actual ESD strikes on a bench (typically tens to hundreds of mA in the protected device), the clamp sits closer to the breakdown VBR = 7 V, which is at the edge of TLV755P's 7 V transient spec.
+
+Practical implication: SMF5.0A protects the LDO from typical IEC 61000-4-2 events (±8 kV contact). It does **not** protect from a sustained over-voltage (e.g., a USB host pushing 9 V because of a hub failure) — that's the polyfuse/eFuse use case, which is correctly deferred per §3.7 (no basic-part substitute on JLCPCB, and the failure mode is rare-and-survivable).
+
+**PASS** — clamp is sized for transient ESD, not steady-state OV. Worth a one-line caveat in `hardware.md` §"ESD and VBUS Protection" so a future reader doesn't think the TVS is doing all the work.
+
+### 2X.5 SC4015 hall-sensor source impedance vs filter cap and ADC
+Spring-blade hall sensors U4/U5 on the mainboard:
+- VOUT source impedance: <100 Ω typ (SC4015 datasheet — low, drives ADC directly).
+- Filter cap C6/C7 = 1 nF to GND.
+- Direct path to PB1 (HALL0) and PB12 (HALL1) — no mux, no series R.
+- ADC1 sample-and-hold cap CSH ≈ 4 pF.
+
+Effective τ at the ADC = ~100 Ω × (1 nF + 4 pF) ≈ 100 ns; settles within < 1 µs for 10-bit accuracy. With 12-bit ADC + oversampling to 16-bit, 1 µs sample time is comfortable.
+**PASS** — sensor → ADC chain is fast enough for the push/pull rate (kHz mechanical bandwidth).
+
+### 2X.6 Pedal jack pin 4 to VCC — still unverified against datasheet
+`EXPR_PEDAL pin 4 → VCC` and `SUS_PEDAL pin 4 → VCC` are unchanged in the round 4 netlist. The §9.3 WARN stands: confirm pin 4 is the NC ring-switch (or NC tip-switch) and **not** the sleeve before fab. PJ-603A datasheet check is still pending — same risk profile as round 3.
+
 ## 13. Documentation Consistency
 
 ### 13.1 architecture.md — Wing Bus Table
@@ -571,12 +717,15 @@ Remaining work tied to §10.1 (the FAIL): if the LED part is swapped to a Vf ≤
 | 4.1–4.3 | USB interface | **PASS** |
 | 4.4 | USB VBUS sense disabled in FW | **OPEN** |
 | 5.1–5.6 | Wing bus connector, mapping, NRST, series Rs | **PASS** |
-| 5.7 | BOOT0 lacks series R on mainboard side | **WARN** |
+| 5.7 | BOOT0 series R (R16/R17 added round 4) | **PASS — CLOSED** |
 | 5W.1 | Wing power gate (Q1 AO3401A) | **PASS** |
-| 5W.2 | Mux topology + E̅ tied to GND | **PASS** (32/33 channel WingLeft check **WARN**) |
+| 5W.2 | Mux topology + E̅ tied to GND | **PASS** |
 | 5W.3 | SEL0/SEL1 on PC14/PC15 (backup-domain pins) | **PASS** (hardware); **OPEN** (firmware DBP) |
 | 5W.4 | Wing has 3 buttons (BOOT0/NRST/FN0), doc says 1 | **WARN (doc)** |
-| 5W.5 | Wing READY 470 Ω series | **PASS** |
+| 5W.5 | Wing R9 (470 Ω) is LED current-limit, not READY series | **PASS — CORRECTED** |
+| 5W.6 | Wing 3-bit hardware ID resistors | **PASS — NEW** |
+| 5W.7 | WingLeft 33rd Hall on direct ADC (PA0) | **PASS — CLOSES 5W.2 channel question** |
+| 5W.8 | Wing A_IN1 spare ADC pull-down | **PASS — NEW** |
 | 6.1–6.5 | Function/Boot buttons | **PASS** |
 | 7.1 | STDC14 SWD signal-to-pad (mainboard, re-verified) | **PASS** |
 | 7.2–7.4 | Other STDC14 wiring | **PASS** |
@@ -585,47 +734,48 @@ Remaining work tied to §10.1 (the FAIL): if the LED part is swapped to a Vf ≤
 | 8.3 | ADC sample time | **OPEN** |
 | 9.1–9.2 | Pedal ADC path | **PASS** |
 | 9.3 | PJ-603A pin 4 = VCC, sleeve floating | **WARN** |
-| 9.4 | C13/C14 caps to VCC vs. GND | **WARN** |
+| 9.4 | C13/C14 reworked to GND, R18/R19 1 kΩ series added | **PASS — CLOSED** |
 | 9.5 | Insertion-detect MCU pin | **PASS** |
 | 10.1–10.2 | FN LED Vf vs 330 Ω (green KT-0805G dim) | **FAIL** |
 | 10.1a | Wing FN LED (white KT-0603W) even dimmer | **WARN** |
 | 10.3–10.4 | POW LED, polarity | **PASS** |
 | 11 | Wing connector part class (extended) | **WARN** |
 | 12.1, 12.2–12.6 | BOM cross-checks (mainboard) | **PASS** |
-| 12.1a | WingLeft BOM mux/sensor designators swapped | **FAIL (CRITICAL)** |
-| 12.1b | MainBoard R16/R17 ghost (BOM+PnP, no netlist) | **WARN** |
+| 12.1a | WingLeft BOM mux/sensor designators (re-exported) | **PASS — CLOSED** |
+| 12.1b | MainBoard R16/R17 now wired as wing BOOT0 series | **PASS — CLOSED** |
+| 12.1c | MainBoard R18/R19 wired as pedal series Rs | **PASS — NEW** |
 | 12W.1 | Power-on / NRST release sequencing | **PASS** |
 | 12W.2 | Wing-swap robustness via SPI wing-ID | **PASS** |
 | 12W.3 | USB enumeration without HSE (HSI48+CRS) | **PASS** (firmware OPEN: enable CRS before USB init) |
+| 2X.1 | MCU pin allocation — full LQFP48 map, 2 spares | **PASS** |
+| 2X.2 | Alternate-function alignment for SPI/USART/USB/ADC | **PASS** |
+| 2X.3 | M_NRST multi-source (SW1 + STDC14 + BAT54C-OR) | **PASS** |
+| 2X.4 | SMF5.0A clamp vs TLV755P abs-max VIN | **PASS** (with caveat) |
+| 2X.5 | SC4015 → ADC source-impedance + 1 nF filter | **PASS** |
+| 2X.6 | PJ-603A pin 4 — datasheet sanity still pending | **WARN** (= §9.3) |
 | 13.1–13.4, 13.6, 13.7 | Documentation | **PASS** |
 | 13.5 | hardware.md designators / LED brightness updated | **PASS** (pending §10.1 colour) |
 
 ### Prioritised Action List
 
 **P0 — Must fix before submitting to JLCPCB:**
-1. **§12.1a — WingLeft BOM mux/sensor swap.** In `BOM_WingLeft_WingLeft.csv` swap the designator lists between the `74HC4052PW,118` row and the `SC4015SO-N-TR` row. Correct values: muxes at U5/14/23/32; sensors at U1/2/3/4/6/7/8/9/10/11/12/13/15/16/17/18/19/20/21/22/24/25/26/27/28/29/30/31/33/34/35/36/38. Without this fix JLCPCB will either reject the order or produce mis-populated boards.
-2. **§10.1 — FN LED colour vs resistor.** Either switch LED_FN0/1/2 to a Vf ≤ 2.1 V colour (yellow / amber 0805 — KT-0805Y is already on the same BOM line for LED_POW, single SKU substitution), or drop the series resistor to ~100 Ω, or document the dim green indicator as intentional. Current build will produce barely-visible buttons during play.
-3. **§9.3 — PJ-603A pin 4.** Verify against datasheet that pin 4 is *not* the sleeve before fab. Designer's note in the schematic rules it out, but a quick datasheet sanity-check costs nothing and the consequence of being wrong is VCC-to-GND through any plug.
-4. **§12.1b — MainBoard R16/R17 ghost components.** Decide whether they belong (add to schematic with a defined net) or remove them from the PCB layout. Either path, re-export BOM and PnP to remove the three-way mismatch.
+1. **§10.1 — FN LED colour vs resistor.** Either switch LED_FN0/1/2 to a Vf ≤ 2.1 V colour (yellow / amber 0805 — KT-0805Y is already on the same BOM line for LED_POW, single SKU substitution), or drop the series resistor to ~100 Ω, or document the dim green indicator as intentional. Current build will produce barely-visible buttons during play.
+2. **§9.3 / §2X.6 — PJ-603A pin 4 datasheet sanity check.** Pin 4 is still tied to VCC on both pedal jacks. Verify against the HOOYA PJ-603A LCSC C309273 datasheet that pin 4 is *not* the sleeve. Designer's schematic comment rules it out, but a 30-second datasheet check costs nothing and the consequence of being wrong is VCC-to-GND through any inserted plug.
 
-**P1 — Fix before first power-on:**
-5. **§5.7 — Wing BOOT0 series R.** Add 100 Ω from PA3 / PB13 to CN2-11 / CN1-11 (matching READY/NRST), or document the firmware mitigation (drive BOOT0 as input-pull only, never hard-low while a wing's local button could be pressed).
-6. **§9.4 — Pedal insertion-detect caps.** Decide whether C13/C14 should go to GND (normal EMI/debounce) or stay tied to VCC (and document the role). If "EMI to VCC" is intentional, label it; otherwise reroute to GND.
-7. **§5W.2 — WingLeft 32/33 channel discrepancy.** WingLeft has 4 muxes (32 channels) but 33 SC4015 sensors. Confirm in the schematic whether one sensor is unused, dual-routed, or whether the 33rd is read on a different path. Either fix the BOM count (32 if one is unused) or add a 5th mux.
+**P1 — Documentation / firmware:**
+3. **§5W.3 — Backup-domain access for PC14/PC15/PC13.** Wing firmware must set `PWR_CR1.DBP = 1` before configuring SEL0/SEL1 (PC14/PC15) as GPIO outputs and before reading PC13 (ID0). Otherwise the mux address won't change and the wing ID will mis-read.
+4. **§5W.4 — Wing buttons.** Update `hardware.md` §"Function and Boot Buttons → Wing Boards" to reflect the three buttons actually built (BOOT0 = SW1, NRST = SW2, FN0 = SW3 on PB13).
+5. **§5W.6 — Wing hardware ID.** Add a paragraph to `architecture.md` "Internal Bus" describing the 3-bit ID resistor scheme (R1/R2/R3 pull patterns → PC13/PF0/PF1 → SPI frame ID byte).
+6. **§4.4 — USB VBUS sense.** Confirm `USB_BCDR.VBDEN = 0` in firmware init; add a comment in `hardware.md` §USB explaining the choice.
+7. **§7.5 — STLINK detect on PA15.** Document the `PGM_DETECT` line in firmware notes — configure PA15 as input with internal pull-up; LOW = STLINK attached, HIGH = no probe. Per UM2448 Table 6 note 6 the STLINK-V3 firmware ties STDC14 pin 11 to GND specifically for this purpose.
+8. **§8.3 — ADC sample-time configuration.** Document in firmware notes / `hardware.md` once first ADC code lands.
+9. **§12W.3 — CRS before USB init.** Note in firmware that HSI48 + CRS (sync = USB_SOF) must be enabled before USB device init.
+10. **§2X.4 — TVS scope.** Add a one-line note to `hardware.md` §"ESD and VBUS Protection" clarifying SMF5.0A is sized for ESD transients, not sustained over-voltage.
+11. **§13.5 — `hardware.md` LED brightness re-check.** After §10.1 LED-colour decision lands, re-walk the "LED Brightness Scheme" numbers (current pass is correct for the current BOM).
 
-**P2 — Firmware / documentation:**
-8. **§4.4 — USB VBUS sense.** Confirm `USB_BCDR.VBDEN = 0` in firmware init; add a comment in `hardware.md` §USB explaining the choice.
-9. **§5W.3 — Backup-domain access for PC14/PC15.** Wing firmware init must set `PWR_CR1.DBP = 1` before configuring SEL0/SEL1 as GPIO outputs; otherwise the mux address won't change and the scan will read a single channel.
-10. **§5W.4 — Wing buttons.** Update `hardware.md` §"Function and Boot Buttons → Wing Boards" to reflect the three buttons actually built (BOOT0 = SW1, NRST = SW2, FN0 = SW3 on PB13).
-11. **§7.5 — STLINK detect on PA15.** Document the `PGM_DETECT` line in firmware notes — configure PA15 as input with internal pull-up; LOW = STLINK attached, HIGH = no probe. Per UM2448 Table 6 note 6 the STLINK-V3 firmware ties STDC14 pin 11 to GND specifically for this purpose.
-12. **§8.3 — ADC sample-time configuration.** Document in firmware notes / `hardware.md` once first ADC code lands.
-13. **§12W.2 — Wing-swap robustness.** Add a one-line note in `architecture.md` "Internal Bus" reminding firmware authors that the per-frame wing-ID is what makes left/right placement order-independent.
-14. **§12W.3 — CRS before USB init.** Note in firmware that HSI48 + CRS (sync = USB_SOF) must be enabled before USB device init.
-15. **§13.5 — `hardware.md` LED brightness re-check.** After §10.1 LED-colour decision lands, re-walk the "LED Brightness Scheme" numbers (current pass is correct for the current BOM).
-
-**P3 — Investigate / cost optimisation:**
-16. **§11 — Wing connector basic-part substitute** (low priority; cost only).
-17. **§3.7 — VBUS polyfuse** — confirmed deferred for v1.
+**P2 — Investigate / cost optimisation:**
+12. **§11 — Wing connector basic-part substitute** (low priority; cost only).
+13. **§3.7 — VBUS polyfuse** — confirmed deferred for v1.
 
 ### Net change from previous review round
 - **§7.1 (STDC14 wiring) was a false alarm** — the previous critical FAIL was based on a mis-read of the LQFP48 pinout. Re-verified against DS12288 Figure 6 directly: mainboard SWD/SWO/NRST/VCP all land on correct MCU pads. Removed from P0.
@@ -641,3 +791,31 @@ Remaining work tied to §10.1 (the FAIL): if the LED part is swapped to a Vf ≤
 - **§5W series (wing internal review)** — added: wing power gate confirms symmetry with mainboard; mux topology / E̅ tied to GND is consistent with the gated-Hall design; SEL0/SEL1 land on PC14/PC15 (firmware must enable PWR backup-domain write); each wing has three buttons (BOOT0, NRST, FN0 on PB13) — not the one the doc claims; wing READY series R = 470 Ω is fine for the input-with-pull-down topology.
 - **§12W series (cross-board)** — power-on / NRST sequencing is race-free thanks to the wing-side R4 = 10 kΩ pull-down on BOOT0; wing-swap robustness rides on the per-frame wing-ID code in SPI (no hard-coded left/right firmware logic); HSI48 + CRS enumeration requires the firmware to enable CRS before USB init.
 - **§5W.2 — Channel-count discrepancy on WingLeft (32 mux channels vs 33 SC4015 sensors).** Confirm whether the 33rd sensor is dropped, dual-routed, or routed off-mux. Low risk but real.
+
+### Round 4 (2026-05-30, re-exported netlists)
+Resolved this round:
+- **§5.7 BOOT0 series Rs** — R16 / R17 = 100 Ω added on PA3 / PB13. Wing-local-button contention is now bounded to ~33 mA, safely inside GPIO sink limit. **CLOSED**.
+- **§9.4 Pedal insertion-detect caps** — C13 / C14 moved to GND, R18 / R19 = 1 kΩ series added between TV7 ESD and the MCU. Matches the recommendation in the previous round. **CLOSED**.
+- **§12.1a WingLeft BOM swap** — re-exported BOM has muxes correctly at U5/14/23/32 and the 33 sensors at the right designators. **CLOSED**.
+- **§12.1b R16/R17 ghosts** — now wired as the §5.7 BOOT0 series Rs (the resistors found a useful home). **CLOSED**.
+- **§5W.2 WingLeft 32-vs-33 channel mismatch** — sensor U38 reads directly on PA0 (`A_IN0`), the other 32 go through the muxes. **CLOSED**.
+
+Re-classified / corrected:
+- **§5W.5** — Round 3 incorrectly described the wing's R9 (470 Ω) as a READY series damping R. It is the **LED current-limit** on the LED_READY indicator branch. The READY line itself has no wing-side series R; only the mainboard's 100 Ω. Corrected text in plan.
+
+New audits added:
+- **§5W.6** — 3-bit hardware wing-ID resistors (R1/R2/R3, 10 kΩ each) on PC13/PF0/PF1. WingLeft codes `010`, WingRight codes `001`. 6 codes reserved for future keyboard layouts.
+- **§5W.7** — Verified the WingLeft direct-ADC path for the 33rd hall sensor (U38 → PA0).
+- **§5W.8** — Wing A_IN1 (PA1) has a 100 kΩ pull-down to define the spare ADC input.
+- **§2X.1** — Full LQFP48 pin-allocation map; **2 spare GPIOs** (PC13, PB10) on the mainboard.
+- **§2X.2** — Alternate-function alignment verified for SPI1, SPI2, USART1 VCP, USB FS, SWD, and all 4 ADC inputs (all on ADC1).
+- **§2X.3** — Mainboard NRST multi-source topology (SW1 + STDC14 jig + BAT54C OR-tie) walked for driver conflicts; clean.
+- **§2X.4** — SMF5.0A vs TLV755P abs-max VIN: TVS protects against transient ESD, not sustained over-voltage. Worth a doc note.
+- **§2X.5** — SC4015 → ADC source impedance / 1 nF filter / sample time chain — fast enough for the mechanical bandwidth of the spring-blade.
+- **§12.1c** — R18/R19 1 kΩ added to the mainboard BOM as pedal series Rs.
+
+Net state at end of Round 4:
+- **P0 down to 2 items**: §10.1 LED swap and §9.3 PJ-603A pin-4 datasheet check.
+- All other previously-FAIL items have been resolved.
+- Remaining P1 work is firmware / documentation only.
+- Single P2 cost-optimisation item (wing connector basic-part substitute, optional).

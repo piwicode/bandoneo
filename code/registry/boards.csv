@@ -1,0 +1,3 @@
+# uid,board
+# uid is the 96-bit STM32 unique device ID read from 0x1FFF7590, hex-encoded, lowercase.
+4d0047000a50315154373520,wing-g474

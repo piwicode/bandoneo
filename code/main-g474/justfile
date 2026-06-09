@@ -1,12 +1,22 @@
 default:
     @just --list
 
+# Generate build system into build/Debug. Re-run after adding/removing source files or changing CMakeLists.txt.
+init_build:
+    cmake --preset Debug
+
 build:
     cmake --build --preset Debug
 
+# Record this board's chip UID in the registry. Run once per board before the first flash.
+registry_add:
+    ../registry/registry.py add $(basename $(pwd))
+
 flash:
-    arm-none-eabi-objcopy -O binary build/Debug/main-g474.elf build/Debug/main-g474.bin
-    st-flash --reset write build/Debug/main-g474.bin 0x08000000
+    name=$(basename $(pwd)) && \
+    ../registry/registry.py check "$name" && \
+    arm-none-eabi-objcopy -O binary build/Debug/$name.elf build/Debug/$name.bin && \
+    st-flash --reset write build/Debug/$name.bin 0x08000000
 
 # Reset the board via STLink
 reset:

@@ -76,7 +76,6 @@ static void MX_USB_PCD_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-
 /* Sends a string over SWO ITM port 0; no-op if no debugger has enabled tracing */
 static void swo_print(const char *s)
 {
@@ -147,15 +146,55 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  uint8_t fn_prev = 0xFF;
+  uint8_t exp_present_prev = 0xFF, sus_present_prev = 0xFF;
+  uint32_t exp_val_prev = 0xFFFF, sus_val_prev = 0xFFFF;
   while (1)
   {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    swo_print("Hello\n");
-    printf("Toggle\r\n");
- 
-    HAL_Delay(500);
+    uint8_t fn = 0;
+    if (HAL_GPIO_ReadPin(SW_FN0_BOOT0_GPIO_Port, SW_FN0_BOOT0_Pin) == GPIO_PIN_RESET) fn |= 1;
+    if (HAL_GPIO_ReadPin(SW_FN1_GPIO_Port,       SW_FN1_Pin)        == GPIO_PIN_RESET) fn |= 2;
+    if (HAL_GPIO_ReadPin(SW_FN2_GPIO_Port,       SW_FN2_Pin)        == GPIO_PIN_RESET) fn |= 4;
+    if (fn != fn_prev)
+    {
+      fn_prev = fn;
+      printf("FN: %c%c%c\r\n",
+             (fn & 1) ? '1' : '0',
+             (fn & 2) ? '1' : '0',
+             (fn & 4) ? '1' : '0');
+    }
+
+    uint8_t exp_present = HAL_GPIO_ReadPin(EXP_PEDAL_INT_GPIO_Port, EXP_PEDAL_INT_Pin) == GPIO_PIN_SET;
+    uint8_t sus_present = HAL_GPIO_ReadPin(SUS_PEDAL_INT_GPIO_Port, SUS_PEDAL_INT_Pin) == GPIO_PIN_SET;
+
+    HAL_ADC_Start(&hadc1);
+    HAL_ADC_PollForConversion(&hadc1, 1);
+    uint32_t exp_val = HAL_ADC_GetValue(&hadc1);
+
+    HAL_ADC_Start(&hadc2);
+    HAL_ADC_PollForConversion(&hadc2, 1);
+    uint32_t sus_val = HAL_ADC_GetValue(&hadc2);
+
+    uint32_t exp_delta = exp_val > exp_val_prev ? exp_val - exp_val_prev : exp_val_prev - exp_val;
+    uint32_t sus_delta = sus_val > sus_val_prev ? sus_val - sus_val_prev : sus_val_prev - sus_val;
+
+    if (exp_present != exp_present_prev || (!exp_present && exp_delta > 16))
+    {
+      exp_present_prev = exp_present;
+      exp_val_prev = exp_val;
+      printf("EXP present=%u val=%u\r\n", exp_present, (unsigned)exp_val);
+    }
+    if (sus_present != sus_present_prev || (!sus_present && sus_delta > 16))
+    {
+      sus_present_prev = sus_present;
+      sus_val_prev = sus_val;
+      printf("SUS: present=%u val=%u\r\n", sus_present, (unsigned)sus_val);
+    }
+
+    HAL_Delay(10);
   }
   /* USER CODE END 3 */
 }
@@ -195,12 +234,12 @@ void SystemClock_Config(void)
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
   {
     Error_Handler();
   }
@@ -654,7 +693,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pins : EXP_PEDAL_INT_Pin SUS_PEDAL_INT_Pin */
   GPIO_InitStruct.Pin = EXP_PEDAL_INT_Pin|SUS_PEDAL_INT_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pins : HALL_NEN_Pin L_BOOT0_Pin */

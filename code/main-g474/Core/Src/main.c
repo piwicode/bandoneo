@@ -74,6 +74,25 @@ static void MX_USB_PCD_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+/* Sends a byte over SWO (ITM stimulus port 0); no-op if no debugger has enabled tracing */
+static int swo_send_char(int ch)
+{
+  if ((ITM->TCR & ITM_TCR_ITMENA_Msk) && (ITM->TER & (1UL << 0)))
+  {
+    while (ITM->PORT[0].u32 == 0);
+    ITM->PORT[0].u8 = (uint8_t)ch;
+  }
+  return ch;
+}
+
+static void swo_print(const char *s)
+{
+  while (*s)
+  {
+    swo_send_char((int)*s++);
+  }
+}
+
 /* USER CODE END 0 */
 
 /**
@@ -121,6 +140,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    swo_print("Bandoneo main-g474 alive\r\n");
+    HAL_Delay(1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

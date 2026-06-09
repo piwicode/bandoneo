@@ -1,0 +1,59 @@
+From 0bde8934e48a8690d21a039f353595bb70857af6 Mon Sep 17 00:00:00 2001
+From: Pierre Labatut <pierre.labatut@gmail.com>
+Date: Tue, 9 Jun 2026 06:51:37 +0200
+Subject: [PATCH] fix(st-trace): fix SWO trace on STLINK-V3 HS bulk endpoint
+
+STLINK-V3 exposes its trace endpoint as a USB High-Speed bulk endpoint
+(wMaxPacketSize=512). libusb_bulk_transfer() returns LIBUSB_ERROR_OVERFLOW
+when the requested transfer length is not a multiple of the endpoint's
+max packet size, because the device sends a full 512-byte packet.
+
+Fix by rounding up the transfer size to the next 512-byte boundary on V3
+probes before calling libusb_bulk_transfer(), and accepting the actual
+byte count returned (res) rather than requiring an exact match against
+the count reported by GET_TRACE_NB, which the V3 may deliver across
+multiple reads.
+
+Tested on STLINK-V3MINIE (VID:PID 0483:3754) with STM32G474.
+---
+ src/stlink-lib/usb.c | 20 ++++++++++++++++++--
+ 1 file changed, 18 insertions(+), 2 deletions(-)
+
+diff --git a/src/stlink-lib/usb.c b/src/stlink-lib/usb.c
+index 8dc0f9e..c8e430a 100644
+--- a/src/stlink-lib/usb.c
++++ b/src/stlink-lib/usb.c
+@@ -1059,12 +1059,28 @@ int32_t _stlink_usb_read_trace(stlink_t* sl, uint8_t* buf, uint32_t size) {
+ 
+     if(trace_count != 0) {
+         int32_t res = 0;
+-        int32_t t = libusb_bulk_transfer(slu->usb_handle, slu->ep_trace, buf, trace_count, &res, 3000);
+ 
+-        if(t || res != (int32_t) trace_count) {
++        // V3 HS bulk trace endpoint (wMaxPacketSize=512) always sends full 512-byte
++        // USB packets. Requesting fewer bytes causes LIBUSB_ERROR_OVERFLOW because
++        // the host controller receives a full packet into an undersized URB.
++        // Round up the transfer size to the next 512-byte boundary, clamped to the
++        // caller's buffer size, then validate that we received at least trace_count bytes.
++        uint32_t transfer_size = trace_count;
++        if(sl->version.stlink_v >= 3) {
++            const uint32_t pkt = 512;
++            uint32_t rounded = ((trace_count + pkt - 1) / pkt) * pkt;
++            transfer_size = (rounded <= size) ? rounded : size;
++        }
++
++        int32_t t = libusb_bulk_transfer(slu->usb_handle, slu->ep_trace, buf, (int32_t)transfer_size, &res, 3000);
++
++        if(t) {
+             ELOG("read_trace read error %d\n", t);
+             return (-1);
+         }
++        // V3 may deliver fewer bytes per transfer than GET_TRACE_NB reported;
++        // return actual byte count so the caller processes what arrived.
++        trace_count = (uint16_t)res;
+     }
+ 
+     return trace_count;
+-- 
+2.39.5
+

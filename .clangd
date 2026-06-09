@@ -1,0 +1,6 @@
+CompileFlags:
+  CompilationDatabase: code/main-g474/build/Debug
+  Add:
+    - --target=arm-none-eabi
+    - -isystem/usr/lib/arm-none-eabi/include
+    - -isystem/usr/lib/gcc/arm-none-eabi/12.2.1/include

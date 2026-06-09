@@ -1,7 +1,3 @@
 {
-    "clangd.arguments": [
-        "--query-driver=/usr/bin/arm-none-eabi-gcc",
-        "--compile-commands-dir=${workspaceFolder}/code/main-g474/build/Debug"
-    ],
-    "cmake.sourceDirectory": "/home/pierre/Documents/bandoneo/code/main-g474"
+"cmake.sourceDirectory": "/home/pierre/Documents/bandoneo/code/main-g474"
 }

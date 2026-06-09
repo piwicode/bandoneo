@@ -11,7 +11,7 @@
 		},
 		"C_Cpp.intelliSenseEngine": "disabled",
 		"clangd.arguments": [
-			"--compile-commands-dir=${workspaceFolder}/code/main-g474/build/Debug"
+			"--query-driver=/usr/bin/arm-none-eabi-gcc"
 		]
 	}
 }

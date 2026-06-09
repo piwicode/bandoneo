@@ -73,6 +73,100 @@ static void MX_USART1_UART_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+#define HALL_NUM_SEL   4
+#define HALL_NUM_CH    10
+#define HALL_DEAD_ZONE 32
+
+static uint16_t g_hall_data[HALL_NUM_SEL][HALL_NUM_CH];
+static uint16_t g_hall_last_reported[HALL_NUM_SEL][HALL_NUM_CH];
+
+static uint16_t adc_read_channel(ADC_HandleTypeDef *hadc, uint32_t channel)
+{
+  ADC_ChannelConfTypeDef sConfig = {0};
+  sConfig.Channel      = channel;
+  sConfig.Rank         = ADC_REGULAR_RANK_1;
+  sConfig.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;
+  sConfig.SingleDiff   = ADC_SINGLE_ENDED;
+  sConfig.OffsetNumber = ADC_OFFSET_NONE;
+  sConfig.Offset       = 0;
+  HAL_ADC_ConfigChannel(hadc, &sConfig);
+  HAL_ADC_Start(hadc);
+  HAL_ADC_PollForConversion(hadc, 10);
+  return (uint16_t)HAL_ADC_GetValue(hadc);
+}
+
+static void cmd_hall_scan(void)
+{
+  static int initialized = 0;
+
+  if (!initialized)
+  {
+    CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
+    DWT->CYCCNT = 0;
+    DWT->CTRL  |= DWT_CTRL_CYCCNTENA_Msk;
+    HAL_GPIO_WritePin(HALL_NEN_GPIO_Port, HALL_NEN_Pin, GPIO_PIN_RESET);
+    HAL_Delay(5);
+    initialized = 1;
+  }
+
+  uint32_t t_start = DWT->CYCCNT;
+
+  for (int sel = 0; sel < HALL_NUM_SEL; sel++)
+  {
+    HAL_GPIO_WritePin(SEL0_GPIO_Port, SEL0_Pin, (sel & 1) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(SEL1_GPIO_Port, SEL1_Pin, (sel & 2) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+    for (volatile int i = 0; i < 160; i++) __NOP();
+
+    g_hall_data[sel][0] = adc_read_channel(&hadc1, ADC_CHANNEL_1);
+    g_hall_data[sel][1] = adc_read_channel(&hadc1, ADC_CHANNEL_2);
+    g_hall_data[sel][2] = adc_read_channel(&hadc2, ADC_CHANNEL_3);
+    g_hall_data[sel][3] = adc_read_channel(&hadc2, ADC_CHANNEL_4);
+    g_hall_data[sel][4] = adc_read_channel(&hadc3, ADC_CHANNEL_12);
+    g_hall_data[sel][5] = adc_read_channel(&hadc3, ADC_CHANNEL_1);
+    g_hall_data[sel][6] = adc_read_channel(&hadc4, ADC_CHANNEL_4);
+    g_hall_data[sel][7] = adc_read_channel(&hadc4, ADC_CHANNEL_5);
+    g_hall_data[sel][8] = adc_read_channel(&hadc5, ADC_CHANNEL_1);
+    g_hall_data[sel][9] = adc_read_channel(&hadc5, ADC_CHANNEL_2);
+  }
+
+  uint32_t cycles = DWT->CYCCNT - t_start;
+
+  uint16_t val_min = 0xFFFF, val_max = 0;
+  for (int sel = 0; sel < HALL_NUM_SEL; sel++)
+    for (int ch = 0; ch < HALL_NUM_CH; ch++)
+    {
+      if (g_hall_data[sel][ch] < val_min) val_min = g_hall_data[sel][ch];
+      if (g_hall_data[sel][ch] > val_max) val_max = g_hall_data[sel][ch];
+    }
+
+  static uint32_t last_status_tick = 0;
+  uint32_t now = HAL_GetTick();
+  if (now - last_status_tick >= 1000)
+  {
+    last_status_tick = now;
+    uint32_t total_ns = cycles * 1000u / 16u;
+    uint32_t us_whole = total_ns / 1000u;
+    uint32_t ns_frac  = total_ns % 1000u;
+    printf("scan: %lu cycles (%lu.%03lu us)  min=%u max=%u\r\n",
+           (unsigned long)cycles, (unsigned long)us_whole, (unsigned long)ns_frac,
+           (unsigned)val_min, (unsigned)val_max);
+  }
+
+  for (int sel = 0; sel < HALL_NUM_SEL; sel++)
+    for (int ch = 0; ch < HALL_NUM_CH; ch++)
+    {
+      uint16_t cur  = g_hall_data[sel][ch];
+      uint16_t last = g_hall_last_reported[sel][ch];
+      int delta = (int)cur - (int)last;
+      if (delta < 0) delta = -delta;
+      if (delta >= HALL_DEAD_ZONE)
+      {
+        printf("  sel=%d ch=%d: %u -> %u\r\n", sel, ch, (unsigned)last, (unsigned)cur);
+        g_hall_last_reported[sel][ch] = cur;
+      }
+    }
+}
+
 static uint8_t read_wing_id(void)
 {
   uint8_t id = 0;
@@ -197,6 +291,7 @@ int main(void)
       printf("FN0: %c\r\n", fn0 ? '1' : '0');
     }
     blink_tick();
+    cmd_hall_scan();
   }
   /* USER CODE END 3 */
 }

@@ -137,11 +137,18 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  uint8_t fn0_prev = 0xFF;
   while (1)
   {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+    uint8_t fn0 = HAL_GPIO_ReadPin(SW_FN0_GPIO_Port, SW_FN0_Pin) == GPIO_PIN_RESET ? 1 : 0;
+    if (fn0 != fn0_prev)
+    {
+      fn0_prev = fn0;
+      printf("FN0: %c\r\n", fn0 ? '1' : '0');
+    }
   }
   /* USER CODE END 3 */
 }

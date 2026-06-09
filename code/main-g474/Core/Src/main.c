@@ -23,7 +23,7 @@
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
 #include <string.h>
-#include "shell.h"
+#include "console.h"
 
 /* USER CODE END Includes */
 
@@ -76,12 +76,6 @@ static void MX_USB_PCD_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-/* Routes printf to USART1 (STLink VCP) */
-int __io_putchar(int ch)
-{
-  HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, HAL_MAX_DELAY);
-  return ch;
-}
 
 /* Sends a string over SWO ITM port 0; no-op if no debugger has enabled tracing */
 static void swo_print(const char *s)
@@ -97,7 +91,7 @@ static void swo_print(const char *s)
   }
 }
 
-int shell_execute(int argc, const char * const *argv)
+int console_execute(int argc, const char * const *argv)
 {
   if (argc == 0)
     return 0;
@@ -148,7 +142,7 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USB_PCD_Init();
   /* USER CODE BEGIN 2 */
-  shell_init(&huart1, USART1_IRQn);
+  console_init(&huart1, USART1_IRQn);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -158,6 +152,10 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+    swo_print("Hello\n");
+    printf("Toggle\r\n");
+ 
+    HAL_Delay(500);
   }
   /* USER CODE END 3 */
 }
@@ -197,12 +195,12 @@ void SystemClock_Config(void)
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
   {
     Error_Handler();
   }

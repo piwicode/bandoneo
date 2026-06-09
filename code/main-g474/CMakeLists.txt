@@ -46,21 +46,21 @@ target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
     ../third_party/microrl/src/microrl.c
-    ../common/shell/shell.c
+    ../common/console/console.c
 )
 
 # Force include our config.h for microrl.c (overrides third-party config.h)
 set_source_files_properties(
     ../third_party/microrl/src/microrl.c
     PROPERTIES
-    COMPILE_FLAGS "-include${CMAKE_CURRENT_SOURCE_DIR}/../common/shell/config.h"
+    COMPILE_FLAGS "-include${CMAKE_CURRENT_SOURCE_DIR}/../common/console/config.h"
 )
 
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined include paths
     ../third_party/microrl/src
-    ../common/shell
+    ../common/console
 )
 
 # Add project symbols (macros)

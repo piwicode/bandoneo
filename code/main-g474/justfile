@@ -1,0 +1,9 @@
+default:
+    @just --list
+
+build:
+    cmake --build --preset Debug
+
+flash:
+    arm-none-eabi-objcopy -O binary build/Debug/main-g474.elf build/Debug/main-g474.bin
+    st-flash write build/Debug/main-g474.bin 0x08000000

@@ -1,5 +1,13 @@
 Boards can be programmed with [STLINK-V3MINIE](https://www.st.com/en/development-tools/stlink-v3minie.htm)
 
+# Command library
+
+I use [`just`](https://just.systems/) to run commands from a confiugration
+file such as `code/main-g474/justfile`
+```
+cargo install just
+```
+
 # Connecting the debugger probe:
 
 Plug STLink to a usb port and verify the device is detected:
@@ -62,7 +70,7 @@ st-flash write build/Debug/main-g474.bin 0x08000000
 
 0x08000000 is the STM32G4's internal flash base address (matches STM32G474XX_FLASH.ld).
 
-# Read SWO text
+# Read SWO debug text stream
 
 
 Characters written to `ITM_SendChar` show show up in a view names

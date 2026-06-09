@@ -1,0 +1,4 @@
+# STM32CubeMX generated files — always CRLF, don't convert
+*.c -text
+*.h -text
+

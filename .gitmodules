@@ -1,3 +1,6 @@
 [submodule "code/third_party/tinyusb"]
 	path = code/third_party/tinyusb
 	url = https://github.com/hathach/tinyusb.git
+[submodule "code/third_party/microrl"]
+	path = code/third_party/microrl
+	url = https://github.com/Helius/microrl.git

@@ -22,6 +22,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
+#include <string.h>
+#include "shell.h"
 
 /* USER CODE END Includes */
 
@@ -54,7 +56,6 @@ UART_HandleTypeDef huart1;
 PCD_HandleTypeDef hpcd_USB_FS;
 
 /* USER CODE BEGIN PV */
-
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -94,6 +95,17 @@ static void swo_print(const char *s)
     }
     s++;
   }
+}
+
+int shell_execute(int argc, const char * const *argv)
+{
+  if (argc == 0)
+    return 0;
+  if (strcmp(argv[0], "hello") == 0)
+    printf("Hello, Bandoneo!\r\n");
+  else
+    printf("Unknown command: %s\r\n", argv[0]);
+  return 0;
 }
 
 /* USER CODE END 0 */
@@ -136,16 +148,13 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USB_PCD_Init();
   /* USER CODE BEGIN 2 */
-
+  shell_init(&huart1, USART1_IRQn);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    printf("Bandoneo main-g474 alive\r\n");
-    swo_print("Bandoneo main-g474 alive\r\n");
-    HAL_Delay(1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

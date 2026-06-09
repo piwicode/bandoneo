@@ -21,7 +21,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <stdio.h>
+#include <string.h>
+#include "console.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -71,6 +73,26 @@ static void MX_USART1_UART_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+static uint8_t read_wing_id(void)
+{
+  uint8_t id = 0;
+  if (HAL_GPIO_ReadPin(ID0_GPIO_Port, ID0_Pin) == GPIO_PIN_SET) id |= 1;
+  if (HAL_GPIO_ReadPin(ID1_GPIO_Port, ID1_Pin) == GPIO_PIN_SET) id |= 2;
+  if (HAL_GPIO_ReadPin(ID2_GPIO_Port, ID2_Pin) == GPIO_PIN_SET) id |= 4;
+  return id;
+}
+
+int console_execute(int argc, const char * const *argv)
+{
+  if (argc == 0)
+    return 0;
+  if (strcmp(argv[0], "hello") == 0)
+    printf("Hello from Wing %u!\r\n", read_wing_id());
+  else
+    printf("Unknown command: %s\r\n", argv[0]);
+  return 0;
+}
+
 /* USER CODE END 0 */
 
 /**
@@ -110,7 +132,7 @@ int main(void)
   MX_SPI1_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
+  console_init(&huart1, USART1_IRQn);
   /* USER CODE END 2 */
 
   /* Infinite loop */

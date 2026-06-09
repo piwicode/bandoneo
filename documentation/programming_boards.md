@@ -89,7 +89,7 @@ Warning: This requires a patch (0001-fix-st-trace-fix-SWO-trace-on-STLINK-V3-HS-
 The 
 
 
-## OpenOCD
+## OpenOCD Fails
 ```
 $ openocd -f interface/stlink.cfg -f target/stm32g4x.cfg \
   -c "tpiu config internal swo.log uart off 16000000 2000000" \
@@ -98,7 +98,7 @@ $ openocd -f interface/stlink.cfg -f target/stm32g4x.cfg \
 
 Fails with `Error: libusb_bulk_read error: LIBUSB_ERROR_OVERFLOW`
 
-## In STM32CubeIde (KO)
+## In STM32CubeIde Fails
 
 * In STM32Cube IDE debug configuration enable SWO and use the `To CPU1 FCLK`
   speed as Core Clock speed, that is to say 4MHz.
@@ -111,3 +111,20 @@ Fails with `SWV info, Failed to read data!!!`
 Reference:
 - https://www.youtube.com/watch?v=j-GaEZKrkbQ
 
+# Read UART debug console
+
+Characters written with `printf` (via `_write` retargeted to `HAL_UART_Transmit`) are sent over USART to the STLink VCP bridge, which forwards them to a host `/dev/ttyACMx` device.
+
+Use `tio` to read it — it auto-reconnects across resets, unlike `screen` or `cat`:
+
+```bash
+tio /dev/serial/by-id/usb-STMicroelectronics_STLINK-V3_*
+```
+
+The glob resolves to the correct `/dev/ttyACMx` regardless of what other USB serial devices are present. Or via the justfile recipe:
+
+```bash
+just console
+```
+
+Press ctrl-t q to quit.

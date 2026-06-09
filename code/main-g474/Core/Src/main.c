@@ -21,6 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <stdio.h>
 
 /* USER CODE END Includes */
 
@@ -74,22 +75,24 @@ static void MX_USB_PCD_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-/* Sends a byte over SWO (ITM stimulus port 0); no-op if no debugger has enabled tracing */
-static int swo_send_char(int ch)
+/* Routes printf to USART1 (STLink VCP) */
+int __io_putchar(int ch)
 {
-  if ((ITM->TCR & ITM_TCR_ITMENA_Msk) && (ITM->TER & (1UL << 0)))
-  {
-    while (ITM->PORT[0].u32 == 0);
-    ITM->PORT[0].u8 = (uint8_t)ch;
-  }
+  HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, HAL_MAX_DELAY);
   return ch;
 }
 
+/* Sends a string over SWO ITM port 0; no-op if no debugger has enabled tracing */
 static void swo_print(const char *s)
 {
   while (*s)
   {
-    swo_send_char((int)*s++);
+    if ((ITM->TCR & ITM_TCR_ITMENA_Msk) && (ITM->TER & (1UL << 0)))
+    {
+      while (ITM->PORT[0].u32 == 0);
+      ITM->PORT[0].u8 = (uint8_t)*s;
+    }
+    s++;
   }
 }
 
@@ -140,6 +143,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    printf("Bandoneo main-g474 alive\r\n");
     swo_print("Bandoneo main-g474 alive\r\n");
     HAL_Delay(1000);
     /* USER CODE END WHILE */

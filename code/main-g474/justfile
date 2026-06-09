@@ -7,3 +7,7 @@ build:
 flash:
     arm-none-eabi-objcopy -O binary build/Debug/main-g474.elf build/Debug/main-g474.bin
     st-flash write build/Debug/main-g474.bin 0x08000000
+
+# Open UART debug console via STLink VCP (resolves the right /dev/ttyACMx automatically)
+console:
+    tio /dev/serial/by-id/usb-STMicroelectronics_STLINK-V3_*

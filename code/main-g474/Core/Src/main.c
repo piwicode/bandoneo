@@ -76,6 +76,13 @@ static void MX_USB_PCD_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+static void delay_us(uint32_t us)
+{
+  uint32_t cycles = us * (SystemCoreClock / 1000000U);
+  uint32_t start = DWT->CYCCNT;
+  while ((DWT->CYCCNT - start) < cycles);
+}
+
 /* Sends a string over SWO ITM port 0; no-op if no debugger has enabled tracing */
 static void swo_print(const char *s)
 {
@@ -95,7 +102,9 @@ int console_execute(int argc, const char * const *argv)
   if (argc == 0)
     return 0;
   if (strcmp(argv[0], "hello") == 0)
+  {
     printf("Hello, Bandoneo!\r\n");
+  }
   else
     printf("Unknown command: %s\r\n", argv[0]);
   return 0;
@@ -141,6 +150,9 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USB_PCD_Init();
   /* USER CODE BEGIN 2 */
+  CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
+  DWT->CYCCNT = 0;
+  DWT->CTRL  |= DWT_CTRL_CYCCNTENA_Msk;
   console_init(&huart1, USART1_IRQn);
   /* USER CODE END 2 */
 
@@ -149,6 +161,7 @@ int main(void)
   uint8_t fn_prev = 0xFF;
   uint8_t exp_present_prev = 0xFF, sus_present_prev = 0xFF;
   uint32_t exp_val_prev = 0xFFFF, sus_val_prev = 0xFFFF;
+  uint32_t hall0_prev = 0xFFFF, hall1_prev = 0xFFFF;
   while (1)
   {
     /* USER CODE END WHILE */
@@ -194,7 +207,30 @@ int main(void)
       printf("SUS: present=%u val=%u\r\n", sus_present, (unsigned)sus_val);
     }
 
-    HAL_Delay(10);
+    HAL_GPIO_WritePin(HALL_NEN_GPIO_Port, HALL_NEN_Pin, GPIO_PIN_RESET);
+    /* Settling budget: gate RC (R5||R6 * Ciss_Q1 = 909R * 130pF, 5t~600ns) +
+     * VDDH caps (RDS_on_Q1 * (CP1+CP2) = ~120mO * 200nF, 5t~120ns) +
+     * SC4015SO power-on start <1us (datasheet) => worst case <3us; 5us = ~1.7x margin. */
+    delay_us(5);
+
+    HAL_ADC_Start(&hadc3);
+    HAL_ADC_PollForConversion(&hadc3, 10);
+    uint32_t hall0 = HAL_ADC_GetValue(&hadc3);
+
+    HAL_ADC_Start(&hadc4);
+    HAL_ADC_PollForConversion(&hadc4, 10);
+    uint32_t hall1 = HAL_ADC_GetValue(&hadc4);
+
+    HAL_GPIO_WritePin(HALL_NEN_GPIO_Port, HALL_NEN_Pin, GPIO_PIN_SET);
+
+    uint32_t hall0_delta = hall0 > hall0_prev ? hall0 - hall0_prev : hall0_prev - hall0;
+    uint32_t hall1_delta = hall1 > hall1_prev ? hall1 - hall1_prev : hall1_prev - hall1;
+    if (hall0_delta > 16 || hall1_delta > 16)
+    {
+      hall0_prev = hall0;
+      hall1_prev = hall1;
+      printf("HALL0=%u HALL1=%u\r\n", (unsigned)hall0, (unsigned)hall1);
+    }
   }
   /* USER CODE END 3 */
 }

@@ -3,23 +3,15 @@
 		{
 			"name": "bandoneo",
 			"path": "."
-		},
-		{
-			"name": "STM32CubeWB",
-			"path": "../STM32CubeWB"
-		},
-		{
-			"name": "STM32CubeWBA",
-			"path": "../STM32CubeWBA"
-		},
-		{
-			"name": "STM32CubeL4",
-			"path": "../STM32CubeL4"
 		}
 	],
 	"settings": {
 		"files.associations": {
 			"algorithm": "c"
-		}
+		},
+		"C_Cpp.intelliSenseEngine": "disabled",
+		"clangd.arguments": [
+			"--compile-commands-dir=${workspaceFolder}/code/main-g474/build/Debug"
+		]
 	}
 }

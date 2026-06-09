@@ -82,12 +82,59 @@ static uint8_t read_wing_id(void)
   return id;
 }
 
+typedef struct {
+  GPIO_TypeDef *port;
+  uint16_t pin;
+  int remaining;
+  uint32_t last_tick;
+  int led_on;
+} blink_state_t;
+
+static volatile blink_state_t g_blink;
+
+static void blink_tick(void)
+{
+  if (g_blink.remaining == 0)
+    return;
+  uint32_t now = HAL_GetTick();
+  if (now - g_blink.last_tick < 200)
+    return;
+  g_blink.last_tick = now;
+  if (g_blink.led_on)
+  {
+    HAL_GPIO_WritePin(g_blink.port, g_blink.pin, GPIO_PIN_RESET);
+    g_blink.led_on = 0;
+    g_blink.remaining--;
+  }
+  else
+  {
+    HAL_GPIO_WritePin(g_blink.port, g_blink.pin, GPIO_PIN_SET);
+    g_blink.led_on = 1;
+  }
+}
+
 int console_execute(int argc, const char * const *argv)
 {
   if (argc == 0)
     return 0;
   if (strcmp(argv[0], "hello") == 0)
     printf("Hello from Wing %u!\r\n", read_wing_id());
+  else if (strcmp(argv[0], "blink") == 0 && argc >= 2)
+  {
+    GPIO_TypeDef *port = NULL;
+    uint16_t pin = 0;
+    if (strcmp(argv[1], "fn0") == 0)       { port = LED_FN0_GPIO_Port; pin = LED_FN0_Pin; }
+    else if (strcmp(argv[1], "ready") == 0) { port = READY_GPIO_Port;   pin = READY_Pin;   }
+    else printf("Unknown LED: %s (fn0, ready)\r\n", argv[1]);
+    if (port)
+    {
+      g_blink.port = port;
+      g_blink.pin = pin;
+      g_blink.remaining = 5;
+      g_blink.last_tick = HAL_GetTick();
+      g_blink.led_on = 0;
+    }
+  }
   else
     printf("Unknown command: %s\r\n", argv[0]);
   return 0;
@@ -149,6 +196,7 @@ int main(void)
       fn0_prev = fn0;
       printf("FN0: %c\r\n", fn0 ? '1' : '0');
     }
+    blink_tick();
   }
   /* USER CODE END 3 */
 }

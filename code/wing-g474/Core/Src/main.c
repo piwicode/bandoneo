@@ -47,6 +47,11 @@ ADC_HandleTypeDef hadc2;
 ADC_HandleTypeDef hadc3;
 ADC_HandleTypeDef hadc4;
 ADC_HandleTypeDef hadc5;
+DMA_HandleTypeDef hdma_adc1;
+DMA_HandleTypeDef hdma_adc2;
+DMA_HandleTypeDef hdma_adc3;
+DMA_HandleTypeDef hdma_adc4;
+DMA_HandleTypeDef hdma_adc5;
 
 SPI_HandleTypeDef hspi1;
 
@@ -59,6 +64,7 @@ UART_HandleTypeDef huart1;
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+static void MX_DMA_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_ADC2_Init(void);
 static void MX_ADC3_Init(void);
@@ -67,7 +73,7 @@ static void MX_ADC5_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_USART1_UART_Init(void);
 /* USER CODE BEGIN PFP */
-
+static uint16_t adc_read_channel(ADC_HandleTypeDef *hadc, uint32_t channel);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -80,22 +86,31 @@ static void MX_USART1_UART_Init(void);
 static uint16_t g_hall_data[HALL_NUM_SEL][HALL_NUM_CH];
 static uint16_t g_hall_last_reported[HALL_NUM_SEL][HALL_NUM_CH];
 
+// Constant across all calls; only Channel changes, so keep one instance and
+// avoid re-zeroing + re-writing the fixed fields on every conversion setup.
+static ADC_ChannelConfTypeDef adc_chan_cfg = {
+  .Channel      = 0,
+  .Rank         = ADC_REGULAR_RANK_1,
+  .SamplingTime = ADC_SAMPLETIME_2CYCLES_5,
+  .SingleDiff   = ADC_SINGLE_ENDED,
+  .OffsetNumber = ADC_OFFSET_NONE,
+};
+
+static void adc_cfg(ADC_HandleTypeDef *hadc, uint32_t channel)
+{
+  adc_chan_cfg.Channel = channel;
+  HAL_ADC_ConfigChannel(hadc, &adc_chan_cfg);
+}
+
 static uint16_t adc_read_channel(ADC_HandleTypeDef *hadc, uint32_t channel)
 {
-  ADC_ChannelConfTypeDef sConfig = {0};
-  sConfig.Channel      = channel;
-  sConfig.Rank         = ADC_REGULAR_RANK_1;
-  sConfig.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;
-  sConfig.SingleDiff   = ADC_SINGLE_ENDED;
-  sConfig.OffsetNumber = ADC_OFFSET_NONE;
-  sConfig.Offset       = 0;
-  HAL_ADC_ConfigChannel(hadc, &sConfig);
+  adc_cfg(hadc, channel);
   HAL_ADC_Start(hadc);
   HAL_ADC_PollForConversion(hadc, 10);
   return (uint16_t)HAL_ADC_GetValue(hadc);
 }
 
-static void cmd_hall_scan(void)
+static void cmd_hall_scan_naive_polling(void)
 {
   static int initialized = 0;
 
@@ -110,13 +125,11 @@ static void cmd_hall_scan(void)
   }
 
   uint32_t t_start = DWT->CYCCNT;
-
   for (int sel = 0; sel < HALL_NUM_SEL; sel++)
   {
     HAL_GPIO_WritePin(SEL0_GPIO_Port, SEL0_Pin, (sel & 1) ? GPIO_PIN_SET : GPIO_PIN_RESET);
     HAL_GPIO_WritePin(SEL1_GPIO_Port, SEL1_Pin, (sel & 2) ? GPIO_PIN_SET : GPIO_PIN_RESET);
     for (volatile int i = 0; i < 160; i++) __NOP();
-
     g_hall_data[sel][0] = adc_read_channel(&hadc1, ADC_CHANNEL_1);
     g_hall_data[sel][1] = adc_read_channel(&hadc1, ADC_CHANNEL_2);
     g_hall_data[sel][2] = adc_read_channel(&hadc2, ADC_CHANNEL_3);
@@ -128,7 +141,6 @@ static void cmd_hall_scan(void)
     g_hall_data[sel][8] = adc_read_channel(&hadc5, ADC_CHANNEL_1);
     g_hall_data[sel][9] = adc_read_channel(&hadc5, ADC_CHANNEL_2);
   }
-
   uint32_t cycles = DWT->CYCCNT - t_start;
 
   uint16_t val_min = 0xFFFF, val_max = 0;
@@ -144,11 +156,12 @@ static void cmd_hall_scan(void)
   if (now - last_status_tick >= 1000)
   {
     last_status_tick = now;
-    uint32_t total_ns = cycles * 1000u / 16u;
+    uint32_t cpu_freq = SystemCoreClock / 1000000u;
+    uint32_t total_ns = cycles * 1000u / cpu_freq;
     uint32_t us_whole = total_ns / 1000u;
-    uint32_t ns_frac  = total_ns % 1000u;
-    printf("scan: %lu cycles (%lu.%03lu us)  min=%u max=%u\r\n",
-           (unsigned long)cycles, (unsigned long)us_whole, (unsigned long)ns_frac,
+    uint32_t us_frac = total_ns % 1000u;
+    printf("naive polling   : %lu cycles (%lu.%03lu us)  min=%u max=%u\r\n",
+           (unsigned long)cycles, (unsigned long)us_whole, (unsigned long)us_frac,
            (unsigned)val_min, (unsigned)val_max);
   }
 
@@ -161,7 +174,97 @@ static void cmd_hall_scan(void)
       if (delta < 0) delta = -delta;
       if (delta >= HALL_DEAD_ZONE)
       {
-        printf("  sel=%d ch=%d: %u -> %u\r\n", sel, ch, (unsigned)last, (unsigned)cur);
+        printf(" > naive polling   :  sel=%d ch=%d: %u -> %u\r\n", sel, ch, (unsigned)last, (unsigned)cur);
+        g_hall_last_reported[sel][ch] = cur;
+      }
+    }
+}
+
+static void cmd_hall_scan_parallel(void)
+{
+  static int initialized = 0;
+
+  if (!initialized)
+  {
+    CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
+    DWT->CYCCNT = 0;
+    DWT->CTRL  |= DWT_CTRL_CYCCNTENA_Msk;
+    HAL_GPIO_WritePin(HALL_NEN_GPIO_Port, HALL_NEN_Pin, GPIO_PIN_RESET);
+    HAL_Delay(5);
+    initialized = 1;
+  }
+
+  uint32_t t_start = DWT->CYCCNT;
+  for (int sel = 0; sel < HALL_NUM_SEL; sel++)
+  {
+    HAL_GPIO_WritePin(SEL0_GPIO_Port, SEL0_Pin, (sel & 1) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+    HAL_GPIO_WritePin(SEL1_GPIO_Port, SEL1_Pin, (sel & 2) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+    for (volatile int i = 0; i < 160; i++) __NOP();
+    adc_cfg(&hadc1, ADC_CHANNEL_1);
+    adc_cfg(&hadc2, ADC_CHANNEL_3);
+    adc_cfg(&hadc3, ADC_CHANNEL_12);
+    adc_cfg(&hadc4, ADC_CHANNEL_4);
+    adc_cfg(&hadc5, ADC_CHANNEL_1);
+    HAL_ADC_Start(&hadc1); HAL_ADC_Start(&hadc2); HAL_ADC_Start(&hadc3);
+    HAL_ADC_Start(&hadc4); HAL_ADC_Start(&hadc5);
+    HAL_ADC_PollForConversion(&hadc1, 10); HAL_ADC_PollForConversion(&hadc2, 10);
+    HAL_ADC_PollForConversion(&hadc3, 10); HAL_ADC_PollForConversion(&hadc4, 10);
+    HAL_ADC_PollForConversion(&hadc5, 10);
+    g_hall_data[sel][0] = (uint16_t)HAL_ADC_GetValue(&hadc1);
+    g_hall_data[sel][2] = (uint16_t)HAL_ADC_GetValue(&hadc2);
+    g_hall_data[sel][4] = (uint16_t)HAL_ADC_GetValue(&hadc3);
+    g_hall_data[sel][6] = (uint16_t)HAL_ADC_GetValue(&hadc4);
+    g_hall_data[sel][8] = (uint16_t)HAL_ADC_GetValue(&hadc5);
+    adc_cfg(&hadc1, ADC_CHANNEL_2);
+    adc_cfg(&hadc2, ADC_CHANNEL_4);
+    adc_cfg(&hadc3, ADC_CHANNEL_1);
+    adc_cfg(&hadc4, ADC_CHANNEL_5);
+    adc_cfg(&hadc5, ADC_CHANNEL_2);
+    HAL_ADC_Start(&hadc1); HAL_ADC_Start(&hadc2); HAL_ADC_Start(&hadc3);
+    HAL_ADC_Start(&hadc4); HAL_ADC_Start(&hadc5);
+    HAL_ADC_PollForConversion(&hadc1, 10); HAL_ADC_PollForConversion(&hadc2, 10);
+    HAL_ADC_PollForConversion(&hadc3, 10); HAL_ADC_PollForConversion(&hadc4, 10);
+    HAL_ADC_PollForConversion(&hadc5, 10);
+    g_hall_data[sel][1] = (uint16_t)HAL_ADC_GetValue(&hadc1);
+    g_hall_data[sel][3] = (uint16_t)HAL_ADC_GetValue(&hadc2);
+    g_hall_data[sel][5] = (uint16_t)HAL_ADC_GetValue(&hadc3);
+    g_hall_data[sel][7] = (uint16_t)HAL_ADC_GetValue(&hadc4);
+    g_hall_data[sel][9] = (uint16_t)HAL_ADC_GetValue(&hadc5);
+  }
+  uint32_t cycles = DWT->CYCCNT - t_start;
+
+  uint16_t val_min = 0xFFFF, val_max = 0;
+  for (int sel = 0; sel < HALL_NUM_SEL; sel++)
+    for (int ch = 0; ch < HALL_NUM_CH; ch++)
+    {
+      if (g_hall_data[sel][ch] < val_min) val_min = g_hall_data[sel][ch];
+      if (g_hall_data[sel][ch] > val_max) val_max = g_hall_data[sel][ch];
+    }
+
+  static uint32_t last_status_tick = 0;
+  uint32_t now = HAL_GetTick();
+  if (now - last_status_tick >= 1000)
+  {
+    last_status_tick = now;
+    uint32_t cpu_freq = SystemCoreClock / 1000000u;
+    uint32_t total_ns = cycles * 1000u / cpu_freq;
+    uint32_t us_whole = total_ns / 1000u;
+    uint32_t us_frac = total_ns % 1000u;
+    printf("parallel polling: %lu cycles (%lu.%03lu us)  min=%u max=%u\r\n",
+           (unsigned long)cycles, (unsigned long)us_whole, (unsigned long)us_frac,
+           (unsigned)val_min, (unsigned)val_max);
+  }
+
+  for (int sel = 0; sel < HALL_NUM_SEL; sel++)
+    for (int ch = 0; ch < HALL_NUM_CH; ch++)
+    {
+      uint16_t cur  = g_hall_data[sel][ch];
+      uint16_t last = g_hall_last_reported[sel][ch];
+      int delta = (int)cur - (int)last;
+      if (delta < 0) delta = -delta;
+      if (delta >= HALL_DEAD_ZONE)
+      {
+        printf(" > parallel polling:  sel=%d ch=%d: %u -> %u\r\n", sel, ch, (unsigned)last, (unsigned)cur);
         g_hall_last_reported[sel][ch] = cur;
       }
     }
@@ -265,6 +368,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_ADC1_Init();
   MX_ADC2_Init();
   MX_ADC3_Init();
@@ -291,7 +395,8 @@ int main(void)
       printf("FN0: %c\r\n", fn0 ? '1' : '0');
     }
     blink_tick();
-    cmd_hall_scan();
+    cmd_hall_scan_naive_polling();
+    cmd_hall_scan_parallel();
   }
   /* USER CODE END 3 */
 }
@@ -315,7 +420,13 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+  RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV1;
+  RCC_OscInitStruct.PLL.PLLN = 8;
+  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
+  RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
+  RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -325,12 +436,12 @@ void SystemClock_Config(void)
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
   {
     Error_Handler();
   }
@@ -733,6 +844,38 @@ static void MX_USART1_UART_Init(void)
   /* USER CODE BEGIN USART1_Init 2 */
 
   /* USER CODE END USART1_Init 2 */
+
+}
+
+/**
+  * Enable DMA controller clock
+  */
+static void MX_DMA_Init(void)
+{
+
+  /* DMA controller clock enable */
+  __HAL_RCC_DMAMUX1_CLK_ENABLE();
+  __HAL_RCC_DMA1_CLK_ENABLE();
+
+  /* DMA interrupt init */
+  /* DMA1_Channel1_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
+  /* DMA1_Channel2_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel2_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel2_IRQn);
+  /* DMA1_Channel3_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel3_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel3_IRQn);
+  /* DMA1_Channel4_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel4_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel4_IRQn);
+  /* DMA1_Channel5_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel5_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel5_IRQn);
+  /* DMAMUX_OVR_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMAMUX_OVR_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMAMUX_OVR_IRQn);
 
 }
 

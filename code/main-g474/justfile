@@ -8,6 +8,20 @@ init_build:
 build:
     cmake --build --preset Debug
 
+# Generate build system into build/Release. Re-run after adding/removing source files or changing CMakeLists.txt.
+init_build_release:
+    cmake --preset Release
+
+build_release:
+    cmake --build --preset Release
+
+# Init, build, and flash release version
+release: init_build_release build_release
+    name=$(basename $(pwd)) && \
+    ../registry/registry.py check "$name" && \
+    arm-none-eabi-objcopy -O binary build/Release/$name.elf build/Release/$name.bin && \
+    st-flash --reset write build/Release/$name.bin 0x08000000
+
 # Record this board's chip UID in the registry. Run once per board before the first flash.
 registry_add:
     ../registry/registry.py add $(basename $(pwd))

@@ -43,9 +43,15 @@ void console_init(UART_HandleTypeDef *huart, IRQn_Type irqn)
   printf("\r\n=== Bandoneo Console ===\r\n");
   fflush(stdout);
 
+  if (!NVIC_GetEnableIRQ(irqn)) {
+    printf("WARNING: IRQ %d not enabled in NVIC, console RX will not work.\r\n"
+           "Enable the UART global interrupt in the .ioc NVIC settings and regenerate code.\r\n",
+           (int)irqn);
+    fflush(stdout);
+  }
+
   microrl_init(&console_rl, console_print);
   microrl_set_execute_callback(&console_rl, console_execute);
 
   HAL_UART_Receive_IT(console_uart, &console_rx_char, 1);
-  NVIC_EnableIRQ(irqn);
 }

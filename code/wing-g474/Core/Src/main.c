@@ -73,7 +73,6 @@ static void MX_ADC5_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_USART1_UART_Init(void);
 /* USER CODE BEGIN PFP */
-static uint16_t adc_read_channel(ADC_HandleTypeDef *hadc, uint32_t channel);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -92,29 +91,6 @@ static uint16_t adc_read_channel(ADC_HandleTypeDef *hadc, uint32_t channel);
 static uint16_t g_hall_data[HALL_NUM_ADC][HALL_SLOTS_PER_ADC];
 static uint16_t g_hall_last_reported[HALL_NUM_ADC][HALL_SLOTS_PER_ADC];
 
-// Constant across all calls; only Channel changes, so keep one instance and
-// avoid re-zeroing + re-writing the fixed fields on every conversion setup.
-static ADC_ChannelConfTypeDef adc_chan_cfg = {
-  .Channel      = 0,
-  .Rank         = ADC_REGULAR_RANK_1,
-  .SamplingTime = ADC_SAMPLETIME_2CYCLES_5,
-  .SingleDiff   = ADC_SINGLE_ENDED,
-  .OffsetNumber = ADC_OFFSET_NONE,
-};
-
-static void adc_cfg(ADC_HandleTypeDef *hadc, uint32_t channel)
-{
-  adc_chan_cfg.Channel = channel;
-  HAL_ADC_ConfigChannel(hadc, &adc_chan_cfg);
-}
-
-static uint16_t adc_read_channel(ADC_HandleTypeDef *hadc, uint32_t channel)
-{
-  adc_cfg(hadc, channel);
-  HAL_ADC_Start(hadc);
-  HAL_ADC_PollForConversion(hadc, 10);
-  return (uint16_t)HAL_ADC_GetValue(hadc);
-}
 
 // Shared tail for every scan flavor: print a throttled timing line and report
 // any key whose value moved past the dead zone. Operates on g_hall_data in its
@@ -122,14 +98,6 @@ static uint16_t adc_read_channel(ADC_HandleTypeDef *hadc, uint32_t channel)
 // flavors each emit their own line once per second.
 static void hall_finish(const char *label, uint32_t cycles, uint32_t *last_status_tick)
 {
-  uint16_t val_min = 0xFFFF, val_max = 0;
-  for (int a = 0; a < HALL_NUM_ADC; a++)
-    for (int s = 0; s < HALL_SLOTS_PER_ADC; s++)
-    {
-      uint16_t v = g_hall_data[a][s];
-      if (v < val_min) val_min = v;
-      if (v > val_max) val_max = v;
-    }
 
   uint32_t now = HAL_GetTick();
   if (now - *last_status_tick >= 1000)
@@ -143,10 +111,9 @@ static void hall_finish(const char *label, uint32_t cycles, uint32_t *last_statu
     uint32_t free_ram = __get_MSP() - (uint32_t)&_end;
     uint32_t free_kib_whole = free_ram / 1024u;
     uint32_t free_kib_frac  = (free_ram % 1024u) * 10u / 1024u;
-    printf("%-16s: %6lu cycles (%5lu.%03lu us)  min=%4u max=%4u  free=%3lu.%lu KiB\r\n",
+    printf("%-16s: %6lu cycles (%5lu.%03lu us)  free=%3lu.%lu KiB\r\n",
            label, (unsigned long)cycles,
            (unsigned long)(total_ns / 1000u), (unsigned long)(total_ns % 1000u),
-           (unsigned)val_min, (unsigned)val_max,
            (unsigned long)free_kib_whole, (unsigned long)free_kib_frac);
   }
 
@@ -167,101 +134,6 @@ static void hall_finish(const char *label, uint32_t cycles, uint32_t *last_statu
     }
 }
 
-static void cmd_hall_scan_naive_polling(void)
-{
-  static int initialized = 0;
-
-  if (!initialized)
-  {
-    CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
-    DWT->CYCCNT = 0;
-    DWT->CTRL  |= DWT_CTRL_CYCCNTENA_Msk;
-    HAL_GPIO_WritePin(HALL_NEN_GPIO_Port, HALL_NEN_Pin, GPIO_PIN_RESET);
-    HAL_Delay(5);
-    initialized = 1;
-  }
-
-  uint32_t t_start = DWT->CYCCNT;
-  for (int sel = 0; sel < HALL_NUM_SEL; sel++)
-  {
-    HAL_GPIO_WritePin(SEL0_GPIO_Port, SEL0_Pin, (sel & 1) ? GPIO_PIN_SET : GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(SEL1_GPIO_Port, SEL1_Pin, (sel & 2) ? GPIO_PIN_SET : GPIO_PIN_RESET);
-    for (volatile int i = 0; i < MUX_LATENCY_CYCLES; i++) __NOP();
-    g_hall_data[0][sel * HALL_NUM_RANK + 0] = adc_read_channel(&hadc1, ADC_CHANNEL_1);
-    g_hall_data[0][sel * HALL_NUM_RANK + 1] = adc_read_channel(&hadc1, ADC_CHANNEL_2);
-    g_hall_data[1][sel * HALL_NUM_RANK + 0] = adc_read_channel(&hadc2, ADC_CHANNEL_3);
-    g_hall_data[1][sel * HALL_NUM_RANK + 1] = adc_read_channel(&hadc2, ADC_CHANNEL_4);
-    g_hall_data[2][sel * HALL_NUM_RANK + 0] = adc_read_channel(&hadc3, ADC_CHANNEL_12);
-    g_hall_data[2][sel * HALL_NUM_RANK + 1] = adc_read_channel(&hadc3, ADC_CHANNEL_1);
-    g_hall_data[3][sel * HALL_NUM_RANK + 0] = adc_read_channel(&hadc4, ADC_CHANNEL_4);
-    g_hall_data[3][sel * HALL_NUM_RANK + 1] = adc_read_channel(&hadc4, ADC_CHANNEL_5);
-    g_hall_data[4][sel * HALL_NUM_RANK + 0] = adc_read_channel(&hadc5, ADC_CHANNEL_1);
-    g_hall_data[4][sel * HALL_NUM_RANK + 1] = adc_read_channel(&hadc5, ADC_CHANNEL_2);
-  }
-  uint32_t cycles = DWT->CYCCNT - t_start;
-
-  static uint32_t last_status_tick = 0;
-  hall_finish("naive polling   ", cycles, &last_status_tick);
-}
-
-static void cmd_hall_scan_parallel(void)
-{
-  static int initialized = 0;
-
-  if (!initialized)
-  {
-    CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
-    DWT->CYCCNT = 0;
-    DWT->CTRL  |= DWT_CTRL_CYCCNTENA_Msk;
-    HAL_GPIO_WritePin(HALL_NEN_GPIO_Port, HALL_NEN_Pin, GPIO_PIN_RESET);
-    HAL_Delay(5);
-    initialized = 1;
-  }
-
-  uint32_t t_start = DWT->CYCCNT;
-  for (int sel = 0; sel < HALL_NUM_SEL; sel++)
-  {
-    HAL_GPIO_WritePin(SEL0_GPIO_Port, SEL0_Pin, (sel & 1) ? GPIO_PIN_SET : GPIO_PIN_RESET);
-    HAL_GPIO_WritePin(SEL1_GPIO_Port, SEL1_Pin, (sel & 2) ? GPIO_PIN_SET : GPIO_PIN_RESET);
-    for (volatile int i = 0; i < MUX_LATENCY_CYCLES; i++) __NOP();
-    adc_cfg(&hadc1, ADC_CHANNEL_1);
-    adc_cfg(&hadc2, ADC_CHANNEL_3);
-    adc_cfg(&hadc3, ADC_CHANNEL_12);
-    adc_cfg(&hadc4, ADC_CHANNEL_4);
-    adc_cfg(&hadc5, ADC_CHANNEL_1);
-    HAL_ADC_Start(&hadc1); HAL_ADC_Start(&hadc2); HAL_ADC_Start(&hadc3);
-    HAL_ADC_Start(&hadc4); HAL_ADC_Start(&hadc5);
-    HAL_ADC_PollForConversion(&hadc1, 10); HAL_ADC_PollForConversion(&hadc2, 10);
-    HAL_ADC_PollForConversion(&hadc3, 10); HAL_ADC_PollForConversion(&hadc4, 10);
-    HAL_ADC_PollForConversion(&hadc5, 10);
-    g_hall_data[0][sel * HALL_NUM_RANK + 0] = (uint16_t)HAL_ADC_GetValue(&hadc1);
-    g_hall_data[1][sel * HALL_NUM_RANK + 0] = (uint16_t)HAL_ADC_GetValue(&hadc2);
-    g_hall_data[2][sel * HALL_NUM_RANK + 0] = (uint16_t)HAL_ADC_GetValue(&hadc3);
-    g_hall_data[3][sel * HALL_NUM_RANK + 0] = (uint16_t)HAL_ADC_GetValue(&hadc4);
-    g_hall_data[4][sel * HALL_NUM_RANK + 0] = (uint16_t)HAL_ADC_GetValue(&hadc5);
-    adc_cfg(&hadc1, ADC_CHANNEL_2);
-    adc_cfg(&hadc2, ADC_CHANNEL_4);
-    adc_cfg(&hadc3, ADC_CHANNEL_1);
-    adc_cfg(&hadc4, ADC_CHANNEL_5);
-    adc_cfg(&hadc5, ADC_CHANNEL_2);
-    HAL_ADC_Start(&hadc1); HAL_ADC_Start(&hadc2); HAL_ADC_Start(&hadc3);
-    HAL_ADC_Start(&hadc4); HAL_ADC_Start(&hadc5);
-    HAL_ADC_PollForConversion(&hadc1, 10); HAL_ADC_PollForConversion(&hadc2, 10);
-    HAL_ADC_PollForConversion(&hadc3, 10); HAL_ADC_PollForConversion(&hadc4, 10);
-    HAL_ADC_PollForConversion(&hadc5, 10);
-    g_hall_data[0][sel * HALL_NUM_RANK + 1] = (uint16_t)HAL_ADC_GetValue(&hadc1);
-    g_hall_data[1][sel * HALL_NUM_RANK + 1] = (uint16_t)HAL_ADC_GetValue(&hadc2);
-    g_hall_data[2][sel * HALL_NUM_RANK + 1] = (uint16_t)HAL_ADC_GetValue(&hadc3);
-    g_hall_data[3][sel * HALL_NUM_RANK + 1] = (uint16_t)HAL_ADC_GetValue(&hadc4);
-    g_hall_data[4][sel * HALL_NUM_RANK + 1] = (uint16_t)HAL_ADC_GetValue(&hadc5);
-  }
-  uint32_t cycles = DWT->CYCCNT - t_start;
-
-  static uint32_t last_status_tick = 0;
-  hall_finish("parallel polling", cycles, &last_status_tick);
-}
-
-// ---- DMA scan flavor -------------------------------------------------------
 // The .ioc only sets the board layer (pins -> analog, DMA1_Ch1..5 -> ADC1..5,
 // circular periph->mem halfword, MINC, NVIC). It leaves each ADC in single-
 // conversion mode (ScanConvMode disabled, NbrOfConversion=1, DMAContinuousReq
@@ -486,8 +358,6 @@ int main(void)
       printf("FN0: %c\r\n", fn0 ? '1' : '0');
     }
     blink_tick();
-    cmd_hall_scan_naive_polling();
-    cmd_hall_scan_parallel();
     cmd_hall_scan_dma();
   }
   /* USER CODE END 3 */

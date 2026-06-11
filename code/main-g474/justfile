@@ -38,7 +38,7 @@ reset:
 
 # Open UART debug console via STLink VCP (resolves the right /dev/ttyACMx automatically)
 console:
-    tio /dev/serial/by-id/usb-STMicroelectronics_STLINK-V3_*
+    tio -b 921600 /dev/serial/by-id/usb-STMicroelectronics_STLINK-V3_*
 
 # Stream SWO ITM port 0 output (core clock = 16 MHz HSI)
 trace_swo:

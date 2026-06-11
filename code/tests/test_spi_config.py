@@ -106,6 +106,39 @@ class TestSpiParameters(unittest.TestCase):
                     self.assertEqual(polynomial, "X0+X1+X2", f"{board} {instance}: non-default CRCPolynomial")
 
 
+class TestSpiCrcNssPulse(unittest.TestCase):
+    """RM0440: NSS pulse mode (NSSP) must not be enabled together with CRC
+    calculation -- with both set, the SPI BSY flag never clears at the end of
+    a transfer, so HAL_SPI_Transmit/Receive with HAL_MAX_DELAY hangs forever.
+
+    NSSPMode is absent from both boards' IPParameters, so CubeMX falls back
+    to its per-role default when generating MX_SPIx_Init: master with
+    hardware NSS output defaults to SPI_NSS_PULSE_ENABLE, everything else to
+    SPI_NSS_PULSE_DISABLE (as seen in the generated Core/Src/main.c on both
+    boards).
+    """
+
+    def test_no_nss_pulse_with_crc(self):
+        for board, settings in boards().items():
+            for instance, spi in spi_instances(settings).items():
+                with self.subTest(board=board, spi=instance):
+                    if spi.get("CRCCalculation") != "SPI_CRCCALCULATION_ENABLE":
+                        continue
+                    if "NSSPMode" in spi:
+                        nsspmode = spi["NSSPMode"]
+                    else:
+                        master_hard_nss = (
+                            spi.get("Mode") == "SPI_MODE_MASTER"
+                            and spi.get("VirtualNSS") == "VM_NSSHARD"
+                        )
+                        nsspmode = "SPI_NSS_PULSE_ENABLE" if master_hard_nss else "SPI_NSS_PULSE_DISABLE"
+                    self.assertNotEqual(
+                        nsspmode, "SPI_NSS_PULSE_ENABLE",
+                        f"{board} {instance}: NSS pulse mode enabled with CRC enabled "
+                        "(RM0440: invalid combination, hangs HAL_SPI_Transmit)",
+                    )
+
+
 class TestPullups(unittest.TestCase):
     """Pull-up placement per hardware.md: NSS and MISO pulled up on the slave
     (motherboard) side only; SCK/MOSI/MISO/NSS unpulled on the master (wing) side.

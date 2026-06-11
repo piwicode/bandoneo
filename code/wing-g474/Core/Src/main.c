@@ -236,7 +236,7 @@ static void report_hall_changes(uint16_t hall_data[HALL_NUM_ADC][HALL_SLOTS_PER_
       uint16_t last = g_hall_last_reported[a][s];
       int delta = (int)cur - (int)last;
       if (delta < 0) delta = -delta;
-      if (delta >= HALL_DEAD_ZONE)
+      if (last && delta >= HALL_DEAD_ZONE)
       {
         printf(" > dma scan    :  adc=%d sel=%d rank=%d: %4u -> %4u\r\n",
                a, s / HALL_NUM_RANK, s % HALL_NUM_RANK,
@@ -293,11 +293,29 @@ static void keyboard_process(uint16_t hall_data[HALL_NUM_ADC][HALL_SLOTS_PER_ADC
     }
   frame[0] = count;
 
-  // HAL_SPI_Transmit(&hspi1, (uint8_t *)frame, 1 + count, HAL_MAX_DELAY);
+  uint32_t sr_before = hspi1.Instance->SR;
+  uint32_t cr1_before = hspi1.Instance->CR1;
+  HAL_StatusTypeDef spi_status = HAL_SPI_Transmit(&hspi1, (uint8_t *)frame, 1 + count, 500);
+  if (spi_status != HAL_OK)
+    printf("SPI transmit failed: size=%u status=%d error=0x%lx SR_before=0x%lx CR1_before=0x%lx SR=0x%lx CR1=0x%lx\r\n",
+           (unsigned)(1 + count), (int)spi_status, (unsigned long)hspi1.ErrorCode,
+           (unsigned long)sr_before, (unsigned long)cr1_before,
+           (unsigned long)hspi1.Instance->SR, (unsigned long)hspi1.Instance->CR1);
+
+  // HAL_SPI_Transmit leaves SPE set after a successful transfer, but with CRC
+  // enabled the next call's SPI_RESET_CRC (toggling CRCEN) is only valid while
+  // SPE=0 (RM0440). Disable here so each frame starts from a clean state.
+  __HAL_SPI_DISABLE(&hspi1);
+
+  // CRCNEXT is left set (HAL never clears it once the data write races ahead
+  // of the shift register for single-word transfers), so the next transfer
+  // starts with the peripheral expecting to send a CRC instead of data. Clear
+  // it explicitly so each frame starts from a known state.
+  CLEAR_BIT(hspi1.Instance->CR1, SPI_CR1_CRCNEXT);
 
   static uint32_t last_tick = 0;
   uint32_t now = HAL_GetTick();
-  if (now - last_tick >= 100)
+  if (now - last_tick >= 500)
   {
     last_tick = now;
     printf("SPI frame: %u", (unsigned)count);
@@ -601,6 +619,9 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
   console_init(&huart1, USART1_IRQn);
+  printf("SPI1 init: APB2ENR=0x%lx CR1=0x%lx CR2=0x%lx SR=0x%lx\r\n",
+         (unsigned long)RCC->APB2ENR, (unsigned long)SPI1->CR1,
+         (unsigned long)SPI1->CR2, (unsigned long)SPI1->SR);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -1046,7 +1067,7 @@ static void MX_SPI1_Init(void)
   hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_ENABLE;
   hspi1.Init.CRCPolynomial = 7;
   hspi1.Init.CRCLength = SPI_CRC_LENGTH_16BIT;
-  hspi1.Init.NSSPMode = SPI_NSS_PULSE_ENABLE;
+  hspi1.Init.NSSPMode = SPI_NSS_PULSE_DISABLE;
   if (HAL_SPI_Init(&hspi1) != HAL_OK)
   {
     Error_Handler();

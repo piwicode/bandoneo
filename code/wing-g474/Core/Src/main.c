@@ -137,8 +137,7 @@ static void hall_finish(const char *label, uint32_t cycles, uint32_t *last_statu
 // The .ioc only sets the board layer (pins -> analog, DMA1_Ch1..5 -> ADC1..5,
 // circular periph->mem halfword, MINC, NVIC). It leaves each ADC in single-
 // conversion mode (ScanConvMode disabled, NbrOfConversion=1, DMAContinuousReq
-// disabled). We compensate here in code so this flavor can live side by side
-// with the polling flavors, which need the ADCs back in single-conversion mode.
+// disabled). We switch each ADC to a 2-rank scan once at startup.
 
 // Switch one ADC to a 2-rank regular scan feeding the (circular) DMA.
 static void adc_set_scan2(ADC_HandleTypeDef *hadc, uint32_t chA, uint32_t chB)
@@ -157,17 +156,6 @@ static void adc_set_scan2(ADC_HandleTypeDef *hadc, uint32_t chA, uint32_t chB)
   c.Rank = ADC_REGULAR_RANK_2; c.Channel = chB; HAL_ADC_ConfigChannel(hadc, &c);
 }
 
-// Restore the IOC default (single conversion) so the polling flavors still work.
-static void adc_set_single(ADC_HandleTypeDef *hadc)
-{
-  HAL_ADC_Stop(hadc);
-  hadc->Init.ScanConvMode          = ADC_SCAN_DISABLE;
-  hadc->Init.NbrOfConversion       = 1;
-  hadc->Init.DMAContinuousRequests = DISABLE;
-  HAL_ADC_Init(hadc);
-  // The polling flavors re-select rank-1's channel themselves via adc_cfg().
-}
-
 static void cmd_hall_scan_dma(void)
 {
   static int initialized = 0;
@@ -182,12 +170,10 @@ static void cmd_hall_scan_dma(void)
     DWT->CTRL  |= DWT_CTRL_CYCCNTENA_Msk;
     HAL_GPIO_WritePin(HALL_NEN_GPIO_Port, HALL_NEN_Pin, GPIO_PIN_RESET);
     HAL_Delay(5);
+    for (int a = 0; a < 5; a++)
+      adc_set_scan2(adcs[a], chA[a], chB[a]);
     initialized = 1;
   }
-
-  // Reconfigure for the DMA scan (untimed: not part of the measured work).
-  for (int a = 0; a < 5; a++)
-    adc_set_scan2(adcs[a], chA[a], chB[a]);
 
   uint32_t t_start = DWT->CYCCNT;
   for (int sel = 0; sel < HALL_NUM_SEL; sel++)
@@ -224,10 +210,6 @@ static void cmd_hall_scan_dma(void)
 
   // DMA wrote straight into g_hall_data in its [adc][sel*rank + rank] layout,
   // so no de-interleave step is needed.
-
-  // Leave the ADCs as the other flavors expect them.
-  for (int a = 0; a < 5; a++)
-    adc_set_single(adcs[a]);
 
   static uint32_t last_status_tick = 0;
   hall_finish("dma scan        ", cycles, &last_status_tick);

@@ -87,6 +87,16 @@ static void MX_USART1_UART_Init(void);
 // Settling delay after switching the SEL mux, in spin-loop iterations.
 #define MUX_LATENCY_CYCLES 160
 
+// Number of hall sensor slots == number of physical keys on this wing.
+#define KEYBOARD_NUM_KEYS (HALL_NUM_ADC * HALL_SLOTS_PER_ADC)
+
+// Hysteresis thresholds for keyboard_process(): readings fall as a key is
+// pressed (toward HALL_COLOR_MIN) and rise back as it is released (toward
+// HALL_COLOR_HIGH). release_threshold > press_threshold gives a dead band
+// around HALL_COLOR_LOW so a key resting near the trip point doesn't chatter.
+#define KEYBOARD_PRESS_THRESHOLD   1900
+#define KEYBOARD_RELEASE_THRESHOLD 2100
+
 // Layout matches the per-ADC DMA buffer: [adc][sel*HALL_NUM_RANK + rank].
 static uint16_t g_hall_data[HALL_NUM_ADC][HALL_SLOTS_PER_ADC];
 static uint16_t g_hall_last_reported[HALL_NUM_ADC][HALL_SLOTS_PER_ADC];
@@ -236,6 +246,67 @@ static void report_hall_changes(uint16_t hall_data[HALL_NUM_ADC][HALL_SLOTS_PER_
     }
 }
 
+// Maps flattened key index (adc * HALL_SLOTS_PER_ADC + slot) to MIDI note
+// number. Placeholder: consecutive notes starting at C2 (36); the real
+// per-layout mapping will replace this once the key layout is finalized.
+// Consecutive notes starting at C2 (36).
+static const uint8_t g_key_midi_note[KEYBOARD_NUM_KEYS] = {
+  36, 37, 38, 39, 40, 41, 42, 43,
+  44, 45, 46, 47, 48, 49, 50, 51,
+  52, 53, 54, 55, 56, 57, 58, 59,
+  60, 61, 62, 63, 64, 65, 66, 67,
+  68, 69, 70, 71, 72, 73, 0, 0,
+};
+
+// Latched press state per key, for the press/release hysteresis below.
+static uint8_t g_key_pressed[KEYBOARD_NUM_KEYS];
+
+// Scans hall_data for key press/release transitions (a key presses when its
+// reading drops to/below press_threshold, and releases when it rises
+// to/above release_threshold), then sends an SPI frame listing the currently
+// pressed keys as: key count, followed by one MIDI note number per pressed
+// key.
+static void keyboard_process(uint16_t hall_data[HALL_NUM_ADC][HALL_SLOTS_PER_ADC],
+                              uint16_t press_threshold, uint16_t release_threshold)
+{
+  uint16_t frame[1 + KEYBOARD_NUM_KEYS];
+  uint16_t count = 0;
+
+  for (int a = 0; a < HALL_NUM_ADC; a++)
+    for (int s = 0; s < HALL_SLOTS_PER_ADC; s++)
+    {
+      // A slot whose since-boot minimum is still 0 has never reported a real
+      // reading (unpopulated/unconnected channel) and isn't a physical key.
+      if (g_hall_min[a][s] == 0)
+        continue;
+
+      int key = a * HALL_SLOTS_PER_ADC + s;
+      uint16_t val = hall_data[a][s];
+
+      if (!g_key_pressed[key] && val <= press_threshold)
+        g_key_pressed[key] = 1;
+      else if (g_key_pressed[key] && val >= release_threshold)
+        g_key_pressed[key] = 0;
+
+      if (g_key_pressed[key])
+        frame[1 + count++] = g_key_midi_note[key];
+    }
+  frame[0] = count;
+
+  // HAL_SPI_Transmit(&hspi1, (uint8_t *)frame, 1 + count, HAL_MAX_DELAY);
+
+  static uint32_t last_tick = 0;
+  uint32_t now = HAL_GetTick();
+  if (now - last_tick >= 100)
+  {
+    last_tick = now;
+    printf("SPI frame: %u", (unsigned)count);
+    for (int i = 0; i < count; i++)
+      printf(" %u", (unsigned)frame[1 + i]);
+    printf("\r\n");
+  }
+}
+
 static uint8_t read_wing_id(void)
 {
   uint8_t id = 0;
@@ -258,11 +329,11 @@ static volatile blink_state_t g_blink;
 // Toggled by the "show_keys" console command; main loop prints g_hall_data
 // as a table at SHOW_KEYS_PERIOD_MS while set.
 #define SHOW_KEYS_PERIOD_MS 50
-static volatile int g_show_keys = 1;
+static volatile int g_show_keys = 0;
 
 // Toggled by the "show_stats" console command; adds min/max/stddev tables
 // below the live readings while g_show_keys is also set.
-static volatile int g_show_stats = 1;
+static volatile int g_show_stats = 0;
 
 // Background color for one hall reading: no background at/above
 // HALL_COLOR_HIGH, fading from blue (at HALL_COLOR_HIGH) to orange (at/below
@@ -474,12 +545,12 @@ int console_execute(int argc, const char * const *argv)
       g_blink.led_on = 0;
     }
   }
-  else if (strcmp(argv[0], "show_keys") == 0)
+  else if (strcmp(argv[0], "key") == 0)
   {
     g_show_keys = !g_show_keys;
     printf("show_keys: %s\r\n", g_show_keys ? "on" : "off");
   }
-  else if (strcmp(argv[0], "show_stats") == 0)
+  else if (strcmp(argv[0], "stat") == 0)
   {
     g_show_stats = !g_show_stats;
     printf("show_stats: %s\r\n", g_show_stats ? "on" : "off");
@@ -554,6 +625,7 @@ int main(void)
 
     hall_keyboard_scan(g_hall_data);
     report_hall_stats(g_hall_data);
+    keyboard_process(g_hall_data, KEYBOARD_PRESS_THRESHOLD, KEYBOARD_RELEASE_THRESHOLD);
 
     poll_count++;
     uint32_t now = HAL_GetTick();

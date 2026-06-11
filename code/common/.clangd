@@ -1,0 +1,6 @@
+# Shared sources (console, etc.) are not under any board build directory, so
+# clangd's upward search for compile_commands.json finds nothing. Point it at
+# the main-g474 build DB, which compiles these files with the correct
+# -DSTM32G474xx and HAL include paths.
+CompileFlags:
+  CompilationDatabase: ../main-g474

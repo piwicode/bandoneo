@@ -5,7 +5,7 @@
 import unittest
 from pathlib import Path
 
-from ioc_parser import parse_ioc, spi_instances, spi_pins
+from ioc_parser import parse_ioc, spi_instances, spi_pins, dma_request
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
@@ -136,6 +136,65 @@ class TestSpiCrcNssPulse(unittest.TestCase):
                         nsspmode, "SPI_NSS_PULSE_ENABLE",
                         f"{board} {instance}: NSS pulse mode enabled with CRC enabled "
                         "(RM0440: invalid combination, hangs HAL_SPI_Transmit)",
+                    )
+
+
+class TestSpiInterruptEnabled(unittest.TestCase):
+    """Slaves receive wing frames with interrupt-driven HAL_SPI_Receive_IT (re-armed
+    in the RxCplt/Error callbacks, see main-g474 Core/Src/main.c), so every SPI in
+    slave mode must have its global interrupt enabled in the .ioc NVIC -- otherwise
+    the generated SPIx_IRQHandler / NVIC enable are absent and no frame ever
+    completes. Masters transmit with the blocking HAL_SPI_Transmit and don't need it.
+    """
+
+    def test_slave_spi_interrupts_enabled(self):
+        for board, settings in boards().items():
+            for instance, spi in spi_instances(settings).items():
+                if spi["Mode"] != "SPI_MODE_SLAVE":
+                    continue
+                with self.subTest(board=board, spi=instance):
+                    # CubeMX encodes the NVIC line as "<enabled>:<preempt>:<sub>:...".
+                    nvic = settings.get(f"NVIC.{instance}_IRQn")
+                    self.assertIsNotNone(nvic, f"{instance} global interrupt missing from NVIC")
+                    self.assertTrue(
+                        nvic.startswith("true"),
+                        f"{instance} global interrupt not enabled in NVIC (interrupt-driven receive needs it)",
+                    )
+
+
+class TestSpiSlaveDma(unittest.TestCase):
+    """Slaves store incoming frames with HAL_SPI_Receive_DMA (re-armed per frame,
+    see main-g474 Core/Src/main.c), so every SPI in slave mode needs an SPIx_RX DMA
+    request: peripheral->memory, memory-incrementing, 16-bit (halfword) on both
+    ends, and in NORMAL mode -- the per-frame re-arm and CRC check rely on the
+    transfer completing, not a circular buffer wrapping. The channel's interrupt
+    must also be enabled (it delivers transfer-complete and reads the CRC word).
+    Masters transmit with the blocking HAL_SPI_Transmit and need no DMA.
+    """
+
+    def test_slave_rx_dma_configured(self):
+        for board, settings in boards().items():
+            for instance, spi in spi_instances(settings).items():
+                if spi["Mode"] != "SPI_MODE_SLAVE":
+                    continue
+                with self.subTest(board=board, spi=instance):
+                    dma = dma_request(settings, f"{instance}_RX")
+                    self.assertIsNotNone(dma, f"{instance}_RX DMA request not configured in .ioc")
+                    self.assertEqual(dma.get("Direction"), "DMA_PERIPH_TO_MEMORY")
+                    self.assertEqual(dma.get("MemInc"), "DMA_MINC_ENABLE")
+                    self.assertEqual(dma.get("MemDataAlignment"), "DMA_MDATAALIGN_HALFWORD")
+                    self.assertEqual(dma.get("PeriphDataAlignment"), "DMA_PDATAALIGN_HALFWORD")
+                    self.assertEqual(
+                        dma.get("Mode"), "DMA_NORMAL",
+                        f"{instance}_RX DMA must be NORMAL mode (per-frame re-arm), not circular",
+                    )
+                    channel = dma.get("Instance")
+                    self.assertIsNotNone(channel, f"{instance}_RX DMA has no channel Instance")
+                    nvic = settings.get(f"NVIC.{channel}_IRQn")
+                    self.assertIsNotNone(nvic, f"{channel} interrupt missing from NVIC")
+                    self.assertTrue(
+                        nvic.startswith("true"),
+                        f"{channel} interrupt (for {instance}_RX DMA completion) not enabled in NVIC",
                     )
 
 

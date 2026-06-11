@@ -36,11 +36,22 @@ void usb_app_task(void)
 
 void usb_app_midi_test_note(uint8_t note)
 {
+  usb_app_midi_note_on(note, 100);
+  usb_app_midi_note_off(note);
+}
+
+void usb_app_midi_note_on(uint8_t note, uint8_t velocity)
+{
   uint8_t const cable = 0, channel = 0;
-  uint8_t note_on[3]  = { 0x90 | channel, note, 100 };
-  uint8_t note_off[3] = { 0x80 | channel, note, 0 };
-  tud_midi_stream_write(cable, note_on, 3);
-  tud_midi_stream_write(cable, note_off, 3);
+  uint8_t msg[3] = { 0x90 | channel, note, velocity };
+  tud_midi_stream_write(cable, msg, 3);
+}
+
+void usb_app_midi_note_off(uint8_t note)
+{
+  uint8_t const cable = 0, channel = 0;
+  uint8_t msg[3] = { 0x80 | channel, note, 0 };
+  tud_midi_stream_write(cable, msg, 3);
 }
 
 /* USB interrupt handlers (override the weak defaults from the startup file) */

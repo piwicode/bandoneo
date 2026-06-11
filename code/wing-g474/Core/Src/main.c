@@ -78,6 +78,8 @@ static void MX_USART1_UART_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+static uint8_t read_wing_id(void);
+
 #define HALL_NUM_SEL   4
 #define HALL_NUM_ADC   5
 #define HALL_NUM_RANK  2
@@ -89,13 +91,6 @@ static void MX_USART1_UART_Init(void);
 
 // Number of hall sensor slots == number of physical keys on this wing.
 #define KEYBOARD_NUM_KEYS (HALL_NUM_ADC * HALL_SLOTS_PER_ADC)
-
-// Hysteresis thresholds for keyboard_process(): readings fall as a key is
-// pressed (toward HALL_COLOR_MIN) and rise back as it is released (toward
-// HALL_COLOR_HIGH). release_threshold > press_threshold gives a dead band
-// around HALL_COLOR_LOW so a key resting near the trip point doesn't chatter.
-#define KEYBOARD_PRESS_THRESHOLD   1900
-#define KEYBOARD_RELEASE_THRESHOLD 2100
 
 // Layout matches the per-ADC DMA buffer: [adc][sel*HALL_NUM_RANK + rank].
 static uint16_t g_hall_data[HALL_NUM_ADC][HALL_SLOTS_PER_ADC];
@@ -246,59 +241,26 @@ static void report_hall_changes(uint16_t hall_data[HALL_NUM_ADC][HALL_SLOTS_PER_
     }
 }
 
-// Maps flattened key index (adc * HALL_SLOTS_PER_ADC + slot) to MIDI note
-// number. Placeholder: consecutive notes starting at C2 (36); the real
-// per-layout mapping will replace this once the key layout is finalized.
-// Consecutive notes starting at C2 (36).
-static const uint8_t g_key_midi_note[KEYBOARD_NUM_KEYS] = {
-  36, 37, 38, 39, 40, 41, 42, 43,
-  44, 45, 46, 47, 48, 49, 50, 51,
-  52, 53, 54, 55, 56, 57, 58, 59,
-  60, 61, 62, 63, 64, 65, 66, 67,
-  68, 69, 70, 71, 72, 73, 0, 0,
-};
-
-// Latched press state per key, for the press/release hysteresis below.
-static uint8_t g_key_pressed[KEYBOARD_NUM_KEYS];
-
-// Scans hall_data for key press/release transitions (a key presses when its
-// reading drops to/below press_threshold, and releases when it rises
-// to/above release_threshold), then sends an SPI frame listing the currently
-// pressed keys as: key count, followed by one MIDI note number per pressed
-// key.
-static void keyboard_process(uint16_t hall_data[HALL_NUM_ADC][HALL_SLOTS_PER_ADC],
-                              uint16_t press_threshold, uint16_t release_threshold)
+// Builds and sends one full keyboard frame over the SPI link: word 0 is this
+// wing's id, words 1..KEYBOARD_NUM_KEYS are the raw hall measurement for each
+// key in flattened order (adc * HALL_SLOTS_PER_ADC + slot). The frame carries
+// the full absolute keyboard state every cycle, so a dropped (CRC-failed)
+// frame just leaves the receiver at its previous state until the next arrives.
+static void keyboard_process(uint16_t hall_data[HALL_NUM_ADC][HALL_SLOTS_PER_ADC])
 {
   uint16_t frame[1 + KEYBOARD_NUM_KEYS];
-  uint16_t count = 0;
 
+  frame[0] = read_wing_id();
   for (int a = 0; a < HALL_NUM_ADC; a++)
     for (int s = 0; s < HALL_SLOTS_PER_ADC; s++)
-    {
-      // A slot whose since-boot minimum is still 0 has never reported a real
-      // reading (unpopulated/unconnected channel) and isn't a physical key.
-      if (g_hall_min[a][s] == 0)
-        continue;
-
-      int key = a * HALL_SLOTS_PER_ADC + s;
-      uint16_t val = hall_data[a][s];
-
-      if (!g_key_pressed[key] && val <= press_threshold)
-        g_key_pressed[key] = 1;
-      else if (g_key_pressed[key] && val >= release_threshold)
-        g_key_pressed[key] = 0;
-
-      if (g_key_pressed[key])
-        frame[1 + count++] = g_key_midi_note[key];
-    }
-  frame[0] = count;
+      frame[1 + a * HALL_SLOTS_PER_ADC + s] = hall_data[a][s];
 
   uint32_t sr_before = hspi1.Instance->SR;
   uint32_t cr1_before = hspi1.Instance->CR1;
-  HAL_StatusTypeDef spi_status = HAL_SPI_Transmit(&hspi1, (uint8_t *)frame, 1 + count, 500);
+  HAL_StatusTypeDef spi_status = HAL_SPI_Transmit(&hspi1, (uint8_t *)frame, 1 + KEYBOARD_NUM_KEYS, 500);
   if (spi_status != HAL_OK)
     printf("SPI transmit failed: size=%u status=%d error=0x%lx SR_before=0x%lx CR1_before=0x%lx SR=0x%lx CR1=0x%lx\r\n",
-           (unsigned)(1 + count), (int)spi_status, (unsigned long)hspi1.ErrorCode,
+           (unsigned)(1 + KEYBOARD_NUM_KEYS), (int)spi_status, (unsigned long)hspi1.ErrorCode,
            (unsigned long)sr_before, (unsigned long)cr1_before,
            (unsigned long)hspi1.Instance->SR, (unsigned long)hspi1.Instance->CR1);
 
@@ -318,19 +280,26 @@ static void keyboard_process(uint16_t hall_data[HALL_NUM_ADC][HALL_SLOTS_PER_ADC
   if (now - last_tick >= 500)
   {
     last_tick = now;
-    printf("SPI frame: %u", (unsigned)count);
-    for (int i = 0; i < count; i++)
+    printf("SPI frame: wing=%u", (unsigned)frame[0]);
+    for (int i = 0; i < KEYBOARD_NUM_KEYS; i++)
       printf(" %u", (unsigned)frame[1 + i]);
     printf("\r\n");
   }
 }
 
+// The wing id is strapped on fixed ID0..ID2 pins, so read it once on first
+// use and cache it forever.
 static uint8_t read_wing_id(void)
 {
-  uint8_t id = 0;
-  if (HAL_GPIO_ReadPin(ID0_GPIO_Port, ID0_Pin) == GPIO_PIN_SET) id |= 1;
-  if (HAL_GPIO_ReadPin(ID1_GPIO_Port, ID1_Pin) == GPIO_PIN_SET) id |= 2;
-  if (HAL_GPIO_ReadPin(ID2_GPIO_Port, ID2_Pin) == GPIO_PIN_SET) id |= 4;
+  static int cached = 0;
+  static uint8_t id = 0;
+  if (!cached)
+  {
+    if (HAL_GPIO_ReadPin(ID0_GPIO_Port, ID0_Pin) == GPIO_PIN_SET) id |= 1;
+    if (HAL_GPIO_ReadPin(ID1_GPIO_Port, ID1_Pin) == GPIO_PIN_SET) id |= 2;
+    if (HAL_GPIO_ReadPin(ID2_GPIO_Port, ID2_Pin) == GPIO_PIN_SET) id |= 4;
+    cached = 1;
+  }
   return id;
 }
 
@@ -646,7 +615,7 @@ int main(void)
 
     hall_keyboard_scan(g_hall_data);
     report_hall_stats(g_hall_data);
-    keyboard_process(g_hall_data, KEYBOARD_PRESS_THRESHOLD, KEYBOARD_RELEASE_THRESHOLD);
+    keyboard_process(g_hall_data);
 
     poll_count++;
     uint32_t now = HAL_GetTick();
@@ -1061,7 +1030,7 @@ static void MX_SPI1_Init(void)
   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi1.Init.NSS = SPI_NSS_HARD_OUTPUT;
-  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_16;
   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_ENABLE;

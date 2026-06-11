@@ -30,6 +30,21 @@ def spi_instances(settings: dict) -> dict[str, dict[str, str]]:
     return instances
 
 
+def dma_request(settings: dict, name: str) -> dict[str, str] | None:
+    """Return {field: value} for the DMA request block "Dma.<name>.<n>.*", or None.
+
+    e.g. dma_request(settings, "SPI1_RX") -> {"Instance": "DMA1_Channel1",
+    "Direction": "DMA_PERIPH_TO_MEMORY", "Mode": "DMA_NORMAL", ...}.
+    """
+    block_re = re.compile(rf"^Dma\.{re.escape(name)}\.\d+\.(.+)$")
+    fields = {}
+    for key, value in settings.items():
+        m = block_re.match(key)
+        if m:
+            fields[m.group(1)] = value
+    return fields or None
+
+
 def spi_pins(settings: dict, spi: str) -> dict[str, str]:
     """Map signal function -> GPIO pin name for one SPI instance.
 

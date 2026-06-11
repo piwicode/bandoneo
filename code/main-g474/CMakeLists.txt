@@ -47,6 +47,16 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
     ../third_party/microrl/src/microrl.c
     ../common/console/console.c
+    usb/usb_descriptors.c
+    usb/usb_app.c
+    # TinyUSB device stack with MIDI on the STM32 fsdev port
+    ../third_party/tinyusb/src/tusb.c
+    ../third_party/tinyusb/src/common/tusb_fifo.c
+    ../third_party/tinyusb/src/device/usbd.c
+    ../third_party/tinyusb/src/device/usbd_control.c
+    ../third_party/tinyusb/src/class/midi/midi_device.c
+    ../third_party/tinyusb/src/portable/st/stm32_fsdev/fsdev_common.c
+    ../third_party/tinyusb/src/portable/st/stm32_fsdev/dcd_stm32_fsdev.c
 )
 
 # Force include our config.h for microrl.c (overrides third-party config.h)
@@ -61,11 +71,14 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined include paths
     ../third_party/microrl/src
     ../common/console
+    usb
+    ../third_party/tinyusb/src
 )
 
 # Add project symbols (macros)
 target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined symbols
+    CFG_TUSB_MCU=OPT_MCU_STM32G4
 )
 
 # Remove wrong libob.a library dependency when using cpp files

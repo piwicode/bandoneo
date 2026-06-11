@@ -1,0 +1,5 @@
+default: test
+
+# Run all hardware/firmware consistency tests
+test:
+    python3 -m unittest discover -s . -p "test_*.py" -v

@@ -46,6 +46,29 @@ Each wing is powered directly from the motherboard's 3.3 V rail through pins 1 a
 - **NRST** is driven open-drain by the motherboard MCU through a BAT54C steering diode to 3.3 V (U53 main reset, U54 wing reset). The wing MCU's internal NRST pull-up provides idle-high. The open-drain topology means the motherboard can never source current into a wing that is somehow held in reset by another agent (e.g., a programmer connected to a wing).
 - **READY** is a passive input on the motherboard with the internal pull-down enabled. The wing drives the line actively high once its firmware has initialised. If a wing is absent, unprogrammed, or still booting, the pull-down resolves the line to "not ready" and the motherboard simply doesn't poll that wing — no external resistor needed.
 
+## SPI Bus Configuration: Wing Master ↔ Main Slave
+
+The motherboard receives sensor data from each wing over a dedicated full-duplex SPI bus. Each wing acts as SPI master; the motherboard acts as slave. The following table details the pin configuration for each SPI signal:
+
+| SPI Signal | Master (Wing) | Slave (Motherboard) | Pins |
+|---|---|---|---|
+| **NSS** (chip select) | Output, push-pull, no pull-up | Input, pull-up ⬆️ | PA4 (SPI1), PF0 (SPI2) |
+| **SCK** (clock) | Output, push-pull, no pull-up | Input, no pull-up | PA5 (SPI1), PF1 (SPI2) |
+| **MOSI** (master→slave) | Output, push-pull, no pull-up | Input, no pull-up | PA7 (SPI1), PB15 (SPI2) |
+| **MISO** (slave→master) | (not used by master) | Output, pull-up ⬆️ | PA6 (SPI1), PB14 (SPI2) |
+
+**Pull-up Defensive Design:**
+
+- **NSS pull-up on slave side** ⬆️ — Prevents NSS from floating during wing boot; ensures slave remains deselected until master is ready. The master actively drives NSS both high (idle) and low (selected), so the slave's pull-up provides passive safety without creating contention.
+
+- **MISO pull-up on slave side** ⬆️ — Keeps MISO at a defined HIGH state when slave is not selected (NSS high). Without the pull-up, MISO would float, causing excessive power draw in CMOS input buffers and potential EMI. During active transactions, the selected wing slave drives MISO with data; the pull-up is passively overridden.
+
+- **No pull-ups on master outputs** — NSS, SCK, and MOSI are driven as push-pull outputs on the master side. They actively control the bus and do not require pull-ups for proper operation on a dedicated single-slave board-level design.
+
+**Internal Pull-up Implementation:** STM32 GPIO pull-up/pull-down settings apply even when pins are configured as SPI alternate functions. Internal pull-ups (40–50 kΩ typical) are sufficient for on-board traces and eliminate the need for external resistors. The pull-ups automatically release when the SPI peripheral actively drives the pins.
+
+This configuration prevents accidental slave activation, eliminates floating bus states during boot, and follows industry best practice: [Bare-Metal STM32: Setting Up And Using SPI](https://hackaday.com/2022/10/24/bare-metal-stm32-setting-up-and-using-spi/), [STM32 GPIO Alternate Mode Pull-up & Pull-down Function](https://community.st.com/t5/stm32-mcus-products/gpio-alternate-mode-pull-up-amp-pull-down-function/td-p/707864), [ST Microelectronics AN5543: Guidelines for Enhanced SPI Communication on STM32 MCUs](https://www.st.com/resource/en/application_note/an5543-guidelines-for-enhanced-spi-communication-on-stm32-mcus-and-mpus-stmicroelectronics.pdf), and [Can Pull-up Resistors Be Used on SPI Lines?](https://resources.pcb.cadence.com/blog/can-pull-up-resistors-be-used-on-spi-lines).
+
 **Wing-port ESD.** The SRV05-4 arrays at the wing connectors (TV1/TV2 left, TV3/TV4 right) tie pin 5 to the motherboard's 3.3 V rail. Since this is the same rail that powers the wings, ESD steering currents stay in a single power domain.
 
 ## Wing Bus Connector

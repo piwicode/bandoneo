@@ -5,7 +5,7 @@
 With wireless dropped (see [requirements.md](requirements.md)), the motherboard only needs:
 
 - USB-FS device controller (USB-MIDI),
-- Two independent SPI masters — one full-duplex bus per wing, each with its own NSS,
+- Two independent SPI slave receivers — one full-duplex bus per wing, each with its own NSS input,
 - 2× ADC channels for the spring-blade push/pull hall sensors (see [hardware.md](hardware.md) §"Push/Pull Sensor"),
 - 2× ADC channels for the expression and sustain pedals,
 - ~20 GPIOs for status LEDs, presence-sense contacts, function buttons, and the hall-bank power gate.
@@ -14,7 +14,7 @@ The **STM32G474CBT6** (LQFP48) is the choice — and the same part runs on both 
 
 - **Single SKU across all three boards.** One toolchain, one flash procedure, one decoupling pattern (documented in [hardware.md](hardware.md)) for motherboard and both wings. Consolidating to a single STM32 part across the three boards removes a class of bring-up and supply risk.
 - **Crystal-less USB-FS device.** G474 uses HSI48 with the Clock Recovery System (CRS), so USB enumerates without an external HSE crystal — fewer parts, smaller layout, no crystal-load-cap tuning. There is no external PHY and no companion MCU.
-- **Two independent SPI peripherals.** SPI1 and SPI2 each serve one wing; no shared-bus arbitration, no NSS-tristate gymnastics — see "Internal Bus" below.
+- **Two independent SPI peripherals.** SPI1 and SPI2 operate as slaves, one per wing; no shared-bus arbitration, no NSS-tristate gymnastics — see "Internal Bus" below.
 - **Headroom.** Cortex-M4F at 170 MHz with 128 KB flash / 128 KB RAM is comfortably over-spec for the USB-MIDI workload, leaving margin for future on-device processing (note-on smoothing, gesture recognition, expression curves).
 - **No RF, no antenna, no module certification.** Wireless is out (see [requirements.md](requirements.md)), so no module premium is paid.
 
@@ -28,13 +28,13 @@ Each wing board connects to the motherboard over its **own dedicated full-duplex
 |---|---|---|
 | 1  | VCC (3.3 V from motherboard) | main → wing |
 | 2  | READY | wing → main |
-| 3  | SPI_NSS | main → wing |
+| 3  | SPI_NSS | wing → main (master-driven chip select) |
 | 4  | NRST | main → wing (open-drain via BAT54C) |
-| 5  | SPI_SCK | main → wing |
+| 5  | SPI_SCK | wing → main (master-driven clock) |
 | 6  | GND | — |
-| 7  | SPI_MISO | wing → main |
+| 7  | SPI_MISO | main → wing (slave response, if needed) |
 | 8  | GND | — |
-| 9  | SPI_MOSI | main → wing |
+| 9  | SPI_MOSI | wing → main (master data out, sensor frame) |
 | 10 | GND | — |
 | 11 | BOOT0 | main → wing |
 | 12 | VCC (second power return) | main → wing |
@@ -47,12 +47,13 @@ Three GND returns (pins 6, 8, 10) interleaved with signals; two VCC pins (1 and 
 
 Each SPI transaction carries a wing identification code, a complete raw keyboard state frame, and a checksum. The wing ID encodes the keyboard layout (e.g. Rheinische Lage, Einheitsgriff), so the motherboard applies the correct key-to-note mapping at runtime — the same firmware supports multiple layouts without recompilation.
 
-Motherboard is master, wing is slave. The master initiates each cycle:
+**Wing is master, motherboard is slave.** Each wing drives its own SPI bus and initiates transactions at 1 kHz:
 
-- Master → slave: `1 × 16 bits` — request ID (`0x0001`)
-- Slave → master: `1 × 16 bits` — board identifier + `40 × 16 bits` — sample values
+- Wing master → motherboard slave: `1 × 16 bits` — board identifier (wing layout code) + `40 × 16 bits` — sensor sample values + `1 × 16 bits` — CRC-16 checksum
 
-40 sample slots match the largest wing (WingRight, 5 × 74HC4052 × 8 = 40 channels; WingLeft uses 32 and pads the rest). 1 kHz polling → **672 kbit/s per bus**, well under the STM32G474 SPI ceiling. Because each wing has its own peripheral, the two transactions can run concurrently rather than serialised.
+40 sample slots match the largest wing (WingRight, 5 × 74HC4052 × 8 = 40 channels; WingLeft uses 32 and pads the rest). 1 kHz polling → **(1 + 40 + 1) × 16 bits = 832 bits per frame → 832 kbit/s per bus**, well under the STM32G474 SPI ceiling (85 MBits/s maximum). Because each wing has its own dedicated bus and SPI peripheral, the two wings transmit concurrently rather than serialised. The motherboard remains passive and synchronized by the wings' clock, receiving sensor data pushed at the wings' scan rate.
+
+**SPI Slave NSS Configuration:** The motherboard's SPI1 and SPI2 NSS pins (PA4, PF0) are configured as **hard input with internal pull-up**. The pull-up ensures NSS idles HIGH (not selected) even if the wing master is not yet initialized or loses power. This prevents floating NSS during wing boot from being misinterpreted as an accidental low (selected) state. The wing master actively drives NSS both low (during transaction) and high (idle), so the pull-up provides a defensive safety margin without creating contention.
 
 ## System Power
 

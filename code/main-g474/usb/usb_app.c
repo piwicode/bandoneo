@@ -54,6 +54,13 @@ void usb_app_midi_note_off(uint8_t note)
   tud_midi_stream_write(cable, msg, 3);
 }
 
+void usb_app_midi_control_change(uint8_t controller, uint8_t value)
+{
+  uint8_t const cable = 0, channel = 0;
+  uint8_t msg[3] = { 0xB0 | channel, controller, value };
+  tud_midi_stream_write(cable, msg, 3);
+}
+
 /* USB interrupt handlers (override the weak defaults from the startup file) */
 void USB_HP_IRQHandler(void)
 {

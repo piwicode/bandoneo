@@ -181,6 +181,39 @@ static void bellows_update(uint32_t hall_total)
   }
 }
 
+/* CC#11 (Expression) hysteresis, in the same 0..1024 units as
+ * g_bellow_intensity: only resent once intensity has moved by at least this
+ * much, so sensor noise doesn't flood the link with near-identical CCs. */
+#define BELLOWS_CC_HYSTERESIS 64
+
+/* Caps how often CC#11 is sent, independent of the hysteresis check, so a
+ * fast-moving bellows can't flood the link beyond what a host needs. */
+#define BELLOWS_CC_PERIOD_MS (1000 / 100) /* 100 Hz */
+
+/* Sends CC#11 (Expression) from g_bellow_intensity, scaled to 0..127, when it
+ * has moved by at least BELLOWS_CC_HYSTERESIS since the last send (or on the
+ * first call) and at most every BELLOWS_CC_PERIOD_MS. Call once per main loop
+ * iteration after bellows_update(). */
+static void bellows_send_cc(void)
+{
+  static uint16_t last_intensity;
+  static uint8_t have_last;
+  static uint32_t last_tick;
+
+  uint32_t now = HAL_GetTick();
+  if (have_last && (now - last_tick) < BELLOWS_CC_PERIOD_MS) return;
+
+  uint16_t intensity = g_bellow_intensity;
+  uint16_t delta = intensity > last_intensity ? intensity - last_intensity : last_intensity - intensity;
+  if (!have_last || delta >= BELLOWS_CC_HYSTERESIS)
+  {
+    last_intensity = intensity;
+    last_tick = now;
+    have_last = 1;
+    usb_app_midi_control_change(11, (uint8_t)((intensity * 127) / 1024));
+  }
+}
+
 typedef struct
 {
   SPI_HandleTypeDef *hspi;
@@ -566,6 +599,7 @@ int main(void)
       for (int i = 0; i < 2; i++)
         bus_bellows_changed(&g_bus[i]);
     }
+    bellows_send_cc();
     uint32_t hall_total_delta = hall_total > hall_total_prev ? hall_total - hall_total_prev : hall_total_prev - hall_total;
     if (hall_total_delta > 16)
     {

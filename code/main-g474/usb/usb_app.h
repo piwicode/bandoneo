@@ -27,6 +27,9 @@ void usb_app_midi_test_note(uint8_t note);
 void usb_app_midi_note_on(uint8_t note, uint8_t velocity);
 void usb_app_midi_note_off(uint8_t note);
 
+/* Sends a Control Change on MIDI channel 1 (cable 0). */
+void usb_app_midi_control_change(uint8_t controller, uint8_t value);
+
 #ifdef __cplusplus
 }
 #endif

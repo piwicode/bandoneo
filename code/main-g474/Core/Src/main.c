@@ -27,6 +27,7 @@
 #include "console.h"
 #include "usb_app.h"
 #include "spi_link.h"
+#include "keyboard/keyboard_layout.h"
 
 /* USER CODE END Includes */
 
@@ -122,32 +123,20 @@ static void swo_print(const char *s)
 #define KEYBOARD_PRESS_THRESHOLD   1900
 #define KEYBOARD_RELEASE_THRESHOLD 2100
 
-typedef enum { BELLOWS_PULL = 0, BELLOWS_PUSH = 1 } bellows_t;
-
 /* The bandoneon is bisonoric: each key sounds a different note on push vs pull.
  * Until push/pull sensing is wired from the motherboard's two hall sensors
  * (hall0/hall1 in the main loop), treat every note as pull. Follow-up: derive
  * this from those readings and update g_bellows. */
 static bellows_t g_bellows = BELLOWS_PULL;
 
-/* Maps (wing, key, bellows) to a MIDI note number, 0 = no note.
- *
- * Placeholder: the real "Rheinische Lage" layout assigns a specific note to
- * each combination; until that table is digitized we use simple per-wing/
- * bellows offsets so the link, hysteresis and push/pull plumbing can be
- * exercised. Replace the body with per-wing [bellows][key] lookup tables. */
+/* Maps (wing, key, bellows) to a MIDI note number; NOTE_NONE = no note.
+ * note_table, NOTE_NONE, bellows_t and NUM_KEYS come from
+ * keyboard/keyboard_layout.h, generated from the digitized "Rheinische Lage"
+ * layout (code/keyboards_layout). */
 static uint8_t map_note(uint8_t wing_id, int key, bellows_t bellows)
 {
-  int base;
-  switch (wing_id)
-  {
-    case WING_ID_RIGHT: base = 60; break;  /* right hand: melody side, ~C4 */
-    case WING_ID_LEFT:  base = 36; break;  /* left hand: bass side, ~C2 */
-    default: return 0;                     /* unknown wing -> no note */
-  }
-  if (bellows == BELLOWS_PUSH) base += 1; /* placeholder push/pull split */
-  int note = base + key;
-  return (note > 0 && note < 128) ? (uint8_t)note : 0;
+  if (wing_id != WING_ID_RIGHT && wing_id != WING_ID_LEFT) return NOTE_NONE; /* unknown wing -> no note */
+  return note_table[wing_id][bellows][key];
 }
 
 typedef struct
@@ -278,6 +267,7 @@ static void bus_process_frame(spi_bus_t *b, const uint16_t *frame)
     if (!b->key_pressed[k] && v <= KEYBOARD_PRESS_THRESHOLD)
     {
       b->key_pressed[k] = 1;
+      printf("PRESS %u %d\r\n", wing_id, k);
       printf("NOTE ON  %s wing=%u key=%2d note=%3u val=%4u\r\n",
              b->name, wing_id, k, note, v);
       usb_app_midi_note_on(note, 100);
@@ -554,7 +544,7 @@ int main(void)
     {
       hall0_prev = hall0;
       hall1_prev = hall1;
-      printf("HALL0=%u HALL1=%u\r\n", (unsigned)hall0, (unsigned)hall1);
+      // printf("HALL0=%u HALL1=%u\r\n", (unsigned)hall0, (unsigned)hall1);
     }
   }
   /* USER CODE END 3 */

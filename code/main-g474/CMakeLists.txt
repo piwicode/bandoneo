@@ -69,6 +69,7 @@ set_source_files_properties(
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined include paths
+    .
     ../third_party/microrl/src
     ../common/console
     ../common/spi_link

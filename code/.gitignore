@@ -2,4 +2,4 @@
 */.cache
 */build
 */STM32CubeIDE
-tests/__pycache__
+*/__pycache__

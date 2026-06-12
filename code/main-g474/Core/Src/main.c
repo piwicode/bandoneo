@@ -113,10 +113,6 @@ static void swo_print(const char *s)
  * gap (the only point that word-aligns); bad (CRC/overrun/misaligned) frames
  * are dropped and counted. */
 
-/* Known wing ids, both 142-key "Rheinische Lage". */
-#define WING_ID_RIGHT 1
-#define WING_ID_LEFT  2
-
 /* Press/release hysteresis: a hall reading falls as a key is pressed and rises
  * back as it is released. release_threshold > press_threshold gives a dead band
  * so a key resting near the trip point doesn't chatter. */
@@ -128,16 +124,6 @@ static void swo_print(const char *s)
  * (hall0/hall1 in the main loop), treat every note as pull. Follow-up: derive
  * this from those readings and update g_bellows. */
 static bellows_t g_bellows = BELLOWS_PULL;
-
-/* Maps (wing, key, bellows) to a MIDI note number; NOTE_NONE = no note.
- * note_table, NOTE_NONE, bellows_t and NUM_KEYS come from
- * keyboard/keyboard_layout.h, generated from the digitized "Rheinische Lage"
- * layout (code/keyboards_layout). */
-static uint8_t map_note(uint8_t wing_id, int key, bellows_t bellows)
-{
-  if (wing_id != WING_ID_RIGHT && wing_id != WING_ID_LEFT) return NOTE_NONE; /* unknown wing -> no note */
-  return note_table[wing_id][bellows][key];
-}
 
 typedef struct
 {
@@ -201,11 +187,6 @@ static HAL_StatusTypeDef bus_rearm(spi_bus_t *b)
   return HAL_SPI_Receive_IT(b->hspi, (uint8_t *)b->rx[b->rx_active], SPI_LINK_FRAME_WORDS);
 }
 
-static int wing_id_known(uint8_t id)
-{
-  return id == WING_ID_RIGHT || id == WING_ID_LEFT;
-}
-
 /* Completion and error callbacks never re-arm directly: re-arming the instant a
  * frame ends lands the next receive mid-stream (the wing is still finishing /
  * NSS hasn't returned high), so it comes back word-misaligned. Instead they
@@ -221,7 +202,7 @@ void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi)
   spi_bus_t *b = bus_from_hspi(hspi);
   if (!b) return;
   uint16_t w0 = b->rx[b->rx_active][0];
-  if (wing_id_known((uint8_t)w0))
+  if (wing_name((uint8_t)w0) != NULL)
   {
     b->rx_good++;
     b->last_good_wing = (uint8_t)w0;
@@ -255,14 +236,16 @@ static void bus_process_frame(spi_bus_t *b, const uint16_t *frame)
   uint8_t wing_id = (uint8_t)frame[0];
   const uint16_t *meas = &frame[1];
 
+  if (wing_name(wing_id) == NULL) return; /* unknown wing -> nothing to decode */
+
   for (int k = 0; k < SPI_LINK_NUM_KEYS; k++)
   {
     uint16_t v = meas[k];
     if (!b->key_min_init || v < b->key_min[k]) b->key_min[k] = v;
     if (b->key_min[k] == 0) continue;          /* unpopulated channel */
 
-    uint8_t note = map_note(wing_id, k, g_bellows);
-    if (note == 0) continue;
+    uint8_t note = note_table[wing_id][g_bellows][k];
+    if (note == NOTE_NONE) continue;
 
     if (!b->key_pressed[k] && v <= KEYBOARD_PRESS_THRESHOLD)
     {

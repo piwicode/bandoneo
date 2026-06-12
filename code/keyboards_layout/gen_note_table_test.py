@@ -164,6 +164,8 @@ class GenerateHeaderTest(unittest.TestCase):
         self.assertIn("note_table[3][2][NUM_KEYS]", header)
         self.assertIn("#define NOTE_NONE 0", header)
         self.assertIn("NOTE(C,4)", header)
+        self.assertIn('case 1: return "rheinische_tonlage_142_tones_right";', header)
+        self.assertIn('case 2: return "rheinische_tonlage_142_tones_left";', header)
 
 
 if __name__ == "__main__":

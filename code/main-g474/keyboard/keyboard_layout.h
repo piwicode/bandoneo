@@ -3,6 +3,8 @@
 #ifndef KEYBOARD_LAYOUT_H_
 #define KEYBOARD_LAYOUT_H_
 
+#include <stddef.h>
+
 /* MIDI note numbers by name: NOTE(<letter>, <octave>), C4 = 60 (middle C).
  * Append 's' to the letter for sharp, e.g. NOTE(As, 3) = 58.
  * NOTE_NONE marks a key id with no assigned note. */
@@ -78,5 +80,16 @@ static const uint8_t note_table[3][2][NUM_KEYS] =
     },
   },
 };
+
+/* Returns the layout/side name for wing_id, or NULL if wing_id is unknown. */
+static inline const char *wing_name(uint8_t wing_id)
+{
+  switch (wing_id)
+  {
+    case 1: return "rheinische_tonlage_142_tones_right";
+    case 2: return "rheinische_tonlage_142_tones_left";
+    default: return NULL;
+  }
+}
 
 #endif /* KEYBOARD_LAYOUT_H_ */

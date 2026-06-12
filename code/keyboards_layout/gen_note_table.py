@@ -9,9 +9,11 @@ Inputs (in this directory):
 
 <side> is "left" or "right", <bellows> is "pull" or "push".
 
-Output: keyboard_layout.h, a C header defining NOTE_NONE, BELLOWS_PULL/PUSH,
-NUM_KEYS and note_table[3][2][NUM_KEYS], in the same layout/style as the
-note_table in main-g474/Core/Src/main.c so it can drop in as a replacement.
+Output: keyboard_layout.h, a C header defining NOTE_NONE,
+BELLOWS_PULL/PUSH/NEUTRAL, NUM_KEYS and note_table[3][3][NUM_KEYS], in the
+same layout/style as the note_table in main-g474/Core/Src/main.c so it can
+drop in as a replacement. The BELLOWS_NEUTRAL slice is all NOTE_NONE: no air
+moves at rest, so no key sounds.
 
 Each id_keys entry is paired, in order, with the flattened notes for that
 side/bellows. Keys left over once notes run out (and key ids never seen in
@@ -26,6 +28,8 @@ HERE = Path(__file__).resolve().parent
 
 WING_ID = {"right": 1, "left": 2}
 BELLOWS = {"pull": 0, "push": 1}
+NEUTRAL_IDX = 2
+BELLOWS_MACRO = {0: "BELLOWS_PULL", 1: "BELLOWS_PUSH", NEUTRAL_IDX: "BELLOWS_NEUTRAL"}
 
 NUM_KEYS = 40
 
@@ -200,6 +204,9 @@ def build_table_from_sources(sources, warnings):
 
             table[wing_id][bellows_idx] = cells
 
+        # Bellows at rest moves no air, so no key sounds regardless of layout.
+        table[wing_id][NEUTRAL_IDX] = ["NOTE_NONE"] * NUM_KEYS
+
         # Pull and push describe the same physical rows, so when both files
         # have been digitized their per-row note counts must match.
         (pull_source, pull_sizes) = row_sizes_by_bellows["pull"]
@@ -260,19 +267,18 @@ def generate_header(table):
     out.append("#define NOTE_B  11")
     out.append("#define NOTE(name, octave) (((octave) + 1) * 12 + NOTE_##name)")
     out.append("")
-    out.append("typedef enum { BELLOWS_PULL = 0, BELLOWS_PUSH = 1 } bellows_t;")
+    out.append("typedef enum { BELLOWS_PULL = 0, BELLOWS_PUSH = 1, BELLOWS_NEUTRAL = 2 } bellows_t;")
     out.append("")
     out.append(f"#define NUM_KEYS {NUM_KEYS}")
     out.append("")
-    out.append(f"static const uint8_t note_table[3][2][NUM_KEYS] =")
+    out.append(f"static const uint8_t note_table[3][3][NUM_KEYS] =")
     out.append("{")
     side_by_wing_id = {wing_id: side for side, wing_id in WING_ID.items()}
     for wing_id in sorted(table):
         out.append(f"  [{wing_id}] = /* {LAYOUT_NAME}, {side_by_wing_id[wing_id]} */")
         out.append("  {")
-        for bellows_idx in BELLOWS.values():
-            macro = "BELLOWS_PULL" if bellows_idx == 0 else "BELLOWS_PUSH"
-            out.append(f"    [{macro}] =")
+        for bellows_idx in (0, 1, NEUTRAL_IDX):
+            out.append(f"    [{BELLOWS_MACRO[bellows_idx]}] =")
             out.append("    {")
             out.append(format_cells(table[wing_id][bellows_idx]))
             out.append("    },")

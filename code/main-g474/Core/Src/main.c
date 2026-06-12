@@ -120,10 +120,66 @@ static void swo_print(const char *s)
 #define KEYBOARD_RELEASE_THRESHOLD 2100
 
 /* The bandoneon is bisonoric: each key sounds a different note on push vs pull.
- * Until push/pull sensing is wired from the motherboard's two hall sensors
- * (hall0/hall1 in the main loop), treat every note as pull. Follow-up: derive
- * this from those readings and update g_bellows. */
-static bellows_t g_bellows = BELLOWS_PULL;
+ * g_bellows holds that direction and g_bellow_intensity (0..1024) how hard the
+ * bellows is being pushed or pulled; both are derived from the combined hall
+ * reading (hall0+hall1) by bellows_update() in the main loop. */
+static bellows_t g_bellows = BELLOWS_NEUTRAL;
+static uint16_t g_bellow_intensity = 0;
+
+/* Combined-hall calibration: center is the at-rest reading, hard push/pull
+ * the readings at full travel. The deadzone sets how far from center the
+ * bellows must move to leave BELLOWS_NEUTRAL (no air moves there, so
+ * note_table maps every key to NOTE_NONE). The hysteresis margin then has to
+ * be given back before returning to NEUTRAL, so a bellows resting right at
+ * the deadzone edge doesn't chatter between NEUTRAL and PUSH/PULL. */
+#define BELLOWS_CENTER     3775
+#define BELLOWS_DEADZONE   40
+#define BELLOWS_HYSTERESIS 20
+#define BELLOWS_HARD_PUSH  3400
+#define BELLOWS_HARD_PULL  4200
+
+/* Updates g_bellows/g_bellow_intensity from the combined hall reading.
+ * In NEUTRAL, intensity is 0 and direction holds until the reading passes the
+ * deadzone edge. In PUSH/PULL, intensity scales linearly from the deadzone
+ * edge to the hard push/pull reading (clamped to 1024: 0 is barely moving
+ * air, 1024 is full force), and direction holds until the reading comes back
+ * past the deadzone edge by BELLOWS_HYSTERESIS. */
+static void bellows_update(uint32_t hall_total)
+{
+  uint32_t push_edge = BELLOWS_CENTER - BELLOWS_DEADZONE;
+  uint32_t pull_edge = BELLOWS_CENTER + BELLOWS_DEADZONE;
+
+  switch (g_bellows)
+  {
+    case BELLOWS_PUSH:
+      if (hall_total >= push_edge + BELLOWS_HYSTERESIS) g_bellows = BELLOWS_NEUTRAL;
+      break;
+    case BELLOWS_PULL:
+      if (hall_total <= pull_edge - BELLOWS_HYSTERESIS) g_bellows = BELLOWS_NEUTRAL;
+      break;
+    default:
+      if (hall_total < push_edge) g_bellows = BELLOWS_PUSH;
+      else if (hall_total > pull_edge) g_bellows = BELLOWS_PULL;
+      break;
+  }
+
+  if (g_bellows == BELLOWS_PUSH)
+  {
+    uint32_t span = push_edge - BELLOWS_HARD_PUSH;
+    uint32_t d = hall_total < push_edge ? push_edge - hall_total : 0;
+    g_bellow_intensity = (uint16_t)(d >= span ? 1024 : (d * 1024) / span);
+  }
+  else if (g_bellows == BELLOWS_PULL)
+  {
+    uint32_t span = BELLOWS_HARD_PULL - pull_edge;
+    uint32_t d = hall_total > pull_edge ? hall_total - pull_edge : 0;
+    g_bellow_intensity = (uint16_t)(d >= span ? 1024 : (d * 1024) / span);
+  }
+  else
+  {
+    g_bellow_intensity = 0;
+  }
+}
 
 typedef struct
 {
@@ -156,10 +212,14 @@ typedef struct
   volatile uint8_t  last_good_wing;  /* word 0 of the last good reception */
   volatile uint16_t last_bad_word0;  /* word 0 of the last misaligned reception */
 
-  /* Per-key decode state (main-loop only). */
+  /* Per-key decode state (main-loop only). key_pressed tracks the physical
+   * hall state; sounding_note is NOTE_NONE unless a NOTE ON has been sent for
+   * that key without a matching NOTE OFF yet (key_pressed alone isn't enough
+   * since a key can be held through a bellows direction change). */
   uint16_t key_min[SPI_LINK_NUM_KEYS];
   uint8_t  key_min_init;
   uint8_t  key_pressed[SPI_LINK_NUM_KEYS];
+  uint8_t  sounding_note[SPI_LINK_NUM_KEYS];
 
   /* Snapshots for the 1 Hz rate report and the throttled error log. */
   uint32_t last_good, last_misaligned, last_crc, last_bus;
@@ -228,9 +288,50 @@ void HAL_SPI_ErrorCallback(SPI_HandleTypeDef *hspi)
   b->needs_resync = 1;
 }
 
-/* Decodes one received frame into note on/off events (printed and sent over
- * USB MIDI). Channels whose since-boot minimum is still 0 are treated as
- * unpopulated and skipped, matching the wing's present-key detection. */
+/* Sends NOTE ON for key k on wing_id using the current g_bellows mapping, if
+ * it isn't already sounding and that mapping has a note (it doesn't in
+ * BELLOWS_NEUTRAL, where no air moves). No-op otherwise. */
+static void bus_note_on(spi_bus_t *b, uint8_t wing_id, int k)
+{
+  if (b->sounding_note[k] != NOTE_NONE) return;
+  uint8_t note = note_table[wing_id][g_bellows][k];
+  if (note == NOTE_NONE) return;
+  b->sounding_note[k] = note;
+  printf("NOTE ON  %s wing=%u key=%2d note=%3u\r\n", b->name, wing_id, k, note);
+  usb_app_midi_note_on(note, 100);
+}
+
+/* Sends NOTE OFF for key k on wing_id if it is currently sounding. No-op
+ * otherwise (e.g. the key was pressed/released while in BELLOWS_NEUTRAL and
+ * never sounded). */
+static void bus_note_off(spi_bus_t *b, uint8_t wing_id, int k)
+{
+  if (b->sounding_note[k] == NOTE_NONE) return;
+  printf("NOTE OFF %s wing=%u key=%2d note=%3u\r\n", b->name, wing_id, k, b->sounding_note[k]);
+  usb_app_midi_note_off(b->sounding_note[k]);
+  b->sounding_note[k] = NOTE_NONE;
+}
+
+/* Called once from the main loop whenever g_bellows changes. Entering
+ * PUSH/PULL from NEUTRAL fires NOTE ON for keys already held down; entering
+ * NEUTRAL fires NOTE OFF for keys currently sounding, even if still held,
+ * since no air moves at rest. PUSH<->PULL never happens directly (NEUTRAL
+ * sits between them), so this never has to swap one sounding note for
+ * another. */
+static void bus_bellows_changed(spi_bus_t *b)
+{
+  uint8_t wing_id = b->last_good_wing;
+  for (int k = 0; k < SPI_LINK_NUM_KEYS; k++)
+  {
+    if (g_bellows == BELLOWS_NEUTRAL) bus_note_off(b, wing_id, k);
+    else if (b->key_pressed[k])       bus_note_on(b, wing_id, k);
+  }
+}
+
+/* Decodes one received frame into key press/release events, driving NOTE
+ * ON/OFF via bus_note_on/bus_note_off. Channels whose since-boot minimum is
+ * still 0 are treated as unpopulated and skipped, matching the wing's
+ * present-key detection. */
 static void bus_process_frame(spi_bus_t *b, const uint16_t *frame)
 {
   uint8_t wing_id = (uint8_t)frame[0];
@@ -244,23 +345,16 @@ static void bus_process_frame(spi_bus_t *b, const uint16_t *frame)
     if (!b->key_min_init || v < b->key_min[k]) b->key_min[k] = v;
     if (b->key_min[k] == 0) continue;          /* unpopulated channel */
 
-    uint8_t note = note_table[wing_id][g_bellows][k];
-    if (note == NOTE_NONE) continue;
-
     if (!b->key_pressed[k] && v <= KEYBOARD_PRESS_THRESHOLD)
     {
       b->key_pressed[k] = 1;
       printf("PRESS %u %d\r\n", wing_id, k);
-      printf("NOTE ON  %s wing=%u key=%2d note=%3u val=%4u\r\n",
-             b->name, wing_id, k, note, v);
-      usb_app_midi_note_on(note, 100);
+      bus_note_on(b, wing_id, k);
     }
     else if (b->key_pressed[k] && v >= KEYBOARD_RELEASE_THRESHOLD)
     {
       b->key_pressed[k] = 0;
-      printf("NOTE OFF %s wing=%u key=%2d note=%3u val=%4u\r\n",
-             b->name, wing_id, k, note, v);
-      usb_app_midi_note_off(note);
+      bus_note_off(b, wing_id, k);
     }
   }
   b->key_min_init = 1;
@@ -438,7 +532,7 @@ int main(void)
   uint8_t fn_prev = 0xFF;
   uint8_t exp_present_prev = 0xFF, sus_present_prev = 0xFF;
   uint32_t exp_val_prev = 0xFFFF, sus_val_prev = 0xFFFF;
-  uint32_t hall0_prev = 0xFFFF, hall1_prev = 0xFFFF;
+  uint32_t hall_total_prev = 0xFFFFFFFF;
   uint32_t last_rate_tick = HAL_GetTick();
   while (1)
   {
@@ -446,6 +540,38 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
     usb_app_task();
+
+    // Hall sensors
+    //
+    HAL_GPIO_WritePin(HALL_NEN_GPIO_Port, HALL_NEN_Pin, GPIO_PIN_RESET);
+    /* Settling budget: gate RC (R5||R6 * Ciss_Q1 = 909R * 130pF, 5t~600ns) +
+     * VDDH caps (RDS_on_Q1 * (CP1+CP2) = ~120mO * 200nF, 5t~120ns) +
+     * SC4015SO power-on start <1us (datasheet) => worst case <3us; 5us = ~1.7x margin. */
+    delay_us(5);
+
+    HAL_ADC_Start(&hadc3);
+    HAL_ADC_Start(&hadc4);
+    HAL_ADC_PollForConversion(&hadc3, 10);
+    uint32_t hall0 = HAL_ADC_GetValue(&hadc3);
+    HAL_ADC_PollForConversion(&hadc4, 10);
+    uint32_t hall1 = HAL_ADC_GetValue(&hadc4);
+
+    HAL_GPIO_WritePin(HALL_NEN_GPIO_Port, HALL_NEN_Pin, GPIO_PIN_SET);
+
+    uint32_t hall_total = hall0 + hall1;
+    bellows_t bellows_prev = g_bellows;
+    bellows_update(hall_total);
+    if (g_bellows != bellows_prev)
+    {
+      for (int i = 0; i < 2; i++)
+        bus_bellows_changed(&g_bus[i]);
+    }
+    uint32_t hall_total_delta = hall_total > hall_total_prev ? hall_total - hall_total_prev : hall_total_prev - hall_total;
+    if (hall_total_delta > 16)
+    {
+      hall_total_prev = hall_total;
+      printf("HALL0=%u HALL1=%u TOTAL=%u\r\n", (unsigned)hall0, (unsigned)hall1, (unsigned)hall_total);
+    }
 
     /* Decode any wing frames received since the last iteration, recover any bus
      * that lost alignment, then surface link errors (throttled) and a 1 Hz
@@ -505,30 +631,7 @@ int main(void)
       printf("SUS: present=%u val=%u\r\n", sus_present, (unsigned)sus_val);
     }
 
-    HAL_GPIO_WritePin(HALL_NEN_GPIO_Port, HALL_NEN_Pin, GPIO_PIN_RESET);
-    /* Settling budget: gate RC (R5||R6 * Ciss_Q1 = 909R * 130pF, 5t~600ns) +
-     * VDDH caps (RDS_on_Q1 * (CP1+CP2) = ~120mO * 200nF, 5t~120ns) +
-     * SC4015SO power-on start <1us (datasheet) => worst case <3us; 5us = ~1.7x margin. */
-    delay_us(5);
-
-    HAL_ADC_Start(&hadc3);
-    HAL_ADC_PollForConversion(&hadc3, 10);
-    uint32_t hall0 = HAL_ADC_GetValue(&hadc3);
-
-    HAL_ADC_Start(&hadc4);
-    HAL_ADC_PollForConversion(&hadc4, 10);
-    uint32_t hall1 = HAL_ADC_GetValue(&hadc4);
-
-    HAL_GPIO_WritePin(HALL_NEN_GPIO_Port, HALL_NEN_Pin, GPIO_PIN_SET);
-
-    uint32_t hall0_delta = hall0 > hall0_prev ? hall0 - hall0_prev : hall0_prev - hall0;
-    uint32_t hall1_delta = hall1 > hall1_prev ? hall1 - hall1_prev : hall1_prev - hall1;
-    if (hall0_delta > 16 || hall1_delta > 16)
-    {
-      hall0_prev = hall0;
-      hall1_prev = hall1;
-      // printf("HALL0=%u HALL1=%u\r\n", (unsigned)hall0, (unsigned)hall1);
-    }
+   
   }
   /* USER CODE END 3 */
 }

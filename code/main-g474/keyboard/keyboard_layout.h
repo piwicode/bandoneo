@@ -23,11 +23,11 @@
 #define NOTE_B  11
 #define NOTE(name, octave) (((octave) + 1) * 12 + NOTE_##name)
 
-typedef enum { BELLOWS_PULL = 0, BELLOWS_PUSH = 1 } bellows_t;
+typedef enum { BELLOWS_PULL = 0, BELLOWS_PUSH = 1, BELLOWS_NEUTRAL = 2 } bellows_t;
 
 #define NUM_KEYS 40
 
-static const uint8_t note_table[3][2][NUM_KEYS] =
+static const uint8_t note_table[3][3][NUM_KEYS] =
 {
   [1] = /* rheinische_tonlage_142_tones, right */
   {
@@ -53,6 +53,17 @@ static const uint8_t note_table[3][2][NUM_KEYS] =
       /* 30 */ NOTE(As,5), NOTE(C,6), NOTE(Ds,5), NOTE(D,6), NOTE(Cs,6),
       /* 35 */ NOTE(F,6), NOTE(G,5), NOTE(Ds,6), NOTE_NONE, NOTE_NONE,
     },
+    [BELLOWS_NEUTRAL] =
+    {
+      /*  0 */ NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE,
+      /*  5 */ NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE,
+      /* 10 */ NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE,
+      /* 15 */ NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE,
+      /* 20 */ NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE,
+      /* 25 */ NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE,
+      /* 30 */ NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE,
+      /* 35 */ NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE,
+    },
   },
   [2] = /* rheinische_tonlage_142_tones, left */
   {
@@ -77,6 +88,17 @@ static const uint8_t note_table[3][2][NUM_KEYS] =
       /* 25 */ NOTE(F,2), NOTE(Cs,3), NOTE(C,3), NOTE(Ds,4), NOTE(E,4),
       /* 30 */ NOTE(Cs,4), NOTE(F,4), NOTE_NONE, NOTE(Fs,2), NOTE(Gs,3),
       /* 35 */ NOTE_NONE, NOTE(Fs,3), NOTE_NONE, NOTE(G,4), NOTE(B,2),
+    },
+    [BELLOWS_NEUTRAL] =
+    {
+      /*  0 */ NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE,
+      /*  5 */ NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE,
+      /* 10 */ NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE,
+      /* 15 */ NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE,
+      /* 20 */ NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE,
+      /* 25 */ NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE,
+      /* 30 */ NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE,
+      /* 35 */ NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE, NOTE_NONE,
     },
   },
 };
